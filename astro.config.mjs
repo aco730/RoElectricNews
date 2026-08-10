@@ -12,7 +12,7 @@ const peNetlify = Boolean(process.env.NETLIFY);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://solarelectricpanel.ro',
+  site: 'https://buildhubro.netlify.app',
   output: 'server',
   adapter: peNetlify ? netlify() : node({ mode: 'standalone' }),
   integrations: [
