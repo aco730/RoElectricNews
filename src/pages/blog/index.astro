@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { categories } from "../../data/categories";
+import Etichete from "../../components/Etichete.astro";
+
+const articole = (await getCollection("articole")).sort(
+  (a, b) => b.data.data.valueOf() - a.data.data.valueOf()
+);
+
+function catInfo(slug: string) {
+  return categories.find((c) => c.slug === slug);
+}
+---
+<Layout title="Blog — Electric NEWS" description="Toate articolele și ghidurile Electric NEWS despre electric, fotovoltaic, smart home și construcții, susținute de Solar Electric Panel." singleCol>
+  <h2 class="section-title">Toate articolele</h2>
+  <div class="story-grid">
+    {articole.map((art) => {
+      const cat = catInfo(art.data.categorie);
+      return (
+        <article class="story-card">
+          {art.data.imagine && (
+            <div class="media-wrap">
+              <img class="story-media" src={art.data.imagine} alt={art.data.title} />
+              <Etichete slugs={art.data.etichete} overlay />
+            </div>
+          )}
+          {cat && <span class="badge" style={`background:${cat.color}`}>{cat.name}</span>}
+          <h3><a href={`/blog/${art.id}`}>{art.data.title}</a></h3>
+          <div class="meta"><span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span></div>
+        </article>
+      );
+    })}
+  </div>
+</Layout>

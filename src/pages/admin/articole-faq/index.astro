@@ -1,0 +1,87 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { listArticole } from '../../../lib/articole';
+import { getAllQaArticole } from '../../../lib/qa';
+
+const articole = await listArticole();
+const toateQa = await getAllQaArticole();
+---
+<AdminLayout title="FAQ pe articole">
+	<div class="cap">
+		<h1>Întrebări frecvente pe articole</h1>
+		<p class="hint">Întrebările afișate sub un articol de blog. Pentru FAQ generale pe categorie, vezi <a href="/admin/categorii">FAQ pe categorii</a>.</p>
+	</div>
+
+	<input type="text" id="căutare" placeholder="Caută articol după titlu..." class="căutare" />
+
+	<table class="tabel-sortabil">
+		<thead>
+			<tr>
+				<th data-sort="text">Titlu</th>
+				<th data-sort="text">Nr. întrebări</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody id="corp-tabel">
+			{articole.map((a) => (
+				<tr data-titlu={a.title.toLowerCase()}>
+					<td data-val={a.title}>{a.title}</td>
+					<td data-val={(toateQa[a.slug] ?? []).length}>{(toateQa[a.slug] ?? []).length}</td>
+					<td><a href={`/admin/articole-faq/${a.slug}`}>Editează</a></td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	<style>
+		.cap { max-width: 760px; margin-bottom: 1.25rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+		.hint a { color: #93c5fd; }
+		.căutare {
+			display: block; max-width: 360px; margin-bottom: 1rem;
+			background: #111827; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.55rem 0.75rem; font-size: 0.9rem;
+		}
+		table { width: 100%; border-collapse: collapse; max-width: 760px; }
+		th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.9rem; }
+		th { color: #94a3b8; font-weight: 600; }
+		th[data-sort] { cursor: pointer; user-select: none; white-space: nowrap; }
+		th[data-sort]:hover { color: #e2e8f0; }
+		th[data-sort]::after { content: '⇅'; opacity: 0.35; margin-left: 0.35rem; font-size: 0.75rem; }
+		th[data-sort].sort-asc::after { content: '↑'; opacity: 1; }
+		th[data-sort].sort-desc::after { content: '↓'; opacity: 1; }
+		td a { color: #93c5fd; text-decoration: none; }
+	</style>
+
+	<script>
+		const căutare = document.getElementById('căutare') as HTMLInputElement;
+		căutare.addEventListener('input', () => {
+			const q = căutare.value.toLowerCase().trim();
+			document.querySelectorAll<HTMLTableRowElement>('#corp-tabel tr').forEach((tr) => {
+				tr.style.display = (tr.dataset.titlu || '').includes(q) ? '' : 'none';
+			});
+		});
+
+		document.querySelectorAll<HTMLTableElement>('.tabel-sortabil').forEach((tabel) => {
+			const tbody = tabel.querySelector('tbody')!;
+			const headers = [...tabel.querySelectorAll<HTMLTableCellElement>('th[data-sort]')];
+
+			headers.forEach((th, index) => {
+				th.addEventListener('click', () => {
+					const crescător = !th.classList.contains('sort-asc');
+					headers.forEach((h) => h.classList.remove('sort-asc', 'sort-desc'));
+					th.classList.add(crescător ? 'sort-asc' : 'sort-desc');
+
+					const rânduri = [...tbody.querySelectorAll('tr')];
+					rânduri.sort((a, b) => {
+						const va = (a.children[index] as HTMLElement).dataset.val ?? '';
+						const vb = (b.children[index] as HTMLElement).dataset.val ?? '';
+						return crescător ? va.localeCompare(vb, 'ro', { numeric: true }) : vb.localeCompare(va, 'ro', { numeric: true });
+					});
+					rânduri.forEach((r) => tbody.appendChild(r));
+				});
+			});
+		});
+	</script>
+</AdminLayout>

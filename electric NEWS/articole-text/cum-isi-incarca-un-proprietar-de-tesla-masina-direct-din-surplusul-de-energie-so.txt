@@ -1,0 +1,7 @@
+Cum își încarcă un proprietar de Tesla mașina direct din surplusul de energie solară
+
+Un proprietar de Tesla, Ryan Jay Cowan, a arătat pe TikTok cum combinația dintre panouri solare, o baterie Tesla Powerwall 3 și o mașină electrică Tesla poate direcționa automat surplusul de energie solară — cel neconsumat de casă și necesar pentru încărcarea bateriei — direct spre mașină.
+
+Funcția este integrată în aplicația Tesla, care îi dă utilizatorului control asupra cât din energia solară generată merge spre mașină și cât rămâne disponibilă pentru rețea. Practic, de fiecare dată când mașina e conectată acasă, sistemul solar și Powerwall-ul gestionează automat distribuția energiei, fără intervenție manuală.
+
+Pentru cine nu are un Powerwall, există și aplicații terțe, precum Charge HQ, care oferă o funcție similară de sincronizare a încărcării vehiculului electric cu producția solară a casei, deși fără integrarea nativă pe care o oferă combinația Tesla. Beneficiul practic e simplu: mașina se încarcă cu energie deja produsă acasă, ieftină sau gratuită, în loc să tragă direct din rețea. Sursă: The Cool Down.

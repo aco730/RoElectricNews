@@ -1,0 +1,299 @@
+import openpyxl, datetime, os, shutil
+
+XLSX = "/sessions/fervent-wizardly-cori/mnt/electric NEWS/electric-news-calendar-editorial.xlsx"
+BASE = "/sessions/fervent-wizardly-cori/mnt/electric NEWS/site-local"
+IMG_CAT_DIR = f"{BASE}/assets/images/categorii"
+IMG_ART_DIR = f"{BASE}/assets/images/articole"
+
+os.makedirs(IMG_ART_DIR, exist_ok=True)
+os.makedirs(f"{BASE}/categorie", exist_ok=True)
+os.makedirs(f"{BASE}/articol", exist_ok=True)
+os.makedirs(f"{BASE}/pagina", exist_ok=True)
+
+CAT_COLORS = {
+    "Electric & instalații": "#12213A",
+    "Smart Home & Automatizări": "#6A3D9A",
+    "Fotovoltaic": "#E97B0F",
+    "Baterii & Stocare": "#0EA5A0",
+    "Reglementări & Prețuri energie": "#B22222",
+}
+CAT_SLUG = {
+    "Electric & instalații": "electric-instalatii",
+    "Smart Home & Automatizări": "smart-home",
+    "Fotovoltaic": "fotovoltaic",
+    "Baterii & Stocare": "baterii-stocare",
+    "Reglementări & Prețuri energie": "reglementari-preturi",
+}
+CAT_DESC = {
+    "Electric & instalații": "Normative, siguranță, tablouri electrice și produse noi pentru instalații electrice rezidențiale.",
+    "Smart Home & Automatizări": "Produse, integrări, review-uri și tutoriale pentru automatizarea locuinței.",
+    "Fotovoltaic": "Prețuri, subvenții, tehnologii și analize de piață pentru sisteme fotovoltaice.",
+    "Baterii & Stocare": "Tehnologii de stocare, comparații și sisteme hibride on/off-grid.",
+    "Reglementări & Prețuri energie": "ANRE, legea prosumatorilor, tarife și comunități energetice.",
+}
+RO_MONTHS = ["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+def fmt_date(d):
+    return f"{d.day} {RO_MONTHS[d.month-1]} {d.year}"
+
+NA_TEXT = "Conținut propriu — fără sursă externă unică"
+TBD_TEXT = "De documentat la redactare — nicio sursă verificată încă"
+
+def slugify(s):
+    repl = {"ă":"a","â":"a","î":"i","ș":"s","ş":"s","ț":"t","ţ":"t","Ă":"a","Â":"a","Î":"i","Ș":"s","Ț":"t"}
+    out = "".join(repl.get(ch, ch) for ch in s)
+    out = out.lower()
+    keep = []
+    for ch in out:
+        if ch.isalnum():
+            keep.append(ch)
+        elif ch in " -_/":
+            keep.append(" ")
+    out = "".join(keep)
+    out = "-".join(out.split())
+    return out[:80].strip("-")
+
+# ---------- load live data from xlsx ----------
+wb = openpyxl.load_workbook(XLSX, data_only=True)
+ws = wb["Calendar editorial"]
+items = []
+seen_slugs = {}
+for r in range(2, ws.max_row + 1):
+    week = ws.cell(row=r, column=1).value
+    date_v = ws.cell(row=r, column=2).value
+    cat = ws.cell(row=r, column=3).value
+    tip = ws.cell(row=r, column=4).value
+    titlu = ws.cell(row=r, column=5).value
+    sursa = ws.cell(row=r, column=6).value
+    url = ws.cell(row=r, column=7).value
+    if not titlu or not cat:
+        continue
+    if isinstance(date_v, datetime.datetime):
+        date_v = date_v.date()
+    base_slug = slugify(titlu)
+    slug = base_slug
+    n = 2
+    while slug in seen_slugs:
+        slug = f"{base_slug}-{n}"
+        n += 1
+    seen_slugs[slug] = True
+    items.append(dict(row=r, week=week, date=date_v, cat=cat, tip=tip, titlu=titlu,
+                       sursa=sursa or "—", url=(url or "").strip(), slug=slug))
+
+items.sort(key=lambda it: (it["date"] or datetime.date.max, it["row"]))
+print(f"Încărcate {len(items)} articole din Excel.")
+
+# ---------- per-article images: copy from category placeholder ----------
+for it in items:
+    cat_img = f"{IMG_CAT_DIR}/{CAT_SLUG[it['cat']]}.jpg"
+    art_img = f"{IMG_ART_DIR}/{it['slug']}.jpg"
+    if not os.path.exists(art_img):
+        shutil.copyfile(cat_img, art_img)
+
+# ---------- shared page shell ----------
+def logo_svg():
+    return '<svg width="30" height="30" viewBox="0 0 60 60"><polygon points="30,4 52,17 52,43 30,56 8,43 8,17" fill="none" stroke="#12213A" stroke-width="3"/><circle cx="30" cy="30" r="7" fill="#0EA5A0"/><line x1="30" y1="4" x2="30" y2="23" stroke="#12213A" stroke-width="2.5"/><line x1="30" y1="37" x2="30" y2="56" stroke="#12213A" stroke-width="2.5"/></svg>'
+
+def home_href(root):
+    return f"{root}index.html"
+
+def cat_href(root, cat):
+    return f"{root}categorie/{CAT_SLUG[cat]}/index.html"
+
+def wip_href(root):
+    return f"{root}pagina/in-lucru/index.html"
+
+def nav_html(root, active=None):
+    links = []
+    for c in CAT_COLORS:
+        cls = "nav-link active" if c == active else "nav-link"
+        links.append(f'<a href="{cat_href(root, c)}" class="{cls}" style="--accent:{CAT_COLORS[c]}">{c}</a>')
+    return "".join(links)
+
+def header_html(root, active=None):
+    wip = wip_href(root)
+    return f'''
+  <div class="topbar">
+    <span>Ediție de previzualizare locală</span>
+    <div><a href="{wip}">Newsletter</a><a href="{wip}">Contact</a><a href="{wip}">Trimite o știre</a></div>
+  </div>
+  <header class="main">
+    <a href="{home_href(root)}" class="logo">{logo_svg()}<span>ELECTRIC<span class="news">NEWS</span></span></a>
+    <a class="cta-btn" href="{wip}">Abonează-te la newsletter</a>
+  </header>
+  <nav class="cats">{nav_html(root, active)}</nav>'''
+
+def footer_html(root):
+    cats = "".join(f'<a href="{cat_href(root, c)}">{c}</a>' for c in CAT_COLORS)
+    return f'''
+  <footer>
+    <div class="foot-wrap">
+      <div>
+        <div class="foot-brand">ELECTRIC<span class="news">NEWS</span></div>
+        <div style="font-size:13px; max-width:280px; color:#9aa5b1;">Sursa românească de referință pentru electric, smart home, fotovoltaic și stocare de energie.</div>
+      </div>
+      <div class="foot-cats">{cats}</div>
+    </div>
+    <div class="copy">© 2026 Electric NEWS — previzualizare locală, nepublicată</div>
+  </footer>'''
+
+def page_shell(root, title, active, body_main, layout="grid"):
+    cls = {"grid": "", "single-col": "single-col", "cat-page": "cat-page"}[layout]
+    return f'''<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<link rel="stylesheet" href="{root}assets/style.css">
+</head>
+<body>
+{header_html(root, active)}
+<main class="{cls}">
+{body_main}
+</main>
+{footer_html(root)}
+</body>
+</html>'''
+
+def badge(cat):
+    return f'<span class="badge" style="background:{CAT_COLORS[cat]}">{cat}</span>'
+
+def surse_line(it, root):
+    if it["tip"] == "Agregat":
+        if it["url"].startswith("http"):
+            return f'<span class="surse">Surse: <a href="{it["url"]}" target="_blank" rel="noopener">{it["sursa"]}</a></span>'
+        return '<span class="surse surse-tbd">De documentat la redactare</span>'
+    return '<span class="surse surse-own">Conținut Electric NEWS</span>'
+
+def art_href(root, it):
+    return f'{root}articol/{it["slug"]}/index.html'
+
+def img_src(root, it):
+    return f'{root}assets/images/articole/{it["slug"]}.jpg'
+
+# ---------- HOMEPAGE ----------
+hero = items[0]
+secondary = items[1:7]
+sidebar = items[7:16]
+
+def hero_block(it, root):
+    href = art_href(root, it)
+    return f'''
+    <article class="hero-card">
+      <a href="{href}"><img class="hero-media" src="{img_src(root,it)}" alt="{it["cat"]}"></a>
+      <div class="hero-body">
+        {badge(it["cat"])}
+        <h1><a href="{href}">{it["titlu"]}</a></h1>
+        <div class="meta"><span class="date">{fmt_date(it["date"])}</span>{surse_line(it, root)}</div>
+      </div>
+    </article>'''
+
+def card_block(it, root):
+    href = art_href(root, it)
+    return f'''
+    <article class="story-card">
+      <a href="{href}"><img class="story-media" src="{img_src(root,it)}" alt="{it["cat"]}"></a>
+      {badge(it["cat"])}
+      <h3><a href="{href}">{it["titlu"]}</a></h3>
+      <div class="meta"><span class="date">{fmt_date(it["date"])}</span>{surse_line(it, root)}</div>
+    </article>'''
+
+def side_item_block(it, root):
+    href = art_href(root, it)
+    return f'''
+    <li class="side-item">
+      <span class="dot" style="background:{CAT_COLORS[it["cat"]]}"></span>
+      <div><a class="side-title" href="{href}">{it["titlu"]}</a><div class="side-meta">{it["cat"]} · {fmt_date(it["date"])}</div></div>
+    </li>'''
+
+home_body = f'''
+<section>
+  {hero_block(hero, "")}
+  <h2 class="section-title">Cele mai recente</h2>
+  <div class="story-grid">{"".join(card_block(it, "") for it in secondary)}</div>
+</section>
+<aside>
+  <h2 class="section-title">Ultimele actualizări</h2>
+  <ul class="side-list">{"".join(side_item_block(it, "") for it in sidebar)}</ul>
+</aside>'''
+
+with open(f"{BASE}/index.html", "w", encoding="utf-8") as f:
+    f.write(page_shell("", "Electric NEWS — Electric, Smart Home, Fotovoltaic, Baterii & Stocare", None, home_body))
+
+# ---------- CATEGORY PAGES (toate articolele) ----------
+for cat, slug in CAT_SLUG.items():
+    root = "../../"
+    cat_items = [it for it in items if it["cat"] == cat]
+    cards_html = "".join(card_block(it, root) for it in cat_items)
+    cat_img = f"{root}assets/images/categorii/{slug}.jpg"
+    body = f'''
+<div class="breadcrumb"><a href="{home_href(root)}">Acasă</a> / {cat}</div>
+<div class="cat-banner">
+  <img src="{cat_img}" alt="{cat}">
+  <div class="cat-banner-overlay">
+    <h1>{cat}</h1>
+    <p>{CAT_DESC[cat]}</p>
+    <span class="count">{len(cat_items)} articole</span>
+  </div>
+</div>
+<h2 class="section-title">Toate articolele</h2>
+<div class="story-grid">{cards_html}</div>'''
+    os.makedirs(f"{BASE}/categorie/{slug}", exist_ok=True)
+    with open(f"{BASE}/categorie/{slug}/index.html", "w", encoding="utf-8") as f:
+        f.write(page_shell(root, f"{cat} — Electric NEWS", cat, body, layout="cat-page"))
+
+# ---------- ARTICLE PAGES (toate cele 53) ----------
+ARTICLE_INTRO = {
+    "Agregat": "Acesta este un subiect de tip agregat: redacția va documenta și rescrie informația pe baza sursei externe verificate de mai jos, cu ton propriu și verificare factuală înainte de publicare.",
+    "Propriu": "Acesta este un ghid original Electric NEWS, aflat în pregătire la redacție. Conținutul final va fi redactat pe baza expertizei tehnice proprii, fără a se baza pe o singură sursă externă.",
+}
+
+for it in items:
+    root = "../../"
+    same_cat = [x for x in items if x["cat"] == it["cat"] and x["slug"] != it["slug"]][:4]
+    related_html = "".join(
+        f'<li class="side-item"><span class="dot" style="background:{CAT_COLORS[r["cat"]]}"></span>'
+        f'<div><a class="side-title" href="{art_href(root, r)}">{r["titlu"]}</a>'
+        f'<div class="side-meta">{fmt_date(r["date"])}</div></div></li>' for r in same_cat
+    )
+    if it["tip"] == "Agregat" and it["url"].startswith("http"):
+        source_box = f'<div class="source-note">Acest subiect are la bază o sursă externă verificată. Sursă: <a href="{it["url"]}" target="_blank" rel="noopener">{it["sursa"]}</a> — {it["url"]}</div>'
+    elif it["tip"] == "Agregat":
+        source_box = f'<div class="source-note surse-tbd-box">Sursă externă încă nedocumentată — <em>{it["url"]}</em>. Nu se publică fără o sursă verificată și citată aici.</div>'
+    else:
+        source_box = '<div class="source-note surse-own-box">Conținut original Electric NEWS — nu se bazează pe o sursă externă unică.</div>'
+
+    body = f'''
+<section>
+  <div class="breadcrumb"><a href="{home_href(root)}">Acasă</a> / <a href="{cat_href(root, it["cat"])}">{it["cat"]}</a> / Articol</div>
+  <div class="article-body">
+    {badge(it["cat"])}
+    <h1>{it["titlu"]}</h1>
+    <div class="meta"><span class="date">{fmt_date(it["date"])}</span>{surse_line(it, root)}</div>
+    <img class="hero-media" style="width:100%;border-radius:8px;margin-bottom:18px;" src="{img_src(root,it)}" alt="{it["cat"]}">
+    <div class="draft-banner">Pagină de previzualizare — articolul complet va fi redactat de redacție înainte de publicare.</div>
+    <p>{ARTICLE_INTRO[it["tip"]]}</p>
+    {source_box}
+  </div>
+</section>
+<aside>
+  <h2 class="section-title">Din aceeași categorie</h2>
+  <ul class="side-list">{related_html if related_html else '<li class="side-item">Primul articol din această categorie.</li>'}</ul>
+</aside>'''
+    os.makedirs(f"{BASE}/articol/{it['slug']}", exist_ok=True)
+    with open(f"{BASE}/articol/{it['slug']}/index.html", "w", encoding="utf-8") as f:
+        f.write(page_shell(root, f"{it['titlu']} — Electric NEWS", it["cat"], body))
+
+# ---------- pagina "în lucru" ----------
+root = "../../"
+wip_body = f'''
+<div class="article-body" style="max-width:640px;margin:60px auto;text-align:center;">
+  <h1>În lucru</h1>
+  <p>Această funcționalitate (newsletter, contact, trimitere știre) nu este încă activă în previzualizarea locală a site-ului. Va fi conectată la un formular real înainte de lansare.</p>
+  <p><a href="{home_href(root)}" style="color:#0EA5A0;font-weight:700;">&larr; Înapoi la homepage</a></p>
+</div>'''
+os.makedirs(f"{BASE}/pagina/in-lucru", exist_ok=True)
+with open(f"{BASE}/pagina/in-lucru/index.html", "w", encoding="utf-8") as f:
+    f.write(page_shell(root, "În lucru — Electric NEWS", None, wip_body, layout="single-col"))
+
+print(f"Generat: 1 homepage, {len(CAT_SLUG)} pagini categorie, {len(items)} pagini articol, 1 pagină în-lucru.")

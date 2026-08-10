@@ -1,0 +1,51 @@
+[
+  {
+    "nume": "Electric & instalații",
+    "slug": "electric-instalatii",
+    "culoare": "#12213A",
+    "descriere": "Normative, siguranță, tablouri electrice și produse noi pentru instalații electrice rezidențiale.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "Smart Home & Automatizări",
+    "slug": "smart-home",
+    "culoare": "#6A3D9A",
+    "descriere": "Produse, integrări, review-uri și tutoriale pentru automatizarea locuinței.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "Fotovoltaic",
+    "slug": "fotovoltaic",
+    "culoare": "#E97B0F",
+    "descriere": "Prețuri, subvenții, tehnologii și analize de piață pentru sisteme fotovoltaice.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "Baterii & Stocare",
+    "slug": "baterii-stocare",
+    "culoare": "#0EA5A0",
+    "descriere": "Tehnologii de stocare, comparații și sisteme hibride on/off-grid.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "Reglementări & Prețuri energie",
+    "slug": "reglementari-preturi",
+    "culoare": "#B22222",
+    "descriere": "ANRE, legea prosumatorilor, tarife și comunități energetice.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "YouTube",
+    "slug": "youtube",
+    "culoare": "#FF0000",
+    "descriere": "Rezumate scrise, pe scurt, din videoclipuri YouTube relevante pentru electric, smart home, fotovoltaic și baterii.",
+    "exclusaHomepage": false
+  },
+  {
+    "nume": "Colaboratori",
+    "slug": "colaboratori",
+    "culoare": "#A0722F",
+    "descriere": "Firme și echipe cu care lucrăm — date de contact și cereri de ofertă.",
+    "exclusaHomepage": true
+  }
+]

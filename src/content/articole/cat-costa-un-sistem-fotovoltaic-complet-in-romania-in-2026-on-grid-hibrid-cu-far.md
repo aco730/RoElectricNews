@@ -1,0 +1,28 @@
+---
+title: "Cât costă un sistem fotovoltaic complet în România în 2026 (on-grid, hibrid, cu/fără baterie)"
+categorie: fotovoltaic
+data: 2026-08-05
+sursaNume: "NovaSol (preț de referință)"
+sursaUrl: "https://novasol.ro/cat-costa-panouri-fotovoltaice-2026-preturi/"
+imagine: "/images/articole/cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far.webp"
+---
+
+Prețul unui sistem fotovoltaic rămâne, pentru majoritatea celor interesați, întrebarea centrală — dar răspunsul corect depinde decisiv de tipul de sistem ales, nu doar de puterea instalată. Diferența de cost între un sistem simplu on-grid și unul hibrid cu baterie e semnificativă, iar înțelegerea ei ajută la o decizie realistă de buget.
+
+**Sistemul on-grid (fără baterie)**, cel mai simplu și mai ieftin tip, produce curent doar cât timp există lumină solară și rețeaua electrică e funcțională — surplusul nepconsumat imediat se trimite în rețea, prin mecanismul de compensare pentru prosumatori. Pentru o casă obișnuită, cu o putere instalată de 5-6 kW, prețul complet — echipamente (panouri, invertor, structură de montaj) și manoperă — se situează în general între 4.000 și 6.000 de euro, în funcție de complexitatea acoperișului, distanța până la tabloul electric și calitatea echipamentelor alese.
+
+**Sistemul hibrid**, care include un invertor capabil să gestioneze simultan panourile, o baterie de stocare și rețeaua, costă vizibil mai mult decât unul on-grid echivalent ca putere — diferența vine în primul rând din invertorul hibrid, mai scump decât unul standard, chiar înainte de a adăuga bateria propriu-zisă.
+
+**Sistemul cu baterie de stocare** adaugă costul cel mai variabil din ecuație: bateriile LiFePO4, standardul actual pentru case, costă în general între 2.000 și 3.500 de lei pe kWh de capacitate — o baterie de 5-10 kWh, suficientă pentru consumul de bază al unei case pe parcursul unei seri-nopți, adaugă orientativ între 2.000 și 4.000 de euro la costul total al sistemului, în funcție de brand și capacitate.
+
+**Ce influențează concret prețul final**, dincolo de tipul de sistem:
+- Complexitatea acoperișului (înclinație, orientare, mai multe planuri de montaj cresc manopera)
+- Distanța de la panouri până la tabloul electric (cablaj suplimentar)
+- Calitatea și brandul echipamentelor (panouri monocristaline eficiente vs. opțiuni mai ieftine, invertoare premium vs. entry-level)
+- Costul autorizării și racordării la rețea prin distribuitorul local
+
+**Amortizarea**, întrebarea complementară prețului, depinde de consumul propriu și tariful local la energie, dar orientativ, un sistem on-grid bine dimensionat se amortizează în 3-8 ani din economiile la factură, restul perioadei de funcționare (peste 25 de ani garantați de producători) fiind economie netă. Sistemele cu baterie au un termen de amortizare mai lung dacă se calculează izolat costul bateriei, dar oferă în schimb autonomie reală față de rețea, un beneficiu greu de tradus direct în cifre, dar relevant mai ales acolo unde întreruperile de curent sunt frecvente.
+
+Pentru o estimare exactă, adaptată consumului și acoperișului propriu, un calcul realist necesită oricum o vizită tehnică — cifrele de mai sus rămân repere orientative de piață, nu o ofertă fermă.
+
+Conținut original Electric NEWS.

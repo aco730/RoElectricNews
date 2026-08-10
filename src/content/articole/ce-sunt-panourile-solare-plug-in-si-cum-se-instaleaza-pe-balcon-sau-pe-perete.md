@@ -1,0 +1,14 @@
+---
+title: "Ce sunt panourile solare \"plug-in\" și cum se instalează pe balcon sau pe perete"
+categorie: fotovoltaic
+data: 2026-05-11
+sursaNume: "The Independent"
+sursaUrl: "https://www.independent.co.uk/home-improvement/solar-panels/how-plugin-solar-panels-work-install-b2974264.html?utm_source=flipboard&utm_content=topic/climate"
+imagine: "/images/articole/ce-sunt-panourile-solare-plug-in-si-cum-se-instaleaza-pe-balcon-sau-pe-perete.webp"
+---
+
+Panourile solare "plug-in" (numite adesea și panouri de balcon) sunt sisteme fotovoltaice de mici dimensiuni, gândite pentru balcoane, pereți, terase sau grădini, nu pentru acoperiș. Un kit tipic include unul sau două panouri, un microinvertor, sistem de prindere, cabluri și o priză de conectare — unele kituri au și o aplicație de monitorizare sau o baterie mică pentru surplus.
+
+Principiul e identic cu al panourilor de acoperiș, doar la scară mai mică: celulele fotovoltaice produc curent continuu, iar microinvertorul îl transformă în curent alternativ, utilizabil de aparatele din casă. Sistemul nu alimentează întreaga locuință, ci reduce consumul de zi din rețea — de exemplu, pentru frigider, router sau alte aparate mereu pornite.
+
+Amplasarea contează decisiv: o poziție orientată spre sud, fără umbrire de la copaci, clădiri vecine sau balustrade, produce cel mai mult. Instalarea trebuie să fie sigură — panoul fixat solid, rezistent la vânt, iar cablurile rutate astfel încât să nu fie prinse în uși, ferestre sau expuse riscului de împiedicare. Sursă: The Independent.

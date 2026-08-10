@@ -1,0 +1,117 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { categories } from "../../data/categories";
+import qaArticoleData from "../../data/qa-articole.json";
+import Etichete from "../../components/Etichete.astro";
+
+export async function getStaticPaths() {
+  const articole = await getCollection("articole");
+  return articole.map((art) => ({
+    params: { slug: art.id },
+    props: { art },
+  }));
+}
+
+const { art } = Astro.props;
+const { Content } = await render(art);
+const cat = categories.find((c) => c.slug === art.data.categorie);
+const qaArticol: { intrebare: string; raspuns: string }[] =
+  (qaArticoleData as Record<string, { intrebare: string; raspuns: string }[]>)[art.id] ?? [];
+
+const toateArticolele = await getCollection("articole");
+const dinAceeasiCategorie = toateArticolele
+  .filter((a) => a.id !== art.id && a.data.categorie === art.data.categorie)
+  .sort((a, b) => b.data.data.valueOf() - a.data.data.valueOf())
+  .slice(0, 4);
+
+const descriereScurta = art.body
+  ? art.body.replace(/[#*_`\[\]()>-]/g, "").replace(/\s+/g, " ").trim().slice(0, 155)
+  : undefined;
+
+const breadcrumbs = [
+  { nume: "Acasă", url: "/" },
+  { nume: "Blog", url: "/blog" },
+  ...(cat ? [{ nume: cat.name, url: `/categorie/${cat.slug}` }] : []),
+  { nume: art.data.title, url: `/blog/${art.id}` },
+];
+---
+<Layout
+  title={`${art.data.title} — Electric NEWS`}
+  description={descriereScurta}
+  articleQa
+  ogImage={art.data.imagine}
+  breadcrumbs={breadcrumbs}
+  faqItems={qaArticol}
+  articleMeta={{ titlu: art.data.title, dataPublicare: art.data.data.toISOString(), imagine: art.data.imagine, autor: art.data.sursaNume }}
+>
+  {qaArticol.length > 0 && (
+    <aside class="qa-side">
+      <h2 class="section-title">Întrebări despre acest articol</h2>
+      <div class="qa-list">
+        {qaArticol.map((qa) => (
+          <details class="qa-item qa-item-compact">
+            <summary>{qa.intrebare}</summary>
+            <div class="qa-answer"><p>{qa.raspuns}</p></div>
+          </details>
+        ))}
+      </div>
+    </aside>
+  )}
+
+  <section>
+    <div class="breadcrumb-badges">
+      <a class="badge badge-neutral" href="/blog">Toate articolele</a>
+      {cat && (<>
+        <span class="breadcrumb-sep">/</span>
+        <a class="badge" style={`background:${cat.color}`} href={`/categorie/${cat.slug}`}>{cat.name}</a>
+      </>)}
+    </div>
+    <div class="article-body">
+      <h1>{art.data.title}</h1>
+      <div class="meta">
+        <span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span>
+      </div>
+      {art.data.imagine && (
+        <div class="media-wrap" style="margin:18px 0;">
+          <img class="hero-media" style="width:100%;border-radius:8px;" src={art.data.imagine} alt={art.data.title} />
+          <Etichete slugs={art.data.etichete} overlay />
+        </div>
+      )}
+      <Content />
+      {art.data.sursaUrl ? (
+        <div class="source-note">
+          Sursă: <a href={art.data.sursaUrl} target="_blank" rel="noopener">{art.data.sursaNume || art.data.sursaUrl}</a>
+        </div>
+      ) : art.data.sursaNume ? (
+        <div class="source-note">Sursă: {art.data.sursaNume}</div>
+      ) : null}
+    </div>
+
+    <div class="lead-cta">
+      <div class="lead-cta-text">
+        <strong>Ai nevoie de montaj fotovoltaic sau electric în zona Făgăraș?</strong>
+        <span>Solar Electric Panel oferă consultanță și montaj — cere o ofertă personalizată.</span>
+      </div>
+      <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+    </div>
+  </section>
+
+  {dinAceeasiCategorie.length > 0 && (
+    <aside>
+      <h2 class="section-title">Din aceeași categorie</h2>
+      <ul class="side-list">
+        {dinAceeasiCategorie.map((a) => (
+          <li class="side-item">
+            <span class="dot" style={`background:${cat?.color ?? "#12213A"}`}></span>
+            <div>
+              <a class="side-title" href={`/blog/${a.id}`}>{a.data.title}</a>
+              <div class="side-meta">{a.data.data.toLocaleDateString("ro-RO")}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )}
+</Layout>

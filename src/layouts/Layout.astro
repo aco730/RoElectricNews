@@ -1,0 +1,192 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import { getContact } from "../lib/contact";
+
+interface Breadcrumb {
+  nume: string;
+  url: string;
+}
+
+interface QaItem {
+  intrebare: string;
+  raspuns: string;
+}
+
+interface ArticleMeta {
+  titlu: string;
+  dataPublicare: string;
+  imagine?: string;
+  autor?: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  singleCol?: boolean;
+  articleQa?: boolean;
+  ogImage?: string;
+  breadcrumbs?: Breadcrumb[];
+  faqItems?: QaItem[];
+  articleMeta?: ArticleMeta;
+}
+
+const {
+  title = "Electric NEWS — Electric, Smart Home, Fotovoltaic, Baterii & Stocare",
+  description = "Știri și ghiduri despre electric, fotovoltaic, smart home și stocare de energie, susținute de Solar Electric Panel (SEP).",
+  singleCol = false,
+  articleQa = false,
+  ogImage,
+  breadcrumbs,
+  faqItems,
+  articleMeta,
+} = Astro.props;
+
+const mainClass = articleQa ? "article-qa" : singleCol ? "single-col" : "";
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
+const ogImageAbsolut = ogImage ? (ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`) : `${siteUrl}/images/brand/logo-sep.png`;
+
+const contact = await getContact();
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Solar Electric Panel",
+  description: contact.descriere,
+  url: siteUrl,
+  telephone: contact.telefon,
+  email: contact.email || undefined,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: contact.adresa,
+    addressCountry: "RO",
+  },
+  areaServed: contact.zonaDeservita,
+};
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbs.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: b.nume,
+    item: `${siteUrl}${b.url}`,
+  })),
+} : null;
+
+const faqSchema = faqItems && faqItems.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((qa) => ({
+    "@type": "Question",
+    name: qa.intrebare,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: qa.raspuns,
+    },
+  })),
+} : null;
+
+const articleSchema = articleMeta ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: articleMeta.titlu,
+  datePublished: articleMeta.dataPublicare,
+  image: ogImageAbsolut,
+  author: {
+    "@type": "Organization",
+    name: articleMeta.autor || "Solar Electric Panel",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Solar Electric Panel",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/images/brand/logo-sep.png`,
+    },
+  },
+} : null;
+---
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <meta property="og:type" content={articleMeta ? "article" : "website"} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageAbsolut} />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:site_name" content="Electric NEWS — Solar Electric Panel" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbsolut} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+  </head>
+  <body>
+    <Header />
+    <main class={mainClass}>
+      <slot />
+    </main>
+    <Footer />
+
+    <script>
+      (function () {
+        var els = document.querySelectorAll("[data-count-to]");
+        var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        els.forEach(function (el) {
+          var target = parseInt(el.getAttribute("data-count-to") || "0", 10) || 0;
+          if (reduceMotion) { el.textContent = String(target); return; }
+          var duration = 900, start: number | null = null;
+          function step(ts: number) {
+            if (start === null) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = String(Math.round(eased * target));
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                requestAnimationFrame(step);
+                observer.unobserve(el);
+              }
+            });
+          }, { threshold: 0.4 });
+          observer.observe(el);
+        });
+
+        var reveals = document.querySelectorAll(".reveal");
+        if (reveals.length) {
+          var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15 });
+          reveals.forEach(function (el) { revealObserver.observe(el); });
+        }
+      })();
+    </script>
+  </body>
+</html>

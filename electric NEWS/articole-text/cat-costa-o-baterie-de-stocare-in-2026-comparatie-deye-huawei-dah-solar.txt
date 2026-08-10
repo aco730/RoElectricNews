@@ -1,0 +1,17 @@
+Cât costă o baterie de stocare în 2026: comparație Deye, Huawei, DAH Solar
+
+Prețul unei baterii de stocare pentru sistemul fotovoltaic al casei variază mult mai mult decât s-ar aștepta cineva la prima căutare — diferența dintre segmentul economic și cel premium poate depăși de trei ori prețul pe kWh de capacitate, pentru tehnologie fundamental similară (LiFePO4).
+
+Pe segmentul de 5 kWh, capacitate potrivită pentru un consum de bază de seară-noapte la o casă mică, Deye rămâne opțiunea economică, la aproximativ 3.200 de lei, în timp ce Growatt se poziționează la mijloc, în jur de 8.500 de lei, iar Huawei ocupă segmentul premium, la aproximativ 10.350 de lei pentru capacitate similară — o diferență de peste trei ori între cel mai ieftin și cel mai scump model, la aceeași capacitate nominală.
+
+Pentru 10 kWh, capacitatea cea mai populară pentru o casă obișnuită cu consum de seară mai ridicat, Dyness oferă varianta economică la circa 8.000 de lei, BYD și Growatt se situează în segmentul mediu, la aproximativ 16.500 de lei, iar Huawei rămâne cea mai scumpă opțiune, în jur de 25.000 de lei.
+
+La 15 kWh, potrivit pentru case mai mari sau pentru cei care vor autonomie extinsă pe timp de noapte, Felicity oferă varianta economică la aproximativ 10.100 de lei, Growatt la circa 22.330 de lei, iar Huawei LUNA2000 rămâne cea mai scumpă, la aproximativ 35.490 de lei.
+
+Calculat pe kWh de capacitate, segmentul economic (Deye, Dyness) se situează între 628 și 840 de lei pe kWh, segmentul mediu (BYD, Growatt, Pylontech) între 1.200 și 1.850 de lei pe kWh, iar segmentul premium (Huawei, Fronius) între 2.000 și 2.900 de lei pe kWh — diferența de preț reflectă, în principal, calitatea celulelor, durata garanției și integrarea cu ecosistemul de invertoare al fiecărui brand.
+
+**Finanțare disponibilă prin AFM**: programul dedicat prosumatorilor care au deja un sistem fotovoltaic instalat oferă un subvenție estimată între 8.000 și 15.000 de lei per beneficiar, pentru achiziția și instalarea unei baterii LiFePO4, dintr-un buget total alocat de 400 de milioane de lei. Ca exemplu concret: o baterie BYD de 10 kWh, la preț de listă de aproximativ 16.460 de lei, ajunge la un cost efectiv de circa 6.460 de lei după o subvenție AFM de 10.000 de lei.
+
+**Rentabilitatea financiară**: o baterie medie de 10 kWh poate genera economii suplimentare anuale de aproximativ 4.660 de lei, prin creșterea gradului de autoconsum al energiei produse — ceea ce înseamnă o amortizare estimată la 3,5 ani fără subvenție, sau la doar 1,4 ani cu sprijinul programului AFM activ.
+
+Sursă: greenlead.ro.

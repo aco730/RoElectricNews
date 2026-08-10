@@ -1,0 +1,68 @@
+---
+export const prerender = false;
+const eroare = Astro.url.searchParams.get('eroare') === '1';
+const secundeBlocare = Number(Astro.url.searchParams.get('blocat') || 0);
+const minuteBlocare = secundeBlocare > 0 ? Math.ceil(secundeBlocare / 60) : 0;
+---
+<!doctype html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Admin — autentificare</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: system-ui, sans-serif;
+			background: #0f172a;
+		}
+		form {
+			background: #1e293b;
+			padding: 2.5rem;
+			border-radius: 12px;
+			width: 320px;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+		}
+		h1 { color: #f1f5f9; font-size: 1.25rem; margin: 0 0 0.5rem; }
+		input {
+			padding: 0.7rem 0.9rem;
+			border-radius: 8px;
+			border: 1px solid #334155;
+			background: #0f172a;
+			color: #f1f5f9;
+			font-size: 1rem;
+		}
+		button {
+			padding: 0.7rem;
+			border-radius: 8px;
+			border: none;
+			background: #2563eb;
+			color: white;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		button:hover { background: #1d4ed8; }
+		.eroare { color: #f87171; font-size: 0.85rem; margin: 0; }
+	</style>
+</head>
+<body>
+	<form method="POST" action="/api/admin/login">
+		<h1>Panou administrare</h1>
+		{eroare && !minuteBlocare && <p class="eroare">Parolă incorectă.</p>}
+		{minuteBlocare > 0 && (
+			<p class="eroare">Prea multe încercări greșite. Încearcă din nou în {minuteBlocare} minut{minuteBlocare === 1 ? '' : 'e'}.</p>
+		)}
+		<input type="password" name="password" placeholder="Parolă" autofocus required disabled={minuteBlocare > 0} />
+		<button type="submit" disabled={minuteBlocare > 0}>Autentificare</button>
+	</form>
+</body>
+</html>

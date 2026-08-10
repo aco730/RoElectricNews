@@ -1,0 +1,16 @@
+---
+title: "Otilia Nuțu: România avea nevoie de stocare de cinci ori mai mare ca să evite criza energetică"
+categorie: reglementari-preturi
+data: 2026-08-09
+sursaNume: "Ziare.com (Business Focus)"
+sursaUrl: "https://ziare.com/criza-energetica/business-focus-otilia-nutu-expert-forum-criza-romania-bulgaria-fotovoltaice-stocare-2028506"
+imagine: "/images/articole/otilia-nutu-romania-avea-nevoie-de-stocare-de-cinci-ori-mai-mare-ca-sa-evite-cri.webp"
+---
+
+Otilia Nuțu, membră fondatoare a Expert Forum și analistă de politici publice în energie, a comparat situația României cu cea a Bulgariei într-o apariție la emisiunea Business Focus de pe Ziare.com, pe tema crizei energetice recente. Diferența dintre cele două țări, spune ea, nu ține de noroc, ci de investiții făcute din timp: Bulgaria acoperă circa 40% din necesarul de energie la orele de vârf din capacități de stocare, față de doar 7,5% în cazul României. Raportat la capacitatea instalată din surse regenerabile, Bulgaria are un raport stocare/regenerabile de 30%, iar România de doar 6%.
+
+„Situația de acum putea fi evitată", afirmă Nuțu, punctând că Bulgaria a investit mai devreme și mai consistent în energie solară și în capacitate de stocare asociată. Concret, analista estimează că România ar fi traversat mult mai ușor criza recentă cu o capacitate de stocare de aproximativ cinci ori mai mare decât cea actuală — suficientă să susțină consumul timp de patru-cinci ore, față de cel mult o oră și doar parțial, cât permite infrastructura de azi.
+
+Un punct pe care Nuțu insistă e lipsa de conștientizare că aceste episoade nu sunt excepții izolate: secetele și temperaturile extreme care afectează producția convențională de energie (hidro, nuclear) vor deveni tot mai frecvente pe fondul schimbărilor climatice, ceea ce face din stocare o necesitate structurală, nu o investiție de lux. Argumentul economic vine în completare: bateriile sunt, potrivit analizei citate, de aproximativ 15 ori mai ieftine decât erau în 2010, iar costurile tehnologiilor regenerabile au scăzut de 5-6 ori doar față de 2020 — deci decizia de a nu investi masiv în stocare nu mai poate fi pusă pe seama costurilor prohibitive.
+
+Pentru un prosumator sau pentru cineva care ia în calcul o baterie de stocare acasă, mesajul practic e simplu: argumentul „e prea scump" pentru stocare s-a erodat semnificativ în ultimii ani, iar experiența recentă arată direct costul opus — vulnerabilitatea unui sistem energetic care depinde excesiv de o singură sursă, fără rezerve. Sursă: Ziare.com (Business Focus, Otilia Nuțu).

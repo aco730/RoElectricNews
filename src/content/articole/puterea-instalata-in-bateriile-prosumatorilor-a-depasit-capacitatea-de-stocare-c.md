@@ -1,0 +1,16 @@
+---
+title: "Puterea instalată în bateriile prosumatorilor a depășit capacitatea de stocare centralizată din România"
+categorie: fotovoltaic
+data: 2026-02-25
+sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
+sursaUrl: "https://asociatiaprosumatorilor.ro/puterea-totala-instalata-in-bateriile-prosumatorilor-depaseste-toata-puterea-de-stocare-a-energiei-din-romania/"
+imagine: "/images/articole/puterea-instalata-in-bateriile-prosumatorilor-a-depasit-capacitatea-de-stocare-c.webp"
+---
+
+România are, la nivel centralizat, aproximativ 600 MW de putere totală de stocare a energiei — din care jumătate, circa 300 MW, aparține unui singur furnizor privat. E o cifră mică raportată la mărimea sistemului energetic național, și tocmai de asta comparația care urmează contează.
+
+La sfârșitul lui 2025, cei aproximativ 300.000 de prosumatori din România aveau instalată, în bateriile proprii de acasă, o putere estimată tot la circa 600 MW — practic egalând întreaga capacitate centralizată de stocare a țării. Iar Asociația Prosumatorilor și Comunităților de Energie (APCE) consideră că datele oficiale subestimează realitatea: estimarea reală ar depăși 800 MW, pentru că nu toți prosumatorii și-au declarat integral instalațiile.
+
+Distincția tehnică din spate contează: puterea nominală a unui acumulator reprezintă rata maximă la care bateria poate descărca energie în rețea la un moment dat — nu doar cât de multă energie poate stoca, ci cât de rapid o poate livra atunci când e nevoie. Din acest unghi, prosumatorii nu doar că au acumulat o rezervă comparabilă cu sistemul centralizat, ci au construit, dispersat, o capacitate reală de sprijin a rețelei la vârfuri de consum.
+
+Practic, mii de gospodării individuale, investind din resurse proprii, au ajuns să egaleze — și probabil să depășească — întreaga infrastructură oficială de stocare a energiei din România. E un argument concret pentru cei care cer autorităților recunoașterea prosumatorilor ca actori strategici în sistemul energetic, nu doar ca simpli consumatori cu panouri pe-acoperiș. (Sursă: Asociația Prosumatorilor, APCE.)

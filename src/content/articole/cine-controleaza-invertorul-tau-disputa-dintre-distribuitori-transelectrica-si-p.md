@@ -1,0 +1,16 @@
+---
+title: "Cine controlează invertorul tău? Disputa dintre distribuitori/Transelectrica și prosumatori privind accesul la date"
+categorie: fotovoltaic
+data: 2025-10-31
+sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
+sursaUrl: "https://asociatiaprosumatorilor.ro/distribuitorii-si-transelectrica-vor-controlul-invertoarelor-romanilor-apce-incercati-si-vom-vedea/"
+imagine: "/images/articole/cine-controleaza-invertorul-tau-disputa-dintre-distribuitori-transelectrica-si-p.webp"
+---
+
+Distribuitorii de energie și Transelectrica cer acces și control asupra invertoarelor instalate de prosumatori, invocând motive de securitate și stabilitate a rețelei electrice naționale. Argumentul oficial: monitorizarea și reglarea de la distanță a echipamentelor fotovoltaice ale utilizatorilor ar proteja infrastructura de rețea împotriva unor eventuale probleme de supraîncărcare la vârfurile de producție solară.
+
+Asociația Prosumatorilor și Comunităților de Energie (APCE) respinge categoric cererea. Poziția lor, formulată direct: „Noi, prosumatorii din România, nu vom accepta ca nimeni să acceseze invertoarele noastre fără acordul nostru expres!” Asociația susține că un asemenea mecanism de control nu există în alte țări europene și ar constitui o încălcare atât a dreptului de proprietate asupra echipamentelor deja cumpărate și instalate, cât și a confidențialității datelor de consum și producție.
+
+Ce ar însemna practic, dacă cererea distribuitorilor ar fi acceptată: pierderea autonomiei prosumatorilor asupra propriilor sisteme — distribuitorii ar putea limita sau ajusta de la distanță producția energetică a unei instalații private; acces la date considerate private despre parametrii tehnici și de consum ai fiecărei gospodării; și, poate cel mai sensibil, un precedent care ar diminua drepturile de proprietate asupra unor echipamente deja plătite și montate de proprietari.
+
+APCE a anunțat că va lua în calcul acțiuni legale, atât la nivel național cât și european, dacă demersul de control asupra invertoarelor avansează. Pentru un prosumator, disputa asta contează dincolo de aspectul tehnic — atinge direct întrebarea cine decide, în ultimă instanță, cum funcționează un sistem fotovoltaic cumpărat cu bani proprii. (Sursă: Asociația Prosumatorilor, APCE.)

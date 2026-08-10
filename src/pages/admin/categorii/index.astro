@@ -1,0 +1,32 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { categories } from '../../../data/categories';
+import { getQaCategorii } from '../../../lib/qa';
+
+const toateQa = await getQaCategorii();
+---
+<AdminLayout title="FAQ pe categorii">
+	<h1>Întrebări frecvente pe categorii</h1>
+	<table>
+		<thead>
+			<tr><th>Categorie</th><th>Nr. întrebări</th><th></th></tr>
+		</thead>
+		<tbody>
+			{categories.map((c) => (
+				<tr>
+					<td>{c.name}</td>
+					<td>{(toateQa[c.slug] ?? []).length}</td>
+					<td><a href={`/admin/categorii/${c.slug}`}>Editează</a></td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	<style>
+		table { width: 100%; border-collapse: collapse; max-width: 700px; }
+		th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.9rem; }
+		th { color: #94a3b8; font-weight: 600; }
+		td a { color: #93c5fd; text-decoration: none; }
+	</style>
+</AdminLayout>

@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "electric-instalatii",
+    "name": "Rețele & Confort",
+    "color": "#12213a",
+    "description": "Articole și ghiduri despre instalații electrice, sanitare și managementul apei.",
+    "ascunsa": false
+  },
+  {
+    "slug": "smart-home",
+    "name": "Smart Living",
+    "color": "#6a3d9a",
+    "description": "Articole și ghiduri despre automatizări, IoT și climatizare inteligentă.",
+    "ascunsa": false
+  },
+  {
+    "slug": "fotovoltaic",
+    "name": "Eco-Energie & Stocare",
+    "color": "#e97b0f",
+    "description": "Articole și ghiduri despre solar, baterii, prosumatori și pompe de căldură.",
+    "ascunsa": false
+  },
+  {
+    "slug": "reglementari-preturi",
+    "name": "Reglementări & Legislatie",
+    "color": "#b22222",
+    "description": "Articole și ghiduri despre reglementări & Legi",
+    "ascunsa": false
+  },
+  {
+    "slug": "arhitectura",
+    "name": "Arhitectură & Concept",
+    "color": "#1d4ed8",
+    "description": "Articole și ghiduri despre nZEB, proiecte de case și arhitectură verde.",
+    "ascunsa": false
+  },
+  {
+    "slug": "santier-structura",
+    "name": "Șantier & Structură",
+    "color": "#78716c",
+    "description": "Articole și ghiduri despre materiale, izolații și fundații.",
+    "ascunsa": false
+  },
+  {
+    "slug": "design-interior",
+    "name": "Design Interior",
+    "color": "#be185d",
+    "description": "Articole și ghiduri despre finisaje premium, mobilier și trenduri.",
+    "ascunsa": false
+  },
+  {
+    "slug": "outdoor-peisagistica",
+    "name": "Outdoor & Peisagistică",
+    "color": "#15803d",
+    "description": "Articole și ghiduri despre irigații smart, zone de relaxare și pavaje.",
+    "ascunsa": false
+  },
+  {
+    "slug": "youtube",
+    "name": "YouTube",
+    "color": "#ff0000",
+    "description": "Articole și ghiduri despre youtube.",
+    "ascunsa": false
+  },
+  {
+    "slug": "colaboratori",
+    "name": "Colaboratori",
+    "color": "#0730ab",
+    "description": "Articole și ghiduri despre colaboratori.",
+    "ascunsa": false
+  }
+]

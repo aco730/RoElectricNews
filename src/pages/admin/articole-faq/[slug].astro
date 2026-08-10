@@ -1,0 +1,146 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { getArticol } from '../../../lib/articole';
+import { getQaArticol } from '../../../lib/qa';
+
+const { slug } = Astro.params;
+const articol = await getArticol(slug!);
+if (!articol) return Astro.redirect('/admin/articole-faq');
+
+const items = await getQaArticol(slug!);
+---
+<AdminLayout title={`FAQ — ${articol.title}`}>
+	<div class="cap">
+		<h1>FAQ — {articol.title}</h1>
+		<p class="hint">Aceste întrebări apar sub acest articol de blog.</p>
+	</div>
+
+	<div id="qa-listă" class="qa-listă"></div>
+
+	<button type="button" id="qa-adaugă" class="btn-secundar">+ Adaugă întrebare</button>
+
+	<div class="bară-jos">
+		<button type="button" id="qa-salvează" class="btn">Salvează tot</button>
+		<a href="/admin/articole-faq" class="anuleaza">← Înapoi la listă</a>
+		<a href={`/admin/articole/editor?slug=${slug}`} class="anuleaza">Editează articolul</a>
+		<span id="qa-status"></span>
+	</div>
+
+	<style is:global>
+		.cap { max-width: 760px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+
+		.qa-listă { display: flex; flex-direction: column; gap: 1rem; max-width: 760px; }
+
+		.qa-card {
+			background: #111827; border: 1px solid #334155; border-radius: 12px;
+			padding: 1.25rem 1.4rem; display: flex; flex-direction: column; gap: 0.9rem;
+		}
+		.qa-card-cap { display: flex; align-items: center; justify-content: space-between; }
+		.qa-nr { color: #64748b; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+		.qa-elimină { background: none; border: 1px solid #3f2020; color: #f87171; cursor: pointer; font-size: 0.78rem; padding: 0.3rem 0.7rem; border-radius: 6px; }
+		.qa-elimină:hover { background: #2a1414; }
+
+		.qa-câmp { display: flex; flex-direction: column; gap: 0.35rem; }
+		.qa-câmp label { font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+		.qa-câmp input, .qa-câmp textarea {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.65rem 0.8rem; font-size: 0.95rem; font-family: inherit; line-height: 1.5;
+		}
+		.qa-câmp textarea { resize: vertical; }
+
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.6rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.87rem; margin-top: 1.25rem; }
+		.btn-secundar:hover { background: #263244; }
+		.bară-jos { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; flex-wrap: wrap; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		.anuleaza { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+		#qa-status { font-size: 0.85rem; color: #4ade80; }
+	</style>
+
+	<script define:vars={{ slug, itemsInitiale: items }}>
+		const listaEl = document.getElementById('qa-listă');
+		const salveazăBtn = document.getElementById('qa-salvează');
+		const adaugăBtn = document.getElementById('qa-adaugă');
+		const qaStatus = document.getElementById('qa-status');
+
+		function actualizeazăNumere() {
+			[...listaEl.querySelectorAll('.qa-card')].forEach((card, i) => {
+				card.querySelector('.qa-nr').textContent = `Întrebarea ${i + 1}`;
+			});
+		}
+
+		function randCard(item) {
+			const card = document.createElement('div');
+			card.className = 'qa-card';
+
+			const cap = document.createElement('div');
+			cap.className = 'qa-card-cap';
+			const nr = document.createElement('span');
+			nr.className = 'qa-nr';
+			const elimină = document.createElement('button');
+			elimină.type = 'button';
+			elimină.className = 'qa-elimină';
+			elimină.textContent = 'Elimină';
+			elimină.addEventListener('click', () => { card.remove(); actualizeazăNumere(); });
+			cap.append(nr, elimină);
+
+			const câmpÎntrebare = document.createElement('div');
+			câmpÎntrebare.className = 'qa-câmp';
+			câmpÎntrebare.innerHTML = '<label>Întrebare</label>';
+			const intrebare = document.createElement('input');
+			intrebare.type = 'text';
+			intrebare.className = 'qa-intrebare';
+			intrebare.placeholder = 'Ex: Cât durează montajul?';
+			intrebare.value = item.intrebare || '';
+			câmpÎntrebare.appendChild(intrebare);
+
+			const câmpRăspuns = document.createElement('div');
+			câmpRăspuns.className = 'qa-câmp';
+			câmpRăspuns.innerHTML = '<label>Răspuns</label>';
+			const raspuns = document.createElement('textarea');
+			raspuns.className = 'qa-raspuns';
+			raspuns.rows = 3;
+			raspuns.placeholder = 'Răspunsul afișat sub întrebare...';
+			raspuns.value = item.raspuns || '';
+			câmpRăspuns.appendChild(raspuns);
+
+			card.append(cap, câmpÎntrebare, câmpRăspuns);
+			return card;
+		}
+
+		itemsInitiale.forEach((item) => listaEl.appendChild(randCard(item)));
+		actualizeazăNumere();
+
+		adaugăBtn.addEventListener('click', () => {
+			listaEl.appendChild(randCard({ intrebare: '', raspuns: '' }));
+			actualizeazăNumere();
+			listaEl.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		});
+
+		salveazăBtn.addEventListener('click', async () => {
+			const items = [...listaEl.querySelectorAll('.qa-card')].map((el) => ({
+				intrebare: el.querySelector('.qa-intrebare').value.trim(),
+				raspuns: el.querySelector('.qa-raspuns').value.trim(),
+			})).filter((i) => i.intrebare && i.raspuns);
+
+			qaStatus.textContent = 'Se salvează...';
+			qaStatus.style.color = '#94a3b8';
+
+			const res = await fetch(`/api/admin/qa-articol/${slug}`, {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(items),
+			});
+
+			if (res.ok) {
+				qaStatus.textContent = 'Salvat.';
+				qaStatus.style.color = '#4ade80';
+			} else {
+				qaStatus.textContent = 'Eroare la salvare.';
+				qaStatus.style.color = '#f87171';
+			}
+		});
+	</script>
+</AdminLayout>

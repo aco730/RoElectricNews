@@ -1,0 +1,273 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { getProiecte, getPhotoSrc } from '../../../lib/portofoliu';
+import { getEtichete } from '../../../lib/etichete';
+
+const { id } = Astro.params;
+const proiecte = await getProiecte();
+const proiect = proiecte.find((p) => p.id === id);
+if (!proiect) return Astro.redirect('/admin/portofoliu');
+
+const photoSrc = await getPhotoSrc();
+const poze = photoSrc.photos.filter((p) => p.project_id === id);
+const etichete = await getEtichete();
+const eticheteSelectate = new Set(proiect.etichete ?? []);
+const sluguriPredefinite = new Set(etichete.map((e) => e.slug));
+const eticheteCustomExistente = (proiect.etichete ?? []).filter((s) => !sluguriPredefinite.has(s));
+---
+<AdminLayout title={`Portofoliu — ${proiect.nume}`}>
+	<div class="cap">
+		<h1>{proiect.nume}</h1>
+		<a href="/admin/portofoliu" class="anuleaza">← Înapoi la portofoliu</a>
+	</div>
+
+	<section class="card">
+		<h2>Detalii șantier</h2>
+		<div class="grid2">
+			<label>Nume
+				<input type="text" id="p-nume" value={proiect.nume} />
+			</label>
+			<label>Album
+				<select id="p-album">
+					<option value="fotovoltaice" selected={proiect.album === 'fotovoltaice'}>Fotovoltaice</option>
+					<option value="electrice" selected={proiect.album === 'electrice'}>Electrice</option>
+				</select>
+			</label>
+		</div>
+		<div class="grid2">
+			<label>Locație
+				<input type="text" id="p-locatie" value={proiect.locatie} />
+			</label>
+			<label class="check-inline"><input type="checkbox" id="p-ascuns" checked={proiect.ascuns} /> Ascuns de pe site</label>
+		</div>
+		<label>Notă / descriere
+			<textarea id="p-note" rows="3">{proiect.note}</textarea>
+		</label>
+		<div class="câmp-etichete">
+			<label>Etichete</label>
+			<div class="etichete-listă" id="etichete-listă">
+				{etichete.length === 0 && <p class="hint-mic">Nicio etichetă predefinită încă — <a href="/admin/etichete">adaugă una</a>, sau folosește una personalizată mai jos.</p>}
+				{etichete.map((e) => (
+					<label class="etichetă-opțiune">
+						<input type="checkbox" class="p-eticheta-cb" value={e.slug} checked={eticheteSelectate.has(e.slug)} />
+						<span class="etichetă-pastilă" style={`background:${e.culoare}`}>{e.text}</span>
+					</label>
+				))}
+				{eticheteCustomExistente.map((text) => (
+					<label class="etichetă-opțiune" data-custom="1">
+						<input type="checkbox" class="p-eticheta-cb" value={text} checked />
+						<span class="etichetă-pastilă etichetă-pastilă-custom">{text} <button type="button" class="etichetă-x">✕</button></span>
+					</label>
+				))}
+			</div>
+			<div class="etichetă-custom-adaugă">
+				<input type="text" id="etichetă-custom-input" placeholder="Etichetă personalizată (ex: Promo vară)" />
+				<button type="button" id="etichetă-custom-btn" class="btn-secundar">+ Adaugă</button>
+			</div>
+		</div>
+		<div class="acțiuni">
+			<button type="button" id="salvează-proiect" class="btn">Salvează detaliile</button>
+			<button type="button" id="șterge-proiect" class="btn-pericol">Șterge șantierul definitiv</button>
+			<span id="status-proiect"></span>
+		</div>
+	</section>
+
+	<h2>Poze ({poze.length})</h2>
+	<div class="grilă-poze">
+		{poze.map((poza) => (
+			<div class="poza-card" data-id={poza.id}>
+				<img src={poza.thumb_s} alt={poza.nota || ''} loading="lazy" />
+				<input type="text" class="poza-nota" placeholder="Notă (opțional)" value={poza.nota} />
+				<div class="poza-acțiuni">
+					<label class="check-inline mic"><input type="checkbox" class="poza-ascunsa" checked={poza.ascunsa} /> Ascunsă</label>
+					<button type="button" class="poza-salvează">Salvează</button>
+					<button type="button" class="poza-șterge">Șterge</button>
+				</div>
+			</div>
+		))}
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin-bottom: 1.5rem; }
+		.anuleaza { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+		.card { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1.4rem; max-width: 780px; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+		.câmp-etichete { display: flex; flex-direction: column; gap: 0.5rem; }
+		.câmp-etichete > label { font-size: 0.8rem; color: #94a3b8; }
+		.etichete-listă { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+		.hint-mic { font-size: 0.8rem; color: #64748b; margin: 0; }
+		.hint-mic a { color: #93c5fd; }
+		.etichetă-opțiune { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+		.etichetă-opțiune input { margin: 0; }
+		.etichetă-pastilă { padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: white; display: inline-flex; align-items: center; gap: 0.35rem; }
+		.etichetă-pastilă-custom { background: #475569; }
+		.etichetă-x { background: none; border: none; color: white; cursor: pointer; font-size: 0.7rem; padding: 0; line-height: 1; opacity: 0.8; }
+		.etichetă-x:hover { opacity: 1; }
+		.etichetă-custom-adaugă { display: flex; gap: 0.5rem; margin-top: 0.3rem; }
+		.etichetă-custom-adaugă input { background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9; padding: 0.45rem 0.65rem; font-size: 0.85rem; flex: 1; max-width: 280px; }
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer; font-size: 0.82rem; }
+		.btn-secundar:hover { background: #263244; }
+		.card h2 { margin-top: 0; font-size: 1rem; color: #f1f5f9; }
+		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.8rem; color: #94a3b8; }
+		.check-inline { flex-direction: row; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: #e2e8f0; justify-content: flex-start; margin-top: auto; }
+		.check-inline.mic { font-size: 0.75rem; }
+		input[type="text"], select, textarea {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.55rem 0.7rem; font-size: 0.9rem; font-family: inherit;
+		}
+		textarea { resize: vertical; }
+		.acțiuni { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.88rem; }
+		.btn:hover { background: #1d4ed8; }
+		.btn-pericol { background: none; border: 1px solid #7f1d1d; color: #f87171; padding: 0.6rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem; }
+		.btn-pericol:hover { background: #2a1414; }
+		#status-proiect { font-size: 0.85rem; color: #4ade80; }
+
+		.grilă-poze { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; max-width: 1100px; }
+		.poza-card { background: #111827; border: 1px solid #334155; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+		.poza-card img { width: 100%; height: 130px; object-fit: cover; display: block; }
+		.poza-nota { margin: 0.5rem 0.5rem 0.4rem; border-radius: 6px !important; font-size: 0.8rem !important; padding: 0.4rem 0.55rem !important; }
+		.poza-acțiuni { display: flex; flex-direction: column; gap: 0.4rem; padding: 0 0.5rem 0.6rem; }
+		.poza-acțiuni .check-inline { margin: 0; }
+		.poza-acțiuni button { background: #1e293b; border: 1px solid #334155; color: #cbd5e1; border-radius: 6px; padding: 0.35rem; font-size: 0.75rem; cursor: pointer; }
+		.poza-acțiuni button:hover { background: #263244; }
+		.poza-acțiuni .poza-șterge { color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script define:vars={{ id }}>
+		const eticheteListă = document.getElementById('etichete-listă');
+		const eticheteCustomInput = document.getElementById('etichetă-custom-input');
+
+		function adaugăEtichetăCustom() {
+			const text = eticheteCustomInput.value.trim();
+			if (!text) return;
+			const existăDeja = [...eticheteListă.querySelectorAll('.p-eticheta-cb')]
+				.some((el) => el.value.toLowerCase() === text.toLowerCase());
+			if (existăDeja) { eticheteCustomInput.value = ''; return; }
+
+			const label = document.createElement('label');
+			label.className = 'etichetă-opțiune';
+			label.dataset.custom = '1';
+
+			const cb = document.createElement('input');
+			cb.type = 'checkbox';
+			cb.className = 'p-eticheta-cb';
+			cb.value = text;
+			cb.checked = true;
+
+			const pastilă = document.createElement('span');
+			pastilă.className = 'etichetă-pastilă etichetă-pastilă-custom';
+			pastilă.textContent = text + ' ';
+
+			const x = document.createElement('button');
+			x.type = 'button';
+			x.className = 'etichetă-x';
+			x.textContent = '✕';
+			x.addEventListener('click', () => label.remove());
+
+			pastilă.appendChild(x);
+			label.append(cb, pastilă);
+			eticheteListă.appendChild(label);
+			eticheteCustomInput.value = '';
+		}
+
+		eticheteListă.querySelectorAll('[data-custom="1"] .etichetă-x').forEach((btn) => {
+			btn.addEventListener('click', () => btn.closest('.etichetă-opțiune')?.remove());
+		});
+
+		document.getElementById('etichetă-custom-btn').addEventListener('click', adaugăEtichetăCustom);
+		eticheteCustomInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') { e.preventDefault(); adaugăEtichetăCustom(); }
+		});
+
+		function aratăBanner() {
+			const banner = document.getElementById('banner-salvat');
+			banner.classList.add('arată');
+			clearTimeout(window.__bannerTimeout);
+			window.__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+		}
+
+		document.getElementById('salvează-proiect').addEventListener('click', async () => {
+			const statusEl = document.getElementById('status-proiect');
+			statusEl.textContent = 'Se salvează...';
+			statusEl.style.color = '#94a3b8';
+
+			const payload = {
+				nume: document.getElementById('p-nume').value.trim(),
+				album: document.getElementById('p-album').value,
+				locatie: document.getElementById('p-locatie').value.trim(),
+				note: document.getElementById('p-note').value.trim(),
+				ascuns: document.getElementById('p-ascuns').checked,
+				etichete: [...document.querySelectorAll('.p-eticheta-cb:checked')].map((el) => el.value),
+			};
+
+			const res = await fetch(`/api/admin/portofoliu/proiecte/${id}`, {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				aratăBanner();
+			} else {
+				statusEl.textContent = 'Eroare la salvare.';
+				statusEl.style.color = '#f87171';
+			}
+		});
+
+		document.getElementById('șterge-proiect').addEventListener('click', async () => {
+			if (!confirm('Ștergi definitiv acest șantier și TOATE pozele lui? Nu poate fi anulat.')) return;
+			const res = await fetch(`/api/admin/portofoliu/proiecte/${id}`, { method: 'DELETE' });
+			if (res.ok) {
+				window.location.href = '/admin/portofoliu';
+			} else {
+				alert('Ștergerea a eșuat.');
+			}
+		});
+
+		document.querySelectorAll('.poza-card').forEach((card) => {
+			const pozaId = card.dataset.id;
+
+			card.querySelector('.poza-salvează').addEventListener('click', async () => {
+				const payload = {
+					nota: card.querySelector('.poza-nota').value.trim(),
+					ascunsa: card.querySelector('.poza-ascunsa').checked,
+				};
+				const res = await fetch(`/api/admin/portofoliu/poze/${pozaId}`, {
+					method: 'PUT',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload),
+				});
+				if (res.ok) {
+					aratăBanner();
+				} else {
+					alert('Eroare la salvare.');
+				}
+			});
+
+			card.querySelector('.poza-șterge').addEventListener('click', async () => {
+				if (!confirm('Ștergi definitiv această poză?')) return;
+				const res = await fetch(`/api/admin/portofoliu/poze/${pozaId}`, { method: 'DELETE' });
+				if (res.ok) {
+					card.remove();
+				} else {
+					alert('Ștergerea a eșuat.');
+				}
+			});
+		});
+	</script>
+</AdminLayout>

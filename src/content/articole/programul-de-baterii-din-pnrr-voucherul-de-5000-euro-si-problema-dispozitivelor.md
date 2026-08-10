@@ -1,0 +1,16 @@
+---
+title: "Programul de baterii din PNRR: voucherul de 5.000 euro și problema dispozitivelor DSU"
+categorie: fotovoltaic
+data: 2025-09-11
+sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
+sursaUrl: "https://asociatiaprosumatorilor.ro/programul-de-baterii-din-pnrr-intre-sprijin-pentru-prosumatori-si-castiguri-nejustificate/"
+imagine: "/images/articole/programul-de-baterii-din-pnrr-voucherul-de-5000-euro-si-problema-dispozitivelor.webp"
+---
+
+Programul de baterii finanțat prin PNRR (Investiția 4 — Baterii, Componenta 16 — RePowerEU) oferă gospodăriilor vouchere de 5.000 de euro pentru accelerarea utilizării energiei regenerabile prin instalarea de sisteme de stocare. Asociația Prosumatorilor și Comunităților de Energie a publicat însă un comunicat critic, semnat de președintele asociației, Dan Pîrșan, care semnalează două probleme concrete apărute în implementarea programului.
+
+Prima problemă ține de tipul de echipament oferit: potrivit unui sondaj în rândul beneficiarilor, 70% dintre prosumatori au primit exclusiv dispozitive DSU (Universal Storage Devices), fără posibilitatea de a alege altă soluție. Aceste dispozitive nu sunt omologate în România și nu apar în baza de date națională a echipamentelor certificate; în plus, funcționează independent, printr-o platformă proprie separată, fără să comunice direct cu invertoarele fotovoltaice deja instalate — o limitare tehnică importantă pentru cineva care își dorea un sistem integrat, nu două sisteme paralele care nu „vorbesc" între ele.
+
+A doua problemă semnalată e financiară: ofertele pentru baterii cu tehnologie LFP (litiu-fer-fosfat) ajung, potrivit comunicatului, „mult sub valoarea voucherului de 5.000 de euro (adesea între 1.000 și 2.000 de euro)" — diferența dintre costul real al echipamentului și valoarea voucherului rămânând, în multe cazuri, profit al instalatorului, nu beneficiu suplimentar pentru prosumator sub formă de capacitate de stocare mai mare.
+
+Pentru cineva care ia în calcul acest program, concluzia practică e directă: valoarea voucherului nu garantează automat o baterie de capacitate proporțională, iar tipul de echipament ofertat (DSU vs. o baterie LFP omologată, compatibilă cu invertorul existent) merită verificat explicit înainte de a semna, nu presupus ca fiind unul standard. Diferența dintre cele două variante poate însemna, practic, un sistem funcțional integrat sau două sisteme separate care nu comunică între ele. Sursă: Asociația Prosumatorilor și Comunităților de Energie (comunicat Dan Pîrșan, președinte A.P.C.E.).

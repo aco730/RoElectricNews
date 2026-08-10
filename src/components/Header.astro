@@ -1,0 +1,54 @@
+---
+import { categoriiVizibile } from "../data/categories";
+import siteConfig from "../data/site-config.json";
+
+const { header } = siteConfig;
+---
+{header.vizibil && (
+  <>
+    {header.topbarVizibil && (
+      <div class="topbar">
+        <span>{header.topbarText}</span>
+        <div>
+          {header.topbarLinkuri.map((l) => (
+            <a href={l.href}>{l.text}</a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <header class="main">
+      <a href="/" class="logo">
+        {header.logoImagine ? (
+          <img src={header.logoImagine} alt="Logo" height="30" />
+        ) : (
+          <svg width="30" height="30" viewBox="0 0 60 60">
+            <polygon points="30,4 52,17 52,43 30,56 8,43 8,17" fill="none" stroke="#12213A" stroke-width="3"></polygon>
+            <circle cx="30" cy="30" r="7" fill="#0EA5A0"></circle>
+            <line x1="30" y1="4" x2="30" y2="23" stroke="#12213A" stroke-width="2.5"></line>
+            <line x1="30" y1="37" x2="30" y2="56" stroke="#12213A" stroke-width="2.5"></line>
+          </svg>
+        )}
+        <span>{header.logoTextPrincipal}<span class="news">{header.logoTextAccent}</span></span>
+      </a>
+
+      {header.cautareVizibila && (
+        <div class="search-box">
+          <input type="text" id="site-search" placeholder="Caută articole..." autocomplete="off" />
+        </div>
+      )}
+
+      <div class="header-ctas">
+        {header.ctaButoane.map((b) => (
+          <a class={`cta-btn ${b.primar ? 'cta-btn-primary' : ''}`} href={b.href}>{b.text}</a>
+        ))}
+      </div>
+    </header>
+
+    <nav class="cats">
+      {categoriiVizibile.map((cat) => (
+        <a href={`/categorie/${cat.slug}`} class="nav-link" style={`--accent:${cat.color}`}>{cat.name}</a>
+      ))}
+    </nav>
+  </>
+)}

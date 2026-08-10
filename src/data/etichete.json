@@ -1,0 +1,35 @@
+[
+  { "slug": "sponsorizat", "text": "Sponsorizat", "culoare": "#8B5CF6" },
+  { "slug": "oferta", "text": "Ofertă", "culoare": "#0EA5A0" },
+  { "slug": "reducere", "text": "Reducere", "culoare": "#DC2626" },
+  { "slug": "nou", "text": "Nou", "culoare": "#2563EB" },
+
+  { "slug": "nzeb", "text": "nZEB", "culoare": "#1D4ED8" },
+  { "slug": "proiecte-case", "text": "Proiecte Case", "culoare": "#1D4ED8" },
+  { "slug": "arhitectura-verde", "text": "Arhitectură Verde", "culoare": "#1D4ED8" },
+
+  { "slug": "materiale", "text": "Materiale", "culoare": "#78716C" },
+  { "slug": "izolatii", "text": "Izolații", "culoare": "#78716C" },
+  { "slug": "fundatii", "text": "Fundații", "culoare": "#78716C" },
+
+  { "slug": "solar", "text": "Solar", "culoare": "#E97B0F" },
+  { "slug": "baterii", "text": "Baterii", "culoare": "#E97B0F" },
+  { "slug": "prosumatori", "text": "Prosumatori", "culoare": "#E97B0F" },
+  { "slug": "pompe-de-caldura", "text": "Pompe de Căldură", "culoare": "#E97B0F" },
+
+  { "slug": "managementul-apei", "text": "Managementul Apei", "culoare": "#12213A" },
+  { "slug": "tablouri", "text": "Tablouri", "culoare": "#12213A" },
+  { "slug": "iluminat", "text": "Iluminat", "culoare": "#12213A" },
+
+  { "slug": "automatizari", "text": "Automatizări", "culoare": "#6A3D9A" },
+  { "slug": "iot", "text": "IoT", "culoare": "#6A3D9A" },
+  { "slug": "climatizare-inteligenta", "text": "Climatizare Inteligentă", "culoare": "#6A3D9A" },
+
+  { "slug": "finisaje-premium", "text": "Finisaje Premium", "culoare": "#BE185D" },
+  { "slug": "mobilier", "text": "Mobilier", "culoare": "#BE185D" },
+  { "slug": "feng-shui-trenduri", "text": "Feng Shui & Trenduri", "culoare": "#BE185D" },
+
+  { "slug": "irigatii-smart", "text": "Irigații Smart", "culoare": "#15803D" },
+  { "slug": "zone-de-relaxare", "text": "Zone de Relaxare", "culoare": "#15803D" },
+  { "slug": "pavaje", "text": "Pavaje", "culoare": "#15803D" }
+]

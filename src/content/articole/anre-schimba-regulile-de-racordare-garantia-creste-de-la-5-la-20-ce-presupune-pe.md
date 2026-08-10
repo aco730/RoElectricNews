@@ -1,0 +1,20 @@
+---
+title: "ANRE schimbă regulile de racordare: garanția crește de la 5% la 20% — ce presupune pentru un proiect fotovoltaic"
+categorie: fotovoltaic
+data: 2026-04-24
+sursaNume: "ANRE — Comunicate de presă"
+sursaUrl: "https://anre.ro/comunicat-de-presa-anre-schimba-filosofia-racordarii-si-licentierii-garantia-pentru-racordare-creste-de-la-5-la-20-din-valoarea-tarifului-de-racordare-si-se-instituie-o-garantie-noua-pentru-partici/"
+imagine: "/images/articole/anre-schimba-regulile-de-racordare-garantia-creste-de-la-5-la-20-ce-presupune-pe.webp"
+---
+
+ANRE a publicat pe 27 aprilie 2026, în consultare publică, un proiect de modificare a regulilor de racordare și licențiere a capacităților de producție, care majorează substanțial garanția financiară cerută investitorilor: de la 5% din valoarea tarifului de racordare, cât era până acum, la 20% din aceeași valoare.
+
+Pe lângă această creștere, autoritatea introduce două garanții suplimentare, care nu existau anterior: 20 euro pe kilowatt instalat pentru participarea la licitația de alocare a capacităților disponibile în rețea, și 30 euro pe kilowatt instalat pentru obținerea sau prelungirea Autorizației de Înființare — sumă eliberabilă abia după finalizarea efectivă a investiției.
+
+Președintele ANRE, George Niculescu, a explicat motivul din spatele măsurii: "Consolidarea și dezvoltarea Sistemului Energetic Național nu se face cu proiecte speculative", a declarat oficialul, adăugând că scopul e să "ne asigurăm că avem MW reali, racordați în rețea, nu MW pe hârtie". Comunicatul ANRE vorbește explicit despre "descurajarea fermă a caracterului speculativ al proiectelor, prin instituirea unor filtre financiare crescute" — o referire directă la practica, tot mai vizibilă în ultimii ani, de rezervare a capacității de racordare doar pentru a revinde ulterior proiectul pe platforme online, fără intenția reală de a-l construi.
+
+Licitația de alocare a capacităților disponibile în rețea, la care se vor aplica noile reguli, e programată pentru toamna anului 2026.
+
+Pentru un investitor care pregătește un proiect fotovoltaic nou — fie el prosumator individual cu o instalație mai mare, fie dezvoltator de parc — implicația practică e directă: costul de intrare crește semnificativ față de regulile actuale. Traseul devine, în ordine, garanție pentru participarea la licitație (20 €/kW), apoi garanția de racordare propriu-zisă (20% din tariful de racordare, de patru ori mai mare decât înainte), și în final garanția pentru autorizație (30 €/kW), blocată până la finalizarea lucrărilor. Proiectele mici, la nivel de casă individuală, rămân în principiu mai puțin afectate de logica anti-speculativă, dar orice investiție care depășește pragul unei instalații rezidențiale standard trebuie recalculată financiar ținând cont de aceste praguri noi, valabile din toamna lui 2026.
+
+Sursă: ANRE, comunicat de presă, 27 aprilie 2026.

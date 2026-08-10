@@ -1,0 +1,112 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getContact } from '../../lib/contact';
+
+const contact = await getContact();
+---
+<AdminLayout title="Contact">
+	<div class="cap">
+		<h1>Pagina de Contact</h1>
+		<p class="hint">Aceste date apar pe pagina publică /contact. Modificările se văd imediat după salvare.</p>
+	</div>
+
+	<div class="grid2">
+		<label>Telefon
+			<input type="text" id="c-telefon" value={contact.telefon} />
+		</label>
+		<label>Email
+			<input type="text" id="c-email" value={contact.email} />
+		</label>
+	</div>
+
+	<label>Adresă
+		<input type="text" id="c-adresa" value={contact.adresa} />
+	</label>
+
+	<label>Zonă deservită
+		<input type="text" id="c-zona" value={contact.zonaDeservita} />
+	</label>
+
+	<label>Program
+		<input type="text" id="c-program" value={contact.program} />
+	</label>
+
+	<label>Descriere (textul de prezentare de pe pagină)
+		<textarea id="c-descriere" rows="6">{contact.descriere}</textarea>
+	</label>
+
+	<label>URL hartă embed (opțional — link Google Maps "Embed a map")
+		<input type="text" id="c-harta" value={contact.hartaEmbedUrl} placeholder="https://www.google.com/maps/embed?..." />
+	</label>
+
+	<label class="check"><input type="checkbox" id="c-formular" checked={contact.formularVizibil} /> Afișează formularul de mesaj pe pagină</label>
+
+	<div class="acțiuni">
+		<button type="button" id="salvează" class="btn">Salvează</button>
+		<a href="/contact" target="_blank" class="anuleaza">Vezi pagina publică ↗</a>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { max-width: 780px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: #94a3b8; margin-bottom: 1.1rem; max-width: 780px; }
+		label.check { flex-direction: row; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #e2e8f0; }
+		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; max-width: 780px; }
+		input, textarea {
+			background: #111827; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.6rem 0.75rem; font-size: 0.95rem; font-family: inherit;
+		}
+		textarea { resize: vertical; }
+		.acțiuni { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		.anuleaza { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+		#status { font-size: 0.85rem; color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script>
+		document.getElementById('salvează')!.addEventListener('click', async () => {
+			const statusEl = document.getElementById('status')!;
+			const payload = {
+				telefon: (document.getElementById('c-telefon') as HTMLInputElement).value.trim(),
+				email: (document.getElementById('c-email') as HTMLInputElement).value.trim(),
+				adresa: (document.getElementById('c-adresa') as HTMLInputElement).value.trim(),
+				zonaDeservita: (document.getElementById('c-zona') as HTMLInputElement).value.trim(),
+				program: (document.getElementById('c-program') as HTMLInputElement).value.trim(),
+				descriere: (document.getElementById('c-descriere') as HTMLTextAreaElement).value.trim(),
+				hartaEmbedUrl: (document.getElementById('c-harta') as HTMLInputElement).value.trim(),
+				formularVizibil: (document.getElementById('c-formular') as HTMLInputElement).checked,
+			};
+
+			const res = await fetch('/api/admin/contact', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				const banner = document.getElementById('banner-salvat')!;
+				banner.classList.add('arată');
+				clearTimeout((window as any).__bannerTimeout);
+				(window as any).__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+			} else {
+				statusEl.textContent = 'Eroare la salvare.';
+			}
+		});
+	</script>
+</AdminLayout>

@@ -1,0 +1,122 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import portofoliuData from "../../data/portofoliu.json";
+import Etichete from "../../components/Etichete.astro";
+
+interface Poza { id: string; thumb_s: string; thumb_l: string; date: string; nota?: string }
+interface Proiect { id: string; nume: string; album: string; locatie: string; note: string; dataDe: string; dataPana: string; poze: Poza[]; cover: string | null; etichete?: string[] }
+
+const { proiecte } = portofoliuData as { proiecte: Proiect[] };
+
+export async function getStaticPaths() {
+  const { proiecte } = portofoliuData as { proiecte: Proiect[] };
+  return proiecte.map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props as { p: Proiect };
+
+const breadcrumbs = [
+  { nume: "Acasă", url: "/" },
+  { nume: "Portofoliu", url: "/portofoliu" },
+  { nume: p.nume, url: `/portofoliu/${p.id}` },
+];
+---
+<Layout
+  title={`${p.nume} — Portofoliu Solar Electric Panel`}
+  description={p.note || `Proiect ${p.album === "fotovoltaice" ? "fotovoltaic" : "electric"} realizat de Solar Electric Panel${p.locatie ? ` — ${p.locatie}` : ""}.`}
+  ogImage={p.cover ?? undefined}
+  breadcrumbs={breadcrumbs}
+  singleCol
+>
+  <div class="breadcrumb-badges">
+    <a class="badge badge-neutral" href="/portofoliu">Portofoliu</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="badge" style={`background:${p.album === "fotovoltaice" ? "#E97B0F" : "#12213A"}`}>
+      {p.album === "fotovoltaice" ? "Fotovoltaic" : "Electric"}
+    </span>
+  </div>
+
+  <h1 style="margin:0 0 8px;">{p.nume}</h1>
+  <div class="meta" style="margin-bottom:20px;">
+    {p.locatie && <span>{p.locatie}</span>}
+    <span>{p.poze.length} poze</span>
+    {p.dataDe && <span>{p.dataDe}{p.dataPana && p.dataPana !== p.dataDe ? ` – ${p.dataPana}` : ""}</span>}
+  </div>
+  {p.note && <p class="excerpt" style="margin-bottom:24px;">{p.note}</p>}
+  {p.cover && (
+    <div class="media-wrap" style="margin-bottom:24px;">
+      <img class="hero-media" style="width:100%;border-radius:8px;" src={p.cover} alt={p.nume} />
+      <Etichete slugs={p.etichete} overlay />
+    </div>
+  )}
+
+  <div class="story-grid lightbox-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+    {p.poze.map((foto, i) => (
+      <button type="button" class="lightbox-trigger" data-index={i}>
+        <img class="story-media" style="height:180px;" src={foto.thumb_s} loading="lazy" alt={p.nume} />
+      </button>
+    ))}
+  </div>
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>Ai un proiect similar în zona Făgăraș?</strong>
+      <span>Solar Electric Panel oferă consultanță și montaj — cere o ofertă personalizată.</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+  </div>
+</Layout>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Închide">✕</button>
+  <button type="button" class="lightbox-nav lightbox-prev" aria-label="Poza anterioară">‹</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="" />
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+  <button type="button" class="lightbox-nav lightbox-next" aria-label="Poza următoare">›</button>
+</div>
+
+<script define:vars={{ poze: p.poze }}>
+  const overlay = document.getElementById("lightbox");
+  const imgEl = document.getElementById("lightbox-img");
+  const captionEl = document.getElementById("lightbox-caption");
+  let current = 0;
+
+  function show(index) {
+    current = (index + poze.length) % poze.length;
+    const foto = poze[current];
+    imgEl.src = foto.thumb_l;
+    imgEl.alt = "";
+    captionEl.textContent = foto.nota || "";
+    captionEl.style.display = foto.nota ? "block" : "none";
+  }
+
+  document.querySelectorAll(".lightbox-trigger").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      show(Number(btn.dataset.index));
+      overlay.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function close() {
+    overlay.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  overlay.querySelector(".lightbox-close").addEventListener("click", close);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+  overlay.querySelector(".lightbox-prev").addEventListener("click", () => show(current - 1));
+  overlay.querySelector(".lightbox-next").addEventListener("click", () => show(current + 1));
+
+  document.addEventListener("keydown", (e) => {
+    if (overlay.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+</script>

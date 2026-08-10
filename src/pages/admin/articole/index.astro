@@ -1,0 +1,96 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { listArticole } from '../../../lib/articole';
+import { categories } from '../../../data/categories';
+
+const articole = await listArticole();
+function numeCategorie(slug: string) {
+	return categories.find((c) => c.slug === slug)?.name ?? slug;
+}
+---
+<AdminLayout title="Articole blog">
+	<div class="head">
+		<h1>Articole blog ({articole.length})</h1>
+		<a href="/admin/articole/editor" class="btn">+ Articol nou</a>
+	</div>
+	<table class="tabel-sortabil">
+		<thead>
+			<tr>
+				<th data-sort="text">Titlu</th>
+				<th data-sort="text">Categorie</th>
+				<th data-sort="text">Dată</th>
+				<th data-sort="text">Dată adăugare</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{articole.map((a) => (
+				<tr>
+					<td data-val={a.title}><a href={`/admin/articole/editor?slug=${a.slug}`}>{a.title}</a></td>
+					<td data-val={numeCategorie(a.categorie)}>{numeCategorie(a.categorie)}</td>
+					<td data-val={a.data}>{a.data}</td>
+					<td data-val={a.dataAdaugare}>{a.dataAdaugare}</td>
+					<td class="acțiuni">
+						<a href={`/admin/articole/editor?slug=${a.slug}`}>Editează</a>
+						<a href={`/admin/articole-faq/${a.slug}`}>FAQ</a>
+						<button class="del" data-slug={a.slug}>Șterge</button>
+					</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	<style>
+		.head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+		.btn { background: #2563eb; color: white; padding: 0.55rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+		table { width: 100%; border-collapse: collapse; }
+		th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.9rem; }
+		th { color: #94a3b8; font-weight: 600; }
+		th[data-sort] { cursor: pointer; user-select: none; white-space: nowrap; }
+		th[data-sort]:hover { color: #e2e8f0; }
+		th[data-sort]::after { content: '⇅'; opacity: 0.35; margin-left: 0.35rem; font-size: 0.75rem; }
+		th[data-sort].sort-asc::after { content: '↑'; opacity: 1; }
+		th[data-sort].sort-desc::after { content: '↓'; opacity: 1; }
+		td a { color: #93c5fd; text-decoration: none; }
+		.acțiuni { display: flex; gap: 0.75rem; }
+		.del { background: none; border: none; color: #f87171; cursor: pointer; font-size: 0.85rem; padding: 0; }
+		.del:hover { text-decoration: underline; }
+	</style>
+
+	<script>
+		document.querySelectorAll<HTMLButtonElement>('.del').forEach((btn) => {
+			btn.addEventListener('click', async () => {
+				const slug = btn.dataset.slug;
+				if (!confirm(`Ștergi articolul "${slug}"? Nu poate fi anulat.`)) return;
+				const res = await fetch(`/api/admin/articole/${slug}`, { method: 'DELETE' });
+				if (res.ok) {
+					location.reload();
+				} else {
+					alert('Ștergerea a eșuat.');
+				}
+			});
+		});
+
+		document.querySelectorAll<HTMLTableElement>('.tabel-sortabil').forEach((tabel) => {
+			const tbody = tabel.querySelector('tbody')!;
+			const headers = [...tabel.querySelectorAll<HTMLTableCellElement>('th[data-sort]')];
+
+			headers.forEach((th, index) => {
+				th.addEventListener('click', () => {
+					const crescător = !th.classList.contains('sort-asc');
+					headers.forEach((h) => h.classList.remove('sort-asc', 'sort-desc'));
+					th.classList.add(crescător ? 'sort-asc' : 'sort-desc');
+
+					const rânduri = [...tbody.querySelectorAll('tr')];
+					rânduri.sort((a, b) => {
+						const va = (a.children[index] as HTMLElement).dataset.val ?? '';
+						const vb = (b.children[index] as HTMLElement).dataset.val ?? '';
+						return crescător ? va.localeCompare(vb, 'ro', { numeric: true }) : vb.localeCompare(va, 'ro', { numeric: true });
+					});
+					rânduri.forEach((r) => tbody.appendChild(r));
+				});
+			});
+		});
+	</script>
+</AdminLayout>

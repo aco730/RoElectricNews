@@ -1,0 +1,86 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { categories, categoriiVizibile } from "../data/categories";
+import Etichete from "../components/Etichete.astro";
+
+const toateArticolele = (await getCollection("articole")).sort(
+  (a, b) => b.data.data.valueOf() - a.data.data.valueOf()
+);
+const [hero, ...rest] = toateArticolele;
+const recente = rest.slice(0, 4);
+
+function catInfo(slug: string) {
+  return categories.find((c) => c.slug === slug);
+}
+const heroCat = hero ? catInfo(hero.data.categorie) : undefined;
+---
+<Layout>
+  <section>
+    <div class="stat-card">
+      <div class="stat-icon">📰</div>
+      <div>
+        <div class="stat-number">{toateArticolele.length}</div>
+        <div class="stat-label">articole publicate pe Electric NEWS — susținut de Solar Electric Panel</div>
+      </div>
+    </div>
+
+    {hero && (
+      <article class="hero-card">
+        {hero.data.imagine && (
+          <div class="media-wrap">
+            <img class="hero-media" src={hero.data.imagine} alt={hero.data.title} />
+            <Etichete slugs={hero.data.etichete} overlay />
+          </div>
+        )}
+        <div class="hero-body">
+          {heroCat && <span class="badge" style={`background:${heroCat.color}`}>{heroCat.name}</span>}
+          <h1><a href={`/blog/${hero.id}`}>{hero.data.title}</a></h1>
+          <div class="meta"><span class="date">{hero.data.data.toLocaleDateString("ro-RO")}</span></div>
+        </div>
+      </article>
+    )}
+
+    <h2 class="section-title">Cele mai recente</h2>
+    <div class="story-grid">
+      {recente.map((art) => {
+        const cat = catInfo(art.data.categorie);
+        return (
+          <article class="story-card">
+            {art.data.imagine && (
+              <div class="media-wrap">
+                <img class="story-media" src={art.data.imagine} alt={art.data.title} />
+                <Etichete slugs={art.data.etichete} overlay />
+              </div>
+            )}
+            {cat && <span class="badge" style={`background:${cat.color}`}>{cat.name}</span>}
+            <h3><a href={`/blog/${art.id}`}>{art.data.title}</a></h3>
+            <div class="meta"><span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span></div>
+          </article>
+        );
+      })}
+    </div>
+
+    <div class="lead-cta">
+      <div class="lead-cta-text">
+        <strong>Ai nevoie de montaj fotovoltaic sau electric în zona Făgăraș?</strong>
+        <span>Solar Electric Panel oferă consultanță și montaj — cere o ofertă personalizată.</span>
+      </div>
+      <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+    </div>
+  </section>
+
+  <aside>
+    <ul class="side-list">
+      {categoriiVizibile.map((cat) => (
+        <li class="side-item">
+          <span class="dot" style={`background:${cat.color}`}></span>
+          <div>
+            <a class="side-title" href={`/categorie/${cat.slug}`}>{cat.name}</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </aside>
+</Layout>

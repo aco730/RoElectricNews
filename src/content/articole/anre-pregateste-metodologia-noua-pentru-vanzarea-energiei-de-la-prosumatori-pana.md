@@ -1,0 +1,16 @@
+---
+title: "ANRE pregătește metodologia nouă pentru vânzarea energiei de la prosumatori până la 400 kW"
+categorie: reglementari-preturi
+data: 2026-07-27
+sursaNume: "Instalatori Fotovoltaice România"
+sursaUrl: "https://instalatori-fotovoltaice.ro/ghid/legea-160-2026-prosumatori-compensare-lunara-gaz-surplus"
+imagine: "/images/articole/anre-pregateste-metodologia-noua-pentru-vanzarea-energiei-de-la-prosumatori-pana.webp"
+---
+
+Legea 160/2026 nu se ocupă doar de prosumatorii casnici mici — introduce explicit reguli și pentru segmentul 200-400 kW, până acum într-o zonă gri a reglementării. Noua lege permite acestei categorii vânzarea directă a energiei „la barele centralei” și stocarea acesteia, lucruri care înainte nu erau clar reglementate pentru puteri de această mărime.
+
+Mecanismul de preț diferă însă semnificativ față de prosumatorii mici: pentru segmentul 200-400 kW, prețul de achiziție al energiei livrate în rețea se calculează ca preț mediu ponderat pe Piața pentru Ziua Următoare (PZU), cu regularizare financiară ulterioară — nu compensarea cantitativă simplă de care beneficiază prosumatorii sub 200 kW. E o distincție tehnică importantă: cine se încadrează în 200-400 kW ar putea vedea, în anumite condiții de piață, un impact negativ față de vechiul regim, pentru că prețul PZU poate fi sub prețul din contractul propriu.
+
+Ca și pentru restul legii, ANRE are termen 60 de zile de la 26 iulie 2026 — deci până în jurul datei de 24 septembrie — pentru a publica metodologia care să facă aceste reguli aplicabile efectiv. Până atunci, un investitor sau o firmă cu un proiect fotovoltaic în acest interval de putere știe cadrul legal general, dar nu și formula exactă de calcul a regularizării financiare.
+
+Pentru dezvoltatorii de proiecte fotovoltaice medii, între instalația casnică și parcul comercial mare, această metodologie va conta enorm în calculul de rentabilitate — diferența dintre compensare cantitativă și regularizare pe PZU poate schimba semnificativ perioada de amortizare estimată. (Sursă: Instalatori Fotovoltaice România.)

@@ -1,0 +1,99 @@
+================================================================================
+PORTAL STIRI CONSTRUCTII - SELECTIE COMPLETA RESURSE SI ARTICOLE (8 CATEGORII)
+================================================================================
+
+1. REȚELE & CONFORT (Instalații Electrice, Sanitare & Termice)
+--------------------------------------------------------------------------------
+* Pompă de Căldură vs. Centrală pe Gaz – Ghid comparativ de eficiență:
+  https://www.arenainstalatiilor.ro
+
+* Tablouri Electrice Rezidențiale – Protecții moderne și organizare circuite:
+  https://www.electroplan.ro
+
+* Managementul Apelor și Reciclarea Apei Pluviale – Sisteme de stocare și filtrare:
+  https://www.instalnews.ro
+
+
+2. SMART LIVING (Automatizări & IoT)
+--------------------------------------------------------------------------------
+* Protocoale Smart Home (Zigbee, Z-Wave, Matter vs. KNX):
+  https://www.smarthomesystems.ro
+
+* Iluminat Inteligent & Scenarii de Lumină (Senzori de prezență & dimming):
+  https://www.loxone.com/ro
+
+* Securitate & Control Acces – Sisteme IP și interfoane inteligente:
+  https://www.spy-shop.ro/blog
+
+
+3. ECO-ENERGIE & STOCARE
+--------------------------------------------------------------------------------
+* Alegerea Acumulatorilor (LiFePO4 vs. NMC) – Ghid de stocare pentru prosumatori:
+  https://asociatiaprosumatorilor.ro
+
+* Invertor On-Grid vs. Hybrid vs. Off-Grid – Dimensionare sistem solar:
+  https://www.fotovoltaic.ro
+
+* Performanța Panourilor N-Type TopCon & HJT – Eficiență și umbrire:
+  https://www.energynomad.ro
+
+
+4. REGLEMENTĂRI & LEGISLAȚIE
+--------------------------------------------------------------------------------
+* Ghid Autorizație de Construire – Documente, avize și etape administrative:
+  https://www.constructii.ro
+
+* Noile Reglementări ANRE pentru Prosumatori – Racordare și compensare:
+  https://www.anre.ro
+
+* Normativul nZEB și Certificatul Energetic – Cerințe minime de izolare:
+  https://www.isc.gov.ro
+
+
+5. ARHITECTURĂ & CONCEPT
+--------------------------------------------------------------------------------
+* Arhitectură Bioclimatică – Orientare solară și eficiență energetică:
+  https://www.oar.ro
+
+* Case Modulare & Precomprimate – Avantaje, executie și durabilitate:
+  https://www.spatiulconstruit.ro
+
+* BIM (Building Information Modeling) – Proiectare 3D integrată:
+  https://www.cadworks.ro
+
+
+6. ȘANTIER & STRUCTURĂ
+--------------------------------------------------------------------------------
+* Panouri CLT (Cross-Laminated Timber) vs. Zidărie clasică:
+  https://www.revistadinlemn.ro
+
+* Hidroizolația Fundației – Soluții împotriva infiltrațiilor:
+  https://www.mapei.com/ro
+
+* Spumă Poliuretanică vs. Vată Bazaltică – Rezistență termică și vapori:
+  https://www.spatiulconstruit.ro
+
+
+7. DESIGN INTERIOR
+--------------------------------------------------------------------------------
+* Finisaje Microciment & Rășină Epoxidică – Pardoseli fără rosturi:
+  https://www.designist.ro
+
+* Mobilier Custom & Ergonomie – Planificarea bucătăriei și spațiilor:
+  https://www.bizzclub.ro
+
+* Design Biophilic – Elemente naturale, lemn și plante în interior:
+  https://www.lovedeco.ro
+
+
+8. OUTDOOR & PEISAGISTICĂ
+--------------------------------------------------------------------------------
+* Sisteme de Irigație Automatizate – Presiune, zonificare și senzori:
+  https://www.irigatii.ro
+
+* Amenajarea Teraselor cu Decking WPC vs. Lemn Termotratat:
+  https://www.pavele.ro
+
+* Iluminat Peisagistic la 12V/24V – Siguranță și punere în valoare LED:
+  https://www.gradina.ro
+================================================================================

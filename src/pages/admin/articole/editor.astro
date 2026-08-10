@@ -1,0 +1,238 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { getArticol } from '../../../lib/articole';
+import { categories } from '../../../data/categories';
+import { getEtichete } from '../../../lib/etichete';
+
+const slug = Astro.url.searchParams.get('slug') ?? '';
+const existent = slug ? await getArticol(slug) : null;
+const azi = new Date().toISOString().slice(0, 10);
+const etichete = await getEtichete();
+const eticheteSelectate = new Set(existent?.etichete ?? []);
+const sluguriPredefinite = new Set(etichete.map((e) => e.slug));
+const eticheteCustomExistente = (existent?.etichete ?? []).filter((s) => !sluguriPredefinite.has(s));
+---
+<AdminLayout title={existent ? 'Editare articol' : 'Articol nou'}>
+	<h1>{existent ? `Editează: ${existent.title}` : 'Articol nou'}</h1>
+
+	<form id="form-articol">
+		<input type="hidden" name="slug" value={slug} />
+
+		<label>Titlu
+			<input type="text" name="title" required value={existent?.title ?? ''} />
+		</label>
+
+		<label>Categorie
+			<select name="categorie" required>
+				{categories.map((c) => (
+					<option value={c.slug} selected={existent?.categorie === c.slug}>{c.name}</option>
+				))}
+			</select>
+		</label>
+
+		<label>Dată
+			<input type="date" name="data" required value={existent?.data || azi} />
+		</label>
+
+		<div class="câmp-imagine">
+			<label>Imagine articol
+				<input type="file" id="imagine-file" accept="image/png,image/jpeg,image/webp" />
+			</label>
+			<input type="hidden" name="imagine" id="imagine-cale" value={existent?.imagine ?? ''} />
+			<div id="imagine-preview">
+				{existent?.imagine && <img src={existent.imagine} alt="Imagine curentă" />}
+			</div>
+			{existent?.imagine && <button type="button" id="imagine-elimină" class="btn-secundar">Elimină imaginea</button>}
+		</div>
+
+		<div class="grid2">
+			<label>Sursă — nume
+				<input type="text" name="sursaNume" value={existent?.sursaNume ?? ''} />
+			</label>
+			<label>Sursă — URL
+				<input type="text" name="sursaUrl" value={existent?.sursaUrl ?? ''} />
+			</label>
+		</div>
+
+		<div class="câmp-etichete">
+			<label>Etichete</label>
+			<div class="etichete-listă" id="etichete-listă">
+				{etichete.length === 0 && <p class="hint-mic">Nicio etichetă predefinită încă — <a href="/admin/etichete">adaugă una</a>, sau folosește una personalizată mai jos.</p>}
+				{etichete.map((e) => (
+					<label class="etichetă-opțiune">
+						<input type="checkbox" name="etichete" value={e.slug} checked={eticheteSelectate.has(e.slug)} />
+						<span class="etichetă-pastilă" style={`background:${e.culoare}`}>{e.text}</span>
+					</label>
+				))}
+				{eticheteCustomExistente.map((text) => (
+					<label class="etichetă-opțiune" data-custom="1">
+						<input type="checkbox" name="etichete" value={text} checked />
+						<span class="etichetă-pastilă etichetă-pastilă-custom">{text} <button type="button" class="etichetă-x">✕</button></span>
+					</label>
+				))}
+			</div>
+			<div class="etichetă-custom-adaugă">
+				<input type="text" id="etichetă-custom-input" placeholder="Etichetă personalizată (ex: Promo vară)" />
+				<button type="button" id="etichetă-custom-btn" class="btn-secundar">+ Adaugă</button>
+			</div>
+		</div>
+
+		<label>Conținut (Markdown)
+			<textarea name="continut" rows="18" required>{existent?.continut ?? ''}</textarea>
+		</label>
+
+		<div class="acțiuni">
+			<button type="submit" class="btn">Salvează</button>
+			<a href="/admin/articole" class="anuleaza">Anulează</a>
+			{slug && <a href={`/admin/articole-faq/${slug}`} class="anuleaza">Editează întrebările FAQ →</a>}
+			<span id="status"></span>
+		</div>
+	</form>
+
+	<style is:global>
+		form { display: flex; flex-direction: column; gap: 1.1rem; max-width: 780px; }
+		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: #94a3b8; }
+		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+		input, select, textarea {
+			background: #111827; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.6rem 0.75rem; font-size: 0.95rem; font-family: inherit;
+		}
+		textarea { resize: vertical; line-height: 1.5; }
+		.acțiuni { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		.anuleaza { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+		#status { font-size: 0.85rem; color: #4ade80; }
+
+		.câmp-etichete { display: flex; flex-direction: column; gap: 0.5rem; }
+		.câmp-etichete > label { font-size: 0.85rem; color: #94a3b8; }
+		.etichete-listă { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+		.hint-mic { font-size: 0.8rem; color: #64748b; margin: 0; }
+		.hint-mic a { color: #93c5fd; }
+		.etichetă-opțiune { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+		.etichetă-opțiune input { margin: 0; }
+		.etichetă-pastilă { padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: white; display: inline-flex; align-items: center; gap: 0.35rem; }
+		.etichetă-pastilă-custom { background: #475569; }
+		.etichetă-x { background: none; border: none; color: white; cursor: pointer; font-size: 0.7rem; padding: 0; line-height: 1; opacity: 0.8; }
+		.etichetă-x:hover { opacity: 1; }
+		.etichetă-custom-adaugă { display: flex; gap: 0.5rem; margin-top: 0.3rem; }
+		.etichetă-custom-adaugă input { background: #111827; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9; padding: 0.45rem 0.65rem; font-size: 0.85rem; flex: 1; max-width: 280px; }
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer; font-size: 0.82rem; }
+		.btn-secundar:hover { background: #263244; }
+
+		.câmp-imagine { display: flex; flex-direction: column; gap: 0.5rem; }
+		#imagine-preview img { max-height: 140px; border-radius: 8px; display: block; margin-top: 0.3rem; }
+		#imagine-status { font-size: 0.8rem; color: #94a3b8; }
+	</style>
+
+	<script>
+		const form = document.getElementById('form-articol') as HTMLFormElement;
+		const statusEl = document.getElementById('status')!;
+		const eticheteListă = document.getElementById('etichete-listă')!;
+		const eticheteCustomInput = document.getElementById('etichetă-custom-input') as HTMLInputElement;
+
+		function adaugăEtichetăCustom() {
+			const text = eticheteCustomInput.value.trim();
+			if (!text) return;
+			const existăDeja = [...eticheteListă.querySelectorAll<HTMLInputElement>('input[name="etichete"]')]
+				.some((el) => el.value.toLowerCase() === text.toLowerCase());
+			if (existăDeja) { eticheteCustomInput.value = ''; return; }
+
+			const label = document.createElement('label');
+			label.className = 'etichetă-opțiune';
+			label.dataset.custom = '1';
+
+			const cb = document.createElement('input');
+			cb.type = 'checkbox';
+			cb.name = 'etichete';
+			cb.value = text;
+			cb.checked = true;
+
+			const pastilă = document.createElement('span');
+			pastilă.className = 'etichetă-pastilă etichetă-pastilă-custom';
+			pastilă.textContent = text + ' ';
+
+			const x = document.createElement('button');
+			x.type = 'button';
+			x.className = 'etichetă-x';
+			x.textContent = '✕';
+			x.addEventListener('click', () => label.remove());
+
+			pastilă.appendChild(x);
+			label.append(cb, pastilă);
+			eticheteListă.appendChild(label);
+			eticheteCustomInput.value = '';
+		}
+
+		eticheteListă.querySelectorAll<HTMLElement>('[data-custom="1"] .etichetă-x').forEach((btn) => {
+			btn.addEventListener('click', () => btn.closest('.etichetă-opțiune')?.remove());
+		});
+
+		document.getElementById('etichetă-custom-btn')!.addEventListener('click', adaugăEtichetăCustom);
+		eticheteCustomInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') { e.preventDefault(); adaugăEtichetăCustom(); }
+		});
+
+		const imagineFileInput = document.getElementById('imagine-file') as HTMLInputElement;
+		const imagineCaleInput = document.getElementById('imagine-cale') as HTMLInputElement;
+		const imaginePreview = document.getElementById('imagine-preview') as HTMLElement;
+		const imagineElimină = document.getElementById('imagine-elimină');
+		const titleInput = form.querySelector<HTMLInputElement>('input[name="title"]')!;
+		const slugInput = form.querySelector<HTMLInputElement>('input[name="slug"]')!;
+
+		imagineFileInput.addEventListener('change', async () => {
+			const file = imagineFileInput.files?.[0];
+			if (!file) return;
+
+			const fd = new FormData();
+			fd.append('imagine', file);
+			fd.append('slug', slugInput.value || titleInput.value);
+
+			imaginePreview.innerHTML = '<span id="imagine-status">Se încarcă...</span>';
+
+			const res = await fetch('/api/admin/upload-imagine-articol', { method: 'POST', body: fd });
+			const data = await res.json();
+
+			if (res.ok) {
+				imagineCaleInput.value = data.path;
+				imaginePreview.innerHTML = `<img src="${data.path}" alt="Previzualizare" />`;
+			} else {
+				imaginePreview.innerHTML = `<span id="imagine-status" style="color:#f87171;">${data.error || 'Eroare la încărcare.'}</span>`;
+			}
+		});
+
+		imagineElimină?.addEventListener('click', () => {
+			imagineCaleInput.value = '';
+			imaginePreview.innerHTML = '';
+			imagineFileInput.value = '';
+		});
+
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			statusEl.textContent = 'Se salvează...';
+			statusEl.style.color = '#94a3b8';
+
+			const fd = new FormData(form);
+			fd.delete('etichete');
+			const payload = Object.fromEntries(fd.entries()) as any;
+			payload.etichete = [...form.querySelectorAll<HTMLInputElement>('input[name="etichete"]:checked')].map((el) => el.value);
+
+			const res = await fetch('/api/admin/articole', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = 'Salvat.';
+				statusEl.style.color = '#4ade80';
+				setTimeout(() => { window.location.href = '/admin/articole'; }, 500);
+			} else {
+				const err = await res.json().catch(() => ({}));
+				statusEl.textContent = err.error || 'Eroare la salvare.';
+				statusEl.style.color = '#f87171';
+			}
+		});
+	</script>
+</AdminLayout>

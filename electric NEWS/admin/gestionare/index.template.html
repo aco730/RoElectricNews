@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestionare conținut — Electric NEWS (admin, doar local)</title>
+<style>
+  :root {
+    --navy:#12213A; --teal:#0EA5A0; --mint:#2DD4BF;
+    --bg:#F5F7F9; --card:#FFFFFF; --text:#12213A; --muted:#5F6368; --border:#E5E9EE;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--text); }
+  .warn-bar { background:var(--navy); color:#fbbf24; font-size:12.5px; text-align:center; padding:8px 16px; font-weight:600; }
+  header.main { background:#fff; border-bottom:1px solid var(--border); padding:20px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .logo { font-weight:800; font-size:20px; letter-spacing:0.3px; }
+  .logo .news { color:var(--teal); }
+  .logo .admin-tag { font-size:11px; font-weight:700; color:var(--muted); background:var(--bg); border:1px solid var(--border); padding:2px 8px; border-radius:12px; margin-left:10px; vertical-align:middle; text-transform:uppercase; letter-spacing:0.4px; }
+  header.main a.back { font-size:13.5px; color:#fff; font-weight:700; text-decoration:none; background:var(--teal); padding:9px 16px; border-radius:7px; }
+  header.main a.back:hover { background:#0c8f8a; }
+
+  main { max-width:1400px; margin:0 auto; padding:24px 24px 80px; }
+  .intro { color:var(--muted); font-size:14px; line-height:1.6; margin:0 0 20px; }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:20px; }
+  .folder-connected { color:#166534; font-weight:600; }
+  .folder-connected::before { content:"● "; }
+  .submit-btn, .btn-primary { display:inline-block; background:var(--teal); color:#fff; border:none; padding:10px 16px; font-size:13.5px; font-weight:700; border-radius:7px; cursor:pointer; }
+  .btn-primary:hover { background:#0c8f8a; }
+
+  .tab-nav { display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
+  .tab-btn { background:#fff; border:1px solid var(--border); padding:9px 16px; border-radius:20px; font-size:13px; font-weight:700; color:var(--muted); cursor:pointer; }
+  .tab-btn.active { background:var(--navy); color:#fff; border-color:var(--navy); }
+
+  .panel-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .panel-head h2 { font-size:16px; margin:0; }
+
+  .admin-table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--border); border-radius:10px; overflow:hidden; font-size:13px; }
+  .admin-table th, .admin-table td { padding:10px 12px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; }
+  .admin-table tbody tr:last-child td { border-bottom:none; }
+  .admin-table .muted { color:var(--muted); font-size:11px; margin-top:2px; }
+  .admin-table .actions { white-space:nowrap; text-align:right; }
+  .chip { display:inline-block; color:#fff; font-size:10.5px; font-weight:700; padding:3px 9px; border-radius:4px; }
+
+  .btn-sm { background:#fff; border:1px solid var(--border); padding:5px 10px; border-radius:5px; font-size:12px; font-weight:600; cursor:pointer; margin-left:6px; }
+  .btn-sm:hover { border-color:var(--teal); color:var(--teal); }
+  .btn-sm.btn-danger:hover { border-color:#B22222; color:#B22222; }
+  .btn-ghost { background:none; border:1px solid var(--border); padding:10px 16px; border-radius:7px; font-size:13.5px; font-weight:700; color:var(--muted); cursor:pointer; }
+
+  .form-card { background:#F9FAFB; border:1px solid var(--border); border-radius:10px; padding:18px 20px; margin-bottom:16px; }
+  .form-row { margin-bottom:14px; }
+  .form-row-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  @media (max-width:600px) { .form-row-grid { grid-template-columns:1fr; } }
+  .form-card label { display:block; font-size:12.5px; font-weight:700; margin-bottom:5px; }
+  .form-card input[type=text], .form-card input[type=color], .form-card select, .form-card textarea {
+    width:100%; padding:9px 11px; border:1px solid var(--border); border-radius:6px; font-size:13.5px; font-family:inherit; background:#fff; color:var(--text);
+  }
+  .form-card textarea { min-height:90px; resize:vertical; }
+  .form-actions { display:flex; gap:10px; margin-top:4px; }
+  .hint { font-size:12px; color:var(--muted); margin:6px 0 0; line-height:1.5; }
+
+  #toast { position:fixed; bottom:20px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--navy); color:#fff; padding:12px 20px; border-radius:8px; font-size:13px; max-width:520px; text-align:center; opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; z-index:100; }
+  #toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+  .admin-card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; }
+  .admin-story-card { position:relative; }
+  .admin-card-actions { position:absolute; top:10px; right:10px; display:flex; gap:6px; z-index:2; }
+  .admin-card-actions button { background:rgba(18,33,58,0.88); color:#fff; border:none; padding:6px 10px; border-radius:6px; font-size:11.5px; font-weight:700; cursor:pointer; }
+  .admin-card-actions button:hover { background:var(--teal); }
+  .admin-card-actions button.btn-danger:hover { background:#B22222; }
+  .filter-row { display:flex; gap:10px; align-items:center; margin-bottom:16px; flex-wrap:wrap; }
+  .filter-row select, .filter-row input[type=text] { padding:8px 12px; border:1px solid var(--border); border-radius:6px; font-size:13px; font-family:inherit; }
+</style>
+<link rel="stylesheet" href="../../site-local/assets/style.css">
+</head>
+<body>
+
+<div class="warn-bar">Pagină internă, doar pentru administrare locală — nu face parte din site-ul public și nu se publică niciodată pe Netlify.</div>
+
+<header class="main">
+  <span class="logo">ELECTRIC<span class="news">NEWS</span><span class="admin-tag">Gestionare conținut</span></span>
+  <a class="back" href="../publica-articol/index.html">&larr; Publică articol nou</a>
+</header>
+
+<main>
+  <p class="intro">
+    Adaugă, editează sau șterge articole, întrebări, surse și categorii direct de aici — fiecare Salvează/Șterge se aplică instant pe site (Excel + regenerare + verificare linkuri), fără pași manuali.
+  </p>
+
+  <div class="tab-nav" id="tab-nav"></div>
+  <div id="tab-root"></div>
+</main>
+
+<div id="toast"></div>
+
+<script id="admin-data-script">window.ADMIN_DATA = __ADMIN_DATA_JSON__;</script>
+<script src="admin.js"></script>
+</body>
+</html>

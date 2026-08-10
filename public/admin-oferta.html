@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[ADMIN] Generator Oferte Fotovoltaic + Stocare — Făgăraș</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root{
+    --navy:#1F3864; --navy-light:#2E4E8C; --gold:#C9A227;
+    --buget:#2E7D32; --standard:#1F5FA8; --premium:#B8860B;
+    --bg:#F4F6F9; --card:#FFFFFF; --border:#D9DEE6; --text:#1B2430; --muted:#667085;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:24px;}
+  h1{font-size:20px;color:#fff;background:var(--navy);margin:0 0 4px 0;padding:16px 20px;border-radius:8px 8px 0 0;}
+  .subtitle{background:var(--navy-light);color:#eaf0fb;padding:10px 20px;border-radius:0 0 8px 8px;font-size:13px;margin-bottom:20px;}
+  .panel{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:20px;}
+  .panel h2{font-size:15px;color:var(--navy);margin:0 0 12px 0;border-bottom:2px solid var(--border);padding-bottom:8px;}
+  .panel h3{font-size:13px;color:var(--navy);margin:14px 0 8px 0;}
+  .row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;}
+  .field{display:flex;flex-direction:column;gap:4px;min-width:170px;}
+  .field label{font-size:12px;color:var(--muted);font-weight:bold;}
+  .field input[type=text],.field input[type=number],.field select{padding:7px 8px;border:1px solid var(--border);border-radius:5px;font-size:13px;}
+  .field.checkbox{flex-direction:row;align-items:center;gap:8px;min-width:auto;}
+  #fileStatus{font-size:13px;margin-top:8px;padding:8px 10px;border-radius:5px;}
+  #fileStatus.ok{background:#E2EFDA;color:#2E7D32;}
+  #fileStatus.err{background:#FCE4E4;color:#C00000;}
+  #fileStatus.pending{background:#FFF2CC;color:#8a6d00;}
+  input[type=file]{font-size:13px;}
+  .btn{background:var(--navy);color:#fff;border:none;padding:9px 16px;border-radius:6px;font-size:13px;cursor:pointer;}
+  .btn:hover{background:var(--navy-light);}
+  .btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--navy);}
+  .modetabs{display:flex;gap:8px;margin-bottom:14px;}
+  .modetab{flex:1;padding:12px;border:2px solid var(--border);border-radius:8px;cursor:pointer;text-align:center;font-size:13px;font-weight:bold;color:var(--muted);background:#fff;}
+  .modetab.active{border-color:var(--navy);color:var(--navy);background:#EAF0FB;}
+  .modebox{display:none;}
+  .modebox.active{display:block;}
+  .resultbox{background:#EAF0FB;border:1px solid var(--navy-light);border-radius:6px;padding:12px 14px;margin-top:12px;font-size:13px;}
+  .resultbox .rline{display:flex;justify-content:space-between;padding:3px 0;}
+  .resultbox .rline b{color:var(--navy);}
+  .face{border:1px dashed var(--border);border-radius:6px;padding:10px 12px;margin-bottom:10px;}
+  .variants{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
+  .vcard{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  .vcard .vhead{padding:12px 16px;color:#fff;font-size:16px;font-weight:bold;}
+  .vcard.buget .vhead{background:var(--buget);}
+  .vcard.standard .vhead{background:var(--standard);}
+  .vcard.premium .vhead{background:var(--premium);}
+  .vbody{padding:14px 16px;}
+  .line{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-bottom:1px dashed var(--border);}
+  .line:last-of-type{border-bottom:none;}
+  .line .cat{font-size:11px;color:var(--muted);font-weight:bold;text-transform:uppercase;}
+  .line select{width:100%;padding:5px 6px;font-size:12.5px;border:1px solid var(--border);border-radius:4px;margin-top:2px;}
+  .line .selectrow{display:flex;align-items:center;gap:6px;margin-top:2px;}
+  .line .selectrow select{margin-top:0;}
+  .linkbtn{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:4px;border:1px solid var(--border);background:#fff;color:var(--navy);text-decoration:none;font-size:13px;line-height:1;}
+  .linkbtn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .linkbtn.disabled{opacity:0.3;pointer-events:none;}
+  .line .qtyrow{display:flex;justify-content:space-between;align-items:center;margin-top:4px;gap:8px;}
+  .line .qtyrow input{width:60px;padding:4px;border:1px solid var(--border);border-radius:4px;font-size:12.5px;}
+  .line .linetotal{font-size:12.5px;font-weight:bold;color:var(--navy);white-space:nowrap;}
+  .subtot{display:flex;justify-content:space-between;padding:10px 0;font-size:13.5px;font-weight:bold;border-top:2px solid var(--border);margin-top:6px;}
+  .totalgen{display:flex;justify-content:space-between;padding:10px 0;font-size:16px;font-weight:bold;color:var(--navy);border-top:2px solid var(--navy);margin-top:6px;}
+  .flag{font-size:11.5px;margin-top:8px;padding:6px 8px;border-radius:5px;}
+  .flag.good{background:#E2EFDA;color:#2E7D32;}
+  .flag.bad{background:#FCE4E4;color:#C00000;}
+  table.cmp{width:100%;border-collapse:collapse;font-size:13px;}
+  table.cmp th,table.cmp td{border:1px solid var(--border);padding:8px 10px;text-align:right;}
+  table.cmp th:first-child,table.cmp td:first-child{text-align:left;}
+  table.cmp th{background:var(--navy);color:#fff;}
+  .note{font-size:11.5px;color:var(--muted);margin-top:4px;}
+  .warn{font-size:11.5px;color:#8a6d00;background:#FFF2CC;padding:8px 10px;border-radius:5px;margin-top:8px;}
+  .placeholder{padding:40px;text-align:center;color:var(--muted);font-size:14px;}
+  .chartwrap{position:relative;height:340px;}
+  @media print{
+    .no-print{display:none !important;}
+    body{background:#fff;padding:0;}
+    .panel{border:none;box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<h1>Generator Oferte — Fotovoltaic + Stocare, Făgăraș</h1>
+<div class="subtitle">Încarcă lista de materiale, completează datele acoperișului și alege modul de calcul — generatorul construiește automat 3 variante de ofertă și graficul de producție.</div>
+
+<div class="panel no-print">
+  <h2>Pasul 1 — Lista de materiale</h2>
+  <div id="fileStatus" class="pending">Se încarcă automat lista de prețuri...</div>
+  <div class="row" id="manualUploadRow" style="margin-top:10px;display:none;">
+    <div class="field">
+      <label>Sau încarcă manual alt fișier Excel (tab "Materiale generator")</label>
+      <input type="file" id="fileInput" accept=".xlsx,.xls">
+    </div>
+    <button class="btn secondary" onclick="location.reload()">Resetează</button>
+  </div>
+  <button class="btn secondary no-print" id="showManualUpload" style="margin-top:8px;" onclick="document.getElementById('manualUploadRow').style.display='flex';this.style.display='none';">Încarcă alt fișier manual</button>
+</div>
+
+<div class="panel no-print">
+  <h2>Pasul 2 — Date acoperiș (pentru graficul de producție)</h2>
+  <div class="warn">Producția estimată folosește valori climatice medii pentru zona Brașov/Făgăraș (nu export exact PVGIS) — bun pentru estimări de ofertă, nu pentru garanții contractuale de producție.</div>
+  <div class="face">
+    <h3>Fața 1 de acoperiș</h3>
+    <div class="row">
+      <div class="field"><label>Orientare</label>
+        <select id="f1_azimuth"><option>Sud</option><option>Sud-Est</option><option>Sud-Vest</option><option>Est</option><option>Vest</option></select>
+      </div>
+      <div class="field"><label>Înclinație (grade, 0-90)</label><input type="number" id="f1_tilt" value="30" min="0" max="90"></div>
+      <div class="field" id="f1_splitWrap" style="display:none;"><label>% panouri pe fața 1</label><input type="number" id="f1_split" value="60" min="0" max="100"></div>
+    </div>
+  </div>
+  <div class="field checkbox"><input type="checkbox" id="twoFaces" onchange="toggleTwoFaces();recalcAll();"><label>Al doilea acoperiș / a doua orientare (acoperiș pe două ape)</label></div>
+  <div class="face" id="face2Box" style="display:none;margin-top:10px;">
+    <h3>Fața 2 de acoperiș</h3>
+    <div class="row">
+      <div class="field"><label>Orientare</label>
+        <select id="f2_azimuth"><option>Sud-Vest</option><option>Sud</option><option>Sud-Est</option><option>Est</option><option>Vest</option></select>
+      </div>
+      <div class="field"><label>Înclinație (grade, 0-90)</label><input type="number" id="f2_tilt" value="30" min="0" max="90"></div>
+      <div class="field"><label>% panouri pe fața 2 (auto)</label><input type="number" id="f2_split" value="40" min="0" max="100" disabled></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel no-print">
+  <h2>Pasul 3 — Cum dimensionăm sistemul?</h2>
+  <div class="modetabs">
+    <div class="modetab active" id="tab_wizard" onclick="setMode('wizard')">Calculează din consumul clientului</div>
+    <div class="modetab" id="tab_direct" onclick="setMode('direct')">Clientul știe exact ce vrea</div>
+  </div>
+
+  <div class="field" style="margin-bottom:12px;">
+    <label>Panou de referință (pentru calculul kWp ↔ nr. panouri)</label>
+    <select id="refPanel"></select>
+  </div>
+
+  <div class="modebox active" id="box_wizard">
+    <div class="row">
+      <div class="field"><label>Consum anual (kWh)</label><input type="number" id="consumAnual" value="4800" onchange="syncConsum('anual');recalcAll();"></div>
+      <div class="field"><label>Consum lunar mediu (kWh)</label><input type="number" id="consumLunar" value="400" onchange="syncConsum('lunar');recalcAll();"></div>
+      <div class="field"><label>% consum acoperit din solar (țintă)</label><input type="number" id="coveragePct" value="100" min="10" max="150" onchange="recalcAll();"></div>
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <div class="field"><label>Vârf de consum (kW)</label><input type="number" id="varfConsum" value="3" step="0.5" onchange="recalcAll();"></div>
+      <div class="field"><label>Interval orar vârf</label>
+        <select id="varfInterval" onchange="recalcAll();">
+          <option>Dimineața (06-10)</option><option>Prânz (10-14)</option><option>După-amiaza (14-18)</option>
+          <option selected>Seara (18-22)</option><option>Noaptea (22-06)</option>
+        </select>
+      </div>
+      <div class="field"><label>Preferință invertor</label>
+        <select id="invPref" onchange="recalcAll();"><option value="">Oricare</option><option value="LV">LV</option><option value="HV">HV</option><option value="On-grid (fără stocare)">On-grid (fără baterie)</option></select>
+      </div>
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <div class="field"><label>Raport supradimensionare DC/AC</label><input type="number" id="dcAcRatio" value="1.15" step="0.05" onchange="recalcAll();"></div>
+      <div class="field"><label>Autonomie baterie (% din consumul zilnic)</label><input type="number" id="batAutonomy" value="75" min="10" max="200" onchange="recalcAll();"></div>
+    </div>
+    <div class="resultbox" id="wizardResult">Completează datele de mai sus — sistemul recomandat apare aici.</div>
+  </div>
+
+  <div class="modebox" id="box_direct">
+    <div class="row">
+      <div class="field"><label>Nr. panouri</label><input type="number" id="nrPanouriDirect" value="16" min="1" onchange="syncPanouri('nr');recalcAll();"></div>
+      <div class="field"><label>Putere sistem dorită (kWp)</label><input type="number" id="kWpDirect" value="7.36" step="0.01" onchange="syncPanouri('kwp');recalcAll();"></div>
+      <div class="field"><label>Baterie dorită (kWh)</label><input type="number" id="bateriaDoritaDirect" value="16" min="0" step="0.1" onchange="recalcAll();"></div>
+      <div class="field checkbox"><input type="checkbox" id="areBaterieDirect" checked onchange="recalcAll();"><label>Sistem cu baterie</label></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel no-print">
+  <h2>Pasul 4 — Tarife manoperă (aplicate identic pe toate 3 variantele)</h2>
+  <div class="row">
+    <div class="field"><label>Montaj + cablare (lei/panou)</label><input type="number" id="tarifPanou" value="600" onchange="renderAll();"></div>
+    <div class="field"><label>Punere în funcțiune + instruire (lei, fix)</label><input type="number" id="tarifPIF" value="500" onchange="renderAll();"></div>
+    <div class="field checkbox"><input type="checkbox" id="firmaFactureaza"><label>Firma facturează și materialele</label></div>
+    <div class="field"><label>Curs EUR/RON (pt. prețurile în euro din ofertă)</label><input type="number" id="cursEur" value="5.2513" step="0.0001" min="1"></div>
+  </div>
+  <div class="note">Reper recomandat: 500-600 lei/panou pentru sisteme cu baterie, 350-450 lei/panou fără baterie. Manopera/kWp ar trebui să iasă în intervalul 900-1.200 lei/kWp.</div>
+  <div class="note">Curs EUR precompletat cu ultimul curs BNR disponibil (06.08.2026: 1 EUR = 5,2513 lei) — actualizează-l manual înainte de a genera ofertele, cursul se schimbă zilnic.</div>
+</div>
+
+<div id="mainArea">
+  <div class="placeholder">Încarcă mai întâi fișierul Excel (Pasul 1) ca să apară cele 3 variante de ofertă și graficul de producție.</div>
+</div>
+
+<div class="panel no-print" style="margin-top:20px;">
+  <button class="btn" onclick="window.print()">Printează / salvează ca PDF oferta curentă</button>
+</div>
+
+<script>
+let DATA = [];
+let MODE = 'wizard';
+const CATEGORY_ORDER = ["Panou","Invertor","Baterie","Modul control baterie","Structura montaj","Cablu DC + conectori","Tablou DC","Tablou AC","Cablu AC + consumabile","Transport"];
+const TIERS = ["Buget","Standard","Premium"];
+let selections = { Buget:{}, Standard:{}, Premium:{} };
+let productionChart = null;
+
+// ---- PVGIS-lite model (estimare regională Brașov/Făgăraș — vezi notă în pagină) ----
+const BASE_YIELD = 1180; // kWh/kWp/an, tilt optim 35°, sud, pierderi sistem 14%
+const MONTH_NAMES = ["Ian","Feb","Mar","Apr","Mai","Iun","Iul","Aug","Sep","Oct","Nov","Dec"];
+const MONTH_FRACTIONS = [0.035,0.055,0.085,0.105,0.120,0.125,0.130,0.115,0.090,0.068,0.042,0.030];
+const TILT_BREAKPOINTS = [[0,0.91],[10,0.95],[20,0.98],[30,0.995],[35,1.0],[40,0.995],[45,0.98],[50,0.96],[60,0.91],[90,0.72]];
+const AZIMUTH_FACTORS = {"Sud":1.00,"Sud-Est":0.96,"Sud-Vest":0.96,"Est":0.83,"Vest":0.85};
+
+function tiltFactor(angle){
+  angle = Math.max(0, Math.min(90, angle||0));
+  for(let i=0;i<TILT_BREAKPOINTS.length-1;i++){
+    const a1=TILT_BREAKPOINTS[i][0], f1=TILT_BREAKPOINTS[i][1];
+    const a2=TILT_BREAKPOINTS[i+1][0], f2=TILT_BREAKPOINTS[i+1][1];
+    if(angle>=a1 && angle<=a2){
+      const t=(angle-a1)/(a2-a1);
+      return f1 + t*(f2-f1);
+    }
+  }
+  return 1.0;
+}
+function monthlyProductionPerFace(kWp, tilt, azimuthLabel){
+  const tf = tiltFactor(tilt);
+  const af = AZIMUTH_FACTORS[azimuthLabel] !== undefined ? AZIMUTH_FACTORS[azimuthLabel] : 1.0;
+  return MONTH_FRACTIONS.map(f => kWp * BASE_YIELD * f * tf * af);
+}
+function getRoofConfig(){
+  const twoFaces = document.getElementById('twoFaces').checked;
+  const f1 = {
+    azimuth: document.getElementById('f1_azimuth').value,
+    tilt: parseFloat(document.getElementById('f1_tilt').value) || 0,
+    split: twoFaces ? (parseFloat(document.getElementById('f1_split').value) || 0) : 100
+  };
+  let f2 = null;
+  if(twoFaces){
+    f2 = {
+      azimuth: document.getElementById('f2_azimuth').value,
+      tilt: parseFloat(document.getElementById('f2_tilt').value) || 0,
+      split: 100 - f1.split
+    };
+  }
+  return { twoFaces, f1, f2 };
+}
+function monthlyProductionTotal(kWpTotal){
+  const roof = getRoofConfig();
+  const kWp1 = kWpTotal * roof.f1.split / 100;
+  const m1 = monthlyProductionPerFace(kWp1, roof.f1.tilt, roof.f1.azimuth);
+  if(!roof.twoFaces) return m1;
+  const kWp2 = kWpTotal * roof.f2.split / 100;
+  const m2 = monthlyProductionPerFace(kWp2, roof.f2.tilt, roof.f2.azimuth);
+  return m1.map((v,i)=>v+m2[i]);
+}
+function annualYieldPerKWp(){
+  // kWh produs anual per 1 kWp instalat, cu configurația curentă de acoperiș
+  return monthlyProductionTotal(1).reduce((a,b)=>a+b,0);
+}
+
+// ---- File loading ----
+document.getElementById('fileInput').addEventListener('change', handleFile);
+
+function parseWorkbookArrayBuffer(arrayBuffer, sourceLabel){
+  const status = document.getElementById('fileStatus');
+  try{
+    const wb = XLSX.read(arrayBuffer, {type:'array'});
+    let sheetName = wb.SheetNames.find(n => n.trim().toLowerCase() === 'materiale generator');
+    if(!sheetName) sheetName = wb.SheetNames.find(n => n.toLowerCase().includes('materiale'));
+    if(!sheetName) throw new Error('Nu am găsit tab-ul "Materiale generator" în fișier.');
+    const ws = wb.Sheets[sheetName];
+    const rows = XLSX.utils.sheet_to_json(ws, {header:1, defval:""});
+    let headerIdx = rows.findIndex(r => (r[0]+"").trim() === "Categorie");
+    if(headerIdx === -1) throw new Error('Nu am găsit rândul de titluri de coloană ("Categorie") în tab.');
+    const headers = rows[headerIdx].map(h => (h+"").trim());
+    const col = name => headers.indexOf(name);
+    const idx = {
+      cat: col("Categorie"), tip: col("Tip"), tier: col("Tier"), produs: col("Produs"),
+      spec: col("Specificatie"), pret: col("PretUnitar"), um: col("UM"), furnizor: col("Furnizor"),
+      link: col("Link"), data: col("DataPret"), wp: col("PutereWp_Panou"), kwh: col("CapacitateKWh_Baterie"),
+      kwInv: col("PutereKW_Invertor"), kwDesc: col("PutereDescarcareKW_Baterie"), obs: col("Observatii"),
+      img: col("ImagineURL"), fisaTehnica: col("FisaTehnicaURL")
+    };
+    DATA = [];
+    for(let i = headerIdx+1; i < rows.length; i++){
+      const r = rows[i];
+      if(!r || !r[idx.cat] || (r[idx.cat]+"").trim()==="") continue;
+      DATA.push({
+        categorie: (r[idx.cat]+"").trim(),
+        tip: (r[idx.tip]+"").trim(),
+        tier: (r[idx.tier]+"").trim(),
+        produs: (r[idx.produs]+"").trim(),
+        spec: (r[idx.spec]+"").trim(),
+        pret: parseFloat(r[idx.pret]) || 0,
+        um: (r[idx.um]+"").trim(),
+        furnizor: (r[idx.furnizor]+"").trim(),
+        link: idx.link>=0 ? (r[idx.link]+"").trim() : "",
+        wp: parseFloat(r[idx.wp]) || 0,
+        kwh: parseFloat(r[idx.kwh]) || 0,
+        kwInv: parseFloat(r[idx.kwInv]) || 0,
+        kwDesc: parseFloat(r[idx.kwDesc]) || 0,
+        obs: (r[idx.obs]+"").trim(),
+        img: idx.img>=0 ? (r[idx.img]+"").trim() : "",
+        fisaTehnica: idx.fisaTehnica>=0 ? (r[idx.fisaTehnica]+"").trim() : ""
+      });
+    }
+    if(DATA.length === 0) throw new Error('Tab-ul a fost găsit dar nu conține produse (rânduri goale).');
+    status.className = 'ok';
+    const cats = new Set(DATA.map(d=>d.categorie));
+    status.textContent = `${sourceLabel}: ${DATA.length} produse în ${cats.size} categorii.`;
+    populateRefPanelSelect();
+    recalcAll();
+    return true;
+  }catch(err){
+    status.className = 'err';
+    status.textContent = 'Eroare: ' + err.message;
+    return false;
+  }
+}
+
+function handleFile(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const status = document.getElementById('fileStatus');
+  status.className = 'pending';
+  status.textContent = 'Se citește fișierul...';
+  const reader = new FileReader();
+  reader.onload = function(evt){
+    parseWorkbookArrayBuffer(evt.target.result, 'Încărcat manual');
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+// ---- Auto-load lista de preturi la deschiderea paginii ----
+(function autoLoadDefaultPriceList(){
+  const status = document.getElementById('fileStatus');
+  fetch('/data/materiale-oferta.xlsx')
+    .then(r => { if(!r.ok) throw new Error('Fișierul implicit nu a putut fi descărcat (' + r.status + ')'); return r.arrayBuffer(); })
+    .then(buf => {
+      const ok = parseWorkbookArrayBuffer(buf, 'Încărcat automat');
+      if(!ok) document.getElementById('manualUploadRow').style.display = 'flex';
+    })
+    .catch(err => {
+      status.className = 'err';
+      status.textContent = 'Nu am putut încărca automat lista de prețuri: ' + err.message + ' — încarcă manual fișierul mai jos.';
+      document.getElementById('manualUploadRow').style.display = 'flex';
+      document.getElementById('showManualUpload').style.display = 'none';
+    });
+})();
+
+function populateRefPanelSelect(){
+  const sel = document.getElementById('refPanel');
+  sel.innerHTML = '';
+  productsFor('Panou').forEach(p=>{
+    const opt = document.createElement('option');
+    opt.value = p.produs + '|' + p.furnizor;
+    opt.textContent = `${p.produs} — ${p.wp}Wp — ${fmt(p.pret)}`;
+    sel.appendChild(opt);
+  });
+  sel.onchange = recalcAll;
+}
+function getRefPanel(){
+  const sel = document.getElementById('refPanel');
+  const cands = productsFor('Panou');
+  return cands.find(c => (c.produs+'|'+c.furnizor) === sel.value) || cands[0];
+}
+
+function toggleTwoFaces(){
+  const on = document.getElementById('twoFaces').checked;
+  document.getElementById('face2Box').style.display = on ? 'block' : 'none';
+  document.getElementById('f1_splitWrap').style.display = on ? 'flex' : 'none';
+}
+
+function setMode(m){
+  MODE = m;
+  document.getElementById('tab_wizard').classList.toggle('active', m==='wizard');
+  document.getElementById('tab_direct').classList.toggle('active', m==='direct');
+  document.getElementById('box_wizard').classList.toggle('active', m==='wizard');
+  document.getElementById('box_direct').classList.toggle('active', m==='direct');
+  recalcAll();
+}
+
+function syncConsum(changed){
+  const anualEl = document.getElementById('consumAnual');
+  const lunarEl = document.getElementById('consumLunar');
+  if(changed === 'anual'){
+    lunarEl.value = (parseFloat(anualEl.value)/12).toFixed(0);
+  } else {
+    anualEl.value = (parseFloat(lunarEl.value)*12).toFixed(0);
+  }
+}
+function syncPanouri(changed){
+  if(DATA.length === 0) return;
+  const refPanel = getRefPanel();
+  if(!refPanel) return;
+  const nrEl = document.getElementById('nrPanouriDirect');
+  const kwpEl = document.getElementById('kWpDirect');
+  if(changed === 'nr'){
+    const nr = parseInt(nrEl.value) || 0;
+    kwpEl.value = (nr * refPanel.wp / 1000).toFixed(2);
+  } else {
+    const kwp = parseFloat(kwpEl.value) || 0;
+    nrEl.value = Math.ceil(kwp*1000/refPanel.wp);
+    kwpEl.value = ((parseInt(nrEl.value)||0) * refPanel.wp / 1000).toFixed(2);
+  }
+}
+
+// ---- Wizard sizing ----
+let wizardOutput = null; // { nrPanouri, targetKWp, targetInverterKW, bateriaDoritaKWh, minDischargeKW }
+
+function computeWizard(){
+  if(DATA.length === 0) return null;
+  const refPanel = getRefPanel();
+  if(!refPanel) return null;
+  const consumAnual = parseFloat(document.getElementById('consumAnual').value) || 0;
+  const coveragePct = parseFloat(document.getElementById('coveragePct').value) || 100;
+  const varfConsum = parseFloat(document.getElementById('varfConsum').value) || 0;
+  const dcAcRatio = parseFloat(document.getElementById('dcAcRatio').value) || 1.15;
+  const batAutonomy = parseFloat(document.getElementById('batAutonomy').value) || 75;
+
+  const yieldPerKWp = annualYieldPerKWp();
+  const targetKWp = yieldPerKWp > 0 ? (consumAnual * coveragePct/100) / yieldPerKWp : 0;
+  const nrPanouri = refPanel.wp > 0 ? Math.ceil(targetKWp*1000/refPanel.wp) : 0;
+  const actualKWp = nrPanouri * refPanel.wp / 1000;
+  const targetInverterKW = actualKWp / dcAcRatio;
+  const consumZilnic = consumAnual/365;
+  const bateriaDoritaKWh = consumZilnic * batAutonomy/100;
+
+  return { nrPanouri, targetKWp: actualKWp, targetInverterKW, bateriaDoritaKWh, minDischargeKW: varfConsum, yieldPerKWp };
+}
+
+function renderWizardResult(){
+  const box = document.getElementById('wizardResult');
+  if(DATA.length === 0){ box.textContent = 'Încarcă mai întâi lista de materiale.'; return; }
+  wizardOutput = computeWizard();
+  if(!wizardOutput){ box.textContent = 'Completează datele de mai sus.'; return; }
+  const w = wizardOutput;
+  box.innerHTML = `
+    <div class="rline"><span>Producție estimată</span><b>${w.yieldPerKWp.toFixed(0)} kWh/kWp/an (cu acoperișul configurat la Pasul 2)</b></div>
+    <div class="rline"><span>Sistem recomandat</span><b>${w.nrPanouri} panouri ≈ ${w.targetKWp.toFixed(2)} kWp</b></div>
+    <div class="rline"><span>Invertor țintă</span><b>≈${w.targetInverterKW.toFixed(1)} kW (raport DC/AC aplicat)</b></div>
+    <div class="rline"><span>Baterie recomandată</span><b>≈${w.bateriaDoritaKWh.toFixed(1)} kWh, minim ${w.minDischargeKW.toFixed(1)} kW putere descărcare</b></div>
+  `;
+}
+
+// ---- Core system params (derived from mode) ----
+function getSystemParams(){
+  const areBaterie = MODE === 'wizard' ? true : document.getElementById('areBaterieDirect').checked;
+  if(MODE === 'wizard'){
+    const w = wizardOutput || computeWizard();
+    if(!w) return { nrPanouri:0, bateriaDorita:0, targetInverterKW:0, minDischargeKW:0, areBaterie };
+    return { nrPanouri: w.nrPanouri, bateriaDorita: w.bateriaDoritaKWh, targetInverterKW: w.targetInverterKW, minDischargeKW: w.minDischargeKW, invPref: document.getElementById('invPref').value, areBaterie };
+  } else {
+    return {
+      nrPanouri: parseInt(document.getElementById('nrPanouriDirect').value) || 0,
+      bateriaDorita: parseFloat(document.getElementById('bateriaDoritaDirect').value) || 0,
+      targetInverterKW: 0, minDischargeKW: 0, invPref: '', areBaterie
+    };
+  }
+}
+
+// ---- Product selection ----
+function productsFor(categorie){
+  return DATA.filter(d => d.categorie === categorie).sort((a,b)=>a.pret-b.pret);
+}
+
+// Unele baterii modulare (Huawei LUNA2000, Dyness Tower, Pylontech Force H2) au nevoie
+// de un modul de control/BDU vândut separat, neinclus în prețul bateriei.
+// Returnează cheia din coloana "Tip" a categoriei "Modul control baterie" care se potrivește,
+// sau null dacă bateria selectată nu are nevoie de așa ceva (ex. modele all-in-one cu BMS integrat).
+function detectBatteryModuleBrand(batItem){
+  if(!batItem || !batItem.produs) return null;
+  const p = batItem.produs;
+  if(/Huawei/i.test(p)){
+    // capacități mici -> controlerul 5KW-C0, capacități mari -> 10KW-C1 (VERIFICĂ fișa tehnică pt. compatibilitate exactă)
+    return (batItem.kwh && batItem.kwh <= 7) ? 'Huawei-5kW' : 'Huawei-10kW';
+  }
+  if(/Dyness\s*Tower/i.test(p)) return 'Dyness Tower';
+  if(/Pylontech|Force\s*H2/i.test(p)) return 'Pylontech Force H2';
+  return null;
+}
+
+function pickForTier(categorie, tier, params){
+  let cands = productsFor(categorie);
+  if(cands.length === 0) return null;
+  let pool = cands.filter(c => c.tier === tier);
+  let fallback = false;
+  if(pool.length === 0){ pool = cands; fallback = true; }
+
+  if(categorie === 'Modul control baterie'){
+    const batSel = selections[tier] && selections[tier]['Baterie'];
+    const batItem = batSel ? batSel.item : null;
+    const brand = detectBatteryModuleBrand(batItem);
+    let matches = brand ? pool.filter(c => c.tip === brand) : [];
+    if(matches.length === 0 && brand) matches = cands.filter(c => c.tip === brand);
+    if(matches.length === 0) matches = pool; // niciun brand detectat — afișăm cel mai ieftin modul ca opțiune inactivă (cant. 0)
+    matches = [...matches].sort((a,b)=>a.pret-b.pret);
+    return { item: matches[0], fallback: false, needed: !!brand };
+  }
+
+  if(categorie === 'Invertor'){
+    let filtered = pool;
+    if(params.invPref){
+      const withPref = pool.filter(c => c.tip === params.invPref);
+      if(withPref.length > 0) filtered = withPref;
+    }
+    if(params.targetInverterKW > 0){
+      filtered = [...filtered].sort((a,b)=> Math.abs(a.kwInv-params.targetInverterKW) - Math.abs(b.kwInv-params.targetInverterKW));
+      return { item: filtered[0], fallback };
+    }
+    filtered = [...filtered].sort((a,b)=>a.pret-b.pret);
+    return { item: filtered[0], fallback };
+  }
+
+  pool = [...pool].sort((a,b)=>a.pret-b.pret);
+  return { item: pool[0], fallback };
+}
+
+function defaultQty(categorie, pick, params){
+  if(categorie === "Panou") return params.nrPanouri;
+  if(categorie === "Structura montaj") return params.nrPanouri;
+  if(categorie === "Cablu DC + conectori") return params.nrPanouri;
+  if(categorie === "Modul control baterie"){
+    return (pick && pick.needed) ? 1 : 0;
+  }
+  if(categorie === "Baterie"){
+    if(!params.areBaterie) return 0;
+    const item = pick && pick.item;
+    if(!item) return 1;
+    let qtyByCapacity = item.kwh ? Math.max(1, Math.ceil(params.bateriaDorita / item.kwh)) : 1;
+    let qtyByPower = (item.kwDesc && params.minDischargeKW) ? Math.max(1, Math.ceil(params.minDischargeKW / item.kwDesc)) : 1;
+    return Math.max(qtyByCapacity, qtyByPower);
+  }
+  return 1; // Invertor, Tablou DC, Tablou AC, Cablu AC+consumabile, Transport
+}
+
+function buildDefaultSelections(){
+  const params = getSystemParams();
+  TIERS.forEach(tier=>{
+    selections[tier] = {};
+    CATEGORY_ORDER.forEach(cat=>{
+      const pick = pickForTier(cat, tier, params);
+      const qty = defaultQty(cat, pick, params);
+      selections[tier][cat] = { item: pick ? pick.item : null, fallback: pick ? pick.fallback : false, qty: qty };
+    });
+  });
+}
+
+function recalcDefaults(){
+  const params = getSystemParams();
+  TIERS.forEach(tier=>{
+    CATEGORY_ORDER.forEach(cat=>{
+      const sel = selections[tier] && selections[tier][cat];
+      if(!sel) return;
+      if(cat === "Panou" || cat === "Structura montaj" || cat === "Cablu DC + conectori" || cat === "Baterie"){
+        sel.qty = defaultQty(cat, {item: sel.item}, params);
+      }
+    });
+  });
+}
+
+function fmt(n){
+  return (n||0).toLocaleString('ro-RO', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' lei';
+}
+
+function recalcAll(){
+  if(MODE === 'wizard') renderWizardResult();
+  if(DATA.length === 0) return;
+  buildDefaultSelections();
+  renderAll();
+}
+
+function labeledSmall(text, inputEl){
+  const wrap = document.createElement('span');
+  wrap.style.display = 'flex';
+  wrap.style.alignItems = 'center';
+  wrap.style.gap = '4px';
+  wrap.style.fontSize = '11.5px';
+  wrap.style.color = 'var(--muted)';
+  wrap.appendChild(inputEl);
+  const txt = document.createElement('span');
+  txt.textContent = text;
+  wrap.appendChild(txt);
+  return wrap;
+}
+
+function renderAll(){
+  if(DATA.length === 0) return;
+  const params = getSystemParams();
+  const area = document.getElementById('mainArea');
+  area.innerHTML = '';
+
+  const variantsDiv = document.createElement('div');
+  variantsDiv.className = 'panel';
+  variantsDiv.innerHTML = '<h2>Cele 3 variante de ofertă</h2>';
+  const grid = document.createElement('div');
+  grid.className = 'variants';
+
+  const tarifPanou = parseFloat(document.getElementById('tarifPanou').value) || 0;
+  const tarifPIF = parseFloat(document.getElementById('tarifPIF').value) || 0;
+  const nrPanouri = params.nrPanouri;
+  const firmaFactureaza = document.getElementById('firmaFactureaza').checked;
+  const manoperaTotal = tarifPanou * nrPanouri + tarifPIF;
+
+  const results = {};
+
+  TIERS.forEach(tier=>{
+    const card = document.createElement('div');
+    card.className = 'vcard ' + tier.toLowerCase();
+    const head = document.createElement('div');
+    head.className = 'vhead';
+    head.textContent = tier.toUpperCase();
+    card.appendChild(head);
+    const body = document.createElement('div');
+    body.className = 'vbody';
+
+    let materialeTotal = 0;
+    let puterekWp = 0;
+    const lineItems = [];
+
+    CATEGORY_ORDER.forEach(cat=>{
+      const sel = selections[tier][cat];
+      const cands = productsFor(cat);
+      const lineDiv = document.createElement('div');
+      lineDiv.className = 'line';
+
+      if(cands.length === 0){
+        lineDiv.innerHTML = `<span class="cat">${cat}</span><span class="note">Nicio opțiune în lista de materiale — adaugă produse la această categorie.</span>`;
+        body.appendChild(lineDiv);
+        return;
+      }
+
+      const catLabel = document.createElement('span');
+      catLabel.className = 'cat';
+      let catNote = sel.fallback ? ' (fără opțiune ' + tier + ' — folosit cea mai apropiată)' : '';
+      if(cat === 'Modul control baterie' && (!sel.qty || sel.qty === 0)) catNote = ' (nu pare necesar pt. bateria selectată — verifică și schimbă manual dacă e cazul)';
+      catLabel.textContent = cat + catNote;
+      lineDiv.appendChild(catLabel);
+
+      const select = document.createElement('select');
+      cands.forEach(c=>{
+        const opt = document.createElement('option');
+        const label = `${c.produs}${c.tip && c.tip!=='-' ? ' ('+c.tip+')' : ''} — ${fmt(c.pret)} — ${c.tier || '—'}`;
+        opt.value = c.produs + '|' + c.furnizor;
+        opt.textContent = label;
+        if(sel.item && c.produs === sel.item.produs && c.furnizor === sel.item.furnizor) opt.selected = true;
+        select.appendChild(opt);
+      });
+
+      const linkBtn = document.createElement('a');
+      linkBtn.className = 'linkbtn no-print';
+      linkBtn.title = 'Deschide pagina produsului la furnizor';
+      linkBtn.textContent = '🔗';
+      linkBtn.target = '_blank';
+      linkBtn.rel = 'noopener noreferrer';
+      function updateLinkBtn(item){
+        if(item && item.link){
+          linkBtn.href = item.link;
+          linkBtn.classList.remove('disabled');
+        } else {
+          linkBtn.removeAttribute('href');
+          linkBtn.classList.add('disabled');
+        }
+      }
+      updateLinkBtn(sel.item);
+
+      select.onchange = function(){
+        const chosen = cands.find(c => (c.produs+'|'+c.furnizor) === select.value);
+        selections[tier][cat].item = chosen;
+        selections[tier][cat].fallback = false;
+        if(cat === "Baterie"){
+          selections[tier][cat].qty = defaultQty(cat, {item:chosen}, params);
+          // bateria s-a schimbat -> recalculează dacă e nevoie de modul de control separat
+          const modPick = pickForTier('Modul control baterie', tier, params);
+          selections[tier]['Modul control baterie'] = {
+            item: modPick ? modPick.item : null,
+            fallback: modPick ? modPick.fallback : false,
+            qty: defaultQty('Modul control baterie', modPick, params)
+          };
+        }
+        if(cat === "Modul control baterie"){
+          // alegere manuală a modulului -> presupunem că e dorit explicit
+          selections[tier][cat].qty = 1;
+        }
+        renderAll();
+      };
+
+      const selectRow = document.createElement('div');
+      selectRow.className = 'selectrow';
+      selectRow.appendChild(select);
+      selectRow.appendChild(linkBtn);
+      lineDiv.appendChild(selectRow);
+
+      const qtyRow = document.createElement('div');
+      qtyRow.className = 'qtyrow';
+      const qtyInput = document.createElement('input');
+      qtyInput.type = 'number';
+      qtyInput.min = '0';
+      qtyInput.value = sel.qty;
+      qtyInput.onchange = function(){
+        selections[tier][cat].qty = parseFloat(qtyInput.value) || 0;
+        renderAll();
+      };
+      const lineTotal = document.createElement('span');
+      lineTotal.className = 'linetotal';
+      const price = sel.item ? sel.item.pret : 0;
+      const lt = price * sel.qty;
+      lineTotal.textContent = fmt(lt);
+      materialeTotal += lt;
+      if(cat === 'Panou' && sel.item) puterekWp = (sel.item.wp * nrPanouri) / 1000;
+      if(sel.item && sel.qty > 0) lineItems.push({ cat, item: sel.item, qty: sel.qty, lineTotal: lt });
+
+      qtyRow.appendChild(labeledSmall('cant. (' + (sel.item ? sel.item.um : '') + ')', qtyInput));
+      qtyRow.appendChild(lineTotal);
+      lineDiv.appendChild(qtyRow);
+      body.appendChild(lineDiv);
+    });
+
+    const subtot = document.createElement('div');
+    subtot.className = 'subtot';
+    subtot.innerHTML = `<span>Total materiale</span><span>${fmt(materialeTotal)}</span>`;
+    body.appendChild(subtot);
+
+    const manLine = document.createElement('div');
+    manLine.className = 'subtot';
+    manLine.style.borderTop = 'none';
+    manLine.style.fontWeight = 'normal';
+    manLine.innerHTML = `<span>Manoperă (${nrPanouri} panouri × ${fmt(tarifPanou)} + PIF ${fmt(tarifPIF)})</span><span>${fmt(manoperaTotal)}</span>`;
+    body.appendChild(manLine);
+
+    const totalGeneral = materialeTotal + manoperaTotal;
+    const totalDiv = document.createElement('div');
+    totalDiv.className = 'totalgen';
+    totalDiv.innerHTML = `<span>TOTAL OFERTĂ</span><span>${fmt(totalGeneral)}</span>`;
+    body.appendChild(totalDiv);
+    if(!firmaFactureaza){
+      const infoNote = document.createElement('div');
+      infoNote.className = 'note';
+      infoNote.textContent = `Din care materialele (${fmt(materialeTotal)}) le cumpără clientul direct — nu intră în încasările firmei (rămâne doar manopera ${fmt(manoperaTotal)}).`;
+      body.appendChild(infoNote);
+    }
+
+    const manoperaPerKWp = puterekWp > 0 ? manoperaTotal / puterekWp : 0;
+    const flag = document.createElement('div');
+    const inRange = manoperaPerKWp >= 900 && manoperaPerKWp <= 1200;
+    flag.className = 'flag ' + (inRange ? 'good' : 'bad');
+    flag.textContent = `Manoperă/kWp: ${manoperaPerKWp.toFixed(0)} lei/kWp (${puterekWp.toFixed(2)} kWp instalați) — reper 900-1.200 lei/kWp` + (inRange ? ' ✓' : ' ⚠ verifică tariful');
+    body.appendChild(flag);
+
+    const genBtn = document.createElement('button');
+    genBtn.className = 'btn no-print';
+    genBtn.style.width = '100%';
+    genBtn.style.marginTop = '12px';
+    genBtn.textContent = 'Generează ofertă (HTML, gata de trimis pe email)';
+    genBtn.onclick = function(){ generateOffer(tier); };
+    body.appendChild(genBtn);
+
+    card.appendChild(body);
+    grid.appendChild(card);
+
+    results[tier] = { materialeTotal, manoperaTotal, totalGeneral, puterekWp, incasatFirma: firmaFactureaza ? totalGeneral : manoperaTotal, firmaFactureaza, lineItems, nrPanouri, tarifPanou, tarifPIF };
+  });
+
+  variantsDiv.appendChild(grid);
+  area.appendChild(variantsDiv);
+
+  // comparison table
+  const cmpDiv = document.createElement('div');
+  cmpDiv.className = 'panel';
+  cmpDiv.innerHTML = '<h2>Comparație rapidă</h2>';
+  const table = document.createElement('table');
+  table.className = 'cmp';
+  table.innerHTML = `
+    <tr><th>Indicator</th><th>Buget</th><th>Standard</th><th>Premium</th></tr>
+    <tr><td>Total materiale</td><td>${fmt(results.Buget.materialeTotal)}</td><td>${fmt(results.Standard.materialeTotal)}</td><td>${fmt(results.Premium.materialeTotal)}</td></tr>
+    <tr><td>Total manoperă</td><td>${fmt(results.Buget.manoperaTotal)}</td><td>${fmt(results.Standard.manoperaTotal)}</td><td>${fmt(results.Premium.manoperaTotal)}</td></tr>
+    <tr><td>Putere instalată</td><td>${results.Buget.puterekWp.toFixed(2)} kWp</td><td>${results.Standard.puterekWp.toFixed(2)} kWp</td><td>${results.Premium.puterekWp.toFixed(2)} kWp</td></tr>
+    <tr><td><b>Total general</b></td><td><b>${fmt(results.Buget.totalGeneral)}</b></td><td><b>${fmt(results.Standard.totalGeneral)}</b></td><td><b>${fmt(results.Premium.totalGeneral)}</b></td></tr>
+  `;
+  cmpDiv.appendChild(table);
+  area.appendChild(cmpDiv);
+
+  // production chart
+  const prodDiv = document.createElement('div');
+  prodDiv.className = 'panel';
+  prodDiv.innerHTML = '<h2>Producție estimată lunară (kWh) — estimare regională Brașov/Făgăraș, nu export PVGIS exact</h2>';
+  const chartWrap = document.createElement('div');
+  chartWrap.className = 'chartwrap';
+  const canvas = document.createElement('canvas');
+  canvas.id = 'prodChart';
+  chartWrap.appendChild(canvas);
+  prodDiv.appendChild(chartWrap);
+
+  const annualLine = document.createElement('div');
+  annualLine.style.marginTop = '10px';
+  annualLine.style.fontSize = '13px';
+  const monthlyBuget = monthlyProductionTotal(results.Buget.puterekWp);
+  const monthlyStandard = monthlyProductionTotal(results.Standard.puterekWp);
+  const monthlyPremium = monthlyProductionTotal(results.Premium.puterekWp);
+  const annualBuget = monthlyBuget.reduce((a,b)=>a+b,0);
+  const annualStandard = monthlyStandard.reduce((a,b)=>a+b,0);
+  const annualPremium = monthlyPremium.reduce((a,b)=>a+b,0);
+  annualLine.innerHTML = `<b>Producție anuală estimată:</b> Buget ≈ ${annualBuget.toFixed(0)} kWh/an · Standard ≈ ${annualStandard.toFixed(0)} kWh/an · Premium ≈ ${annualPremium.toFixed(0)} kWh/an`;
+  prodDiv.appendChild(annualLine);
+  area.appendChild(prodDiv);
+
+  results.Buget.monthly = monthlyBuget; results.Buget.annual = annualBuget;
+  results.Standard.monthly = monthlyStandard; results.Standard.annual = annualStandard;
+  results.Premium.monthly = monthlyPremium; results.Premium.annual = annualPremium;
+  window.lastResults = results;
+  window.lastParams = params;
+
+  if(productionChart) productionChart.destroy();
+  const ctx = canvas.getContext('2d');
+  productionChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: MONTH_NAMES,
+      datasets: [
+        { label: 'Buget ('+results.Buget.puterekWp.toFixed(2)+' kWp)', data: monthlyBuget, backgroundColor: '#2E7D32' },
+        { label: 'Standard ('+results.Standard.puterekWp.toFixed(2)+' kWp)', data: monthlyStandard, backgroundColor: '#1F5FA8' },
+        { label: 'Premium ('+results.Premium.puterekWp.toFixed(2)+' kWp)', data: monthlyPremium, backgroundColor: '#B8860B' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom' } },
+      scales: { y: { title: { display:true, text:'kWh/lună' } } }
+    }
+  });
+}
+
+
+// =====================================================================
+// GENERATOR OFERTA VIZUALA (v1) - document HTML de sine statator, gata de
+// trimis pe email, cu poze reale ale echipamentelor, grafic de productie
+// si preturi calculate. Vezi butonul "Genereaza oferta" din fiecare vcard.
+// =====================================================================
+
+const COMPANY = {
+  name: "Solar Electric Panel",
+  short: "SEP",
+  email: "solarelectricpanel@gmail.com",
+  phone: "0750 405 908",
+  address: "Str. 1 Decembrie 1918 nr. 41, Făgăraș, jud. Brașov",
+  logoB64: "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"
+};
+
+const TIER_META = {
+  Buget:    { color:"#2E7D32", colorDark:"#1B5E20", label:"BUGET" },
+  Standard: { color:"#1F5FA8", colorDark:"#153E73", label:"STANDARD" },
+  Premium:  { color:"#B8860B", colorDark:"#8C6708", label:"PREMIUM" }
+};
+
+const CATEGORY_LABELS = {
+  "Panou": "Panouri fotovoltaice",
+  "Invertor": "Invertor",
+  "Baterie": "Baterie de stocare",
+  "Modul control baterie": "Modul de control baterie (BDU)",
+  "Structura montaj": "Structură montaj",
+  "Cablu DC + conectori": "Cablu DC + conectori",
+  "Tablou DC": "Tablou electric DC",
+  "Tablou AC": "Tablou electric AC",
+  "Cablu AC + consumabile": "Cablu AC + consumabile",
+  "Transport": "Transport materiale"
+};
+
+function escapeHtml(s){
+  return (s==null?'':String(s)).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+
+function offerNumber(tier){
+  const d = new Date();
+  const ymd = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+  const code = { Buget:'BUG', Standard:'STD', Premium:'PRM' }[tier] || 'OFR';
+  return 'SEP-' + ymd + '-' + code;
+}
+
+function dateRO(){
+  const d = new Date();
+  return d.toLocaleDateString('ro-RO', {day:'2-digit', month:'long', year:'numeric'});
+}
+
+// icoane SVG line-art (minimalist, o singura culoare = currentColor) pentru
+// categoriile fara poza de produs: Tablou electric, Structura montaj, Manopera
+const CARD_ICONS = {
+  tablou: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="32" height="40" rx="3"/><rect x="14" y="12" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="26" y="12" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="21" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="26" y="21" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><line x1="14" y1="33" x2="34" y2="33"/><line x1="14" y1="37" x2="34" y2="37"/></svg>',
+  structura: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26 L24 9 L42 26"/><rect x="13" y="23" width="22" height="15" rx="1.5"/><line x1="13" y1="28.5" x2="35" y2="28.5"/><line x1="13" y1="34" x2="35" y2="34"/><line x1="19.5" y1="23" x2="19.5" y2="38"/><line x1="24" y1="23" x2="24" y2="38"/><line x1="28.5" y1="23" x2="28.5" y2="38"/></svg>',
+  manopera: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M30.5 7.5a8 8 0 0 0-10 10.3L8.5 29.8v9.7h9.7l12-12a8 8 0 0 0 10.3-10l-6 6-4.2-4.2 6-6z"/></svg>'
+};
+
+// caseta stil "product card" (v. model product card.png) pentru randul COMPONENTE SISTEM.
+// mediaHTML = <img> (produs cu poza reala) sau o iconita SVG din CARD_ICONS (categorii generice).
+// priceRON = pretul (numeric, lei) afisat in card SI folosit pt. conversia in euro din ribbon.
+function fmtEUR(ron, cursEur){
+  if(!ron || !cursEur) return '';
+  const eur = ron / cursEur;
+  return '≈ ' + eur.toLocaleString('ro-RO', {minimumFractionDigits:0, maximumFractionDigits:0}) + ' €';
+}
+function componentBoxHTML(label, mediaHTML, isPhoto, desc, priceRON, tierColor, cursEur){
+  const letter = escapeHtml(label.charAt(0));
+  let mediaBlock;
+  if(isPhoto && mediaHTML){
+    mediaBlock = '<img src="' + escapeHtml(mediaHTML) + '" alt="' + escapeHtml(label) + '" '
+      + 'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';">'
+      + '<div class="ph" style="display:none;color:' + tierColor + ';">' + letter + '</div>';
+  } else if(isPhoto && !mediaHTML){
+    mediaBlock = '<div class="ph" style="color:' + tierColor + ';">' + letter + '</div>';
+  } else {
+    mediaBlock = '<span style="color:' + tierColor + ';">' + mediaHTML + '</span>';
+  }
+  const priceLabel = priceRON ? fmt(priceRON) : '';
+  const tagText = priceRON ? fmtEUR(priceRON, cursEur) : 'Inclus în ofertă';
+  return '<div class="pcard">'
+    + '<div class="pcard-top"><div class="pcard-imgwrap">' + mediaBlock + '</div></div>'
+    + '<div class="pcard-body">'
+      + '<div class="pcard-title">' + escapeHtml(label) + '</div>'
+      + '<div class="pcard-desc">' + escapeHtml(desc || '') + '</div>'
+      + (priceLabel ? '<div class="pcard-price">' + priceLabel + '</div>' : '')
+    + '</div>'
+    + '<div class="pcard-tag" style="background:' + tierColor + ';">' + escapeHtml(tagText) + '</div>'
+    + '</div>';
+}
+
+function buildLineRowsHTML(lineItems){
+  return lineItems.map(function(li){
+    const catLabel = CATEGORY_LABELS[li.cat] || li.cat;
+    let docLinks = '—';
+    if(li.item.link || li.item.fisaTehnica){
+      docLinks = '<div class="doclinks">'
+        + (li.item.link ? '<a class="doclink dl-link" href="' + escapeHtml(li.item.link) + '" target="_blank" rel="noopener noreferrer">link</a>' : '')
+        + (li.item.fisaTehnica ? '<a class="doclink dl-fisa" href="' + escapeHtml(li.item.fisaTehnica) + '" target="_blank" rel="noopener noreferrer">fișă tehnică</a>' : '')
+        + '</div>';
+    }
+    return '<tr>'
+      + '<td><b>' + escapeHtml(catLabel) + '</b><br><span class="small">' + escapeHtml(li.item.produs) + (li.item.spec ? ' — ' + escapeHtml(li.item.spec) : '') + '</span></td>'
+      + '<td class="doccol">' + docLinks + '</td>'
+      + '<td class="num">' + li.qty + ' ' + escapeHtml(li.item.um || 'buc') + '</td>'
+      + '<td class="num">' + fmt(li.item.pret) + '</td>'
+      + '<td class="num"><b>' + fmt(li.lineTotal) + '</b></td>'
+      + '</tr>';
+  }).join('');
+}
+
+function buildOfferDocument(tier){
+  const res = window.lastResults ? window.lastResults[tier] : null;
+  const sel = selections[tier];
+  if(!res || !sel){ alert('Completează mai întâi datele și lasă generatorul să calculeze variantele.'); return null; }
+
+  const meta = TIER_META[tier];
+  const panouSel = sel['Panou'];
+  const invSel = sel['Invertor'];
+  const batSel = sel['Baterie'];
+  const structSel = sel['Structura montaj'];
+  const tabDC = sel['Tablou DC'];
+  const tabAC = sel['Tablou AC'];
+
+  const puterekWp = res.puterekWp || 0;
+  const bateriaKWh = (batSel && batSel.item && batSel.qty) ? (batSel.item.kwh * batSel.qty) : 0;
+  const areBaterie = bateriaKWh > 0;
+  const annualProd = res.annual || 0;
+  const monthly = res.monthly || [];
+
+  const tabloDCTotal = (tabDC && tabDC.item) ? tabDC.item.pret * tabDC.qty : 0;
+  const tabloACTotal = (tabAC && tabAC.item) ? tabAC.item.pret * tabAC.qty : 0;
+  const tabloTotal = tabloDCTotal + tabloACTotal;
+  const tabloSub = [tabDC && tabDC.item ? tabDC.item.produs : null, tabAC && tabAC.item ? tabAC.item.produs : null].filter(Boolean).join(' + ');
+  const structTotal = (structSel && structSel.item) ? structSel.item.pret * structSel.qty : 0;
+  const cursEur = parseFloat(document.getElementById('cursEur').value) || 5.2513;
+
+  const componentsHTML = [
+    componentBoxHTML('Panouri', panouSel && panouSel.item ? panouSel.item.img : '', true,
+      panouSel && panouSel.item ? (panouSel.qty + ' × ' + panouSel.item.produs) : '',
+      panouSel && panouSel.item ? (panouSel.item.pret * panouSel.qty) : 0, meta.color, cursEur),
+    componentBoxHTML('Invertor', invSel && invSel.item ? invSel.item.img : '', true,
+      invSel && invSel.item ? invSel.item.produs : '',
+      invSel && invSel.item ? invSel.item.pret : 0, meta.color, cursEur),
+    componentBoxHTML('Baterie', areBaterie && batSel && batSel.item ? batSel.item.img : '', true,
+      areBaterie ? (batSel.qty + ' × ' + batSel.item.produs) : 'Fără stocare',
+      areBaterie ? (batSel.item.pret * batSel.qty) : 0, meta.color, cursEur),
+    componentBoxHTML('Tablou electric', CARD_ICONS.tablou, false,
+      tabloSub || 'Tablou DC + AC echipat',
+      tabloTotal, meta.color, cursEur),
+    componentBoxHTML('Structură montaj', CARD_ICONS.structura, false,
+      structSel && structSel.item ? structSel.item.produs : '',
+      structTotal, meta.color, cursEur),
+    componentBoxHTML('Manoperă', CARD_ICONS.manopera, false,
+      'Montaj, cablare, punere în funcțiune',
+      res.manoperaTotal, meta.color, cursEur)
+  ].join('');
+
+  const lineRows = buildLineRowsHTML(res.lineItems);
+  const manLabel = 'Manoperă — montaj, cablare, punere în funcțiune (' + res.nrPanouri + ' panouri × ' + fmt(res.tarifPanou) + ' + PIF ' + fmt(res.tarifPIF) + ')';
+
+  const chartLabels = JSON.stringify(MONTH_NAMES);
+  const chartData = JSON.stringify(monthly.map(function(v){ return Math.round(v); }));
+
+  const offerNr = offerNumber(tier);
+  const today = dateRO();
+
+  const benefits = [
+    ['Economii la factura de energie', 'Reduci semnificativ costul lunar cu energia electrică prin autoconsum din producția proprie.'],
+    ['Independență energetică', 'Depinzi mai puțin de furnizor și de creșterile viitoare de preț la energie.'],
+    [areBaterie ? 'Protecție la pene de curent' : 'Producție continuă în timpul zilei', areBaterie ? 'Bateria asigură alimentare de rezervă pentru consumatorii esențiali.' : 'Sistemul produce energie utilizabilă direct în casă pe tot parcursul zilei.'],
+    ['Creșterea valorii imobilului', 'Un sistem fotovoltaic funcțional este un avantaj real la o eventuală vânzare/închiriere.'],
+    ['Impact ecologic redus', 'Energie curată, produsă local, fără emisii în timpul funcționării.'],
+    ['Garanție extinsă produse', 'Panouri, invertor și baterie cu garanții de la producători recunoscuți internațional.']
+  ];
+  const benefitsHTML = benefits.map(function(b){
+    return '<div class="bitem"><div class="bicon" style="background:' + meta.color + '22;color:' + meta.color + ';">&#10003;</div>'
+      + '<div><div class="btitle">' + escapeHtml(b[0]) + '</div><div class="bdesc">' + escapeHtml(b[1]) + '</div></div></div>';
+  }).join('');
+
+  return '<!DOCTYPE html>'
++'<html lang="ro"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">'
++'<title>Ofertă ' + meta.label + ' — ' + COMPANY.short + ' — ' + offerNr + '</title>'
++'<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"><\/script>'
++'<style>'
++'*{box-sizing:border-box;}'
++'body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#EEF1F6;color:#1B2430;}'
++'.sheet{max-width:900px;margin:0 auto;background:#fff;}'
++'.hdr{display:flex;justify-content:space-between;align-items:center;padding:22px 30px;background:#fff;border-bottom:4px solid ' + meta.color + ';}'
++'.hdr img{height:56px;}'
++'.hdr .contact{text-align:right;font-size:12.5px;color:#445;line-height:1.6;}'
++'.hdr .contact b{color:#1F3864;font-size:15px;}'
++'.banner{background:#1F3864;color:#fff;padding:12px 30px;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}'
++'.banner b{color:#fff;}'
++'.hero{padding:26px 30px;background:linear-gradient(135deg,#F4F6F9,#fff);}'
++'.badge{display:inline-block;background:' + meta.color + ';color:#fff;font-weight:bold;font-size:20px;padding:10px 22px;border-radius:30px;margin-bottom:14px;}'
++'.hero p{font-size:14px;line-height:1.7;color:#333;max-width:720px;}'
++'.stats{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap;}'
++'.stat{flex:1;min-width:150px;background:#fff;border:1px solid #E1E6ED;border-top:3px solid ' + meta.color + ';border-radius:6px;padding:12px 14px;}'
++'.stat .v{font-size:19px;font-weight:bold;color:#1F3864;}'
++'.stat .l{font-size:11.5px;color:#667085;margin-top:2px;}'
++'.section{padding:24px 30px;border-top:1px solid #E1E6ED;}'
++'.section h2{font-size:15px;text-transform:uppercase;letter-spacing:0.5px;color:#1F3864;margin:0 0 16px 0;padding-bottom:8px;border-bottom:2px solid ' + meta.color + ';}'
++'.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}'
++'.pcard{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(16,24,40,0.09);border:1px solid #EEF1F6;overflow:hidden;display:flex;flex-direction:column;}'
++'.pcard-top{padding:16px 16px 0 16px;}'
++'.pcard-imgwrap{background:#F2F4F7;border-radius:10px;height:104px;display:flex;align-items:center;justify-content:center;overflow:hidden;}'
++'.pcard-imgwrap img{max-width:82%;max-height:82%;object-fit:contain;}'
++'.pcard-imgwrap svg{width:50px;height:50px;}'
++'.pcard-imgwrap .ph{font-size:26px;font-weight:bold;}'
++'.pcard-body{padding:12px 16px 4px 16px;text-align:center;flex:1;}'
++'.pcard-title{font-size:14.5px;font-weight:bold;color:#1B2430;margin-bottom:4px;}'
++'.pcard-desc{font-size:10.5px;color:#8a94a6;line-height:1.4;min-height:26px;}'
++'.pcard-price{font-size:15px;font-weight:bold;color:#1B2430;margin-top:8px;}'
++'.pcard-tag{margin:12px 16px 16px 16px;padding:8px;border-radius:8px;text-align:center;color:#fff;font-size:11.5px;font-weight:bold;letter-spacing:0.2px;}'
++'table.items{width:100%;border-collapse:collapse;font-size:13px;}'
++'table.items th{background:#1F3864;color:#fff;text-align:left;padding:9px 10px;font-size:11.5px;text-transform:uppercase;}'
++'table.items td{padding:9px 10px;border-bottom:1px solid #EAEDF2;vertical-align:top;}'
++'table.items td.num{text-align:right;white-space:nowrap;}'
++'table.items .small{font-size:11px;color:#667085;}'
++'table.items td.doccol{width:92px;text-align:center;color:#c8ceda;}'
++'.doclinks{display:flex;flex-direction:column;gap:4px;align-items:stretch;}'
++'.doclink{display:inline-block;text-align:center;font-size:9.5px;font-weight:bold;text-decoration:none;padding:3px 6px;border-radius:9px;border:1px solid;white-space:nowrap;}'
++'.doclink.dl-link{color:#12805c;border-color:#12805c;background:#eafaf3;}'
++'.doclink.dl-fisa{color:#1554b3;border-color:#1554b3;background:#eaf2fd;}'
++'.totalrow{display:flex;justify-content:space-between;align-items:center;background:' + meta.color + ';color:#fff;padding:14px 18px;border-radius:8px;margin-top:14px;font-size:18px;font-weight:bold;}'
++'.chartwrap{position:relative;height:280px;}'
++'.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}'
++'.bitem{display:flex;gap:10px;align-items:flex-start;}'
++'.bicon{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:13px;}'
++'.btitle{font-size:13px;font-weight:bold;color:#1F3864;}'
++'.bdesc{font-size:11.5px;color:#556;line-height:1.5;margin-top:2px;}'
++'.footer{background:#1F3864;color:#dbe4f5;padding:26px 30px;}'
++'.footer h3{color:#fff;font-size:12.5px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 6px 0;}'
++'.footer .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px;}'
++'.footer p{font-size:12px;line-height:1.6;margin:0;}'
++'.footer .cta{border-top:1px solid #3a578f;padding-top:16px;text-align:center;font-size:13px;}'
++'.footer .cta b{color:#fff;}'
++'.note{font-size:10.5px;color:#98A2B3;margin-top:10px;}'
++'@media print{ body{background:#fff;} .sheet{max-width:none;} }'
++'</style></head><body>'
++'<div class="sheet">'
+
++'<div class="hdr">'
++'<img src="data:image/png;base64,' + COMPANY.logoB64 + '" alt="' + COMPANY.short + '">'
++'<div class="contact"><b>' + COMPANY.name + '</b><br>' + escapeHtml(COMPANY.phone) + ' · ' + escapeHtml(COMPANY.email) + '<br>' + escapeHtml(COMPANY.address) + '</div>'
++'</div>'
+
++'<div class="banner"><span>OFERTĂ SISTEM FOTOVOLTAIC' + (areBaterie ? ' + STOCARE' : '') + ' — VARIANTA ' + meta.label + '</span><span>Nr. <b>' + offerNr + '</b> · ' + today + '</span></div>'
+
++'<div class="hero">'
++'<div class="badge">' + puterekWp.toFixed(2) + ' kWp' + (areBaterie ? ' + ' + bateriaKWh.toFixed(1) + ' kWh' : '') + '</div>'
++'<p>Ofertă personalizată pentru un sistem fotovoltaic' + (areBaterie ? ' cu stocare' : ' on-grid') + ', varianta <b>' + meta.label + '</b>, dimensionat de echipa ' + COMPANY.short + ' pe baza consumului și acoperișului disponibil. Sistemul propus produce estimativ <b>' + Math.round(annualProd).toLocaleString('ro-RO') + ' kWh/an</b>, reducând substanțial factura de energie electrică.</p>'
++'<div class="stats">'
++'<div class="stat"><div class="v">' + puterekWp.toFixed(2) + ' kWp</div><div class="l">Putere instalată</div></div>'
++'<div class="stat"><div class="v">' + (areBaterie ? bateriaKWh.toFixed(1) + ' kWh' : '—') + '</div><div class="l">Capacitate stocare</div></div>'
++'<div class="stat"><div class="v">' + Math.round(annualProd).toLocaleString('ro-RO') + ' kWh</div><div class="l">Producție anuală estimată</div></div>'
++'</div></div>'
+
++'<div class="section"><h2>Componente sistem</h2><div class="cgrid">' + componentsHTML + '</div></div>'
+
++'<div class="section"><h2>Ce conține oferta</h2>'
++'<table class="items"><tr><th>Denumire</th><th>Documente</th><th>Cantitate</th><th>Preț unitar</th><th>Total</th></tr>'
++ lineRows
++'<tr><td colspan="4">' + manLabel + '</td><td class="num"><b>' + fmt(res.manoperaTotal) + '</b></td></tr>'
++'</table>'
++'<div class="totalrow"><span>TOTAL GENERAL</span><span>' + fmt(res.totalGeneral) + '</span></div>'
++'</div>'
+
++'<div class="section"><h2>Estimare producție solară anuală</h2>'
++'<div class="chartwrap"><canvas id="prodChartOffer"></canvas></div>'
++'<div class="note">Producție estimată pe baza valorilor climatice medii pentru zona Făgăraș/Brașov și a configurației acoperișului declarate — estimare orientativă, nu export exact PVGIS.</div>'
++'</div>'
+
++'<div class="section"><h2>Beneficiile tale</h2><div class="bgrid">' + benefitsHTML + '</div></div>'
+
++'<div class="footer">'
++'<div class="fgrid">'
++'<div><h3>Garanții oferite</h3><p>Panouri: 25 ani produs / 30 ani performanță · Invertor: 5-10 ani (extensibil) · Baterie: 10 ani · Manoperă ' + COMPANY.short + ': 2 ani</p></div>'
++'<div><h3>Opțiuni finanțare</h3><p>Plată integrală, în tranșe (avans + rest la punerea în funcțiune), sau prin finanțare bancară/rate — detalii la cerere.</p></div>'
++'</div>'
++'<div class="cta">Pentru confirmarea ofertei sau întrebări: <b>' + escapeHtml(COMPANY.phone) + '</b> · <b>' + escapeHtml(COMPANY.email) + '</b><br>' + escapeHtml(COMPANY.address) + '</div>'
++'<div class="note" style="text-align:center;">Ofertă orientativă, valabilă 30 de zile de la data emiterii. Prețurile finale se confirmă la vizita tehnică.</div>'
++'</div>'
+
++'</div>'
++'<script>'
++'new Chart(document.getElementById("prodChartOffer").getContext("2d"), {'
++'  type: "bar",'
++'  data: { labels: ' + chartLabels + ', datasets: [{ label: "Producție (kWh)", data: ' + chartData + ', backgroundColor: "' + meta.color + '" }] },'
++'  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{ title:{display:true,text:"kWh/lună"} } } }'
++'});'
++'<\/script>'
++'</body></html>';
+}
+
+function generateOffer(tier){
+  const htmlDoc = buildOfferDocument(tier);
+  if(!htmlDoc) return;
+  const blob = new Blob([htmlDoc], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Oferta-' + COMPANY.short + '-' + tier + '-' + offerNumber(tier) + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+}
+
+
+toggleTwoFaces();
+</script>
+</body>
+</html>

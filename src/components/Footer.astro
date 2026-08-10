@@ -1,0 +1,30 @@
+---
+import { categoriiVizibile } from "../data/categories";
+import siteConfig from "../data/site-config.json";
+
+const { footer } = siteConfig;
+---
+{footer.vizibil && (
+  <footer>
+    <div class="foot-wrap">
+      <div>
+        <div class="foot-brand">{footer.brandText}<span class="news">{footer.brandTextAccent}</span></div>
+        <p style="max-width:320px;font-size:13px;color:#cbd5e1;line-height:1.6;">
+          {footer.descriere}
+        </p>
+      </div>
+      <div class="foot-cats">
+        {categoriiVizibile.map((cat) => (
+          <a href={`/categorie/${cat.slug}`}>{cat.name}</a>
+        ))}
+      </div>
+      <div>
+        <div class="foot-brand" style="font-size:14px;">Solar Electric Panel</div>
+        {footer.linkuri.map((l) => (
+          <a href={l.href} style="display:block;font-size:13px;color:#cbd5e1;padding:4px 0;">{l.text}</a>
+        ))}
+      </div>
+    </div>
+    <p class="copy">&copy; {new Date().getFullYear()} {footer.copyright}</p>
+  </footer>
+)}

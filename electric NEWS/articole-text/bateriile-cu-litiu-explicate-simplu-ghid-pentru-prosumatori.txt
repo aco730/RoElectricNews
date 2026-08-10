@@ -1,0 +1,9 @@
+Bateriile cu litiu explicate simplu: ghid pentru prosumatori
+
+Cea mai simplă imagine mentală pentru cum funcționează o baterie cu litiu e o „capcană pentru electroni”. Când încarci bateria — de la priză sau de la panourile fotovoltaice — energia externă împinge electronii într-un electrod de grafit, unde ei n-ar sta în mod natural. Odată ajunși acolo, rămân practic prizonieri: electrolitul din interiorul bateriei acționează ca un izolator electric perfect, care le blochează drumul direct înapoi prin interiorul bateriei.
+
+Singura cale de „evadare” pentru acești electroni e printr-un circuit exterior — cabluri, un bec, un motor, invertorul casei tale. Pe măsură ce electronii circulă prin acest drum extern ca să se întoarcă la celălalt electrod, generează exact curentul electric care alimentează aparatele din casă.
+
+Un detaliu tehnic care lămurește multă confuzie: electronii nu pot rămâne izolați unii de alții pentru că se resping reciproc — au nevoie de o „momeală” care să echilibreze sarcina, iar aceasta e ionul de litiu, încărcat pozitiv. Practic, bateria nu prinde doar electroni, ci perechi electron-ion, ținute separat până când ai nevoie de energie.
+
+Un lucru important de înțeles, mai ales dacă tot auzi despre „stocarea energiei”: bateria nu îți dă electroni noi — aparatele tale au deja electroni din abundență în materialele conductoare. Ce face de fapt bateria e să funcționeze ca o pompă: le dă electronilor deja existenți energie potențială, suficientă cât să facă un lucru mecanic real — să aprindă un bec, să încălzească o rezistență, să miște un motor. Curentul electric e, în esență, fluxul acelor electroni; energia electrică e capacitatea acelui flux de a produce lucru mecanic util.

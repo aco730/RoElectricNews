@@ -1,0 +1,151 @@
+Electric NEWS
+Plan de dezvoltare a platformei de știri — versiune actualizată
+Domenii: electric – smart home – automatizări – fotovoltaic – baterii & stocare
+Document original: 9 august 2026. Rescris integral: 9 august 2026, după prima sesiune de construcție efectivă a site-ului.
+
+1. Rezumat
+Electric NEWS este o platformă românească de știri dedicată domeniului electric, smart home, automatizări, fotovoltaic și stocare (baterii). Nu există în prezent un jucător dedicat exclusiv acestei nișe – spațiul e ocupat fie de bloguri ale firmelor de instalare (orientate spre vânzare), fie de presa economică generalistă (care acoperă subiectul ocazional). Acesta e golul pe care Electric NEWS îl poate ocupa: sursa de referință pentru consumatori, prosumatori și profesioniști din domeniu.
+
+Față de versiunea inițială a acestui document, cea mai importantă schimbare e că planul nu mai e doar teoretic: există acum un site funcțional, generat automat dintr-un calendar editorial Excel, cu conținut real (nu placeholder), poze reale sau generate distinct per articol, și un flux de lucru repetabil pentru adăugarea de articole noi. Secțiunea 7 descrie exact ce există concret azi.
+
+2. Context de piață
+Câteva date recente confirmă momentul bun pentru lansare:
+- Creștere rapidă a prosumatorilor: peste 330.000 de prosumatori în România (aprilie 2026), cu o capacitate instalată de peste 3.789 MW.
+- Parcurile fotovoltaice au devenit a doua sursă de generare a energiei electrice din România, după hidrocentrale — peste 7.000 MW capacitate totală (parcuri + prosumatori), cu o țintă de peste 10.000 MW până în 2030.
+- Reglementare în mișcare: Legea 160/2026 (compensare lunară pentru prosumatori) a intrat în vigoare pe 26 iulie 2026, după validare CCR; ANRE are termen 24 septembrie 2026 pentru metodologia de aplicare. Comunitățile de energie au fost reglementate prin Ordinul ANRE nr. 50 (25 iunie 2026).
+- Finanțare: peste 1,5 miliarde EUR alocați în 2026 pentru scheme dedicate energiei (companii, autorități locale); Casa Verde Fotovoltaic a fost eliminat pentru al doilea an consecutiv, bugetul redirecționat spre apă-canal; Casa Verde Baterii 2026 are doar 400 milioane lei, considerat insuficient de industrie (APCE).
+- Tendință tehnologică: cerere în creștere pentru baterii de stocare — puterea instalată în bateriile prosumatorilor a egalat/depășit deja capacitatea de stocare centralizată a țării.
+Concluzie: piața crește, regulile se schimbă des (bun teren pentru conținut de actualitate), iar sursele existente sunt fie comerciale, fie generaliste. E loc pentru un brand de presă de nișă, cu autoritate tehnică reală. (Vezi și secțiunea 9 — public țintă și poziționare rămân un subiect deschis de rafinat.)
+
+3. Public țintă (rafinat pe 9 august 2026 — vezi secțiunea 9.3 pentru context decizie)
+Decizie de bază: scopul principal al site-ului e generarea de lead-uri pentru afacerea proprie (Solar Electric Panel), nu un site media independent. Asta schimbă prioritatea publicului țintă:
+- **Prioritar**: cititori „în modul cumpărare" — caută concret „cât costă un sistem fotovoltaic", „am nevoie de tablou electric nou", compară oferte. Conținutul cu intenție comercială (ghiduri de preț, comparații, „merită sau nu") îi vizează direct.
+- Secundar: proprietari de case / prosumatori informându-se general, pasionați de smart home, profesioniști din domeniu — aduc trafic și autoritate, dar convertesc mai rar direct în lead.
+- Acoperire geografică: națională (Solar Electric Panel are echipă/parteneri în mai multe zone, nu doar local) — conținutul nu trebuie hiper-localizat.
+- Firme din domeniu — rămâne o audiență posibilă pe termen lung (parteneriate, sponsorizări), dar nu prioritară acum.
+
+4. Categorii (6, nu 5 — YouTube adăugată pe 9 august 2026)
+- Electric & instalații – normative (I7, HG-uri), siguranță, tablouri electrice, produse noi.
+- Smart Home & Automatizări – produse, integrări, review-uri, tutoriale de configurare.
+- Fotovoltaic – prețuri panouri/invertoare, subvenții (Casa Verde, AFM), analize de piață.
+- Baterii & Stocare – tehnologii noi, comparații, sisteme hibride on/off-grid.
+- Reglementări & Prețuri energie – ANRE, legea prosumatorilor, tarife, comunități energetice.
+- YouTube – rezumate editoriale scurte (~250-300 cuvinte, citite în ~2 minute) din videoclipuri relevante, cu thumbnail oficial ca imagine.
+Deschis: dacă mai adăugăm categorii (DIY, Opinii, Prețuri echipamente/servicii, Tehnologii noi) sau dacă unele dintre astea sunt de fapt etichete/filtre peste categoriile existente, nu categorii noi — decizie în curs, vezi secțiunea 9.
+
+5. Model de conținut: hibrid (validat, funcțional)
+Modelul hibrid ales inițial e implementat și testat pe conținut real:
+
+5.1 Flux agregat ("Agregat" în Excel)
+- Fetch pe sursă reală → extragere fapte/cifre/citate exacte → rescriere originală (~350-500 cuvinte, ton tehnic-sobru) → sursă citată explicit în text și în pagină.
+- Data articolului = data reală de publicare a sursei (extrasă din meta tags/JSON-LD), nu o dată artificială.
+- Poză = og:image reală din pagina sursă, când există; altfel poză generată procedural.
+- Surse folosite până acum: ANRE (comunicate), Asociația Prosumatorilor (APCE), Digi24, Newsweek România, GreenLead, Curs de Guvernare, Realitatea.NET, Energio Solar, Electricianul.ro, NotebookCheck, canale YouTube (Electric Team Romania, Proiecte Diverse DIY, Electro Profesional).
+
+5.2 Flux editorial propriu ("Propriu" în Excel)
+- Ghiduri originale (~400-550 cuvinte), scrise pe baza expertizei tehnice, uneori cu un URL de referință (preț, context) citat doar în Excel, nu afișat ca link pe pagină — pagina arată explicit „Conținut original Electric NEWS".
+- Subiecte deja scrise: tablou electric conform I7, ce e o baterie cu litiu, cinci măsuri APCE, tariful BINOM, certificatele verzi etc.
+
+6. Stack tehnic REAL (înlocuiește complet recomandarea WordPress din versiunea inițială)
+Decizie luată în sesiunea din 9 august 2026: NU WordPress. Site static, generat din Excel prin Python, deploy pe Netlify.
+
+6.1 De ce nu WordPress
+Site-ul era deja construit ca generator static Python → HTML (moștenit dintr-o sesiune anterioară de lucru cu Claude), funcțional și testat. Migrarea la WordPress ar fi însemnat să aruncăm un sistem care deja funcționează, ca să recâștigăm funcționalități (categorii, tag-uri) pe care generatorul static le are deja. Static + Netlify e mai simplu de întreținut la acest volum de conținut și elimină complet costul de găzduire/securitate al unui CMS cu bază de date.
+
+6.2 Cum funcționează concret
+- Sursa de adevăr: `electric-news-calendar-editorial.xlsx`, foaia „Calendar editorial" (coloanele A-H: Săpt. / Dată propusă / Categorie / Tip / Titlu / Sursă / URL sursă / Status).
+- Conținutul complet al fiecărui articol: fișier `.txt` separat în `articole-text/`, citit automat de generator după slug.
+- `scripts/build_site.py` citește Excelul + fișierele de conținut și regenerează tot site-ul (homepage, 6 pagini categorie, o pagină per articol publicat, formulare) — dar generează pagină **doar** pentru rândurile cu Status = Publicat.
+- `scripts/check_links.py` verifică după fiecare regenerare: 0 linkuri interne moarte, 0 linkuri externe neverificate/inventate. Regulă de disciplină: nu se confirmă o adăugare de conținut fără să treacă această verificare.
+- Poze: `scripts/fetch_source_images.py` (poză reală din sursă, inclusiv thumbnail YouTube) cu fallback `scripts/gen_article_images.py` (poză procedurală unică per articol — variație de nuanță + iconiță relevantă din titlu, pornind de la 6 ilustrații de bază per categorie din `scripts/gen_images.py`). Un manifest cu md5 protejează pozele înlocuite manual de suprascriere automată.
+
+6.3 Deploy (încă nefăcut — site-ul e doar local, în previzualizare)
+- Țintă: un site Netlify propriu, separat de `teomarcu.netlify.app` (acela găzduiește alt proiect, nu se atinge).
+- Formularele „Trimite o știre", „Contact", „Newsletter" sunt deja construite cu atributele Netlify Forms — devin funcționale automat, fără backend, din momentul deploy-ului.
+- Domeniu propriu (.ro) — decizie neluată încă.
+
+6.4 Componente independente de alegerea tehnică
+- Newsletter: platformă de trimitere efectivă (Brevo, MailerLite) — formularul de colectare a adreselor există, trimiterea propriu-zisă nu ține de stack, se alege separat.
+- Analytics: Google Search Console + Analytics — de adăugat la deploy.
+
+7. Ce există concret azi (9 august 2026) — inventar
+- 55 de rânduri în calendarul editorial; 28 publicate (conținut real + poză), 27 în așteptare (doar structură, fără conținut încă — intenționat, nu eroare).
+- Site local complet regenerabil dintr-o comandă (`py scripts/build_site.py`), verificat (`py scripts/check_links.py`).
+- Skill unificat `skills/genereaza-articol-electric-news/SKILL.md` — patru moduri: link articol, link YouTube (transcript manual, extragerea automată e blocată de Cloudflare/YouTube), idee brută, agregare din surse (propune, nu publică automat).
+- Sistem de Status (Publicat/În așteptare) — controlează ce apare efectiv pe site, independent de ce există în calendar.
+- Date reale de publicare extrase din sursă (nu artificiale) pentru toate articolele Agregat.
+- Formulare Netlify pentru Newsletter, Contact, Trimite o știre, **Cere ofertă gratuită** (lead-gen, vezi 9.3) — funcționale la deploy.
+- Folder `transcripturi-youtube/` — flux manual de adăugare articole din videoclipuri (transcript dat de utilizator → rezumat scurt → publicare).
+- Coloane Excel suplimentare: **Sponsorizat** (badge pe pagină dacă „Da") și **Etichete** (etichete transversale peste categorii — DIY, Opinie, Prețuri, Tehnologie nouă — pagină proprie per etichetă).
+- Transparență imagini: poze generate procedural poartă eticheta „Ilustrație" + mențiune; poze reale de la Pexels (`scripts/fetch_stock_image.py`) primesc credit foto vizibil; poze din surse/YouTube nu au marcaj (sunt reale).
+- Căutare live în header (JS client-side, index inclus în pagină — funcționează și pe `file://`, fără server).
+- Pagină „Sursele noastre" — generată automat din Excel, listă de surse + explicație model hibrid.
+- Caseta CTA „Cere ofertă" apare automat la finalul articolelor din Fotovoltaic, Baterii & Stocare, Electric & instalații.
+
+8. Roadmap în etape (actualizat)
+
+Etapa 0 – Fundație — PARȚIAL FĂCUTĂ, altfel decât plănuit inițial
+- ✅ Structură categorii (6) + calendar editorial cu 55 de subiecte.
+- ✅ Proces de generare conținut definit și testat (nu doar teoretic — 28 articole reale).
+- ❌ Nume final/logo/identitate vizuală — există un logo simplu SVG generat, nu unul definitiv.
+- ❌ Domeniu & găzduire — nedecise.
+
+Etapa 1 – Lansare MVP — ÎN CURS
+- Conținutul crește constant (28/55 publicate); rămân 27 de scris.
+- Deploy pe Netlify — de făcut.
+- SEO tehnic de bază (sitemap, schema Article) — de adăugat înainte de deploy.
+
+Etapa 2 – Creștere & automatizare
+- Modul de agregare din surse (Modul 4 din SKILL.md) există ca proces, dar rulează doar la cerere, nu programat.
+- Discuție deschisă: rulare programată a skill-urilor (ex. verificare zilnică surse) — vezi secțiunea 9.
+
+Etapa 3 – Monetizare & scalare — de discutat, vezi secțiunea 9
+
+9. Deschis / de discutat (din sesiunea de planificare din 9 august 2026)
+Idei strânse, neexecutate încă, grupate pe prioritate:
+
+9.1 Rapide, fără decizii de business (următoarele de făcut)
+- Marcaj transparent pentru imaginile generate/ilustrative (onestitate + pas spre conformitate GDPR/AI).
+- Marcaj articole sponsorizate (coloană Excel + badge vizual pe pagină).
+- Pagină „Sursele noastre" / metodologie — transparență despre cum se aleg și verifică sursele.
+- Auto-categorizare formalizată ca regulă explicită în skill.
+- Căutare articole după cuvânt cheie / dată (index + căutare în JavaScript, fără backend).
+
+9.2 Necesită decizie înainte de construcție
+- Categorii noi vs. etichete pentru DIY, Opinii, Prețuri echipamente/servicii, Tehnologii noi.
+- Sursa pozelor realiste: API stock photos (Pexels/Unsplash — gratuit, cere cont+cheie) vs. generator de imagini AI (nedisponibil momentan în acest mediu de lucru).
+
+9.3 Strategie business — DECIS pe 9 august 2026
+- **Scop principal**: Electric NEWS e motor de lead-uri pentru afacerea proprie — **Solar Electric Panel (SEP)**, Bulevardul Timișoara 73, 061323 București, tel. 0750 405 908, acoperire națională (fotovoltaic, baterii de stocare, instalații electrice). Nu un site media independent care caută monetizare separată.
+- **Model concret implementat**: pagină/formular „Cere ofertă gratuită" (Netlify Forms) — nume, telefon, email, tip proiect, zonă, descriere. Buton propriu în header (lângă Newsletter, nu în locul lui), plus casetă CTA la finalul articolelor din Fotovoltaic, Baterii & Stocare, Electric & instalații.
+- **Transparență**: footer-ul site-ului declară explicit „Operat de Solar Electric Panel (SEP)" cu adresă și telefon — decizie conștientă a userului, consistentă cu principiul de onestitate deja aplicat la conținut/imagini.
+- **Publicitate/sponsorizări/afiliere**: rămân opțiuni secundare, posibile mai târziu, dar nu sunt prioritatea — riscă chiar să submineze credibilitatea pe articolele de preț unde vrei încredere maximă pentru propriile lead-uri.
+- **Program de parteneriat pentru alți electricieni/instalatori**: lăsat deoparte explicit — se reconsideră doar dacă apare volum de lead-uri mai mare decât poate prelua SEP singur.
+
+9.4 Automatizări mari, proiecte separate, ulterioare
+- Wizard multi-rol la „Trimite o știre" (articol / sponsor / colaborator / cititor).
+- Wizard de descoperire articole dintr-un canal YouTube după cuvinte cheie (fără extragere automată de transcript — tot manual per video, dar cu triaj asistat).
+- Wizard de căutare surse după cuvinte cheie + interval de date + categorie.
+- Execuție programată a skill-urilor (ex. skill YouTube rulat automat la un „refresh" al proiectului).
+
+10. Cum organizăm proiectul (actualizat pentru workflow-ul real)
+Proiectul se lucrează acum din Claude Code, direct pe folderul de pe disc (`C:\Users\730\Desktop\electric NEWS`), nu doar din Claude Desktop/Cowork. Ce contează pentru continuitate între sesiuni:
+- Acest document (`roadmap si despre electric news.txt`) — actualizat după orice decizie majoră (schimbare de stack, nouă categorie, decizie de monetizare).
+- `skills/genereaza-articol-electric-news/SKILL.md` — procesul exact, executabil, nu doar descriere — orice sesiune nouă din Claude Code îl poate citi și continua fără reexplicare.
+- Memoria persistentă a lui Claude Code (separată de acest fișier) — reține preferințele tale de lucru și contextul de proiect, actualizată la fiecare decizie importantă.
+- Regula practică rămasă valabilă din versiunea inițială: dacă o decizie contează pe termen lung, ea trebuie scrisă undeva persistent (acest document, SKILL.md, sau memorie) — nu doar menționată într-o conversație.
+
+11. Pași imediați
+- Alegem, pe rând, itemii din secțiunea 9.1 (fără decizii de business) — construcție directă.
+- Decidem categorii vs. etichete (9.2) înainte de a extinde conținutul cu subiecte noi.
+- Programăm o sesiune dedicată pentru strategia de monetizare (9.3) — nu în grabă, între alte task-uri tehnice.
+- Continuăm treptat cele 27 de articole „în așteptare", pe măsură ce timpul permite.
+
+Surse citate în secțiunea de context de piață
+- Digi24 – Legea 160/2026, promulgare și compensare lunară (digi24.ro)
+- Newsweek România – Casa Verde Baterii 2026, buget (newsweek.ro)
+- Curs de Guvernare – Parcurile fotovoltaice, a doua capacitate de generare a României (cursdeguvernare.ro)
+- Realitatea.NET – ANRE a aprobat comunitățile de energie (realitatea.net)
+- GreenLead – Legea Prosumatorilor 2026, decizie CCR (greenlead.ro)
+- Asociația Prosumatorilor (APCE) – multiple comunicate despre Casa Verde, baterii, tarife (asociatiaprosumatorilor.ro)
+- ANRE – comunicate de presă oficiale (anre.ro)

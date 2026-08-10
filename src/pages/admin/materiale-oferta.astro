@@ -1,0 +1,272 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getMateriale } from '../../lib/materialeOferta';
+
+const materiale = await getMateriale();
+const categoriiExistente = [...new Set(materiale.map((m) => m.categorie))].sort();
+---
+<AdminLayout title="Materiale & prețuri ofertă">
+	<div class="cap">
+		<h1>Materiale & prețuri ofertă ({materiale.length})</h1>
+		<p class="hint">Aceste date alimentează direct calculatorul de ofertă de pe site (pagina /oferta). Modificările se văd imediat după salvare — fără să mai fie nevoie de deploy separat, pentru că pagina publică citește fișierul Excel direct.</p>
+	</div>
+
+	<div class="filtre">
+		<input type="text" id="căutare" placeholder="Caută produs, furnizor, specificație..." />
+		<select id="filtru-categorie">
+			<option value="">Toate categoriile</option>
+			{categoriiExistente.map((c) => <option value={c}>{c}</option>)}
+		</select>
+	</div>
+
+	<div id="listă"></div>
+	<button type="button" id="adaugă" class="btn-secundar">+ Produs nou</button>
+
+	<div class="bară-jos">
+		<button type="button" id="salvează" class="btn">Salvează tot</button>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { max-width: 900px; margin-bottom: 1.25rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+
+		.filtre { display: flex; gap: 0.75rem; max-width: 900px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+		.filtre input, .filtre select {
+			background: #111827; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.55rem 0.75rem; font-size: 0.9rem;
+		}
+		.filtre input { flex: 1; min-width: 220px; }
+
+		#listă { display: flex; flex-direction: column; gap: 0.9rem; max-width: 900px; }
+		.mat-card { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+		.mat-cap { display: flex; align-items: center; justify-content: space-between; }
+		.mat-nr { color: #64748b; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+		.mat-elimină { background: none; border: 1px solid #3f2020; color: #f87171; cursor: pointer; font-size: 0.78rem; padding: 0.3rem 0.7rem; border-radius: 6px; }
+		.mat-elimină:hover { background: #2a1414; }
+
+		.mat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; }
+		.mat-grid.grid3 { grid-template-columns: repeat(3, 1fr); }
+		.mat-câmp { display: flex; flex-direction: column; gap: 0.3rem; }
+		.mat-câmp label { font-size: 0.7rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+		.mat-câmp input, .mat-câmp select {
+			background: #0b1220; border: 1px solid #334155; border-radius: 7px; color: #f1f5f9;
+			padding: 0.5rem 0.65rem; font-size: 0.87rem; font-family: inherit;
+		}
+
+		details.mat-tehnic { border-top: 1px solid #1f2937; padding-top: 0.65rem; }
+		details.mat-tehnic > summary {
+			cursor: pointer; font-size: 0.8rem; color: #93c5fd; list-style: none;
+			display: flex; align-items: center; gap: 0.4rem; user-select: none;
+		}
+		details.mat-tehnic > summary::-webkit-details-marker { display: none; }
+		details.mat-tehnic > summary::before { content: '▸'; transition: transform 0.15s; font-size: 0.65rem; }
+		details.mat-tehnic[open] > summary::before { transform: rotate(90deg); }
+		details.mat-tehnic .mat-grid { margin-top: 0.65rem; }
+
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.6rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.87rem; margin-top: 1.25rem; }
+		.btn-secundar:hover { background: #263244; }
+		.bară-jos { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		#status { font-size: 0.85rem; color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script define:vars={{ materialeInitiale: materiale }}>
+		const listăEl = document.getElementById('listă');
+		const căutareEl = document.getElementById('căutare');
+		const filtruCategorieEl = document.getElementById('filtru-categorie');
+
+		function câmp(label, cls, value, placeholder) {
+			const wrap = document.createElement('div');
+			wrap.className = 'mat-câmp';
+			const lab = document.createElement('label');
+			lab.textContent = label;
+			const input = document.createElement('input');
+			input.type = 'text';
+			input.className = cls;
+			input.value = value ?? '';
+			if (placeholder) input.placeholder = placeholder;
+			wrap.append(lab, input);
+			return { wrap, input };
+		}
+
+		function câmpNumeric(label, cls, value) {
+			const { wrap, input } = câmp(label, cls, value ?? '');
+			input.type = 'number';
+			input.step = 'any';
+			return { wrap, input };
+		}
+
+		function actualizeazăNumere() {
+			[...listăEl.querySelectorAll('.mat-card')].forEach((card, i) => {
+				card.querySelector('.mat-nr').textContent = `#${i + 1}`;
+			});
+		}
+
+		function randCard(m) {
+			const card = document.createElement('div');
+			card.className = 'mat-card';
+			card.dataset.categorie = m.categorie || '';
+			card.dataset.cautabil = [m.produs, m.categorie, m.furnizor, m.specificatie].join(' ').toLowerCase();
+
+			const cap = document.createElement('div');
+			cap.className = 'mat-cap';
+			const nr = document.createElement('span');
+			nr.className = 'mat-nr';
+			const elimină = document.createElement('button');
+			elimină.type = 'button';
+			elimină.className = 'mat-elimină';
+			elimină.textContent = 'Elimină';
+			elimină.addEventListener('click', () => { card.remove(); actualizeazăNumere(); });
+			cap.append(nr, elimină);
+
+			const grid1 = document.createElement('div');
+			grid1.className = 'mat-grid';
+			const categorie = câmp('Categorie', 'm-categorie', m.categorie, 'Panou / Invertor / Baterie...');
+			const tip = câmp('Tip', 'm-tip', m.tip, 'LV / HV / On-grid');
+			const tier = câmp('Tier', 'm-tier', m.tier, 'Buget / Standard / Premium');
+			const um = câmp('UM', 'm-um', m.um, 'buc');
+			grid1.append(categorie.wrap, tip.wrap, tier.wrap, um.wrap);
+			categorie.input.addEventListener('input', () => {
+				card.dataset.categorie = categorie.input.value;
+				card.dataset.cautabil = [produs.input.value, categorie.input.value, furnizor.input.value, spec.input.value].join(' ').toLowerCase();
+			});
+
+			const grid2 = document.createElement('div');
+			grid2.className = 'mat-grid grid3';
+			const produs = câmp('Produs', 'm-produs', m.produs);
+			const pret = câmpNumeric('Preț unitar (lei)', 'm-pret', m.pretUnitar);
+			const furnizor = câmp('Furnizor', 'm-furnizor', m.furnizor);
+			grid2.append(produs.wrap, pret.wrap, furnizor.wrap);
+			[produs.input, furnizor.input].forEach((el) => el.addEventListener('input', () => {
+				card.dataset.cautabil = [produs.input.value, categorie.input.value, furnizor.input.value, spec.input.value].join(' ').toLowerCase();
+			}));
+
+			const spec = câmp('Specificație', 'm-spec', m.specificatie);
+			spec.wrap.style.gridColumn = '1 / -1';
+			spec.input.addEventListener('input', () => {
+				card.dataset.cautabil = [produs.input.value, categorie.input.value, furnizor.input.value, spec.input.value].join(' ').toLowerCase();
+			});
+			const gridSpec = document.createElement('div');
+			gridSpec.className = 'mat-grid';
+			gridSpec.style.gridTemplateColumns = '1fr';
+			gridSpec.appendChild(spec.wrap);
+
+			const link = câmp('Link produs', 'm-link', m.link);
+			const dataPret = câmp('Dată preț', 'm-dataPret', m.dataPret, 'ex: iulie 2026');
+			const gridLink = document.createElement('div');
+			gridLink.className = 'mat-grid';
+			gridLink.style.gridTemplateColumns = '1fr 1fr';
+			gridLink.append(link.wrap, dataPret.wrap);
+
+			const details = document.createElement('details');
+			details.className = 'mat-tehnic';
+			const summary = document.createElement('summary');
+			summary.textContent = 'Detalii tehnice (putere, capacitate, imagine, fișă tehnică, observații)';
+			details.appendChild(summary);
+
+			const gridTehnic = document.createElement('div');
+			gridTehnic.className = 'mat-grid';
+			const wp = câmpNumeric('Putere Wp (panou)', 'm-wp', m.putereWpPanou);
+			const kwh = câmpNumeric('Capacitate kWh (baterie)', 'm-kwh', m.capacitateKWhBaterie);
+			const kwInv = câmpNumeric('Putere kW (invertor)', 'm-kwInv', m.putereKWInvertor);
+			const kwDesc = câmpNumeric('Putere descărcare kW (baterie)', 'm-kwDesc', m.putereDescarcareKWBaterie);
+			gridTehnic.append(wp.wrap, kwh.wrap, kwInv.wrap, kwDesc.wrap);
+
+			const gridTehnic2 = document.createElement('div');
+			gridTehnic2.className = 'mat-grid';
+			gridTehnic2.style.gridTemplateColumns = '1fr 1fr';
+			const imagineURL = câmp('URL imagine', 'm-imagineURL', m.imagineURL);
+			const fisaTehnicaURL = câmp('URL fișă tehnică', 'm-fisaTehnicaURL', m.fisaTehnicaURL);
+			gridTehnic2.append(imagineURL.wrap, fisaTehnicaURL.wrap);
+
+			const observatii = câmp('Observații', 'm-observatii', m.observatii);
+			observatii.wrap.style.gridColumn = '1 / -1';
+			const gridObs = document.createElement('div');
+			gridObs.className = 'mat-grid';
+			gridObs.style.gridTemplateColumns = '1fr';
+			gridObs.appendChild(observatii.wrap);
+
+			details.append(gridTehnic, gridTehnic2, gridObs);
+
+			card.append(cap, grid1, grid2, gridSpec, gridLink, details);
+			return card;
+		}
+
+		materialeInitiale.forEach((m) => listăEl.appendChild(randCard(m)));
+		actualizeazăNumere();
+
+		document.getElementById('adaugă').addEventListener('click', () => {
+			const card = randCard({ categorie: '', tip: '', tier: 'Standard', produs: '', specificatie: '', pretUnitar: 0, um: 'buc', furnizor: '', link: '', dataPret: '', putereWpPanou: '', capacitateKWhBaterie: '', putereKWInvertor: '', putereDescarcareKWBaterie: '', observatii: '', imagineURL: '', fisaTehnicaURL: '' });
+			listăEl.appendChild(card);
+			actualizeazăNumere();
+			card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		});
+
+		function aplicăFiltre() {
+			const q = căutareEl.value.toLowerCase().trim();
+			const cat = filtruCategorieEl.value;
+			[...listăEl.querySelectorAll('.mat-card')].forEach((card) => {
+				const potriveșteCăutare = !q || card.dataset.cautabil.includes(q);
+				const potriveșteCategorie = !cat || card.dataset.categorie === cat;
+				card.style.display = potriveșteCăutare && potriveșteCategorie ? '' : 'none';
+			});
+		}
+		căutareEl.addEventListener('input', aplicăFiltre);
+		filtruCategorieEl.addEventListener('change', aplicăFiltre);
+
+		document.getElementById('salvează').addEventListener('click', async () => {
+			const statusEl = document.getElementById('status');
+			const items = [...listăEl.querySelectorAll('.mat-card')].map((card) => ({
+				categorie: card.querySelector('.m-categorie').value.trim(),
+				tip: card.querySelector('.m-tip').value.trim(),
+				tier: card.querySelector('.m-tier').value.trim(),
+				produs: card.querySelector('.m-produs').value.trim(),
+				specificatie: card.querySelector('.m-spec').value.trim(),
+				pretUnitar: Number(card.querySelector('.m-pret').value) || 0,
+				um: card.querySelector('.m-um').value.trim(),
+				furnizor: card.querySelector('.m-furnizor').value.trim(),
+				link: card.querySelector('.m-link').value.trim(),
+				dataPret: card.querySelector('.m-dataPret').value.trim(),
+				putereWpPanou: card.querySelector('.m-wp').value ? Number(card.querySelector('.m-wp').value) : '',
+				capacitateKWhBaterie: card.querySelector('.m-kwh').value ? Number(card.querySelector('.m-kwh').value) : '',
+				putereKWInvertor: card.querySelector('.m-kwInv').value ? Number(card.querySelector('.m-kwInv').value) : '',
+				putereDescarcareKWBaterie: card.querySelector('.m-kwDesc').value ? Number(card.querySelector('.m-kwDesc').value) : '',
+				observatii: card.querySelector('.m-observatii').value.trim(),
+				imagineURL: card.querySelector('.m-imagineURL').value.trim(),
+				fisaTehnicaURL: card.querySelector('.m-fisaTehnicaURL').value.trim(),
+			})).filter((m) => m.categorie && m.produs);
+
+			statusEl.textContent = '';
+			const res = await fetch('/api/admin/materiale-oferta', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(items),
+			});
+
+			if (res.ok) {
+				const banner = document.getElementById('banner-salvat');
+				banner.classList.add('arată');
+				clearTimeout(window.__bannerTimeout);
+				window.__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+			} else {
+				const data = await res.json().catch(() => ({}));
+				statusEl.textContent = data.error || 'Eroare la salvare.';
+			}
+		});
+	</script>
+</AdminLayout>

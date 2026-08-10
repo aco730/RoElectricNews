@@ -1,0 +1,34 @@
+---
+import etichete from "../data/etichete.json";
+
+interface Props {
+  slugs?: string[];
+  overlay?: boolean;
+}
+const { slugs = [], overlay = false } = Astro.props;
+
+const active = slugs
+  .filter(Boolean)
+  .map((s) => etichete.find((e) => e.slug === s) ?? { slug: s, text: s, culoare: "#475569" });
+---
+{active.length > 0 && (
+  <span class:list={["etichete-rând", { "etichete-overlay": overlay }]}>
+    {active.map((e) => (
+      <span class="etichetă-pastilă" style={`background:${e.culoare}`}>{e.text}</span>
+    ))}
+  </span>
+)}
+
+<style>
+  .etichete-rând {
+    display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.32rem;
+  }
+  .etichete-overlay {
+    position: absolute; left: 0.6rem; bottom: 0.6rem; z-index: 2;
+  }
+  .etichetă-pastilă {
+    display: inline-block; padding: 0.22rem 0.62rem; border-radius: 999px;
+    font-size: 0.72rem; font-weight: 700; color: white; letter-spacing: 0.02em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  }
+</style>

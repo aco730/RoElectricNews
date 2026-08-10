@@ -1,0 +1,87 @@
+---
+export const prerender = false;
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+
+const linkuri = [
+	{ href: '/admin', label: 'Prezentare generală' },
+	{ href: '/admin/articole', label: 'Articole blog' },
+	{ href: '/admin/categorii-setari', label: 'Categorii' },
+	{ href: '/admin/portofoliu', label: 'Poze portofoliu' },
+	{ href: '/admin/articole-faq', label: 'FAQ pe articole' },
+	{ href: '/admin/categorii', label: 'FAQ pe categorii' },
+	{ href: '/admin/header-footer', label: 'Header & Footer' },
+	{ href: '/admin/contact', label: 'Contact' },
+	{ href: '/admin/etichete', label: 'Etichete' },
+	{ href: '/admin/materiale-oferta', label: 'Materiale & prețuri' },
+	{ href: '/admin/scripturi', label: 'Scripturi' },
+];
+---
+<!doctype html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>{title} — Admin</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: system-ui, sans-serif;
+			background: #0b1220;
+			color: #e2e8f0;
+			display: flex;
+			min-height: 100vh;
+		}
+		nav {
+			width: 220px;
+			flex-shrink: 0;
+			background: #111827;
+			border-right: 1px solid #1f2937;
+			padding: 1.5rem 1rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+		nav .brand { font-weight: 700; color: #f1f5f9; margin-bottom: 1.5rem; font-size: 1.1rem; }
+		nav a {
+			color: #94a3b8;
+			text-decoration: none;
+			padding: 0.55rem 0.7rem;
+			border-radius: 8px;
+			font-size: 0.9rem;
+		}
+		nav a:hover, nav a.activ { background: #1e293b; color: #f1f5f9; }
+		main { flex: 1; padding: 2rem 2.5rem; }
+		.logout {
+			margin-top: auto;
+			background: none;
+			border: 1px solid #334155;
+			color: #94a3b8;
+			padding: 0.5rem;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 0.85rem;
+		}
+		.logout:hover { border-color: #f87171; color: #f87171; }
+		h1 { color: #f8fafc; margin-top: 0; }
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="brand">☀️ SEP Admin</div>
+		{linkuri.map((l) => (
+			<a href={l.href} class={Astro.url.pathname === l.href ? 'activ' : ''}>{l.label}</a>
+		))}
+		<form method="POST" action="/api/admin/logout" style="margin-top: 2rem;">
+			<button type="submit" class="logout">Deconectare</button>
+		</form>
+	</nav>
+	<main>
+		<slot />
+	</main>
+</body>
+</html>

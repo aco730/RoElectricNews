@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publică articol nou — Electric NEWS (admin, doar local)</title>
+<style>
+  :root {
+    --navy:#12213A; --teal:#0EA5A0; --mint:#2DD4BF;
+    --bg:#F5F7F9; --card:#FFFFFF; --text:#12213A; --muted:#5F6368; --border:#E5E9EE;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--text); }
+  .warn-bar { background:var(--navy); color:#fbbf24; font-size:12.5px; text-align:center; padding:8px 16px; font-weight:600; }
+  header.main { background:#fff; border-bottom:1px solid var(--border); padding:20px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .logo { font-weight:800; font-size:20px; letter-spacing:0.3px; }
+  .logo .news { color:var(--teal); }
+  .logo .admin-tag { font-size:11px; font-weight:700; color:var(--muted); background:var(--bg); border:1px solid var(--border); padding:2px 8px; border-radius:12px; margin-left:10px; vertical-align:middle; text-transform:uppercase; letter-spacing:0.4px; }
+  header.main a.back { font-size:13.5px; color:#fff; font-weight:700; text-decoration:none; background:var(--teal); padding:9px 16px; border-radius:7px; }
+  header.main a.back:hover { background:#0c8f8a; }
+
+  main { max-width:720px; margin:0 auto; padding:32px 24px 80px; }
+  .intro { color:var(--muted); font-size:14.5px; line-height:1.6; margin:0 0 28px; }
+  .intro strong { color:var(--text); }
+
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:26px 28px; margin-bottom:20px; }
+  .card h2 { font-size:15px; margin:0 0 16px; text-transform:uppercase; letter-spacing:0.4px; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:8px; }
+
+  fieldset { border:none; padding:0; margin:0 0 20px; }
+  legend { font-size:13.5px; font-weight:700; color:var(--text); margin-bottom:10px; padding:0; }
+  .tip-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:520px) { .tip-grid { grid-template-columns:1fr; } }
+  .tip-option { border:1.5px solid var(--border); border-radius:8px; padding:12px 14px; cursor:pointer; display:flex; gap:10px; align-items:flex-start; transition:border-color .15s, background .15s; }
+  .tip-option:hover { border-color:var(--teal); }
+  .tip-option input { margin-top:3px; accent-color:var(--teal); }
+  .tip-option.checked { border-color:var(--teal); background:#F0FDFC; }
+  .tip-option .tt { font-weight:700; font-size:13.5px; }
+  .tip-option .td { font-size:12px; color:var(--muted); margin-top:2px; line-height:1.4; }
+
+  label.field-label { display:block; font-size:13px; font-weight:700; margin:0 0 6px; }
+  .hint { font-size:12px; color:var(--muted); margin:4px 0 0; line-height:1.5; }
+  textarea, input[type="text"] { width:100%; border:1px solid var(--border); border-radius:6px; padding:10px 12px; font-size:14px; font-family:inherit; color:var(--text); }
+  textarea { min-height:130px; resize:vertical; }
+  textarea:focus, input:focus { outline:2px solid var(--teal); outline-offset:1px; border-color:var(--teal); }
+
+  .row { margin-bottom:18px; }
+  .row:last-child { margin-bottom:0; }
+
+  .submit-btn { display:block; width:100%; background:var(--teal); color:#fff; border:none; padding:14px; font-size:15px; font-weight:700; border-radius:8px; cursor:pointer; margin-top:6px; }
+  .submit-btn:hover { background:#0c8f8a; }
+  .submit-btn:disabled { background:#B8C0C7; cursor:not-allowed; }
+
+  .status-box { display:none; margin-top:18px; padding:16px 18px; border-radius:8px; font-size:13.5px; line-height:1.6; }
+  .status-box.ok { display:block; background:#F0FDF4; border:1px solid #BBF7D0; color:#166534; }
+  .status-box.warn { display:block; background:#FFF7E6; border:1px solid #F0D9A6; color:#8A6116; }
+  .status-box code { background:rgba(0,0,0,0.06); padding:1px 6px; border-radius:4px; font-size:12.5px; }
+
+  .folder-connected { color:#166534; font-weight:600; }
+  .folder-connected::before { content:"● "; }
+
+  .steps { list-style:none; margin:0; padding:0; counter-reset: step; }
+  .steps li { counter-increment: step; padding:10px 0 10px 34px; position:relative; font-size:13.5px; color:var(--muted); border-bottom:1px dashed var(--border); }
+  .steps li:last-child { border-bottom:none; }
+  .steps li::before { content: counter(step); position:absolute; left:0; top:8px; width:22px; height:22px; border-radius:50%; background:var(--navy); color:#fff; font-size:11.5px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  .steps li strong { color:var(--text); }
+</style>
+</head>
+<body>
+
+<div class="warn-bar">Pagină internă, doar pentru administrare locală — nu face parte din site-ul public și nu se publică niciodată pe Netlify.</div>
+
+<header class="main">
+  <span class="logo">ELECTRIC<span class="news">NEWS</span><span class="admin-tag">Publică articol nou</span></span>
+  <a class="back" href="../gestionare/index.html">Gestionare conținut &rarr;</a>
+</header>
+
+<main>
+  <p class="intro">
+    Completează formularul cu sursa noului conținut — un link către un articol, un transcript YouTube, mai multe linkuri deodată, sau numele unui site de urmărit pentru știri noi.
+    Cererea se salvează instant (fără costuri, fără cheie API) — apoi spui în chat, lui Claude Code, <strong>„verifică cereri noi"</strong>, ca să cerceteze și să scrie articolul real.
+  </p>
+
+  <div class="card" id="server-status-card">
+    <p class="hint" id="server-status" style="margin:0;">Se verifică serverul local...</p>
+  </div>
+
+  <div class="card" id="setari-active-card" style="background:#F5F7F9;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+      <strong style="font-size:13px;">Ghid de scriere pentru Claude (ton, lungime, poze)</strong>
+      <a href="../gestionare/index.html" target="_blank" style="font-size:12.5px; color:var(--teal); font-weight:700; text-decoration:none;">Editează în Gestionare &rarr;</a>
+    </div>
+    <p class="hint" id="setari-active-body" style="margin:0;">Se încarcă...</p>
+  </div>
+
+  <form id="cerere-form">
+    <div class="card">
+      <h2>1. Ce fel de sursă e?</h2>
+      <fieldset>
+        <legend>Alege tipul (corespunde modulelor din skill-ul de generare articole)</legend>
+        <div class="tip-grid" id="tip-grid">
+          <label class="tip-option" data-tip="link">
+            <input type="radio" name="tip" value="link" checked>
+            <span><span class="tt">Link articol</span><span class="td">Un articol de presă, comunicat sau blog — se rescrie automat, cu sursa citată.</span></span>
+          </label>
+          <label class="tip-option" data-tip="youtube">
+            <input type="radio" name="tip" value="youtube">
+            <span><span class="tt">Transcript YouTube</span><span class="td">Lipești transcriptul unui video — devine rezumat editorial scurt.</span></span>
+          </label>
+          <label class="tip-option" data-tip="lista">
+            <input type="radio" name="tip" value="lista">
+            <span><span class="tt">Listă de linkuri</span><span class="td">Mai multe articole deodată — câte unul pe linie, procesate pe rând.</span></span>
+          </label>
+          <label class="tip-option" data-tip="sursa">
+            <input type="radio" name="tip" value="sursa">
+            <span><span class="tt">Site de știri</span><span class="td">Un site/canal de monitorizat — se propun candidați, nu se publică automat.</span></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="card">
+      <h2>2. Conținutul</h2>
+      <div class="row">
+        <label class="field-label" for="continut" id="continut-label">Link-ul articolului</label>
+        <textarea id="continut" name="continut" required placeholder="https://..."></textarea>
+        <p class="hint" id="continut-hint">Lipește URL-ul complet al articolului sursă.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Detalii opționale</h2>
+      <p class="hint" style="margin:0 0 16px;">Titlul și categoria se stabilesc automat din conținutul real al sursei — completează aici doar dacă vrei să ghidezi alegerea, nu e obligatoriu.</p>
+      <div class="row">
+        <label class="field-label" for="titlu_propus">Titlu propus (opțional)</label>
+        <input type="text" id="titlu_propus" name="titlu_propus" placeholder="Lasă gol pentru titlu generat automat din sursă">
+      </div>
+      <div class="row">
+        <label class="field-label" for="categorie_sugerata">Categorie sugerată (opțional)</label>
+        <select id="categorie_sugerata" name="categorie_sugerata" style="width:100%;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:14px;font-family:inherit;color:var(--text);">
+          <option value="">— automat, din conținut —</option>
+          <option>Electric &amp; instalații</option>
+          <option>Smart Home &amp; Automatizări</option>
+          <option>Fotovoltaic</option>
+          <option>Baterii &amp; Stocare</option>
+          <option>Reglementări &amp; Prețuri energie</option>
+          <option>YouTube</option>
+          <option>Colaboratori</option>
+        </select>
+      </div>
+      <div class="row">
+        <label class="field-label" for="nota">Notă pentru Claude (opțional)</label>
+        <textarea id="nota" name="nota" style="min-height:70px;" placeholder="Ex: unghi anume de tratat, ce să eviți, context suplimentar..."></textarea>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4. Conținut sponsorizat?</h2>
+      <fieldset>
+        <legend>Obligatoriu — determină badge-ul „Conținut sponsorizat" afișat pe pagina articolului</legend>
+        <div class="tip-grid">
+          <label class="tip-option" data-sp="nu">
+            <input type="radio" name="sponsorizat" value="Nu" checked>
+            <span><span class="tt">Nu</span><span class="td">Conținut editorial obișnuit, fără badge.</span></span>
+          </label>
+          <label class="tip-option" data-sp="da">
+            <input type="radio" name="sponsorizat" value="Da">
+            <span><span class="tt">Da</span><span class="td">Apare badge „Conținut sponsorizat" vizibil lângă categorie, pe pagina articolului.</span></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Salvează cererea</button>
+    <div class="status-box" id="status-box"></div>
+  </form>
+
+  <div class="card" id="candidati-card" style="display:none; margin-top:24px;">
+    <h2>Candidați găsiți — bifează ce vrei salvat</h2>
+    <div id="candidati-list"></div>
+    <button type="button" class="submit-btn" id="publica-selectate-btn" style="margin-top:16px;">Publică selectate</button>
+  </div>
+
+  <div class="card" style="margin-top:32px;">
+    <h2>Ce se întâmplă după ce salvezi cererea</h2>
+    <ol class="steps">
+      <li>Cererea e salvată instant în <code>cereri-publicare/</code> — fără cost, fără cheie API.</li>
+      <li>În Claude Code, scrie <strong>„verifică cereri noi"</strong>.</li>
+      <li>Claude cercetează sursa reală, scrie articolul (ținând cont de ghidul de ton/lungime din tab-ul Setări), alege poza și formulează întrebările.</li>
+      <li>Îți arată un rezumat scurt — confirmi înainte de publicare.</li>
+      <li>Site-ul e regenerat și verificat (linkuri) automat după confirmare.</li>
+    </ol>
+  </div>
+</main>
+
+<script>
+(function () {
+  var form = document.getElementById('cerere-form');
+  var tipGrid = document.getElementById('tip-grid');
+  var continutLabel = document.getElementById('continut-label');
+  var continutHint = document.getElementById('continut-hint');
+  var continutField = document.getElementById('continut');
+  var statusBox = document.getElementById('status-box');
+
+  var COPY = {
+    link: {
+      label: 'Link-ul articolului',
+      hint: 'Lipește URL-ul complet al articolului sursă.',
+      placeholder: 'https://...'
+    },
+    youtube: {
+      label: 'Transcriptul video-ului',
+      hint: 'Lipește transcriptul complet. Dacă îl ai, pune linkul YouTube pe primul rând.',
+      placeholder: 'https://www.youtube.com/watch?v=...\n\n(apoi transcriptul complet, lipit mai jos)'
+    },
+    lista: {
+      label: 'Linkurile articolelor (câte unul pe linie)',
+      hint: 'Un link pe fiecare rând — se procesează pe rând, ca articole separate.',
+      placeholder: 'https://...\nhttps://...\nhttps://...'
+    },
+    sursa: {
+      label: 'Site-ul sau canalul de monitorizat',
+      hint: 'URL-ul unei pagini de listă/arhivă (ex: pagina de comunicate ANRE). Primești o listă de candidați de bifat, nu se publică automat.',
+      placeholder: 'https://... sau numele sursei'
+    }
+  };
+
+  function setTip(tip) {
+    Array.prototype.forEach.call(tipGrid.querySelectorAll('.tip-option'), function (el) {
+      el.classList.toggle('checked', el.getAttribute('data-tip') === tip);
+    });
+    var c = COPY[tip];
+    continutLabel.textContent = c.label;
+    continutHint.textContent = c.hint;
+    continutField.placeholder = c.placeholder;
+  }
+
+  Array.prototype.forEach.call(tipGrid.querySelectorAll('input[name="tip"]'), function (input) {
+    input.addEventListener('change', function () { setTip(input.value); });
+  });
+
+  var sponsorLabels = document.querySelectorAll('.tip-option[data-sp]');
+  function setSponsorChecked() {
+    Array.prototype.forEach.call(sponsorLabels, function (el) {
+      el.classList.toggle('checked', el.querySelector('input').checked);
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="sponsorizat"]'), function (input) {
+    input.addEventListener('change', setSponsorChecked);
+  });
+  setSponsorChecked();
+  setTip('link');
+
+  // ---------- Verificare server local ----------
+  var serverStatus = document.getElementById('server-status');
+  var submitBtn = document.getElementById('submit-btn');
+  fetch('/api/status').then(function (r) { return r.json(); }).then(function () {
+    serverStatus.innerHTML = '<span class="folder-connected">Server conectat</span> — cererile se salvează instant, fără cost.';
+  }).catch(function () {
+    serverStatus.textContent = 'Nu văd serverul local — pornește-admin.bat trebuie să ruleze într-o fereastră deschisă.';
+    serverStatus.style.color = '#B22222';
+    submitBtn.disabled = true;
+  });
+
+  var TON_LABELS = { 'tehnic-sobru': 'tehnic-sobru', 'profesional': 'profesional', 'informativ-simplu': 'informativ-simplu', 'conversational': 'conversațional' };
+  var STRATEGIE_LABELS = {
+    'og_pexels_generata': 'poză reală din sursă → Pexels → generată',
+    'og_generata': 'poză reală din sursă → generată',
+    'pexels_generata': 'doar Pexels → generată',
+    'doar_generata': 'întotdeauna generată',
+  };
+  function refreshSetariActive() {
+    fetch('/api/setari').then(function (r) { return r.json(); }).then(function (d) {
+      var s = d.setari;
+      document.getElementById('setari-active-body').innerHTML =
+        'Ton: <strong>' + (TON_LABELS[s.ton] || s.ton) + '</strong> · Lungime: <strong>' + s.lungime_min + '-' + s.lungime_max + ' cuvinte</strong> · ' +
+        'Întrebări: <strong>' + s.numar_intrebari + '</strong> · Poze: <strong>' + (STRATEGIE_LABELS[s.poze_strategie] || s.poze_strategie) + '</strong>' +
+        (s.poze_cuvinte_cheie_extra ? ' (+ „' + s.poze_cuvinte_cheie_extra + '")' : '');
+    }).catch(function () {
+      document.getElementById('setari-active-body').textContent = 'Nu s-au putut încărca setările.';
+    });
+  }
+  refreshSetariActive();
+  window.addEventListener('focus', refreshSetariActive);
+
+  var candidatiCard = document.getElementById('candidati-card');
+  var candidatiList = document.getElementById('candidati-list');
+  var publicaBtn = document.getElementById('publica-selectate-btn');
+  var currentSponsor = 'Nu';
+
+  function renderCandidati(candidati) {
+    candidatiList.innerHTML = candidati.map(function (c, i) {
+      return '<label style="display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);font-size:13.5px;">' +
+        '<input type="checkbox" data-url="' + c.url.replace(/"/g, '&quot;') + '" checked style="margin-top:3px;">' +
+        '<span>' + c.titlu + '<br><span class="hint" style="margin:2px 0 0;">' + c.url + '</span></span></label>';
+    }).join('') || '<p class="hint">Niciun candidat nou găsit — toate linkurile relevante par deja indexate.</p>';
+    candidatiCard.style.display = 'block';
+  }
+
+  publicaBtn.addEventListener('click', async function () {
+    var urls = Array.prototype.map.call(candidatiList.querySelectorAll('input:checked'), function (el) { return el.getAttribute('data-url'); });
+    if (!urls.length) return;
+    publicaBtn.disabled = true;
+    publicaBtn.textContent = 'Se salvează...';
+    try {
+      var resp = await fetch('/api/cerere/salveaza', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tip: 'lista', continut: urls.join('\n'), sponsorizat: currentSponsor })
+      });
+      var data = await resp.json();
+      statusBox.className = 'status-box ok';
+      statusBox.innerHTML = 'Cerere salvată (' + urls.length + ' linkuri) — spune-i lui Claude Code „verifică cereri noi".';
+      candidatiCard.style.display = 'none';
+    } catch (err) {
+      statusBox.className = 'status-box warn';
+      statusBox.innerHTML = 'Eroare la salvare: ' + err.message;
+    }
+    publicaBtn.disabled = false;
+    publicaBtn.textContent = 'Publică selectate';
+  });
+
+  // ---------- Trimitere ----------
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    var tip = data.get('tip');
+    currentSponsor = data.get('sponsorizat') || 'Nu';
+    var payload = {
+      tip: tip,
+      continut: (data.get('continut') || '').trim(),
+      titlu_propus: (data.get('titlu_propus') || '').trim(),
+      categorie_sugerata: data.get('categorie_sugerata') || '',
+      nota: (data.get('nota') || '').trim(),
+      sponsorizat: currentSponsor
+    };
+    if (!payload.continut) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = tip === 'sursa' ? 'Se scanează sursa...' : 'Se salvează cererea...';
+    statusBox.className = '';
+    candidatiCard.style.display = 'none';
+
+    try {
+      if (tip === 'sursa') {
+        var resp = await fetch('/api/agregator/scaneaza', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: payload.continut })
+        });
+        var d = await resp.json();
+        if (!resp.ok || !d.ok) {
+          statusBox.className = 'status-box warn';
+          statusBox.innerHTML = 'Eroare: ' + (d.error || resp.statusText);
+        } else {
+          renderCandidati(d.candidati);
+        }
+      } else {
+        var resp2 = await fetch('/api/cerere/salveaza', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        var d2 = await resp2.json();
+        if (!resp2.ok || !d2.ok) {
+          statusBox.className = 'status-box warn';
+          statusBox.innerHTML = 'Eroare: ' + (d2.error || resp2.statusText);
+        } else {
+          statusBox.className = 'status-box ok';
+          statusBox.innerHTML = 'Cerere salvată: <code>' + d2.filename + '</code>. Spune-i lui Claude Code „verifică cereri noi".';
+          form.reset();
+          setTip('link');
+          setSponsorChecked();
+        }
+      }
+    } catch (err) {
+      statusBox.className = 'status-box warn';
+      statusBox.innerHTML = 'Nu m-am putut conecta la serverul local. E pornit pornește-admin.bat?';
+    }
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Salvează cererea';
+  });
+})();
+</script>
+
+</body>
+</html>

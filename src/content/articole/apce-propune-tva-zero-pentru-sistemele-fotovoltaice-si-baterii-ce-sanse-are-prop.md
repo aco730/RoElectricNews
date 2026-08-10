@@ -1,0 +1,16 @@
+---
+title: "APCE propune TVA ZERO pentru sistemele fotovoltaice și baterii: ce șanse are propunerea în Parlament"
+categorie: reglementari-preturi
+data: 2026-08-04
+sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
+sursaUrl: "https://asociatiaprosumatorilor.ro/apce-propune-parlamentului-tva-zero-pentru-sistemele-fotovoltaice-si-baterii/"
+imagine: "/images/articole/apce-propune-tva-zero-pentru-sistemele-fotovoltaice-si-baterii-ce-sanse-are-prop.webp"
+---
+
+Asociația Prosumatorilor și Comunităților de Energie (APCE) cere Parlamentului adoptarea urgentă a unui pachet fiscal cu TVA 0% pentru sistemele fotovoltaice de până la 27 kW, pentru bateriile de stocare și componentele esențiale de instalare, plus scutire de TVA și accize pentru energia stocată și consumată din baterii. Baza legală invocată: Directiva UE 2022/542, care permite explicit statelor membre cote zero de TVA pentru instalații fotovoltaice — mecanism aplicat deja în Germania din ianuarie 2023.
+
+Argumentul central al APCE nu e doar financiar, ci de securitate energetică: seceta severă și nivelul scăzut al Dunării din ultimii ani au redus producția hidroenergetică și au arătat, spune asociația, cât de vulnerabil e sistemul energetic național. Generarea distribuită și stocarea locală ar trebui tratate ca prioritate strategică, nu ca sursă de venit bugetar prin TVA.
+
+Calculele APCE pentru impactul unei implementări anuale sunt concrete: 96.000 de instalații fotovoltaice noi, 768 MW capacitate nou instalată, 1,54 GWh capacitate de stocare suplimentară și 614 milioane de euro investiții private mobilizate. Costul bugetar brut estimat — aproximativ 129 milioane de euro anual în TVA necolectat — ar fi parțial compensat prin CASS, dividende și impozitele pe profit ale firmelor de instalare care ar beneficia de creșterea cererii.
+
+APCE intenționează să propună acest pachet legislativ în sesiunea parlamentară de toamnă. Șansele reale de adoptare rămân, deocamdată, necunoscute — asociația nu oferă o evaluare formală, doar „încredere că Parlamentul va analiza responsabil inițiativa”. Pentru cineva care plănuiește un sistem fotovoltaic acum, propunerea e un motiv să urmărească sesiunea parlamentară de toamnă, nu un motiv să amâne decizia bazându-se pe ea.

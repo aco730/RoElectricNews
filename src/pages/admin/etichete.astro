@@ -1,0 +1,128 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getEtichete } from '../../lib/etichete';
+
+const etichete = await getEtichete();
+---
+<AdminLayout title="Etichete">
+	<div class="cap">
+		<h1>Etichete</h1>
+		<p class="hint">Etichete reutilizabile (ex: Sponsorizat, Ofertă, Reducere) — le poți atașa pe orice articol de blog sau proiect de portofoliu, din editorul lor.</p>
+	</div>
+
+	<div id="listă"></div>
+	<button type="button" id="adaugă" class="btn-secundar">+ Etichetă nouă</button>
+
+	<div class="bară-jos">
+		<button type="button" id="salvează" class="btn">Salvează tot</button>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { max-width: 700px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+
+		#listă { display: flex; flex-direction: column; gap: 0.7rem; max-width: 560px; }
+		.eticheta-card {
+			display: flex; align-items: center; gap: 0.75rem;
+			background: #111827; border: 1px solid #334155; border-radius: 10px; padding: 0.8rem 1rem;
+		}
+		.eticheta-card input[type="text"] {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.5rem 0.7rem; font-size: 0.9rem; flex: 1;
+		}
+		.eticheta-card input[type="color"] { width: 42px; height: 34px; border: none; border-radius: 6px; background: none; cursor: pointer; padding: 0; }
+		.eticheta-preview { padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: white; white-space: nowrap; }
+		.eticheta-elimină { background: none; border: 1px solid #3f2020; color: #f87171; cursor: pointer; font-size: 0.78rem; padding: 0.35rem 0.7rem; border-radius: 6px; }
+		.eticheta-elimină:hover { background: #2a1414; }
+
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.6rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.87rem; margin-top: 1rem; }
+		.btn-secundar:hover { background: #263244; }
+		.bară-jos { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		#status { font-size: 0.85rem; color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script define:vars={{ eticheteInitiale: etichete }}>
+		const listăEl = document.getElementById('listă');
+
+		function randCard(item) {
+			const card = document.createElement('div');
+			card.className = 'eticheta-card';
+			card.dataset.slug = item.slug || '';
+
+			const text = document.createElement('input');
+			text.type = 'text';
+			text.className = 'e-text';
+			text.placeholder = 'Text etichetă (ex: Sponsorizat)';
+			text.value = item.text || '';
+
+			const culoare = document.createElement('input');
+			culoare.type = 'color';
+			culoare.className = 'e-culoare';
+			culoare.value = item.culoare || '#334155';
+
+			const preview = document.createElement('span');
+			preview.className = 'eticheta-preview';
+			preview.textContent = item.text || 'Previzualizare';
+			preview.style.background = culoare.value;
+
+			text.addEventListener('input', () => { preview.textContent = text.value || 'Previzualizare'; });
+			culoare.addEventListener('input', () => { preview.style.background = culoare.value; });
+
+			const elimină = document.createElement('button');
+			elimină.type = 'button';
+			elimină.className = 'eticheta-elimină';
+			elimină.textContent = 'Elimină';
+			elimină.addEventListener('click', () => card.remove());
+
+			card.append(text, culoare, preview, elimină);
+			return card;
+		}
+
+		eticheteInitiale.forEach((item) => listăEl.appendChild(randCard(item)));
+
+		document.getElementById('adaugă').addEventListener('click', () => {
+			listăEl.appendChild(randCard({ text: '', culoare: '#334155' }));
+		});
+
+		document.getElementById('salvează').addEventListener('click', async () => {
+			const statusEl = document.getElementById('status');
+			const items = [...listăEl.querySelectorAll('.eticheta-card')].map((el) => ({
+				slug: el.dataset.slug || undefined,
+				text: el.querySelector('.e-text').value.trim(),
+				culoare: el.querySelector('.e-culoare').value,
+			})).filter((i) => i.text);
+
+			const res = await fetch('/api/admin/etichete', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(items),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				const banner = document.getElementById('banner-salvat');
+				banner.classList.add('arată');
+				clearTimeout(window.__bannerTimeout);
+				window.__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+			} else {
+				statusEl.textContent = 'Eroare la salvare.';
+			}
+		});
+	</script>
+</AdminLayout>

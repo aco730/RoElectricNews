@@ -1,0 +1,22 @@
+---
+title: "Cât costă înlocuirea instalației electrice la o casă: ghid de manoperă pe etape"
+categorie: electric-instalatii
+data: 2026-07-23
+sursaNume: "—"
+sursaUrl: "Conținut propriu — fără sursă externă unică"
+imagine: "/images/articole/cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape.webp"
+---
+
+Înlocuirea completă a instalației electrice la o casă locuită e unul dintre cele mai invazive și mai des amânate proiecte de renovare — implică spargere de pereți, praf, zile fără curent pe zone ale casei și, de regulă, un electrician autorizat prezent câteva săptămâni. Înțelegerea etapelor ajută la estimarea realistă a timpului și bugetului, chiar dacă prețurile exacte variază de la o zonă la alta și de la un electrician la altul.
+
+Prima etapă e proiectarea: un electrician autorizat (sau un proiectant specializat, pentru case mai mari) stabilește numărul de circuite necesare, poziția tabloului electric nou, traseele de cablu și numărul de prize/întrerupătoare per cameră, conform normativului I7 în vigoare. Această etapă e adesea sărită la casele vechi renovate „pe bucăți", cu rezultatul unor instalații improvizate — exact genul de neconformitate care crește riscul de incendiu, deja documentat pe scară largă în România.
+
+A doua etapă e spargerea și traseele: cablurile noi trebuie îngropate în pereți (sau montate aparent, dacă renovarea nu permite spargere), ceea ce înseamnă șanțuri pentru fiecare traseu de la tabloul electric la fiecare punct de consum. Aceasta e etapa cea mai vizibilă și mai consumatoare de timp — pentru o casă medie, poate dura de la câteva zile la două-trei săptămâni, în funcție de complexitate și de câte camere sunt afectate simultan.
+
+A treia etapă e montarea tabloului electric nou, cu disjunctoare, diferențiale (RCD/DDR) pe fiecare circuit relevant și, dacă instalația include un sistem fotovoltaic sau o baterie de stocare, spațiu rezervat pentru echipamentele aferente. Tabloul e punctul central al siguranței întregii instalații — un tablou vechi, fără protecție diferențială pe toate circuitele, rămâne principalul motiv pentru care o renovare parțială (doar prize noi, tablou vechi) nu rezolvă cu adevărat problema de siguranță.
+
+A patra etapă e montarea finală a prizelor, întrerupătoarelor și corpurilor de iluminat, urmată obligatoriu de verificarea instalației: măsurători de rezistență de izolație, testarea funcțională a fiecărui diferențial și, ideal, un proces verbal de recepție semnat de electrician.
+
+Costul total depinde decisiv de trei factori: suprafața casei (mai multe circuite, mai mult cablu), gradul de spargere necesar (o casă cu pereți din gips-carton e mult mai ieftin de recablat decât una cu pereți din beton sau cărămidă groasă) și calitatea materialelor alese pentru tablou și componente. Manopera reprezintă, de regulă, o parte semnificativă din bugetul total — motiv pentru care mai mulți electricieni recomandă obținerea a cel puțin două-trei oferte scrise, cu detaliere pe etape, înainte de a începe lucrarea, exact pentru a putea compara manoperă vs. materiale în fiecare ofertă.
+
+Conținut original Electric NEWS.

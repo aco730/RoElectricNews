@@ -1,0 +1,16 @@
+---
+title: "Legea Prosumatorilor 2026 declarată constituțională de CCR — ce înseamnă în practică"
+categorie: fotovoltaic
+data: 2026-04-30
+sursaNume: "GreenLead"
+sursaUrl: "https://www.greenlead.ro/blog/legea-prosumatorilor-2026-constitutionala-ccr-tot-ce-se-schimba"
+imagine: "/images/articole/legea-prosumatorilor-2026-declarata-constitutionala-de-ccr-ce-inseamna-in-practi.webp"
+---
+
+Curtea Constituțională a respins, pe 29 aprilie 2026, obiecția de neconstituționalitate ridicată de președintele Nicușor Dan și a validat definitiv, cu majoritate de voturi, Legea Prosumatorilor. Motivarea scrisă a deciziei a fost însă publicată abia pe 21 iulie 2026 — practic trei luni mai târziu — moment după care președintele a putut promulga efectiv legea, pe 23 iulie, iar aceasta a intrat în vigoare pe 26 iulie ca Legea 160/2026.
+
+Decizia CCR face obligatoriu din punct de vedere legal mecanismul care le permite românilor cu panouri fotovoltaice să compenseze surplusul de energie direct din consum, prin „compensare cantitativă”, să folosească acest surplus pentru plata facturilor la gaz (pentru sisteme sub 27 kW) și să compenseze consumul la mai multe proprietăți aflate la același furnizor.
+
+Contextul e relevant: legea a petrecut aproape doi ani în Parlament și a trecut printr-o cerere de reexaminare prezidențială înainte de a ajunge la această validare constituțională. Fiecare etapă suplimentară a însemnat incertitudine legală în plus pentru oricine calcula rentabilitatea unei investiții în panouri fotovoltaice — o incertitudine pe care decizia CCR o elimină acum definitiv.
+
+Cel mai important element pentru un investitor sau un prosumator care calculează acum amortizarea: mecanismul de compensare e garantat prin lege până la 31 decembrie 2030, oferind un orizont clar și predictibil. După acea dată, prosumatorii vor trece la un regim de preț bazat pe piață (media ponderată PZU), nu pe compensarea cantitativă actuală — o schimbare de regim de care merită ținut cont în orice calcul de amortizare pe termen lung făcut acum. (Sursă: GreenLead.)

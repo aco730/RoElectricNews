@@ -1,0 +1,500 @@
+{
+  "electric-instalatii": [
+    {
+      "intrebare": "De ce trebuie să-mi schimb tabloul electric dacă încă „merge”?",
+      "raspuns": "Un tablou vechi, cu siguranțe fuzibile sau fără protecție diferențială (RCD), nu mai face față consumului modern și nu te protejează la electrocutare — „merge” nu înseamnă „e sigur”.",
+      "articole": [
+        "ghid-ce-presupune-un-tablou-electric-modern-conform-normativului-i7",
+        "siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi"
+      ]
+    },
+    {
+      "intrebare": "Cât costă schimbarea instalației electrice la o casă?",
+      "raspuns": "Depinde de suprafață, cât trebuie spart din pereți și calitatea materialelor — manopera e, de regulă, cea mai mare parte din cost, nu materialele.",
+      "articole": [
+        "cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape"
+      ]
+    },
+    {
+      "intrebare": "Am nevoie de autorizație ca să-mi schimb tabloul electric?",
+      "raspuns": "Lucrarea trebuie făcută de un electrician autorizat ANRE, dar nu ai nevoie de autorizație de construcție pentru simpla înlocuire a tabloului.",
+      "articole": [
+        "tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s"
+      ]
+    },
+    {
+      "intrebare": "La ce înălțime se montează corect un tablou electric?",
+      "raspuns": "Standard, între 1,5 și 1,8 metri de la podea, la loc accesibil, nu ascuns în spatele mobilei.",
+      "articole": [
+        "tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s"
+      ]
+    },
+    {
+      "intrebare": "Ce e RCD/DDR și de ce apare mereu în discuție?",
+      "raspuns": "E disjunctorul diferențial care oprește curentul instant dacă „scapă” energie pe un traseu greșit (de exemplu prin corpul tău) — protecția de bază împotriva electrocutării.",
+      "articole": [
+        "rcd-ddr-explicat-diferenta-dintre-protectia-la-atingere-directa-si-indirecta"
+      ]
+    },
+    {
+      "intrebare": "De ce sare siguranța la tabloul electric, tot timpul, la aceleași aparate?",
+      "raspuns": "De obicei circuitul e supraîncărcat (prea mulți consumatori pe aceeași linie) sau un aparat are un defect de izolație — nu se rezolvă „băgând o siguranță mai mare”.",
+      "articole": [
+        "tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s"
+      ]
+    },
+    {
+      "intrebare": "E periculoasă o instalație electrică veche, din aluminiu?",
+      "raspuns": "Da — casele construite între 1960-1990 au frecvent cablaj din aluminiu, care se oxidează la conexiuni și crește riscul de supraîncălzire și incendiu.",
+      "articole": [
+        "siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi"
+      ]
+    },
+    {
+      "intrebare": "Ce pot face eu, ca amator, la instalația electrică din casă, fără electrician?",
+      "raspuns": "Lucruri minore, vizibile și reversibile (schimbat un bec, o priză simplă, fără modificare de circuit) — orice atinge tabloul, cablajul îngropat sau protecțiile e strict pentru electrician autorizat.",
+      "articole": [
+        "ce-poti-face-diy-la-instalatia-electrica-si-ce-este-strict-interzis-fara-autoriz"
+      ]
+    },
+    {
+      "intrebare": "Câți ani rezistă o instalație electrică înainte să trebuiască schimbată?",
+      "raspuns": "Nu există un termen fix legal, dar instalațiile de peste 25 de ani, mai ales fără protecție diferențială, sunt recomandate spre înlocuire de majoritatea electricienilor.",
+      "articole": [
+        "siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi",
+        "cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape"
+      ]
+    },
+    {
+      "intrebare": "Cum îmi dau seama dacă am nevoie urgentă de un electrician, nu doar „la un moment dat”?",
+      "raspuns": "Semnale de alarmă: miros de ars fără sursă vizibilă, prize calde la atingere, pâlpâit de lumini fără motiv, siguranțe care sar des — orice din astea nu se amână.",
+      "articole": [
+        "tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s",
+        "siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi"
+      ]
+    }
+  ],
+  "smart-home": [
+    {
+      "intrebare": "Ce înseamnă, de fapt, „casă smart”? Nu e doar un bec controlat din telefon?",
+      "raspuns": "E despre conectarea mai multor sisteme ale casei (iluminat, climă, securitate, prize) ca să comunice între ele și să poată fi controlate automat sau de la distanță, nu doar un singur gadget izolat.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi"
+      ]
+    },
+    {
+      "intrebare": "Cât costă să-mi fac o casă smart de la zero?",
+      "raspuns": "De la câteva sute de lei pentru un kit de bază (2-3 prize/becuri inteligente), până la câteva mii de euro pentru automatizare completă cu instalator — depinde total de cât de mult automatizezi.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi"
+      ]
+    },
+    {
+      "intrebare": "Trebuie să sparg pereți sau să refac instalația ca să am o casă smart?",
+      "raspuns": "Nu neapărat — multe soluții moderne funcționează wireless (Zigbee, Wi-Fi, Matter), montate peste instalația existentă, fără cablare suplimentară.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi",
+        "zigbee-vs-matter-vs-knx-ce-protocol-alegi-pentru-casa-ta-smart-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Ce diferență e între Zigbee, Matter și Wi-Fi pentru dispozitivele smart?",
+      "raspuns": "Zigbee și Matter sunt protocoale dedicate, mai eficiente și mai sigure pentru multe dispozitive mici; Wi-Fi-ul e mai simplu de instalat, dar consumă mai multă rețea și baterie pe termen lung.",
+      "articole": [
+        "zigbee-vs-matter-vs-knx-ce-protocol-alegi-pentru-casa-ta-smart-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Pot să-mi fac treptat casa smart, sau trebuie totul deodată?",
+      "raspuns": "Poți instala pe etape — de exemplu întâi iluminatul, apoi climatizarea, apoi securitatea — majoritatea sistemelor moderne sunt gândite tocmai pentru extindere ulterioară.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi"
+      ]
+    },
+    {
+      "intrebare": "E complicat de folosit un sistem smart pentru cineva care nu e „tehnic”?",
+      "raspuns": "Configurarea inițială cere puțină răbdare, dar folosirea zilnică (aplicație, comenzi vocale) e gândită să fie la fel de simplă ca orice altă aplicație de telefon.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi"
+      ]
+    },
+    {
+      "intrebare": "Casa smart chiar economisește bani, sau e doar confort?",
+      "raspuns": "Ambele — termostate și programări automate de climatizare/iluminat pot reduce vizibil consumul, pe lângă confortul de control de la distanță.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi",
+        "automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul"
+      ]
+    },
+    {
+      "intrebare": "Se poate integra o casă smart cu Alexa, Google Home sau Siri?",
+      "raspuns": "Da, majoritatea sistemelor moderne, mai ales cele certificate Matter, se conectează direct cu asistenții vocali populari.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi",
+        "matter-in-2026-ce-produse-noi-compatibile-au-aparut-si-de-ce-conteaza-pentru-cas"
+      ]
+    },
+    {
+      "intrebare": "O casă smart crește valoarea unei locuințe la vânzare?",
+      "raspuns": "Poate fi un plus de atractivitate, mai ales pentru cumpărători tineri, dar nu e un factor major de preț ca izolația sau anul construcției — mai degrabă un „bonus” vizibil la vizionare.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi"
+      ]
+    },
+    {
+      "intrebare": "Ce se automatizează, concret, într-o casă smart — dincolo de bec și priză?",
+      "raspuns": "Iluminat, climatizare, sisteme de umbrire (jaluzele/rulouri), securitate (camere, senzori), echipamente audio-video și contorizare inteligentă a consumului.",
+      "articole": [
+        "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi",
+        "automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul",
+        "camere-de-supraveghere-fara-wifi-si-fara-curent-cu-panou-solar-are-sens-pentru-o"
+      ]
+    }
+  ],
+  "fotovoltaic": [
+    {
+      "intrebare": "Cum funcționează, de fapt, panourile fotovoltaice?",
+      "raspuns": "Celulele din siliciu transformă lumina soarelui direct în curent continuu, iar un invertor îl transformă apoi în curent alternativ, compatibil cu prizele din casă.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    },
+    {
+      "intrebare": "Cât costă un sistem fotovoltaic complet pentru o casă?",
+      "raspuns": "Pentru un sistem rezidențial obișnuit (5-6 kW), prețul complet — echipamente și montaj — se situează în general între 4.000 și 6.000 euro, în funcție de complexitatea acoperișului și echipamentele alese.",
+      "articole": [
+        "cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far"
+      ]
+    },
+    {
+      "intrebare": "Chiar merită investiția, sau se amortizează prea greu?",
+      "raspuns": "În condițiile actuale din România, un sistem rezidențial bine dimensionat se amortizează de regulă în 3-8 ani, restul perioadei de funcționare (25+ ani) fiind economie netă.",
+      "articole": [
+        "cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far"
+      ]
+    },
+    {
+      "intrebare": "Panourile produc curent și când e înnorat sau iarna?",
+      "raspuns": "Da, dar la capacitate mult redusă — aproximativ 20-30% din producția maximă pe cer înnorat.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    },
+    {
+      "intrebare": "Cât spațiu pe acoperiș am nevoie pentru un sistem rezidențial?",
+      "raspuns": "Depinde de puterea dorită, dar orientativ, un sistem de 5-6 kW ocupă aproximativ 25-35 metri pătrați de acoperiș bine orientat.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    },
+    {
+      "intrebare": "Am nevoie de autorizație de construcție ca să montez panouri?",
+      "raspuns": "Nu, în general nu e nevoie de autorizație de construcție, atât timp cât montajul nu afectează structura de rezistență a clădirii — dar racordarea la rețea cere documentație separată, prin distribuitor.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori",
+        "anre-schimba-regulile-de-racordare-garantia-creste-de-la-5-la-20-ce-presupune-pe"
+      ]
+    },
+    {
+      "intrebare": "Ce se întâmplă cu energia pe care o produc și n-o consum imediat?",
+      "raspuns": "Prin compensarea prosumatorilor, surplusul trimis în rețea „scade” din energia cumpărată ulterior, într-o fereastră de timp stabilită prin lege — nu se pierde, dar nici nu se plătește separat ca vânzare.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori",
+        "compensare-cantitativa-vs-compensare-lunara-ce-inseamna-noua-lege-pentru-factura"
+      ]
+    },
+    {
+      "intrebare": "Ce întreținere cer panourile fotovoltaice?",
+      "raspuns": "Minimă — curățare ocazională cu apă și detergent blând, plus o verificare tehnică anuală a componentelor (invertor, conexiuni) de către un specialist.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    },
+    {
+      "intrebare": "Cât durează, în practică, de la decizie la panouri funcționale pe acoperiș?",
+      "raspuns": "De regulă între 2 și 3 luni, incluzând proiectarea, aprobările necesare la distribuitor și montajul propriu-zis.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    },
+    {
+      "intrebare": "Ce durată de viață au panourile fotovoltaice, practic?",
+      "raspuns": "Producătorii garantează de obicei 25-30 de ani de funcționare, cu o scădere treptată, dar lentă, a eficienței în acest interval.",
+      "articole": [
+        "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori"
+      ]
+    }
+  ],
+  "baterii-stocare": [
+    {
+      "intrebare": "La ce îmi folosește o baterie dacă am deja panouri fotovoltaice?",
+      "raspuns": "Stochează surplusul de energie produs ziua, ca să-l poți folosi seara sau noaptea, când panourile nu mai produc — reduce dependența de rețea și de programul de compensare.",
+      "articole": [
+        "sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Cât costă o baterie de stocare pentru casă?",
+      "raspuns": "Variază mult după tehnologie: bateriile LiFePO4, cele mai comune azi pentru case, costă în general între 2.000 și 3.500 lei pe kWh de capacitate.",
+      "articole": [
+        "cat-costa-o-baterie-de-stocare-in-2026-comparatie-deye-huawei-dah-solar"
+      ]
+    },
+    {
+      "intrebare": "Ce capacitate de baterie am nevoie pentru o casă obișnuită?",
+      "raspuns": "Depinde de consumul serii/nopții, dar orientativ, între 5 și 10 kWh acoperă consumul de bază al unei case obișnuite pentru o seară-noapte.",
+      "articole": [
+        "cat-costa-o-baterie-de-stocare-in-2026-comparatie-deye-huawei-dah-solar"
+      ]
+    },
+    {
+      "intrebare": "Cât durează o baterie de stocare până trebuie înlocuită?",
+      "raspuns": "Bateriile moderne LiFePO4 au de regulă 10-15 ani de viață utilă și mii de cicluri de încărcare-descărcare, păstrând peste 80% din capacitate chiar și după un deceniu.",
+      "articole": [
+        "bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori",
+        "lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori"
+      ]
+    },
+    {
+      "intrebare": "Ce diferență e între o baterie LiFePO4 și una obișnuită (plumb-acid)?",
+      "raspuns": "LiFePO4 e mai scumpă la achiziție, dar durează de câteva ori mai mult, e mai sigură termic și suportă mult mai multe cicluri de încărcare complete.",
+      "articole": [
+        "lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori"
+      ]
+    },
+    {
+      "intrebare": "Bateriile de stocare sunt periculoase (explozie, incendiu)?",
+      "raspuns": "Bateriile LiFePO4, standardul actual pentru case, sunt considerate printre cele mai sigure tehnologii chimice de baterii, cu risc foarte scăzut de incendiu comparativ cu alte tipuri de litiu.",
+      "articole": [
+        "lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori",
+        "bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori"
+      ]
+    },
+    {
+      "intrebare": "Pot adăuga o baterie la un sistem fotovoltaic deja instalat, fără baterie?",
+      "raspuns": "În majoritatea cazurilor, da — dacă invertorul existent e compatibil sau poate fi înlocuit cu unul hibrid, adăugarea bateriei ulterior e o extensie obișnuită, nu o reinstalare completă.",
+      "articole": [
+        "sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Merită o baterie de stocare, sau doar panourile sunt suficiente?",
+      "raspuns": "Depinde de programul de consum al casei — dacă folosești curentul mai ales seara, o baterie crește semnificativ gradul de autonomie față de rețea; dacă consumul e mai ales ziua, beneficiul e mai mic.",
+      "articole": [
+        "sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Ce e o baterie „hibridă” și cum diferă de una „obișnuită”?",
+      "raspuns": "Termenul se referă de regulă la invertorul hibrid, capabil să gestioneze simultan panourile, bateria și rețeaua — nu la baterie ca atare, ci la sistemul complet care le leagă inteligent.",
+      "articole": [
+        "sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026"
+      ]
+    },
+    {
+      "intrebare": "Există finanțare de la stat pentru baterii de stocare, separat de panouri?",
+      "raspuns": "Da, prin programe dedicate (tip Casa Verde Baterii), care s-au schimbat de la an la an în ce privește bugetul și condițiile — verifică mereu programul activ în anul curent înainte de a aplica.",
+      "articole": [
+        "casa-verde-baterii-2026-buget-de-400-milioane-lei-aprobat-de-guvern-cine-poate-a",
+        "programul-afm-baterii-2026-mai-putini-beneficiari-si-posibile-probleme-de-legali"
+      ]
+    }
+  ],
+  "reglementari-preturi": [
+    {
+      "intrebare": "Ce înseamnă, mai exact, „prosumator”?",
+      "raspuns": "O persoană sau o firmă care consumă curent electric, dar produce și ea, de regulă din panouri fotovoltaice — jumătate consumator, jumătate mic producător.",
+      "articole": [
+        "legea-1602026-a-intrat-in-vigoare-compensare-lunara-pentru-prosumatori-ce-se-sch",
+        "cum-citesti-factura-la-energie-ca-prosumator-compensare-tarife-tva"
+      ]
+    },
+    {
+      "intrebare": "Cum funcționează compensarea pentru prosumatori?",
+      "raspuns": "Energia produsă și trimisă în rețea se scade din energia consumată, într-o fereastră de timp stabilită prin lege — surplusul rămas necompensat într-o lună se reportează pentru lunile următoare.",
+      "articole": [
+        "compensare-cantitativa-vs-compensare-lunara-ce-inseamna-noua-lege-pentru-factura",
+        "legea-1602026-a-intrat-in-vigoare-compensare-lunara-pentru-prosumatori-ce-se-sch"
+      ]
+    },
+    {
+      "intrebare": "De ce plătesc taxe (certificate verzi, tarif de transport) chiar dacă produc și eu curent?",
+      "raspuns": "Componentele reglementate din factură (transport, distribuție, certificate verzi) se aplică la energia consumată din rețea, indiferent dacă ești sau nu prosumator — ele finanțează infrastructura comună, nu doar producția.",
+      "articole": [
+        "tariful-de-transport-energie-binom-explicat-pe-intelesul-tuturor",
+        "de-ce-platim-certificate-verzi-in-factura-de-energie-si-cat-timp-vor-mai-exista"
+      ]
+    },
+    {
+      "intrebare": "Ce e ANRE și ce rol are în factura mea?",
+      "raspuns": "Autoritatea Națională de Reglementare în Energie — stabilește regulile pieței de energie, aprobă tarifele reglementate și verifică respectarea legii de către furnizori și distribuitori.",
+      "articole": [
+        "anre-pregateste-metodologia-noua-pentru-vanzarea-energiei-de-la-prosumatori-pana",
+        "anre-reglementeaza-comunitatile-de-energie-si-notificarea-la-80-din-consumul-lun"
+      ]
+    },
+    {
+      "intrebare": "Pot să-mi schimb furnizorul de energie oricând?",
+      "raspuns": "Da, schimbarea furnizorului e un drept al consumatorului, gratuit, și se poate face oricând, comparând ofertele disponibile prin platforma oficială a ANRE.",
+      "articole": [
+        "anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre"
+      ]
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă furnizorul meu de energie dă faliment sau i se retrage licența?",
+      "raspuns": "Ești redistribuit automat către furnizorul de ultimă instanță, fără întreruperea alimentării cu curent — apoi poți alege oricând alt furnizor, dacă vrei.",
+      "articole": [
+        "anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre"
+      ]
+    },
+    {
+      "intrebare": "Ce e tariful de transport BINOM și de ce apare separat pe factură?",
+      "raspuns": "E componenta din factură care acoperă costul transportului energiei prin rețeaua națională de înaltă tensiune, calculată printr-o formulă distinctă de cea a distribuției locale.",
+      "articole": [
+        "tariful-de-transport-energie-binom-explicat-pe-intelesul-tuturor"
+      ]
+    },
+    {
+      "intrebare": "De ce cresc sau scad tarifele reglementate de la un an la altul?",
+      "raspuns": "ANRE recalculează anual componentele reglementate (transport, certificate verzi) pe baza unor formule legale, în funcție de consum estimat, investiții în rețea și evoluția pieței de energie.",
+      "articole": [
+        "certificate-verzi-2027-cum-a-estimat-anre-impactul-in-factura-consumatorilor"
+      ]
+    },
+    {
+      "intrebare": "Am nevoie de contor inteligent ca să fiu prosumator?",
+      "raspuns": "În general da — contorul inteligent (bidirecțional) e cel care măsoară separat energia consumată și cea injectată în rețea, esențial pentru calculul corect al compensării.",
+      "articole": [
+        "cum-citesti-factura-la-energie-ca-prosumator-compensare-tarife-tva"
+      ]
+    },
+    {
+      "intrebare": "Unde verific dacă o informație despre legislația energetică e reală, nu doar zvon?",
+      "raspuns": "Sursa oficială e mereu site-ul ANRE (anre.ro), unde se publică toate comunicatele, ordinele și metodologiile în vigoare — orice altă sursă ar trebui verificată prin comparație cu acesta.",
+      "articole": [
+        "anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre"
+      ]
+    }
+  ],
+  "youtube": [
+    {
+      "intrebare": "Ce fel de conținut găsesc în categoria YouTube pe Electric NEWS?",
+      "raspuns": "Rezumate editoriale scurte (2-3 minute de citit) ale unor videoclipuri relevante despre electric, fotovoltaic, smart home și baterii, de la canale românești de specialitate.",
+      "articole": [
+        "instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be",
+        "unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem"
+      ]
+    },
+    {
+      "intrebare": "De ce citesc un rezumat în loc să mă uit direct la videoclip?",
+      "raspuns": "Rezumatul scoate esențialul din 10-20 de minute de video în câteva paragrafe — util când vrei informația rapid, nu tot procesul filmat.",
+      "articole": []
+    },
+    {
+      "intrebare": "Videoclipurile rezumate sunt verificate tehnic, sau doar preluate?",
+      "raspuns": "Rezumatul urmărește fidel conținutul real al videoclipului, fără a adăuga informații neverificate — dacă ceva nu e clar în video, rămâne neclar și în rezumat, nu se completează cu presupuneri.",
+      "articole": []
+    },
+    {
+      "intrebare": "Pot vedea și videoclipul original, nu doar rezumatul?",
+      "raspuns": "Da, fiecare articol din categoria YouTube include link direct către videoclipul original și canalul care l-a publicat.",
+      "articole": [
+        "instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be"
+      ]
+    },
+    {
+      "intrebare": "Ce canale de YouTube sunt urmărite pentru această secțiune?",
+      "raspuns": "Canale românești de specialitate în electric, DIY și instalații fotovoltaice — lista se extinde constant, pe măsură ce apar canale noi relevante.",
+      "articole": [
+        "unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem"
+      ]
+    },
+    {
+      "intrebare": "De ce nu sunt toate videoclipurile de pe canalele respective transformate în articole?",
+      "raspuns": "Se aleg doar cele cu relevanță clară pentru cititorii Electric NEWS (fotovoltaic, electric, smart home, baterii) — nu orice video de pe canal, ci cele cu conținut tehnic util.",
+      "articole": []
+    },
+    {
+      "intrebare": "Pot sugera un videoclip pe care să-l rezumați?",
+      "raspuns": "Da, prin formularul „Trimite o știre” — orice link YouTube relevant poate fi propus pentru un rezumat.",
+      "articole": []
+    },
+    {
+      "intrebare": "Thumbnail-ul de la articol e chiar din videoclipul original?",
+      "raspuns": "Da, e imaginea oficială de previzualizare a videoclipului de pe YouTube, nu o poză generată sau aleasă separat.",
+      "articole": []
+    },
+    {
+      "intrebare": "Cât de recent trebuie să fie un videoclip ca să fie rezumat?",
+      "raspuns": "Nu contează neapărat vechimea — contează dacă informația e încă valabilă și utilă, mai ales pentru subiecte tehnice care nu se schimbă rapid (de exemplu tutoriale de instalare).",
+      "articole": []
+    },
+    {
+      "intrebare": "Rezumatele astea sunt sponsorizate de cineva anume?",
+      "raspuns": "Nu implicit — dacă un conținut e sponsorizat, apare marcat explicit cu eticheta „Conținut sponsorizat”, vizibil pe pagina articolului.",
+      "articole": []
+    }
+  ],
+  "colaboratori": [
+    {
+      "intrebare": "Ce înseamnă categoria „Colaboratori” pe Electric NEWS?",
+      "raspuns": "E secțiunea care explică cine operează site-ul — Solar Electric Panel (SEP) — și cum poți colabora sau cere o ofertă direct de la echipa din spatele publicației.",
+      "articole": [
+        "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
+      ]
+    },
+    {
+      "intrebare": "Electric NEWS e un site media independent sau al unei firme?",
+      "raspuns": "E operat de Solar Electric Panel (SEP), o firmă din domeniul fotovoltaic și instalații electrice — asta e declarat explicit în footer și în pagina Colaboratori, nu ascuns.",
+      "articole": [
+        "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
+      ]
+    },
+    {
+      "intrebare": "Dacă sunt electrician sau instalator, pot deveni partener/colaborator?",
+      "raspuns": "Momentan nu există un program formal de parteneriat activ pentru alți instalatori — rămâne o opțiune posibilă pe termen lung, dacă volumul de solicitări o justifică.",
+      "articole": [
+        "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
+      ]
+    },
+    {
+      "intrebare": "Cum cer o ofertă de la Solar Electric Panel prin acest site?",
+      "raspuns": "Prin formularul dedicat „Cere ofertă gratuită”, disponibil în header și la finalul articolelor din categoriile Fotovoltaic, Baterii & Stocare și Electric & instalații.",
+      "articole": []
+    },
+    {
+      "intrebare": "Solar Electric Panel lucrează doar în București, sau la nivel național?",
+      "raspuns": "SEP are acoperire națională, cu echipă și parteneri în mai multe zone ale țării, nu doar în București, unde e sediul.",
+      "articole": [
+        "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
+      ]
+    },
+    {
+      "intrebare": "De ce nu sunt separate complet articolele „de presă” de partea comercială SEP?",
+      "raspuns": "Modelul e transparent asumat: Electric NEWS produce conținut real și verificat, dar scopul de bază e generarea de contact cu cititorii interesați de servicii SEP — asta e declarat explicit, nu ascuns sub formă de site „neutru”.",
+      "articole": [
+        "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
+      ]
+    },
+    {
+      "intrebare": "Firmele pot apărea ca sponsori pe Electric NEWS?",
+      "raspuns": "Da, conținutul sponsorizat e o opțiune posibilă, dar marcat obligatoriu vizibil cu eticheta „Conținut sponsorizat” — nu se amestecă nemarcat cu conținutul editorial obișnuit.",
+      "articole": []
+    },
+    {
+      "intrebare": "Cum contactez direct echipa Electric NEWS / SEP, nu doar pentru ofertă?",
+      "raspuns": "Prin pagina de Contact, cu formular dedicat pentru orice solicitare care nu e strict o cerere de ofertă comercială.",
+      "articole": []
+    },
+    {
+      "intrebare": "Pot trimite eu un articol sau o idee de subiect pentru site?",
+      "raspuns": "Da, prin formularul „Trimite o știre” — orice sugestie de subiect, link relevant sau idee brută poate fi propusă spre publicare.",
+      "articole": []
+    },
+    {
+      "intrebare": "De unde știu că informațiile tehnice de pe site nu sunt influențate de interesul comercial al SEP?",
+      "raspuns": "Pagina „Sursele noastre” explică transparent metodologia — sursele citate explicit, faptele verificate, iar unde există interes comercial direct (ofertă, sponsorizare), e marcat clar, nu ascuns în conținutul „neutru”.",
+      "articole": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+---
+title: "Comunități de energie: cum funcționează partajarea curentului între vecini"
+categorie: reglementari-preturi
+data: 2026-06-30
+sursaNume: "Realitatea.NET"
+sursaUrl: "https://www.realitatea.net/stiri/social/romanii-cu-panouri-fotovoltaice-vor-putea-imparti-curentul-electric-cu-vecinii-anre-a-aprobat-infiintarea-comunitatilor-de-energie-batxmi"
+imagine: "/images/articole/comunitati-de-energie-cum-functioneaza-partajarea-curentului-intre-vecini.webp"
+---
+
+ANRE a aprobat înființarea unui Registru național al comunităților de energie, iar înscrierea în acest registru devine condiția obligatorie pentru ca o astfel de structură să funcționeze oficial. Practic, comunitățile de energie permit unui grup — nu doar unui singur prosumator — să producă, consume, stocheze și administreze energie electrică în beneficiul comun al membrilor.
+
+Ideea centrală e simplă: energia produsă de panourile fotovoltaice instalate de unul sau mai mulți membri poate fi distribuită și către ceilalți membri ai aceleiași comunități, nu doar consumată de proprietarul sistemului. Cineva fără acoperiș potrivit pentru panouri, sau fără capital pentru o investiție proprie, poate totuși beneficia de energie mai ieftină prin apartenența la o comunitate care are deja capacitate instalată.
+
+Pot face parte din astfel de comunități persoane fizice, autorități și instituții publice, unități administrativ-teritoriale, întreprinderi mici și mijlocii, precum și asociații sau alte persoane juridice — o structură deliberat flexibilă, gândită să funcționeze la scări diferite: bloc, cartier, comună, sat sau chiar zonă industrială.
+
+Avantajele enumerate de autorități sunt directe: facturi mai mici la electricitate, folosirea mai eficientă a energiei produse local, independență energetică mai mare pentru comunitate și, indirect, un stimulent suplimentar pentru investiții noi în panouri și stocare. Ce lipsește deocamdată, la acest stadiu: cifre concrete despre câte comunități există deja înregistrate, termene ferme de implementare la nivel local, sau proceduri pas-cu-pas pentru cineva care vrea să inițieze o comunitate în propriul bloc sau cartier — detalii care, cel mai probabil, vor veni odată cu normele de aplicare ale ANRE.

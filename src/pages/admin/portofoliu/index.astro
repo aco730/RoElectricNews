@@ -1,0 +1,155 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { getProiecte, getPhotoSrc } from '../../../lib/portofoliu';
+
+const proiecte = await getProiecte();
+const photoSrc = await getPhotoSrc();
+const countByProject = new Map<string, number>();
+for (const p of photoSrc.photos) {
+	countByProject.set(p.project_id, (countByProject.get(p.project_id) ?? 0) + 1);
+}
+---
+<AdminLayout title="Poze portofoliu">
+	<div class="cap">
+		<h1>Portofoliu ({proiecte.length} șantiere)</h1>
+		<p class="hint">Adaugă poze la un șantier existent sau creează unul nou. Formatele acceptate: JPG, PNG, WEBP.</p>
+	</div>
+
+	<section class="upload-card">
+		<h2>Adaugă poze</h2>
+		<form id="form-upload">
+			<label>Șantier
+				<select id="folder-select">
+					<option value="__nou__">+ Șantier nou...</option>
+					{proiecte.map((p) => (
+						<option value={p.id}>{p.nume}</option>
+					))}
+				</select>
+			</label>
+			<label id="folder-nou-wrap" style="display:none;">Nume șantier nou
+				<input type="text" id="folder-nou" placeholder="ex: Vila Popescu Sibiu" />
+			</label>
+			<label>Poze
+				<input type="file" id="fisiere" multiple accept="image/jpeg,image/png,image/webp" />
+			</label>
+			<button type="submit" class="btn" id="btn-upload">Încarcă și procesează</button>
+		</form>
+		<pre id="output"></pre>
+	</section>
+
+	<table class="tabel-sortabil">
+		<thead>
+			<tr>
+				<th data-sort="text">Șantier</th>
+				<th data-sort="text">Album</th>
+				<th data-sort="text">Poze</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{proiecte.map((p) => (
+				<tr>
+					<td data-val={p.nume}>{p.nume} {p.ascuns && <span class="ascuns">(ascuns)</span>}</td>
+					<td data-val={p.album}>{p.album}</td>
+					<td data-val={countByProject.get(p.id) ?? 0}>{countByProject.get(p.id) ?? 0}</td>
+					<td><a href={`/admin/portofoliu/${p.id}`}>Deschide</a></td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	<style>
+		.cap { max-width: 780px; margin-bottom: 1.25rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; }
+		.upload-card { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1.4rem; max-width: 500px; margin-bottom: 2rem; }
+		.upload-card h2 { margin-top: 0; font-size: 1rem; color: #f1f5f9; }
+		#form-upload { display: flex; flex-direction: column; gap: 1rem; }
+		#form-upload label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: #94a3b8; }
+		#form-upload select, #form-upload input {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.55rem 0.7rem; font-size: 0.9rem;
+		}
+		.btn { background: #2563eb; color: white; border: none; padding: 0.65rem 1.2rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+		#output { white-space: pre-wrap; font-size: 0.8rem; color: #94a3b8; background: #0b1220; border-radius: 8px; padding: 0.75rem; margin-top: 1rem; max-height: 220px; overflow-y: auto; display: none; }
+		table { width: 100%; border-collapse: collapse; max-width: 780px; }
+		th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.9rem; }
+		th { color: #94a3b8; font-weight: 600; }
+		th[data-sort] { cursor: pointer; user-select: none; white-space: nowrap; }
+		th[data-sort]:hover { color: #e2e8f0; }
+		th[data-sort]::after { content: '⇅'; opacity: 0.35; margin-left: 0.35rem; font-size: 0.75rem; }
+		th[data-sort].sort-asc::after { content: '↑'; opacity: 1; }
+		th[data-sort].sort-desc::after { content: '↓'; opacity: 1; }
+		td a { color: #93c5fd; text-decoration: none; }
+		.ascuns { color: #f59e0b; font-size: 0.78rem; }
+	</style>
+
+	<script>
+		const folderSelect = document.getElementById('folder-select') as HTMLSelectElement;
+		const folderNouWrap = document.getElementById('folder-nou-wrap') as HTMLElement;
+		const folderNouInput = document.getElementById('folder-nou') as HTMLInputElement;
+		const fișiereInput = document.getElementById('fisiere') as HTMLInputElement;
+		const form = document.getElementById('form-upload') as HTMLFormElement;
+		const outputEl = document.getElementById('output') as HTMLElement;
+		const btn = document.getElementById('btn-upload') as HTMLButtonElement;
+
+		folderSelect.addEventListener('change', () => {
+			folderNouWrap.style.display = folderSelect.value === '__nou__' ? 'flex' : 'none';
+		});
+
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const folder = folderSelect.value === '__nou__' ? folderNouInput.value.trim() : folderSelect.value;
+			if (!folder) { alert('Introdu un nume pentru șantierul nou.'); return; }
+			if (!fișiereInput.files || fișiereInput.files.length === 0) { alert('Selectează cel puțin o poză.'); return; }
+
+			const fd = new FormData();
+			fd.append('folder', folder);
+			[...fișiereInput.files].forEach((f) => fd.append('poze', f));
+
+			btn.disabled = true;
+			btn.textContent = 'Se procesează... (poate dura un minut)';
+			outputEl.style.display = 'block';
+			outputEl.textContent = 'Se încarcă și se generează thumbnail-uri...';
+
+			try {
+				const res = await fetch('/api/admin/portofoliu/upload-poze', { method: 'POST', body: fd });
+				const data = await res.json();
+				if (res.ok) {
+					outputEl.textContent = data.output || 'Gata.';
+					setTimeout(() => location.reload(), 1500);
+				} else {
+					outputEl.textContent = `Eroare: ${data.error}\n${data.detalii || ''}`;
+				}
+			} catch (err) {
+				outputEl.textContent = 'Eroare de rețea la upload.';
+			} finally {
+				btn.disabled = false;
+				btn.textContent = 'Încarcă și procesează';
+			}
+		});
+
+		document.querySelectorAll<HTMLTableElement>('.tabel-sortabil').forEach((tabel) => {
+			const tbody = tabel.querySelector('tbody')!;
+			const headers = [...tabel.querySelectorAll<HTMLTableCellElement>('th[data-sort]')];
+
+			headers.forEach((th, index) => {
+				th.addEventListener('click', () => {
+					const crescător = !th.classList.contains('sort-asc');
+					headers.forEach((h) => h.classList.remove('sort-asc', 'sort-desc'));
+					th.classList.add(crescător ? 'sort-asc' : 'sort-desc');
+
+					const rânduri = [...tbody.querySelectorAll('tr')];
+					rânduri.sort((a, b) => {
+						const va = (a.children[index] as HTMLElement).dataset.val ?? '';
+						const vb = (b.children[index] as HTMLElement).dataset.val ?? '';
+						return crescător ? va.localeCompare(vb, 'ro', { numeric: true }) : vb.localeCompare(va, 'ro', { numeric: true });
+					});
+					rânduri.forEach((r) => tbody.appendChild(r));
+				});
+			});
+		});
+	</script>
+</AdminLayout>

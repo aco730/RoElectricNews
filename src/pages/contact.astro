@@ -1,0 +1,107 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import { getContact } from "../lib/contact";
+
+const contact = await getContact();
+---
+<Layout title="Contact — Solar Electric Panel" description="Datele de contact Solar Electric Panel — telefon, email, adresă și formular de mesaj." singleCol>
+  <h1 class="titlu-contact">Contact</h1>
+  <p class="descriere-contact">{contact.descriere}</p>
+
+  <div class="grid-contact">
+    <div class="card-date">
+      <h2>Date de contact</h2>
+      <ul class="listă-date">
+        <li><strong>Telefon:</strong> <a href={`tel:${contact.telefon.replace(/\s+/g, '')}`}>{contact.telefon}</a></li>
+        {contact.email && <li><strong>Email:</strong> <a href={`mailto:${contact.email}`}>{contact.email}</a></li>}
+        <li><strong>Adresă:</strong> {contact.adresa}</li>
+        <li><strong>Zonă deservită:</strong> {contact.zonaDeservita}</li>
+        <li><strong>Program:</strong> {contact.program}</li>
+      </ul>
+      <div class="acțiuni-rapide">
+        <a class="cta-btn cta-btn-primary" href={`tel:${contact.telefon.replace(/\s+/g, '')}`}>📞 Sună acum</a>
+        {contact.email && <a class="cta-btn" href={`mailto:${contact.email}`}>✉️ Trimite email</a>}
+      </div>
+      {contact.hartaEmbedUrl && (
+        <iframe class="hartă" src={contact.hartaEmbedUrl} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      )}
+    </div>
+
+    {contact.formularVizibil && (
+      <div class="card-formular">
+        <h2>Trimite-ne un mesaj</h2>
+        <form name="mesaj-contact" method="POST" data-netlify="true" netlify-honeypot="companie-web" id="contactForm">
+          <input type="hidden" name="form-name" value="mesaj-contact" />
+          <p class="honeypot"><label>Nu completa acest câmp: <input name="companie-web" /></label></p>
+
+          <div class="câmp-formular">
+            <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume" required />
+          </div>
+          <div class="câmp-formular">
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" required />
+          </div>
+          <div class="câmp-formular">
+            <label for="email">Email (opțional)</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="câmp-formular">
+            <label for="mesaj">Mesaj</label>
+            <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+          </div>
+          <div data-netlify-recaptcha="true"></div>
+          <button type="submit" class="buton-trimite">Trimite mesajul</button>
+          <p id="mesaj-status"></p>
+        </form>
+      </div>
+    )}
+  </div>
+</Layout>
+
+<style>
+  .titlu-contact { margin: 0 0 10px; }
+  .descriere-contact { color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 760px; margin: 0 0 28px; }
+  .grid-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  @media (max-width: 760px) { .grid-contact { grid-template-columns: 1fr; } }
+
+  .card-date, .card-formular {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px;
+  }
+  .card-date h2, .card-formular h2 { margin-top: 0; font-size: 17px; }
+  .listă-date { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; }
+  .listă-date a { color: var(--teal); text-decoration: none; }
+  .listă-date a:hover { text-decoration: underline; }
+  .acțiuni-rapide { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hartă { width: 100%; height: 220px; border: 0; border-radius: 8px; margin-top: 18px; }
+
+  .câmp-formular { margin-bottom: 14px; }
+  .câmp-formular label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .câmp-formular input, .câmp-formular textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; font-family: inherit; box-sizing: border-box; }
+  .honeypot { position: absolute; left: -9999px; }
+  .buton-trimite { background: var(--teal); color: #fff; border: none; padding: 12px 22px; border-radius: 6px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; }
+  .buton-trimite:hover { opacity: 0.92; }
+  #mesaj-status { font-size: 13px; margin-top: 10px; }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const statusEl = document.getElementById('mesaj-status');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (statusEl) { statusEl.textContent = 'Se trimite...'; statusEl.style.color = 'var(--muted)'; }
+    const body = new URLSearchParams(new FormData(form) as any).toString();
+    try {
+      const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+      if (res.ok) {
+        form.reset();
+        if (statusEl) { statusEl.textContent = 'Mulțumim! Te contactăm în curând.'; statusEl.style.color = 'var(--teal)'; }
+      } else {
+        throw new Error();
+      }
+    } catch {
+      if (statusEl) { statusEl.textContent = 'A apărut o eroare. Sună-ne direct sau încearcă din nou.'; statusEl.style.color = '#B22222'; }
+    }
+  });
+</script>

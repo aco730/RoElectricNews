@@ -1,0 +1,65 @@
+{
+  "fotovoltaic": {
+    "source": "stock-pexels",
+    "photographer": "Stefan de Vries",
+    "photographer_url": "https://www.pexels.com/@sdvmovies",
+    "pexels_url": "https://www.pexels.com/photo/technician-installing-solar-panels-on-rooftop-29206488/",
+    "query": "solar panels rooftop installation",
+    "md5": "067a814cfeb3370b5fdb12d7a94f54b7",
+    "fetched_at": "2026-08-09T15:42:44"
+  },
+  "electric-instalatii": {
+    "source": "stock-pexels",
+    "photographer": "Pixabay",
+    "photographer_url": "https://www.pexels.com/@pixabay",
+    "pexels_url": "https://www.pexels.com/photo/257736/",
+    "query": "circuit breaker panel new installation (curatat manual)",
+    "md5": "6fb99c7136f1577868c9409cf3542197",
+    "fetched_at": "2026-08-09T15:44:13"
+  },
+  "smart-home": {
+    "source": "stock-pexels",
+    "photographer": "Jakub Zerdzicki",
+    "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+    "pexels_url": "https://www.pexels.com/photo/smartphone-camera-and-sensors-22307556/",
+    "query": "smart home technology devices",
+    "md5": "592ecb4eaa3b56e4d5cc7d44e405b88b",
+    "fetched_at": "2026-08-09T15:42:46"
+  },
+  "baterii-stocare": {
+    "source": "stock-pexels",
+    "photographer": "Kindel Media",
+    "photographer_url": "https://www.pexels.com/@kindelmedia",
+    "pexels_url": "https://www.pexels.com/photo/9875447/",
+    "query": "residential solar battery storage installation (manually selected: technician installing solar panel on residential roof)",
+    "md5": "beca36618ca187bb03724c5366a16890",
+    "fetched_at": "2026-08-09T16:02:28"
+  },
+  "reglementari-preturi": {
+    "source": "stock-pexels",
+    "photographer": "Robert So",
+    "photographer_url": "https://www.pexels.com/@robertkso",
+    "pexels_url": "https://www.pexels.com/photo/a-telephone-pole-with-a-blue-sky-and-clouds-27433337/",
+    "query": "power lines electricity grid",
+    "md5": "832f1494a02a6d2dc82948d615560f50",
+    "fetched_at": "2026-08-09T15:42:58"
+  },
+  "youtube": {
+    "source": "stock-pexels",
+    "photographer": "freestocks.org",
+    "photographer_url": "https://www.pexels.com/@freestocks",
+    "pexels_url": "https://www.pexels.com/photo/person-holding-space-gray-iphone-5-34407/",
+    "query": "smartphone watching video content",
+    "md5": "8c621133ad20b46abec47fc7e6cb919a",
+    "fetched_at": "2026-08-09T15:42:59"
+  },
+  "colaboratori": {
+    "source": "stock-pexels",
+    "photographer": "Los Muertos Crew",
+    "photographer_url": "https://www.pexels.com/@los-muertos-crew",
+    "pexels_url": "https://www.pexels.com/photo/8853536/",
+    "query": "electrician safety gear workwear solar installation (manually selected: two technicians in full workwear installing solar panels)",
+    "md5": "4168d66317dc9e6a9dde3488404377bf",
+    "fetched_at": "2026-08-09T16:03:09"
+  }
+}

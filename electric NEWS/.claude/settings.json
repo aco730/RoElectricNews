@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"c:\\\\Users\\\\730\\\\Desktop\\\\electric NEWS\\\\scripts\\\\build_site.py\" \"c:\\\\Users\\\\730\\\\Desktop\\\\electric NEWS\\\\scripts\\\\build_site.py.bak\")",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/gen_article_images.py)",
+      "Bash(PYTHONIOENCODING=utf-8 py -c ' *)",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/build_site.py)",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/check_links.py)",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/watch_youtube_transcripts.py)",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/add_youtube_article.py \"Ce trebuie sa stii cand vrei sa construiesti o casa! INSTALATIE ELECTRICA CASA NOUA..txt\" \"Instalație electrică pentru casă nouă: ce nu trebuie ratat înainte de turnarea betonului\" \"Proiecte Diverse DIY\")",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/fetch_source_images.py \"instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be\")",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/add_youtube_article.py \"Greseli in sistemele fotovoltaice. Unde amplasam sistemul fotovoltaic.txt\" \"Unde montezi bateria și invertorul fotovoltaic: camerele interzise și capcana temperaturii\" \"Electric Team Romania\")",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/fetch_source_images.py \"unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem\")",
+      "Bash(PYTHONIOENCODING=utf-8 py scripts/recalc_rezumat.py)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\730\\Desktop\\electric NEWS\\scripts"
+    ]
+  }
+}

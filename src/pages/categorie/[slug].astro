@@ -1,0 +1,87 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { categoriiVizibile } from "../../data/categories";
+import qaCategoriiData from "../../data/qa-categorii.json";
+
+export async function getStaticPaths() {
+  return categoriiVizibile.map((cat) => ({
+    params: { slug: cat.slug },
+    props: { cat },
+  }));
+}
+
+const { cat } = Astro.props;
+const toateArticolele = await getCollection("articole");
+const articole = toateArticolele
+  .filter((a) => a.data.categorie === cat.slug)
+  .sort((a, b) => b.data.data.valueOf() - a.data.data.valueOf());
+
+const qaCategorie: { intrebare: string; raspuns: string; articole: string[] }[] =
+  (qaCategoriiData as Record<string, typeof qaCategorie>)[cat.slug] ?? [];
+
+function articolByslug(slug: string) {
+  return toateArticolele.find((a) => a.id === slug);
+}
+
+const breadcrumbs = [
+  { nume: "Acasă", url: "/" },
+  { nume: cat.name, url: `/categorie/${cat.slug}` },
+];
+const faqPentruSchema = qaCategorie.map((qa) => ({ intrebare: qa.intrebare, raspuns: qa.raspuns }));
+---
+<Layout
+  title={`${cat.name} — Electric NEWS`}
+  description={cat.description || `Articole și ghiduri despre ${cat.name.toLowerCase()}, susținute de Solar Electric Panel.`}
+  singleCol
+  breadcrumbs={breadcrumbs}
+  faqItems={faqPentruSchema}
+>
+  <div class="cat-banner" style={`background:${cat.color}`}>
+    <div class="cat-banner-overlay">
+      <h1>{cat.name}</h1>
+      <p>Articole și ghiduri despre {cat.name.toLowerCase()}, susținute de Solar Electric Panel.</p>
+      <span class="count">{articole.length} articole</span>
+    </div>
+  </div>
+
+  <div class="story-grid">
+    {articole.map((art) => (
+      <article class="story-card">
+        {art.data.imagine && <img class="story-media" src={art.data.imagine} alt={art.data.title} />}
+        <span class="badge" style={`background:${cat.color}`}>{cat.name}</span>
+        <h3><a href={`/blog/${art.id}`}>{art.data.title}</a></h3>
+        <div class="meta"><span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span></div>
+      </article>
+    ))}
+  </div>
+
+  {articole.length === 0 && (
+    <p class="excerpt">Niciun articol publicat încă în această categorie.</p>
+  )}
+
+  {qaCategorie.length > 0 && (
+    <section class="qa-section">
+      <h2 class="section-title">Întrebări frecvente</h2>
+      <div class="qa-list">
+        {qaCategorie.map((qa) => (
+          <details class="qa-item">
+            <summary>{qa.intrebare}</summary>
+            <div class="qa-answer">
+              <p>{qa.raspuns}</p>
+              {qa.articole.length > 0 && (
+                <div class="qa-links">
+                  {qa.articole.map((slug) => {
+                    const linked = articolByslug(slug);
+                    return linked ? <a class="qa-link" href={`/blog/${linked.id}`}>{linked.data.title}</a> : null;
+                  })}
+                </div>
+              )}
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

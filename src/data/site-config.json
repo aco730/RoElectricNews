@@ -1,0 +1,44 @@
+{
+  "header": {
+    "vizibil": true,
+    "topbarVizibil": false,
+    "topbarText": "Solar Electric Panel — montaj sisteme fotovoltaice & electrice",
+    "topbarLinkuri": [],
+    "logoImagine": null,
+    "logoTextPrincipal": "BuildHub.ro",
+    "logoTextAccent": "NEWS",
+    "cautareVizibila": true,
+    "ctaButoane": [
+      {
+        "text": "Ofertă energy",
+        "href": "/oferta",
+        "primar": true
+      }
+    ]
+  },
+  "footer": {
+    "vizibil": true,
+    "brandText": "BuildHub.ro",
+    "brandTextAccent": "NEWS",
+    "descriere": "Site de știri despre electric, fotovoltaic, smart home și stocare de energie, susținut de Solar Electric Panel (SEP)",
+    "linkuri": [
+      {
+        "text": "Servicii",
+        "href": "/servicii"
+      },
+      {
+        "text": "Portofoliu",
+        "href": "/portofoliu"
+      },
+      {
+        "text": "Cere ofertă",
+        "href": "/oferta"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact"
+      }
+    ],
+    "copyright": "BuildHub.ro & Solar Electric Panel."
+  }
+}

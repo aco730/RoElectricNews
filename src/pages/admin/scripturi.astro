@@ -1,0 +1,132 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { SCRIPTURI } from '../../lib/scripturi';
+
+const ordineRisc = { sigur: 0, atenție: 1, periculos: 2 };
+const scripturiSortate = [...SCRIPTURI].sort((a, b) => ordineRisc[a.risc] - ordineRisc[b.risc]);
+---
+<AdminLayout title="Scripturi">
+	<div class="cap">
+		<h1>Scripturi</h1>
+		<p class="hint">Rulează scripturile Python ale proiectului direct din admin, cu output live. Scripturile marcate „periculos" sunt migrări unice deja executate sau pot suprascrie date — au nevoie de confirmare explicită.</p>
+	</div>
+
+	<div id="listă">
+		{scripturiSortate.map((s) => (
+			<div class="script-card" data-id={s.id} data-risc={s.risc}>
+				<div class="script-cap">
+					<div>
+						<span class={`risc risc-${s.risc}`}>{s.risc}</span>
+						<h3>{s.nume}</h3>
+					</div>
+					<button type="button" class="btn-rulează">Rulează</button>
+				</div>
+				<p class="script-descriere">{s.descriere}</p>
+				{s.avertisment && <p class="script-avertisment">⚠ {s.avertisment}</p>}
+				{s.argumente && s.argumente.length > 0 && (
+					<div class="script-argumente">
+						{s.argumente.map((a) => (
+							<label>
+								{a.label}{a.obligatoriu && ' *'}
+								<input type="text" class="script-arg" data-arg={a.nume} />
+							</label>
+						))}
+					</div>
+				)}
+				<pre class="script-output" hidden></pre>
+			</div>
+		))}
+	</div>
+
+	<style is:global>
+		.cap { max-width: 820px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+
+		#listă { display: flex; flex-direction: column; gap: 1rem; max-width: 820px; }
+		.script-card { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1.2rem 1.4rem; display: flex; flex-direction: column; gap: 0.65rem; }
+		.script-cap { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+		.script-cap h3 { margin: 0.3rem 0 0; font-size: 1rem; color: #f1f5f9; }
+		.risc { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.2rem 0.55rem; border-radius: 999px; }
+		.risc-sigur { background: #14532d; color: #86efac; }
+		.risc-atenție { background: #78350f; color: #fcd34d; }
+		.risc-periculos { background: #7f1d1d; color: #fca5a5; }
+
+		.script-descriere { color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin: 0; }
+		.script-avertisment { color: #fca5a5; font-size: 0.82rem; background: #2a1414; border: 1px solid #7f1d1d; border-radius: 8px; padding: 0.6rem 0.8rem; margin: 0; }
+
+		.script-argumente { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+		.script-argumente label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.78rem; color: #94a3b8; }
+		.script-arg { background: #0b1220; border: 1px solid #334155; border-radius: 7px; color: #f1f5f9; padding: 0.45rem 0.65rem; font-size: 0.85rem; }
+
+		.btn-rulează { background: #2563eb; color: white; border: none; padding: 0.5rem 1.1rem; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.85rem; white-space: nowrap; }
+		.btn-rulează:hover { background: #1d4ed8; }
+		.btn-rulează:disabled { opacity: 0.6; cursor: wait; }
+
+		.script-output {
+			background: #05070d; border: 1px solid #1f2937; border-radius: 8px; padding: 0.8rem 1rem;
+			font-size: 0.78rem; line-height: 1.5; color: #a3e635; max-height: 320px; overflow-y: auto;
+			white-space: pre-wrap; word-break: break-word; margin: 0;
+		}
+	</style>
+
+	<script>
+		document.querySelectorAll<HTMLElement>('.script-card').forEach((card) => {
+			const id = card.dataset.id!;
+			const risc = card.dataset.risc!;
+			const btn = card.querySelector<HTMLButtonElement>('.btn-rulează')!;
+			const output = card.querySelector<HTMLElement>('.script-output')!;
+			const argInputs = card.querySelectorAll<HTMLInputElement>('.script-arg');
+
+			btn.addEventListener('click', () => {
+				if (risc === 'periculos') {
+					const confirmat = confirm('Acest script e marcat ca periculos — poate suprascrie sau pierde date. Sigur vrei să-l rulezi?');
+					if (!confirmat) return;
+				}
+
+				const params = new URLSearchParams({ id });
+				for (const input of argInputs) {
+					const nume = input.dataset.arg!;
+					if (!input.value.trim() && input.closest('label')?.textContent?.includes('*')) {
+						alert(`Completează câmpul: ${nume}`);
+						return;
+					}
+					params.set(nume, input.value.trim());
+				}
+
+				btn.disabled = true;
+				btn.textContent = 'Rulează...';
+				output.hidden = false;
+				output.textContent = '';
+
+				const es = new EventSource(`/api/admin/scripturi/ruleaza?${params.toString()}`);
+
+				es.addEventListener('output', (e: MessageEvent) => {
+					output.textContent += (e.data || '') + '\n';
+					output.scrollTop = output.scrollHeight;
+				});
+
+				es.addEventListener('final', (e: MessageEvent) => {
+					output.textContent += `\n— Terminat: ${e.data} —`;
+					output.scrollTop = output.scrollHeight;
+					btn.disabled = false;
+					btn.textContent = 'Rulează';
+					es.close();
+				});
+
+				es.addEventListener('eroare', (e: MessageEvent) => {
+					output.textContent += `\nEroare: ${e.data}`;
+					btn.disabled = false;
+					btn.textContent = 'Rulează';
+					es.close();
+				});
+
+				es.onerror = () => {
+					btn.disabled = false;
+					btn.textContent = 'Rulează';
+					es.close();
+				};
+			});
+		});
+	</script>
+</AdminLayout>

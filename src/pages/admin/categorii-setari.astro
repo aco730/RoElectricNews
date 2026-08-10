@@ -1,0 +1,236 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getCategorii, numărArticolePerCategorie } from '../../lib/categorii';
+
+const categorii = await getCategorii();
+const counts = await numărArticolePerCategorie();
+const categoriiCuCount = categorii.map((c) => ({ ...c, nrArticole: counts[c.slug] ?? 0 }));
+---
+<AdminLayout title="Categorii">
+	<div class="cap">
+		<h1>Categorii</h1>
+		<p class="hint">Categoriile organizează articolele de blog. O categorie ascunsă dispare din meniu, footer și pagina principală — dar articolele ei rămân accesibile direct. Nu poți șterge o categorie cu articole (mută-le mai întâi în altă categorie). Trage cardurile de mânerul ⠿ ca să schimbi ordinea de afișare din meniu.</p>
+	</div>
+
+	<div id="listă"></div>
+	<button type="button" id="adaugă" class="btn-secundar">+ Categorie nouă</button>
+
+	<div class="bară-jos">
+		<button type="button" id="salvează" class="btn">Salvează tot</button>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { max-width: 760px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+
+		#listă { display: flex; flex-direction: column; gap: 0.9rem; max-width: 760px; }
+		.cat-card {
+			background: #111827; border: 1px solid #334155; border-radius: 12px;
+			padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.75rem;
+			position: relative;
+		}
+		.cat-card.se-trage { opacity: 0.4; }
+		.cat-card.peste { border-color: #2563eb; }
+		.cat-mâner {
+			position: absolute; left: -1.6rem; top: 50%; transform: translateY(-50%);
+			cursor: grab; color: #475569; font-size: 1.1rem; user-select: none; padding: 0.3rem;
+			line-height: 1;
+		}
+		.cat-mâner:active { cursor: grabbing; }
+		#listă { padding-left: 1.6rem; }
+		.cat-rând1 { display: flex; align-items: center; gap: 0.7rem; }
+		.cat-rând1 input[type="text"] {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.55rem 0.7rem; font-size: 0.92rem; flex: 1;
+		}
+		.cat-rând1 input[type="color"] { width: 42px; height: 36px; border: none; border-radius: 6px; background: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+		.cat-preview { padding: 0.32rem 0.75rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: white; white-space: nowrap; }
+		.cat-descriere {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9;
+			padding: 0.5rem 0.7rem; font-size: 0.85rem; font-family: inherit;
+		}
+		.cat-rând3 { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+		.cat-info { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: #94a3b8; }
+		.cat-check { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+		.cat-elimină { background: none; border: 1px solid #3f2020; color: #f87171; cursor: pointer; font-size: 0.78rem; padding: 0.35rem 0.7rem; border-radius: 6px; }
+		.cat-elimină:hover:not(:disabled) { background: #2a1414; }
+		.cat-elimină:disabled { opacity: 0.4; cursor: not-allowed; }
+
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.6rem 1.1rem; border-radius: 8px; cursor: pointer; font-size: 0.87rem; margin-top: 1.25rem; }
+		.btn-secundar:hover { background: #263244; }
+		.bară-jos { display: flex; align-items: center; gap: 1.1rem; margin-top: 1.75rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		#status { font-size: 0.85rem; color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script define:vars={{ categoriiInitiale: categoriiCuCount }}>
+		const listăEl = document.getElementById('listă');
+
+		function randCard(item) {
+			const card = document.createElement('div');
+			card.className = 'cat-card';
+			card.draggable = false;
+			card.dataset.slug = item.slug || '';
+			card.dataset.nrArticole = item.nrArticole || 0;
+
+			const mâner = document.createElement('span');
+			mâner.className = 'cat-mâner';
+			mâner.textContent = '⠿';
+			mâner.title = 'Trage pentru a reordona';
+			card.appendChild(mâner);
+
+			card.addEventListener('mousedown', (e) => {
+				card.draggable = e.target === mâner || mâner.contains(e.target);
+			});
+
+			const rând1 = document.createElement('div');
+			rând1.className = 'cat-rând1';
+
+			const nume = document.createElement('input');
+			nume.type = 'text';
+			nume.className = 'c-nume';
+			nume.placeholder = 'Nume categorie';
+			nume.value = item.name || '';
+
+			const culoare = document.createElement('input');
+			culoare.type = 'color';
+			culoare.className = 'c-culoare';
+			culoare.value = item.color || '#334155';
+
+			const preview = document.createElement('span');
+			preview.className = 'cat-preview';
+			preview.textContent = item.name || 'Previzualizare';
+			preview.style.background = culoare.value;
+
+			nume.addEventListener('input', () => { preview.textContent = nume.value || 'Previzualizare'; });
+			culoare.addEventListener('input', () => { preview.style.background = culoare.value; });
+
+			rând1.append(nume, culoare, preview);
+
+			const descriere = document.createElement('textarea');
+			descriere.className = 'cat-descriere';
+			descriere.rows = 2;
+			descriere.placeholder = 'Descriere scurtă (opțional)';
+			descriere.value = item.description || '';
+
+			const rând3 = document.createElement('div');
+			rând3.className = 'cat-rând3';
+
+			const info = document.createElement('div');
+			info.className = 'cat-info';
+
+			const checkLabel = document.createElement('label');
+			checkLabel.className = 'cat-check';
+			const ascunsaCb = document.createElement('input');
+			ascunsaCb.type = 'checkbox';
+			ascunsaCb.className = 'c-ascunsa';
+			ascunsaCb.checked = !!item.ascunsa;
+			checkLabel.append(ascunsaCb, document.createTextNode(' Ascunsă din meniu'));
+
+			const contorSpan = document.createElement('span');
+			contorSpan.textContent = `${item.nrArticole || 0} articole`;
+
+			info.append(checkLabel, contorSpan);
+
+			const elimină = document.createElement('button');
+			elimină.type = 'button';
+			elimină.className = 'cat-elimină';
+			elimină.textContent = 'Elimină';
+			if ((item.nrArticole || 0) > 0) {
+				elimină.disabled = true;
+				elimină.title = 'Nu poți elimina o categorie cu articole';
+			}
+			elimină.addEventListener('click', () => card.remove());
+
+			rând3.append(info, elimină);
+
+			card.append(rând1, descriere, rând3);
+			return card;
+		}
+
+		categoriiInitiale.forEach((item) => listăEl.appendChild(randCard(item)));
+
+		let cardTrasă = null;
+
+		listăEl.addEventListener('dragstart', (e) => {
+			const card = e.target.closest('.cat-card');
+			if (!card) return;
+			cardTrasă = card;
+			card.classList.add('se-trage');
+			e.dataTransfer.effectAllowed = 'move';
+		});
+
+		listăEl.addEventListener('dragend', (e) => {
+			const card = e.target.closest('.cat-card');
+			if (card) card.classList.remove('se-trage');
+			listăEl.querySelectorAll('.cat-card.peste').forEach((el) => el.classList.remove('peste'));
+			cardTrasă = null;
+		});
+
+		listăEl.addEventListener('dragover', (e) => {
+			e.preventDefault();
+			const țintă = e.target.closest('.cat-card');
+			listăEl.querySelectorAll('.cat-card.peste').forEach((el) => el.classList.remove('peste'));
+			if (!țintă || țintă === cardTrasă || !cardTrasă) return;
+			țintă.classList.add('peste');
+		});
+
+		listăEl.addEventListener('drop', (e) => {
+			e.preventDefault();
+			const țintă = e.target.closest('.cat-card');
+			if (!țintă || !cardTrasă || țintă === cardTrasă) return;
+			const dreptunghi = țintă.getBoundingClientRect();
+			const înainte = e.clientY < dreptunghi.top + dreptunghi.height / 2;
+			listăEl.insertBefore(cardTrasă, înainte ? țintă : țintă.nextSibling);
+			țintă.classList.remove('peste');
+		});
+
+		document.getElementById('adaugă').addEventListener('click', () => {
+			listăEl.appendChild(randCard({ name: '', color: '#334155', description: '', ascunsa: false, nrArticole: 0 }));
+		});
+
+		document.getElementById('salvează').addEventListener('click', async () => {
+			const statusEl = document.getElementById('status');
+			const items = [...listăEl.querySelectorAll('.cat-card')].map((el) => ({
+				slug: el.dataset.slug || undefined,
+				name: el.querySelector('.c-nume').value.trim(),
+				color: el.querySelector('.c-culoare').value,
+				description: el.querySelector('.cat-descriere').value.trim(),
+				ascunsa: el.querySelector('.c-ascunsa').checked,
+			})).filter((i) => i.name);
+
+			const res = await fetch('/api/admin/categorii-setari', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(items),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				const banner = document.getElementById('banner-salvat');
+				banner.classList.add('arată');
+				clearTimeout(window.__bannerTimeout);
+				window.__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+				setTimeout(() => location.reload(), 900);
+			} else {
+				const data = await res.json().catch(() => ({}));
+				statusEl.textContent = data.error || 'Eroare la salvare.';
+			}
+		});
+	</script>
+</AdminLayout>

@@ -1,0 +1,1864 @@
+{
+  "ghid-ce-presupune-un-tablou-electric-modern-conform-normativului-i7": [
+    {
+      "intrebare": "Ce înseamnă „selectivitate” la protecția diferențială?",
+      "raspuns": "Structura pe două niveluri (diferențial general + diferențiale de 30mA pe grupe) în care o scurgere pe un singur circuit oprește doar acel grup, nu tot tabloul."
+    },
+    {
+      "intrebare": "De ce e greșit să pui zeci de prize pe o singură siguranță de 16A?",
+      "raspuns": "Pentru că un singur scurtcircuit pe oricare aparat conectat scoate din funcțiune tot etajul, nu doar circuitul afectat."
+    },
+    {
+      "intrebare": "Am nevoie de protecție la supratensiuni (SPD) dacă am panouri fotovoltaice?",
+      "raspuns": "Da — articolul o recomandă explicit pentru case cu echipamente sensibile sau sistem fotovoltaic conectat la tablou."
+    },
+    {
+      "intrebare": "De ce contează spațiul liber în tablou, dacă acum nu am nevoie de el?",
+      "raspuns": "Ca o extindere ulterioară (aer condiționat nou, stație de încărcare auto) să nu însemne înlocuirea întregului tablou de la zero."
+    },
+    {
+      "intrebare": "Cum verific rapid dacă tabloul meu chiar respectă I7?",
+      "raspuns": "Testul din articol: dacă electricianul nu poate explica de ce fiecare circuit are exact acea siguranță, tabloul nu e conform, indiferent cum arată."
+    }
+  ],
+  "zigbee-vs-matter-vs-knx-ce-protocol-alegi-pentru-casa-ta-smart-in-2026": [
+    {
+      "intrebare": "Care protocol are cele mai multe produse disponibile pe piață?",
+      "raspuns": "Zigbee, cu cea mai mare acoperire de produse (prize, becuri, senzori) de la mai mulți producători."
+    },
+    {
+      "intrebare": "De ce a apărut Matter dacă Zigbee există deja?",
+      "raspuns": "Ca să rezolve fragmentarea Zigbee — un standard unificat, susținut de Google, Apple, Amazon și Samsung, compatibil direct cu asistenții vocali."
+    },
+    {
+      "intrebare": "KNX merită pentru o casă deja locuită?",
+      "raspuns": "Nu de obicei — KNX cere cablare dedicată din faza de construcție sau renovare majoră, spre deosebire de Zigbee/Matter, care sunt wireless."
+    },
+    {
+      "intrebare": "Ce ar trebui să cumpăr dacă vreau compatibilitate pe termen lung?",
+      "raspuns": "Dispozitive cu certificare Matter — recomandarea explicită a articolului pentru orice achiziție nouă."
+    },
+    {
+      "intrebare": "KNX are vreun avantaj real față de soluțiile wireless?",
+      "raspuns": "Fiabilitate maximă fără interferențe radio și control centralizat pentru automatizări complexe, util mai ales combinat cu monitorizare fotovoltaică sau de stocare."
+    }
+  ],
+  "cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far": [
+    {
+      "intrebare": "Care e diferența de cost între on-grid și hibrid?",
+      "raspuns": "Hibridul costă vizibil mai mult, în primul rând din cauza invertorului hibrid, mai scump decât unul standard, chiar înainte de a adăuga bateria."
+    },
+    {
+      "intrebare": "Cât adaugă bateria la prețul total al sistemului?",
+      "raspuns": "Orientativ 2.000-4.000 euro pentru o baterie de 5-10 kWh, în funcție de brand și capacitate."
+    },
+    {
+      "intrebare": "Ce factor influențează cel mai mult prețul final, dincolo de tipul sistemului?",
+      "raspuns": "Complexitatea acoperișului — înclinație, orientare, mai multe planuri de montaj cresc semnificativ manopera."
+    },
+    {
+      "intrebare": "În cât timp se amortizează un sistem on-grid simplu?",
+      "raspuns": "Orientativ 3-8 ani, restul perioadei de funcționare (peste 25 de ani garantați) fiind economie netă."
+    },
+    {
+      "intrebare": "De ce nu pot afla un preț exact fără vizită tehnică?",
+      "raspuns": "Cifrele din articol sunt repere de piață; costul real depinde de acoperiș și consum propriu, calculabile corect doar la o vizită tehnică."
+    }
+  ],
+  "cat-costa-o-baterie-de-stocare-in-2026-comparatie-deye-huawei-dah-solar": [
+    {
+      "intrebare": "Care e cea mai ieftină opțiune la 5 kWh?",
+      "raspuns": "Deye, la aproximativ 3.200 de lei."
+    },
+    {
+      "intrebare": "Cât reduce subvenția AFM costul unei baterii de 10 kWh?",
+      "raspuns": "O baterie BYD de circa 16.460 de lei ajunge la aproximativ 6.460 de lei după o subvenție AFM de 10.000 de lei."
+    },
+    {
+      "intrebare": "De ce Huawei costă de trei ori mai mult decât Deye la aceeași capacitate?",
+      "raspuns": "Diferența vine din calitatea celulelor, durata garanției și integrarea cu ecosistemul de invertoare, nu din capacitatea nominală."
+    },
+    {
+      "intrebare": "Cât de repede se amortizează o baterie cu și fără subvenție?",
+      "raspuns": "3,5 ani fără subvenție AFM, sau doar 1,4 ani cu subvenția activă."
+    },
+    {
+      "intrebare": "Ce buget total are programul AFM pentru baterii?",
+      "raspuns": "400 de milioane de lei, dedicat prosumatorilor care au deja un sistem fotovoltaic instalat."
+    }
+  ],
+  "tariful-de-transport-energie-binom-explicat-pe-intelesul-tuturor": [
+    {
+      "intrebare": "Ce se schimbă concret în factură prin BINOM?",
+      "raspuns": "O parte din cost depinde de puterea maximă (kW) pe care o poți trage din rețea, nu doar de energia efectiv consumată."
+    },
+    {
+      "intrebare": "Cine spune că BINOM nu e o taxă suplimentară?",
+      "raspuns": "ACUE, federația operatorilor de distribuție — susține că venitul reglementat total rămâne neschimbat, doar redistribuit altfel."
+    },
+    {
+      "intrebare": "De ce sunt prosumatorii dezavantajați de BINOM, potrivit APCE?",
+      "raspuns": "Au nevoie de racordare la capacitate mare chiar dacă consumul net e redus datorită producției proprii, deci plătesc pentru capacitate, nu pentru consum real."
+    },
+    {
+      "intrebare": "Modelul BINOM funcționează la fel de bine pe orice rețea?",
+      "raspuns": "Nu — funcționează bine pe rețele deja modernizate; aplicat pe infrastructură veche din anii 1960-70, riscă să taxeze consumatorii pentru limitările rețelei."
+    },
+    {
+      "intrebare": "Ce ar trebui să verific concret pe propria factură?",
+      "raspuns": "Structura noii facturi, nu doar totalul — componenta de capacitate poate cântări mai mult decât pare la prima vedere."
+    }
+  ],
+  "unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem": [
+    {
+      "intrebare": "De ce e interzisă baia pentru montarea invertorului?",
+      "raspuns": "Aburul și stropii corodează contactele electrice, chiar dacă echipamentul are un grad de protecție IP ridicat."
+    },
+    {
+      "intrebare": "Care e intervalul ideal de temperatură pentru o baterie cu litiu?",
+      "raspuns": "20-25°C — sub 5-7°C și peste 40-45°C, degradarea celulelor accelerează vizibil."
+    },
+    {
+      "intrebare": "O baterie de 5 kW livrează mereu 5 kW?",
+      "raspuns": "Nu — iarna, la 0-5°C, livrează realist 4-4,2 kW, din cauza rezistenței interne crescute la frig."
+    },
+    {
+      "intrebare": "Ce se întâmplă cu bateria vara, la soare direct?",
+      "raspuns": "Poate ajunge la 50-60°C, iar BMS-ul reduce singur curentul ca s-o protejeze, exact când ai nevoie de putere maximă."
+    },
+    {
+      "intrebare": "Poate garanția bateriei să fie refuzată din cauza montajului greșit?",
+      "raspuns": "Da — unele garanții pot fi refuzate pe baza logurilor de temperatură salvate de BMS, la expuneri repetate la temperaturi extreme."
+    }
+  ],
+  "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta": [
+    {
+      "intrebare": "Ce fel de proiecte face SEP, dincolo de panourile fotovoltaice?",
+      "raspuns": "Baterii de stocare și instalații electrice complete, de la tablouri conforme normativului I7 până la sisteme hibride."
+    },
+    {
+      "intrebare": "Evaluarea inițială costă ceva?",
+      "raspuns": "Nu — fiecare proiect pornește cu o evaluare gratuită, fără obligații."
+    },
+    {
+      "intrebare": "Conținutul editorial de pe Electric NEWS vine din aceeași echipă care face lucrările?",
+      "raspuns": "Da — articolul spune explicit că nu publică nimic ce nu ar verifica și în lucrările efective pentru clienți."
+    },
+    {
+      "intrebare": "SEP lucrează doar cu persoane fizice?",
+      "raspuns": "Nu — lucrează și cu proiecte mai mari, unde e nevoie de o echipă coordonată pe mai multe zone ale țării."
+    },
+    {
+      "intrebare": "Ce primesc concret dacă completez formularul de ofertă?",
+      "raspuns": "O evaluare reală a situației concrete, nu un preț estimativ vag sau un răspuns automat."
+    }
+  ],
+  "legea-160-2026-a-intrat-in-vigoare-compensare-lunara-pentru-prosumatori-ce-se-sc": [
+    {
+      "intrebare": "Când a fost promulgată Legea 160/2026?",
+      "raspuns": "Pe 23 iulie 2026, de președintele Nicușor Dan, după ce CCR a respins obiecția de neconstituționalitate pe 21 iulie."
+    },
+    {
+      "intrebare": "Pot folosi surplusul de la panouri ca să plătesc gazul?",
+      "raspuns": "Da, dacă ai contract de gaze la același furnizor ca cel de energie electrică."
+    },
+    {
+      "intrebare": "Compensarea se aplică doar la locul unde am panourile montate?",
+      "raspuns": "Nu — poate acoperi toate locurile de consum de la același furnizor, nu doar cel cu sistemul fotovoltaic."
+    },
+    {
+      "intrebare": "Câți prosumatori existau în România la data articolului?",
+      "raspuns": "332.684, cu o putere instalată totală de 3.789 MW, conform ANRE (30 aprilie 2026)."
+    },
+    {
+      "intrebare": "De ce nu se aplică încă efectiv compensarea lunară?",
+      "raspuns": "Pentru că ANRE trebuie să adopte normele de aplicare — până atunci drepturile din lege există pe hârtie, dar sunt inoperante."
+    }
+  ],
+  "casa-verde-baterii-2026-buget-de-400-milioane-lei-aprobat-de-guvern-cine-poate-a": [
+    {
+      "intrebare": "Cât e bugetul Casa Verde Baterii 2026?",
+      "raspuns": "400 de milioane de lei, aprobat de Guvern, dedicat exclusiv stocării."
+    },
+    {
+      "intrebare": "Se mai subvenționează panouri fotovoltaice noi prin acest program?",
+      "raspuns": "Nu — componenta de finanțare pentru panouri a fost eliminată, al doilea an consecutiv."
+    },
+    {
+      "intrebare": "De ce a redus statul accentul pe panouri, în favoarea bateriilor?",
+      "raspuns": "Ministra Mediului a invocat presiunea tot mai mare pe rețea la orele de vârf de producție solară."
+    },
+    {
+      "intrebare": "Ce spune APCE despre acest buget?",
+      "raspuns": "Îl consideră „inacceptabil și nerealist” și cere o majorare de minimum 50%."
+    },
+    {
+      "intrebare": "Sunt cunoscute criteriile exacte de eligibilitate?",
+      "raspuns": "Nu încă — la data articolului, ghidul de finanțare al AFM cu criteriile exacte nu era publicat."
+    }
+  ],
+  "matter-in-2026-ce-produse-noi-compatibile-au-aparut-si-de-ce-conteaza-pentru-cas": [
+    {
+      "intrebare": "Câte dispozitive Matter noi pregătește IKEA?",
+      "raspuns": "Peste 20, anunțate din iulie 2025, așteptate la începutul lui 2026."
+    },
+    {
+      "intrebare": "Ce produse IKEA au fost deja identificate cu certificare Matter?",
+      "raspuns": "Un întrerupător cu rotiță, un senzor temperatură/umiditate, un monitor de calitate a aerului, un senzor de mișcare, un senzor de ușă/fereastră și două prize inteligente."
+    },
+    {
+      "intrebare": "Ce alte categorii de produse urmează să primească certificare Matter?",
+      "raspuns": "Roboți aspiratori, mașini de spălat/uscătoare, stații de încărcare auto și invertoare fotovoltaice."
+    },
+    {
+      "intrebare": "Până când vrea industria ca majoritatea produselor smart home să fie Matter?",
+      "raspuns": "Până în 2027, conform foii de parcurs a Connectivity Standards Alliance."
+    },
+    {
+      "intrebare": "De ce contează IKEA specific, mai mult decât alt brand?",
+      "raspuns": "Pentru că a fost mereu punctul de intrare ieftin în smart home, iar extinderea catalogului Matter arată că standardul acoperă acum categorii utile, nu doar iluminat."
+    }
+  ],
+  "compensare-cantitativa-vs-compensare-lunara-ce-inseamna-noua-lege-pentru-factura": [
+    {
+      "intrebare": "Care e diferența reală dintre compensare cantitativă și compensare lunară?",
+      "raspuns": "Cantitativă e principiul (surplusul scade din consum), lunară e ritmul nou de calcul, introdus de Legea 160/2026."
+    },
+    {
+      "intrebare": "Ce trei componente separate apar acum pe factură?",
+      "raspuns": "Consumul din rețea, cât din producție ți-a acoperit consumul propriu, și cât ai livrat în plus peste consum."
+    },
+    {
+      "intrebare": "Pot folosi surplusul pentru gaze la orice putere instalată?",
+      "raspuns": "Nu — doar pentru sisteme sub 27 kW, dacă ai gaz și electricitate la același furnizor."
+    },
+    {
+      "intrebare": "Cât timp rămân valabile aceste reguli de compensare?",
+      "raspuns": "Garantate prin lege până la 31 decembrie 2030, pentru puteri sub 200 kW."
+    },
+    {
+      "intrebare": "Ce se întâmplă după 2030?",
+      "raspuns": "Prosumatorii trec la un regim bazat pe prețul de piață (PZU mediu ponderat), nu pe compensarea cantitativă actuală."
+    }
+  ],
+  "anre-trebuie-sa-actualizeze-metodologia-de-comercializare-a-energiei-prosumatori": [
+    {
+      "intrebare": "Ce termen are ANRE pentru noua metodologie?",
+      "raspuns": "60 de zile de la 26 iulie 2026 — aproximativ 24 septembrie 2026."
+    },
+    {
+      "intrebare": "De ce nu funcționează compensarea lunară deja, deși legea a intrat în vigoare?",
+      "raspuns": "Pentru că furnizorii nu pot procesa efectiv calculul fără metodologia ANRE care stabilește mecanismul exact."
+    },
+    {
+      "intrebare": "Legea se aplică automat contractelor deja existente?",
+      "raspuns": "Da, tuturor contractelor active la 26 iulie 2026, fără renegociere."
+    },
+    {
+      "intrebare": "Cât timp rămâne valabilă opțiunea aleasă pentru destinația surplusului?",
+      "raspuns": "Minimum 12 luni de la semnare."
+    },
+    {
+      "intrebare": "Ce ar trebui să facă un prosumator până pe 24 septembrie?",
+      "raspuns": "Să aștepte și să urmărească periodic comunicatele ANRE — nu există altă acțiune posibilă până la metodologie."
+    }
+  ],
+  "peste-280000-de-prosumatori-si-3100-mw-instalati-in-romania-ce-arata-cifrele": [
+    {
+      "intrebare": "Câți prosumatori avea România la ultima raportare ANRE?",
+      "raspuns": "332.684, cu 3.789 MW putere instalată totală, aprilie 2026."
+    },
+    {
+      "intrebare": "Ce procent din prosumatori sunt firme, nu gospodării?",
+      "raspuns": "Aproximativ 10%."
+    },
+    {
+      "intrebare": "Cât e capacitatea combinată parcuri + prosumatori?",
+      "raspuns": "Peste 7.000 MW, suficient ca solarul să devină a doua sursă de generare din România."
+    },
+    {
+      "intrebare": "Care a fost cel mai mare nivel de producție solară instantanee înregistrat?",
+      "raspuns": "1.866 MW, pe 16 iunie 2025 la ora 12:33, măsurat de Transelectrica."
+    },
+    {
+      "intrebare": "Cât de mult mai poate crește capacitatea până în 2030?",
+      "raspuns": "Ținta de piață e depășirea pragului de 10.000 MW, cu încă 2.500 MW estimați doar în 2026."
+    }
+  ],
+  "comunitati-de-energie-cum-functioneaza-partajarea-curentului-intre-vecini": [
+    {
+      "intrebare": "Ce condiție e obligatorie pentru funcționarea oficială a unei comunități de energie?",
+      "raspuns": "Înscrierea în Registrul național al comunităților de energie aprobat de ANRE."
+    },
+    {
+      "intrebare": "Poate beneficia de energie cineva fără panouri proprii?",
+      "raspuns": "Da — un membru fără acoperiș potrivit poate primi energie de la ceilalți membri ai comunității."
+    },
+    {
+      "intrebare": "Cine poate face parte dintr-o comunitate de energie?",
+      "raspuns": "Persoane fizice, autorități publice, UAT-uri, IMM-uri și asociații sau alte persoane juridice."
+    },
+    {
+      "intrebare": "La ce scară pot funcționa aceste comunități?",
+      "raspuns": "De la bloc sau cartier, până la comună, sat sau zonă industrială."
+    },
+    {
+      "intrebare": "Ce lipsește încă, la momentul articolului?",
+      "raspuns": "Cifre concrete despre comunități deja înregistrate și proceduri pas-cu-pas pentru inițierea uneia noi."
+    }
+  ],
+  "sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026": [
+    {
+      "intrebare": "Ce e „clientul activ”, conceptul introdus în ianuarie 2026?",
+      "raspuns": "Un consumator care produce, consumă, stochează, vinde sau partajează energie fără ca asta să-i fie activitate principală."
+    },
+    {
+      "intrebare": "Ce procent din energia solară ajunge consumat direct, fără baterie?",
+      "raspuns": "Doar 30-35% — restul se duce în rețea, compensat la preț mai mic."
+    },
+    {
+      "intrebare": "Cât crește autoconsumul cu o baterie bine dimensionată?",
+      "raspuns": "La 80-95%, aproape dublând economia lunară estimată."
+    },
+    {
+      "intrebare": "Ce face diferit un invertor hibrid față de unul on-grid clasic?",
+      "raspuns": "Gestionează simultan panourile și bateria, plus funcția de backup la pană de curent."
+    },
+    {
+      "intrebare": "Câte cicluri de încărcare oferă tehnologia LFP recomandată?",
+      "raspuns": "Peste 6.000 de cicluri la 90% descărcare, echivalentul a 15+ ani de utilizare."
+    }
+  ],
+  "cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape": [
+    {
+      "intrebare": "Care e prima etapă a înlocuirii instalației electrice?",
+      "raspuns": "Proiectarea — stabilirea circuitelor, poziției tabloului și traseelor de cablu, conform I7."
+    },
+    {
+      "intrebare": "Cât poate dura etapa de spargere și trasee?",
+      "raspuns": "De la câteva zile la două-trei săptămâni, în funcție de complexitate."
+    },
+    {
+      "intrebare": "Ce trebuie să aibă obligatoriu tabloul nou montat?",
+      "raspuns": "Disjunctoare și diferențiale (RCD/DDR) pe fiecare circuit relevant."
+    },
+    {
+      "intrebare": "Ce verificări se fac la final?",
+      "raspuns": "Măsurători de rezistență de izolație, testarea fiecărui diferențial și, ideal, un proces verbal de recepție."
+    },
+    {
+      "intrebare": "Care sunt cei trei factori care influențează cel mai mult costul total?",
+      "raspuns": "Suprafața casei, gradul de spargere necesar și calitatea materialelor alese."
+    }
+  ],
+  "peste-15-miliarde-eur-pentru-scheme-dedicate-energiei-in-2026-ce-programe-sunt-d": [
+    {
+      "intrebare": "Câte programe de finanțare distincte sunt disponibile în 2026?",
+      "raspuns": "Șase, cu buget total de peste 1,5 miliarde de euro."
+    },
+    {
+      "intrebare": "Cât e alocat pentru unitățile administrativ-teritoriale?",
+      "raspuns": "Peste 650 de milioane de euro — peste 500 milioane pentru regenerabile și baterii, plus 150 milioane exclusiv pentru stocare."
+    },
+    {
+      "intrebare": "Cât se acordă per MW fotovoltaic instalat, ca reper standardizat?",
+      "raspuns": "1 milion de euro per MW, sau 1,3 milioane per MW cu stocare inclusă."
+    },
+    {
+      "intrebare": "Ce program vizează companiile pentru echipamente de producție?",
+      "raspuns": "PRO-INFRA, cu 200 de milioane de euro, finanțare de până la 15 milioane per beneficiar."
+    },
+    {
+      "intrebare": "Cât e alocat pentru infrastructura de încărcare electrică?",
+      "raspuns": "250 de milioane prin e-MOVE RO, din care 149 milioane combină stațiile de încărcare cu producția regenerabilă."
+    }
+  ],
+  "lansari-recente-de-produse-smart-home-ce-merita-urmarit": [
+    {
+      "intrebare": "Ce mișcare recentă domină segmentul accesibil de smart home?",
+      "raspuns": "Peste 20 de dispozitive Matter noi de la IKEA, așteptate la începutul lui 2026."
+    },
+    {
+      "intrebare": "Ce categorii noi de produse au fost adăugate în foaia de parcurs Matter?",
+      "raspuns": "Camere de supraveghere (din 2025), roboți aspiratori, mașini de spălat/uscătoare, stații de încărcare auto și invertoare fotovoltaice."
+    },
+    {
+      "intrebare": "Până când vizează industria acoperirea majorității categoriilor cu Matter?",
+      "raspuns": "Până în 2027."
+    },
+    {
+      "intrebare": "Ce ar trebui verificat înainte de orice achiziție nouă smart home?",
+      "raspuns": "Prezența certificării Matter, ca să nu rămâi blocat într-un ecosistem închis."
+    },
+    {
+      "intrebare": "De ce contează asta pentru cititorii Electric NEWS specific?",
+      "raspuns": "Pentru că invertoarele fotovoltaice intră și ele în foaia de parcurs Matter, relevant pentru case cu panouri."
+    }
+  ],
+  "lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori": [
+    {
+      "intrebare": "Câte cicluri de încărcare suportă o baterie LiFePO4?",
+      "raspuns": "Între 5.000 și peste 8.000 de cicluri, în funcție de brand și calitate."
+    },
+    {
+      "intrebare": "Ce dezavantaj are Li-Ion „clasic” față de LiFePO4 pentru o casă?",
+      "raspuns": "Risc termic mai ridicat și, în general, cost mai mare per kWh la aplicații staționare."
+    },
+    {
+      "intrebare": "De ce e tot mai rar aleasă bateria plumb-acid pentru instalații noi?",
+      "raspuns": "Durată de viață mult mai scurtă, performanță redusă la descărcări adânci și spațiu mai mare necesar."
+    },
+    {
+      "intrebare": "De ce costă Huawei LUNA2000 de patru ori mai mult decât Deye, la aceeași tehnologie?",
+      "raspuns": "Diferența vine din calitatea BMS-ului, integrarea cu invertorul și durata garanției, nu din chimia bateriei."
+    },
+    {
+      "intrebare": "Ce decizie contează mai mult azi — tehnologia sau brandul?",
+      "raspuns": "Brandul și capacitatea — LiFePO4 e deja alegerea implicită rezonabilă pentru orice instalație nouă."
+    }
+  ],
+  "siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi": [
+    {
+      "intrebare": "Ce procent din incendiile din România sunt cauzate de instalații electrice defecte?",
+      "raspuns": "28,84% — 5.095 din 17.667 de intervenții înregistrate într-un an."
+    },
+    {
+      "intrebare": "Ce cauze tehnice stau cel mai des în spatele acestor incendii?",
+      "raspuns": "Conductoare strivite, izolație deteriorată de cuie/șuruburi, îmbătrânirea firelor și conexiuni slăbite în timp."
+    },
+    {
+      "intrebare": "De ce nu reacționează o siguranță automată clasică la un arc electric de joasă intensitate?",
+      "raspuns": "Pentru că protejează la suprasarcină și scurtcircuit, nu la acest tip specific de defect."
+    },
+    {
+      "intrebare": "Ce dispozitiv e recomandat special pentru acest gol de protecție?",
+      "raspuns": "AFDD (Arc Fault Detection Devices), deja standard în alte țări europene."
+    },
+    {
+      "intrebare": "De la ce vechime a instalației crește semnificativ riscul real?",
+      "raspuns": "Peste 20-25 de ani, sau la instalații nedocumentate."
+    }
+  ],
+  "parcurile-fotovoltaice-au-devenit-a-doua-sursa-de-generare-a-energiei-din-romani": [
+    {
+      "intrebare": "Ce eveniment a marcat depășirea eolianului de către solar?",
+      "raspuns": "Un parc fotovoltaic de 135 MW a primit licența de funcționare comercială în noiembrie, ducând capacitatea parcurilor la circa 3.249 MW."
+    },
+    {
+      "intrebare": "Cât e capacitatea fotovoltaică totală a României, parcuri plus prosumatori?",
+      "raspuns": "Peste 7.000 MW."
+    },
+    {
+      "intrebare": "Care a fost recordul de producție solară instantanee?",
+      "raspuns": "1.866 MW, pe 16 iunie 2025, ora 12:33, conform Transelectrica."
+    },
+    {
+      "intrebare": "Cât de mult mai poate crește capacitatea până în 2030?",
+      "raspuns": "Peste 10.000 MW, cu 2.500 MW estimați doar în 2026."
+    },
+    {
+      "intrebare": "Ce efect are această creștere asupra priorității de finanțare a statului?",
+      "raspuns": "A mutat prioritatea spre stocare prin baterii, nu spre subvenții noi pentru panouri."
+    }
+  ],
+  "cum-citesti-factura-la-energie-ca-prosumator-compensare-tarife-tva": [
+    {
+      "intrebare": "Ce arată distinct factura unui prosumator?",
+      "raspuns": "Energia consumată din rețea și energia livrată în rețea, separat, plus rezultatul compensării."
+    },
+    {
+      "intrebare": "Ce componente reglementate separate conține tariful, dincolo de energia activă?",
+      "raspuns": "Tariful de distribuție, tariful de transport BINOM și contribuția pentru certificate verzi."
+    },
+    {
+      "intrebare": "Se aplică TVA și la energia compensată?",
+      "raspuns": "Da — compensarea nu schimbă regimul de TVA aplicat facturii finale."
+    },
+    {
+      "intrebare": "Pe ce interval se calculează compensarea, de regulă?",
+      "raspuns": "Pe intervalul de facturare curent, nu instantaneu."
+    },
+    {
+      "intrebare": "Ce ar trebui să fac dacă nu înțeleg o factură specifică?",
+      "raspuns": "Să contactez direct furnizorul, cu cerere explicită de detaliere a modului de calcul."
+    }
+  ],
+  "prize-intrerupatoare-tablouri-ghid-de-inlocuire-pas-cu-pas-pentru-o-casa-mai-sig": [
+    {
+      "intrebare": "Care e primul pas recomandat, dacă bugetul nu permite totul deodată?",
+      "raspuns": "Tabloul electric — siguranța centrală a întregii instalații."
+    },
+    {
+      "intrebare": "Cum verific rapid dacă o priză are împământare funcțională?",
+      "raspuns": "Verific dacă are cele trei găuri standard cu contact metalic vizibil de împământare."
+    },
+    {
+      "intrebare": "Ce zone au prioritate după tablou?",
+      "raspuns": "Prizele și circuitele din baie și bucătărie, unde riscul de electrocutare e cel mai mare."
+    },
+    {
+      "intrebare": "Ce verificare finală confirmă că înlocuirea a rezolvat problema de siguranță?",
+      "raspuns": "Măsurarea rezistenței de izolație și testarea funcțională a fiecărui diferențial, de către un electrician autorizat."
+    },
+    {
+      "intrebare": "Trebuie schimbat tot cablajul odată cu prizele?",
+      "raspuns": "Nu neapărat — o înlocuire țintită a prizelor/tabloului aduce deja un salt mare de siguranță, fără recablare completă."
+    }
+  ],
+  "legea-prosumatorilor-2026-declarata-constitutionala-de-ccr-ce-inseamna-in-practi": [
+    {
+      "intrebare": "Când a respins CCR obiecția de neconstituționalitate?",
+      "raspuns": "Pe 29 aprilie 2026, dar motivarea scrisă a fost publicată abia pe 21 iulie 2026."
+    },
+    {
+      "intrebare": "Ce mecanisme devin obligatorii legal prin această decizie?",
+      "raspuns": "Compensarea cantitativă, plata gazului din surplus (sub 27 kW) și compensarea la mai multe proprietăți."
+    },
+    {
+      "intrebare": "Cât a durat parcursul legislativ al legii, în total?",
+      "raspuns": "Aproape doi ani în Parlament, plus o cerere de reexaminare prezidențială."
+    },
+    {
+      "intrebare": "Până când e garantat prin lege mecanismul de compensare?",
+      "raspuns": "Până la 31 decembrie 2030."
+    },
+    {
+      "intrebare": "Ce se schimbă după acel termen?",
+      "raspuns": "Trecerea la un regim de preț bazat pe piață (media ponderată PZU), nu pe compensarea cantitativă actuală."
+    }
+  ],
+  "automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul": [
+    {
+      "intrebare": "Care e cea mai directă automatizare pentru o casă cu panouri?",
+      "raspuns": "Programarea consumatorilor „amânabili” să pornească automat în intervalul de producție solară maximă."
+    },
+    {
+      "intrebare": "De ce e boilerul electric cel mai eficient candidat pentru automatizare?",
+      "raspuns": "Pentru că energia termică acumulată se păstrează câteva ore, eliminând nevoia de reîncălzire seara din rețea."
+    },
+    {
+      "intrebare": "Ce ordine de prioritate setează un invertor hibrid, de regulă?",
+      "raspuns": "Încarcă mai întâi bateria din surplus, apoi consumatorii amânabili, abia apoi trimite excesul în rețea."
+    },
+    {
+      "intrebare": "Ce se automatizează la nivelul climatizării?",
+      "raspuns": "Preîncălzirea sau prerăcirea locuinței în orele de producție solară maximă."
+    },
+    {
+      "intrebare": "Care e punctul de plecare realist pentru majoritatea caselor?",
+      "raspuns": "Identificarea a 2-3 consumatori mari și amânabili (boiler, mașină de spălat, încărcare auto) și programarea lor condiționată."
+    }
+  ],
+  "anre-pregateste-metodologia-noua-pentru-vanzarea-energiei-de-la-prosumatori-pana": [
+    {
+      "intrebare": "Ce segment nou de putere reglementează explicit Legea 160/2026?",
+      "raspuns": "200-400 kW, zonă anterior într-o zonă gri a reglementării."
+    },
+    {
+      "intrebare": "Cum se calculează prețul de achiziție pentru acest segment?",
+      "raspuns": "Ca preț mediu ponderat pe Piața pentru Ziua Următoare (PZU), cu regularizare financiară ulterioară."
+    },
+    {
+      "intrebare": "De ce ar putea fi dezavantajos acest regim față de compensarea cantitativă?",
+      "raspuns": "Pentru că prețul PZU poate fi sub prețul din contractul propriu, în anumite condiții de piață."
+    },
+    {
+      "intrebare": "Ce termen are ANRE pentru metodologia acestui segment?",
+      "raspuns": "60 de zile de la 26 iulie 2026, deci în jurul datei de 24 septembrie."
+    },
+    {
+      "intrebare": "Cui contează cel mai mult această metodologie?",
+      "raspuns": "Dezvoltatorilor de proiecte fotovoltaice medii, între instalația casnică și parcul comercial mare."
+    }
+  ],
+  "apce-propune-tva-zero-pentru-sistemele-fotovoltaice-si-baterii-ce-sanse-are-prop": [
+    {
+      "intrebare": "Pentru ce sisteme cere APCE TVA 0%?",
+      "raspuns": "Sisteme fotovoltaice până la 27 kW, baterii de stocare și componente esențiale de instalare."
+    },
+    {
+      "intrebare": "Ce directivă UE invocă drept bază legală?",
+      "raspuns": "Directiva 2022/542, deja aplicată în Germania din ianuarie 2023."
+    },
+    {
+      "intrebare": "Care e impactul anual estimat de APCE, dacă propunerea trece?",
+      "raspuns": "96.000 de instalații noi, 768 MW capacitate nouă și 614 milioane de euro investiții private."
+    },
+    {
+      "intrebare": "Cât costă bugetar propunerea, în TVA necolectat?",
+      "raspuns": "Aproximativ 129 de milioane de euro anual."
+    },
+    {
+      "intrebare": "Când vrea APCE să propună acest pachet legislativ?",
+      "raspuns": "În sesiunea parlamentară de toamnă — șansele reale de adoptare rămân, deocamdată, necunoscute."
+    }
+  ],
+  "programul-afm-baterii-2026-mai-putini-beneficiari-si-posibile-probleme-de-legali": [
+    {
+      "intrebare": "Ce condiție de eligibilitate a propus ministra Mediului?",
+      "raspuns": "Doar bateriile fabricate sau asamblate în Europa să fie eligibile pentru finanțare."
+    },
+    {
+      "intrebare": "Cu cât ar putea costa mai mult sistemele europene față de cele asiatice?",
+      "raspuns": "Între 40% și 130% mai mult, potrivit APCE."
+    },
+    {
+      "intrebare": "De ce ar însemna asta mai puțini beneficiari, nu mai mulți?",
+      "raspuns": "Pentru că bugetul fix (400 milioane lei) ar finanța mai puține instalații la prețuri mai mari."
+    },
+    {
+      "intrebare": "Ce problemă legală ridică APCE?",
+      "raspuns": "Posibila încălcare a liberei circulații a mărfurilor și a principiului nediscriminării pe piața unică UE."
+    },
+    {
+      "intrebare": "Ce a cerut APCE Ministerului, înainte de lansarea programului?",
+      "raspuns": "Justificarea legală a restricției și o analiză de compatibilitate cu legislația europeană."
+    }
+  ],
+  "casa-verde-fotovoltaic-a-fost-eliminat-afm-devine-finantator-anghel-saligny-2-ce": [
+    {
+      "intrebare": "Unde s-a dus bugetul programului Casa Verde Fotovoltaic?",
+      "raspuns": "1,5 miliarde de lei au fost redirecționate către programul de sprijin pentru apă-canal al primarilor."
+    },
+    {
+      "intrebare": "Câte familii beneficiaseră anterior de acest program?",
+      "raspuns": "Peste 100.000."
+    },
+    {
+      "intrebare": "Ce sumă rămâne pentru bateriile prosumatorilor din bugetul de energie?",
+      "raspuns": "400 de milioane de lei, considerată insuficientă de APCE."
+    },
+    {
+      "intrebare": "Ce altă destinație primește din bugetul rămas?",
+      "raspuns": "250 de milioane de lei merg către împăduriri."
+    },
+    {
+      "intrebare": "Ce cere APCE ca reacție la această schimbare?",
+      "raspuns": "Reintroducerea Casa Verde Fotovoltaic și majorarea cu minimum 50% a bugetului pentru stocare."
+    }
+  ],
+  "de-ce-platim-certificate-verzi-in-factura-de-energie-si-cat-timp-vor-mai-exista": [
+    {
+      "intrebare": "Prin ce lege a fost introdus mecanismul certificatelor verzi?",
+      "raspuns": "Legea 220/2008."
+    },
+    {
+      "intrebare": "Pentru cât timp primește o centrală dreptul la certificate verzi?",
+      "raspuns": "Maximum 15 ani de la punerea în funcțiune, nu pe termen nelimitat."
+    },
+    {
+      "intrebare": "Când ies din schemă primele proiecte, cele mai vechi?",
+      "raspuns": "Între 2026 și 2027, iar ultimele în jurul lui 2030-2032."
+    },
+    {
+      "intrebare": "Primesc prosumatorii compensații prin certificate verzi?",
+      "raspuns": "Nu — legea nu îi consideră „producători” în sensul acestui mecanism."
+    },
+    {
+      "intrebare": "Mecanismul se extinde sau se restrânge în timp?",
+      "raspuns": "Se restrânge — proiectele noi nu mai intră deloc în sistem de la un moment dat încolo."
+    }
+  ],
+  "cine-controleaza-invertorul-tau-disputa-dintre-distribuitori-transelectrica-si-p": [
+    {
+      "intrebare": "Ce cer distribuitorii și Transelectrica de la prosumatori?",
+      "raspuns": "Acces și control asupra invertoarelor instalate, invocând securitatea și stabilitatea rețelei."
+    },
+    {
+      "intrebare": "Ce spune explicit APCE despre această cerere?",
+      "raspuns": "„Nu vom accepta ca nimeni să acceseze invertoarele noastre fără acordul nostru expres.”"
+    },
+    {
+      "intrebare": "Ce ar însemna practic acceptarea cererii distribuitorilor?",
+      "raspuns": "Pierderea autonomiei prosumatorilor, cu posibilitatea limitării de la distanță a producției proprii."
+    },
+    {
+      "intrebare": "Există un asemenea mecanism de control în alte țări europene?",
+      "raspuns": "Nu, potrivit APCE."
+    },
+    {
+      "intrebare": "Ce a anunțat APCE că va face dacă demersul avansează?",
+      "raspuns": "Va lua în calcul acțiuni legale, atât la nivel național cât și european."
+    }
+  ],
+  "comunitatile-de-energie-sunt-recunoscute-prin-lege-dar-inregistrarea-la-anre-dur": [
+    {
+      "intrebare": "Cu cât întârziere a publicat ANRE procedura de înregistrare?",
+      "raspuns": "9 luni peste termenul legal, care era noiembrie 2025 — procedura a apărut abia pe 25 iunie 2026."
+    },
+    {
+      "intrebare": "Ce rol avea ANRE în proiectul inițial, respins de APCE?",
+      "raspuns": "Un rol de „judecător”, care evalua și decidea practic cine merită să existe ca și comunitate."
+    },
+    {
+      "intrebare": "Ce include procedura finală, adoptată în iunie 2026?",
+      "raspuns": "Doar înregistrarea propriu-zisă, notificări la schimbări de membri și riscul de radiere pentru modificări nenotificate."
+    },
+    {
+      "intrebare": "Pe ce model e inspirată procedura finală?",
+      "raspuns": "Pe modelul belgian, considerat unul dintre cele mai restrictive din Europa."
+    },
+    {
+      "intrebare": "Cum a reacționat APCE la varianta finală?",
+      "raspuns": "Nu felicită ANRE pentru simpla conformare, dar recunoaște că presiunea civică a dus la o procedură mai funcțională."
+    }
+  ],
+  "bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori": [
+    {
+      "intrebare": "Ce imagine mentală simplă explică o baterie cu litiu?",
+      "raspuns": "O „capcană pentru electroni” — energia externă îi împinge într-un electrod de grafit unde rămân prizonieri."
+    },
+    {
+      "intrebare": "De ce nu pot electronii să se întoarcă direct prin interiorul bateriei?",
+      "raspuns": "Electrolitul acționează ca un izolator electric perfect care le blochează drumul direct."
+    },
+    {
+      "intrebare": "Cum ies electronii din baterie ca să producă curent?",
+      "raspuns": "Printr-un circuit exterior — cabluri, invertor, aparate — pe drumul de întoarcere spre celălalt electrod."
+    },
+    {
+      "intrebare": "Ce rol are ionul de litiu în acest proces?",
+      "raspuns": "E „momeala” încărcată pozitiv care echilibrează sarcina electronilor, altfel respinși reciproc."
+    },
+    {
+      "intrebare": "Bateria creează electroni noi?",
+      "raspuns": "Nu — funcționează ca o pompă, dând energie potențială electronilor deja existenți în materialele conductoare."
+    }
+  ],
+  "puterea-instalata-in-bateriile-prosumatorilor-a-depasit-capacitatea-de-stocare-c": [
+    {
+      "intrebare": "Cât e capacitatea centralizată de stocare a României?",
+      "raspuns": "Aproximativ 600 MW, din care jumătate aparține unui singur furnizor privat."
+    },
+    {
+      "intrebare": "Cât e puterea instalată în bateriile prosumatorilor, la sfârșitul lui 2025?",
+      "raspuns": "Estimată tot la circa 600 MW — egalând capacitatea centralizată."
+    },
+    {
+      "intrebare": "Ce spune APCE despre precizia acestei estimări?",
+      "raspuns": "Că datele oficiale o subestimează — realitatea ar depăși 800 MW."
+    },
+    {
+      "intrebare": "Ce măsoară, de fapt, puterea nominală a unui acumulator?",
+      "raspuns": "Rata maximă la care bateria poate descărca energie, nu doar cât poate stoca."
+    },
+    {
+      "intrebare": "Ce argument practic rezultă din această comparație?",
+      "raspuns": "Că prosumatorii au construit, dispersat, o capacitate reală de sprijin a rețelei la vârfuri de consum."
+    }
+  ],
+  "cinci-masuri-care-ar-putea-reduce-facturile-la-energie-fact-check-pe-propunerile": [
+    {
+      "intrebare": "Care e prima măsură propusă de APCE?",
+      "raspuns": "Eliminarea contribuției pentru cogenerare, o taxă aplicată de 14 ani, fără să fie cerută de directiva europeană."
+    },
+    {
+      "intrebare": "Ce TVA propune APCE pentru componentele fotovoltaice?",
+      "raspuns": "5%, invocând Directiva UE 2022/542 și exemple deja aplicate în alte țări UE."
+    },
+    {
+      "intrebare": "Care dintre cele cinci măsuri a devenit deja lege?",
+      "raspuns": "Compensarea lunară a surplusului, prin Legea 160/2026."
+    },
+    {
+      "intrebare": "Ce cere a patra măsură, despre fotovoltaicele de balcon?",
+      "raspuns": "Eliminarea barierelor legislative pentru kituri de balcon și proiecte colective la blocuri."
+    },
+    {
+      "intrebare": "Cât a încasat Transelectrica pentru surplusul prosumatorilor, potrivit APCE?",
+      "raspuns": "Peste 46 de milioane de euro în 2024-2025, pentru un „serviciu neprestat”."
+    }
+  ],
+  "anre-reglementeaza-comunitatile-de-energie-si-notificarea-la-80-din-consumul-lun": [
+    {
+      "intrebare": "Ce ordin a publicat ANRE pe 30 iunie 2026?",
+      "raspuns": "Un ordin care modifică Regulamentul de Furnizare și stabilește cadrul complet pentru comunitățile de energie."
+    },
+    {
+      "intrebare": "Ce comunități sunt exceptate de la licența ANRE?",
+      "raspuns": "Locațiile neconectate la rețea, condominiile cu autoconsum 100% și ONG-urile de utilitate publică."
+    },
+    {
+      "intrebare": "Ce obligație nouă au furnizorii de la 1 octombrie 2026?",
+      "raspuns": "Să ofere gratuit un cont online cu istoric de consum pe 3 ani, facturi și grafice comparative."
+    },
+    {
+      "intrebare": "Ce notificare automată primesc consumatorii prin acest cont?",
+      "raspuns": "O alertă când consumul lunar ajunge la 80% din cel estimat."
+    },
+    {
+      "intrebare": "Ce schimbare privește taxele de reziliere anticipată?",
+      "raspuns": "Trebuie comunicate clar înainte de semnare și nu pot depăși pierderea economică reală a furnizorului, dovedită de acesta."
+    }
+  ],
+  "certificate-verzi-2027-cum-a-estimat-anre-impactul-in-factura-consumatorilor": [
+    {
+      "intrebare": "Ce valoare a stabilit ANRE pentru impactul certificatelor verzi în 2027?",
+      "raspuns": "14,5 euro pe MWh, aceeași valoare propusă inițial."
+    },
+    {
+      "intrebare": "Ce algoritm alternativ exista, respins de ANRE?",
+      "raspuns": "Unul care indica 13,03 euro/MWh."
+    },
+    {
+      "intrebare": "Ce prag de excedent a folosit ANRE pentru justificarea deciziei?",
+      "raspuns": "Excedentul estimat 2027 (97%) comparat cu media istorică (123%) — sub medie, deci valoarea inițială rămâne justificată."
+    },
+    {
+      "intrebare": "Cât reprezintă taxa pentru un consumator cu 2.500 kWh/an?",
+      "raspuns": "Aproximativ 36-37 euro pe an."
+    },
+    {
+      "intrebare": "Ce trebuie să se întâmple pentru ca decizia să devină definitivă?",
+      "raspuns": "Aprobarea Guvernului, în termen de 60 de zile de la comunicat."
+    }
+  ],
+  "anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre": [
+    {
+      "intrebare": "Câte locuri de consum au fost afectate de retragerea licenței GRENERG?",
+      "raspuns": "22.564, dintre care 22.102 clienți casnici."
+    },
+    {
+      "intrebare": "Cât însumează amenzile aplicate GRENERG?",
+      "raspuns": "1.165.000 de lei, pentru peste 100 de abateri documentate."
+    },
+    {
+      "intrebare": "Ce a declarat președintele ANRE despre gravitatea măsurii?",
+      "raspuns": "Că retragerea licenței „este cea mai severă măsură pe care ANRE o poate dispune”."
+    },
+    {
+      "intrebare": "Ce se întâmplă cu clienții afectați, concret?",
+      "raspuns": "Sunt preluați automat de furnizorul de ultimă instanță, fără întrerupere de curent."
+    },
+    {
+      "intrebare": "Unde pot compara alte oferte cei care vor un furnizor ales activ?",
+      "raspuns": "Pe platforma oficială www.posf.ro."
+    }
+  ],
+  "anre-schimba-regulile-de-racordare-garantia-creste-de-la-5-la-20-ce-presupune-pe": [
+    {
+      "intrebare": "De la cât la cât crește garanția de racordare?",
+      "raspuns": "De la 5% la 20% din valoarea tarifului de racordare."
+    },
+    {
+      "intrebare": "Ce garanții noi introduce ANRE, care nu existau înainte?",
+      "raspuns": "20 €/kW pentru licitația de alocare a capacităților și 30 €/kW pentru Autorizația de Înființare."
+    },
+    {
+      "intrebare": "Ce a spus președintele ANRE despre motivul schimbării?",
+      "raspuns": "Că vrea „MW reali, racordați în rețea, nu MW pe hârtie”."
+    },
+    {
+      "intrebare": "Când e programată licitația de alocare a capacităților?",
+      "raspuns": "Toamna anului 2026."
+    },
+    {
+      "intrebare": "Afectează aceste reguli un prosumator casnic obișnuit?",
+      "raspuns": "Proiectele mici rămân, în principiu, mai puțin afectate — regulile vizează mai ales investițiile care depășesc pragul unei instalații rezidențiale standard."
+    }
+  ],
+  "rcd-ddr-explicat-diferenta-dintre-protectia-la-atingere-directa-si-indirecta": [
+    {
+      "intrebare": "Ce diferență e între atingerea directă și cea indirectă?",
+      "raspuns": "Directă e contactul cu o piesă normal sub tensiune; indirectă e contactul cu o piesă care n-ar trebui să fie sub tensiune, dar a ajuns accidental."
+    },
+    {
+      "intrebare": "Ce prag de curent declanșează, de regulă, un RCD casnic?",
+      "raspuns": "30 mA, suficient de sensibil ca să protejeze o persoană."
+    },
+    {
+      "intrebare": "De ce nu e suficientă o siguranță obișnuită pentru protecția la electrocutare?",
+      "raspuns": "Pentru că reacționează la supracurent, nu la o scurgere mică, dar letală pentru o persoană."
+    },
+    {
+      "intrebare": "Unde e obligatorie protecția diferențială conform I7?",
+      "raspuns": "Băi, bucătării, prize exterioare, orice zonă cu umiditate sau contact posibil cu apa."
+    },
+    {
+      "intrebare": "Cum testez rapid dacă am protecție diferențială montată?",
+      "raspuns": "Caut butonul „T”/„Test” pe carcasa dispozitivului din tablou — apăsat, ar trebui să întrerupă instant circuitul."
+    }
+  ],
+  "ce-poti-face-diy-la-instalatia-electrica-si-ce-este-strict-interzis-fara-autoriz": [
+    {
+      "intrebare": "Pot înlocui singur un bec sau un corp de iluminat existent?",
+      "raspuns": "Da, cu alimentarea oprită de la siguranță, fără modificare de circuit."
+    },
+    {
+      "intrebare": "Pot schimba o priză deteriorată cu una identică?",
+      "raspuns": "Da, atât timp cât nu schimbi traseul de cablu, doar piesa vizibilă."
+    },
+    {
+      "intrebare": "Pot interveni singur la tabloul electric?",
+      "raspuns": "Nu, niciodată — orice montare/mutare de disjunctoare sau RCD e strict pentru electrician autorizat."
+    },
+    {
+      "intrebare": "Pot adăuga un circuit nou pe cont propriu?",
+      "raspuns": "Nu — necesită cablare, dimensionare corectă și conectare la tablou, rezervate legal electricienilor autorizați."
+    },
+    {
+      "intrebare": "De ce sunt periculoase mai ales greșelile din categoria „interzis”?",
+      "raspuns": "Pentru că pot funcționa aparent normal luni sau ani, apoi eșua exact în momentul cu risc maxim."
+    }
+  ],
+  "yellow-grid-cum-functioneaza-o-baterie-casnica-de-86-kwh-conectata-la-o-retea-vi": [
+    {
+      "intrebare": "Ce e Yellow Grid, mai exact?",
+      "raspuns": "O platformă tip VPP (centrală electrică virtuală) care unește bateriile a zeci/sute de mii de prosumatori."
+    },
+    {
+      "intrebare": "Din ce se compune bateria de 86 kWh descrisă în articol?",
+      "raspuns": "66 kWh în 8 module externe de câte 8 kWh, plus 20 kWh dintr-un sistem interior."
+    },
+    {
+      "intrebare": "Ce e Yellow Box?",
+      "raspuns": "Dispozitivul de conectare la platformă, cu SIM 4G, izolat de rețeaua Wi-Fi a casei."
+    },
+    {
+      "intrebare": "Cât poate câștiga un utilizator într-o seară, în exemplul din articol?",
+      "raspuns": "Aproximativ 50-60 de lei, descărcând 60 kWh la un preț spot de aproape 1 leu/kWh."
+    },
+    {
+      "intrebare": "Ce obstacol limitează profitabilitatea ciclurilor multiple zilnice?",
+      "raspuns": "Taxa de distribuție, de 75-80 de bani pe kilowatt."
+    }
+  ],
+  "camere-de-supraveghere-fara-wifi-si-fara-curent-cu-panou-solar-are-sens-pentru-o": [
+    {
+      "intrebare": "Ce modele EZVIZ sunt testate în articol?",
+      "raspuns": "EZVIZ Lite (HB8 Lite 4G) și EZVIZ Pro (EB8)."
+    },
+    {
+      "intrebare": "Cum funcționează camera fără Wi-Fi în zonă?",
+      "raspuns": "Prin conexiune 4G independentă, cu upload în timp real către cloud."
+    },
+    {
+      "intrebare": "Care e diferența de performanță nocturnă între cele două modele?",
+      "raspuns": "Pro captează detalii clare la 4-10 metri în întuneric complet; Lite oferă doar imagine acceptabilă pe lumină slabă."
+    },
+    {
+      "intrebare": "Cât a păstrat bateria modelului Lite după o noapte de funcționare?",
+      "raspuns": "73% din capacitate."
+    },
+    {
+      "intrebare": "Ce orientare are nevoie panoul solar pentru performanță optimă?",
+      "raspuns": "Ideal spre sud, dar funcționează acceptabil și la est sau vest."
+    }
+  ],
+  "instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be": [
+    {
+      "intrebare": "Ce trebuie planificat înainte de turnarea fundației?",
+      "raspuns": "Priza de pământ naturală și golurile tehnice pentru canalizare, internet și branșament electric."
+    },
+    {
+      "intrebare": "Din ce se face priza de pământ recomandată?",
+      "raspuns": "O centură din platbandă de 40x4 mm, prinsă mecanic de armătura fundației."
+    },
+    {
+      "intrebare": "Ce tip de diferențial general e recomandat minim?",
+      "raspuns": "Tip A (nu AC), 30 mA."
+    },
+    {
+      "intrebare": "Ce spune articolul despre cablul din aluminiu?",
+      "raspuns": "Că România rămâne una dintre puținele țări din regiune unde mai e acceptat, din motive de cost — cuprul e recomandarea corectă."
+    },
+    {
+      "intrebare": "Cum trebuie făcute conexiunile între siguranțe?",
+      "raspuns": "Cu bară de distribuție (pieptăn), nu cu fir liber."
+    }
+  ],
+  "tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s": [
+    {
+      "intrebare": "E nevoie de autorizație de construcție pentru schimbarea tabloului?",
+      "raspuns": "Nu, doar de un electrician autorizat ANRE — nu de un aviz de la primărie."
+    },
+    {
+      "intrebare": "La ce înălțime standard se montează tabloul electric?",
+      "raspuns": "Între 1,5 și 1,8 metri de la podea."
+    },
+    {
+      "intrebare": "E corect să pun o siguranță de amperaj mai mare dacă sare des?",
+      "raspuns": "Nu — reacția corectă e să identifici cauza (supraîncărcare sau aparat defect), nu să crești amperajul."
+    },
+    {
+      "intrebare": "Când devine urgență electrică o siguranță care sare?",
+      "raspuns": "Când sare aparent aleatoriu, la aparate diferite, sau apare miros de ars ori prize calde/decolorate."
+    },
+    {
+      "intrebare": "Ce înseamnă dacă siguranța sare mereu la același aparat specific?",
+      "raspuns": "Aparatul respectiv are probabil un defect și trebuie verificat sau înlocuit — nu e o urgență a instalației."
+    }
+  ],
+  "casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi": [
+    {
+      "intrebare": "Cât costă un kit minimal de pornire pentru casă smart?",
+      "raspuns": "Câteva sute de lei, pentru 2-3 prize/becuri inteligente și un hub de bază."
+    },
+    {
+      "intrebare": "Trebuie neapărat cablare nouă pentru o casă smart?",
+      "raspuns": "Nu — soluțiile Zigbee, Wi-Fi și Matter funcționează wireless, peste instalația existentă."
+    },
+    {
+      "intrebare": "Ce sistem cere totuși cablare dedicată?",
+      "raspuns": "KNX, gândit pentru case noi sau renovări majore."
+    },
+    {
+      "intrebare": "Care e abordarea recomandată pentru un începător?",
+      "raspuns": "Pe etape — o singură categorie (de regulă iluminatul), testată întâi cu 2-3 dispozitive."
+    },
+    {
+      "intrebare": "Casa smart economisește bani doar prin instalare?",
+      "raspuns": "Nu — beneficiul vine din folosirea activă a automatizării (termostate, programări), nu doar din control de la distanță."
+    }
+  ],
+  "cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori": [
+    {
+      "intrebare": "Ce face, de fapt, invertorul unui sistem fotovoltaic?",
+      "raspuns": "Transformă curentul continuu produs de panouri în curent alternativ compatibil cu priza din casă."
+    },
+    {
+      "intrebare": "Cât produc panourile pe cer înnorat?",
+      "raspuns": "Aproximativ 20-30% din producția maximă."
+    },
+    {
+      "intrebare": "Cât spațiu pe acoperiș ocupă un sistem de 5-6 kW?",
+      "raspuns": "Aproximativ 25-35 metri pătrați, bine orientat."
+    },
+    {
+      "intrebare": "E nevoie de autorizație de construcție pentru montaj?",
+      "raspuns": "Nu, în general, atâta timp cât nu afectează structura de rezistență — dar racordarea la rețea cere documentație separată."
+    },
+    {
+      "intrebare": "Cât durează, de la decizie, până la panouri funcționale?",
+      "raspuns": "Orientativ 2-3 luni, incluzând proiectare, aprobări și montaj."
+    }
+  ],
+  "ventilatie-cu-recuperare-de-caldura-ce-presupune-si-cat-costa-in-2026": [
+    {
+      "intrebare": "Ce procent din energia termică se recuperează efectiv?",
+      "raspuns": "80-85% din energia aerului evacuat se refolosește pentru încălzirea aerului proaspăt introdus."
+    },
+    {
+      "intrebare": "Ce reține filtrul F7 folosit în sistemele moderne?",
+      "raspuns": "Aproximativ 90% din particulele fine, inclusiv PM 2.5 și polen."
+    },
+    {
+      "intrebare": "Cât costă cea mai ieftină variantă, la nivel de cameră?",
+      "raspuns": "700-1.000 de lei, pentru sisteme descentralizate cu acumulator ceramic."
+    },
+    {
+      "intrebare": "Ce noutate face acest sistem posibil și la apartamente, fără spargere majoră?",
+      "raspuns": "Tubulatură de doar 5 cm diametru, montabilă în tavane false sau scafe deja existente."
+    },
+    {
+      "intrebare": "Ce cost ascuns reduce acest sistem, dincolo de economia de energie?",
+      "raspuns": "Consumul de 4-5 litri de apă pe noapte pentru umidificare artificială iarna, într-un apartament fără el."
+    }
+  ],
+  "cabluri-electrice-rezistente-la-uv-si-apa-sarata-ce-alegi-pentru-montaj-exterior": [
+    {
+      "intrebare": "De ce nu e suficient un Copex obișnuit pentru un cablu H07V-K montat afară?",
+      "raspuns": "Pentru că doar un Copex rezistent la UV protejează cablul dacă traseul rămâne expus la soare."
+    },
+    {
+      "intrebare": "Cablul clasic NYYJ poate fi montat vizibil la exterior, la soare?",
+      "raspuns": "Nu — merge bine îngropat (apă, beton, nisip, pietriș), dar nu e rezistent la radiații UV."
+    },
+    {
+      "intrebare": "Ce caracteristici au noile variante cu izolație verde-galben prezentate în video?",
+      "raspuns": "Conductor din cupru cositorit, construcție halogen-free, rezistență la UV și la apă sărată."
+    },
+    {
+      "intrebare": "Pentru ce aplicații sunt recomandate special aceste cabluri noi?",
+      "raspuns": "Instalații maritime (bărci) și trasee vizibile spre panouri fotovoltaice montate pe acoperiș."
+    },
+    {
+      "intrebare": "Cât costă o instalație electrică completă la o casă nouă, fără automatizări smart, în zona Cluj?",
+      "raspuns": "Minimum 18.000-25.000 de euro (materiale + manoperă), confirmat printr-un exemplu concret din video."
+    }
+  ],
+  "cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret": [
+    {
+      "intrebare": "În ce an a fost înființat YellowGrid?",
+      "raspuns": "În 2024, pornind de la observația că prosumatorii români erau plătiți sub valoarea de piață pentru energia produsă."
+    },
+    {
+      "intrebare": "Câte sisteme solare active are rețeaua YellowGrid?",
+      "raspuns": "Peste 500, prag atins în 2026."
+    },
+    {
+      "intrebare": "Din ce an tranzacționează YellowGrid energie pe piața liberă?",
+      "raspuns": "Din 2025."
+    },
+    {
+      "intrebare": "Ce oferă concret platforma unui prosumator care se înscrie?",
+      "raspuns": "Tranzacționare directă pe piața liberă, plăți lunare cu vizibilitate în timp real și asistență tehnică la racordare."
+    },
+    {
+      "intrebare": "Cine conduce YellowGrid?",
+      "raspuns": "Cătălin Stancel (CEO), Sergiu Mureșan (CTO), Andrei Antohie (manager vânzări) și Iulian Constandache (specialist tranzacționare energie)."
+    }
+  ],
+  "casa-verde-baterii-2026-ghidul-de-finantare-inca-nepublicat-ce-stim-pana-acum": [
+    {
+      "intrebare": "De ce este suspendat programul Casa Verde Fotovoltaice?",
+      "raspuns": "Din cauza constrângerilor bugetare legate de deficit, așa cum a explicat ministrul Mediului, Diana Buzoianu, în septembrie 2025."
+    },
+    {
+      "intrebare": "Când ar putea fi adoptat bugetul de stat pe 2026?",
+      "raspuns": "În a doua jumătate a lunii februarie 2026, conform calendarului estimat."
+    },
+    {
+      "intrebare": "Care era finanțarea maximă oferită în ultima variantă a programului?",
+      "raspuns": "30.000 de lei per gospodărie, cu o contribuție proprie obligatorie de 3.000 de lei."
+    },
+    {
+      "intrebare": "Câți prosumatori avea România la septembrie 2025?",
+      "raspuns": "Aproximativ 267.000 de prosumatori, cu o capacitate instalată totală de 3.128 MW."
+    },
+    {
+      "intrebare": "Ce alternativă de finanțare a fost folosită în locul programului suspendat?",
+      "raspuns": "Fonduri europene prin mecanismul RePowerEU, redirecționate către obiective similare de energie regenerabilă."
+    }
+  ],
+  "invertor-string-vs-hibrid-diferente-preturi-cand-alegi-fiecare": [
+    {
+      "intrebare": "Care e diferența principală dintre un invertor string și unul hibrid?",
+      "raspuns": "Invertorul string doar convertește curentul continuu în alternativ, iar cel hibrid face același lucru dar gestionează și încărcarea/descărcarea unei baterii de stocare."
+    },
+    {
+      "intrebare": "Cât costă un invertor hibrid monofazat de 6-8 kW?",
+      "raspuns": "Aproximativ 4.000-8.000 lei, conform prețurilor de referință."
+    },
+    {
+      "intrebare": "Cât costă un sistem hibrid mic (3-5 kW) cu 10-15 kWh stocare?",
+      "raspuns": "Între 35.000-45.000 lei, față de 12.000-18.000 lei pentru varianta on-grid fără baterie."
+    },
+    {
+      "intrebare": "Cât costă bateriile LiFePO4 folosite în sistemele hibride?",
+      "raspuns": "Aproximativ 2.500-3.500 lei pe kWh de capacitate utilă."
+    },
+    {
+      "intrebare": "Când merită ales un invertor hibrid chiar dacă bateria se cumpără mai târziu?",
+      "raspuns": "Când există intenția, chiar și pe termen mediu, de a adăuga o baterie — evită cumpărarea de două ori a invertorului."
+    }
+  ],
+  "amortizare-sistem-fotovoltaic-in-2026-calcul-realist-cu-preturi-actuale": [
+    {
+      "intrebare": "Cât costă un sistem complet de 6 kWp cu baterie de 10 kWh în 2026?",
+      "raspuns": "Aproximativ 55.000 lei, TVA inclus (26.000 lei panouri și instalare, 9.000 lei invertor hibrid, 20.000 lei baterie)."
+    },
+    {
+      "intrebare": "Cât costă în medie un kWp instalat doar în panouri, fără baterie?",
+      "raspuns": "Între 3.000-8.000 lei per kWp, plus un invertor on-grid de 4.000-7.000 lei."
+    },
+    {
+      "intrebare": "Cât poate economisi o baterie de 10 kWh pe durata ei de viață?",
+      "raspuns": "Teoretic între 25.900-34.000 lei în achiziții de energie evitate de la rețea."
+    },
+    {
+      "intrebare": "Cât e subvenția estimată prin Casa Verde Baterii 2026?",
+      "raspuns": "10.000-15.000 lei, sumă neconfirmată oficial la acest moment, aplicabilă doar pentru adăugarea unei baterii la un sistem existent."
+    },
+    {
+      "intrebare": "De ce nu există un singur număr de ani valabil pentru amortizare?",
+      "raspuns": "Pentru că perioada reală depinde de cât din producția proprie consumi direct în timpul zilei, ceea ce variază de la caz la caz."
+    }
+  ],
+  "casa-verde-baterii-2026-ghidul-de-finantare-tot-nu-apare-desi-bugetul-e-aprobat": [
+    {
+      "intrebare": "Când a aprobat AFM bugetul pentru Casa Verde Baterii 2026?",
+      "raspuns": "Pe 21 mai 2026, un buget de 400 de milioane de lei destinat exclusiv stocării de energie prin baterii."
+    },
+    {
+      "intrebare": "Cine se califică pentru program?",
+      "raspuns": "Doar prosumatorii care au deja un sistem fotovoltaic instalat și racordat, pentru adăugarea unei baterii — nu pentru instalații noi de panouri."
+    },
+    {
+      "intrebare": "Ce informații nu erau confirmate oficial la 4 iunie 2026?",
+      "raspuns": "Suma maximă per beneficiar, data exactă a deschiderii sesiunii, echipamentele eligibile, plafonul de capacitate kWh, contribuția proprie și calendarul regional."
+    },
+    {
+      "intrebare": "Când e estimată publicarea ghidului oficial?",
+      "raspuns": "Undeva între vară și toamnă 2026, pe baza modelelor din edițiile anterioare Casa Verde."
+    },
+    {
+      "intrebare": "Se poate depune deja o cerere de finanțare?",
+      "raspuns": "Nu — depunerea cererii nu e posibilă până la publicarea ghidului și deschiderea platformei online AFM."
+    }
+  ],
+  "turbina-cu-hidrogen-fara-compresor-a-functionat-303-secunde-ce-inseamna-acest-re": [
+    {
+      "intrebare": "Cine a dezvoltat turbina cu hidrogen fără compresor?",
+      "raspuns": "Cercetătorii de la Karlsruhe Institute of Technology (KIT), Germania."
+    },
+    {
+      "intrebare": "Cât a durat testul record și ce record a depășit?",
+      "raspuns": "303 secunde, depășind cu 53 de secunde recordul anterior de 250 de secunde deținut de NASA."
+    },
+    {
+      "intrebare": "Ce înlocuiește compresorul mecanic în această turbină?",
+      "raspuns": "Undele de detonare generate direct în camera de ardere, printr-un proces numit „ardere cu creștere a presiunii”."
+    },
+    {
+      "intrebare": "De ce e important să elimini compresorul mecanic?",
+      "raspuns": "Pentru că, la turbinele clasice, compresorul poate consuma până la jumătate din puterea produsă de turbină doar pentru a comprima aerul."
+    },
+    {
+      "intrebare": "E acest sistem gata pentru piață?",
+      "raspuns": "Nu — testul de 303 secunde e o demonstrație de laborator, următorul pas fiind extinderea duratei de funcționare și testarea la scară mai mare."
+    }
+  ],
+  "avioanele-electrice-ar-putea-zbura-in-europa-pana-in-2030-de-ce-conteaza-pentru": [
+    {
+      "intrebare": "Ce autonomie au primele avioane electrice vizate?",
+      "raspuns": "Până la 500 de kilometri, suficient pentru rute regionale scurte."
+    },
+    {
+      "intrebare": "Ce rute exemplu sunt menționate pentru zboruri electrice?",
+      "raspuns": "Londra–Dublin, Atena–Santorini, Barcelona–Ibiza, Nisa–Corsica, Roma–Sardinia."
+    },
+    {
+      "intrebare": "Cine a comentat scepticismul din industrie?",
+      "raspuns": "Carlos López de la Osa, manager tehnic în aviație la Federația Europeană pentru Transporturi și Mediu."
+    },
+    {
+      "intrebare": "De ce nu sunt garantate beneficiile de mediu ale avioanelor electrice?",
+      "raspuns": "Pentru că depind de sursa energiei electrice de încărcare și de emisiile din producția bateriilor."
+    },
+    {
+      "intrebare": "Ce implicație are aviația electrică pentru infrastructura energetică?",
+      "raspuns": "Ar necesita infrastructură de încărcare rapidă dedicată la aeroporturi, cu puteri mult mai mari decât la mașinile electrice."
+    }
+  ],
+  "cine-e-energyorb-platforma-europeana-de-monitorizare-solar-si-stocare": [
+    {
+      "intrebare": "Ce trei funcționalități principale oferă EnergyOrb?",
+      "raspuns": "Monitorizare/operare cloud pentru active solare și de stocare, instrumente de proiectare și planificare, și o arhitectură modulară extensibilă spre alte tipuri de energie."
+    },
+    {
+      "intrebare": "Unde este găzduită platforma EnergyOrb?",
+      "raspuns": "Integral în Uniunea Europeană, cu o abordare declarată GDPR-first privind datele."
+    },
+    {
+      "intrebare": "Are EnergyOrb prețuri sau planuri tarifare publicate?",
+      "raspuns": "Nu, pagina oficială nu conține informații despre prețuri sau planuri tarifare."
+    },
+    {
+      "intrebare": "EnergyOrb este deja disponibilă pentru utilizatori?",
+      "raspuns": "Nu, platforma este descrisă explicit ca fiind încă în dezvoltare, fără dată de lansare confirmată."
+    },
+    {
+      "intrebare": "Ce condiție pune compania înainte de lansarea publică?",
+      "raspuns": "Atingerea standardelor interne de calitate, securitate și fiabilitate, fără un termen estimativ anunțat."
+    }
+  ],
+  "topul-carwow-al-masinilor-electrice-2026-si-ce-inseamna-pentru-incarcarea-acasa": [
+    {
+      "intrebare": "Care e mașina electrică din top cu cea mai mare autonomie declarată?",
+      "raspuns": "BMW iX3, cu până la 493 mile (aproximativ 793 km)."
+    },
+    {
+      "intrebare": "Cât costă de la ce preț Mercedes CLA Electric, liderul topului Carwow?",
+      "raspuns": "De la 39.150 lire, aproximativ 223.000 lei la curs orientativ."
+    },
+    {
+      "intrebare": "Cât durează încărcarea acasă față de un punct public rapid?",
+      "raspuns": "Aproximativ 10 ore la 7 kW acasă, față de 30-60 de minute la un punct public rapid."
+    },
+    {
+      "intrebare": "Se vând toate modelele din topul Carwow și în România?",
+      "raspuns": "Nu, topul reflectă piața britanică — disponibilitatea și prețurile locale din România diferă."
+    },
+    {
+      "intrebare": "Ce pas practic recomandă articolul înainte de achiziția unei mașini electrice?",
+      "raspuns": "Planificarea din timp a instalației electrice pentru o stație de încărcare acasă, nu improvizarea ei ulterioară."
+    }
+  ],
+  "ce-se-intampla-cu-curentul-electric-de-acum-inainte": [
+    {
+      "intrebare": "De ce s-a oprit Reactorul 1 de la Cernavodă, potrivit videoclipului?",
+      "raspuns": "Din lipsă de apă pentru răcire din Dunăre."
+    },
+    {
+      "intrebare": "Cum a evoluat ponderea cărbunelui în mixul energetic românesc?",
+      "raspuns": "De la aproximativ 43% în 2008, la 18% în 2022 și circa 14% în 2025, potrivit datelor Transelectrica citate."
+    },
+    {
+      "intrebare": "Cât costă lunar certificatele de CO2 pentru o centrală de 500 MW pe cărbune?",
+      "raspuns": "Aproximativ 24 milioane de euro pe lună, la un preț de 80 euro pe tonă de CO2."
+    },
+    {
+      "intrebare": "Ce pondere are energia nucleară în producția de electricitate a Franței?",
+      "raspuns": "Aproape trei sferturi din toată electricitatea produsă, cu 19 centrale și 57 de reactoare active."
+    },
+    {
+      "intrebare": "Cât de mult a crescut concentrația de CO2 din atmosferă și cu ce viteză?",
+      "raspuns": "A depășit 420 ppm, față de un interval natural istoric de 180-300 ppm, cu o viteză de zeci-sute de ori mai mare decât tranzițiile naturale documentate."
+    }
+  ],
+  "electrician-autorizat-cu-specializare-in-sisteme-fotovoltaice-teo": [
+    {
+      "intrebare": "Câți ani de experiență în domeniul electric are Teo Marcu?",
+      "raspuns": "Peste 20 de ani de experiență diversificată în electric."
+    },
+    {
+      "intrebare": "Ce certificare deține Teo Marcu și din ce an?",
+      "raspuns": "Certificat de Calificare Profesională pentru Electrician în Construcții, obținut în 2022."
+    },
+    {
+      "intrebare": "Ce tipuri de sisteme fotovoltaice proiectează și montează?",
+      "raspuns": "Atât sisteme conectate la rețea, cât și sisteme cu stocare pe baterii."
+    },
+    {
+      "intrebare": "Din ce an activează ca electrician autorizat freelance?",
+      "raspuns": "Din 2024, după ce anterior a lucrat ca electrician sisteme fotovoltaice la Smart Fotovoltaic Solutions (2022-2024)."
+    },
+    {
+      "intrebare": "Ce alte servicii oferă, pe lângă partea strict electrică?",
+      "raspuns": "Automatizare a locuinței (iluminat inteligent, prize și senzori conectați) și rețele/supraveghere video."
+    }
+  ],
+  "otilia-nutu-romania-avea-nevoie-de-stocare-de-cinci-ori-mai-mare-ca-sa-evite-cri": [
+    {
+      "intrebare": "Ce procent din necesarul de vârf acoperă stocarea în România, față de Bulgaria?",
+      "raspuns": "7,5% în România, față de 40% în Bulgaria."
+    },
+    {
+      "intrebare": "De câte ori mai mare ar fi trebuit să fie capacitatea de stocare a României, potrivit Otiliei Nuțu?",
+      "raspuns": "De aproximativ cinci ori mai mare decât cea actuală."
+    },
+    {
+      "intrebare": "Cât timp ar putea susține consumul capacitatea actuală de stocare a României?",
+      "raspuns": "Cel mult o oră, și doar parțial."
+    },
+    {
+      "intrebare": "Cu cât s-au ieftinit bateriile față de 2010, potrivit articolului?",
+      "raspuns": "De aproximativ 15 ori mai ieftine."
+    },
+    {
+      "intrebare": "Cine este Otilia Nuțu?",
+      "raspuns": "Membră fondatoare a Expert Forum și analistă de politici publice în energie."
+    }
+  ],
+  "rpia-solarul-a-sustinut-sistemul-energetic-in-starea-de-alerta-dar-lipseste-stoc": [
+    {
+      "intrebare": "Ce procent din consumul de vârf a acoperit solarul în perioada stării de alertă?",
+      "raspuns": "Peste 50%, potrivit RPIA."
+    },
+    {
+      "intrebare": "Câtă capacitate fotovoltaică nouă a conectat România în ultimii patru ani?",
+      "raspuns": "Peste 7 GW."
+    },
+    {
+      "intrebare": "Ce capacitate de stocare are România acum și de câtă ar fi nevoie până în 2030?",
+      "raspuns": "Aproximativ 3 GWh acum, față de peste 10 GWh necesari până în 2030, potrivit Transelectrica."
+    },
+    {
+      "intrebare": "Ce cere RPIA pentru a debloca investițiile în stocare?",
+      "raspuns": "Facilități fiscale, reduceri temporare de taxe pentru doi ani și avizare simplificată în maximum 6 luni."
+    },
+    {
+      "intrebare": "Cum se compară prețul energiei din România cu cel din Spania?",
+      "raspuns": "107 euro/MWh în România, față de aproximativ 61 euro/MWh în Spania în 2025."
+    }
+  ],
+  "cum-functioneaza-stocarea-energiei-cu-acumulatori-pentru-sistemele-fotovoltaice": [
+    {
+      "intrebare": "Ce capacitate minimă de stocare recomandă ghidul pentru un consum de 350 kWh/lună?",
+      "raspuns": "5 kWh, calculați ca 4 kWh consum nocturn plus 30% rezervă."
+    },
+    {
+      "intrebare": "Ce tehnologie de acumulatori recomandă ghidul pentru uz rezidențial?",
+      "raspuns": "LiFePO4 (litiu-fer-fosfat), pentru stabilitate termică și durată de viață mai mare."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă acumulatorul nu e compatibil cu invertorul hibrid?",
+      "raspuns": "Sincronizarea dintre componente nu funcționează corect, iar sistemul nu livrează performanța promisă."
+    },
+    {
+      "intrebare": "Ce mărci de acumulatori sunt date ca exemplu?",
+      "raspuns": "Deye, Power Cube și DAH Solar."
+    },
+    {
+      "intrebare": "Ce parteneriat oficial menționează Ecobat Energy?",
+      "raspuns": "Este partener oficial Deye în România."
+    }
+  ],
+  "cine-e-depozit-solar-retailer-roman-de-panouri-invertoare-si-baterii": [
+    {
+      "intrebare": "Unde este localizat Depozit Solar?",
+      "raspuns": "În Făgăraș, județul Brașov."
+    },
+    {
+      "intrebare": "Ce plajă de puteri acoperă invertoarele din ofertă?",
+      "raspuns": "De la 5 kW (rezidențial) până la 125 kW (comercial)."
+    },
+    {
+      "intrebare": "Cât costă un panou Jinko Tiger Neo de 515W, ca reper?",
+      "raspuns": "490,05 lei."
+    },
+    {
+      "intrebare": "Ce capacități de stocare pe baterii oferă platforma?",
+      "raspuns": "Între 5 kWh și 215 kWh, de la mărci precum Dyness, Deye, Huawei, BYD, Leapton și Pylontech."
+    },
+    {
+      "intrebare": "Ce opțiuni de finanțare oferă Depozit Solar?",
+      "raspuns": "Plată în rate prin parteneri precum LeanPay și TBIPay."
+    }
+  ],
+  "cine-e-fabrica-de-baterii-retailer-roman-de-sisteme-de-stocare-si-fotovoltaice": [
+    {
+      "intrebare": "Unde are depozit Fabrica de Baterii?",
+      "raspuns": "La Ciorogârla, județul Ilfov."
+    },
+    {
+      "intrebare": "Cât costă un invertor hibrid Deye de 6 kW, ca reper de preț?",
+      "raspuns": "3.999 lei, redus de la 5.771 lei."
+    },
+    {
+      "intrebare": "Ce programe de finanțare menționează compania?",
+      "raspuns": "Participare la programul Casa Verde 2024."
+    },
+    {
+      "intrebare": "Ce plajă de kituri fotovoltaice complete oferă?",
+      "raspuns": "De la 3-5 kW (rezidențial) până la 21-100 kW (comercial)."
+    },
+    {
+      "intrebare": "Oferă compania și servicii de montaj?",
+      "raspuns": "Da, conectare cu instalatori certificați pentru montaj."
+    }
+  ],
+  "preturi-orientative-pentru-prosumatori-cat-platesti-si-cat-incasezi-pe-kwh-in-va": [
+    {
+      "intrebare": "Care furnizor are cel mai mare preț de vânzare către prosumatori?",
+      "raspuns": "PPC Energie Simplu Anual, cu 0,892 lei/kWh."
+    },
+    {
+      "intrebare": "Care furnizor oferă cel mai mic preț de cumpărare a surplusului?",
+      "raspuns": "Premiere Energy, cu 0,297 lei/kWh, deși vinde la 0,83 lei/kWh."
+    },
+    {
+      "intrebare": "Care furnizor are cele mai apropiate prețuri de vânzare și cumpărare?",
+      "raspuns": "E.ON DUO, cu 0,80766 lei/kWh vânzare și 0,80437 lei/kWh cumpărare."
+    },
+    {
+      "intrebare": "Pentru ce perioadă sunt valabile aceste prețuri?",
+      "raspuns": "Iulie și august 2025."
+    },
+    {
+      "intrebare": "De ce spune Asociația că datele sunt orientative, nu oficiale?",
+      "raspuns": "Pentru că proiectul de colectare e complex, cu un număr mare de contracte diferite la fiecare furnizor."
+    }
+  ],
+  "romania-e-pe-locul-3-in-europa-la-pretul-energiei-care-sunt-cauzele": [
+    {
+      "intrebare": "Ce preț a avut energia cu livrare bandă în România?",
+      "raspuns": "148,3 euro/MWh, cu aproximativ 50% peste media UE."
+    },
+    {
+      "intrebare": "Pe ce loc e România în Europa la prețul energiei?",
+      "raspuns": "Locul 3, printre cele mai scumpe piețe din Europa."
+    },
+    {
+      "intrebare": "De câte ori mai scump produc hidrocentralele românești față de cele canadiene?",
+      "raspuns": "De 3-4 ori mai mult, potrivit analizei citate."
+    },
+    {
+      "intrebare": "Ce rol au marii furnizori în distorsionarea pieței, potrivit articolului?",
+      "raspuns": "Au achiziționat parcuri fotovoltaice, devenind simultan producători și traderi de energie."
+    },
+    {
+      "intrebare": "Ce soluție individuală recomandă Asociația Prosumatorilor?",
+      "raspuns": "Instalarea de panouri fotovoltaice proprii (prosumatorism), ca apărare directă împotriva costurilor mari."
+    }
+  ],
+  "factura-de-energie-cel-mai-mare-impozit-lunar-din-romania-cat-din-suma-nu-e-ener": [
+    {
+      "intrebare": "Ce procent din factura de energie reprezintă taxe și tarife, potrivit articolului?",
+      "raspuns": "Aproximativ două treimi din sumă."
+    },
+    {
+      "intrebare": "Ce prag consideră UE problematic pentru taxele din factura de energie?",
+      "raspuns": "O treime din factură."
+    },
+    {
+      "intrebare": "Cât din consumul casnic de energie au livrat prosumatorii în 2025?",
+      "raspuns": "Aproape 20%, fără a fi plătiți corespunzător de furnizori."
+    },
+    {
+      "intrebare": "Ce soluție fiscală propune Asociația?",
+      "raspuns": "Reducerea TVA la energie la 5%."
+    },
+    {
+      "intrebare": "Ce alte reforme propune articolul?",
+      "raspuns": "Reformă radicală a companiilor energetice de stat și independență reală pentru ANRE."
+    }
+  ],
+  "programul-de-baterii-din-pnrr-voucherul-de-5000-euro-si-problema-dispozitivelor": [
+    {
+      "intrebare": "Ce valoare are voucherul din programul de baterii PNRR?",
+      "raspuns": "5.000 de euro per prosumator."
+    },
+    {
+      "intrebare": "Ce procent din beneficiari au primit exclusiv dispozitive DSU?",
+      "raspuns": "70%, fără posibilitatea de a alege altă soluție."
+    },
+    {
+      "intrebare": "De ce sunt problematice dispozitivele DSU?",
+      "raspuns": "Nu sunt omologate în România, nu apar în baza de date națională și nu comunică cu invertoarele fotovoltaice existente."
+    },
+    {
+      "intrebare": "Cât costă real bateriile LFP ofertate, față de valoarea voucherului?",
+      "raspuns": "Adesea între 1.000 și 2.000 de euro, mult sub valoarea voucherului de 5.000 de euro."
+    },
+    {
+      "intrebare": "Cine a semnat comunicatul critic despre program?",
+      "raspuns": "Dan Pîrșan, președintele Asociației Prosumatorilor și Comunităților de Energie."
+    }
+  ],
+  "o-ferma-solara-din-massachusetts-ridicata-la-3-metri-deasupra-afinilor-schimba-g": [
+    {
+      "intrebare": "Cu cât au fost ridicate panourile solare deasupra câmpurilor de afine?",
+      "raspuns": "Cu aproape 3 metri (9,8 picioare), suficient cât tractoarele să poată opera dedesubt fără să afecteze plantele."
+    },
+    {
+      "intrebare": "Ce efect a avut umbrirea parțială asupra temperaturii solului?",
+      "raspuns": "Senzorii au înregistrat temperaturi mai scăzute ale solului și evaporare redusă sub panouri."
+    },
+    {
+      "intrebare": "Cum a fost protejat sistemul radicular al plantelor în timpul montajului?",
+      "raspuns": "Prin cabluri suspendate și fundații metalice speciale, care au evitat afectarea rădăcinilor."
+    },
+    {
+      "intrebare": "Ce temeri aveau agronomii înainte de recoltare?",
+      "raspuns": "Că lumina redusă ar putea afecta metabolismul plantelor și ar reduce dimensiunea sau calitatea fructelor."
+    },
+    {
+      "intrebare": "Ce diferențe au arătat afinele crescute sub panouri față de cele expuse direct la soare?",
+      "raspuns": "Au fost mai mari, mai suculente, mai dulci, cu umiditate internă mai bună și aciditate mai scăzută."
+    },
+    {
+      "intrebare": "Ce capacitate de stocare este integrată în sistem?",
+      "raspuns": "O baterie de 13,5 MWh, care permite stocarea excesului de energie solară."
+    },
+    {
+      "intrebare": "Ce demonstrează acest proiect pentru viitorul terenurilor agricole?",
+      "raspuns": "Că panourile solare și agricultura comercială pot coexista pe același teren, cu beneficii măsurabile pentru randament și consum de apă."
+    }
+  ],
+  "vanzarile-de-baterii-de-casa-explodeaza-in-elvetia-dar-calculul-tot-nu-iese": [
+    {
+      "intrebare": "Ce procent din instalațiile fotovoltaice noi din Elveția includ acum și o baterie?",
+      "raspuns": "Aproape jumătate din instalațiile noi, potrivit raportului Swissolar din 2025."
+    },
+    {
+      "intrebare": "Cât costa o baterie instalată în Elveția la sfârșitul lui 2024?",
+      "raspuns": "În medie circa 800 CHF pe kWh, potrivit Swissolar."
+    },
+    {
+      "intrebare": "Ce preț ar face bateriile cu adevărat atractive financiar, potrivit instalatorilor?",
+      "raspuns": "Instalatorii chestionați estimează că ar fi nevoie de 300-600 CHF pe kWh."
+    },
+    {
+      "intrebare": "Cât costă un sistem tipic de 10 kWh?",
+      "raspuns": "6.400 CHF pentru echipament, plus 1.300 CHF pentru instalare."
+    },
+    {
+      "intrebare": "Ce pondere au planificarea, instalarea și birocrația din prețul final al unei baterii?",
+      "raspuns": "Aproximativ 40% din prețul final, ceea ce dezavantajează mai ales sistemele mici."
+    },
+    {
+      "intrebare": "Ce schimbare legislativă a intrat în vigoare în Elveția din 2026?",
+      "raspuns": "A fost eliminată dubla taxare a energiei stocate și apoi returnate în rețea, cu tarife de rețea."
+    },
+    {
+      "intrebare": "De ce cumpără totuși elvețienii baterii, dacă profitabilitatea e incertă?",
+      "raspuns": "Swissolar arată că principalul motiv este dorința de independență energetică, nu randamentul financiar."
+    }
+  ],
+  "cinci-concepte-de-statii-de-incarcare-ev-gandite-ca-sculpturi-solare-nu-ca-simpl": [
+    {
+      "intrebare": "Cine a proiectat cele cinci concepte de stații de încărcare EV?",
+      "raspuns": "Designerul Michael Jantzen."
+    },
+    {
+      "intrebare": "Cum funcționează Silver Solar Charging Station?",
+      "raspuns": "Are un panou fotovoltaic mare pe un braț vertical, care alimentează baterii conectate direct la punctele de încărcare."
+    },
+    {
+      "intrebare": "Ce diferențiază Black Waves Solar Charging Station de celelalte concepte?",
+      "raspuns": "Formă ondulată, din secțiuni de oțel curbate, acoperite cu panouri fotovoltaice, spre deosebire de liniile drepte ale celorlalte."
+    },
+    {
+      "intrebare": "Din ce e construită Yellow Solar Charging Station?",
+      "raspuns": "Dintr-o cupolă arcuită din beton compozit ecologic, cu panouri fotovoltaice circulare montate în jurul vârfului."
+    },
+    {
+      "intrebare": "Ce o face diferită pe Solar Wind Charging Station față de celelalte patru?",
+      "raspuns": "Mașinile nu intră sub structură, ci parchează alături; combină un panou solar cu o turbină eoliană verticală."
+    },
+    {
+      "intrebare": "Aceste stații sunt deja disponibile comercial?",
+      "raspuns": "Nu, sunt concepte de design, undeva între infrastructură funcțională și sculptură de exterior."
+    },
+    {
+      "intrebare": "Ce sursă de energie folosesc toate cele cinci concepte?",
+      "raspuns": "Energie regenerabilă (solară, respectiv solară și eoliană la ultimul concept), stocată în baterii proprii."
+    }
+  ],
+  "cum-isi-incarca-un-proprietar-de-tesla-masina-direct-din-surplusul-de-energie-so": [
+    {
+      "intrebare": "Ce echipamente combină Ryan Jay Cowan pentru a-și încărca mașina din surplus solar?",
+      "raspuns": "Panouri solare, o baterie Tesla Powerwall 3 și o mașină electrică Tesla."
+    },
+    {
+      "intrebare": "Cum decide sistemul ce energie ajunge la mașină?",
+      "raspuns": "Aplicația Tesla direcționează automat energia solară neconsumată de casă și nefolosită de baterie spre mașină."
+    },
+    {
+      "intrebare": "Utilizatorul are control asupra procesului?",
+      "raspuns": "Da, aplicația Tesla permite reglarea cât din energia solară merge spre mașină și cât rămâne pentru rețea."
+    },
+    {
+      "intrebare": "Ce alternativă există pentru cei fără Tesla Powerwall?",
+      "raspuns": "Aplicații terțe precum Charge HQ, care oferă o funcție similară de sincronizare a încărcării cu producția solară."
+    },
+    {
+      "intrebare": "Este nevoie de intervenție manuală de fiecare dată când mașina se conectează?",
+      "raspuns": "Nu, sistemul solar și Powerwall-ul gestionează automat distribuția energiei odată configurat."
+    },
+    {
+      "intrebare": "Care e beneficiul practic al acestei sincronizări?",
+      "raspuns": "Mașina se încarcă cu energie deja produsă acasă, în loc să consume direct din rețea."
+    },
+    {
+      "intrebare": "Unde a fost prezentată această configurație?",
+      "raspuns": "Într-un clip TikTok publicat de utilizatorul Ryan Jay Cowan (@ryanjaycowan)."
+    }
+  ],
+  "o-casa-de-980-m²-din-brazilia-a-redus-factura-la-curent-de-la-1200-la-200-de-rea": [
+    {
+      "intrebare": "Câte panouri solare are sistemul instalat de Wanda Martins și în ce an?",
+      "raspuns": "48 de panouri, instalate în 2016."
+    },
+    {
+      "intrebare": "Cât a costat investiția și ce putere are sistemul?",
+      "raspuns": "70.000 de reali brazilieni (R$), pentru un sistem de 12,24 kWp."
+    },
+    {
+      "intrebare": "Cu cât a scăzut factura lunară la curent după instalare?",
+      "raspuns": "De la circa 1.200 R$ la aproximativ 200 R$, o reducere de circa 83%."
+    },
+    {
+      "intrebare": "Ce procent din consumul casei acoperă sistemul instalat?",
+      "raspuns": "Aproximativ 90% din consumul familiei, cu o producție estimată de 16.500 kWh pe an."
+    },
+    {
+      "intrebare": "Ce reducere a raportat proiectul Cohab Solar din Curitiba?",
+      "raspuns": "Peste 80%, cu un exemplu concret în care factura a scăzut de la 130 la 20 reali (84%)."
+    },
+    {
+      "intrebare": "Ce rezultate a avut sistemul de 44 de panouri din Novo Hamburgo?",
+      "raspuns": "A acoperit 100% din consumul propriu, cu surplus generat, și a redus factura cu 85%, economisind circa 15.000 R$ pe an."
+    },
+    {
+      "intrebare": "Cine a publicat inițial datele despre cazul din Maringá?",
+      "raspuns": "Raportul citat provine de la Canal Solar, publicat pe 3 octombrie 2020."
+    }
+  ],
+  "ce-sunt-panourile-solare-plug-in-si-cum-se-instaleaza-pe-balcon-sau-pe-perete": [
+    {
+      "intrebare": "Ce sunt panourile solare \"plug-in\"?",
+      "raspuns": "Sisteme fotovoltaice de mici dimensiuni, montate pe balcon, perete, terasă sau grădină, conectate direct la priza locuinței."
+    },
+    {
+      "intrebare": "Ce conține un kit tipic de panouri plug-in?",
+      "raspuns": "Unul sau două panouri, un microinvertor, sistem de prindere, cabluri și o priză de conectare, uneori și o baterie mică."
+    },
+    {
+      "intrebare": "Ce rol are microinvertorul în sistem?",
+      "raspuns": "Transformă curentul continuu produs de panou în curent alternativ, utilizabil de aparatele din casă."
+    },
+    {
+      "intrebare": "Poate un sistem plug-in alimenta întreaga locuință?",
+      "raspuns": "Nu, e gândit să reducă doar o parte din consumul de zi luat din rețea, nu să înlocuiască alimentarea completă."
+    },
+    {
+      "intrebare": "Ce orientare produce cea mai multă energie?",
+      "raspuns": "O poziție orientată spre sud, fără umbrire de la copaci, clădiri vecine sau balustrade."
+    },
+    {
+      "intrebare": "Ce riscuri trebuie evitate la instalare?",
+      "raspuns": "Fixare instabilă expusă la vânt și cabluri neprotejate, prinse în uși/ferestre sau care pot provoca împiedicare."
+    },
+    {
+      "intrebare": "Cui i se adresează în special aceste sisteme?",
+      "raspuns": "Chiriașilor, proprietarilor de apartamente și celor cu acoperișuri nepotrivite pentru panouri clasice."
+    }
+  ],
+  "ce-inseamna-standardul-nzeb-pentru-casele-noi": [
+    {
+      "intrebare": "Ce înseamnă mai exact nZEB?",
+      "raspuns": "Nearly Zero Energy Building — o clădire al cărei consum energetic e aproape zero, acoperit în cea mai mare parte din surse proprii, de regulă solare."
+    },
+    {
+      "intrebare": "Ce grosime de izolație are o casă nZEB?",
+      "raspuns": "Vată bazaltică de 20-30 cm, în funcție de nivelul de eficiență energetică țintit."
+    },
+    {
+      "intrebare": "Ce coeficient termic ar trebui să aibă ferestrele unei case nZEB?",
+      "raspuns": "Aproximativ Ug 0,7 la toc și Ug 0,4 la sticlă, mult sub ce se montează la o construcție obișnuită."
+    },
+    {
+      "intrebare": "De ce contează etanșarea la aer și vapori la fel de mult ca izolația?",
+      "raspuns": "Pentru că o etanșare făcută prost anulează practic beneficiul izolației — aerul și umezeala găsesc drum prin structură, indiferent cât de groasă e vata bazaltică."
+    }
+  ],
+  "structura-clt-si-punti-termice-cum-arata-un-santier-nzeb-corect": [
+    {
+      "intrebare": "Ce abatere maximă e admisă la montajul structurii CLT?",
+      "raspuns": "1-2 mm la nivelul grinzii inversate — peste această toleranță apar interstiții care compromit izolarea termică."
+    },
+    {
+      "intrebare": "De ce se izolează și grinda inversată, nu doar placa?",
+      "raspuns": "Ca să elimine puntea termică de la baza structurii, una dintre cele mai frecvente surse de pierdere de căldură la casele insuficient executate."
+    },
+    {
+      "intrebare": "Ce sunt accesoriile anti-punte termică?",
+      "raspuns": "Elemente metalice dedicate pentru fixarea structurii, care nu conduc căldura prin izolație, spre deosebire de șuruburile și consolele obișnuite."
+    },
+    {
+      "intrebare": "Ce garanție are o învelitoare din tablă fălțuită inox?",
+      "raspuns": "Până la 40 de ani, în variantele premium folosite la proiectele nZEB."
+    }
+  ],
+  "puterea-din-bateriile-prosumatorilor-a-depasit-stocarea-nationala": [
+    {
+      "intrebare": "Câtă putere de stocare are România la nivel național?",
+      "raspuns": "Aproximativ 600 MW, din care jumătate aparține unui singur operator privat."
+    },
+    {
+      "intrebare": "Cât reprezintă puterea instalată în bateriile prosumatorilor?",
+      "raspuns": "Cam tot 600 MW oficial la finalul lui 2025, dar APCE estimează cifra reală la peste 800 MW."
+    },
+    {
+      "intrebare": "De ce sunt subevaluate cifrele oficiale ANRE?",
+      "raspuns": "Pentru că nu toți prosumatorii și-au declarat integral puterea instalată, iar puterea nominală măsoară capacitatea de descărcare, nu doar stocarea."
+    },
+    {
+      "intrebare": "Cât de mare e deficitul de energie în orele de vârf?",
+      "raspuns": "Între 2.000 și 4.000 MW seara și dimineața, potrivit APCE."
+    }
+  ],
+  "tva-0-pentru-panouri-si-baterii-ce-cere-asociatia-prosumatorilor": [
+    {
+      "intrebare": "Ce prag de putere ar acoperi TVA 0% cerut de APCE?",
+      "raspuns": "Sisteme fotovoltaice de până la 27 kW, plus bateriile de stocare aferente."
+    },
+    {
+      "intrebare": "Când a introdus Germania o măsură similară?",
+      "raspuns": "De la 1 ianuarie 2023, cu rezultate vizibile în accelerarea investițiilor private."
+    },
+    {
+      "intrebare": "Cât ar costa TVA 0% bugetul de stat, anual?",
+      "raspuns": "Aproximativ 129 milioane euro TVA neîncasată, potrivit calculelor APCE."
+    },
+    {
+      "intrebare": "Ce investiții private ar mobiliza măsura, potrivit estimărilor?",
+      "raspuns": "Circa 614 milioane euro anual, plus 768 MW putere nouă și 1,54 GWh capacitate nouă de stocare."
+    }
+  ],
+  "legea-obliga-prosumatorii-sa-instaleze-baterii-pana-in-2027": [
+    {
+      "intrebare": "Până când trebuie prosumatorii să instaleze baterii?",
+      "raspuns": "Până la 31 decembrie 2027, conform amendamentului adoptat pe 26 iunie 2024."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă nu se respectă termenul?",
+      "raspuns": "Injecția în rețea se limitează la maximum 3 kW, indiferent de puterea reală a panourilor instalate."
+    },
+    {
+      "intrebare": "Câți prosumatori sunt afectați de această obligație?",
+      "raspuns": "Aproximativ 99% din cei 121.000 de prosumatori existenți în România."
+    },
+    {
+      "intrebare": "De ce intră legea în conflict cu programul Casa Verde Fotovoltaice?",
+      "raspuns": "Pentru că regulile programului interzic modificarea sistemului timp de 5 ani de la instalare, ceea ce face imposibilă adăugarea legală a unei baterii în acel interval."
+    }
+  ],
+  "ce-este-protocolul-knx-si-de-ce-e-standardul-smart-home": [
+    {
+      "intrebare": "Ce este KNX?",
+      "raspuns": "Un standard internațional de automatizare a clădirilor, dezvoltat din anii '90, bazat de regulă pe cablare dedicată."
+    },
+    {
+      "intrebare": "De ce se recomandă KNX mai ales la case noi?",
+      "raspuns": "Pentru că necesită cablare dedicată, montată ideal din faza de construcție sau renovare majoră, nu ca adăugire ulterioară."
+    },
+    {
+      "intrebare": "Ce avantaj are un sistem cablat față de unul wireless?",
+      "raspuns": "Fiabilitate mai mare — nu depinde de semnal radio și nu are interferențele specifice soluțiilor wireless."
+    },
+    {
+      "intrebare": "Ce este Loxone Miniserver?",
+      "raspuns": "Un dispozitiv central care coordonează întreaga instalație smart home dintr-o platformă unică, alternativă la abordarea KNX clasică."
+    }
+  ],
+  "cum-arata-o-casa-complet-automatizata-proiect-real-din-romania": [
+    {
+      "intrebare": "Ce diferențiază o casă cu adevărat automatizată de una cu \"gadgeturi smart\"?",
+      "raspuns": "Integrarea — toate sistemele (lumină, climă, jaluzele, audio, securitate) sunt coordonate central, cu scenarii predefinite, nu controlate separat din aplicații diferite."
+    },
+    {
+      "intrebare": "Când ar trebui planificată automatizarea unei case?",
+      "raspuns": "Din faza de proiectare a instalației electrice, nu ca adăugire ulterioară — la fel cum casele nZEB includ tot mai des smart home în oferta standard."
+    },
+    {
+      "intrebare": "De ce variază atât de mult costul unei automatizări complete?",
+      "raspuns": "Depinde de suprafață, numărul de zone controlate separat și tipul de protocol ales (cablat vs. wireless)."
+    }
+  ],
+  "amenajarea-gradinii-pas-cu-pas-zonare-materiale-si-greseli": [
+    {
+      "intrebare": "Care e primul pas real la amenajarea unei grădini?",
+      "raspuns": "Măsurarea suprafeței totale și notarea formei exacte a terenului, înainte de orice decizie legată de plante sau materiale."
+    },
+    {
+      "intrebare": "Ce zone funcționale ar trebui să aibă o grădină bine gândită?",
+      "raspuns": "Zonă de relaxare/socializare, eventual zonă de joacă, zonă productivă și alei de acces care leagă totul coerent."
+    },
+    {
+      "intrebare": "Ce materiale rezistă cel mai bine în timp la exterior?",
+      "raspuns": "Piatra naturală, lemnul tratat, pietrișul pentru alei, metalul rezistent la coroziune și ratanul sintetic (nu cel natural)."
+    }
+  ],
+  "arhitectura-peisagistica-cele-6-etape-ale-unui-proiect-de-gradina": [
+    {
+      "intrebare": "Care sunt cele 6 etape ale unui proiect de arhitectură peisagistică?",
+      "raspuns": "Analiza sitului, definirea obiectivelor, conceptualizare, proiect detaliat, documentație tehnică și implementare."
+    },
+    {
+      "intrebare": "Ce se analizează la etapa \"analiza sitului\"?",
+      "raspuns": "Clima locală, topografia terenului și vegetația deja existentă — ce e realist de făcut acolo, nu ce îți dorești în abstract."
+    },
+    {
+      "intrebare": "Ce înseamnă design biofilic în peisagistică?",
+      "raspuns": "Integrarea naturii cât mai aproape de arhitectura casei, una dintre tendințele actuale menționate alături de spații multifuncționale și tehnologie integrată."
+    }
+  ],
+  "irigatii-automate-si-amenajarea-terenului-ce-echipamente-ai-nevoie": [
+    {
+      "intrebare": "Ce echipamente de bază ai nevoie pentru irigații automate?",
+      "raspuns": "Pistoale și aspersoare pentru stropit, furtunuri dedicate, mufe și conectori de irigare, plus programatoare de stropire."
+    },
+    {
+      "intrebare": "Cum se amenajează corect un teren în pantă?",
+      "raspuns": "Prin terasarea solului, cu consolidarea fiecărei terase — altfel apa de ploaie erodează solul și spală plantările recente."
+    },
+    {
+      "intrebare": "Ce e nevoie pentru un iaz decorativ funcțional pe termen lung?",
+      "raspuns": "Adâncime corect calculată, folie PVC de impermeabilizare acoperită corespunzător, plus pompă de recirculare și menținerea nivelului de oxigen din apă."
+    }
+  ]
+}

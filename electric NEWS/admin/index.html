@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard admin — Electric NEWS</title>
+<style>
+  :root {
+    --navy:#12213A; --teal:#0EA5A0; --mint:#2DD4BF;
+    --bg:#F5F7F9; --card:#FFFFFF; --text:#12213A; --muted:#5F6368; --border:#E5E9EE;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; font-family: -apple-system, "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--text); }
+  .warn-bar { background:var(--navy); color:#fbbf24; font-size:12.5px; text-align:center; padding:8px 16px; font-weight:600; }
+  header.main { background:#fff; border-bottom:1px solid var(--border); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .logo { font-weight:800; font-size:20px; letter-spacing:0.3px; }
+  .logo .news { color:var(--teal); }
+  .dash-tabs { display:flex; gap:8px; }
+  .dash-tab { background:#fff; border:1.5px solid var(--border); padding:10px 18px; border-radius:20px; font-size:13.5px; font-weight:700; color:var(--muted); cursor:pointer; }
+  .dash-tab:hover { border-color:var(--teal); }
+  .dash-tab.active { background:var(--navy); color:#fff; border-color:var(--navy); }
+  .frame-wrap { position:relative; height:calc(100vh - 96px); }
+  iframe { position:absolute; inset:0; width:100%; height:100%; border:none; display:none; }
+  iframe.active { display:block; }
+</style>
+</head>
+<body>
+
+<div class="warn-bar">Pagină internă, doar pentru administrare locală — nu face parte din site-ul public și nu se publică niciodată pe Netlify.</div>
+
+<header class="main">
+  <span class="logo">ELECTRIC<span class="news">NEWS</span></span>
+  <div class="dash-tabs" id="dash-tabs">
+    <button class="dash-tab active" data-target="frame-gestionare">Gestionare conținut</button>
+    <button class="dash-tab" data-target="frame-publica">Publică articol nou</button>
+  </div>
+  <span style="width:120px;"></span>
+</header>
+
+<div class="frame-wrap">
+  <iframe id="frame-gestionare" class="active" src="gestionare/index.html"></iframe>
+  <iframe id="frame-publica" src="publica-articol/index.html"></iframe>
+</div>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll(".dash-tab");
+  var frames = { "frame-gestionare": document.getElementById("frame-gestionare"), "frame-publica": document.getElementById("frame-publica") };
+  Array.prototype.forEach.call(tabs, function (btn) {
+    btn.addEventListener("click", function () {
+      Array.prototype.forEach.call(tabs, function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      Object.keys(frames).forEach(function (id) { frames[id].classList.toggle("active", id === btn.getAttribute("data-target")); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

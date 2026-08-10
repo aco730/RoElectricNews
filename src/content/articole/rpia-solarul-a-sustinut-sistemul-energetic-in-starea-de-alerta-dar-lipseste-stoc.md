@@ -1,0 +1,16 @@
+---
+title: "RPIA: solarul a susținut sistemul energetic în starea de alertă, dar lipsește stocarea"
+categorie: fotovoltaic
+data: 2026-08-06
+sursaNume: "Agerpres"
+sursaUrl: "https://agerpres.ro/economic/2026/08/06/rpia-energia-fotovoltaica-sustine-stabilitatea-sistemului-energetic-in-contextul-starii-de-alerta-as--1582724"
+imagine: "/images/articole/rpia-solarul-a-sustinut-sistemul-energetic-in-starea-de-alerta-dar-lipseste-stoc.webp"
+---
+
+Asociația Industriei Fotovoltaice și a Stocării din România (RPIA) a transmis, printr-un comunicat preluat de Agerpres, că energia solară a menținut echilibrul Sistemului Energetic Național în perioadele de zi din recenta stare de alertă, provocată de secetă și temperaturi extreme care au redus capacitatea de generare din surse convenționale. Potrivit directorului executiv RPIA, Andrei Manea, solarul a acoperit peste 50% din necesarul de consum în orele de vârf ale zilei, în perioadele critice.
+
+Manea a subliniat ritmul de creștere al sectorului: „România a conectat peste 7 GW de capacitate fotovoltaică nouă în mai puțin de patru ani." Problema, spune el, nu e lipsa de generare, ci lipsa infrastructurii care să valorifice acest surplus în afara orelor de soare: „Fără stocare, flexibilitate și reglementare adaptată, nu putem valorifica pe deplin noile investiții în regenerabile."
+
+Cifrele citate arată dimensiunea decalajului: capacitatea actuală de stocare din România (baterii și instalații ale prosumatorilor) e estimată la aproximativ 3 GWh, față de peste 10 GWh necesari până în 2030, potrivit estimărilor Transelectrica. RPIA cere, în acest context, facilități fiscale, reduceri temporare de taxe pe instalații pentru o perioadă de doi ani și simplificarea și accelerarea avizării, cu un termen maxim de 6 luni.
+
+Comunicatul face și o comparație internațională relevantă pentru factura de energie: Spania, care a accelerat dezvoltarea solar-eolian, a ajuns la un preț mediu pe piața angro de aproximativ 61 euro/MWh în 2025, față de 107 euro/MWh în România — o diferență care, indirect, arată cât costă lipsa de flexibilitate a sistemului național în comparație cu o piață unde regenerabilele plus stocarea au fost dezvoltate mai agresiv. Sursă: Agerpres (comunicat RPIA).

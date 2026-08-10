@@ -1,0 +1,16 @@
+---
+title: "Compensare cantitativă vs. compensare lunară: ce înseamnă noua lege pentru factura ta"
+categorie: reglementari-preturi
+data: 2026-07-27
+sursaNume: "Instalatori Fotovoltaice România"
+sursaUrl: "https://instalatori-fotovoltaice.ro/ghid/legea-160-2026-prosumatori-compensare-lunara-gaz-surplus"
+imagine: "/images/articole/compensare-cantitativa-vs-compensare-lunara-ce-inseamna-noua-lege-pentru-factura.webp"
+---
+
+Pentru un prosumator obișnuit, cele două expresii — „compensare cantitativă” și „compensare lunară” — descriu de fapt aceeași schimbare din unghiuri diferite. Compensarea cantitativă e principiul (energia produsă și nefolosită se scade din cea consumată), iar noutatea reală adusă de Legea 160/2026 e ritmul: calculul se face acum lunar, nu la fiecare doi ani cum funcționa mecanismul dinainte.
+
+Mecanic, pe orice factură nouă vei regăsi trei componente separate, nu una singură: ce ai consumat din rețea, plătit la prețul din contract cu toate taxele incluse; cât din ce ai produs a fost folosit ca să-ți acoperi propriul consum, scăzut la același preț dar fără taxe; și cât ai livrat în plus, peste consumul tău, compensat tot fără taxe. Diferența dintre aceste trei sume e ce apare, efectiv, ca sold pe factura lunară — un credit dacă ai produs mai mult decât ai consumat, un debit dacă nu.
+
+Practic, dacă ai un sistem fotovoltaic sub 27 kW, poți alege acum ca surplusul să-ți acopere și factura la gaze naturale, dacă ai ambele utilități la același furnizor — o opțiune care rămâne valabilă minimum 12 luni odată aleasă. Pentru cine are proprietăți multiple pe numele lui, la același furnizor, compensarea se poate extinde și între ele, nu doar la locul unde e instalat sistemul.
+
+Un detaliu important de reținut: aceste reguli sunt garantate prin lege până la 31 decembrie 2030 pentru puteri sub 200 kW — după acea dată, prosumatorii vor trece la un regim bazat pe prețul de piață (PZU mediu ponderat), nu pe compensarea cantitativă actuală. E un orizont clar pentru oricine calculează acum amortizarea unui sistem nou: următorii aproape cinci ani au reguli stabile, cunoscute dinainte.

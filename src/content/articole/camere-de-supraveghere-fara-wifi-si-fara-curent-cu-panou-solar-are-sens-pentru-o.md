@@ -1,0 +1,22 @@
+---
+title: "Camere de supraveghere fără WiFi și fără curent, cu panou solar: are sens pentru o casă smart offline?"
+categorie: smart-home
+data: 2026-07-01
+sursaNume: "buhnici.ro"
+sursaUrl: "https://buhnici.ro/camere-supraveghere-ezviz-fara-wifi-fara-curent/"
+imagine: "/images/articole/camere-de-supraveghere-fara-wifi-si-fara-curent-cu-panou-solar-are-sens-pentru-o.webp"
+---
+
+Pentru zonele fără priză de curent la îndemână și fără semnal Wi-Fi stabil — o poartă la drum, o anexă, o zonă de curte îndepărtată de casă — camerele de supraveghere alimentate solar și conectate prin 4G rezolvă exact problema pe care o rețea clasică de supraveghere nu o poate acoperi. Testele publicate pe modelele EZVIZ Lite (HB8 Lite 4G, cu mufă USB Type-C) și EZVIZ Pro (EB8) arată concret cum funcționează acest tip de instalație complet independentă de infrastructura casei.
+
+Ambele modele combină panoul fotovoltaic cu o baterie internă — Lite vine cu un panou solar cu suport reglabil, iar Pro folosește capacitatea maximă de baterie permisă legal pentru acest tip de dispozitiv. Pentru poziții cu expunere slabă la soare, ambele acceptă și pachete de baterie externă suplimentară, utile în locații izolate. Orientarea ideală a panoului e spre sud, dar testele confirmă o funcționare acceptabilă și la orientare est sau vest.
+
+Conectivitatea dublă — 4G și Wi-Fi — e punctul central al conceptului „fără curent și fără Wi-Fi": camera funcționează complet independent prin rețeaua mobilă, chiar și fără semnal Wi-Fi în zonă, cu upload în timp real către cloud. Acolo unde Wi-Fi există totuși, banda de 2,4 GHz oferă cea mai bună rază și stabilitate, iar utilizatorul poate comuta manual din aplicație între cele două tipuri de conexiune, în funcție de situație.
+
+Din punct de vedere funcțional, camerele oferă detecție AI de prezență umană (cu alertă LED albastru și notificare cu instantaneu), control PTZ (pan-tilt-zoom) de la distanță din telefon, comunicare audio bidirecțională prin difuzoare puternice și funcție de alarmă pentru descurajarea intruziunilor. Stocarea se face fie în cloud criptat, fie local pe card microSD, cu trei moduri de funcționare — permanent (consum mare de baterie), economic și standard.
+
+Diferența notabilă între cele două modele apare la performanța nocturnă: Lite oferă o imagine acceptabilă pe lumină slabă, suficientă pentru identificarea feței în lumină reflectată, în timp ce senzorul superior al modelului Pro captează detalii clare la 4-10 metri distanță în întuneric complet, amplificând lumina disponibilă cu distorsiune minimă de culoare. În testele de autonomie, modelul Lite a păstrat 73% din baterie după o noapte întreagă de funcționare.
+
+Pentru cine are nevoie de supraveghere într-o zonă izolată de rețeaua electrică sau de Wi-Fi a casei, acest tip de cameră solară cu 4G elimină practic bariera de instalare — montajul se face rapid, cu sistem de prindere glisant, fără cablare.
+
+Sursă: buhnici.ro.

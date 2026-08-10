@@ -1,0 +1,112 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import portofoliuData from "../data/portofoliu.json";
+
+interface Proiect { id: string; album: string; cover: string | null; poze: { thumb_s: string }[] }
+const { proiecte } = portofoliuData as { proiecte: Proiect[] };
+
+const fotoProiecte = proiecte.filter((p) => p.album === "fotovoltaice" && p.cover);
+const electProiecte = proiecte.filter((p) => p.album === "electrice" && p.cover);
+
+const heroImg = fotoProiecte[0]?.cover ?? null;
+
+const segmente = [
+  { titlu: "Rezidențial", text: "Instalații fotovoltaice pe acoperiș, cu sau fără stocare pe baterii; conectare la rețea.", img: fotoProiecte[1]?.cover },
+  { titlu: "Comercial", text: "Sisteme pentru firme mici/medii — ferme, pensiuni, service-uri, depozite — dimensionate pe consum real.", img: fotoProiecte[2]?.cover },
+  { titlu: "Consultanță", text: "Dimensionare, calcul randament, acces la finanțare (AFIR, Electric Up, Casa Verde — unde e cazul).", img: fotoProiecte[3]?.cover },
+  { titlu: "Electrică generală", text: "Modernizare tablouri, diagnoză și reparații, branșamente.", img: electProiecte[0]?.cover },
+  { titlu: "Smart & monitorizare", text: "Monitorizare producție de la distanță, automatizări pentru casă și fermă.", img: fotoProiecte[4]?.cover },
+];
+
+const pasi = [
+  "Consultanță și măsurători la fața locului",
+  "Ofertă cu dimensionare corectă (nu supra-vindem kWp)",
+  "Montaj, cu protocoale SSM stricte (înălțime, sub tensiune)",
+  "Recepție cu măsurături + dosar tehnic predat clientului",
+  "Mentenanță și monitorizare ulterioară",
+];
+
+const proofPhotos = [...fotoProiecte.slice(5, 8), ...electProiecte.slice(0, 3)]
+  .flatMap((p) => p.poze.slice(0, 1))
+  .slice(0, 6)
+  .map((f) => f.thumb_s);
+---
+<Layout title="Servicii — Solar Electric Panel" description="Instalații fotovoltaice, stocare și electrică generală în zona Făgăraș — Solar Electric Panel." singleCol>
+  {heroImg ? (
+    <div class="hero-photo-banner">
+      <img src={heroImg} alt="Montaj fotovoltaic Solar Electric Panel" />
+      <div class="hero-photo-content">
+        <h1>Servicii Solar Electric Panel</h1>
+        <p>
+          Furnizor de soluții fotovoltaice și de stocare în baterii — montaj și consultanță —
+          pentru clienți rezidențiali și comerciali din zona Făgăraș. Nu pornim de la zero:
+          echipa noastră are în spate lucrări reale, documentate foto pas cu pas.
+        </p>
+        <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+      </div>
+    </div>
+  ) : (
+    <h1>Servicii</h1>
+  )}
+
+  <div class="stat-card reveal">
+    <div class="stat-icon">📸</div>
+    <div>
+      <div class="stat-number" data-count-to="605">0</div>
+      <div class="stat-label">poze documentate din <span data-count-to="32">0</span> șantiere, între 2022 și 2026</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Ce oferim</h2>
+  <div class="story-grid">
+    {segmente.map((s, i) => (
+      <article class={`service-card reveal`} style={`transition-delay:${i * 80}ms`}>
+        {s.img && <img src={s.img} alt={s.titlu} />}
+        <div class="service-card-body">
+          <h3>{s.titlu}</h3>
+          <p>{s.text}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <h2 class="section-title" style="margin-top:32px;">Cum lucrăm</h2>
+  <ol class="timeline reveal">
+    {pasi.map((p, i) => (
+      <li>
+        <span class="timeline-num">{i + 1}</span>
+        <span class="timeline-text">{p}</span>
+      </li>
+    ))}
+  </ol>
+
+  <h2 class="section-title" style="margin-top:32px;">De ce Solar Electric Panel</h2>
+  <ul class="reveal" style="padding-left:20px; line-height:1.9; color:var(--text);">
+    <li>Dosar tehnic complet la fiecare lucrare, nu doar montaj și plecare</li>
+    <li>Fundal tehnic dublu — electrică și IT — deci oferim și monitorizare/automatizare, nu doar panouri</li>
+    <li>Documentare foto a fiecărui șantier, verificabilă în <a href="/portofoliu">portofoliul nostru</a></li>
+    <li>Personal atestat ANRE, protocoale SSM respectate strict</li>
+  </ul>
+
+  {proofPhotos.length > 0 && (
+    <>
+      <h2 class="section-title" style="margin-top:32px;">Dovadă în poze, nu doar promisiuni</h2>
+      <a href="/portofoliu" class="proof-strip reveal" style="display:grid;">
+        {proofPhotos.map((src) => <img src={src} alt="Lucrare Solar Electric Panel" loading="lazy" />)}
+      </a>
+    </>
+  )}
+
+  <p class="meta" style="margin-top:20px;">
+    Zona deservită: Făgăraș, Victoria, Ucea, Viștea, Sâmbăta de Sus, Lisa, Drăguș, Cârța, Breaza și împrejurimi.
+  </p>
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>Vrei o ofertă personalizată?</strong>
+      <span>Completează câteva detalii despre acoperiș/consum și primești o estimare de sistem și preț.</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+  </div>
+</Layout>

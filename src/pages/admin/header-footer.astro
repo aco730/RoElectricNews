@@ -1,0 +1,244 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getSiteConfig } from '../../lib/siteConfig';
+
+const config = await getSiteConfig();
+---
+<AdminLayout title="Header & Footer">
+	<h1>Header & Footer</h1>
+	<p class="hint">Modificările se aplică imediat pe site (după salvare, reîncarcă pagina publică pentru a le vedea).</p>
+
+	<section>
+		<h2>Header</h2>
+		<label class="check"><input type="checkbox" id="h-vizibil" checked={config.header.vizibil} /> Afișează header-ul</label>
+		<label class="check"><input type="checkbox" id="h-topbar-vizibil" checked={config.header.topbarVizibil} /> Afișează bara de sus</label>
+
+		<label>Text bară de sus
+			<input type="text" id="h-topbarText" value={config.header.topbarText} />
+		</label>
+
+		<h3>Link-uri bară de sus</h3>
+		<div id="h-topbarLinkuri"></div>
+		<button type="button" class="btn-secundar" id="h-topbar-adaugă">+ Link</button>
+
+		<h3>Logo</h3>
+		<div class="grid2">
+			<label>Text principal
+				<input type="text" id="h-logoTextPrincipal" value={config.header.logoTextPrincipal} />
+			</label>
+			<label>Text accent
+				<input type="text" id="h-logoTextAccent" value={config.header.logoTextAccent} />
+			</label>
+		</div>
+		<label>Imagine logo (opțional — dacă e setată, înlocuiește SVG-ul desenat)
+			<input type="file" id="h-logo-file" accept="image/png,image/svg+xml,image/webp,image/jpeg" />
+		</label>
+		<div id="h-logo-preview"></div>
+		{config.header.logoImagine && <button type="button" class="btn-secundar" id="h-logo-elimină">Elimină imaginea, revino la SVG</button>}
+
+		<label class="check"><input type="checkbox" id="h-cautare" checked={config.header.cautareVizibila} /> Afișează căsuța de căutare</label>
+
+		<h3>Butoane CTA</h3>
+		<div id="h-ctaButoane"></div>
+		<button type="button" class="btn-secundar" id="h-cta-adaugă">+ Buton</button>
+	</section>
+
+	<section>
+		<h2>Footer</h2>
+		<label class="check"><input type="checkbox" id="f-vizibil" checked={config.footer.vizibil} /> Afișează footer-ul</label>
+
+		<div class="grid2">
+			<label>Brand — text principal
+				<input type="text" id="f-brandText" value={config.footer.brandText} />
+			</label>
+			<label>Brand — text accent
+				<input type="text" id="f-brandTextAccent" value={config.footer.brandTextAccent} />
+			</label>
+		</div>
+
+		<label>Descriere
+			<textarea id="f-descriere" rows="3">{config.footer.descriere}</textarea>
+		</label>
+
+		<h3>Linkuri</h3>
+		<div id="f-linkuri"></div>
+		<button type="button" class="btn-secundar" id="f-linkuri-adaugă">+ Link</button>
+
+		<label>Text copyright (după anul curent)
+			<input type="text" id="f-copyright" value={config.footer.copyright} />
+		</label>
+	</section>
+
+	<div class="acțiuni">
+		<button type="button" id="salvează" class="btn">Salvează</button>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: -0.5rem; }
+		section { max-width: 780px; border-top: 1px solid #1f2937; padding-top: 1.5rem; margin-top: 1.5rem; }
+		section:first-of-type { border-top: none; margin-top: 0; }
+		h2 { color: #f1f5f9; font-size: 1.1rem; }
+		h3 { color: #cbd5e1; font-size: 0.9rem; margin-top: 1.5rem; }
+		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem; }
+		label.check { flex-direction: row; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #e2e8f0; }
+		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+		input[type="text"], textarea, input[type="file"] {
+			background: #111827; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.55rem 0.7rem; font-size: 0.9rem; font-family: inherit;
+		}
+		textarea { resize: vertical; }
+		.linie {
+			display: flex; gap: 0.6rem; margin-bottom: 0.6rem; align-items: center;
+		}
+		.linie input[type="text"] { flex: 1; margin-bottom: 0; }
+		.linie label.check { margin-bottom: 0; }
+		.elimină { background: none; border: none; color: #f87171; cursor: pointer; font-size: 0.8rem; }
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.45rem 0.9rem; border-radius: 8px; cursor: pointer; font-size: 0.82rem; margin-bottom: 1rem; }
+		.btn-secundar:hover { background: #263244; }
+		.acțiuni { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		#status { font-size: 0.85rem; color: #4ade80; }
+		#h-logo-preview img { max-height: 40px; margin: 0.5rem 0; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script define:vars={{ configInitial: config }}>
+		let config = configInitial;
+
+		function randLink(container, item, keyText, keyHref) {
+			const div = document.createElement('div');
+			div.className = 'linie';
+			div.innerHTML = `
+				<input type="text" class="l-text" placeholder="Text" value="${(item[keyText] || '').replace(/"/g, '&quot;')}" />
+				<input type="text" class="l-href" placeholder="URL" value="${(item[keyHref] || '').replace(/"/g, '&quot;')}" />
+				<button type="button" class="elimină">Elimină</button>
+			`;
+			div.querySelector('.elimină').addEventListener('click', () => div.remove());
+			container.appendChild(div);
+			return div;
+		}
+
+		function randCta(container, item) {
+			const div = document.createElement('div');
+			div.className = 'linie';
+			div.innerHTML = `
+				<input type="text" class="l-text" placeholder="Text" value="${(item.text || '').replace(/"/g, '&quot;')}" />
+				<input type="text" class="l-href" placeholder="URL" value="${(item.href || '').replace(/"/g, '&quot;')}" />
+				<label class="check"><input type="checkbox" class="l-primar" ${item.primar ? 'checked' : ''} /> primar</label>
+				<button type="button" class="elimină">Elimină</button>
+			`;
+			div.querySelector('.elimină').addEventListener('click', () => div.remove());
+			container.appendChild(div);
+			return div;
+		}
+
+		const topbarWrap = document.getElementById('h-topbarLinkuri');
+		config.header.topbarLinkuri.forEach((l) => randLink(topbarWrap, l, 'text', 'href'));
+		document.getElementById('h-topbar-adaugă').addEventListener('click', () => randLink(topbarWrap, { text: '', href: '' }, 'text', 'href'));
+
+		const ctaWrap = document.getElementById('h-ctaButoane');
+		config.header.ctaButoane.forEach((b) => randCta(ctaWrap, b));
+		document.getElementById('h-cta-adaugă').addEventListener('click', () => randCta(ctaWrap, { text: '', href: '', primar: false }));
+
+		const footerLinkuriWrap = document.getElementById('f-linkuri');
+		config.footer.linkuri.forEach((l) => randLink(footerLinkuriWrap, l, 'text', 'href'));
+		document.getElementById('f-linkuri-adaugă').addEventListener('click', () => randLink(footerLinkuriWrap, { text: '', href: '' }, 'text', 'href'));
+
+		let logoImaginePendinte = config.header.logoImagine;
+		const logoFileInput = document.getElementById('h-logo-file');
+		const logoPreview = document.getElementById('h-logo-preview');
+		const logoEliminăBtn = document.getElementById('h-logo-elimină');
+
+		if (logoEliminăBtn) {
+			logoEliminăBtn.addEventListener('click', () => {
+				logoImaginePendinte = null;
+				logoPreview.innerHTML = '<em style="color:#94a3b8;font-size:0.8rem;">Se va folosi SVG-ul implicit.</em>';
+			});
+		}
+
+		logoFileInput.addEventListener('change', async () => {
+			const file = logoFileInput.files[0];
+			if (!file) return;
+			const fd = new FormData();
+			fd.append('logo', file);
+			const res = await fetch('/api/admin/upload-logo', { method: 'POST', body: fd });
+			const data = await res.json();
+			if (res.ok) {
+				logoImaginePendinte = data.path;
+				logoPreview.innerHTML = `<img src="${data.path}" alt="preview" />`;
+			} else {
+				alert(data.error || 'Eroare la încărcare.');
+			}
+		});
+
+		document.getElementById('salvează').addEventListener('click', async () => {
+			const statusEl = document.getElementById('status');
+			statusEl.textContent = 'Se salvează...';
+			statusEl.style.color = '#94a3b8';
+
+			const citeșteLinkuri = (container) => [...container.querySelectorAll('.linie')].map((el) => ({
+				text: el.querySelector('.l-text').value.trim(),
+				href: el.querySelector('.l-href').value.trim(),
+			})).filter((l) => l.text || l.href);
+
+			const citeșteCta = (container) => [...container.querySelectorAll('.linie')].map((el) => ({
+				text: el.querySelector('.l-text').value.trim(),
+				href: el.querySelector('.l-href').value.trim(),
+				primar: el.querySelector('.l-primar').checked,
+			})).filter((b) => b.text || b.href);
+
+			const payload = {
+				header: {
+					vizibil: document.getElementById('h-vizibil').checked,
+					topbarVizibil: document.getElementById('h-topbar-vizibil').checked,
+					topbarText: document.getElementById('h-topbarText').value.trim(),
+					topbarLinkuri: citeșteLinkuri(topbarWrap),
+					logoImagine: logoImaginePendinte,
+					logoTextPrincipal: document.getElementById('h-logoTextPrincipal').value.trim(),
+					logoTextAccent: document.getElementById('h-logoTextAccent').value.trim(),
+					cautareVizibila: document.getElementById('h-cautare').checked,
+					ctaButoane: citeșteCta(ctaWrap),
+				},
+				footer: {
+					vizibil: document.getElementById('f-vizibil').checked,
+					brandText: document.getElementById('f-brandText').value.trim(),
+					brandTextAccent: document.getElementById('f-brandTextAccent').value.trim(),
+					descriere: document.getElementById('f-descriere').value.trim(),
+					linkuri: citeșteLinkuri(footerLinkuriWrap),
+					copyright: document.getElementById('f-copyright').value.trim(),
+				},
+			};
+
+			const res = await fetch('/api/admin/site-config', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				const banner = document.getElementById('banner-salvat');
+				banner.classList.add('arată');
+				clearTimeout(window.__bannerTimeout);
+				window.__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+			} else {
+				statusEl.textContent = 'Eroare la salvare.';
+				statusEl.style.color = '#f87171';
+			}
+		});
+	</script>
+</AdminLayout>
