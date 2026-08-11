@@ -1,12 +1,13 @@
 ---
 title: "Gherle de șantier: cum să nu-ți construiești viitorul pe improvizație"
 categorie: santier-structura
-data: 2026-08-11
+data: 2026-02-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/02/05/gherle-de-santier-in-2025-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie/"
 imagine: "/images/articole/gherle-de-santier-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie.jpg"
 ---
+
 
 Improvizațiile de șantier — soluțiile „rapide” alese pentru a economisi timp sau bani pe moment — sunt printre cele mai frecvente cauze ale problemelor structurale sau de instalații care apar la câțiva ani după finalizarea construcției.
 
@@ -17,3 +18,4 @@ O altă categorie de improvizații ține de execuția „aproximativă” a deta
 Presiunea termenelor de execuție este adesea motivul principal al improvizațiilor — un termen nerealist, impus fără a ține cont de timpii tehnologici necesari (uscare, întărire, testare), forțează echipele de execuție să sară etape esențiale pentru a respecta calendarul.
 
 Soluția practică pentru proprietari este supervizarea activă a șantierului, cu vizite frecvente și, ideal, un diriginte de șantier independent care verifică respectarea proiectului și a normativelor tehnice — costul acestei supervizări este mic comparativ cu riscul unor reparații structurale ulterioare cauzate de improvizații nedetectate la timp.
+

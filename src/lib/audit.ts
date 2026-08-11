@@ -41,7 +41,8 @@ async function citesteSigur(relPath: string): Promise<string | null> {
 async function verificaBuild(): Promise<RezultatCategorie> {
 	const rezultate: RezultatVerificare[] = [];
 	try {
-		const { stdout, stderr } = await execFileAsync('npx', ['astro', 'build'], {
+		const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+		const { stdout, stderr } = await execFileAsync(npxCmd, ['astro', 'build'], {
 			cwd: ROOT,
 			timeout: 5 * 60 * 1000,
 			maxBuffer: 20 * 1024 * 1024,

@@ -1,7 +1,8 @@
 ---
 title: "Unde montezi bateria și invertorul fotovoltaic: camerele interzise și capcana temperaturii"
-categorie: youtube
+categorie: santier-structura
 data: 2026-06-30
+dataAdaugare: "2026-08-10"
 sursaNume: "Electric Team Romania"
 sursaUrl: "https://www.youtube.com/watch?v=fm2BmytKkDs&t=414s"
 imagine: "/images/articole/unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem.webp"

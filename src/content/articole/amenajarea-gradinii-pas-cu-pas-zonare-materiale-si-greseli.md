@@ -1,11 +1,12 @@
 ---
 title: "Amenajarea grădinii pas cu pas: zonare, materiale și greșeli"
 categorie: outdoor-peisagistica
-data: 2026-08-10
+data: 2019-03-27
 sursaNume: "Homelux"
 sursaUrl: "https://www.homelux.ro/blog/gradini-amenajate/"
 imagine: "/images/articole/amenajarea-gradinii-pas-cu-pas-zonare-materiale-si-greseli.webp"
 ---
+
 
 Cea mai frecventă greșeală la amenajarea unei grădini nu ține de plante sau de buget, ci de lipsa unui plan de zonare de la început. Primul pas real e măsurarea suprafeței totale și notarea formei exacte a terenului, ca să poți organiza eficient spațiul — abia apoi contează expunerea solară și calitatea solului, care decid ce plante chiar pot supraviețui acolo.
 
@@ -16,3 +17,4 @@ La materiale, alegerile care rezistă în timp sunt piatra naturală, lemnul tra
 Iluminatul strategic face diferența dintre o grădină care se vede bine doar ziua și una care funcționează și seara — nu neapărat proiectoare puternice, ci lumină direcționată pe alei, pe elemente de accent și în zona de relaxare. La fel, stilul ales (rustic, modern, romantic, sau chiar principii feng shui) trebuie decis din start, pentru că influențează atât materialele, cât și dispunerea plantelor.
 
 Pentru terenurile atipice — curți mici, spații verticale, terase pe acoperiș sau grădini în zone montane — soluțiile standard de multe ori nu se aplică direct, iar consultanța unui peisagist la faza de plan economisește, de regulă, mai mulți bani decât costă, pentru că evită refaceri ulterioare.
+

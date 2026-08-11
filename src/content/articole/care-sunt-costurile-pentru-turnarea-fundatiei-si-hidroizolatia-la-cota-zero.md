@@ -1,12 +1,13 @@
 ---
 title: "Care sunt costurile pentru turnarea fundației și hidroizolația la cota zero"
 categorie: santier-structura
-data: 2026-08-11
+data: 2026-08-06
 dataAdaugare: "2026-08-11"
 sursaNume: "Verificatori.ro"
 sursaUrl: "https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc"
 imagine: "/images/articole/care-sunt-costurile-pentru-turnarea-fundatiei-si-hidroizolatia-la-cota-zero.jpg"
 ---
+
 
 Fundația și hidroizolația la cota zero reprezintă lucrări critice pentru durabilitatea întregii construcții — greșelile la acest nivel sunt printre cele mai costisitoare de corectat ulterior.
 
@@ -17,3 +18,4 @@ Hidroizolația la cota zero, esențială pentru protejarea structurii împotriva
 Calitatea execuției contează la fel de mult ca materialele — o hidroizolație bine aplicată dar cu detalii de racordare neglijate (colțuri, treceri de instalații) poate ceda în câțiva ani, provocând igrasie și degradarea structurii, cu costuri de remediere mult mai mari decât investiția inițială corectă.
 
 Pentru terenuri cu nivel freatic ridicat sau risc de infiltrații, se recomandă un studiu geotehnic detaliat înainte de proiectarea fundației — costul suplimentar al studiului (câteva sute-mii de lei) este nesemnificativ comparativ cu riscul unor probleme structurale ulterioare.
+

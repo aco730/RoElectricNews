@@ -1,12 +1,13 @@
 ---
 title: "Luminatoare cu trapă de desfumare: ce este un sistem de tip SAFE DOME"
 categorie: santier-structura
-data: 2026-08-11
+data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/08/05/welkins-safety-above-all-luminatorul-starlight-evo-si-trapa-de-desfumare-safe-dome/"
 imagine: "/images/articole/luminatoare-cu-trapa-de-desfumare-ce-este-un-sistem-de-tip-safe-dome.jpg"
 ---
+
 
 Luminatoarele cu funcție dublă — aducerea luminii naturale în interior și evacuarea fumului în caz de incendiu — reprezintă o categorie de echipamente tot mai relevantă atât pentru clădiri comerciale, cât și pentru proiecte rezidențiale mai complexe, cu cerințe stricte de siguranță la incendiu.
 
@@ -17,3 +18,4 @@ Diferența tehnică față de un luminator obișnuit constă în mecanismul de d
 Pentru proiecte rezidențiale, astfel de sisteme sunt relevante mai ales la case cu mansardă mare, spații deschise pe mai multe niveluri sau garaje/depozite integrate în structura locuinței, unde reglementările de siguranță la incendiu pot impune soluții de desfumare, nu doar la clădirile comerciale sau publice.
 
 La alegerea unui astfel de sistem, criteriile tehnice esențiale sunt certificarea conform standardelor de desfumare aplicabile, garanția mecanismului de deschidere automată și compatibilitatea cu sistemul de detecție a incendiului deja instalat sau planificat pentru clădire — un detaliu de coordonare între specialități care merită discutat din faza de proiect, nu adăugat ulterior.
+

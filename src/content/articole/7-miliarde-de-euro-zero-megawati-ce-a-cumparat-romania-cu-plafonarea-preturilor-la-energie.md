@@ -1,12 +1,13 @@
 ---
 title: "7 miliarde de euro, zero megawați: ce a cumpărat România cu plafonarea prețurilor la energie"
 categorie: reglementari-preturi
-data: 2026-08-11
+data: 2026-08-09
 dataAdaugare: "2026-08-11"
 sursaNume: "Asociația Prosumatorilor"
 sursaUrl: "https://asociatiaprosumatorilor.ro/7-miliarde-de-euro-zero-megawati/"
 imagine: "/images/articole/7-miliarde-de-euro-zero-megawati-ce-a-cumparat-romania-cu-plafonarea-preturilor-la-energie.jpg"
 ---
+
 
 Schema de plafonare-compensare a prețurilor la energie, aplicată în România între 2021 și 2025, a costat statul aproximativ 7 miliarde de euro — o sumă uriașă care ridică o întrebare simplă: ce capacitate nouă de producție a fost construită cu acești bani?
 
@@ -17,3 +18,4 @@ Diferența față de o investiție directă în capacități noi este esențial�
 Pentru un consumator obișnuit, această discuție poate părea abstractă, dar are un impact concret — banii cheltuiți pe plafonare sunt bani care nu au mers spre investiții structurale care ar fi redus, pe termen mediu-lung, prețul real al energiei prin creșterea ofertei interne, ceea ce înseamnă că problema fundamentală a prețurilor ridicate rămâne nerezolvată, doar amânată.
 
 Pentru un prosumator sau pentru cineva care ia în calcul independența energetică parțială (panouri fotovoltaice, stocare proprie), această analiză întărește un argument practic — investiția individuală în producție și stocare proprie oferă un control real asupra costurilor, într-un context în care politicile publice de plafonare s-au dovedit costisitoare și fără efect structural asupra capacității naționale de producție.
+

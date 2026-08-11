@@ -13,8 +13,8 @@ import Layout from "../layouts/Layout.astro";
     <p class="oferta-hero-sub"><a href="/preturi">Vezi lista completă de prețuri orientative →</a></p>
   </div>
 
-  <div class="wizard-card">
-    <div class="wizard-step-label" id="wizardStepLabel">Pasul 1 din 4</div>
+  <div class="wizard-card" id="wizardCard">
+    <div class="wizard-step-label" id="wizardStepLabel">Pasul 1 din 7</div>
     <div class="wizard-progress" id="wizardProgress">
       <span class="wp-step active" data-step="1">1</span>
       <span class="wp-line"></span>
@@ -23,6 +23,12 @@ import Layout from "../layouts/Layout.astro";
       <span class="wp-step" data-step="3">3</span>
       <span class="wp-line"></span>
       <span class="wp-step" data-step="4">4</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="5">5</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="6">6</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="7">7</span>
     </div>
     <div class="wizard-recap" id="wizardRecap"></div>
 
@@ -80,6 +86,73 @@ import Layout from "../layouts/Layout.astro";
       <button type="button" class="cta-btn cta-btn-primary wizard-continue" data-step="4" disabled>Vezi variantele</button>
     </div>
 
+    <!-- Step 5: alege varianta -->
+    <div class="wizard-step" data-step="5">
+      <h2>Variantele tale</h2>
+      <p class="wizard-hint">Prețuri estimative, incluzând materiale și manoperă montaj — confirmate exact după vizita tehnică gratuită.</p>
+      <div class="variant-grid" id="variantGrid"></div>
+    </div>
+
+    <!-- Step 6: oferta detaliata, randata nativ in pagina -->
+    <div class="wizard-step" data-step="6">
+      <div class="offer-toolbar no-print">
+        <div class="quick-actions">
+          <button type="button" class="quickbtn" onclick="window.print()">🖨️ Printează / Salvează PDF</button>
+          <a class="quickbtn" href="tel:0750405908">📞 Sună acum</a>
+          <a class="quickbtn" href="mailto:solarelectricpanel@gmail.com">✉️ Email</a>
+        </div>
+      </div>
+      <div id="offerPrintArea"></div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue-manual no-print" id="offerContinueBtn">Continuă spre formular →</button>
+    </div>
+
+    <!-- Step 7: formular de contact + finalizare -->
+    <div class="wizard-step" data-step="7">
+      <div id="offerFormWrap">
+        <h2>Aproape gata — unde trimitem oferta?</h2>
+        <p class="wizard-hint" id="chosenVariantSummary"></p>
+        <form
+          name="cerere-oferta"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="companie-web"
+          id="offerForm"
+        >
+          <input type="hidden" name="form-name" value="cerere-oferta" />
+          <input type="hidden" name="varianta" id="fVarianta" />
+          <input type="hidden" name="detalii-sistem" id="fDetalii" />
+          <p class="honeypot"><label>Nu completa acest câmp: <input name="companie-web" /></label></p>
+
+          <div class="form-field">
+            <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume" required />
+          </div>
+          <div class="form-field">
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-field">
+            <label for="localitate">Localitate</label>
+            <input type="text" id="localitate" name="localitate" placeholder="ex: Făgăraș" />
+          </div>
+          <div class="form-field">
+            <label for="mesaj">Mesaj (opțional)</label>
+            <textarea id="mesaj" name="mesaj" rows="3"></textarea>
+          </div>
+          <div data-netlify-recaptcha="true"></div>
+          <button type="submit" class="form-submit">Trimite cererea de ofertă</button>
+        </form>
+      </div>
+      <div id="offerThankYou" hidden>
+        <h2>Mulțumim!</h2>
+        <p>Am primit cererea ta pentru varianta selectată. Te contactăm în cel mai scurt timp pentru a stabili vizita tehnică.</p>
+      </div>
+    </div>
+
     <div class="wizard-nav">
       <a href="/" class="btn-back" id="wizardBackUnified">← Renunță, du-mă înapoi pe site</a>
     </div>
@@ -89,78 +162,14 @@ import Layout from "../layouts/Layout.astro";
   <div class="wizard-card" id="wizardLoading" hidden>
     <p style="text-align:center;color:var(--muted);">Calculăm cele 3 variante...</p>
   </div>
-
-  <!-- Rezultat: 3 variante -->
-  <div id="wizardResults" hidden>
-    <h2 class="section-title">Variantele tale</h2>
-    <div class="variant-grid" id="variantGrid"></div>
-    <p class="note" style="text-align:center;margin-top:10px;">
-      Prețuri estimative, incluzând materiale și manoperă montaj — confirmate exact după vizita tehnică gratuită.
-    </p>
-    <div class="wizard-nav" style="justify-content:center;margin-top:12px;">
-      <button type="button" class="btn-back" id="resultsBack">← Modifică răspunsurile</button>
-    </div>
-  </div>
-
-  <!-- Formular de contact -->
-  <div class="wizard-card" id="contactCard" hidden>
-    <h2>Aproape gata — unde trimitem oferta?</h2>
-    <p class="wizard-hint" id="chosenVariantSummary"></p>
-    <div class="quick-actions">
-      <button type="button" class="quickbtn" id="reopenOfferBtn">📄 Redeschide oferta</button>
-      <a class="quickbtn" href="tel:0750405908">📞 Sună acum</a>
-      <a class="quickbtn" href="mailto:solarelectricpanel@gmail.com">✉️ Email</a>
-      <a class="quickbtn" href="/servicii">← Înapoi la Servicii</a>
-    </div>
-    <form
-      name="cerere-oferta"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="companie-web"
-      id="offerForm"
-    >
-      <input type="hidden" name="form-name" value="cerere-oferta" />
-      <input type="hidden" name="varianta" id="fVarianta" />
-      <input type="hidden" name="detalii-sistem" id="fDetalii" />
-      <p class="honeypot"><label>Nu completa acest câmp: <input name="companie-web" /></label></p>
-
-      <div class="form-field">
-        <label for="nume">Nume</label>
-        <input type="text" id="nume" name="nume" required />
-      </div>
-      <div class="form-field">
-        <label for="telefon">Telefon</label>
-        <input type="text" id="telefon" name="telefon" required />
-      </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
-      </div>
-      <div class="form-field">
-        <label for="localitate">Localitate</label>
-        <input type="text" id="localitate" name="localitate" placeholder="ex: Făgăraș" />
-      </div>
-      <div class="form-field">
-        <label for="mesaj">Mesaj (opțional)</label>
-        <textarea id="mesaj" name="mesaj" rows="3"></textarea>
-      </div>
-      <div data-netlify-recaptcha="true"></div>
-      <button type="submit" class="form-submit">Trimite cererea de ofertă</button>
-    </form>
-  </div>
-
-  <div class="wizard-card" id="thankYou" hidden>
-    <h2>Mulțumim!</h2>
-    <p>Am primit cererea ta pentru varianta selectată. Te contactăm în cel mai scurt timp pentru a stabili vizita tehnică.</p>
-  </div>
 </Layout>
 
 <style is:global>
   /* Hero cu gradient + titlu bicolor, doar pentru modulul de oferta */
-  .oferta-hero { background: linear-gradient(135deg, var(--navy), #1c3a6b 55%, var(--teal)); border-radius: 20px; padding: 40px 28px 56px; text-align: center; margin-bottom: -34px; position: relative; }
+  .oferta-hero { background: linear-gradient(135deg, var(--navy), #1E4A40 55%, var(--teal)); border-radius: 20px; padding: 40px 28px 56px; text-align: center; margin-bottom: -34px; position: relative; }
   .oferta-hero-title { color: #fff; font-size: 30px; font-weight: 800; margin: 0 0 10px; }
   .oferta-hero-title span { color: var(--mint); }
-  .oferta-hero-sub { color: #d7e6ff; font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+  .oferta-hero-sub { color: #D8ECDD; font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
   .oferta-hero-sub a { color: #fff; text-decoration: underline; font-weight: 600; }
   .oferta-hero-sub a:hover { color: var(--mint); }
 
@@ -168,15 +177,15 @@ import Layout from "../layouts/Layout.astro";
 
   /* Butoane complet rotunjite (pilula), doar in modulul de oferta */
   .wizard-card .cta-btn, .wizard-continue, .quickbtn, #variantGrid .cta-btn { border-radius: 999px; }
-  #contactCard .form-submit { border-radius: 999px; }
+  #offerFormWrap .form-submit { border-radius: 999px; }
   .wizard-step-label { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-  .wizard-progress { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 28px; }
-  .wp-step { width: 30px; height: 30px; border-radius: 50%; background: var(--border); color: var(--muted); font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .wizard-progress { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; row-gap: 8px; }
+  .wp-step { width: 26px; height: 26px; border-radius: 50%; background: var(--border); color: var(--muted); font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: none; }
   .wp-step.active { background: var(--teal); color: #fff; }
   .wp-step.done { background: var(--navy); color: #fff; }
-  .wp-line { width: 28px; height: 2px; background: var(--border); }
+  .wp-line { width: 16px; height: 2px; background: var(--border); flex: none; }
   .wizard-recap { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: -14px 0 22px; min-height: 24px; }
-  .recap-chip { background: #E6FBF9; color: var(--navy); border: 1px solid var(--teal); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; animation: chip-in 0.25s ease; }
+  .recap-chip { background: #E3F5E8; color: var(--navy); border: 1px solid var(--teal); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; animation: chip-in 0.25s ease; }
   @keyframes chip-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
   .wizard-step { display: none; }
   .wizard-step.active { display: block; }
@@ -187,11 +196,11 @@ import Layout from "../layouts/Layout.astro";
   .wizard-option { background: var(--bg); border: 2px solid var(--border); border-radius: 10px; padding: 20px 12px; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 28px; }
   .wizard-option span { font-size: 13.5px; font-weight: 600; }
   .wizard-option:hover { border-color: var(--teal); }
-  .wizard-option.selected { border-color: var(--teal); background: #E6FBF9; }
+  .wizard-option.selected { border-color: var(--teal); background: #E3F5E8; }
   .wizard-option-sm { flex-direction: row; font-size: 13.5px; padding: 14px; }
   .wizard-option-toggle { background: var(--bg); border: 2px solid var(--border); border-radius: 10px; padding: 14px; font-size: 13.5px; font-weight: 600; color: var(--text); cursor: pointer; }
   .wizard-option-toggle:hover { border-color: var(--teal); }
-  .wizard-option-toggle.selected { border-color: var(--teal); background: #E6FBF9; color: var(--navy); }
+  .wizard-option-toggle.selected { border-color: var(--teal); background: #E3F5E8; color: var(--navy); }
   .wizard-input-row { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
   .wizard-input-row[hidden] { display: none; }
   .wizard-input-row label { font-size: 13px; font-weight: 600; color: var(--navy); }
@@ -229,6 +238,74 @@ import Layout from "../layouts/Layout.astro";
   .form-submit { background: var(--teal); color: #fff; border: none; padding: 12px 22px; border-radius: 6px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; }
   .form-submit:hover { opacity: 0.92; }
   .honeypot { position: absolute; left: -9999px; }
+
+  /* Pasul 6 e mai lat, ca sa incapa grila de componente si tabelul */
+  #wizardCard:has(.wizard-step[data-step="6"].active) { max-width: 900px; }
+  .offer-toolbar { margin-bottom: 18px; }
+  .wizard-continue-manual { width: 100%; margin-top: 22px; }
+
+  /* ==== Oferta detaliata (pasul 6), randata nativ cu tema site-ului ==== */
+  #offerPrintArea { color: var(--text); font-size: 13.5px; }
+  .offer-hdr { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .offer-hdr img { height: 44px; }
+  .offer-hdr .offer-contact { text-align: right; font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .offer-hdr .offer-contact b { color: var(--navy); font-size: 14px; }
+  .offer-banner { background: var(--navy); color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .offer-banner b { color: #fff; }
+  .offer-hero { padding: 20px 0; }
+  .offer-badge { display: inline-block; color: #fff; font-weight: 800; font-size: 19px; padding: 9px 20px; border-radius: 30px; margin-bottom: 14px; }
+  .offer-hero p { line-height: 1.7; max-width: 720px; }
+  .offer-stats { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .offer-stat { flex: 1; min-width: 150px; background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: 8px; padding: 12px 14px; }
+  .offer-stat .v { font-size: 18px; font-weight: 800; color: var(--navy); }
+  .offer-stat .l { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .offer-section { padding: 22px 0; border-top: 1px solid var(--border); }
+  .offer-section h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--navy); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--teal); }
+  .cgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 700px) { .cgrid { grid-template-columns: 1fr 1fr; } }
+  .pcard { background: var(--card); border-radius: 12px; box-shadow: 0 2px 10px rgba(16,24,40,0.08); border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; }
+  .pcard-top { padding: 14px 14px 0; }
+  .pcard-imgwrap { background: var(--bg); border-radius: 8px; height: 92px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .pcard-imgwrap img { max-width: 82%; max-height: 82%; object-fit: contain; }
+  .pcard-imgwrap svg { width: 44px; height: 44px; }
+  .pcard-imgwrap .ph { font-size: 24px; font-weight: 800; }
+  .pcard-body { padding: 10px 14px 2px; text-align: center; flex: 1; }
+  .pcard-title { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .pcard-desc { font-size: 10.5px; color: var(--muted); line-height: 1.4; min-height: 26px; }
+  .pcard-price { font-size: 14px; font-weight: 800; color: var(--text); margin-top: 6px; }
+  .pcard-tag { margin: 10px 14px 14px; padding: 7px; border-radius: 8px; text-align: center; color: #fff; font-size: 11px; font-weight: 700; }
+  .offer-table-wrap { overflow-x: auto; }
+  table.offer-items { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.offer-items th { background: var(--navy); color: #fff; text-align: left; padding: 9px 10px; font-size: 11px; text-transform: uppercase; white-space: nowrap; }
+  table.offer-items td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.offer-items td.num { text-align: right; white-space: nowrap; }
+  table.offer-items .small { font-size: 11px; color: var(--muted); }
+  table.offer-items td.doccol { width: 90px; text-align: center; }
+  .doclinks { display: flex; flex-direction: column; gap: 4px; align-items: stretch; }
+  .doclink { display: inline-block; text-align: center; font-size: 9.5px; font-weight: 700; text-decoration: none; padding: 3px 6px; border-radius: 9px; border: 1px solid; white-space: nowrap; }
+  .doclink.dl-link { color: #12805c; border-color: #12805c; background: #eafaf3; }
+  .doclink.dl-fisa { color: #1554b3; border-color: #1554b3; background: #eaf2fd; }
+  .offer-totalrow { display: flex; justify-content: space-between; align-items: center; color: #fff; padding: 13px 18px; border-radius: 8px; margin-top: 14px; font-size: 17px; font-weight: 800; }
+  .offer-chartwrap { position: relative; height: 260px; }
+  .offer-bgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 600px) { .offer-bgrid { grid-template-columns: 1fr; } }
+  .offer-bitem { display: flex; gap: 10px; align-items: flex-start; }
+  .offer-bicon { min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+  .offer-btitle { font-size: 12.5px; font-weight: 700; color: var(--navy); }
+  .offer-bdesc { font-size: 11.5px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
+  .offer-footer { background: var(--navy); color: #cbd5e1; padding: 20px; border-radius: 10px; margin-top: 6px; }
+  .offer-footer h4 { color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 6px; }
+  .offer-footer .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .offer-footer .fgrid { grid-template-columns: 1fr; } }
+  .offer-footer p { font-size: 12px; line-height: 1.6; margin: 0; }
+  .offer-note { font-size: 10.5px; color: var(--muted); margin-top: 10px; }
+
+  @media print {
+    body * { visibility: hidden; }
+    #offerPrintArea, #offerPrintArea * { visibility: visible; }
+    #offerPrintArea { position: absolute; left: 0; top: 0; width: 100%; }
+    .no-print { display: none !important; }
+  }
 </style>
 
 <script>
@@ -359,7 +436,7 @@ import Layout from "../layouts/Layout.astro";
   const state: Record<string, string> = {};
   let selectedOrientari: string[] = [];
   let currentStep = 1;
-  const TOTAL_STEPS = 4;
+  const TOTAL_STEPS = 7;
 
   function isStepValid(n: number): boolean {
     if (n === 1) return !!state.tipCladire;
@@ -505,14 +582,10 @@ import Layout from "../layouts/Layout.astro";
     });
   });
 
-  document.getElementById("resultsBack")?.addEventListener("click", () => {
-    document.getElementById("wizardResults")!.hidden = true;
-    document.querySelector<HTMLElement>(".wizard-card")!.hidden = false;
-    goToStep(4);
-  });
+  document.getElementById("offerContinueBtn")?.addEventListener("click", () => goToStep(7));
 
   async function runWizardCalculation() {
-    document.querySelector<HTMLElement>(".wizard-card")!.hidden = true;
+    document.getElementById("wizardCard")!.hidden = true;
     const loading = document.getElementById("wizardLoading")!;
     loading.hidden = false;
 
@@ -584,8 +657,10 @@ import Layout from "../layouts/Layout.astro";
     const results = TIERS.map((tier) => computeTier(tier, params));
     lastOrientari = orientari;
 
-    renderResults(results);
     loading.hidden = true;
+    document.getElementById("wizardCard")!.hidden = false;
+    renderResults(results);
+    goToStep(5);
   }
 
   function fmtPrice(n: number) {
@@ -626,45 +701,24 @@ import Layout from "../layouts/Layout.astro";
       grid.appendChild(card);
     });
 
-    document.getElementById("wizardResults")!.hidden = false;
-
     grid.querySelectorAll<HTMLButtonElement>(".variant-pick").forEach((btn) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", async () => {
         const tier = btn.dataset.tier!;
         const chosen = results.find((r) => r.tier === tier)!;
 
-        // 1. deschide oferta completa (document HTML detaliat) intr-un tab nou
-        lastOfferHtml = buildOfferDocument(chosen);
-        openOfferWindow();
-
-        // 2. abia dupa aceea (scurta pauza, ca pasii sa se simta secventiali) aratam formularul
         (document.getElementById("fVarianta") as HTMLInputElement).value = tier;
         (document.getElementById("fDetalii") as HTMLInputElement).value =
           `${chosen.nrPanouri} panouri, ${chosen.puterekWp.toFixed(2)} kWp` +
           (chosen.bateriaKwh > 0 ? `, baterie ≈${chosen.bateriaKwh.toFixed(1)} kWh` : ", fără baterie") +
           `, preț estimat ${fmtPrice(chosen.totalGeneral)}`;
         document.getElementById("chosenVariantSummary")!.textContent =
-          `Ai ales varianta ${tier} — ${chosen.nrPanouri} panouri, ${chosen.puterekWp.toFixed(2)} kWp, preț estimat ${fmtPrice(chosen.totalGeneral)}. Am deschis oferta completă într-un tab nou.`;
+          `Ai ales varianta ${tier} — ${chosen.nrPanouri} panouri, ${chosen.puterekWp.toFixed(2)} kWp, preț estimat ${fmtPrice(chosen.totalGeneral)}.`;
 
-        setTimeout(() => {
-          document.getElementById("contactCard")!.hidden = false;
-          document.getElementById("contactCard")!.scrollIntoView({ behavior: "smooth" });
-        }, 500);
+        await renderOfferStep(chosen);
+        goToStep(6);
       });
     });
   }
-
-  let lastOfferHtml = "";
-  function openOfferWindow() {
-    if (!lastOfferHtml) return;
-    const win = window.open("", "_blank");
-    if (win) {
-      win.document.open();
-      win.document.write(lastOfferHtml);
-      win.document.close();
-    }
-  }
-  document.getElementById("reopenOfferBtn")?.addEventListener("click", openOfferWindow);
 
   // ==== Document de oferta detaliat (identic ca structura cu Exemplu-Oferta-Standard.html) ====
   const COMPANY = {
@@ -757,7 +811,26 @@ import Layout from "../layouts/Layout.astro";
     }).join("");
   }
 
-  function buildOfferDocument(res: TierResult) {
+  // ---- Chart.js incarcat o singura data, la nevoie (cand se intra prima data in pasul 6) ----
+  let chartJsPromise: Promise<void> | null = null;
+  function loadChartJs(): Promise<void> {
+    if ((window as any).Chart) return Promise.resolve();
+    if (chartJsPromise) return chartJsPromise;
+    chartJsPromise = new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js";
+      s.integrity = "sha384-DhxhYObIMeMNGyAG7iK11OHzBIKyEIeRL0ad1iFPAOwZB8iirUlTT0O/WJJUk8+o";
+      s.crossOrigin = "anonymous";
+      s.referrerPolicy = "no-referrer";
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error("chart.js failed to load"));
+      document.head.appendChild(s);
+    });
+    return chartJsPromise;
+  }
+  let prodChart: any = null;
+
+  async function renderOfferStep(res: TierResult) {
     const meta = TIER_META[res.tier];
     const sel = res.selections;
     const panouSel = sel["Panou"], invSel = sel["Invertor"], batSel = sel["Baterie"], structSel = sel["Structura montaj"];
@@ -784,8 +857,6 @@ import Layout from "../layouts/Layout.astro";
 
     const lineRows = buildLineRowsHTML(res.lineItems);
     const manLabel = `Manoperă — montaj, cablare, punere în funcțiune (${res.nrPanouri} panouri × ${fmtPrice(TARIF_PANOU)} + PIF ${fmtPrice(TARIF_PIF)})`;
-    const chartLabels = JSON.stringify(["Ian","Feb","Mar","Apr","Mai","Iun","Iul","Aug","Sep","Oct","Nov","Dec"]);
-    const chartData = JSON.stringify(monthly.map((v) => Math.round(v)));
     const offerNr = offerNumber(res.tier);
     const today = dateRO();
 
@@ -798,111 +869,62 @@ import Layout from "../layouts/Layout.astro";
       ["Garanție extinsă produse", "Panouri, invertor și baterie cu garanții de la producători recunoscuți internațional."],
     ];
     const benefitsHTML = benefits.map(([title, desc]) =>
-      `<div class="bitem"><div class="bicon" style="background:${meta.color}22;color:${meta.color};">&#10003;</div>`
-      + `<div><div class="btitle">${escapeHtml(title)}</div><div class="bdesc">${escapeHtml(desc)}</div></div></div>`
+      `<div class="offer-bitem"><div class="offer-bicon" style="background:${meta.color}22;color:${meta.color};">&#10003;</div>`
+      + `<div><div class="offer-btitle">${escapeHtml(title)}</div><div class="offer-bdesc">${escapeHtml(desc)}</div></div></div>`
     ).join("");
 
-    return `<!DOCTYPE html>`
-    + `<html lang="ro"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">`
-    + `<title>Ofertă ${meta.label} — ${COMPANY.short} — ${offerNr}</title>`
-    + `<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" integrity="sha384-DhxhYObIMeMNGyAG7iK11OHzBIKyEIeRL0ad1iFPAOwZB8iirUlTT0O/WJJUk8+o" crossorigin="anonymous" referrerpolicy="no-referrer"><\/script>`
-    + `<style>`
-    + `*{box-sizing:border-box;}body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#EEF1F6;color:#1B2430;}`
-    + `.sheet{max-width:900px;margin:0 auto;background:#fff;}`
-    + `.hdr{display:flex;justify-content:space-between;align-items:center;padding:22px 30px;background:#fff;border-bottom:4px solid ${meta.color};}`
-    + `.hdr img{height:56px;}.hdr .contact{text-align:right;font-size:12.5px;color:#445;line-height:1.6;}.hdr .contact b{color:#1F3864;font-size:15px;}`
-    + `.banner{background:#1F3864;color:#fff;padding:12px 30px;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}.banner b{color:#fff;}`
-    + `.hero{padding:26px 30px;background:linear-gradient(135deg,#F4F6F9,#fff);}`
-    + `.badge{display:inline-block;background:${meta.color};color:#fff;font-weight:bold;font-size:20px;padding:10px 22px;border-radius:30px;margin-bottom:14px;}`
-    + `.hero p{font-size:14px;line-height:1.7;color:#333;max-width:720px;}`
-    + `.stats{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap;}`
-    + `.stat{flex:1;min-width:150px;background:#fff;border:1px solid #E1E6ED;border-top:3px solid ${meta.color};border-radius:6px;padding:12px 14px;}`
-    + `.stat .v{font-size:19px;font-weight:bold;color:#1F3864;}.stat .l{font-size:11.5px;color:#667085;margin-top:2px;}`
-    + `.section{padding:24px 30px;border-top:1px solid #E1E6ED;}`
-    + `.section h2{font-size:15px;text-transform:uppercase;letter-spacing:0.5px;color:#1F3864;margin:0 0 16px 0;padding-bottom:8px;border-bottom:2px solid ${meta.color};}`
-    + `.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}`
-    + `.pcard{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(16,24,40,0.09);border:1px solid #EEF1F6;overflow:hidden;display:flex;flex-direction:column;}`
-    + `.pcard-top{padding:16px 16px 0 16px;}.pcard-imgwrap{background:#F2F4F7;border-radius:10px;height:104px;display:flex;align-items:center;justify-content:center;overflow:hidden;}`
-    + `.pcard-imgwrap img{max-width:82%;max-height:82%;object-fit:contain;}.pcard-imgwrap svg{width:50px;height:50px;}.pcard-imgwrap .ph{font-size:26px;font-weight:bold;}`
-    + `.pcard-body{padding:12px 16px 4px 16px;text-align:center;flex:1;}`
-    + `.pcard-title{font-size:14.5px;font-weight:bold;color:#1B2430;margin-bottom:4px;}`
-    + `.pcard-desc{font-size:10.5px;color:#8a94a6;line-height:1.4;min-height:26px;}`
-    + `.pcard-price{font-size:15px;font-weight:bold;color:#1B2430;margin-top:8px;}`
-    + `.pcard-tag{margin:12px 16px 16px 16px;padding:8px;border-radius:8px;text-align:center;color:#fff;font-size:11.5px;font-weight:bold;letter-spacing:0.2px;}`
-    + `table.items{width:100%;border-collapse:collapse;font-size:13px;}`
-    + `table.items th{background:#1F3864;color:#fff;text-align:left;padding:9px 10px;font-size:11.5px;text-transform:uppercase;}`
-    + `table.items td{padding:9px 10px;border-bottom:1px solid #EAEDF2;vertical-align:top;}`
-    + `table.items td.num{text-align:right;white-space:nowrap;}table.items .small{font-size:11px;color:#667085;}`
-    + `table.items td.doccol{width:92px;text-align:center;color:#c8ceda;}`
-    + `.doclinks{display:flex;flex-direction:column;gap:4px;align-items:stretch;}`
-    + `.doclink{display:inline-block;text-align:center;font-size:9.5px;font-weight:bold;text-decoration:none;padding:3px 6px;border-radius:9px;border:1px solid;white-space:nowrap;}`
-    + `.doclink.dl-link{color:#12805c;border-color:#12805c;background:#eafaf3;}.doclink.dl-fisa{color:#1554b3;border-color:#1554b3;background:#eaf2fd;}`
-    + `.totalrow{display:flex;justify-content:space-between;align-items:center;background:${meta.color};color:#fff;padding:14px 18px;border-radius:8px;margin-top:14px;font-size:18px;font-weight:bold;}`
-    + `.chartwrap{position:relative;height:280px;}.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}`
-    + `.bitem{display:flex;gap:10px;align-items:flex-start;}`
-    + `.bicon{min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:13px;}`
-    + `.btitle{font-size:13px;font-weight:bold;color:#1F3864;}.bdesc{font-size:11.5px;color:#556;line-height:1.5;margin-top:2px;}`
-    + `.footer{background:#1F3864;color:#dbe4f5;padding:26px 30px;}`
-    + `.footer h3{color:#fff;font-size:12.5px;text-transform:uppercase;letter-spacing:0.5px;margin:0 0 6px 0;}`
-    + `.footer .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:18px;}`
-    + `.footer p{font-size:12px;line-height:1.6;margin:0;}`
-    + `.footer .cta{border-top:1px solid #3a578f;padding-top:16px;text-align:center;font-size:13px;}.footer .cta b{color:#fff;}`
-    + `.note{font-size:10.5px;color:#98A2B3;margin-top:10px;}`
-    + `.actionbar{position:sticky;top:0;z-index:10;background:#1B2430;padding:10px 16px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,0.15);}`
-    + `.actionbtn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:bold;text-decoration:none;border:none;cursor:pointer;}`
-    + `.actionbtn.primary{background:${meta.color};color:#fff;}`
-    + `.actionbtn.secondary{background:#fff;color:#1B2430;}`
-    + `.actionbtn.ghost{background:transparent;color:#cbd5e1;border:1px solid #4a5568;}`
-    + `@media print{ body{background:#fff;} .sheet{max-width:none;} .actionbar{display:none !important;} }`
-    + `</style></head><body>`
-    + `<div class="actionbar">`
-    + `<button class="actionbtn primary" onclick="window.print()">🖨️ Printează / Salvează PDF</button>`
-    + `<a class="actionbtn secondary" href="tel:${escapeHtml(COMPANY.phone.replace(/\s+/g, ""))}">📞 Sună acum: ${escapeHtml(COMPANY.phone)}</a>`
-    + `<a class="actionbtn secondary" href="mailto:${escapeHtml(COMPANY.email)}?subject=${encodeURIComponent("Ofertă " + meta.label + " — " + offerNr)}">✉️ Trimite pe email</a>`
-    + `<button class="actionbtn ghost" onclick="window.close()">✕ Închide</button>`
-    + `</div>`
-    + `<div class="sheet">`
-    + `<div class="hdr"><img src="${COMPANY.logo}" alt="${COMPANY.short}">`
-    + `<div class="contact"><b>${COMPANY.name}</b><br>${escapeHtml(COMPANY.phone)} · ${escapeHtml(COMPANY.email)}<br>${escapeHtml(COMPANY.address)}</div></div>`
-    + `<div class="banner"><span>OFERTĂ SISTEM FOTOVOLTAIC${areBaterie ? " + STOCARE" : ""} — VARIANTA ${meta.label}</span><span>Nr. <b>${offerNr}</b> · ${today}</span></div>`
-    + `<div class="hero">`
-    + `<div class="badge">${res.puterekWp.toFixed(2)} kWp${areBaterie ? " + " + res.bateriaKwh.toFixed(1) + " kWh" : ""}</div>`
-    + `<p>Ofertă personalizată pentru un sistem fotovoltaic${areBaterie ? " cu stocare" : " on-grid"}, varianta <b>${meta.label}</b>, dimensionat de echipa ${COMPANY.short} pe baza consumului și acoperișului declarate. Sistemul propus produce estimativ <b>${Math.round(annualProd).toLocaleString("ro-RO")} kWh/an</b>, reducând substanțial factura de energie electrică.</p>`
-    + `<div class="stats">`
-    + `<div class="stat"><div class="v">${res.puterekWp.toFixed(2)} kWp</div><div class="l">Putere instalată</div></div>`
-    + `<div class="stat"><div class="v">${areBaterie ? res.bateriaKwh.toFixed(1) + " kWh" : "—"}</div><div class="l">Capacitate stocare</div></div>`
-    + `<div class="stat"><div class="v">${Math.round(annualProd).toLocaleString("ro-RO")} kWh</div><div class="l">Producție anuală estimată</div></div>`
-    + `</div></div>`
-    + `<div class="section"><h2>Componente sistem</h2><div class="cgrid">${componentsHTML}</div></div>`
-    + `<div class="section"><h2>Ce conține oferta</h2>`
-    + `<table class="items"><tr><th>Denumire</th><th>Documente</th><th>Cantitate</th><th>Preț unitar</th><th>Total</th></tr>`
-    + lineRows
-    + `<tr><td colspan="4">${manLabel}</td><td class="num"><b>${fmtPrice(res.manoperaTotal)}</b></td></tr>`
-    + `</table>`
-    + `<div class="totalrow"><span>TOTAL GENERAL</span><span>${fmtPrice(res.totalGeneral)}</span></div>`
-    + `</div>`
-    + `<div class="section"><h2>Estimare producție solară anuală</h2>`
-    + `<div class="chartwrap"><canvas id="prodChartOffer"></canvas></div>`
-    + `<div class="note">Producție estimată pe baza valorilor climatice medii pentru zona Făgăraș/Brașov și a orientării acoperișului declarate — estimare orientativă, nu export exact PVGIS.</div>`
-    + `</div>`
-    + `<div class="section"><h2>Beneficiile tale</h2><div class="bgrid">${benefitsHTML}</div></div>`
-    + `<div class="footer">`
-    + `<div class="fgrid">`
-    + `<div><h3>Garanții oferite</h3><p>Panouri: 25 ani produs / 30 ani performanță · Invertor: 5-10 ani (extensibil) · Baterie: 10 ani · Manoperă ${COMPANY.short}: 2 ani</p></div>`
-    + `<div><h3>Opțiuni finanțare</h3><p>Plată integrală, în tranșe (avans + rest la punerea în funcțiune), sau prin finanțare bancară/rate — detalii la cerere.</p></div>`
-    + `</div>`
-    + `<div class="cta">Pentru confirmarea ofertei sau întrebări: <b>${escapeHtml(COMPANY.phone)}</b> · <b>${escapeHtml(COMPANY.email)}</b><br>${escapeHtml(COMPANY.address)}</div>`
-    + `<div class="note" style="text-align:center;">Ofertă orientativă, valabilă 30 de zile de la data emiterii. Prețurile finale se confirmă la vizita tehnică.</div>`
-    + `</div>`
-    + `</div>`
-    + `<script>`
-    + `new Chart(document.getElementById("prodChartOffer").getContext("2d"), {`
-    + `  type: "bar",`
-    + `  data: { labels: ${chartLabels}, datasets: [{ label: "Producție (kWh)", data: ${chartData}, backgroundColor: "${meta.color}" }] },`
-    + `  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{ y:{ title:{display:true,text:"kWh/lună"} } } }`
-    + `});`
-    + `<\/script>`
-    + `</body></html>`;
+    const html = `<div class="offer-hdr"><img src="${COMPANY.logo}" alt="${COMPANY.short}">`
+      + `<div class="offer-contact"><b>${COMPANY.name}</b><br>${escapeHtml(COMPANY.phone)} · ${escapeHtml(COMPANY.email)}<br>${escapeHtml(COMPANY.address)}</div></div>`
+      + `<div class="offer-banner"><span>OFERTĂ SISTEM FOTOVOLTAIC${areBaterie ? " + STOCARE" : ""} — VARIANTA ${meta.label}</span><span>Nr. <b>${offerNr}</b> · ${today}</span></div>`
+      + `<div class="offer-hero">`
+      + `<div class="offer-badge" style="background:${meta.color};">${res.puterekWp.toFixed(2)} kWp${areBaterie ? " + " + res.bateriaKwh.toFixed(1) + " kWh" : ""}</div>`
+      + `<p>Ofertă personalizată pentru un sistem fotovoltaic${areBaterie ? " cu stocare" : " on-grid"}, varianta <b>${meta.label}</b>, dimensionat de echipa ${COMPANY.short} pe baza consumului și acoperișului declarate. Sistemul propus produce estimativ <b>${Math.round(annualProd).toLocaleString("ro-RO")} kWh/an</b>, reducând substanțial factura de energie electrică.</p>`
+      + `<div class="offer-stats">`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${res.puterekWp.toFixed(2)} kWp</div><div class="l">Putere instalată</div></div>`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${areBaterie ? res.bateriaKwh.toFixed(1) + " kWh" : "—"}</div><div class="l">Capacitate stocare</div></div>`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${Math.round(annualProd).toLocaleString("ro-RO")} kWh</div><div class="l">Producție anuală estimată</div></div>`
+      + `</div></div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Componente sistem</h3><div class="cgrid">${componentsHTML}</div></div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Ce conține oferta</h3>`
+      + `<div class="offer-table-wrap"><table class="offer-items"><tr><th>Denumire</th><th>Documente</th><th>Cantitate</th><th>Preț unitar</th><th>Total</th></tr>`
+      + lineRows
+      + `<tr><td colspan="4">${manLabel}</td><td class="num"><b>${fmtPrice(res.manoperaTotal)}</b></td></tr>`
+      + `</table></div>`
+      + `<div class="offer-totalrow" style="background:${meta.color};"><span>TOTAL GENERAL</span><span>${fmtPrice(res.totalGeneral)}</span></div>`
+      + `</div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Estimare producție solară anuală</h3>`
+      + `<div class="offer-chartwrap"><canvas id="prodChartOffer"></canvas></div>`
+      + `<div class="offer-note">Producție estimată pe baza valorilor climatice medii pentru zona Făgăraș/Brașov și a orientării acoperișului declarate — estimare orientativă, nu export exact PVGIS.</div>`
+      + `</div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Beneficiile tale</h3><div class="offer-bgrid">${benefitsHTML}</div></div>`
+      + `<div class="offer-footer">`
+      + `<div class="fgrid">`
+      + `<div><h4>Garanții oferite</h4><p>Panouri: 25 ani produs / 30 ani performanță · Invertor: 5-10 ani (extensibil) · Baterie: 10 ani · Manoperă ${COMPANY.short}: 2 ani</p></div>`
+      + `<div><h4>Opțiuni finanțare</h4><p>Plată integrală, în tranșe (avans + rest la punerea în funcțiune), sau prin finanțare bancară/rate — detalii la cerere.</p></div>`
+      + `</div>`
+      + `<p>Pentru confirmarea ofertei sau întrebări: <b>${escapeHtml(COMPANY.phone)}</b> · <b>${escapeHtml(COMPANY.email)}</b><br>${escapeHtml(COMPANY.address)}</p>`
+      + `</div>`
+      + `<div class="offer-note" style="text-align:center;">Ofertă orientativă, valabilă 30 de zile de la data emiterii. Prețurile finale se confirmă la vizita tehnică.</div>`;
+
+    const target = document.getElementById("offerPrintArea")!;
+    target.innerHTML = html;
+    document.title = `Ofertă ${meta.label} — ${COMPANY.short} — ${offerNr}`;
+
+    try {
+      await loadChartJs();
+      const Chart = (window as any).Chart;
+      if (prodChart) prodChart.destroy();
+      prodChart = new Chart(document.getElementById("prodChartOffer").getContext("2d"), {
+        type: "bar",
+        data: {
+          labels: ["Ian","Feb","Mar","Apr","Mai","Iun","Iul","Aug","Sep","Oct","Nov","Dec"],
+          datasets: [{ label: "Producție (kWh)", data: monthly.map((v) => Math.round(v)), backgroundColor: meta.color }],
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: "kWh/lună" } } } },
+      });
+    } catch {
+      // graficul e un plus vizual — daca CDN-ul pica, restul ofertei ramane utilizabila
+    }
   }
 
   // ---- Submit formular (Netlify Forms via fetch, ramane pe pagina) ----
@@ -913,10 +935,8 @@ import Layout from "../layouts/Layout.astro";
     const body = new URLSearchParams(data as any).toString();
     fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
       .then(() => {
-        document.getElementById("contactCard")!.hidden = true;
-        document.getElementById("wizardResults")!.hidden = true;
-        document.getElementById("thankYou")!.hidden = false;
-        document.getElementById("thankYou")!.scrollIntoView({ behavior: "smooth" });
+        document.getElementById("offerFormWrap")!.hidden = true;
+        document.getElementById("offerThankYou")!.hidden = false;
       })
       .catch(() => {
         alert("A apărut o eroare la trimitere — sună-ne direct sau încearcă din nou.");

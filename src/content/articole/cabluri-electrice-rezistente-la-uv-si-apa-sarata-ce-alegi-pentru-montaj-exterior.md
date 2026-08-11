@@ -1,7 +1,8 @@
 ---
 title: "Cabluri electrice rezistente la UV și apă sărată: ce alegi pentru montaj exterior și fotovoltaic"
-categorie: youtube
+categorie: santier-structura
 data: 2026-08-05
+dataAdaugare: "2026-08-10"
 sursaNume: "Proiecte Diverse DIY"
 sursaUrl: "https://www.youtube.com/watch?v=VMWX5wN4yNU"
 imagine: "/images/articole/cabluri-electrice-rezistente-la-uv-si-apa-sarata-ce-alegi-pentru-montaj-exterior.webp"

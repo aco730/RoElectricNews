@@ -1,12 +1,13 @@
 ---
 title: "Tehnologii PORR în 2026: optimizarea rețetelor de beton prin AI și automatizarea de șantier"
 categorie: santier-structura
-data: 2026-08-11
+data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Agenda Construcțiilor"
 sursaUrl: "https://agendaconstructiilor.ro/stiri/digitalizarea-in-constructii-industrie/tehnologii-porr-in-2026-optimizarea-retetelor-prin-ai-si-automatizarea-de-santier"
 imagine: "/images/articole/tehnologii-porr-in-2026-optimizarea-retetelor-de-beton-prin-ai-si-automatizarea-de-santier.jpg"
 ---
+
 
 Digitalizarea șantierelor de construcții a depășit stadiul de proiect pilot — companii mari din industrie folosesc deja inteligența artificială pentru optimizarea rețetelor de beton și automatizarea unor procese repetitive de execuție, cu rezultate măsurabile în costuri și calitate.
 
@@ -17,3 +18,4 @@ Automatizarea de șantier, în acest context, nu înseamnă neapărat roboți ca
 Pentru un proprietar care construiește o casă individuală, aceste tehnologii sunt încă mai degrabă apanajul șantierelor mari, industriale sau de infrastructură, dar tendința e relevantă indirect — companiile de execuție care adoptă aceste instrumente de control al calității oferă, în general, un nivel mai ridicat de predictibilitate și consistență, un criteriu util de verificat atunci când alegi un contractor pentru o construcție rezidențială mai complexă.
 
 Pe termen mediu, e de așteptat ca elemente din aceste tehnologii (senzori de monitorizare a întăririi betonului, dozare automată) să devină accesibile și pentru șantiere mai mici, pe măsură ce costurile echipamentelor scad — o evoluție similară cu cea văzută deja în alte domenii tehnice ale construcțiilor.
+

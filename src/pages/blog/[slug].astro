@@ -107,7 +107,7 @@ const breadcrumbs = [
       <ul class="side-list">
         {dinAceeasiCategorie.map((a) => (
           <li class="side-item">
-            <span class="dot" style={`background:${cat?.color ?? "#12213A"}`}></span>
+            <span class="dot" style={`background:${cat?.color ?? "var(--navy)"}`}></span>
             <div>
               <a class="side-title" href={`/blog/${a.id}`}>{a.data.title}</a>
               <div class="side-meta">{a.data.data.toLocaleDateString("ro-RO")}</div>

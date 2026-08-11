@@ -1,12 +1,13 @@
 ---
 title: "Cât te costă rulourile de gazon vs. însămânțarea și pregătirea solului"
 categorie: outdoor-peisagistica
-data: 2026-08-11
+data: 2026-06-25
 dataAdaugare: "2026-08-11"
 sursaNume: "Ghid Amenajări"
 sursaUrl: "https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/"
 imagine: "/images/articole/cat-te-costa-rulourile-de-gazon-vs-insamantarea-si-pregatirea-solului.jpg"
 ---
+
 
 Alegerea între rulouri de gazon gata format și însămânțarea clasică este o decizie care ține atât de buget, cât și de răbdare — fiecare variantă are avantaje clare în funcție de așteptările proprietarului.
 
@@ -17,3 +18,4 @@ Pregătirea solului, obligatorie în ambele variante (afânare, nivelare, îmbog
 Rulourile de gazon (brazde gata cultivate, gata de așezat) costă semnificativ mai mult, 25-45 lei/mp, dar oferă un rezultat instant — gazonul arată complet dezvoltat imediat după montaj și poate fi călcat ușor după doar 2-3 săptămâni de la instalare.
 
 Pentru o curte de 300 mp, diferența de cost între cele două variante este de aproximativ 3.000-5.000 lei mai scump pentru rulouri, dar avantajul de a avea gazon funcțional aproape imediat justifică investiția pentru mulți proprietari, mai ales dacă mutarea în casă e iminentă.
+

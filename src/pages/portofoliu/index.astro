@@ -14,7 +14,7 @@ const { proiecte } = portofoliuData as {
 const totalPoze = proiecte.reduce((sum, p) => sum + p.poze.length, 0);
 const sortate = [...proiecte].sort((a, b) => (b.dataDe || "").localeCompare(a.dataDe || ""));
 ---
-<Layout title="Portofoliu — Solar Electric Panel" description="Lucrări reale de montaj fotovoltaic și electric realizate de Solar Electric Panel — poze din șantiere din zona Făgăraș." singleCol>
+<Layout title="Portofoliu — Solar Electric Panel" description="Lucrări reale de montaj fotovoltaic și electric realizate de Solar Electric Panel — poze din șantiere." singleCol>
   <div class="stat-card">
     <div class="stat-icon">📸</div>
     <div>
@@ -33,7 +33,7 @@ const sortate = [...proiecte].sort((a, b) => (b.dataDe || "").localeCompare(a.da
             <Etichete slugs={p.etichete} overlay />
           </div>
         )}
-        <span class="badge" style={`background:${p.album === "fotovoltaice" ? "#E97B0F" : "#12213A"}`}>
+        <span class="badge" style={`background:${p.album === "fotovoltaice" ? "var(--orange)" : "var(--navy)"}`}>
           {p.album === "fotovoltaice" ? "Fotovoltaic" : "Electric"}
         </span>
         <h3><a href={`/portofoliu/${p.id}`}>{p.nume}</a></h3>

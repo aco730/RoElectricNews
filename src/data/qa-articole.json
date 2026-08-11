@@ -3362,5 +3362,49 @@
       "intrebare": "Ce argument suplimentar oferă aceste episoade pentru investiția în stocare?",
       "raspuns": "Dincolo de economia zilnică de factură, o baterie bine dimensionată contribuie real la stabilitatea rețelei în momentele de presiune maximă."
     }
+  ],
+  "criza-apei-pe-dunare-si-presiunea-pe-infrastructura-energetica-ce-planuri-de-reglementare-": [
+    {
+      "intrebare": "De ce afectează seceta funcționarea centralei de la Cernavodă?",
+      "raspuns": "Centrala depinde de un debit minim de apă adus prin brațul Bala al Dunării; la nivel istoric scăzut al fluviului, acest debit riscă să scadă sub pragul necesar pentru răcirea reactoarelor."
+    },
+    {
+      "intrebare": "Ce sunt siturile Natura 2000 și de ce contează pentru proiectele de infrastructură?",
+      "raspuns": "Sunt arii protejate de interes comunitar; proiectele finanțate din fonduri europene aflate în apropierea lor trebuie să respecte planuri de management aprobate, altfel finanțarea poate fi blocată."
+    },
+    {
+      "intrebare": "Se schimbă programul de sprijin pentru panouri fotovoltaice?",
+      "raspuns": "Da — componenta pentru panouri este înlocuită cu una dedicată bateriilor de stocare, pentru a folosi mai eficient energia produsă în timpul zilei."
+    },
+    {
+      "intrebare": "Câți bani sunt alocați pentru infrastructura de apă în acest an?",
+      "raspuns": "250 de milioane de lei de la bugetul național pentru baraje, diguri și poldere, față de 50 de milioane anul trecut."
+    },
+    {
+      "intrebare": "Ce risc există legat de angajamentele din PNRR pentru energie și biodiversitate?",
+      "raspuns": "Nerespectarea angajamentelor de decarbonizare sau de conservare a biodiversității poate duce la pierderea unor fonduri europene deja alocate sau suspendarea altor linii de finanțare."
+    }
+  ],
+  "criza-energetica-din-aceasta-vara-de-ce-nu-avem-baterii-de-stocare-si-cum-blocheaza-birocr": [
+    {
+      "intrebare": "De ce afectează seceta și producția de energie nucleară, nu doar hidrocentralele?",
+      "raspuns": "Centrala nucleară are nevoie de un debit minim de apă pentru răcire; când nivelul râului scade prea mult, funcționarea în siguranță a reactoarelor devine dificilă."
+    },
+    {
+      "intrebare": "Ce înseamnă un aviz tehnic de racordare (ATR) și de ce contează?",
+      "raspuns": "Este documentul prin care operatorul de rețea confirmă că un proiect nou de producție poate fi conectat la sistem; fără termen de valabilitate, astfel de avize pot bloca ani la rând capacitate de rețea fără ca proiectul să fie realizat."
+    },
+    {
+      "intrebare": "De ce nu avem suficiente baterii de stocare a energiei?",
+      "raspuns": "Din cauza unor reguli fiscale și de reglementare inconsistente în ultimii ani, care au făcut activitatea de stocare mai puțin atractivă financiar decât în alte țări din regiune."
+    },
+    {
+      "intrebare": "Ce ar ajuta cel mai mult pe termen scurt pentru consumatorii casnici?",
+      "raspuns": "Mutarea consumului mare (încărcare electronice, aer condiționat, mașină de spălat) spre orele de zi, când producția e mai mare, reduce presiunea din orele de vârf de seară."
+    },
+    {
+      "intrebare": "Riscă România o întrerupere generalizată a curentului (blackout)?",
+      "raspuns": "Conform experților, scenariul cel mai probabil este cel al unor opriri controlate, punctuale, mai degrabă decât un blackout de tip întreruperi programate pe scară largă."
+    }
   ]
 }

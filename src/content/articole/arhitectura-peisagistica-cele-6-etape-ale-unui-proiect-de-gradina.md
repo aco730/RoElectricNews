@@ -1,11 +1,12 @@
 ---
 title: "Arhitectură peisagistică: cele 6 etape ale unui proiect de grădină"
 categorie: outdoor-peisagistica
-data: 2026-08-10
+data: 2025-05-20
 sursaNume: "Ferma de Gazon"
 sursaUrl: "https://fermadegazon.ro/blog/peisagistica-ghid-complet-pentru-amenajari-peisagistice-de-gradini-si-arhitectura-peisagistica/"
 imagine: "/images/articole/arhitectura-peisagistica-cele-6-etape-ale-unui-proiect-de-gradina.webp"
 ---
+
 
 Un proiect de arhitectură peisagistică serios trece prin șase faze distincte, nu se rezumă la "alegem plante și punem un gard" — iar sărirea peste oricare dintre ele e motivul pentru care multe amenajări arată bine în prima lună și prost după un an.
 
@@ -16,3 +17,4 @@ Proiectul detaliat e faza tehnică: planuri exacte, selecția materialelor și a
 Principiile care ghidează un proiect bun rămân aceleași indiferent de stil: unitate și coerență între elemente, echilibru și proporție corectă între componente, funcționalitate reală pentru cine folosește spațiul, sustenabilitate prin plante native și gestionare eficientă a apei, plus puncte de accent vizual care dau personalitate spațiului.
 
 Tendințele actuale merg spre design biofilic (integrarea naturii cât mai aproape de arhitectura casei), spații multifuncționale rezistente la schimbările climatice, și tehnologie integrată direct în peisagistică — irigare automată și iluminat LED controlat, nu adăugate ulterior ca accesorii separate.
+

@@ -1,14 +1,14 @@
 :root {
-  --navy: #12213A;
-  --teal: #0EA5A0;
-  --mint: #2DD4BF;
-  --orange: #E9670F;
-  --orange-dark: #D25A0B;
-  --bg: #F5F7F9;
+  --navy: #0F2E2B;
+  --teal: #2C8A54;
+  --mint: #8BD450;
+  --orange: #4C8B2C;
+  --orange-dark: #3B6D22;
+  --bg: #F4F7F0;
   --card: #FFFFFF;
-  --text: #12213A;
-  --muted: #5F6368;
-  --border: #E5E9EE;
+  --text: #122420;
+  --muted: #5E6E64;
+  --border: #DCE6DA;
 }
 
 * { box-sizing: border-box; }
@@ -117,7 +117,7 @@ aside .side-list { list-style: none; margin: 0; padding: 0; background: var(--ca
 .stat-card .stat-number { font-size: 34px; font-weight: 800; line-height: 1; color: var(--mint); }
 .stat-card .stat-label { font-size: 13px; color: #cbd5e1; margin-top: 4px; }
 
-.lead-cta { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-top: 28px; padding: 20px 22px; background: #FFF4EA; border: 1px solid #F3D4B0; border-radius: 10px; }
+.lead-cta { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-top: 28px; padding: 20px 22px; background: #EFF7EA; border: 1px solid #CFE3C4; border-radius: 10px; }
 .lead-cta-text { display: flex; flex-direction: column; gap: 4px; max-width: 420px; }
 .lead-cta-text strong { font-size: 15px; color: var(--navy); }
 .lead-cta-text span { font-size: 13px; color: var(--muted); line-height: 1.5; }
@@ -140,7 +140,7 @@ main.article-qa { max-width: 1320px; grid-template-columns: 240px minmax(0,2fr) 
 .qa-item[open] summary::after { content: "–"; }
 .qa-item summary:hover { color: var(--teal); }
 .qa-answer { padding: 0 0 16px; }
-.qa-answer p { margin: 0 0 10px; font-size: 14px; line-height: 1.65; color: #243044; }
+.qa-answer p { margin: 0 0 10px; font-size: 14px; line-height: 1.65; color: #1C3128; }
 .qa-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .qa-link { display: inline-block; font-size: 12px; font-weight: 600; color: var(--teal); background: var(--bg); border: 1px solid var(--border); padding: 5px 11px; border-radius: 20px; }
 .qa-link:hover { border-color: var(--teal); background: #fff; }

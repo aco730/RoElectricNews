@@ -1,7 +1,8 @@
 ---
 title: "Instalație electrică pentru casă nouă: ce nu trebuie ratat înainte de turnarea betonului"
-categorie: youtube
+categorie: santier-structura
 data: 2020-06-20
+dataAdaugare: "2026-08-10"
 sursaNume: "Proiecte Diverse DIY"
 sursaUrl: "https://www.youtube.com/watch?v=lJKaNL0_n2w"
 imagine: "/images/articole/instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be.webp"

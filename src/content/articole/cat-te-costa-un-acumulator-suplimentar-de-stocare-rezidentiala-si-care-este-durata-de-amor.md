@@ -1,12 +1,13 @@
 ---
 title: "Cât te costă un acumulator suplimentar de stocare rezidențială și care este durata de amortizare"
 categorie: fotovoltaic
-data: 2026-08-11
+data: 2016-02-07
 dataAdaugare: "2026-08-11"
 sursaNume: "Asociația Prosumatorilor"
 sursaUrl: "https://asociatiaprosumatorilor.ro/in-vara-lui-2026-romania-este-salvata-de-cei-360-000-de-prosumatori-si-de-energia-regenerabila-tin-sistemul-electric-in-viata/"
 imagine: "/images/articole/cat-te-costa-un-acumulator-suplimentar-de-stocare-rezidentiala-si-care-este-durata-de-amor.jpg"
 ---
+
 
 Numărul mare de prosumatori din România (peste 360.000 în vara lui 2026) a arătat clar valoarea energiei stocate — sistemul electric național se sprijină tot mai mult pe producția distribuită, iar acumulatorii suplimentari de stocare devin o investiție tot mai atractivă.
 
@@ -17,3 +18,4 @@ Amortizarea unui acumulator suplimentar depinde direct de diferența dintre pre�
 Un avantaj adesea subestimat este independența la pene de curent — cu un acumulator suficient de mare și un invertor cu funcție de backup, o gospodărie poate rămâne alimentată câteva ore sau chiar o zi întreagă, funcție de consum.
 
 Pentru cei care vor să extindă un sistem existent, e important de verificat compatibilitatea acumulatorului nou cu invertorul deja instalat — nu toate combinațiile de mărci sunt compatibile.
+

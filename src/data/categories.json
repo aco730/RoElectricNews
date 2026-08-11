@@ -1,7 +1,7 @@
 [
   {
     "slug": "electric-instalatii",
-    "name": "Rețele & Confort",
+    "name": "Ingineria Casei",
     "color": "#12213a",
     "description": "Articole și ghiduri despre instalații electrice, sanitare și managementul apei.",
     "ascunsa": false
@@ -22,7 +22,7 @@
   },
   {
     "slug": "reglementari-preturi",
-    "name": "Reglementări & Legislatie",
+    "name": "Piața Energiei si legislatie",
     "color": "#b22222",
     "description": "Articole și ghiduri despre reglementări & Legi",
     "ascunsa": false
@@ -60,7 +60,7 @@
     "name": "YouTube",
     "color": "#ff0000",
     "description": "Articole și ghiduri despre youtube.",
-    "ascunsa": false
+    "ascunsa": true
   },
   {
     "slug": "colaboratori",

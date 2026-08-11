@@ -1,12 +1,13 @@
 ---
 title: "Cât costă amenajarea curții pe mp (Pavaj, pregătire teren, alei și borduri)"
 categorie: outdoor-peisagistica
-data: 2026-08-11
+data: 2026-06-25
 dataAdaugare: "2026-08-11"
 sursaNume: "Ghid Amenajări"
 sursaUrl: "https://ghidamenajari.ro/amenajare-gradina/amenajare-curte/"
 imagine: "/images/articole/cat-costa-amenajarea-curtii-pe-mp-pavaj-pregatire-teren-alei-si-borduri.jpg"
 ---
+
 
 Amenajarea curții este adesea ultima etapă a unui proiect de construcție, dar cu impact vizual major — un pavaj bine ales și o pregătire corectă a terenului fac diferența între o curte funcțională pe termen lung și una care necesită reparații frecvente.
 
@@ -17,3 +18,4 @@ Pavajul propriu-zis variază mult ca preț în funcție de material: pavelele de
 Aleile și bordurile, care delimitează zonele de pavaj și susțin structura pe margini, adaugă 40-80 lei/ml, în funcție de materialul ales și de complexitatea traseului (curbe vs. linii drepte).
 
 Pentru o curte medie de 100-150 mp, cu pavaj de calitate medie-superioară și alei/borduri incluse, bugetul total se situează între 15.000 și 30.000 lei, cu variații semnificative în funcție de materialele alese și de complexitatea designului.
+

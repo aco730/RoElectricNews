@@ -1,12 +1,13 @@
 ---
 title: "Iluminat inteligent și scenarii de lumină: senzori de prezență și dimming"
 categorie: smart-home
-data: 2026-08-11
+data: 2021-04-07
 dataAdaugare: "2026-08-11"
 sursaNume: "Loxone"
 sursaUrl: "https://www.loxone.com/ro"
 imagine: "/images/articole/iluminat-inteligent-si-scenarii-de-lumina-senzori-de-prezenta-si-dimming.jpg"
 ---
+
 
 Iluminatul inteligent nu înseamnă doar becuri controlate din aplicație — cea mai mare diferență față de iluminatul clasic vine din combinația senzori de prezență + scenarii predefinite + dimming, nu din simpla posibilitate de a aprinde lumina de pe telefon.
 
@@ -17,3 +18,4 @@ Dimming-ul (variația intensității, nu doar on/off) contează dublu: pe partea
 Scenariile de lumină leagă mai multe circuite într-o singură comandă: „Seară” poate stinge iluminatul general, aprinde lumina de ambient la 30% și porni o culoare caldă, toate simultan, dintr-un singur buton sau automat la un anumit interval orar. Diferența practică față de comenzi individuale e că un scenariu bine gândit se folosește zilnic, fără efort — pe când controlul manual, cameră cu cameră, se abandonează repede.
 
 Costul unei instalări de bază (senzori + dimmer pe 4-5 circuite principale) pornește de la câteva sute de euro pentru o soluție wireless (Zigbee), și crește semnificativ pentru o soluție cablată (KNX), dar cu fiabilitate superioară pe termen lung.
+

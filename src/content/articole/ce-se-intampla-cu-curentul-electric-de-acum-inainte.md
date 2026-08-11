@@ -1,7 +1,8 @@
 ---
 title: "Ce se întâmplă cu curentul electric de acum înainte"
-categorie: youtube
+categorie: reglementari-preturi
 data: 2026-08-09
+dataAdaugare: "2026-08-10"
 sursaNume: "Ce se întâmplă"
 sursaUrl: "https://www.youtube.com/watch?v=1PAjzmWbVrY&t=277s"
 imagine: "/images/articole/ce-se-intampla-cu-curentul-electric-de-acum-inainte.webp"

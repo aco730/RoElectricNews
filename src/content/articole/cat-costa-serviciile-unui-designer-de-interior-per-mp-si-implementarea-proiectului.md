@@ -1,12 +1,13 @@
 ---
 title: "Cât costă serviciile unui designer de interior per mp și implementarea proiectului"
 categorie: design-interior
-data: 2026-08-11
+data: 2026-06-23
 dataAdaugare: "2026-08-11"
 sursaNume: "Formah"
 sursaUrl: "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/"
 imagine: "/images/articole/cat-costa-serviciile-unui-designer-de-interior-per-mp-si-implementarea-proiectului.jpg"
 ---
+
 
 Serviciile unui designer de interior acoperă de la conceptul general (paletă de culori, materiale, dispunerea mobilierului) până la supervizarea execuției — iar costul variază semnificativ în funcție de nivelul de implicare dorit.
 
@@ -17,3 +18,4 @@ Supervizarea execuției (vizite pe șantier, coordonare cu meșterii, ajustări 
 Implementarea propriu-zisă a proiectului — mobilier, finisaje, decorațiuni — reprezintă bugetul cel mai mare și variază enorm, de la 800-1.500 lei/mp pentru un nivel mediu, până la peste 3.000 lei/mp pentru soluții premium cu mobilier custom și materiale de lux.
 
 Un aspect care merită luat în calcul: mulți designeri de interior au colaborări cu furnizori și pot obține prețuri mai bune la mobilier și finisaje decât ar obține clientul direct, ceea ce poate compensa parțial costul onorariului de proiectare.
+
