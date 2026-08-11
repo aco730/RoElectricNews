@@ -32,8 +32,9 @@ const config = await getSiteConfig();
 			</label>
 		</div>
 		<label>Imagine logo (opțional — dacă e setată, înlocuiește SVG-ul desenat)
-			<input type="file" id="h-logo-file" accept="image/png,image/svg+xml,image/webp,image/jpeg" />
+			<input type="file" id="h-logo-file" accept="image/png,image/webp,image/jpeg" />
 		</label>
+		<label class="check"><input type="checkbox" id="h-logo-favicon" checked /> Folosește și ca icon de site (favicon din tab-ul browser-ului)</label>
 		<div id="h-logo-preview"></div>
 		{config.header.logoImagine && <button type="button" class="btn-secundar" id="h-logo-elimină">Elimină imaginea, revino la SVG</button>}
 
@@ -170,16 +171,19 @@ const config = await getSiteConfig();
 			});
 		}
 
+		const logoFaviconCheck = document.getElementById('h-logo-favicon');
+
 		logoFileInput.addEventListener('change', async () => {
 			const file = logoFileInput.files[0];
 			if (!file) return;
 			const fd = new FormData();
 			fd.append('logo', file);
+			fd.append('faviconAuto', logoFaviconCheck.checked ? 'true' : 'false');
 			const res = await fetch('/api/admin/upload-logo', { method: 'POST', body: fd });
 			const data = await res.json();
 			if (res.ok) {
 				logoImaginePendinte = data.path;
-				logoPreview.innerHTML = `<img src="${data.path}" alt="preview" />`;
+				logoPreview.innerHTML = `<img src="${data.path}" alt="preview" />` + (data.faviconActualizat ? '<div style="color:#86efac;font-size:0.8rem;margin-top:0.3rem;">✅ Icon-ul site-ului (favicon) a fost actualizat.</div>' : '');
 			} else {
 				alert(data.error || 'Eroare la încărcare.');
 			}

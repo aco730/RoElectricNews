@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { saveLogoFile } from '../../../lib/siteConfig';
+import { saveLogoFile, genereazaFaviconDinBuffer } from '../../../lib/siteConfig';
 
 export const prerender = false;
 
@@ -32,7 +32,18 @@ export const POST: APIRoute = async ({ request }) => {
 	const buffer = Buffer.from(await file.arrayBuffer());
 	const publicPath = await saveLogoFile(file.type, buffer);
 
-	return new Response(JSON.stringify({ path: publicPath }), {
+	const foloseșteCaFavicon = String(form.get('faviconAuto') ?? '') === 'true';
+	let faviconActualizat = false;
+	if (foloseșteCaFavicon) {
+		try {
+			await genereazaFaviconDinBuffer(buffer);
+			faviconActualizat = true;
+		} catch {
+			// nu blocăm salvarea logo-ului dacă generarea favicon-ului eșuează
+		}
+	}
+
+	return new Response(JSON.stringify({ path: publicPath, faviconActualizat }), {
 		headers: { 'Content-Type': 'application/json' },
 	});
 };
