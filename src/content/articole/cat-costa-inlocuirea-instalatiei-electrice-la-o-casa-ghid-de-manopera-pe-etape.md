@@ -2,9 +2,11 @@
 title: "Cât costă înlocuirea instalației electrice la o casă: ghid de manoperă pe etape"
 categorie: electric-instalatii
 data: 2026-07-23
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+dataAdaugare: "2026-08-10"
+sursaNume: "Electro-Calin"
+sursaUrl: "https://electro-calin.ro"
 imagine: "/images/articole/cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape.webp"
+fixat: true
 ---
 
 Înlocuirea completă a instalației electrice la o casă locuită e unul dintre cele mai invazive și mai des amânate proiecte de renovare — implică spargere de pereți, praf, zile fără curent pe zone ale casei și, de regulă, un electrician autorizat prezent câteva săptămâni. Înțelegerea etapelor ajută la estimarea realistă a timpului și bugetului, chiar dacă prețurile exacte variază de la o zonă la alta și de la un electrician la altul.
@@ -19,4 +21,4 @@ A patra etapă e montarea finală a prizelor, întrerupătoarelor și corpurilor
 
 Costul total depinde decisiv de trei factori: suprafața casei (mai multe circuite, mai mult cablu), gradul de spargere necesar (o casă cu pereți din gips-carton e mult mai ieftin de recablat decât una cu pereți din beton sau cărămidă groasă) și calitatea materialelor alese pentru tablou și componente. Manopera reprezintă, de regulă, o parte semnificativă din bugetul total — motiv pentru care mai mulți electricieni recomandă obținerea a cel puțin două-trei oferte scrise, cu detaliere pe etape, înainte de a începe lucrarea, exact pentru a putea compara manoperă vs. materiale în fiecare ofertă.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

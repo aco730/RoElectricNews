@@ -33,7 +33,7 @@ interface Props {
 }
 
 const {
-  title = "Electric NEWS — Electric, Smart Home, Fotovoltaic, Baterii & Stocare",
+  title = "BuildHub.ro — Electric, Smart Home, Fotovoltaic, Baterii & Stocare",
   description = "Știri și ghiduri despre electric, fotovoltaic, smart home și stocare de energie, susținute de Solar Electric Panel (SEP).",
   singleCol = false,
   articleQa = false,
@@ -129,17 +129,17 @@ const articleSchema = articleMeta ? {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageAbsolut} />
     <meta property="og:locale" content="ro_RO" />
-    <meta property="og:site_name" content="Electric NEWS — Solar Electric Panel" />
+    <meta property="og:site_name" content="BuildHub.ro — Solar Electric Panel" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageAbsolut} />
 
-    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
-    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
-    {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema).replace(/</g, '\\u003c')} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c')} />}
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replace(/</g, '\\u003c')} />}
+    {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema).replace(/</g, '\\u003c')} />}
   </head>
   <body>
     <Header />

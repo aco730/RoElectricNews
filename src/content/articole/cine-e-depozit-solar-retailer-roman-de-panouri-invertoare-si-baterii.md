@@ -1,7 +1,8 @@
 ---
 title: "Cine e Depozit Solar: retailer român de panouri, invertoare și baterii"
 categorie: fotovoltaic
-data: 2026-08-14
+data: 2026-02-14
+dataAdaugare: "2026-08-10"
 sursaNume: "Depozit Solar"
 sursaUrl: "https://depozitsolar.ro/"
 imagine: "/images/articole/cine-e-depozit-solar-retailer-roman-de-panouri-invertoare-si-baterii.webp"

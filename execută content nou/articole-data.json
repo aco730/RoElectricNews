@@ -1,0 +1,314 @@
+[
+  {
+    "title": "Cât costă o instalație electrică cap-coadă la o casă de 100-150 mp în 2026 (Materiale + Manoperă)",
+    "categorie": "electric-instalatii",
+    "sursaNume": "Electro-Calin",
+    "sursaUrl": "https://electro-calin.ro/ghid-pentru-curentul-trifazic-cat-costa-sa-tragi-curent-trifazic-in-2026",
+    "continut": "O instalație electrică completă, de la tabloul general până la ultima priză, este una dintre cele mai importante investiții ascunse ale unei case noi — greu de văzut după finisaje, dar imposibil de corectat ieftin ulterior. Pentru o casă de 100-150 mp, în 2026 vorbim în medie de 9.000-16.000 lei, cu materiale și manoperă incluse, dar diferențele pot fi mari în funcție de calitatea aleasă.\n\nO instalație cap-coadă cuprinde proiectul electric, tabloul general (și eventual tablouri secundare), cablajul complet pentru prize, întrerupătoare și iluminat, circuitele dedicate pentru aragaz, boiler și aer condiționat, protecțiile (sigurante automate, diferențiale, descărcătoare de supratensiune) și împământarea cu priza de pământ (PRAM).\n\nMaterialele reprezintă în jur de 25-35 lei/mp pentru cablu NYM-J, doze, tub riflat și prize/întrerupătoare de gamă medie, la care se adaugă un tablou electric complet echipat (1.800-3.500 lei) și manoperă de 20-30 lei/mp. Împământarea și PRAM-ul mai adaugă 800-1.500 lei la total.\n\nCel mai mult influențează prețul final numărul de puncte electrice, calitatea materialelor alese, accesul la șantier (o renovare costă cu 20-40% mai mult decât o construcție nouă la stadiul de roșu, din cauza demontărilor) și distanța până la rețeaua de distribuție, care afectează costul branșamentului.\n\nCel mai bun sfat practic: cere întotdeauna ofertă cu preț pe mp și cu materialele specificate explicit — tip cablu, marcă prize — pentru că ofertele „la kilogram” fără detalii ascund frecvent materiale de calitate inferioară care se pot degrada mult mai repede.",
+    "faq": [
+      { "intrebare": "Cât durează o instalație electrică completă la o casă de 120 mp?", "raspuns": "În mod normal 5-8 zile lucrătoare, în funcție de complexitate și numărul de electricieni pe șantier." },
+      { "intrebare": "Ce tip de cablu se folosește la instalațiile electrice fixe?", "raspuns": "NYM-J is a standard fixed-installation electric cable with copper conductors, standardul folosit în prezent pentru instalațiile fixe rezidențiale." },
+      { "intrebare": "Se poate face instalația electrică fără proiect?", "raspuns": "La case unifamiliale se poate lucra după o schemă simplificată, dar un proiect electric întocmit de un inginer reduce riscul de erori și e recomandat pentru siguranță." },
+      { "intrebare": "Merită să investesc în prize și întrerupătoare premium?", "raspuns": "Da, pe termen lung — diferența de preț e mică raportat la total, dar durabilitatea și siguranța contactelor electrice sunt superioare." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile pentru racordarea la rețeaua trifazată și extinderi de rețea",
+    "categorie": "electric-instalatii",
+    "sursaNume": "Electro-Calin",
+    "sursaUrl": "https://electro-calin.ro/ghid-pentru-curentul-trifazic-cat-costa-sa-tragi-curent-trifazic-in-2026",
+    "continut": "Trecerea la curent trifazat este necesară pentru case cu consum ridicat — pompe de căldură, aer condiționat multi-split, mașini de sudură sau ateliere. Racordarea presupune atât taxe către operatorul de distribuție, cât și costuri de execuție pe proprietate.\n\nOperatorul de distribuție percepe un tarif de racordare stabilit prin regulament, calculat în funcție de puterea solicitată și distanța până la cel mai apropiat punct de rețea. Pentru o putere trifazată standard de 3x25A, tariful de racordare pleacă în general de la 500-1.500 lei, dar poate crește semnificativ dacă e nevoie de extindere de rețea.\n\nDacă rețeaua electrică publică nu ajunge suficient de aproape de proprietate, costurile de extindere (stâlpi noi, cablu subteran sau aerian) pot ajunge la câteva mii până la zeci de mii de lei, în funcție de distanță și de tipul de lucrare (subteran fiind mult mai scump decât aerian).\n\nPe lângă taxa de racordare, proprietarul suportă și costul instalației interioare până la tabloul general — cablul de la firida de branșament până la casă, tabloul de branșament și contorul, dacă nu sunt incluse deja în oferta operatorului.\n\nDe reținut: procesul durează adesea 3-6 luni de la depunerea cererii până la punerea sub tensiune, din cauza avizelor tehnice și a programărilor operatorului, așa că e recomandat să se demareze cât mai devreme în planificarea proiectului.",
+    "faq": [
+      { "intrebare": "Cât timp durează racordarea la rețeaua trifazată?", "raspuns": "De regulă între 3 și 6 luni, în funcție de avize și de programarea operatorului local de distribuție." },
+      { "intrebare": "Ce diferență de cost este între extinderea aeriană și cea subterană?", "raspuns": "Extinderea subterană este semnificativ mai scumpă decât cea aeriană, din cauza săpăturilor și a protecțiilor suplimentare pentru cablu." },
+      { "intrebare": "Este obligatoriu curentul trifazat pentru o casă nouă?", "raspuns": "Nu întotdeauna — depinde de consumul planificat; multe case cu consum moderat funcționează bine pe monofazat." },
+      { "intrebare": "Cine plătește tabloul de branșament și contorul?", "raspuns": "De obicei proprietarul, dacă nu sunt incluse explicit în oferta operatorului de distribuție." }
+    ]
+  },
+  {
+    "title": "Cât costă o pompă de căldură aer-apă vs. centrală pe gaz (Investiție inițială vs. amortizare)",
+    "categorie": "electric-instalatii",
+    "sursaNume": "Arena Instalațiilor",
+    "sursaUrl": "https://www.arenainstalatiilor.ro",
+    "continut": "Alegerea între o pompă de căldură aer-apă și o centrală clasică pe gaz este una dintre cele mai frecvente dileme la case noi, mai ales în contextul creșterii prețurilor la gaz și al reglementărilor tot mai stricte privind eficiența energetică.\n\nO pompă de căldură aer-apă rezidențială de capacitate medie (8-12 kW) costă în 2026, cu montaj inclus, undeva între 18.000 și 35.000 lei, în funcție de marcă și de complexitatea instalației. O centrală pe gaz în condensație de putere similară costă mult mai puțin la achiziție — între 4.000 și 8.000 lei cu montaj.\n\nDiferența majoră apare la costurile de operare. Pompa de căldură are un coeficient de performanță (COP) de 3-4, adică produce 3-4 unități de căldură pentru fiecare unitate de electricitate consumată, ceea ce reduce semnificativ factura lunară comparativ cu gazul, mai ales dacă e cuplată cu panouri fotovoltaice.\n\nAmortizarea diferenței de investiție inițială (aprox. 15.000-25.000 lei mai scumpă decât centrala pe gaz) se face de obicei în 5-8 ani, în funcție de prețul local al energiei electrice și gazului, de gradul de izolare al casei și de eventualele subvenții disponibile prin programe guvernamentale.\n\nPentru case noi, bine izolate termic, pompa de căldură este alegerea recomandată pe termen lung — costul mai mare inițial se recuperează, iar independența parțială de prețul gazului devine un avantaj strategic.",
+    "faq": [
+      { "intrebare": "În câți ani se amortizează o pompă de căldură față de o centrală pe gaz?", "raspuns": "În medie 5-8 ani, în funcție de izolația casei și de prețurile locale la energie electrică și gaz." },
+      { "intrebare": "Funcționează pompa de căldură eficient iarna, la temperaturi foarte scăzute?", "raspuns": "Da, modelele moderne funcționează eficient până la -15/-20°C, deși eficiența scade ușor la temperaturi extreme." },
+      { "intrebare": "Se poate combina pompa de căldură cu panouri fotovoltaice?", "raspuns": "Da, este una dintre cele mai eficiente combinații — energia solară acoperă o parte din consumul electric al pompei, reducând suplimentar costurile." },
+      { "intrebare": "Ce sistem de încălzire e recomandat cu o pompă de căldură?", "raspuns": "Încălzirea prin pardoseală, pentru că funcționează la temperaturi joase ale agentului termic, exact regimul în care pompa de căldură e cea mai eficientă." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile reale pentru automatizarea completă a unei case (Sisteme cablate vs. wireless)",
+    "categorie": "smart-home",
+    "sursaNume": "SmartHomeSystems",
+    "sursaUrl": "https://www.smarthomesystems.ro",
+    "continut": "Automatizarea completă a unei case moderne — iluminat, climatizare, jaluzele, acces, alarme — poate costa de la câteva mii de lei pentru soluții wireless de bază, până la zeci de mii de lei pentru sisteme cablate integrate profesional, precum KNX sau Loxone.\n\nSistemele wireless (Zigbee, Z-Wave, Wi-Fi) sunt mult mai accesibile pentru integrare într-o casă deja finisată, pentru că nu necesită cablare suplimentară în pereți — costurile pornesc de la 3.000-8.000 lei pentru o casă medie, cu module de iluminat, prize inteligente și termostate. Dezavantajul este dependența de rețeaua Wi-Fi/hub și o fiabilitate ceva mai scăzută pe termen lung.\n\nSistemele cablate profesionale (KNX, Loxone, Control4) se instalează ideal din faza de proiect, în casă la roșu, pentru că necesită cablu de bus dedicat pentru fiecare punct controlat. Costurile pornesc de la 15.000-20.000 lei pentru o casă mică și pot depăși 60.000-80.000 lei pentru o casă mare, cu automatizare completă.\n\nDiferența de fiabilitate este semnificativă: un sistem cablat KNX nu depinde de o conexiune la internet pentru funcțiile de bază și are o durată de viață de peste 20 de ani, în timp ce dispozitivele wireless pot necesita înlocuiri sau update-uri de firmware mai frecvente.\n\nRecomandarea practică: pentru case în construcție, merită investiția într-un sistem cablat, chiar dacă bugetul inițial e mai mare — costul de a adăuga cablare ulterior, după finisaje, este mult mai ridicat decât diferența față de un sistem wireless.",
+    "faq": [
+      { "intrebare": "Ce e mai fiabil pe termen lung — sistemul cablat sau wireless?", "raspuns": "Sistemul cablat, de tip KNX sau Loxone, are o durată de viață mai mare și nu depinde de rețeaua Wi-Fi pentru funcțiile esențiale." },
+      { "intrebare": "Se poate automatiza o casă deja finisată?", "raspuns": "Da, prin soluții wireless (Zigbee, Z-Wave, Wi-Fi), care nu necesită cablare suplimentară în pereți." },
+      { "intrebare": "Când trebuie decis tipul de automatizare în procesul de construcție?", "raspuns": "Ideal din faza de proiect electric, pentru ca sistemele cablate să poată fi integrate înainte de tencuire și finisaje." },
+      { "intrebare": "Merită automatizarea completă la o casă mică?", "raspuns": "De multe ori un pachet parțial (iluminat + climă + acces) oferă cel mai bun raport cost-beneficiu, fără a justifica investiția într-un sistem complet." }
+    ]
+  },
+  {
+    "title": "Cât te costă un sistem de supraveghere IP, control acces și alarmă smart în 2026",
+    "categorie": "smart-home",
+    "sursaNume": "Spy-Shop",
+    "sursaUrl": "https://www.spy-shop.ro/blog",
+    "continut": "Securitatea unei case moderne combină trei componente care se completează: supravegherea video IP, controlul de acces (interfoane, cititoare de cartelă/amprentă) și alarma cu senzori de mișcare/deschidere conectată la aplicație mobilă.\n\nUn sistem de supraveghere IP pentru o casă medie (4-6 camere exterior/interior, NVR cu stocare, cablare PoE) costă în 2026 între 3.500 și 8.000 lei, în funcție de rezoluție și de funcțiile de detecție inteligentă.\n\nControlul de acces variază mult — un interfon video simplu cu deschidere de la aplicație costă 800-2.000 lei, în timp ce un sistem complet cu cititor de amprentă sau cartelă la poartă și ușă principală poate ajunge la 3.000-6.000 lei.\n\nAlarma smart, cu senzori de mișcare, contacte magnetice pe uși/ferestre, sirenă și panou de control conectat la aplicație și eventual la o firmă de monitorizare, costă între 2.500 și 6.000 lei pentru o casă medie, plus un abonament lunar de monitorizare de aproximativ 30-80 lei/lună.\n\nPentru o casă completă, cu toate cele trei componente integrate într-un singur ecosistem, bugetul realist pornește de la 8.000-10.000 lei și poate depăși 20.000 lei pentru soluții premium cu integrare completă și monitorizare profesională.",
+    "faq": [
+      { "intrebare": "E nevoie de abonament lunar pentru un sistem de alarmă smart?", "raspuns": "Nu obligatoriu — poți primi notificări direct pe telefon fără costuri lunare, dar monitorizarea profesională necesită abonament." },
+      { "intrebare": "Ce diferență e între camerele de 4MP și 8MP?", "raspuns": "Rezoluția de 8MP oferă detalii mult mai clare la zoom, utile pentru identificarea plăcuțelor de înmatriculare sau a fețelor la distanță." },
+      { "intrebare": "Se pot integra camerele, alarma și interfonul într-o singură aplicație?", "raspuns": "Da, majoritatea producătorilor moderni oferă ecosisteme compatibile, dar e recomandat să alegi de la început aceeași marcă sau un sistem certificat compatibil." },
+      { "intrebare": "Cât costă cablarea PoE pentru camere IP?", "raspuns": "În medie 150-300 lei per cameră, în funcție de distanța de cablare și de complexitatea traseului." }
+    ]
+  },
+  {
+    "title": "Costuri de integrare pentru scenarii de iluminat inteligent și climatizare zonată",
+    "categorie": "smart-home",
+    "sursaNume": "Loxone",
+    "sursaUrl": "https://www.loxone.com/ro",
+    "continut": "Iluminatul inteligent și climatizarea zonată transformă o casă dintr-un spațiu cu întrerupătoare fixe într-un mediu adaptabil, cu scenarii predefinite și temperaturi diferite pe fiecare cameră.\n\nPentru iluminatul inteligent, costul depinde de tehnologie: becuri și module smart plug-and-play (Wi-Fi/Zigbee) pornesc de la 50-150 lei per punct, în timp ce un sistem cablat cu dimming DALI sau KNX, integrat din proiect, costă 300-600 lei per circuit, dar oferă control mult mai fin și fiabilitate superioară.\n\nClimatizarea zonată presupune împărțirea casei în zone termice independente, fiecare cu propriul termostat și supapă de control pe circuitul de încălzire prin pardoseală sau pe unitățile de aer condiționat. Costul de integrare pentru o casă cu 5-6 zone este de aproximativ 4.000-8.000 lei, incluzând termostatele, actuatoarele și unitatea centrală de control.\n\nScenariile predefinite necesită o unitate centrală de automatizare care să coordoneze toate subsistemele — acesta este de fapt costul principal al „inteligenței”, nu al dispozitivelor individuale, și poate adăuga 3.000-10.000 lei la bugetul total, în funcție de complexitatea platformei alese.\n\nPentru un raport optim cost-beneficiu, se recomandă prioritizarea zonelor cu impact real asupra confortului — dormitoare și living pentru climatizare zonată, iar iluminatul inteligent extins ulterior, treptat, pe măsură ce bugetul permite.",
+    "faq": [
+      { "intrebare": "Ce este climatizarea zonată?", "raspuns": "Împărțirea casei în zone termice independente, fiecare cu propriul termostat, pentru confort personalizat și economie de energie." },
+      { "intrebare": "Este scump un sistem de iluminat inteligent cablat față de unul wireless?", "raspuns": "Da, de câteva ori mai scump per punct, dar oferă fiabilitate și control mult superioare pe termen lung." },
+      { "intrebare": "Ce rol are unitatea centrală de automatizare?", "raspuns": "Coordonează toate subsistemele (iluminat, climă, acces) pentru a rula scenarii complexe, precum „plecare de acasă” sau „bun venit”." },
+      { "intrebare": "Se poate adăuga climatizarea zonată ulterior, după finalizarea casei?", "raspuns": "Este posibil, dar mult mai costisitor și mai invaziv decât integrarea din faza de proiect, mai ales pentru încălzirea prin pardoseală." }
+    ]
+  },
+  {
+    "title": "Cât costă un sistem fotovoltaic hibrid de 5kW / 10kW cu stocare în baterii LiFePO4 în 2026",
+    "categorie": "fotovoltaic",
+    "sursaNume": "Kilowat",
+    "sursaUrl": "https://kilowat.ro/blog/fotovoltaice/pregatire-instalare-sistem-fotovoltaic/",
+    "continut": "Sistemele fotovoltaice hibride — care combină producția de energie solară cu stocarea în baterii — au devenit alegerea standard în 2026 pentru cei care vor independență energetică reală, nu doar reducerea facturii la rețea.\n\nUn sistem hibrid de 5kW, cu o baterie LiFePO4 de 5-10 kWh, costă în medie 28.000-42.000 lei, complet instalat, incluzând panourile, invertorul hibrid, bateria, structura de montaj și punerea în funcțiune. Un sistem de 10kW, cu o baterie mai mare (10-15 kWh), ajunge la 55.000-80.000 lei.\n\nBateriile LiFePO4 sunt preferate în 2026 pentru siguranță superioară și durată de viață mare — peste 6.000 de cicluri de încărcare-descărcare, echivalent a 15-20 de ani de utilizare zilnică.\n\nDiferența de cost față de un sistem on-grid clasic (fără stocare) este semnificativă — un sistem de 5kW fără baterie costă aproximativ 15.000-20.000 lei mai puțin — dar stocarea permite folosirea energiei produse ziua și seara/noaptea, reducând dependența de rețea și oferind protecție la pene de curent.\n\nAmortizarea unui sistem hibrid depinde de consumul propriu și de prețul energiei electrice, dar în general se situează între 6 și 10 ani, cu posibilitatea de a fi redusă semnificativ prin programele de subvenționare guvernamentale disponibile pentru prosumatori.",
+    "faq": [
+      { "intrebare": "Ce diferență e între un sistem fotovoltaic on-grid și unul hibrid?", "raspuns": "Sistemul on-grid injectează excesul de energie direct în rețea, fără stocare; cel hibrid stochează energia într-o baterie pentru folosire ulterioară, inclusiv la pană de curent." },
+      { "intrebare": "De ce sunt preferate bateriile LiFePO4?", "raspuns": "Pentru siguranță superioară și durată de viață mare — peste 6.000 de cicluri, echivalent a 15-20 de ani de utilizare." },
+      { "intrebare": "Cât durează amortizarea unui sistem hibrid de 5kW?", "raspuns": "În medie 6-10 ani, în funcție de consumul propriu, prețul energiei și eventualele subvenții accesate." },
+      { "intrebare": "Poate un sistem hibrid funcționa complet independent de rețea?", "raspuns": "Tehnic da, dar majoritatea instalațiilor rezidențiale rămân conectate la rețea pentru siguranță suplimentară." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile de pregătire a tabloului și acoperișului pentru instalarea panourilor",
+    "categorie": "fotovoltaic",
+    "sursaNume": "Kilowat",
+    "sursaUrl": "https://kilowat.ro/blog/fotovoltaice/pregatire-instalare-sistem-fotovoltaic/",
+    "continut": "Înainte de montarea propriu-zisă a panourilor fotovoltaice, sunt necesare câteva lucrări pregătitoare la nivelul tabloului electric și al acoperișului, adesea subestimate în bugetul inițial al proiectului.\n\nLa nivelul tabloului electric, trebuie prevăzut spațiu pentru un tablou dedicat sistemului fotovoltaic. Costul acestor lucrări electrice suplimentare este de aproximativ 1.500-3.500 lei, în funcție de distanța de la invertor la tabloul principal și de complexitatea instalației.\n\nPregătirea acoperișului variază mult în funcție de tipul de învelitoare. Pentru țiglă, se montează cârlige speciale de fixare (150-250 lei/bucată, cu 8-14 bucăți necesare pentru un sistem de 5kW), în timp ce pentru tablă cutată se folosesc cleme de prindere directă, mai ieftine. Dacă acoperișul are peste 15-20 de ani, se recomandă renovarea parțială înainte de montaj — cost suplimentar de 5.000-15.000 lei, în funcție de suprafață.\n\nStructura de rezistență a acoperișului trebuie verificată de un inginer, mai ales pentru acoperișuri vechi, pentru a confirma că poate susține greutatea suplimentară a panourilor (aprox. 15-20 kg/mp cu structura de montaj inclusă).\n\nUn aspect adesea ignorat: orientarea și unghiul acoperișului influențează direct producția — o pantă sudică la 30-35° este optimă, iar orientările est-vest necesită un calcul separat al randamentului, care poate justifica un sistem ceva mai mare pentru a compensa.",
+    "faq": [
+      { "intrebare": "Trebuie schimbat tabloul electric pentru un sistem fotovoltaic?", "raspuns": "De obicei nu integral, dar e nevoie de un tablou dedicat suplimentar cu protecțiile specifice sistemului DC/AC." },
+      { "intrebare": "Ce se întâmplă dacă acoperișul e vechi?", "raspuns": "Se recomandă renovarea parțială înainte de montarea panourilor, pentru a evita demontarea lor peste câțiva ani." },
+      { "intrebare": "Ce unghi de acoperiș este optim pentru panouri solare?", "raspuns": "O pantă sudică de 30-35° oferă randamentul optim în România; orientările est-vest sunt și ele viabile, dar cu producție ușor redusă." },
+      { "intrebare": "Cât cântărește un sistem fotovoltaic pe metru pătrat de acoperiș?", "raspuns": "Aproximativ 15-20 kg/mp, incluzând panourile și structura de montaj." }
+    ]
+  },
+  {
+    "title": "Cât te costă un acumulator suplimentar de stocare rezidențială și care este durata de amortizare",
+    "categorie": "fotovoltaic",
+    "sursaNume": "Asociația Prosumatorilor",
+    "sursaUrl": "https://asociatiaprosumatorilor.ro/in-vara-lui-2026-romania-este-salvata-de-cei-360-000-de-prosumatori-si-de-energia-regenerabila-tin-sistemul-electric-in-viata/",
+    "continut": "Numărul mare de prosumatori din România (peste 360.000 în vara lui 2026) a arătat clar valoarea energiei stocate — sistemul electric național se sprijină tot mai mult pe producția distribuită, iar acumulatorii suplimentari de stocare devin o investiție tot mai atractivă.\n\nUn acumulator suplimentar LiFePO4 de 5 kWh, compatibil cu majoritatea invertoarelor hibride existente, costă în 2026 între 8.000 și 14.000 lei, instalat. Pentru capacități mai mari, de 10 kWh, prețul urcă la 15.000-24.000 lei.\n\nAmortizarea unui acumulator suplimentar depinde direct de diferența dintre prețul de achiziție al energiei de la rețea și prețul de vânzare al excesului de producție injectat în rețea. În contextul actual, amortizarea se situează între 5 și 9 ani.\n\nUn avantaj adesea subestimat este independența la pene de curent — cu un acumulator suficient de mare și un invertor cu funcție de backup, o gospodărie poate rămâne alimentată câteva ore sau chiar o zi întreagă, funcție de consum.\n\nPentru cei care vor să extindă un sistem existent, e important de verificat compatibilitatea acumulatorului nou cu invertorul deja instalat — nu toate combinațiile de mărci sunt compatibile.",
+    "faq": [
+      { "intrebare": "Merită să adaug o baterie la un sistem fotovoltaic deja instalat?", "raspuns": "Da, dacă invertorul existent e compatibil — amortizarea se face de obicei în 5-9 ani, plus avantajul de siguranță la pene de curent." },
+      { "intrebare": "Cât durează garanția unei baterii LiFePO4 rezidențiale?", "raspuns": "În general 10-15 ani, standard pentru bateriile de calitate din 2026." },
+      { "intrebare": "Poate o baterie de stocare alimenta casa la pană de curent?", "raspuns": "Da, dacă invertorul are funcție de backup — durata depinde de capacitatea bateriei și de consumul curent." },
+      { "intrebare": "Sunt compatibile toate bateriile cu toate invertoarele?", "raspuns": "Nu — compatibilitatea trebuie verificată înainte de achiziție, altfel poate fi necesară și schimbarea invertorului." }
+    ]
+  },
+  {
+    "title": "Cât costă obținerea Autorizației de Construire (Taxe locale, avize, studiu geotehnic, topo)",
+    "categorie": "reglementari-preturi",
+    "sursaNume": "Proiect-Case.ro",
+    "sursaUrl": "https://proiect-case.ro/autorizatie-construire-ghid",
+    "continut": "Obținerea Autorizației de Construire este un proces cu mai multe costuri distincte, adesea subestimate de proprietarii aflați la prima construcție — de la studii tehnice preliminare până la taxele finale percepute de primărie.\n\nStudiul geotehnic, obligatoriu pentru stabilirea tipului de fundație, costă în 2026 între 2.000 și 4.500 lei, în funcție de complexitatea terenului. Ridicarea topografică costă suplimentar 800-2.000 lei.\n\nAvizele necesare variază în funcție de zonă și de utilități disponibile — aviz de la furnizorul de electricitate, apă-canal, gaz, și eventual de la alte instituții. Costul total al avizelor se situează de obicei între 1.500 și 4.000 lei.\n\nTaxele locale pentru eliberarea Autorizației de Construire sunt calculate procentual din valoarea de proiect a construcției (de obicei 0,5-1%), variind de la primărie la primărie.\n\nÎn total, procesul complet (studii + avize + taxe + onorariul arhitectului pentru documentație) costă de regulă între 8.000 și 18.000 lei pentru o casă unifamilială standard, iar durata întregului proces variază de la 2 la 6 luni.",
+    "faq": [
+      { "intrebare": "Cât costă studiul geotehnic obligatoriu?", "raspuns": "Între 2.000 și 4.500 lei, în funcție de complexitatea terenului și numărul de foraje necesare." },
+      { "intrebare": "Cât durează obținerea Autorizației de Construire?", "raspuns": "De regulă între 2 și 6 luni, în funcție de complexitatea proiectului și viteza instituțiilor implicate." },
+      { "intrebare": "Cum se calculează taxa locală pentru autorizație?", "raspuns": "Procentual din valoarea de proiect a construcției, de obicei 0,5-1%, în funcție de reglementările locale." },
+      { "intrebare": "Ce avize sunt de obicei obligatorii?", "raspuns": "Avizele de la furnizorii de utilități (electricitate, apă-canal, gaz) și, în funcție de zonă, avize de mediu." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile administrative și taxele comasate prin noul Cod al Urbanismului (CATUC)",
+    "categorie": "reglementari-preturi",
+    "sursaNume": "Curs de Guvernare",
+    "sursaUrl": "https://cursdeguvernare.ro/avizarea-constructiilor-digitalizata-dupa-adoptarea-codului-urbanismului.html",
+    "continut": "Noul Cod al Amenajării Teritoriului, Urbanismului și Construcțiilor (CATUC) a adus schimbări semnificative în modul în care se calculează și se plătesc taxele administrative pentru autorizarea construcțiilor, cu accent pe digitalizarea proceselor de avizare.\n\nUnul dintre principalele obiective ale CATUC este comasarea mai multor taxe și avize separate într-un flux unificat, gestionat digital, ceea ce ar trebui să reducă atât numărul de deplasări fizice la instituții, cât și timpul total de așteptare.\n\nDin perspectiva costurilor, digitalizarea nu elimină taxele existente, dar simplifică modul de plată — proprietarii vor putea depune documentația și plăti taxele printr-o platformă unică, reducând costurile administrative indirecte.\n\nUn aspect important pentru cei care planifică o construcție în perioada de tranziție este că unele primării pot implementa noul sistem mai rapid decât altele, ceea ce înseamnă că procesul poate varia de la o localitate la alta.\n\nProprietarii care demarează proiecte de construcție ar trebui să verifice direct la primăria locală stadiul de implementare a CATUC și dacă documentația trebuie depusă în format digital, fizic, sau mixt.",
+    "faq": [
+      { "intrebare": "Ce este CATUC?", "raspuns": "Codul Amenajării Teritoriului, Urbanismului și Construcțiilor, care comasează și digitalizează procesele de avizare a construcțiilor în România." },
+      { "intrebare": "Reduce CATUC costurile taxelor de autorizare?", "raspuns": "Nu elimină taxele, dar reduce costurile administrative indirecte prin digitalizarea și unificarea proceselor." },
+      { "intrebare": "Se aplică CATUC uniform în toate primăriile?", "raspuns": "Implementarea variază de la o localitate la alta, mai ales în perioada de tranziție de la vechiul sistem." },
+      { "intrebare": "Ce ar trebui să verifice un proprietar înainte de a depune documentația?", "raspuns": "Stadiul de implementare a CATUC la primăria locală și dacă se acceptă depunere digitală, fizică sau mixtă." }
+    ]
+  },
+  {
+    "title": "Cât costă certificatul energetic și auditul nZEB obligatoriu la recepția casei",
+    "categorie": "reglementari-preturi",
+    "sursaNume": "Verificatori.ro",
+    "sursaUrl": "https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc",
+    "continut": "Certificatul de performanță energetică și auditul nZEB (clădire cu consum de energie aproape egal cu zero) sunt obligatorii pentru recepția finală a oricărei case noi construite după reglementările actuale din România.\n\nCertificatul energetic, întocmit de un auditor autorizat, evaluează consumul de energie al clădirii și îi atribuie o clasă energetică, de la A+ la G. Costul pentru o casă unifamilială standard este de 800-1.800 lei.\n\nAuditul nZEB este mai detaliat și verifică dacă edificiul respectă cerințele minime de performanță energetică impuse pentru clădirile noi — izolație termică, eficiența sistemelor de încălzire/răcire, ponderea energiei din surse regenerabile. Costul unui audit nZEB complet variază între 1.500 și 3.500 lei.\n\nAmbele documente sunt obligatorii pentru obținerea autorizației de recepție finală a construcției și pentru înscrierea legală a locuinței, iar lipsa lor poate bloca procesul de intabulare sau racordare definitivă la utilități.\n\nUn aspect important: casele care ating deja standardul nZEB prin proiectare (izolație superioară, pompe de căldură, panouri fotovoltaice) obțin certificate energetice cu clasificare mai bună, ceea ce poate influența favorabil și valoarea de piață a locuinței.",
+    "faq": [
+      { "intrebare": "Este obligatoriu certificatul energetic pentru o casă nouă?", "raspuns": "Da, este obligatoriu pentru recepția finală a construcției și pentru înscrierea legală a locuinței." },
+      { "intrebare": "Ce diferență este între certificatul energetic și auditul nZEB?", "raspuns": "Certificatul energetic atribuie o clasă de eficiență (A+ la G), iar auditul nZEB verifică dacă edificiul respectă cerințele minime pentru clădiri noi." },
+      { "intrebare": "Cine poate întocmi aceste documente?", "raspuns": "Doar auditori energetici autorizați, înscriși în registrul specialiștilor recunoscuți de autoritățile competente." },
+      { "intrebare": "Ajută izolația bună la obținerea unui certificat energetic mai bun?", "raspuns": "Da, izolația termică superioară, pompele de căldură și panourile fotovoltaice îmbunătățesc semnificativ clasificarea energetică." }
+    ]
+  },
+  {
+    "title": "Cât costă proiectul de arhitectură, structură și instalații (DTAC + PTH) per metru pătrat",
+    "categorie": "arhitectura",
+    "sursaNume": "Proiect-Case.ro",
+    "sursaUrl": "https://proiect-case.ro/autorizatie-construire-ghid",
+    "continut": "Documentația tehnică necesară pentru autorizarea și execuția unei case — DTAC (Documentația Tehnică pentru Autorizarea Construcției) și PTH (Proiectul Tehnic de execuție) — reprezintă un cost esențial, calculat de obicei per metru pătrat construit.\n\nDTAC-ul, necesar pentru obținerea autorizației de construire, cuprinde planurile de arhitectură, structură și instalații la un nivel de detaliu suficient pentru avizare, și costă în 2026 între 15 și 30 lei/mp, în funcție de complexitatea proiectului și de renumele biroului de arhitectură.\n\nPTH-ul (proiectul tehnic de execuție), necesar efectiv pentru șantier, este mai detaliat decât DTAC-ul și costă suplimentar 25-45 lei/mp, incluzând planurile de structură (rezistență), instalații electrice, sanitare și termice, detaliile de execuție și caietele de sarcini.\n\nPentru o casă de 150 mp, bugetul total pentru documentația completă (DTAC + PTH, toate specialitățile) este de aproximativ 6.000-11.000 lei, în funcție de complexitatea structurii (parter vs. etaj, tip de fundație) și de nivelul de detaliere solicitat.\n\nOnorariile pot varia semnificativ între birourile de arhitectură — proiectele „la cheie” de la firme mari de execuție includ adesea documentația în pachet, în timp ce angajarea separată a unui arhitect independent oferă mai multă flexibilitate în design, dar necesită coordonare suplimentară cu inginerii de structură și instalații.\n\nUn detaliu important: costul proiectului de structură crește semnificativ pentru terenuri dificile (pantă, teren slab, zonă seismică ridicată), unde calculele de rezistență necesită soluții constructive mai complexe.",
+    "faq": [
+      { "intrebare": "Ce diferență e între DTAC și PTH?", "raspuns": "DTAC-ul e documentația necesară pentru autorizația de construire, iar PTH-ul e proiectul tehnic detaliat, necesar efectiv pentru execuția pe șantier." },
+      { "intrebare": "Cât costă documentația completă pentru o casă de 150 mp?", "raspuns": "Aproximativ 6.000-11.000 lei, incluzând DTAC și PTH pentru toate specialitățile (arhitectură, structură, instalații)." },
+      { "intrebare": "De ce crește costul proiectului pe teren dificil?", "raspuns": "Terenurile cu pantă, sol slab sau risc seismic ridicat necesită calcule de structură mai complexe și soluții constructive suplimentare." },
+      { "intrebare": "Include prețul „la cheie” documentația tehnică?", "raspuns": "De obicei da, firmele de execuție care oferă case „la cheie” includ DTAC și PTH în pachetul de bază." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile pentru o casă nZEB comparativ cu o construcție standard în 2026",
+    "categorie": "arhitectura",
+    "sursaNume": "Revista Construcțiilor",
+    "sursaUrl": "https://www.revistaconstructiilor.eu/index.php/2026/07/08/oar-este-disponibil-raportul-sioar-2025-o-analiza-a-pietei-de-arhitectura-si-constructii-din-romania-realizata-anual-de-ordinul-arhitectilor/",
+    "continut": "Standardul nZEB (clădire cu consum de energie aproape egal cu zero) este obligatoriu pentru toate clădirile noi din Uniunea Europeană, inclusiv România, iar diferența de cost față de o construcție standard rămâne una dintre cele mai frecvente întrebări ale celor care planifică o casă nouă.\n\nO casă construită la standard nZEB necesită izolație termică superioară (grosimi mai mari de polistiren sau vată minerală), tâmplărie performantă (triplu vitraj), sisteme de ventilație cu recuperare de căldură și, adesea, surse regenerabile de energie (panouri fotovoltaice, pompă de căldură).\n\nCostul suplimentar față de o construcție standard este estimat, conform analizelor din piață, la aproximativ 8-15% din valoarea totală a construcției — pentru o casă de 200.000 euro valoare de proiect, diferența se traduce în 16.000-30.000 euro suplimentari.\n\nAceastă investiție suplimentară se recuperează treptat prin facturi de energie semnificativ mai mici — o casă nZEB bine construită poate avea costuri de încălzire/răcire cu 60-80% mai mici decât o construcție standard din generația anterioară de reglementări.\n\nPe termen lung, valoarea de piață a unei case nZEB este de asemenea superioară, atât din cauza costurilor de operare reduse, cât și pentru că viitoarele reglementări de mediu vor face din ce în ce mai puțin atractive locuințele cu consum ridicat de energie.",
+    "faq": [
+      { "intrebare": "Este obligatoriu standardul nZEB pentru casele noi?", "raspuns": "Da, standardul nZEB este obligatoriu pentru toate clădirile noi din Uniunea Europeană, inclusiv România." },
+      { "intrebare": "Cu cât e mai scumpă o casă nZEB față de una standard?", "raspuns": "În medie cu 8-15% din valoarea totală a construcției, în funcție de nivelul de izolație și de sistemele alese." },
+      { "intrebare": "Cât se reduc facturile de energie la o casă nZEB?", "raspuns": "Costurile de încălzire/răcire pot fi cu 60-80% mai mici decât la o construcție standard din generația anterioară de reglementări." },
+      { "intrebare": "Ce elemente definesc o casă nZEB?", "raspuns": "Izolație termică superioară, tâmplărie performantă, ventilație cu recuperare de căldură și, de multe ori, surse regenerabile de energie." }
+    ]
+  },
+  {
+    "title": "Cât costă randările 3D și studiile de fezabilitate pentru o locuință individuală",
+    "categorie": "arhitectura",
+    "sursaNume": "Formah",
+    "sursaUrl": "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/",
+    "continut": "Randările 3D și studiile de fezabilitate sunt instrumente esențiale în etapa de proiectare — permit vizualizarea locuinței înainte de construcție și evaluarea corectă a bugetului și a soluțiilor tehnice posibile pe un teren dat.\n\nUn set complet de randări 3D pentru exteriorul unei case (câteva unghiuri, cu materiale și context peisagistic) costă în 2026 între 1.500 și 4.000 lei, în funcție de complexitatea volumetriei și de numărul de variante solicitate. Randările pentru interior, cameră cu cameră, costă suplimentar 400-900 lei per încăpere.\n\nStudiul de fezabilitate, care analizează dacă un proiect poate fi realizat pe un teren dat (respectând regulamentul local de urbanism — POT, CUT, retrageri, înălțime maximă) costă între 1.000 și 2.500 lei, și este recomandat înainte de a angaja un arhitect pentru proiectul complet, pentru a evita cheltuieli inutile pe un concept nefezabil.\n\nMulte birouri de arhitectură oferă randările 3D incluse în pachetul de proiectare completă (DTAC + PTH), caz în care costul separat nu se mai aplică — dar pentru cei care vor doar o vizualizare rapidă înainte de a angaja un proiect complet, randările individuale sunt o investiție mică cu impact mare asupra deciziei finale.\n\nUn avantaj practic al randărilor 3D moderne este posibilitatea de a testa rapid variante de fațadă, materiale și culori, fără costuri suplimentare semnificative — schimbările la nivel de randare sunt mult mai ieftine decât modificările ulterioare pe șantier.",
+    "faq": [
+      { "intrebare": "Cât costă un set de randări 3D pentru exteriorul unei case?", "raspuns": "Între 1.500 și 4.000 lei, în funcție de complexitatea volumetriei și de numărul de variante dorite." },
+      { "intrebare": "Ce verifică un studiu de fezabilitate?", "raspuns": "Dacă proiectul dorit poate fi realizat pe terenul respectiv, respectând regulamentul local de urbanism (POT, CUT, retrageri, înălțime maximă)." },
+      { "intrebare": "Sunt incluse randările 3D în proiectul complet de arhitectură?", "raspuns": "De multe ori da, birourile de arhitectură le includ în pachetul DTAC + PTH, dar pot fi comandate și separat." },
+      { "intrebare": "Merită un studiu de fezabilitate înainte de proiectul complet?", "raspuns": "Da, pentru a evita cheltuieli pe un concept care nu respectă regulamentul de urbanism al terenului." }
+    ]
+  },
+  {
+    "title": "Cât costă construcția unei case la roșu vs. la cheie pe metru pătrat construit în 2026",
+    "categorie": "santier-structura",
+    "sursaNume": "Arena Construct",
+    "sursaUrl": "https://arenaconstruct.ro/",
+    "continut": "Diferența dintre o casă „la roșu” și una „la cheie” este una dintre cele mai importante decizii financiare din procesul de construcție, cu impact direct asupra bugetului total și a modului de organizare a lucrărilor.\n\nO casă „la roșu” (fundație, structură, zidărie, acoperiș, tâmplărie exterioară montată) costă în 2026 între 1.400 și 2.000 lei/mp, în funcție de sistemul constructiv (zidărie clasică, casă din lemn, structură metalică) și de calitatea materialelor.\n\nO casă „la cheie” (completă, gata de mutat — instalații, finisaje, bucătărie, băi echipate) costă semnificativ mai mult, între 3.500 și 5.500 lei/mp, în funcție de nivelul de finisaje ales (standard, mediu, premium).\n\nAvantajul construcției „la roșu” cu finisare ulterioară pe cont propriu este flexibilitatea bugetară — proprietarul poate eșalona cheltuielile pe o perioadă mai lungă și poate alege personal fiecare furnizor pentru finisaje. Dezavantajul este timpul suplimentar necesar coordonării mai multor echipe și riscul de a plăti mai mult per total dacă gestionarea nu e eficientă.\n\nConstrucția „la cheie” prin o singură firmă oferă predictibilitate a bugetului și a termenelor, un singur punct de contact și responsabilitate, dar costă în general cu 10-20% mai mult decât suma costurilor individuale ale fiecărei etape, din cauza marjei firmei generale contractante.",
+    "faq": [
+      { "intrebare": "Ce include o casă „la roșu”?", "raspuns": "Fundație, structură, zidărie, acoperiș și tâmplărie exterioară montată, dar fără instalații interioare sau finisaje." },
+      { "intrebare": "Cât costă o casă „la cheie” pe metru pătrat?", "raspuns": "Între 3.500 și 5.500 lei/mp în 2026, în funcție de nivelul de finisaje ales." },
+      { "intrebare": "Este mai ieftin să construiești „la roșu” și să finisezi ulterior?", "raspuns": "Poate fi mai ieftin pe total, dar necesită coordonare proprie a mai multor echipe și mai mult timp pentru finalizare." },
+      { "intrebare": "De ce costă mai mult construcția „la cheie” prin firmă generală?", "raspuns": "Din cauza marjei de profit a firmei contractante generale, care preia responsabilitatea coordonării complete a proiectului." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile pentru turnarea fundației și hidroizolația la cota zero",
+    "categorie": "santier-structura",
+    "sursaNume": "Verificatori.ro",
+    "sursaUrl": "https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc",
+    "continut": "Fundația și hidroizolația la cota zero reprezintă lucrări critice pentru durabilitatea întregii construcții — greșelile la acest nivel sunt printre cele mai costisitoare de corectat ulterior.\n\nTurnarea fundației (săpătură, cofraj, armare, beton) costă în 2026 între 350 și 600 lei/mp construit, în funcție de tipul de fundație ales — fundație continuă (talpă) pentru terenuri stabile, sau radier general pentru terenuri slabe sau cu nivel freatic ridicat, mai scump cu 30-50%.\n\nHidroizolația la cota zero, esențială pentru protejarea structurii împotriva umidității din sol, costă suplimentar 30-60 lei/mp, în funcție de sistemul ales (membrane bituminoase, membrane PVC, hidroizolații lichide aplicate).\n\nCalitatea execuției contează la fel de mult ca materialele — o hidroizolație bine aplicată dar cu detalii de racordare neglijate (colțuri, treceri de instalații) poate ceda în câțiva ani, provocând igrasie și degradarea structurii, cu costuri de remediere mult mai mari decât investiția inițială corectă.\n\nPentru terenuri cu nivel freatic ridicat sau risc de infiltrații, se recomandă un studiu geotehnic detaliat înainte de proiectarea fundației — costul suplimentar al studiului (câteva sute-mii de lei) este nesemnificativ comparativ cu riscul unor probleme structurale ulterioare.",
+    "faq": [
+      { "intrebare": "Ce diferență e între fundația continuă și radierul general?", "raspuns": "Fundația continuă (talpă) e potrivită pentru terenuri stabile, iar radierul general se folosește pe terenuri slabe sau cu nivel freatic ridicat, fiind mai scump cu 30-50%." },
+      { "intrebare": "Cât costă hidroizolația la cota zero?", "raspuns": "Aproximativ 30-60 lei/mp, în funcție de sistemul ales — membrane bituminoase, PVC sau hidroizolații lichide." },
+      { "intrebare": "De ce e importantă calitatea execuției la hidroizolație?", "raspuns": "Detaliile de racordare neglijate (colțuri, treceri de instalații) pot ceda în câțiva ani și provoca igrasie, cu costuri de remediere mult mai mari." },
+      { "intrebare": "Când e recomandat un studiu geotehnic detaliat?", "raspuns": "Pentru terenuri cu nivel freatic ridicat sau risc de infiltrații, unde tipul de fundație trebuie ales cu grijă." }
+    ]
+  },
+  {
+    "title": "Cât te costă izolarea termică a fațadei și mansardei cu materiale de înaltă performanță",
+    "categorie": "santier-structura",
+    "sursaNume": "Arena Construct",
+    "sursaUrl": "https://arenaconstruct.ro/",
+    "continut": "Izolarea termică performantă a fațadei și mansardei este esențială atât pentru respectarea standardului nZEB, cât și pentru reducerea reală a costurilor de încălzire pe termen lung.\n\nIzolarea fațadei cu polistiren expandat de calitate (grosime 10-15 cm) costă în 2026 între 90 și 140 lei/mp, incluzând materiale și manoperă. Pentru performanță superioară, vata minerală bazaltică (rezistență mai bună la foc și fonoizolație superioară) costă 130-190 lei/mp.\n\nIzolarea mansardei, adesea neglijată, e la fel de importantă — prin acoperiș se pierde o parte semnificativă din căldura unei case neizolate corect. Costul include izolație între căpriori (vată minerală, 15-20 cm grosime), barieră de vapori și eventual un strat suplimentar sub șarpantă, totalizând 110-170 lei/mp de mansardă.\n\nDiferența dintre o izolație „la limita legii” (grosimi minime cerute de normativ) și una de înaltă performanță (grosimi mai mari, materiale premium) este de aproximativ 30-40% la costul inițial, dar se traduce în facturi de încălzire cu 20-30% mai mici pe termen lung.\n\nUn detaliu tehnic important este eliminarea punților termice — zonele unde structura (grinzi, stâlpi, colțuri) creează discontinuități în izolație, prin care se pierde căldură disproporționat. Corectarea acestora la execuție costă puțin în plus, dar previne condens și mucegai pe termen lung.\n\nPentru o casă de 150 mp desfășurați, bugetul total pentru izolarea completă a fațadei și mansardei, cu materiale de înaltă performanță, se situează între 25.000 și 40.000 lei, în funcție de complexitatea volumetriei și de grosimile alese.",
+    "faq": [
+      { "intrebare": "Care e diferența dintre polistiren și vată minerală bazaltică?", "raspuns": "Vata minerală bazaltică are rezistență mai bună la foc și fonoizolație superioară, dar costă cu 30-40% mai mult decât polistirenul expandat." },
+      { "intrebare": "De ce e importantă izolarea mansardei?", "raspuns": "Prin acoperiș se pierde o parte semnificativă din căldura unei case neizolate corect, chiar dacă fațada e bine izolată." },
+      { "intrebare": "Ce sunt punțile termice?", "raspuns": "Zone unde structura clădirii (grinzi, stâlpi, colțuri) creează discontinuități în izolație, prin care se pierde căldură disproporționat față de restul fațadei." },
+      { "intrebare": "Cât costă izolarea completă a unei case de 150 mp?", "raspuns": "Între 25.000 și 40.000 lei pentru fațadă și mansardă, cu materiale de înaltă performanță." }
+    ]
+  },
+  {
+    "title": "Cât costă serviciile unui designer de interior per mp și implementarea proiectului",
+    "categorie": "design-interior",
+    "sursaNume": "Formah",
+    "sursaUrl": "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/",
+    "continut": "Serviciile unui designer de interior acoperă de la conceptul general (paletă de culori, materiale, dispunerea mobilierului) până la supervizarea execuției — iar costul variază semnificativ în funcție de nivelul de implicare dorit.\n\nOnorariul de proiectare (concept + planuri + randări) costă în 2026 între 60 și 150 lei/mp, în funcție de experiența designerului și de complexitatea proiectului. Pentru locuințe premium, cu soluții custom și mobilier la comandă, onorariul poate depăși 200 lei/mp.\n\nSupervizarea execuției (vizite pe șantier, coordonare cu meșterii, ajustări pe parcurs) se taxează de obicei separat, fie ca procent din valoarea lucrărilor (5-10%), fie ca tarif orar/pe vizită.\n\nImplementarea propriu-zisă a proiectului — mobilier, finisaje, decorațiuni — reprezintă bugetul cel mai mare și variază enorm, de la 800-1.500 lei/mp pentru un nivel mediu, până la peste 3.000 lei/mp pentru soluții premium cu mobilier custom și materiale de lux.\n\nUn aspect care merită luat în calcul: mulți designeri de interior au colaborări cu furnizori și pot obține prețuri mai bune la mobilier și finisaje decât ar obține clientul direct, ceea ce poate compensa parțial costul onorariului de proiectare.",
+    "faq": [
+      { "intrebare": "Cât costă onorariul unui designer de interior per mp?", "raspuns": "Între 60 și 150 lei/mp pentru proiectare standard, și peste 200 lei/mp pentru soluții premium custom." },
+      { "intrebare": "Se taxează separat supervizarea execuției?", "raspuns": "Da, de obicei ca procent din valoarea lucrărilor (5-10%) sau ca tarif orar/pe vizită la șantier." },
+      { "intrebare": "Cât costă implementarea completă a unui proiect de design interior?", "raspuns": "De la 800-1.500 lei/mp pentru nivel mediu, până la peste 3.000 lei/mp pentru soluții premium." },
+      { "intrebare": "Poate un designer de interior reduce costul mobilierului?", "raspuns": "Da, prin colaborările cu furnizori, mulți designeri obțin prețuri mai bune decât ar obține clientul direct." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile pentru finisajele premium (Microciment, tencuieli minerale, parchet)",
+    "categorie": "design-interior",
+    "sursaNume": "Formah",
+    "sursaUrl": "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/",
+    "continut": "Finisajele premium au devenit tot mai populare în locuințele noi din 2026, atât pentru aspectul estetic distinctiv, cât și pentru durabilitatea superioară față de soluțiile clasice.\n\nMicrocimentul, aplicat pe pardoseli și uneori pereți, costă între 250 și 450 lei/mp, incluzând materiale și manoperă specializată — aplicarea corectă necesită meșteri cu experiență specifică, altfel riscul de fisurare crește semnificativ.\n\nTencuielile minerale decorative (var, argilă, tencuieli venețiene) costă 120-280 lei/mp, în funcție de tipul de finisaj și de complexitatea texturii dorite. Sunt apreciate pentru respirabilitate și pentru un aspect natural, premium.\n\nParchetul din lemn masiv de calitate superioară costă 180-400 lei/mp doar materialul, la care se adaugă manopera de montaj (40-70 lei/mp) și eventual finisarea (lăcuire/uleiere), încă 30-50 lei/mp. Parchetul stratificat premium este o alternativă mai accesibilă, de 100-200 lei/mp.\n\nPentru o casă de 150 mp cu un mix de finisaje premium (microciment în zonele umede, parchet în camere, tencuieli decorative pe pereți accent), bugetul suplimentar față de finisaje standard este de aproximativ 40.000-70.000 lei.",
+    "faq": [
+      { "intrebare": "Cât costă microcimentul pe metru pătrat?", "raspuns": "Între 250 și 450 lei/mp, incluzând materiale și manopera specializată necesară pentru o aplicare corectă." },
+      { "intrebare": "De ce sunt apreciate tencuielile minerale?", "raspuns": "Pentru respirabilitate și pentru aspectul natural, premium, comparativ cu tencuielile sintetice clasice." },
+      { "intrebare": "Cât costă parchetul din lemn masiv, montat?", "raspuns": "Materialul costă 180-400 lei/mp, plus manopera de montaj (40-70 lei/mp) și finisarea (30-50 lei/mp)." },
+      { "intrebare": "Cu cât cresc costurile la o casă cu finisaje premium?", "raspuns": "Pentru o casă de 150 mp, bugetul suplimentar față de finisaje standard este de aproximativ 40.000-70.000 lei." }
+    ]
+  },
+  {
+    "title": "Cât costă mobilarea custom a unei bucătării și amenajarea iluminatului ambiental",
+    "categorie": "design-interior",
+    "sursaNume": "Hornbach",
+    "sursaUrl": "https://www.hornbach.ro/proiecte/tendinte-design-interior-2026/",
+    "continut": "Bucătăria rămâne, an de an, camera cu cel mai mare buget de mobilare dintr-o locuință, iar în 2026 tendința spre mobilier custom și iluminat ambiental stratificat continuă să crească.\n\nO bucătărie la comandă (corpuri MDF vopsit sau furniruit, blat de cuarț sau granit, electrocasnice încorporabile de gamă medie) costă în 2026 între 3.500 și 6.000 lei/ml de mobilier liniar, în funcție de materiale și de complexitatea configurației (insulă, colț, dispuneri în L sau U).\n\nPentru o bucătărie premium, cu materiale superioare (furnir natural, blat din piatră naturală, feronerie soft-close de calitate, electrocasnice de top) costul poate depăși 8.000-12.000 lei/ml.\n\nIluminatul ambiental, esențial pentru funcționalitatea și atmosfera bucătăriei, presupune mai multe straturi: iluminat general (plafon), iluminat de lucru (sub dulapuri superioare, direct pe blat) și iluminat decorativ (benzi LED în insulă sau vitrine). Costul complet pentru iluminatul stratificat al unei bucătării medii este de 2.500-5.000 lei.\n\nUn detaliu practic important: benzile LED de calitate (temperatură de culoare reglabilă, durabilitate mare) costă mai mult inițial, dar reduc semnificativ nevoia de înlocuire în primii ani, spre deosebire de variantele ieftine care se degradează vizibil (pălire, decolorare) în 2-3 ani.",
+    "faq": [
+      { "intrebare": "Cât costă o bucătărie custom pe metru liniar?", "raspuns": "Între 3.500 și 6.000 lei/ml pentru o configurație medie, și peste 8.000-12.000 lei/ml pentru materiale premium." },
+      { "intrebare": "Câte straturi de iluminat sunt recomandate în bucătărie?", "raspuns": "Trei straturi — iluminat general de plafon, iluminat de lucru pe blat și iluminat decorativ, pentru funcționalitate și atmosferă." },
+      { "intrebare": "Merită benzile LED de calitate superioară?", "raspuns": "Da, reduc nevoia de înlocuire în primii ani, spre deosebire de variantele ieftine care se decolorează sau pălesc în 2-3 ani." },
+      { "intrebare": "Ce influențează cel mai mult prețul unei bucătării custom?", "raspuns": "Materialele corpurilor și ale blatului, tipul de feronerie și gama electrocasnicelor încorporabile alese." }
+    ]
+  },
+  {
+    "title": "Cât costă amenajarea curții pe mp (Pavaj, pregătire teren, alei și borduri)",
+    "categorie": "outdoor-peisagistica",
+    "sursaNume": "Ghid Amenajări",
+    "sursaUrl": "https://ghidamenajari.ro/amenajare-gradina/amenajare-curte/",
+    "continut": "Amenajarea curții este adesea ultima etapă a unui proiect de construcție, dar cu impact vizual major — un pavaj bine ales și o pregătire corectă a terenului fac diferența între o curte funcțională pe termen lung și una care necesită reparații frecvente.\n\nPregătirea terenului (nivelare, compactare, strat de balast pentru drenaj) costă în 2026 între 40 și 70 lei/mp, fiind o etapă esențială care nu trebuie omisă — un pavaj montat pe teren nepregătit corect se va deforma și taseea inegal în câțiva ani.\n\nPavajul propriu-zis variază mult ca preț în funcție de material: pavelele de beton costă 60-120 lei/mp montate, piatra naturală (granit, gresie) costă 150-280 lei/mp, iar variantele premium (piatră travertin, pavaj decorativ) pot depăși 300 lei/mp.\n\nAleile și bordurile, care delimitează zonele de pavaj și susțin structura pe margini, adaugă 40-80 lei/ml, în funcție de materialul ales și de complexitatea traseului (curbe vs. linii drepte).\n\nPentru o curte medie de 100-150 mp, cu pavaj de calitate medie-superioară și alei/borduri incluse, bugetul total se situează între 15.000 și 30.000 lei, cu variații semnificative în funcție de materialele alese și de complexitatea designului.",
+    "faq": [
+      { "intrebare": "De ce e importantă pregătirea terenului înainte de pavaj?", "raspuns": "Un pavaj montat pe teren nepregătit corect se deformează și tasează inegal în câțiva ani, necesitând refacere costisitoare." },
+      { "intrebare": "Cât costă pavelele de beton față de piatra naturală?", "raspuns": "Pavelele de beton costă 60-120 lei/mp, iar piatra naturală (granit, gresie) 150-280 lei/mp, montate." },
+      { "intrebare": "Cât costă amenajarea unei curți medii de 100-150 mp?", "raspuns": "Între 15.000 și 30.000 lei, incluzând pregătirea terenului, pavajul și aleile/bordurile." },
+      { "intrebare": "Ce rol au bordurile în amenajarea curții?", "raspuns": "Delimitează zonele de pavaj și susțin structura pe margini, prevenind deplasarea pavelelor în timp." }
+    ]
+  },
+  {
+    "title": "Care sunt costurile pentru un sistem automat de irigații (Materiale + Montaj per mp)",
+    "categorie": "outdoor-peisagistica",
+    "sursaNume": "Ghid Amenajări",
+    "sursaUrl": "https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/",
+    "continut": "Un sistem automat de irigații economisește timp și apă comparativ cu udarea manuală, iar în 2026 costurile de instalare rămân accesibile pentru majoritatea grădinilor rezidențiale.\n\nUn sistem de irigații prin aspersoare, pentru gazon, costă în medie 25-45 lei/mp, incluzând conductele îngropate, aspersoarele, electrovanele și programatorul. Pentru zonele cu plante și arbuști, irigația prin picurare este mai eficientă și costă puțin mai mult, 30-55 lei/mp, din cauza numărului mai mare de puncte de picurare necesare.\n\nProgramatorul (unitatea de control), esențial pentru automatizarea completă, costă separat 400-1.500 lei, în funcție de numărul de zone controlate și de funcțiile suplimentare (senzor de ploaie, control de la aplicație mobilă).\n\nPentru o grădină medie de 300-500 mp, cu sistem mixt (aspersoare pentru gazon + picurare pentru straturi de flori/arbuști), bugetul total se situează între 10.000 și 20.000 lei, incluzând materiale și montaj.\n\nUn avantaj important al sistemelor moderne cu senzor de umiditate a solului este economisirea semnificativă de apă — udarea se face doar când e cu adevărat necesar, nu după un program fix, ceea ce reduce atât factura de apă, cât și riscul de udare excesivă dăunătoare plantelor.",
+    "faq": [
+      { "intrebare": "Cât costă un sistem de irigații prin aspersoare pentru gazon?", "raspuns": "În medie 25-45 lei/mp, incluzând conductele îngropate, aspersoarele, electrovanele și programatorul." },
+      { "intrebare": "De ce e mai scumpă irigația prin picurare?", "raspuns": "Necesită un număr mai mare de puncte de picurare pentru acoperirea corectă a plantelor și arbuștilor individuali." },
+      { "intrebare": "Cât costă un sistem complet pentru o grădină de 300-500 mp?", "raspuns": "Între 10.000 și 20.000 lei pentru un sistem mixt (aspersoare + picurare), materiale și montaj incluse." },
+      { "intrebare": "Ce avantaj au senzorii de umiditate a solului?", "raspuns": "Udarea se face doar când e cu adevărat necesar, economisind apă și prevenind udarea excesivă a plantelor." }
+    ]
+  },
+  {
+    "title": "Cât te costă rulourile de gazon vs. însămânțarea și pregătirea solului",
+    "categorie": "outdoor-peisagistica",
+    "sursaNume": "Ghid Amenajări",
+    "sursaUrl": "https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/",
+    "continut": "Alegerea între rulouri de gazon gata format și însămânțarea clasică este o decizie care ține atât de buget, cât și de răbdare — fiecare variantă are avantaje clare în funcție de așteptările proprietarului.\n\nPregătirea solului, obligatorie în ambele variante (afânare, nivelare, îmbogățire cu pământ vegetal/compost), costă în 2026 între 15 și 30 lei/mp, în funcție de starea inițială a terenului și de cât de mult pământ vegetal trebuie adus suplimentar.\n\nÎnsămânțarea clasică este varianta mai ieftină — semințele de calitate costă 8-18 lei/mp, iar rezultatul final (gazon complet dezvoltat) se vede după 6-10 săptămâni, cu îngrijire atentă în această perioadă (udare frecventă, protecție față de păsări și trafic pietonal).\n\nRulourile de gazon (brazde gata cultivate, gata de așezat) costă semnificativ mai mult, 25-45 lei/mp, dar oferă un rezultat instant — gazonul arată complet dezvoltat imediat după montaj și poate fi călcat ușor după doar 2-3 săptămâni de la instalare.\n\nPentru o curte de 300 mp, diferența de cost între cele două variante este de aproximativ 3.000-5.000 lei mai scump pentru rulouri, dar avantajul de a avea gazon funcțional aproape imediat justifică investiția pentru mulți proprietari, mai ales dacă mutarea în casă e iminentă.",
+    "faq": [
+      { "intrebare": "Cât durează până crește gazonul din semințe?", "raspuns": "În mod normal 6-10 săptămâni, cu îngrijire atentă (udare frecventă, protecție față de trafic pietonal) în această perioadă." },
+      { "intrebare": "Cu cât mai scumpe sunt rulourile de gazon față de însămânțare?", "raspuns": "Aproximativ 3.000-5.000 lei mai mult pentru o curte de 300 mp, dar cu rezultat instant." },
+      { "intrebare": "Când poate fi călcat gazonul din rulouri?", "raspuns": "De obicei după 2-3 săptămâni de la montaj, mult mai repede decât gazonul din semințe." },
+      { "intrebare": "Este obligatorie pregătirea solului în ambele variante?", "raspuns": "Da, afânarea, nivelarea și îmbogățirea solului sunt esențiale atât pentru însămânțare, cât și pentru montarea rulourilor de gazon." }
+    ]
+  }
+]

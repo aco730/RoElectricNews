@@ -10,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
   <div class="oferta-hero">
     <h1 class="oferta-hero-title">Obține <span>oferta</span> ta</h1>
     <p class="oferta-hero-sub">Răspunde la câteva întrebări simple — vezi imediat 3 variante de sistem, de la Buget la Premium</p>
+    <p class="oferta-hero-sub"><a href="/preturi">Vezi lista completă de prețuri orientative →</a></p>
   </div>
 
   <div class="wizard-card">
@@ -160,6 +161,8 @@ import Layout from "../layouts/Layout.astro";
   .oferta-hero-title { color: #fff; font-size: 30px; font-weight: 800; margin: 0 0 10px; }
   .oferta-hero-title span { color: var(--mint); }
   .oferta-hero-sub { color: #d7e6ff; font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+  .oferta-hero-sub a { color: #fff; text-decoration: underline; font-weight: 600; }
+  .oferta-hero-sub a:hover { color: var(--mint); }
 
   .wizard-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 640px; margin: 0 auto 24px; position: relative; z-index: 1; box-shadow: 0 18px 40px -12px rgba(18,33,58,0.35); }
 

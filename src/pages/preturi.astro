@@ -1,0 +1,287 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+
+interface Pachet {
+  titlu: string;
+  pret: number;
+  itemi: string[];
+}
+
+const listăComunăSolar = (nrPanouri: number, modelPanou: string, wp: number, modelInvertor: string, kwInv: number, baterieText: string | null) => {
+  const itemi = [
+    `${nrPanouri} panouri fotovoltaice ${modelPanou} — ${wp}W (${((nrPanouri * wp) / 1000).toFixed(1)} kWp instalați)`,
+    `Invertor ${modelInvertor}, ${kwInv} kW`,
+  ];
+  if (baterieText) itemi.push(baterieText);
+  itemi.push(
+    "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+    "Cablare DC completă + conectori MC4",
+    "Tablou DC și Tablou AC, echipate",
+    "Transport materiale la șantier",
+    "Manoperă montaj, punere în funcțiune și configurare",
+    "Verificare finală + instructaj de utilizare"
+  );
+  return itemi;
+};
+
+const solarFaraBaterie: Record<number, Pachet[]> = {
+  5: [
+    { titlu: "Buget", pret: 15300, itemi: listăComunăSolar(12, "Longi LR4-72HPH-450M", 450, "Deye SUN-5K-SG05LP1", 5, null) },
+    { titlu: "Standard", pret: 16400, itemi: listăComunăSolar(10, "Canadian Solar CS6.2-54TM", 505, "Solis S6-EH1P5K-L-PLUS", 5, null) },
+    { titlu: "Premium", pret: 22200, itemi: listăComunăSolar(10, "Jinko Tiger Neo bifacial", 515, "Solis S6-EH3P5K2-H", 5, null) },
+  ],
+  10: [
+    { titlu: "Buget", pret: 22800, itemi: listăComunăSolar(23, "Longi LR4-72HPH-450M", 450, "Huawei SUN2000-10KTL-M1", 10, null) },
+    { titlu: "Standard", pret: 27700, itemi: listăComunăSolar(20, "Canadian Solar CS6.2-54TM", 505, "Deye SUN-10K-SG02LP1", 10, null) },
+    { titlu: "Premium", pret: 33000, itemi: listăComunăSolar(20, "Jinko Tiger Neo bifacial", 515, "Deye SUN-10K-SG01HP3", 10, null) },
+  ],
+  20: [
+    { titlu: "Buget", pret: 42400, itemi: listăComunăSolar(45, "Longi LR4-72HPH-450M", 450, "Huawei SUN2000-20KTL-M5", 20, null) },
+    { titlu: "Standard", pret: 47200, itemi: listăComunăSolar(40, "Canadian Solar CS6.2-54TM", 505, "Deye SUN-20K-SG05LP3", 20, null) },
+    { titlu: "Premium", pret: 55100, itemi: listăComunăSolar(39, "Jinko Tiger Neo bifacial", 515, "Solis S6-EH3P20K-H", 20, null) },
+  ],
+};
+
+const solarCuBaterie: Record<number, Pachet[]> = {
+  5: [
+    { titlu: "Buget", pret: 19900, itemi: listăComunăSolar(12, "Longi LR4-72HPH-450M", 450, "Deye SUN-5K-SG05LP1", 5, "Baterie Dyness DL5.0C — 5,1 kWh") },
+    { titlu: "Standard", pret: 23200, itemi: listăComunăSolar(10, "Canadian Solar CS6.2-54TM", 505, "Solis S6-EH1P5K-L-PLUS", 5, "Baterie Dyness Tower — 5 kWh") },
+    { titlu: "Premium", pret: 32100, itemi: listăComunăSolar(10, "Jinko Tiger Neo bifacial", 515, "Solis S6-EH3P5K2-H", 5, "Baterie GoodWe Lynx D HV — 5 kWh") },
+  ],
+  10: [
+    { titlu: "Buget", pret: 32000, itemi: listăComunăSolar(23, "Longi LR4-72HPH-450M", 450, "Huawei SUN2000-10KTL-M1", 10, "Baterie Dyness — 10 kWh") },
+    { titlu: "Standard", pret: 41400, itemi: listăComunăSolar(20, "Canadian Solar CS6.2-54TM", 505, "Deye SUN-10K-SG02LP1", 10, "Baterie Dyness Tower TS10 — 10,6 kWh") },
+    { titlu: "Premium", pret: 52900, itemi: listăComunăSolar(20, "Jinko Tiger Neo bifacial", 515, "Deye SUN-10K-SG01HP3", 10, "Baterie GoodWe / Huawei — 10 kWh") },
+  ],
+  20: [
+    { titlu: "Buget", pret: 60800, itemi: listăComunăSolar(45, "Longi LR4-72HPH-450M", 450, "Huawei SUN2000-20KTL-M5", 20, "Baterie Dyness — 20 kWh") },
+    { titlu: "Standard", pret: 74600, itemi: listăComunăSolar(40, "Canadian Solar CS6.2-54TM", 505, "Deye SUN-20K-SG05LP3", 20, "Baterie Dyness Tower — 20 kWh") },
+    { titlu: "Premium", pret: 94700, itemi: listăComunăSolar(39, "Jinko Tiger Neo bifacial", 515, "Solis S6-EH3P20K-H", 20, "Baterie GoodWe / Huawei — 20 kWh") },
+  ],
+};
+
+const electriceApartament: Pachet[] = [
+  {
+    titlu: "Buget", pret: 4200, itemi: [
+      "Tablou electric nou, disjunctoare + 1 diferențial general",
+      "Cablare completă NYM-J pe toate circuitele",
+      "Prize și întrerupătoare gamă economică (~18-20 puncte)",
+      "Verificare rezistență de izolație",
+    ],
+  },
+  {
+    titlu: "Standard", pret: 6200, itemi: [
+      "Tablou electric conform normativ I7, diferențiale RCD pe fiecare grupă",
+      "Cablare completă NYM-J",
+      "Prize și întrerupătoare gamă medie (~22-25 puncte)",
+      "Corpuri de iluminat LED incluse în camerele principale",
+      "Verificare + proces verbal de recepție",
+    ],
+  },
+  {
+    titlu: "Premium", pret: 9500, itemi: [
+      "Tablou I7 complet, RCD pe fiecare grupă + protecție SPD la supratensiuni",
+      "Cablare completă, secțiuni generoase pe circuitele de forță",
+      "Prize și întrerupătoare design premium",
+      "Iluminat LED inteligent, control din aplicație",
+      "Doze pregătite pentru automatizări smart home",
+      "Verificare + proces verbal + garanție extinsă",
+    ],
+  },
+];
+
+const electriceCasa: Pachet[] = [
+  {
+    titlu: "Buget", pret: 9800, itemi: [
+      "Tablou electric principal + tablou secundar etaj 2",
+      "Cablare completă NYM-J, toate circuitele",
+      "Prize și întrerupătoare gamă economică (~40-45 puncte)",
+      "Verificare rezistență de izolație pe ambele niveluri",
+    ],
+  },
+  {
+    titlu: "Standard", pret: 15500, itemi: [
+      "Tablou principal I7 + tablou secundar, RCD pe fiecare grupă",
+      "Cablare completă NYM-J, secțiuni conform normativ",
+      "Prize și întrerupătoare gamă medie (~50-55 puncte)",
+      "Iluminat LED în toate camerele principale",
+      "Verificare + proces verbal de recepție pe ambele niveluri",
+    ],
+  },
+  {
+    titlu: "Premium", pret: 24000, itemi: [
+      "Tablou principal I7 complet + tablou secundar, SPD la supratensiuni",
+      "Cablare completă, pregătită pentru stație de încărcare EV și fotovoltaic",
+      "Prize și întrerupătoare design premium",
+      "Iluminat LED inteligent, control centralizat",
+      "Pregătire completă smart home (doze, cablare structurată)",
+      "Verificare + proces verbal + garanție extinsă",
+    ],
+  },
+];
+
+function formatLei(n: number) {
+  return n.toLocaleString("ro-RO") + " lei";
+}
+---
+<Layout
+  title="Prețuri orientative — sisteme fotovoltaice și instalații electrice | Solar Electric Panel"
+  description="Prețuri orientative pentru sisteme fotovoltaice (5/10/20 kW, cu sau fără baterie) și instalații electrice complete, în 3 variante: Buget, Standard, Premium."
+  singleCol
+>
+  <h1>Prețuri orientative</h1>
+  <p class="intro">
+    Cifrele de mai jos sunt <strong>orientative</strong>, calculate din lista noastră reală de materiale (verificată august 2026) și din prețurile de piață pentru manoperă electrică. Prețul final depinde de proiectul concret — cere o ofertă personalizată pentru o cifră exactă.
+  </p>
+
+  <div class="tab-grup">
+    <input type="radio" name="tab-principal" id="tab-solar" checked />
+    <input type="radio" name="tab-principal" id="tab-electrice" />
+
+    <div class="tab-etichete">
+      <label for="tab-solar">☀️ Sisteme fotovoltaice</label>
+      <label for="tab-electrice">⚡ Instalații electrice</label>
+    </div>
+
+    <section class="tab-conținut tab-conținut-solar">
+      <div class="tab-grup tab-grup-secundar">
+        <input type="radio" name="tab-baterie" id="tab-fara-baterie" checked />
+        <input type="radio" name="tab-baterie" id="tab-cu-baterie" />
+
+        <div class="tab-etichete tab-etichete-secundare">
+          <label for="tab-fara-baterie">Fără baterie</label>
+          <label for="tab-cu-baterie">Cu baterie de stocare</label>
+        </div>
+
+        <div class="tab-conținut-fara-baterie">
+          {[5, 10, 20].map((putere) => (
+            <div class="grup-putere">
+              <h2>{putere} kWp</h2>
+              <div class="grid-pachete">
+                {solarFaraBaterie[putere].map((p) => (
+                  <div class={`card-pachet card-${p.titlu.toLowerCase()}`}>
+                    <div class="eticheta-tier">{p.titlu}</div>
+                    <div class="pret-pachet">{formatLei(p.pret)}</div>
+                    <ul>
+                      {p.itemi.map((it) => <li>{it}</li>)}
+                    </ul>
+                    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="tab-conținut-cu-baterie">
+          {[5, 10, 20].map((putere) => (
+            <div class="grup-putere">
+              <h2>{putere} kWp + stocare</h2>
+              <div class="grid-pachete">
+                {solarCuBaterie[putere].map((p) => (
+                  <div class={`card-pachet card-${p.titlu.toLowerCase()}`}>
+                    <div class="eticheta-tier">{p.titlu}</div>
+                    <div class="pret-pachet">{formatLei(p.pret)}</div>
+                    <ul>
+                      {p.itemi.map((it) => <li>{it}</li>)}
+                    </ul>
+                    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-conținut tab-conținut-electrice">
+      <div class="grup-putere">
+        <h2>Apartament 3 camere (~70 mp)</h2>
+        <div class="grid-pachete">
+          {electriceApartament.map((p) => (
+            <div class={`card-pachet card-${p.titlu.toLowerCase()}`}>
+              <div class="eticheta-tier">{p.titlu}</div>
+              <div class="pret-pachet">{formatLei(p.pret)}</div>
+              <ul>
+                {p.itemi.map((it) => <li>{it}</li>)}
+              </ul>
+              <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="grup-putere">
+        <h2>Casă cu 2 etaje (~160 mp)</h2>
+        <div class="grid-pachete">
+          {electriceCasa.map((p) => (
+            <div class={`card-pachet card-${p.titlu.toLowerCase()}`}>
+              <div class="eticheta-tier">{p.titlu}</div>
+              <div class="pret-pachet">{formatLei(p.pret)}</div>
+              <ul>
+                {p.itemi.map((it) => <li>{it}</li>)}
+              </ul>
+              <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>Nu te regăsești exact în niciun pachet de mai sus?</strong>
+      <span>Fiecare proiect e diferit — cere o ofertă personalizată, dimensionată pe consumul și acoperișul tău.</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+  </div>
+</Layout>
+
+<style>
+  h1 { margin: 0 0 10px; }
+  .intro { color: var(--muted); font-size: 14.5px; line-height: 1.6; max-width: 760px; margin: 0 0 28px; }
+
+  .tab-grup input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+  .tab-etichete { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 2px solid var(--border); }
+  .tab-etichete label {
+    padding: 12px 20px; cursor: pointer; font-weight: 700; font-size: 14.5px; color: var(--muted);
+    border-bottom: 3px solid transparent; margin-bottom: -2px;
+  }
+  #tab-solar:checked ~ .tab-etichete label[for="tab-solar"],
+  #tab-electrice:checked ~ .tab-etichete label[for="tab-electrice"],
+  #tab-fara-baterie:checked ~ .tab-etichete-secundare label[for="tab-fara-baterie"],
+  #tab-cu-baterie:checked ~ .tab-etichete-secundare label[for="tab-cu-baterie"] {
+    color: var(--navy); border-bottom-color: var(--teal);
+  }
+
+  .tab-conținut { display: none; }
+  #tab-solar:checked ~ .tab-conținut-solar { display: block; }
+  #tab-electrice:checked ~ .tab-conținut-electrice { display: block; }
+
+  .tab-conținut-fara-baterie, .tab-conținut-cu-baterie { display: none; }
+  #tab-fara-baterie:checked ~ .tab-conținut-fara-baterie { display: block; }
+  #tab-cu-baterie:checked ~ .tab-conținut-cu-baterie { display: block; }
+
+  .grup-putere { margin-bottom: 36px; }
+  .grup-putere h2 { font-size: 19px; color: var(--navy); margin: 0 0 14px; }
+
+  .grid-pachete { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .grid-pachete { grid-template-columns: 1fr; } }
+
+  .card-pachet {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card-standard { border-color: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+  .eticheta-tier { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
+  .card-buget .eticheta-tier { color: #5F6368; }
+  .card-standard .eticheta-tier { color: var(--teal); }
+  .card-premium .eticheta-tier { color: var(--orange); }
+  .pret-pachet { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+  .card-pachet ul { margin: 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .card-pachet li { margin-bottom: 4px; }
+  .card-pachet .cta-btn { text-align: center; margin-top: 6px; }
+</style>

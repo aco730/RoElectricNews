@@ -2,8 +2,8 @@
 title: "Zigbee vs Matter vs KNX: ce protocol alegi pentru casa ta smart în 2026"
 categorie: smart-home
 data: 2026-08-09
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+sursaNume: "SmartHomeSystems"
+sursaUrl: "https://smarthomesystems.ro"
 imagine: "/images/articole/zigbee-vs-matter-vs-knx-ce-protocol-alegi-pentru-casa-ta-smart-in-2026.webp"
 ---
 
@@ -17,4 +17,4 @@ KNX e altă categorie de soluție: un standard profesional, cablat, folosit de z
 
 Recomandarea practică depinde de context: pentru o casă existentă, unde vrei să adaugi automatizări treptat fără să spargi pereți, Zigbee sau Matter rămân alegerea logică — iar dacă cumperi dispozitive noi acum, prioritizează cele cu certificare Matter, pentru compatibilitate pe termen lung. Pentru o casă nouă sau o renovare majoră, unde poți planifica cablarea din timp, KNX rămâne standardul cu cea mai mare fiabilitate pe termen lung, mai ales dacă automatizarea se combină cu un sistem fotovoltaic și de stocare care trebuie monitorizat și controlat central.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

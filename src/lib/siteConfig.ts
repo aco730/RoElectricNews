@@ -35,10 +35,16 @@ export async function saveSiteConfig(config: SiteConfig): Promise<void> {
 	await writeFile(CONFIG_PATH, JSON.stringify(config, null, 2) + '\n', 'utf-8');
 }
 
-export async function saveLogoFile(fileName: string, buffer: Buffer): Promise<string> {
+export async function saveLogoFile(mimeType: string, buffer: Buffer): Promise<string> {
+	const extensiePentruTip: Record<string, string> = {
+		'image/png': '.png',
+		'image/jpeg': '.jpg',
+		'image/webp': '.webp',
+	};
+	const ext = extensiePentruTip[mimeType];
+	if (!ext) throw new Error('Tip de fișier neacceptat');
 	await mkdir(LOGO_DIR, { recursive: true });
-	const safeExt = path.extname(fileName).toLowerCase();
-	const finalName = `logo-custom${safeExt}`;
+	const finalName = `logo-custom${ext}`;
 	await writeFile(path.join(LOGO_DIR, finalName), buffer);
 	return `/images/brand/${finalName}`;
 }

@@ -8,12 +8,20 @@ const articole = await listArticole();
 function numeCategorie(slug: string) {
 	return categories.find((c) => c.slug === slug)?.name ?? slug;
 }
+const fărăPoză = articole.filter((a) => !a.imagine).length;
 ---
 <AdminLayout title="Articole blog">
 	<div class="head">
 		<h1>Articole blog ({articole.length})</h1>
 		<a href="/admin/articole/editor" class="btn">+ Articol nou</a>
 	</div>
+	{fărăPoză > 0 && (
+		<div class="avertisment-poze">
+			<span>⚠ {fărăPoză} articole nu au poză — apasă pe coloana "Poză" ca să le vezi grupate.</span>
+			<button type="button" id="completeaza-poze" class="btn-secundar">Completează poze automat (Pexels)</button>
+		</div>
+	)}
+	<pre id="output-poze" hidden></pre>
 	<table class="tabel-sortabil">
 		<thead>
 			<tr>
@@ -21,6 +29,8 @@ function numeCategorie(slug: string) {
 				<th data-sort="text">Categorie</th>
 				<th data-sort="text">Dată</th>
 				<th data-sort="text">Dată adăugare</th>
+				<th data-sort="text">Fixat</th>
+				<th data-sort="text">Poză</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -31,6 +41,12 @@ function numeCategorie(slug: string) {
 					<td data-val={numeCategorie(a.categorie)}>{numeCategorie(a.categorie)}</td>
 					<td data-val={a.data}>{a.data}</td>
 					<td data-val={a.dataAdaugare}>{a.dataAdaugare}</td>
+					<td data-val={a.fixat ? '1' : '0'}>{a.fixat && '📌 Fixat'}</td>
+					<td data-val={a.imagine ? '1' : '0'} class="celula-poza">
+						{a.imagine && <img src={a.imagine} alt="" class="mini-poza" />}
+						{a.imagine ? <span class="poza-ok">✓ Are poză</span> : <span class="poza-lipsa">✗ Fără poză</span>}
+						<button type="button" class="schimba-poza" data-slug={a.slug} title="Schimbă poza automat cu alta de pe Pexels">🔄 Schimbă poza</button>
+					</td>
 					<td class="acțiuni">
 						<a href={`/admin/articole/editor?slug=${a.slug}`}>Editează</a>
 						<a href={`/admin/articole-faq/${a.slug}`}>FAQ</a>
@@ -56,9 +72,48 @@ function numeCategorie(slug: string) {
 		.acțiuni { display: flex; gap: 0.75rem; }
 		.del { background: none; border: none; color: #f87171; cursor: pointer; font-size: 0.85rem; padding: 0; }
 		.del:hover { text-decoration: underline; }
+		.avertisment-poze { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; color: #fbbf24; font-size: 0.85rem; background: #422006; border: 1px solid #78350f; border-radius: 8px; padding: 0.6rem 0.9rem; margin: -0.5rem 0 1.25rem; }
+		.celula-poza { min-width: 110px; }
+		.mini-poza { display: block; width: 90px; height: 54px; object-fit: cover; border-radius: 6px; margin-bottom: 0.3rem; border: 1px solid #1f2937; }
+		.poza-ok { color: #4ade80; font-size: 0.82rem; }
+		.poza-lipsa { color: #f87171; font-size: 0.82rem; font-weight: 600; }
+		.schimba-poza {
+			display: block; margin-top: 0.3rem; background: none; border: 1px solid #334155; color: #93c5fd;
+			border-radius: 6px; padding: 0.15rem 0.5rem; font-size: 0.72rem; cursor: pointer; white-space: nowrap;
+		}
+		.schimba-poza:hover { background: #1e293b; }
+		.schimba-poza:disabled { opacity: 0.5; cursor: wait; }
+		.btn-secundar { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 0.4rem 0.9rem; border-radius: 8px; cursor: pointer; font-size: 0.8rem; white-space: nowrap; }
+		.btn-secundar:hover { background: #263244; }
+		.btn-secundar:disabled { opacity: 0.6; cursor: wait; }
+		#output-poze { white-space: pre-wrap; font-size: 0.78rem; color: #94a3b8; background: #0b1220; border-radius: 8px; padding: 0.75rem; margin-top: -1rem; margin-bottom: 1.25rem; max-height: 260px; overflow-y: auto; }
 	</style>
 
 	<script>
+		document.querySelectorAll<HTMLButtonElement>('.schimba-poza').forEach((btn) => {
+			btn.addEventListener('click', async () => {
+				const slug = btn.dataset.slug;
+				btn.disabled = true;
+				const textInitial = btn.textContent;
+				btn.textContent = 'Se caută...';
+				try {
+					const res = await fetch(`/api/admin/schimba-poza/${slug}`, { method: 'POST' });
+					const data = await res.json();
+					if (res.ok) {
+						location.reload();
+					} else {
+						alert('Eroare: ' + (data.error || 'necunoscută'));
+						btn.disabled = false;
+						btn.textContent = textInitial;
+					}
+				} catch {
+					alert('Eroare de rețea.');
+					btn.disabled = false;
+					btn.textContent = textInitial;
+				}
+			});
+		});
+
 		document.querySelectorAll<HTMLButtonElement>('.del').forEach((btn) => {
 			btn.addEventListener('click', async () => {
 				const slug = btn.dataset.slug;
@@ -70,6 +125,32 @@ function numeCategorie(slug: string) {
 					alert('Ștergerea a eșuat.');
 				}
 			});
+		});
+
+		document.getElementById('completeaza-poze')?.addEventListener('click', async () => {
+			const btn = document.getElementById('completeaza-poze') as HTMLButtonElement;
+			const outputEl = document.getElementById('output-poze') as HTMLElement;
+			btn.disabled = true;
+			btn.textContent = 'Se caută poze pe Pexels... (poate dura câteva minute)';
+			outputEl.hidden = false;
+			outputEl.textContent = 'Pornit...';
+
+			try {
+				const res = await fetch('/api/admin/completeaza-poze-automat', { method: 'POST' });
+				const data = await res.json();
+				if (res.ok) {
+					const linii = data.rezultate.map((r: any) => `${r.status === 'ok' ? '✓' : r.status === 'eroare' ? '✗' : '—'} ${r.slug}${r.detaliu ? ' — ' + r.detaliu : ''}`);
+					outputEl.textContent = `${data.total} articole procesate:\n` + linii.join('\n');
+					setTimeout(() => location.reload(), 2000);
+				} else {
+					outputEl.textContent = 'Eroare: ' + (data.error || 'necunoscută');
+				}
+			} catch (err) {
+				outputEl.textContent = 'Eroare de rețea.';
+			} finally {
+				btn.disabled = false;
+				btn.textContent = 'Completează poze automat (Pexels)';
+			}
 		});
 
 		document.querySelectorAll<HTMLTableElement>('.tabel-sortabil').forEach((tabel) => {

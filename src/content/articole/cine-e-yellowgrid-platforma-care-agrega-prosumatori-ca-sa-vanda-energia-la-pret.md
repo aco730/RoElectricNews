@@ -2,9 +2,11 @@
 title: "Cine e YellowGrid: platforma care agregă prosumatori ca să vândă energia la preț de piață"
 categorie: fotovoltaic
 data: 2026-07-07
+dataAdaugare: "2026-08-10"
 sursaNume: "YellowGrid"
 sursaUrl: "https://www.yellowgrid.ro/despre-noi"
-imagine: "/images/articole/cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret.webp"
+imagine: "/images/articole/cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret.jpg"
+fixat: true
 ---
 
 YellowGrid e o platformă și rețea națională de prosumatori, înființată în 2024, cu o premisă simplă la bază: prosumatorii români cu panouri fotovoltaice erau plătiți sub valoarea reală de piață pentru energia produsă și trimisă în rețea, cu întârzieri de plată și fără transparență reală asupra calculului. Fondatorii au pornit exact de la această întrebare — de ce prosumatorii sunt plătiți practic nimic pentru propria energie — și au construit un model care agregă mulți producători mici într-o singură entitate cu putere reală de negociere pe piața liberă.
@@ -15,6 +17,6 @@ Din perspectiva unui prosumator care se înscrie, platforma promite trei lucruri
 
 Echipa de conducere include Cătălin Stancel (CEO), Sergiu Mureșan (CTO), Andrei Antohie (manager vânzări) și Iulian Constandache (specialist în tranzacționarea energiei) — o structură relativ mică, tipică unui startup energetic la început de scalare, nu unei companii mari deja consolidate.
 
-Pentru cititorii Electric NEWS care iau deja în calcul o baterie de stocare, YellowGrid ilustrează un model diferit de valorificare a surplusului: nu doar stocare pentru consum propriu, ci participare activă la o rețea virtuală care vinde energia agregată la preț de piață — un model deja descris tehnic, din perspectiva unui utilizator concret, într-un articol separat pe Electric NEWS despre funcționarea unei baterii casnice de 86 kWh conectate la platformă. Compania însăși descrie etapa actuală drept „doar începutul", cu expansiune națională continuă.
+Pentru cititorii BuildHub.ro care iau deja în calcul o baterie de stocare, YellowGrid ilustrează un model diferit de valorificare a surplusului: nu doar stocare pentru consum propriu, ci participare activă la o rețea virtuală care vinde energia agregată la preț de piață — un model deja descris tehnic, din perspectiva unui utilizator concret, într-un articol separat pe BuildHub.ro despre funcționarea unei baterii casnice de 86 kWh conectate la platformă. Compania însăși descrie etapa actuală drept „doar începutul", cu expansiune națională continuă.
 
 Sursă: yellowgrid.ro (pagina „Despre noi").

@@ -2,9 +2,10 @@
 title: "Cât costă un sistem fotovoltaic complet în România în 2026 (on-grid, hibrid, cu/fără baterie)"
 categorie: fotovoltaic
 data: 2026-08-05
-sursaNume: "NovaSol (preț de referință)"
+dataAdaugare: "2026-08-10"
+sursaNume: "NovaSol"
 sursaUrl: "https://novasol.ro/cat-costa-panouri-fotovoltaice-2026-preturi/"
-imagine: "/images/articole/cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far.webp"
+imagine: "/images/articole/cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far.jpg"
 ---
 
 Prețul unui sistem fotovoltaic rămâne, pentru majoritatea celor interesați, întrebarea centrală — dar răspunsul corect depinde decisiv de tipul de sistem ales, nu doar de puterea instalată. Diferența de cost între un sistem simplu on-grid și unul hibrid cu baterie e semnificativă, iar înțelegerea ei ajută la o decizie realistă de buget.
@@ -25,4 +26,4 @@ Prețul unui sistem fotovoltaic rămâne, pentru majoritatea celor interesați, 
 
 Pentru o estimare exactă, adaptată consumului și acoperișului propriu, un calcul realist necesită oricum o vizită tehnică — cifrele de mai sus rămân repere orientative de piață, nu o ofertă fermă.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

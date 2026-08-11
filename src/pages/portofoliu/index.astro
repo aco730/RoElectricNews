@@ -3,6 +3,9 @@ export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import portofoliuData from "../../data/portofoliu.json";
 import Etichete from "../../components/Etichete.astro";
+import { getCtaConfig } from "../../lib/ctaConfig";
+
+const cta = (await getCtaConfig()).portofoliu;
 
 const { proiecte } = portofoliuData as {
   proiecte: { id: string; nume: string; album: string; locatie: string; dataDe: string; poze: unknown[]; cover: string | null; etichete?: string[] }[];
@@ -44,9 +47,9 @@ const sortate = [...proiecte].sort((a, b) => (b.dataDe || "").localeCompare(a.da
 
   <div class="lead-cta">
     <div class="lead-cta-text">
-      <strong>Ai un proiect similar în zona Făgăraș?</strong>
-      <span>Solar Electric Panel oferă consultanță și montaj — cere o ofertă personalizată.</span>
+      <strong>{cta.titlu}</strong>
+      <span>{cta.text}</span>
     </div>
-    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+    <a class="cta-btn cta-btn-primary" href={cta.linkButon}>{cta.textButon}</a>
   </div>
 </Layout>

@@ -5,7 +5,12 @@ import crypto from 'node:crypto';
 
 export const prerender = false;
 
-const TIPURI_PERMISE = new Set(['image/png', 'image/jpeg', 'image/webp']);
+const EXTENSIE_PENTRU_TIP: Record<string, string> = {
+	'image/png': '.png',
+	'image/jpeg': '.jpg',
+	'image/webp': '.webp',
+};
+const TIPURI_PERMISE = new Set(Object.keys(EXTENSIE_PENTRU_TIP));
 const MAX_BYTES = 8 * 1024 * 1024;
 const DEST_DIR = path.join(process.cwd(), 'public', 'images', 'articole');
 
@@ -44,7 +49,7 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 	}
 
-	const ext = path.extname(file.name).toLowerCase() || '.jpg';
+	const ext = EXTENSIE_PENTRU_TIP[file.type];
 	const bazaNume = slugify(slugSauTitlu) || crypto.randomBytes(4).toString('hex');
 	const numeFisier = `${bazaNume}${ext}`;
 

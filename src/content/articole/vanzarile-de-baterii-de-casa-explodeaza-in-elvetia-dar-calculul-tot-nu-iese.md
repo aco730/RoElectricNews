@@ -2,7 +2,7 @@
 title: "Vânzările de baterii de casă explodează în Elveția, dar calculul tot nu iese"
 categorie: fotovoltaic
 data: 2026-08-07
-sursaNume: "Le News (Elveția)"
+sursaNume: "Le News"
 sursaUrl: "https://lenews.ch/2026/08/07/swiss-home-battery-sales-are-booming-the-maths-still-doesnt-add-up/?utm_source=flipboard&utm_content=topic/technology"
 imagine: "/images/articole/vanzarile-de-baterii-de-casa-explodeaza-in-elvetia-dar-calculul-tot-nu-iese.webp"
 ---

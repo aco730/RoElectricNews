@@ -31,12 +31,28 @@
         "href": "/portofoliu"
       },
       {
+        "text": "Prețuri",
+        "href": "/preturi"
+      },
+      {
         "text": "Cere ofertă",
         "href": "/oferta"
       },
       {
         "text": "Contact",
         "href": "/contact"
+      },
+      {
+        "text": "Confidențialitate (GDPR)",
+        "href": "/confidentialitate"
+      },
+      {
+        "text": "Transparență editorială",
+        "href": "/transparenta"
+      },
+      {
+        "text": "Termeni și condiții",
+        "href": "/termeni-si-conditii"
       }
     ],
     "copyright": "BuildHub.ro & Solar Electric Panel."

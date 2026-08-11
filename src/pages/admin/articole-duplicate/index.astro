@@ -1,0 +1,141 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { listArticole } from '../../../lib/articole';
+import { detecteazaDuplicate } from '../../../lib/duplicate';
+
+const articole = await listArticole();
+const perechi = detecteazaDuplicate(articole);
+
+function dataFmt(slug: string) {
+	return articole.find((a) => a.slug === slug)?.data ?? '';
+}
+---
+<AdminLayout title="Articole posibil duplicate">
+	<div class="cap">
+		<h1>Articole posibil duplicate</h1>
+		<p class="hint">
+			Compară titlurile (asemănare de cuvinte cheie) și sursele (același link folosit la mai multe articole),
+			pentru a semnala perechi care ar putea fi duplicate reale. Nu șterge nimic automat — tu decizi ce rămâne.
+		</p>
+	</div>
+
+	{perechi.length === 0 && <p class="gol">Nu am găsit perechi suspecte în momentul de față.</p>}
+
+	{perechi.length > 0 && (
+		<>
+			<div class="actiuni-sus">
+				<span id="numar-selectate">0 articole selectate pentru ștergere</span>
+				<button type="button" id="sterge-selectate" class="btn-pericol" disabled>Șterge articolele selectate</button>
+			</div>
+
+			<table class="tabel-perechi">
+				<thead>
+					<tr>
+						<th>Articol A</th>
+						<th>Articol B</th>
+						<th>Motiv</th>
+						<th>Scor</th>
+					</tr>
+				</thead>
+				<tbody>
+					{perechi.map((p) => (
+						<tr>
+							<td>
+								<label class="opt">
+									<input type="checkbox" class="chk-sterge" value={p.a} />
+									<div>
+										<a href={`/admin/articole/editor?slug=${p.a}`} target="_blank">{p.titluA}</a>
+										<span class="meta">{p.a} · {dataFmt(p.a)}</span>
+									</div>
+								</label>
+							</td>
+							<td>
+								<label class="opt">
+									<input type="checkbox" class="chk-sterge" value={p.b} />
+									<div>
+										<a href={`/admin/articole/editor?slug=${p.b}`} target="_blank">{p.titluB}</a>
+										<span class="meta">{p.b} · {dataFmt(p.b)}</span>
+									</div>
+								</label>
+							</td>
+							<td class="motiv">
+								{p.sursaComuna && <span class="tag tag-sursa">Sursă comună</span>}
+								{p.scorTitlu >= 0.3 && <span class="tag tag-titlu">Titlu asemănător</span>}
+							</td>
+							<td class="scor">{(p.scorTitlu * 100).toFixed(0)}%</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</>
+	)}
+
+	<style is:global>
+		.cap { max-width: 820px; margin-bottom: 1.25rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; line-height: 1.5; }
+		.gol { color: #94a3b8; font-size: 0.9rem; }
+		.actiuni-sus {
+			display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+			background: #111827; border: 1px solid #1f2937; border-radius: 10px;
+			padding: 0.75rem 1rem; margin-bottom: 1rem; max-width: 900px;
+		}
+		#numar-selectate { font-size: 0.85rem; color: #94a3b8; }
+		.btn-pericol {
+			background: #7f1d1d; color: #fecaca; border: 1px solid #991b1b; border-radius: 8px;
+			padding: 0.5rem 1rem; font-size: 0.85rem; cursor: pointer;
+		}
+		.btn-pericol:disabled { opacity: 0.4; cursor: not-allowed; }
+		.btn-pericol:not(:disabled):hover { background: #991b1b; }
+		table.tabel-perechi { width: 100%; border-collapse: collapse; max-width: 1100px; }
+		.tabel-perechi th, .tabel-perechi td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.85rem; vertical-align: top; }
+		.tabel-perechi th { color: #94a3b8; font-weight: 600; }
+		.opt { display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; }
+		.opt input { margin-top: 0.25rem; }
+		.opt a { color: #93c5fd; text-decoration: none; display: block; }
+		.opt a:hover { text-decoration: underline; }
+		.opt .meta { display: block; color: #64748b; font-size: 0.72rem; margin-top: 0.15rem; }
+		.motiv { white-space: nowrap; }
+		.tag { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 999px; margin-right: 0.3rem; margin-bottom: 0.2rem; }
+		.tag-sursa { background: #422006; color: #fbbf24; border: 1px solid #78350f; }
+		.tag-titlu { background: #1e293b; color: #93c5fd; border: 1px solid #334155; }
+		.scor { color: #cbd5e1; font-variant-numeric: tabular-nums; }
+	</style>
+
+	<script>
+		const checkboxuri = document.querySelectorAll<HTMLInputElement>('.chk-sterge');
+		const numarEl = document.getElementById('numar-selectate')!;
+		const btnSterge = document.getElementById('sterge-selectate') as HTMLButtonElement;
+
+		function actualizeaza() {
+			const selectate = [...checkboxuri].filter((c) => c.checked);
+			numarEl.textContent = `${selectate.length} articole selectate pentru ștergere`;
+			btnSterge.disabled = selectate.length === 0;
+		}
+
+		checkboxuri.forEach((c) => c.addEventListener('change', actualizeaza));
+
+		btnSterge?.addEventListener('click', async () => {
+			const slugs = [...checkboxuri].filter((c) => c.checked).map((c) => c.value);
+			if (slugs.length === 0) return;
+			if (!confirm(`Ștergi ${slugs.length} articole? Nu poate fi anulat.`)) return;
+
+			btnSterge.disabled = true;
+			btnSterge.textContent = 'Se șterge...';
+
+			let esuate = 0;
+			for (const slug of slugs) {
+				const res = await fetch(`/api/admin/articole/${slug}`, { method: 'DELETE' });
+				if (!res.ok) esuate++;
+			}
+
+			if (esuate > 0) {
+				alert(`${esuate} articole nu au putut fi șterse.`);
+				btnSterge.disabled = false;
+				btnSterge.textContent = 'Șterge articolele selectate';
+			} else {
+				location.reload();
+			}
+		});
+	</script>
+</AdminLayout>

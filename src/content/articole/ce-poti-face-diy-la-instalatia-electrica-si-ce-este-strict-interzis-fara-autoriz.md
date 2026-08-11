@@ -2,8 +2,8 @@
 title: "Ce poți face DIY la instalația electrică și ce este strict interzis fără autorizație"
 categorie: electric-instalatii
 data: 2026-07-26
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+sursaNume: "Electricianul.ro"
+sursaUrl: "https://www.electricianul.ro"
 imagine: "/images/articole/ce-poti-face-diy-la-instalatia-electrica-si-ce-este-strict-interzis-fara-autoriz.webp"
 ---
 
@@ -31,4 +31,4 @@ Motivul pentru care legea (și bunul-simț) trasează exact această linie e sim
 
 Regula practică de reținut: dacă intervenția implică deschiderea tabloului electric, cablaj nou îngropat în perete sau orice conexiune la sistemul de împământare, e strict pentru un electrician autorizat — restul, la nivel de piese vizibile deja instalate corect, e teren rezonabil pentru DIY, cu precauția de bază de a opri mereu alimentarea înainte de orice intervenție.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

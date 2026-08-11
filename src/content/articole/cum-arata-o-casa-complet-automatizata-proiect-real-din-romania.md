@@ -2,7 +2,7 @@
 title: "Cum arată o casă complet automatizată: proiect real din România"
 categorie: smart-home
 data: 2026-08-10
-sursaNume: "Smart Home Systems (YouTube)"
+sursaNume: "Smart Home Systems"
 sursaUrl: "https://www.youtube.com/watch?v=6Snv6kt3osQ"
 imagine: "/images/articole/cum-arata-o-casa-complet-automatizata-proiect-real-din-romania.webp"
 ---

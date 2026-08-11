@@ -2,8 +2,8 @@
 title: "Automatizări utile pentru case cu panouri fotovoltaice: cum optimizezi consumul"
 categorie: smart-home
 data: 2026-08-03
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+sursaNume: "SmartHomeSystems"
+sursaUrl: "https://smarthomesystems.ro"
 imagine: "/images/articole/automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul.webp"
 ---
 
@@ -21,4 +21,4 @@ Un ultim nivel, mai avansat, e integrarea cu platforme de tip rețea virtuală (
 
 Pentru majoritatea caselor, punctul de plecare realist nu e o automatizare complexă de la zi unu, ci identificarea celor doi-trei consumatori mari și amânabili din casă (boiler, mașină de spălat, încărcare auto electrică) și programarea lor condiționată de producția solară — restul automatizărilor se pot adăuga treptat, pe măsură ce sistemul demonstrează beneficiul concret în factură.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

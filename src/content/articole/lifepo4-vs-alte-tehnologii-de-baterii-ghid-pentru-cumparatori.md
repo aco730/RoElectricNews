@@ -2,7 +2,7 @@
 title: "LiFePO4 vs alte tehnologii de baterii: ghid pentru cumpărători"
 categorie: fotovoltaic
 data: 2026-07-27
-sursaNume: "MACO Solar (preț de referință)"
+sursaNume: "MACO Solar"
 sursaUrl: "https://macosolar.ro/blog/costuri-si-rentabilitate/baterii-pentru-panouri-fotovoltaice-pret-avantaje-si-merita-investitia-in-2026"
 imagine: "/images/articole/lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori.webp"
 ---

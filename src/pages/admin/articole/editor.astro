@@ -35,6 +35,8 @@ const eticheteCustomExistente = (existent?.etichete ?? []).filter((s) => !slugur
 			<input type="date" name="data" required value={existent?.data || azi} />
 		</label>
 
+		<label class="check"><input type="checkbox" name="fixat" checked={existent?.fixat ?? false} /> Fixează pe prima pagină (apare ca articol principal/recent, indiferent de dată)</label>
+
 		<div class="câmp-imagine">
 			<label>Imagine articol
 				<input type="file" id="imagine-file" accept="image/png,image/jpeg,image/webp" />
@@ -93,6 +95,7 @@ const eticheteCustomExistente = (existent?.etichete ?? []).filter((s) => !slugur
 	<style is:global>
 		form { display: flex; flex-direction: column; gap: 1.1rem; max-width: 780px; }
 		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: #94a3b8; }
+		label.check { flex-direction: row; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #e2e8f0; }
 		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
 		input, select, textarea {
 			background: #111827; border: 1px solid #334155; border-radius: 8px;
@@ -217,6 +220,7 @@ const eticheteCustomExistente = (existent?.etichete ?? []).filter((s) => !slugur
 			fd.delete('etichete');
 			const payload = Object.fromEntries(fd.entries()) as any;
 			payload.etichete = [...form.querySelectorAll<HTMLInputElement>('input[name="etichete"]:checked')].map((el) => el.value);
+			payload.fixat = form.querySelector<HTMLInputElement>('input[name="fixat"]')!.checked;
 
 			const res = await fetch('/api/admin/articole', {
 				method: 'POST',

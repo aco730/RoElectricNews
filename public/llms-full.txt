@@ -1,0 +1,204 @@
+# BuildHub.ro — index complet de conținut (variantă extinsă pentru agenți AI)
+
+> Listă completă a articolelor publicate pe BuildHub.ro, grupate pe categorii, cu link direct către fiecare. Generat din conținutul curent al site-ului. Pentru context general despre site și firmă, vezi /llms.txt.
+
+## Arhitectură & Concept (/categorie/arhitectura)
+
+- Arhitectură bioclimatică: orientare solară și eficiență energetică: /blog/arhitectura-bioclimatica-orientare-solara-si-eficienta-energetica
+- BIM (Building Information Modeling): proiectare 3D integrată: /blog/bim-building-information-modeling-proiectare-3d-integrata
+- BIM ca platformă de integrare a cerințelor medicale și de securitate într-un proiect: /blog/bim-ca-platforma-de-integrare-a-cerintelor-medicale-si-de-securitate-intr-un-proiect
+- Care sunt costurile pentru o casă nZEB comparativ cu o construcție standard în 2026: /blog/care-sunt-costurile-pentru-o-casa-nzeb-comparativ-cu-o-constructie-standard-in-2026
+- Case modulare și precomprimate: avantaje, execuție și durabilitate: /blog/case-modulare-si-precomprimate-avantaje-executie-si-durabilitate
+- Cât costă proiectul de arhitectură, structură și instalații (DTAC + PTH) per metru pătrat: /blog/cat-costa-proiectul-de-arhitectura-structura-si-instalatii-dtac-pth-per-metru-patrat
+- Cât costă randările 3D și studiile de fezabilitate pentru o locuință individuală: /blog/cat-costa-randarile-3d-si-studiile-de-fezabilitate-pentru-o-locuinta-individuala
+- Ce înseamnă un ansamblu rezidențial gândit ca ecosistem: principii aplicabile și la scară mică: /blog/ce-inseamna-un-ansamblu-rezidential-gandit-ca-ecosistem-principii-aplicabile-si-la-scara-m
+- Ce putem învăța din arhitectura patrimoniului pentru casele noi: proporții, materiale, durabilitate: /blog/ce-putem-invata-din-arhitectura-patrimoniului-pentru-casele-noi-proportii-materiale-durabi
+
+## colaboratori (/categorie/colaboratori)
+
+- Solar Electric Panel (SEP): cine suntem și cum poți cere o ofertă: /blog/solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta
+
+## Design Interior (/categorie/design-interior)
+
+- Amenajarea unui apartament mic: cum faci spațiul să pară mai mare prin detalii: /blog/amenajarea-unui-apartament-mic-cum-faci-spatiul-sa-para-mai-mare-prin-detalii
+- Care sunt costurile pentru finisajele premium (Microciment, tencuieli minerale, parchet): /blog/care-sunt-costurile-pentru-finisajele-premium-microciment-tencuieli-minerale-parchet
+- Cât costă mobilarea custom a unei bucătării și amenajarea iluminatului ambiental: /blog/cat-costa-mobilarea-custom-a-unei-bucatarii-si-amenajarea-iluminatului-ambiental
+- Cât costă serviciile unui designer de interior per mp și implementarea proiectului: /blog/cat-costa-serviciile-unui-designer-de-interior-per-mp-si-implementarea-proiectului
+- Ceramica artizanală în amenajarea interioară: cum alegi obiecte decorative durabile: /blog/ceramica-artizanala-in-amenajarea-interioara-cum-alegi-obiecte-decorative-durabile
+- Design biophilic: elemente naturale, lemn și plante în interior: /blog/design-biophilic-elemente-naturale-lemn-si-plante-in-interior
+- Finisaje microciment și rășină epoxidică: pardoseli fără rosturi: /blog/finisaje-microciment-si-rasina-epoxidica-pardoseli-fara-rosturi
+- Mobilier custom și ergonomie: planificarea bucătăriei și spațiilor: /blog/mobilier-custom-si-ergonomie-planificarea-bucatariei-si-spatiilor
+- Palete Cromatice și Abordări Moderne de Interior: /blog/palete-cromatice-si-abordari-moderne-de-interior
+
+## Rețele & Confort (/categorie/electric-instalatii)
+
+- 5 probleme reale la aerul condiționat și soluțiile tehnice pentru 2026: /blog/5-probleme-reale-la-aerul-conditionat-si-solutiile-tehnice-pentru-2026
+- ANRE trebuie să actualizeze metodologia de comercializare a energiei prosumatorilor până pe 24 septembrie: /blog/anre-trebuie-sa-actualizeze-metodologia-de-comercializare-a-energiei-prosumatori
+- Auditul Energetic și Rolul Instalațiilor în Tranziția Sustenabilă (OAER): /blog/auditul-energetic-si-rolul-instalatiilor-in-tranzitia-sustenabila-oaer
+- Care sunt costurile pentru racordarea la rețeaua trifazată și extinderi de rețea: /blog/care-sunt-costurile-pentru-racordarea-la-reteaua-trifazata-si-extinderi-de-retea
+- Cât costă înlocuirea instalației electrice la o casă: ghid de manoperă pe etape: /blog/cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape
+- Cât costă o instalație electrică cap-coadă la o casă de 100-150 mp în 2026 (Materiale + Manoperă): /blog/cat-costa-o-instalatie-electrica-cap-coada-la-o-casa-de-100-150-mp-in-2026-materiale-manop
+- Ce poți face DIY la instalația electrică și ce este strict interzis fără autorizație: /blog/ce-poti-face-diy-la-instalatia-electrica-si-ce-este-strict-interzis-fara-autoriz
+- Cinci concepte de stații de încărcare EV gândite ca sculpturi solare, nu ca simple utilități: /blog/cinci-concepte-de-statii-de-incarcare-ev-gandite-ca-sculpturi-solare-nu-ca-simpl
+- Cum alegi corect un aparat de aer condiționat: /blog/cum-alegi-corect-un-aparat-de-aer-conditionat
+- Ghid: ce presupune un tablou electric modern conform normativului I7: /blog/ghid-ce-presupune-un-tablou-electric-modern-conform-normativului-i7
+- Managementul apelor și reciclarea apei pluviale: sisteme de stocare și filtrare: /blog/managementul-apelor-si-reciclarea-apei-pluviale-sisteme-de-stocare-si-filtrare
+- Montajul unei pompe de căldură la o casă veche: /blog/montajul-unei-pompe-de-caldura-la-o-casa-veche
+- Pompa de căldură aer-apă: economie reală, nu doar promisiuni: /blog/pompa-de-caldura-aer-apa-economie-reala-nu-doar-promisiuni
+- Pompă de căldură vs. centrală pe gaz: ghid comparativ de eficiență: /blog/pompa-de-caldura-vs-centrala-pe-gaz-ghid-comparativ-de-eficienta
+- Prize, întrerupătoare, tablouri: ghid de înlocuire pas cu pas pentru o casă mai sigură: /blog/prize-intrerupatoare-tablouri-ghid-de-inlocuire-pas-cu-pas-pentru-o-casa-mai-sig
+- RCD/DDR explicat: diferența dintre protecția la atingere directă și indirectă: /blog/rcd-ddr-explicat-diferenta-dintre-protectia-la-atingere-directa-si-indirecta
+- Reabilitarea Termică și Modernizarea Instalațiilor în Clădiri: /blog/reabilitarea-termica-si-modernizarea-instalatiilor-in-cladiri
+- Signify și tendințele pieței de iluminat profesional: ce înseamnă pentru clienții rezidențiali: /blog/signify-si-tendintele-pietei-de-iluminat-profesional-ce-inseamna-pentru-clientii-rezidenti
+- Siguranță electrică: cele mai frecvente cauze de incendii din instalații vechi: /blog/siguranta-electrica-cele-mai-frecvente-cauze-de-incendii-din-instalatii-vechi
+- Standarde de Tâmplărie și Vitraje Izolante (PPTT 2026): /blog/standarde-de-tamplarie-si-vitraje-izolante-pptt-2026
+- Tabloul electric: autorizație, înălțime de montaj și când e semn de pericol dacă sare siguranța: /blog/tabloul-electric-autorizatie-inaltime-de-montaj-si-cand-e-semn-de-pericol-daca-s
+- Tablouri electrice rezidențiale: protecții moderne și organizare circuite: /blog/tablouri-electrice-rezidentiale-protectii-moderne-si-organizare-circuite
+- Umiditate ridicată în apartament vara: cauze, riscuri și soluții: /blog/umiditate-ridicata-in-apartament-vara-cauze-riscuri-si-solutii
+
+## Eco-Energie & Stocare (/categorie/fotovoltaic)
+
+- Amortizare sistem fotovoltaic în 2026: calcul realist cu prețuri actuale: /blog/amortizare-sistem-fotovoltaic-in-2026-calcul-realist-cu-preturi-actuale
+- ANRE schimbă regulile de racordare: garanția crește de la 5% la 20% — ce presupune pentru un proiect fotovoltaic: /blog/anre-schimba-regulile-de-racordare-garantia-creste-de-la-5-la-20-ce-presupune-pe
+- Bateriile cu litiu explicate simplu: ghid pentru prosumatori: /blog/bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori
+- Care sunt costurile de pregătire a tabloului și acoperișului pentru instalarea panourilor: /blog/care-sunt-costurile-de-pregatire-a-tabloului-si-acoperisului-pentru-instalarea-panourilor
+- Casa Verde Baterii 2026: buget de 400 milioane lei aprobat de Guvern, cine poate aplica: /blog/casa-verde-baterii-2026-buget-de-400-milioane-lei-aprobat-de-guvern-cine-poate-a
+- Casa Verde Baterii 2026: ghidul de finanțare încă nepublicat — ce știm până acum: /blog/casa-verde-baterii-2026-ghidul-de-finantare-inca-nepublicat-ce-stim-pana-acum
+- Casa Verde Fotovoltaic a fost eliminat: AFM devine finanțator „Anghel Saligny 2” — ce înseamnă pentru cei care voiau panouri noi: /blog/casa-verde-fotovoltaic-a-fost-eliminat-afm-devine-finantator-anghel-saligny-2-ce
+- Cât costă o baterie de stocare în 2026: comparație Deye, Huawei, DAH Solar: /blog/cat-costa-o-baterie-de-stocare-in-2026-comparatie-deye-huawei-dah-solar
+- Cât costă un sistem fotovoltaic complet în România în 2026 (on-grid, hibrid, cu/fără baterie): /blog/cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026-on-grid-hibrid-cu-far
+- Cât costă un sistem fotovoltaic hibrid de 5kW / 10kW cu stocare în baterii LiFePO4 în 2026: /blog/cat-costa-un-sistem-fotovoltaic-hibrid-de-5kw-10kw-cu-stocare-in-baterii-lifepo4-in-2026
+- Cât te costă un acumulator suplimentar de stocare rezidențială și care este durata de amortizare: /blog/cat-te-costa-un-acumulator-suplimentar-de-stocare-rezidentiala-si-care-este-durata-de-amor
+- Ce sunt panourile solare \"plug-in\" și cum se instalează pe balcon sau pe perete: /blog/ce-sunt-panourile-solare-plug-in-si-cum-se-instaleaza-pe-balcon-sau-pe-perete
+- Cine controlează invertorul tău? Disputa dintre distribuitori/Transelectrica și prosumatori privind accesul la date: /blog/cine-controleaza-invertorul-tau-disputa-dintre-distribuitori-transelectrica-si-p
+- Cine e Depozit Solar: retailer român de panouri, invertoare și baterii: /blog/cine-e-depozit-solar-retailer-roman-de-panouri-invertoare-si-baterii
+- Cine e EnergyOrb, platforma europeană de monitorizare solar și stocare: /blog/cine-e-energyorb-platforma-europeana-de-monitorizare-solar-si-stocare
+- Cine e YellowGrid: platforma care agregă prosumatori ca să vândă energia la preț de piață: /blog/cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret
+- Cum funcționează panourile fotovoltaice: ghid pentru începători: /blog/cum-functioneaza-panourile-fotovoltaice-ghid-pentru-incepatori
+- Cum funcționează stocarea energiei cu acumulatori pentru sistemele fotovoltaice: /blog/cum-functioneaza-stocarea-energiei-cu-acumulatori-pentru-sistemele-fotovoltaice
+- Cum își încarcă un proprietar de Tesla mașina direct din surplusul de energie solară: /blog/cum-isi-incarca-un-proprietar-de-tesla-masina-direct-din-surplusul-de-energie-so
+- Cum montezi corect panourile fotovoltaice: ghid tehnic fără artificii: /blog/cum-montezi-corect-panourile-fotovoltaice-ghid-tehnic-fara-artificii
+- Extinderea REZOLV Energy la 4-5 GW: ce arată despre viitorul energiei regenerabile în România: /blog/extinderea-rezolv-energy-la-4-5-gw-ce-arata-despre-viitorul-energiei-regenerabile-in-roman
+- Invertor on-grid vs hibrid vs off-grid: cum dimensionezi sistemul solar: /blog/invertor-on-grid-vs-hibrid-vs-off-grid-cum-dimensionezi-sistemul-solar
+- Invertor string vs hibrid: diferențe, prețuri, când alegi fiecare: /blog/invertor-string-vs-hibrid-diferente-preturi-cand-alegi-fiecare
+- Legea obligă prosumatorii să instaleze baterii până în 2027: /blog/legea-obliga-prosumatorii-sa-instaleze-baterii-pana-in-2027
+- Legea Prosumatorilor 2026 declarată constituțională de CCR — ce înseamnă în practică: /blog/legea-prosumatorilor-2026-declarata-constitutionala-de-ccr-ce-inseamna-in-practi
+- LiFePO4 vs alte tehnologii de baterii: ghid pentru cumpărători: /blog/lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori
+- LiFePO4 vs NMC: ghid de alegere a acumulatorilor pentru prosumatori: /blog/lifepo4-vs-nmc-ghid-de-alegere-a-acumulatorilor-pentru-prosumatori
+- Microinvertoarele pentru panouri fotovoltaice: revoluție tehnică și siguranță pe acoperiș: /blog/microinvertoarele-pentru-panouri-fotovoltaice-revolutie-tehnica-si-siguranta-pe-acoperis
+- O casă de 980 m² din Brazilia a redus factura la curent de la 1.200 la 200 de reali cu 48 de panouri solare: /blog/o-casa-de-980-m²-din-brazilia-a-redus-factura-la-curent-de-la-1200-la-200-de-rea
+- O fermă solară din Massachusetts, ridicată la 3 metri deasupra afinilor, schimbă gustul fructelor: /blog/o-ferma-solara-din-massachusetts-ridicata-la-3-metri-deasupra-afinilor-schimba-g
+- Panouri N-Type TopCon și HJT: eficiență și comportament la umbrire: /blog/panouri-n-type-topcon-si-hjt-eficienta-si-comportament-la-umbrire
+- Peste 280.000 de prosumatori și 3.100 MW instalați în România — ce arată cifrele: /blog/peste-280000-de-prosumatori-si-3100-mw-instalati-in-romania-ce-arata-cifrele
+- Producția Electrica din surse regenerabile a crescut de 4 ori: ce înseamnă pentru prosumatori: /blog/productia-electrica-din-surse-regenerabile-a-crescut-de-4-ori-ce-inseamna-pentru-prosumato
+- Programul AFM Baterii 2026: mai puțini beneficiari și posibile probleme de legalitate — ce spune APCE: /blog/programul-afm-baterii-2026-mai-putini-beneficiari-si-posibile-probleme-de-legali
+- Programul de baterii din PNRR: voucherul de 5.000 euro și problema dispozitivelor DSU: /blog/programul-de-baterii-din-pnrr-voucherul-de-5000-euro-si-problema-dispozitivelor
+- Puterea instalată în bateriile prosumatorilor a depășit capacitatea de stocare centralizată din România: /blog/puterea-instalata-in-bateriile-prosumatorilor-a-depasit-capacitatea-de-stocare-c
+- RPIA: solarul a susținut sistemul energetic în starea de alertă, dar lipsește stocarea: /blog/rpia-solarul-a-sustinut-sistemul-energetic-in-starea-de-alerta-dar-lipseste-stoc
+- Sisteme hibride on/off-grid: de ce crește cererea pentru stocare în 2026: /blog/sisteme-hibride-on-off-grid-de-ce-creste-cererea-pentru-stocare-in-2026
+- TVA 0% pentru panouri și baterii: ce cere Asociația Prosumatorilor: /blog/tva-0-pentru-panouri-si-baterii-ce-cere-asociatia-prosumatorilor
+- Vânzările de baterii de casă explodează în Elveția, dar calculul tot nu iese: /blog/vanzarile-de-baterii-de-casa-explodeaza-in-elvetia-dar-calculul-tot-nu-iese
+- Yellow Grid: cum funcționează o baterie casnică de 86 kWh conectată la o rețea virtuală (VPP): /blog/yellow-grid-cum-functioneaza-o-baterie-casnica-de-86-kwh-conectata-la-o-retea-vi
+
+## Outdoor & Peisagistică (/categorie/outdoor-peisagistica)
+
+- Amenajarea grădinii pas cu pas: zonare, materiale și greșeli: /blog/amenajarea-gradinii-pas-cu-pas-zonare-materiale-si-greseli
+- Amenajarea teraselor: decking WPC vs lemn termotratat: /blog/amenajarea-teraselor-decking-wpc-vs-lemn-termotratat
+- Arhitectură peisagistică: cele 6 etape ale unui proiect de grădină: /blog/arhitectura-peisagistica-cele-6-etape-ale-unui-proiect-de-gradina
+- Care sunt costurile pentru un sistem automat de irigații (Materiale + Montaj per mp): /blog/care-sunt-costurile-pentru-un-sistem-automat-de-irigatii-materiale-montaj-per-mp
+- Cât costă amenajarea curții pe mp (Pavaj, pregătire teren, alei și borduri): /blog/cat-costa-amenajarea-curtii-pe-mp-pavaj-pregatire-teren-alei-si-borduri
+- Cât te costă rulourile de gazon vs. însămânțarea și pregătirea solului: /blog/cat-te-costa-rulourile-de-gazon-vs-insamantarea-si-pregatirea-solului
+- Iluminat peisagistic la 12V/24V: siguranță și punere în valoare LED: /blog/iluminat-peisagistic-la-12v-24v-siguranta-si-punere-in-valoare-led
+- Irigații automate și amenajarea terenului: ce echipamente ai nevoie: /blog/irigatii-automate-si-amenajarea-terenului-ce-echipamente-ai-nevoie
+- Sisteme de irigație automatizate: presiune, zonificare și senzori: /blog/sisteme-de-irigatie-automatizate-presiune-zonificare-si-senzori
+
+## Reglementări & Legislație (/categorie/reglementari-preturi)
+
+- 7 miliarde de euro, zero megawați: ce a cumpărat România cu plafonarea prețurilor la energie: /blog/7-miliarde-de-euro-zero-megawati-ce-a-cumparat-romania-cu-plafonarea-preturilor-la-energie
+- AFEER cere recalibrarea evaluării furnizorilor de energie de către ANRE: /blog/afeer-cere-recalibrarea-evaluarii-furnizorilor-de-energie-de-catre-anre
+- ANRE a retras prima licență unui furnizor din istoria instituției (GRENERG): ce trebuie să facă un client afectat: /blog/anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre
+- ANRE reglementează comunitățile de energie și notificarea la 80% din consumul lunar estimat: ce înseamnă pentru tine: /blog/anre-reglementeaza-comunitatile-de-energie-si-notificarea-la-80-din-consumul-lun
+- APCE propune TVA ZERO pentru sistemele fotovoltaice și baterii: ce șanse are propunerea în Parlament: /blog/apce-propune-tva-zero-pentru-sistemele-fotovoltaice-si-baterii-ce-sanse-are-prop
+- Autorizația de construire: documente, avize și etape administrative: /blog/autorizatia-de-construire-documente-avize-si-etape-administrative
+- Avioanele electrice ar putea zbura în Europa până în 2030: de ce contează pentru sectorul energetic: /blog/avioanele-electrice-ar-putea-zbura-in-europa-pana-in-2030-de-ce-conteaza-pentru
+- Care sunt costurile administrative și taxele comasate prin noul Cod al Urbanismului (CATUC): /blog/care-sunt-costurile-administrative-si-taxele-comasate-prin-noul-cod-al-urbanismului-catuc
+- Cât costă certificatul energetic și auditul nZEB obligatoriu la recepția casei: /blog/cat-costa-certificatul-energetic-si-auditul-nzeb-obligatoriu-la-receptia-casei
+- Cât costă obținerea Autorizației de Construire (Taxe locale, avize, studiu geotehnic, topo): /blog/cat-costa-obtinerea-autorizatiei-de-construire-taxe-locale-avize-studiu-geotehnic-topo
+- Certificate verzi 2027: cum a estimat ANRE impactul în factura consumatorilor: /blog/certificate-verzi-2027-cum-a-estimat-anre-impactul-in-factura-consumatorilor
+- Cinci măsuri care ar putea reduce facturile la energie: fact-check pe propunerile APCE: /blog/cinci-masuri-care-ar-putea-reduce-facturile-la-energie-fact-check-pe-propunerile
+- Compensare cantitativă vs. compensare lunară: ce înseamnă noua lege pentru factura ta: /blog/compensare-cantitativa-vs-compensare-lunara-ce-inseamna-noua-lege-pentru-factura
+- Comunități de energie: cum funcționează partajarea curentului între vecini: /blog/comunitati-de-energie-cum-functioneaza-partajarea-curentului-intre-vecini
+- Comunitățile de Energie sunt recunoscute prin lege, dar înregistrarea la ANRE durează luni: ce trebuie să știi: /blog/comunitatile-de-energie-sunt-recunoscute-prin-lege-dar-inregistrarea-la-anre-dur
+- Cum citești factura la energie ca prosumator: compensare, tarife, TVA: /blog/cum-citesti-factura-la-energie-ca-prosumator-compensare-tarife-tva
+- De ce nu se pot reporni simplu termocentralele pe cărbune: /blog/de-ce-nu-se-pot-reporni-simplu-termocentralele-pe-carbune
+- De ce plătim certificate verzi în factura de energie și cât timp vor mai exista: /blog/de-ce-platim-certificate-verzi-in-factura-de-energie-si-cat-timp-vor-mai-exista
+- Energia, între vreme și vremuri: cum expun valurile de căldură vulnerabilitățile rețelei: /blog/energia-intre-vreme-si-vremuri-cum-expun-valurile-de-caldura-vulnerabilitatile-retelei
+- Factura de energie, cel mai mare impozit lunar din România: cât din sumă nu e energie: /blog/factura-de-energie-cel-mai-mare-impozit-lunar-din-romania-cat-din-suma-nu-e-ener
+- Legea 160/2026 a intrat în vigoare: compensare lunară pentru prosumatori, ce se schimbă din 26 iulie: /blog/legea-160-2026-a-intrat-in-vigoare-compensare-lunara-pentru-prosumatori-ce-se-sc
+- Noile reglementări ANRE pentru prosumatori: racordare și compensare: /blog/noile-reglementari-anre-pentru-prosumatori-racordare-si-compensare
+- Normativul nZEB și certificatul energetic: cerințe minime de izolare: /blog/normativul-nzeb-si-certificatul-energetic-cerinte-minime-de-izolare
+- Oprirea controlată a unui reactor nuclear: ce arată cazul Cernavodă despre seceta pe Dunăre: /blog/oprirea-controlata-a-unui-reactor-nuclear-ce-arata-cazul-cernavoda-despre-seceta-pe-dunare
+- Otilia Nuțu: România avea nevoie de stocare de cinci ori mai mare ca să evite criza energetică: /blog/otilia-nutu-romania-avea-nevoie-de-stocare-de-cinci-ori-mai-mare-ca-sa-evite-cri
+- Peste 1,5 miliarde EUR pentru scheme dedicate energiei în 2026 — ce programe sunt disponibile: /blog/peste-15-miliarde-eur-pentru-scheme-dedicate-energiei-in-2026-ce-programe-sunt-d
+- Prețuri orientative pentru prosumatori: cât plătești și cât încasezi pe kWh în vara 2025: /blog/preturi-orientative-pentru-prosumatori-cat-platesti-si-cat-incasezi-pe-kwh-in-va
+- România e pe locul 3 în Europa la prețul energiei: care sunt cauzele: /blog/romania-e-pe-locul-3-in-europa-la-pretul-energiei-care-sunt-cauzele
+- Tariful de transport energie „BINOM” explicat pe înțelesul tuturor: /blog/tariful-de-transport-energie-binom-explicat-pe-intelesul-tuturor
+- Turbina cu hidrogen fără compresor a funcționat 303 secunde: ce înseamnă acest record pentru energia curată: /blog/turbina-cu-hidrogen-fara-compresor-a-functionat-303-secunde-ce-inseamna-acest-re
+
+## Șantier & Structură (/categorie/santier-structura)
+
+- Acoperiș terasă corect: checklist tehnic și capcane de evitat: /blog/acoperis-terasa-corect-checklist-tehnic-si-capcane-de-evitat
+- Barieră de vapori vs. folie anticondens: cum alegi corect: /blog/bariera-de-vapori-vs-folie-anticondens-cum-alegi-corect
+- Cânepa structurală (hempcrete) ca material alternativ de construcție: ce este și când are sens: /blog/canepa-structurala-hempcrete-ca-material-alternativ-de-constructie-ce-este-si-cand-are-sen
+- Care sunt costurile pentru turnarea fundației și hidroizolația la cota zero: /blog/care-sunt-costurile-pentru-turnarea-fundatiei-si-hidroizolatia-la-cota-zero
+- Cartea tehnică a construcției: rolul dirigintelui de șantier în completarea documentației: /blog/cartea-tehnica-a-constructiei-rolul-dirigintelui-de-santier-in-completarea-documentatiei
+- Cât costă construcția unei case la roșu vs. la cheie pe metru pătrat construit în 2026: /blog/cat-costa-constructia-unei-case-la-rosu-vs-la-cheie-pe-metru-patrat-construit-in-2026
+- Cât te costă izolarea termică a fațadei și mansardei cu materiale de înaltă performanță: /blog/cat-te-costa-izolarea-termica-a-fatadei-si-mansardei-cu-materiale-de-inalta-performanta
+- Ce verifici înainte de a cumpăra o casă veche de renovat: /blog/ce-verifici-inainte-de-a-cumpara-o-casa-veche-de-renovat
+- Cum alegi corect termoizolația casei: criterii tehnice, exemple practice și erori de evitat: /blog/cum-alegi-corect-termoizolatia-casei-criterii-tehnice-exemple-practice-si-erori-de-evitat
+- Cum alegi și folosești corect materialele pentru case eficiente energetic: /blog/cum-alegi-si-folosesti-corect-materialele-pentru-case-eficiente-energetic
+- Formarea meseriașilor în construcții: lecții practice din Germania: /blog/formarea-meseriasilor-in-constructii-lectii-practice-din-germania
+- Gherle de șantier: cum să nu-ți construiești viitorul pe improvizație: /blog/gherle-de-santier-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie
+- Hidroizolația fundației: soluții împotriva infiltrațiilor: /blog/hidroizolatia-fundatiei-solutii-impotriva-infiltratiilor
+- Luminatoare cu trapă de desfumare: ce este un sistem de tip SAFE DOME: /blog/luminatoare-cu-trapa-de-desfumare-ce-este-un-sistem-de-tip-safe-dome
+- Montajul ferestrelor eficiente energetic: checklist și pași esențiali: /blog/montajul-ferestrelor-eficiente-energetic-checklist-si-pasi-esentiali
+- Montajul luminatoarelor pe acoperiș terasă: detalii tehnice și capcane de evitat: /blog/montajul-luminatoarelor-pe-acoperis-terasa-detalii-tehnice-si-capcane-de-evitat
+- Panouri CLT vs zidărie clasică: ce alegi pentru structura casei: /blog/panouri-clt-vs-zidarie-clasica-ce-alegi-pentru-structura-casei
+- Sisteme de sprinklere pentru incendiu: cum funcționează protecția activă a unei clădiri: /blog/sisteme-de-sprinklere-pentru-incendiu-cum-functioneaza-protectia-activa-a-unei-cladiri
+- Spumă poliuretanică vs vată bazaltică: rezistență termică și vapori: /blog/spuma-poliuretanica-vs-vata-bazaltica-rezistenta-termica-si-vapori
+- Structură CLT și punți termice: cum arată un șantier nZEB corect: /blog/structura-clt-si-punti-termice-cum-arata-un-santier-nzeb-corect
+- Tehnologii PORR în 2026: optimizarea rețetelor de beton prin AI și automatizarea de șantier: /blog/tehnologii-porr-in-2026-optimizarea-retetelor-de-beton-prin-ai-si-automatizarea-de-santier
+
+## Smart Living (/categorie/smart-home)
+
+- Automatizări utile pentru case cu panouri fotovoltaice: cum optimizezi consumul: /blog/automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul
+- Camere de supraveghere fără WiFi și fără curent, cu panou solar: are sens pentru o casă smart offline?: /blog/camere-de-supraveghere-fara-wifi-si-fara-curent-cu-panou-solar-are-sens-pentru-o
+- Care sunt costurile reale pentru automatizarea completă a unei case (Sisteme cablate vs. wireless): /blog/care-sunt-costurile-reale-pentru-automatizarea-completa-a-unei-case-sisteme-cablate-vs-wir
+- Casă smart de la zero: ce înseamnă, cât costă și cum începi: /blog/casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi
+- Ce este protocolul KNX și de ce e standardul smart home: /blog/ce-este-protocolul-knx-si-de-ce-e-standardul-smart-home
+- Cum arată o casă complet automatizată: proiect real din România: /blog/cum-arata-o-casa-complet-automatizata-proiect-real-din-romania
+- Iluminat inteligent și scenarii de lumină: senzori de prezență și dimming: /blog/iluminat-inteligent-si-scenarii-de-lumina-senzori-de-prezenta-si-dimming
+- Lansări recente de produse smart home: ce merită urmărit: /blog/lansari-recente-de-produse-smart-home-ce-merita-urmarit
+- Monitorizarea Digitală și Gestiunea Consumului Diurn: /blog/monitorizarea-digitala-si-gestiunea-consumului-diurn
+- Securitate și control acces: sisteme IP și interfoane inteligente: /blog/securitate-si-control-acces-sisteme-ip-si-interfoane-inteligente
+- Stocarea Inteligentă și Managementul Rețelelor (Prosumatori 2026): /blog/stocarea-inteligenta-si-managementul-retelelor-prosumatori-2026
+- Ventilație cu recuperare de căldură: ce presupune și cât costă în 2026: /blog/ventilatie-cu-recuperare-de-caldura-ce-presupune-si-cat-costa-in-2026
+- Zigbee vs Matter vs KNX: ce protocol alegi pentru casa ta smart în 2026: /blog/zigbee-vs-matter-vs-knx-ce-protocol-alegi-pentru-casa-ta-smart-in-2026
+
+## youtube (/categorie/youtube)
+
+- Cabluri electrice rezistente la UV și apă sărată: ce alegi pentru montaj exterior și fotovoltaic: /blog/cabluri-electrice-rezistente-la-uv-si-apa-sarata-ce-alegi-pentru-montaj-exterior
+- Ce se întâmplă cu curentul electric de acum înainte: /blog/ce-se-intampla-cu-curentul-electric-de-acum-inainte
+- Instalație electrică pentru casă nouă: ce nu trebuie ratat înainte de turnarea betonului: /blog/instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be
+- Unde montezi bateria și invertorul fotovoltaic: camerele interzise și capcana temperaturii: /blog/unde-montezi-bateria-si-invertorul-fotovoltaic-camerele-interzise-si-capcana-tem
+
+## Alte pagini indexabile
+
+- Portofoliu (lucrări reale, cu poze): /portofoliu
+- Servicii: /servicii
+- Prețuri orientative: /preturi
+- Cere ofertă: /oferta
+- Transparență editorială: /transparenta
+- Politica de confidențialitate: /confidentialitate
+- Termeni și condiții: /termeni-si-conditii
+- Contact: /contact

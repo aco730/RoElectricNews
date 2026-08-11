@@ -12,7 +12,7 @@ export const GET: APIRoute = async () => {
 
 export const POST: APIRoute = async ({ request }) => {
 	const body = await request.json();
-	const { title, categorie, data, sursaNume, sursaUrl, imagine, etichete, continut, slug } = body;
+	const { title, categorie, data, sursaNume, sursaUrl, imagine, etichete, fixat, continut, slug } = body;
 
 	if (!title || !categorie || !data || !continut) {
 		return new Response(JSON.stringify({ error: 'Câmpuri obligatorii lipsă (titlu, categorie, dată, conținut).' }), {
@@ -21,7 +21,7 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 	}
 
-	const savedSlug = await saveArticol({ slug, title, categorie, data, sursaNume, sursaUrl, imagine, etichete, continut });
+	const savedSlug = await saveArticol({ slug, title, categorie, data, sursaNume, sursaUrl, imagine, etichete, fixat: Boolean(fixat), continut });
 	return new Response(JSON.stringify({ slug: savedSlug }), {
 		headers: { 'Content-Type': 'application/json' },
 	});

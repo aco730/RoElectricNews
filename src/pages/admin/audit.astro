@@ -1,0 +1,144 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+---
+<AdminLayout title="Audit sit">
+	<h1>Audit site — înainte de sync &amp; deploy</h1>
+	<p class="intro">
+		Bifează ce vrei verificat și apasă „Rulează audit”. Verificarea de build durează câteva secunde (rulează efectiv
+		<code>astro build</code>). Rezultatul îți spune dacă ești gata de <code>git push</code> sau ce mai ai de reparat.
+	</p>
+
+	<form id="audit-form" class="bife">
+		<label><input type="checkbox" name="categorii" value="build" checked /> Build &amp; erori cod</label>
+		<label><input type="checkbox" name="categorii" value="securitate" checked /> Securitate</label>
+		<label><input type="checkbox" name="categorii" value="legal" checked /> GDPR / Legal</label>
+		<label><input type="checkbox" name="categorii" value="seo-git" checked /> SEO &amp; indexare AI + Git</label>
+		<button type="submit" id="btn-rulare">Rulează audit</button>
+	</form>
+
+	<div id="status" class="status" hidden></div>
+	<div id="rezultate"></div>
+
+	<script>
+		const form = document.getElementById('audit-form') as HTMLFormElement;
+		const statusEl = document.getElementById('status') as HTMLDivElement;
+		const rezultateEl = document.getElementById('rezultate') as HTMLDivElement;
+		const btn = document.getElementById('btn-rulare') as HTMLButtonElement;
+
+		const ICON: Record<string, string> = { ok: '✅', atentie: '⚠️', eroare: '❌' };
+
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const categorii = Array.from(form.querySelectorAll('input[name="categorii"]:checked')).map(
+				(el) => (el as HTMLInputElement).value
+			);
+			if (categorii.length === 0) {
+				statusEl.hidden = false;
+				statusEl.textContent = 'Selectează cel puțin o categorie.';
+				statusEl.className = 'status eroare';
+				return;
+			}
+
+			btn.disabled = true;
+			btn.textContent = 'Rulează...';
+			statusEl.hidden = false;
+			statusEl.className = 'status';
+			statusEl.textContent = 'Se rulează verificările — build-ul poate dura câteva secunde...';
+			rezultateEl.innerHTML = '';
+
+			try {
+				const res = await fetch('/api/admin/audit', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ categorii }),
+				});
+				const data = await res.json();
+				if (!res.ok) throw new Error(data.error || 'Eroare necunoscută');
+
+				let totalEroare = 0;
+				let totalAtentie = 0;
+
+				for (const cat of data.rezultate) {
+					const bloc = document.createElement('div');
+					bloc.className = 'categorie';
+					const h2 = document.createElement('h2');
+					h2.textContent = cat.titlu;
+					bloc.appendChild(h2);
+
+					const ul = document.createElement('ul');
+					for (const r of cat.rezultate) {
+						if (r.stare === 'eroare') totalEroare++;
+						if (r.stare === 'atentie') totalAtentie++;
+						const li = document.createElement('li');
+						li.className = r.stare;
+						li.innerHTML = `<span class="icon">${ICON[r.stare]}</span> <strong>${r.label}</strong><div class="detaliu"></div>`;
+						li.querySelector('.detaliu')!.textContent = r.detaliu;
+						ul.appendChild(li);
+					}
+					bloc.appendChild(ul);
+					rezultateEl.appendChild(bloc);
+				}
+
+				statusEl.className = totalEroare > 0 ? 'status eroare' : totalAtentie > 0 ? 'status atentie' : 'status ok';
+				statusEl.textContent =
+					totalEroare > 0
+						? `❌ NU ești gata de deploy — ${totalEroare} probleme blocante găsite (plus ${totalAtentie} de verificat).`
+						: totalAtentie > 0
+							? `⚠️ Poți face sync & deploy, dar mai sunt ${totalAtentie} lucruri de verificat.`
+							: `✅ Totul e în regulă — poți face sync & deploy (git push).`;
+			} catch (err) {
+				statusEl.className = 'status eroare';
+				statusEl.textContent = 'Eroare la rularea auditului: ' + (err as Error).message;
+			} finally {
+				btn.disabled = false;
+				btn.textContent = 'Rulează audit';
+			}
+		});
+	</script>
+
+	<style is:global>
+		.intro { max-width: 720px; color: #94a3b8; font-size: 0.9rem; }
+		.bife {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			align-items: center;
+			background: #111827;
+			border: 1px solid #1f2937;
+			border-radius: 10px;
+			padding: 1rem 1.25rem;
+			margin: 1rem 0 1.5rem;
+		}
+		.bife label { font-size: 0.9rem; color: #cbd5e1; display: flex; align-items: center; gap: 0.4rem; cursor: pointer; }
+		.bife button {
+			margin-left: auto;
+			background: #2563eb;
+			color: white;
+			border: none;
+			padding: 0.55rem 1.1rem;
+			border-radius: 8px;
+			font-size: 0.9rem;
+			cursor: pointer;
+		}
+		.bife button:disabled { opacity: 0.6; cursor: default; }
+		.status { padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 600; }
+		.status.ok { background: #052e16; color: #86efac; border: 1px solid #14532d; }
+		.status.atentie { background: #3f2d05; color: #fcd34d; border: 1px solid #713f12; }
+		.status.eroare { background: #3f0d0d; color: #fca5a5; border: 1px solid #7f1d1d; }
+		.categorie { margin-bottom: 1.5rem; }
+		.categorie h2 { font-size: 1rem; color: #f1f5f9; margin: 0 0 0.6rem; }
+		.categorie ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+		.categorie li {
+			background: #111827;
+			border: 1px solid #1f2937;
+			border-radius: 8px;
+			padding: 0.6rem 0.8rem;
+			font-size: 0.88rem;
+			color: #e2e8f0;
+		}
+		.categorie li.eroare { border-color: #7f1d1d; }
+		.categorie li.atentie { border-color: #713f12; }
+		.categorie .detaliu { color: #94a3b8; font-size: 0.82rem; margin-top: 0.25rem; }
+	</style>
+</AdminLayout>

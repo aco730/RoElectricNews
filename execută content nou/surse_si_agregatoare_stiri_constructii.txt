@@ -1,0 +1,66 @@
+================================================================================
+LISTA COMPLETA RESURSE, PUBLICAȚII ȘI AGREGATOARE (ROMÂNIA & EUROPA)
+================================================================================
+
+1. PUBLICAȚII ȘI PORTALURI DIN ROMÂNIA
+--------------------------------------------------------------------------------
+* Agenda Construcțiilor – Știri din piața de construcții, materiale, instalații și analize:
+  https://agendaconstructiilor.ro
+
+* Revista Construcțiilor – Articole tehnice, inginerie, proiectare, rețele și reglementări:
+  https://revistaconstructiilor.eu
+
+* Arena Construcțiilor – Știri de șantier, investiții publice/private și dezvoltări rezidențiale:
+  https://arenaconstruct.ro
+
+* Spațiul Construit – Arhitectură, produse tehnice, izolații și ghiduri de execuție:
+  https://spatiulconstruit.ro
+
+* Igloo Media – Arhitectură contemporană, urbanism și concepte de locuire:
+  https://igloo.ro
+
+* Designist – Design interior, finisaje premium și amenajări spectaculoase:
+  https://designist.ro
+
+* InvesTenergy – Tranziție energetică, piața de energie și politici de sustenabilitate:
+  https://investenergy.ro
+
+* EnergyNomad – Știri și analize despre energie verde și tehnologii curate:
+  https://energynomad.ro
+
+* Asociația Prosumatorilor (A.P.C.E.) – Noutăți tehnice și legislative privind fotovoltaicele și stocarea:
+  https://asociatiaprosumatorilor.ro
+
+
+2. PUBLICAȚII ȘI PORTALURI INTERNAȚIONALE (EUROPA / GLOBAL)
+--------------------------------------------------------------------------------
+* ArchDaily – Cel mai mare agregator global de proiecte de arhitectură și materiale inovatoare:
+  https://www.archdaily.com
+
+* Dezeen – Arhitectură, design interior, tehnologii smart și sustenabilitate:
+  https://www.dezeen.com
+
+* BuildUp (European Portal for Energy Efficiency) – Clădiri nZEB, eficiență energetică și HVAC:
+  https://buildup.ec.europa.eu
+
+* PV Europe – Știri și articole tehnice privind energia solară rezidențială și stocarea:
+  https://www.pveurope.eu
+
+* CEPro – Tehnologii Smart Home, automatizări, iluminat inteligent și securitate:
+  https://www.cepro.com
+
+* Landezine (Landscape Architecture Platform) – Arhitectură peisagistică și amenajări exterioare:
+  https://landezine.com
+
+
+3. UNELTE ȘI AGREGATOARE DE FEED-URI (MONITORIZARE CONȚINUT)
+--------------------------------------------------------------------------------
+* Feedly – Agregator RSS pentru monitorizarea centralizată a articolelor din domeniu:
+  https://feedly.com
+
+* Inoreader – Platformă avansată de agregare și filtrare a știrilor tehnice:
+  https://www.inoreader.com
+
+* Google News (Secțiunile Construcții, Energie, Smart Home):
+  https://news.google.com
+================================================================================

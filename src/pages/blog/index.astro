@@ -13,7 +13,7 @@ function catInfo(slug: string) {
   return categories.find((c) => c.slug === slug);
 }
 ---
-<Layout title="Blog — Electric NEWS" description="Toate articolele și ghidurile Electric NEWS despre electric, fotovoltaic, smart home și construcții, susținute de Solar Electric Panel." singleCol>
+<Layout title="Blog — BuildHub.ro" description="Toate articolele și ghidurile BuildHub.ro despre electric, fotovoltaic, smart home și construcții, susținute de Solar Electric Panel." singleCol>
   <h2 class="section-title">Toate articolele</h2>
   <div class="story-grid">
     {articole.map((art) => {
@@ -28,7 +28,14 @@ function catInfo(slug: string) {
           )}
           {cat && <span class="badge" style={`background:${cat.color}`}>{cat.name}</span>}
           <h3><a href={`/blog/${art.id}`}>{art.data.title}</a></h3>
-          <div class="meta"><span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span></div>
+          <div class="meta">
+            <span class="date">{art.data.data.toLocaleDateString("ro-RO")}</span>
+            {art.data.sursaUrl && /^https?:\/\//.test(art.data.sursaUrl) && (
+              <a class="sursa-mica" href={art.data.sursaUrl} target="_blank" rel="noopener nofollow">
+                {art.data.sursaNume || new URL(art.data.sursaUrl).hostname.replace(/^www\./, "")}
+              </a>
+            )}
+          </div>
         </article>
       );
     })}

@@ -2,8 +2,8 @@
 title: "Casă smart de la zero: ce înseamnă, cât costă și cum începi"
 categorie: smart-home
 data: 2026-07-03
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+sursaNume: "SmartHomeSystems"
+sursaUrl: "https://smarthomesystems.ro"
 imagine: "/images/articole/casa-smart-de-la-zero-ce-inseamna-cat-costa-si-cum-incepi.webp"
 ---
 
@@ -29,4 +29,4 @@ Configurarea inițială cere puțină răbdare — cont, aplicație, conectarea 
 
 Da, cu condiția realistă: o casă smart bine folosită (nu doar instalată) poate reduce vizibil consumul, mai ales prin termostate și programări automate de climatizare/iluminat corelate cu prezența reală în casă — beneficiul nu vine automat din simpla instalare, ci din folosirea logicii de automatizare, nu doar a comenzii de la distanță.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

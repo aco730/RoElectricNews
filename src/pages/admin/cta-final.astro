@@ -1,0 +1,109 @@
+---
+export const prerender = false;
+import AdminLayout from '../../layouts/AdminLayout.astro';
+import { getCtaConfig } from '../../lib/ctaConfig';
+
+const cta = await getCtaConfig();
+
+const blocuri = [
+	{ cheie: 'blog', nume: 'Homepage & pagini de articol', descriere: 'Apare pe homepage și la finalul fiecărui articol de blog.' },
+	{ cheie: 'portofoliu', nume: 'Portofoliu', descriere: 'Apare pe lista de portofoliu și pe fiecare proiect individual.' },
+	{ cheie: 'servicii', nume: 'Servicii', descriere: 'Apare pe pagina de Servicii.' },
+] as const;
+---
+<AdminLayout title="Text final (Cere ofertă)">
+	<div class="cap">
+		<h1>Text final — "Cere ofertă"</h1>
+		<p class="hint">Blocul de la finalul paginilor, cu textul care invită la ofertă. Sunt 3 versiuni, folosite în locuri diferite ale site-ului.</p>
+	</div>
+
+	{blocuri.map((b) => (
+		<section class="bloc">
+			<h2>{b.nume}</h2>
+			<p class="descriere-bloc">{b.descriere}</p>
+			<label>Titlu (bold)
+				<input type="text" class="c-titlu" data-cheie={b.cheie} value={cta[b.cheie].titlu} />
+			</label>
+			<label>Text
+				<textarea class="c-text" data-cheie={b.cheie} rows="2">{cta[b.cheie].text}</textarea>
+			</label>
+			<div class="grid2">
+				<label>Text buton
+					<input type="text" class="c-buton" data-cheie={b.cheie} value={cta[b.cheie].textButon} />
+				</label>
+				<label>Link buton
+					<input type="text" class="c-link" data-cheie={b.cheie} value={cta[b.cheie].linkButon} />
+				</label>
+			</div>
+		</section>
+	))}
+
+	<div class="acțiuni">
+		<button type="button" id="salvează" class="btn">Salvează tot</button>
+		<span id="status"></span>
+	</div>
+
+	<div id="banner-salvat" class="banner-salvat">✓ Modificările au fost salvate</div>
+
+	<style is:global>
+		.cap { max-width: 780px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; }
+		.bloc { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1.3rem 1.4rem; max-width: 780px; margin-bottom: 1.25rem; }
+		.bloc h2 { margin: 0 0 0.3rem; font-size: 1rem; color: #f1f5f9; }
+		.descriere-bloc { color: #64748b; font-size: 0.82rem; margin: 0 0 1rem; }
+		label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.9rem; }
+		.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+		input, textarea {
+			background: #0b1220; border: 1px solid #334155; border-radius: 8px;
+			color: #f1f5f9; padding: 0.55rem 0.7rem; font-size: 0.9rem; font-family: inherit;
+		}
+		textarea { resize: vertical; }
+		.acțiuni { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+		.btn { background: #2563eb; color: white; border: none; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+		.btn:hover { background: #1d4ed8; }
+		#status { font-size: 0.85rem; color: #f87171; }
+
+		.banner-salvat {
+			position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%) translateY(-20px);
+			background: #14532d; border: 1px solid #22c55e; color: #bbf7d0;
+			padding: 0.85rem 1.6rem; border-radius: 10px; font-size: 0.95rem; font-weight: 600;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+			opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+			z-index: 1000;
+		}
+		.banner-salvat.arată { opacity: 1; transform: translateX(-50%) translateY(0); }
+	</style>
+
+	<script>
+		document.getElementById('salvează')!.addEventListener('click', async () => {
+			const statusEl = document.getElementById('status')!;
+			const chei = ['blog', 'portofoliu', 'servicii'];
+			const payload: Record<string, any> = {};
+
+			for (const cheie of chei) {
+				payload[cheie] = {
+					titlu: document.querySelector<HTMLInputElement>(`.c-titlu[data-cheie="${cheie}"]`)!.value.trim(),
+					text: document.querySelector<HTMLTextAreaElement>(`.c-text[data-cheie="${cheie}"]`)!.value.trim(),
+					textButon: document.querySelector<HTMLInputElement>(`.c-buton[data-cheie="${cheie}"]`)!.value.trim(),
+					linkButon: document.querySelector<HTMLInputElement>(`.c-link[data-cheie="${cheie}"]`)!.value.trim(),
+				};
+			}
+
+			const res = await fetch('/api/admin/cta-config', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(payload),
+			});
+
+			if (res.ok) {
+				statusEl.textContent = '';
+				const banner = document.getElementById('banner-salvat')!;
+				banner.classList.add('arată');
+				clearTimeout((window as any).__bannerTimeout);
+				(window as any).__bannerTimeout = setTimeout(() => banner.classList.remove('arată'), 3000);
+			} else {
+				statusEl.textContent = 'Eroare la salvare.';
+			}
+		});
+	</script>
+</AdminLayout>

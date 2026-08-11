@@ -1,0 +1,85 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import legal from '../../../data/legal-config.json';
+---
+<AdminLayout title="Date legale (GDPR)">
+	<div class="cap">
+		<h1>Date legale (GDPR)</h1>
+		<p class="hint">
+			Aceste date apar pe pagina publică <a href="/confidentialitate" target="_blank">/confidentialitate</a>.
+			Completează-le cu datele reale ale firmei — până atunci apar ca placeholder pe site.
+		</p>
+	</div>
+
+	<form id="form-legal">
+		<label>Denumire legală firmă
+			<input type="text" name="denumireFirma" value={legal.denumireFirma} />
+		</label>
+		<label>CUI / CIF
+			<input type="text" name="cui" value={legal.cui} />
+		</label>
+		<label>Nr. Registrul Comerțului
+			<input type="text" name="nrRegistruComert" value={legal.nrRegistruComert} />
+		</label>
+		<label>Adresa sediului
+			<input type="text" name="adresaSediu" value={legal.adresaSediu} />
+		</label>
+		<label>Email contact GDPR
+			<input type="email" name="emailContact" value={legal.emailContact} />
+		</label>
+		<label>Telefon contact
+			<input type="text" name="telefonContact" value={legal.telefonContact} />
+		</label>
+		<label class="check">
+			<input type="checkbox" name="foloseșteAnalytics" checked={legal.foloseșteAnalytics} />
+			Folosim Google Analytics sau alt tool de analiză trafic
+		</label>
+		<label class="check">
+			<input type="checkbox" name="foloseșteCookieuriMarketing" checked={legal.foloseșteCookieuriMarketing} />
+			Folosim cookie-uri de marketing/remarketing
+		</label>
+		<button type="submit" class="btn">Salvează</button>
+		<span id="status"></span>
+	</form>
+
+	<style is:global>
+		.cap { max-width: 620px; margin-bottom: 1.5rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; }
+		.hint a { color: #93c5fd; }
+		#form-legal { max-width: 520px; display: flex; flex-direction: column; gap: 1rem; }
+		#form-legal label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; color: #cbd5e1; }
+		#form-legal label.check { flex-direction: row; align-items: center; gap: 0.5rem; }
+		#form-legal input[type="text"], #form-legal input[type="email"] {
+			background: #111827; border: 1px solid #334155; border-radius: 8px; color: #f1f5f9; padding: 0.55rem 0.75rem; font-size: 0.9rem;
+		}
+		.btn { background: #2563eb; color: white; padding: 0.55rem 1.2rem; border-radius: 8px; border: none; font-size: 0.9rem; font-weight: 600; cursor: pointer; width: fit-content; }
+		#status { color: #4ade80; font-size: 0.85rem; margin-left: 0.5rem; }
+	</style>
+
+	<script>
+		const form = document.getElementById('form-legal') as HTMLFormElement;
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const fd = new FormData(form);
+			const body = {
+				denumireFirma: fd.get('denumireFirma'),
+				cui: fd.get('cui'),
+				nrRegistruComert: fd.get('nrRegistruComert'),
+				adresaSediu: fd.get('adresaSediu'),
+				emailContact: fd.get('emailContact'),
+				telefonContact: fd.get('telefonContact'),
+				foloseșteAnalytics: fd.get('foloseșteAnalytics') === 'on',
+				foloseșteCookieuriMarketing: fd.get('foloseșteCookieuriMarketing') === 'on',
+			};
+			const res = await fetch('/api/admin/legal-config', {
+				method: 'PUT',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(body),
+			});
+			const statusEl = document.getElementById('status')!;
+			statusEl.textContent = res.ok ? 'Salvat ✓' : 'Eroare la salvare';
+			setTimeout(() => (statusEl.textContent = ''), 2000);
+		});
+	</script>
+</AdminLayout>

@@ -2,7 +2,7 @@
 title: "Invertor string vs hibrid: diferențe, prețuri, când alegi fiecare"
 categorie: fotovoltaic
 data: 2026-06-01
-sursaNume: "OfertaFotovoltaice.ro (preț de referință)"
+sursaNume: "OfertaFotovoltaice.ro"
 sursaUrl: "https://ofertafotovoltaice.ro/articol/cat-costa-un-sistem-fotovoltaic-complet-in-romania-in-2026"
 imagine: "/images/articole/invertor-string-vs-hibrid-diferente-preturi-cand-alegi-fiecare.webp"
 ---

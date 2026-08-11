@@ -2,6 +2,9 @@
 export const prerender = true;
 import Layout from "../layouts/Layout.astro";
 import portofoliuData from "../data/portofoliu.json";
+import { getCtaConfig } from "../lib/ctaConfig";
+
+const cta = (await getCtaConfig()).servicii;
 
 interface Proiect { id: string; album: string; cover: string | null; poze: { thumb_s: string }[] }
 const { proiecte } = portofoliuData as { proiecte: Proiect[] };
@@ -104,9 +107,9 @@ const proofPhotos = [...fotoProiecte.slice(5, 8), ...electProiecte.slice(0, 3)]
 
   <div class="lead-cta">
     <div class="lead-cta-text">
-      <strong>Vrei o ofertă personalizată?</strong>
-      <span>Completează câteva detalii despre acoperiș/consum și primești o estimare de sistem și preț.</span>
+      <strong>{cta.titlu}</strong>
+      <span>{cta.text}</span>
     </div>
-    <a class="cta-btn cta-btn-primary" href="/oferta">Cere ofertă</a>
+    <a class="cta-btn cta-btn-primary" href={cta.linkButon}>{cta.textButon}</a>
   </div>
 </Layout>

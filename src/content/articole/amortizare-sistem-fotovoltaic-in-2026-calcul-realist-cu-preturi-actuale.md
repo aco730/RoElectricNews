@@ -2,7 +2,7 @@
 title: "Amortizare sistem fotovoltaic în 2026: calcul realist cu prețuri actuale"
 categorie: fotovoltaic
 data: 2026-06-19
-sursaNume: "Panouri Fotovoltaice Casa Verde (preț de referință)"
+sursaNume: "Panouri Fotovoltaice Casa Verde"
 sursaUrl: "https://panouri-fotovoltaice-casa-verde.ro/blog/cost-total-sistem-fotovoltaic-plus-baterie-2026/"
 imagine: "/images/articole/amortizare-sistem-fotovoltaic-in-2026-calcul-realist-cu-preturi-actuale.webp"
 ---

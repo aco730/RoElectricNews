@@ -3,7 +3,7 @@ import { saveLogoFile } from '../../../lib/siteConfig';
 
 export const prerender = false;
 
-const TIPURI_PERMISE = new Set(['image/png', 'image/svg+xml', 'image/webp', 'image/jpeg']);
+const TIPURI_PERMISE = new Set(['image/png', 'image/webp', 'image/jpeg']);
 const MAX_BYTES = 3 * 1024 * 1024;
 
 export const POST: APIRoute = async ({ request }) => {
@@ -17,7 +17,7 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 	}
 	if (!TIPURI_PERMISE.has(file.type)) {
-		return new Response(JSON.stringify({ error: 'Format neacceptat. Folosește PNG, SVG, WEBP sau JPEG.' }), {
+		return new Response(JSON.stringify({ error: 'Format neacceptat. Folosește PNG, WEBP sau JPEG.' }), {
 			status: 400,
 			headers: { 'Content-Type': 'application/json' },
 		});
@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 	}
 
 	const buffer = Buffer.from(await file.arrayBuffer());
-	const publicPath = await saveLogoFile(file.name, buffer);
+	const publicPath = await saveLogoFile(file.type, buffer);
 
 	return new Response(JSON.stringify({ path: publicPath }), {
 		headers: { 'Content-Type': 'application/json' },

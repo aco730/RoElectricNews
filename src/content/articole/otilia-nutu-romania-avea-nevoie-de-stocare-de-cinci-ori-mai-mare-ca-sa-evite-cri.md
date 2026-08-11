@@ -2,7 +2,7 @@
 title: "Otilia Nuțu: România avea nevoie de stocare de cinci ori mai mare ca să evite criza energetică"
 categorie: reglementari-preturi
 data: 2026-08-09
-sursaNume: "Ziare.com (Business Focus)"
+sursaNume: "Ziare.com"
 sursaUrl: "https://ziare.com/criza-energetica/business-focus-otilia-nutu-expert-forum-criza-romania-bulgaria-fotovoltaice-stocare-2028506"
 imagine: "/images/articole/otilia-nutu-romania-avea-nevoie-de-stocare-de-cinci-ori-mai-mare-ca-sa-evite-cri.webp"
 ---

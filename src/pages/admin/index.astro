@@ -4,6 +4,91 @@ import AdminLayout from '../../layouts/AdminLayout.astro';
 ---
 <AdminLayout title="Prezentare generală">
 	<h1>Bun venit</h1>
-	<p>Panoul de administrare pentru site-ul Solar Electric Panel. Rulează doar local (astro dev).</p>
-	<p>Module disponibile: Articole blog, Poze portofoliu, Date preț/oferte, Scripturi.</p>
+	<p>Panoul de administrare pentru site-ul Solar Electric Panel / BuildHub.ro. Rulează doar local (astro dev) — blocat automat pe Netlify.</p>
+	<p>Module disponibile: Articole blog, FAQ articole, Poze portofoliu, Categorii, Etichete, Header/Footer, Date preț/oferte, Scripturi.</p>
+
+	<div class="ghid">
+		<h2>📌 Comenzi &amp; reguli ale proiectului</h2>
+
+		<div class="sectiune">
+			<h3>Server local</h3>
+			<ul>
+				<li><code>astro dev --background</code> — pornește serverul local în fundal (nu blochează terminalul).</li>
+				<li><code>astro dev --background --host</code> — la fel, dar accesibil și din rețeaua locală (telefon, alt device pe același WiFi) la adresa IP locală.</li>
+				<li><code>astro dev stop</code> / <code>astro dev status</code> / <code>astro dev logs</code> — oprește, verifică starea, respectiv vezi logurile serverului de fundal.</li>
+				<li>După modificări la <code>astro.config.mjs</code> sau <code>src/middleware.ts</code>, e nevoie de restart (<code>stop</code> apoi <code>--background</code> din nou) ca schimbările să se aplice.</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>"execută content nou" — generare articole din listă de link-uri</h3>
+			<ul>
+				<li>Spune <strong>"executa content nou: [cale către fișier .txt]"</strong> — fișierul trebuie să aibă secțiuni pe categorie, cu titluri + link-uri sursă.</li>
+				<li>Îți arăt lista de titluri mapate pe categoriile existente și semnalez anomalii (ex. același link reutilizat la mai multe titluri) înainte să scriu ceva.</li>
+				<li>După confirmare, redactez fiecare articol (conținut + 4 întrebări FAQ), caut automat o imagine relevantă pe Pexels și public totul direct în <code>src/content/articole/</code> + <code>src/data/qa-articole.json</code>.</li>
+				<li>Nu există API de generare automată conectat la site — redactarea se face de mine, în chat, nu printr-un script "magic".</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>Deploy pe Netlify</h3>
+			<ul>
+				<li>Fluxul e: <code>git push</code> pe branch-ul principal → Netlify detectează automat commit-ul → build + deploy (2-4 minute).</li>
+				<li>Modificările din admin local (articole, poze, prețuri) <strong>nu</strong> ajung automat online — trebuie commise și trimise pe GitHub ca orice altă modificare de cod.</li>
+				<li>Adminul (<code>/admin</code> și <code>/api/admin</code>) e blocat cu 404 automat pe Netlify, prin <code>src/middleware.ts</code> — poți edita conținut doar local, niciodată direct pe site-ul live.</li>
+				<li>Site live: <a href="https://buildhubro.netlify.app" target="_blank" rel="noopener">buildhubro.netlify.app</a>. Verifică după fiecare deploy: pagina se încarcă, o pagină nouă de blog, formularul de contact.</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>Google / Bing — indexare și SEO</h3>
+			<ul>
+				<li><strong>Google Search Console</strong> — verifică indexarea, erorile de crawling și cuvintele cheie pentru care apari în căutări. Verificarea site-ului s-a făcut prin tag-ul meta din <code>&lt;head&gt;</code>.</li>
+				<li><strong>Bing Webmaster Tools</strong> — la fel ca Search Console, dar pentru motorul Bing/Copilot.</li>
+				<li><code>sitemap.xml</code> și <code>robots.txt</code> se generează automat la fiecare build (integrarea <code>@astrojs/sitemap</code>), excluzând <code>/admin</code> și <code>/api/</code>.</li>
+				<li>Indexarea nu e instantă — poate dura de la câteva zile la 2-3 săptămâni până apar paginile noi în rezultatele Google.</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>Conținut &amp; module admin</h3>
+			<ul>
+				<li><strong>Articole → Poză</strong>: coloană cu flag ✓/✗ + buton "Completează poze automat (Pexels)" pentru articolele fără imagine.</li>
+				<li><strong>Articole-FAQ</strong>: coloană cu flag ✓/✗ pentru articolele fără secțiune de întrebări frecvente.</li>
+				<li><strong>Articole → Fixat</strong>: articolele marcate "fixat" apar primele pe homepage (pinned).</li>
+				<li><strong>Header/Footer</strong>: textul de CTA de pe site ("Cere ofertă…") se editează din admin, nu direct în cod.</li>
+				<li>Cablul standard folosit peste tot în ofertele de instalații electrice este <strong>NYM-J</strong> — regulă fixată explicit, nu se schimbă fără cerere clară.</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>Chei &amp; secrete (.env)</h3>
+			<ul>
+				<li><code>ADMIN_PASSWORD</code> / <code>ADMIN_SESSION_SECRET</code> — autentificare admin (sesiune cu cookie semnat HMAC, 5 încercări/15 min apoi blocare).</li>
+				<li><code>PEXELS_API_KEY</code> — folosit pentru căutarea automată de imagini stock pe baza titlului articolului.</li>
+				<li><strong>Nu comite niciodată <code>.env</code> în git</strong> — conține parole și chei active.</li>
+			</ul>
+		</div>
+
+		<div class="sectiune">
+			<h3>De reținut / lecții din proiect</h3>
+			<ul>
+				<li>Salvarea unui articol (<code>saveArticol</code>) rescrie <strong>tot</strong> conținutul — nu există update parțial. Editează mereu din formularul complet, nu prin request-uri manuale cu conținut placeholder.</li>
+				<li>Datele nequotate în frontmatter (ex. <code>dataAdaugare: 2026-08-10</code> fără ghilimele) pot bloca tot build-ul — sistemul le scrie automat cu ghilimele, nu edita manual fișierele <code>.md</code> fără să respecți formatul.</li>
+				<li>Netlify Forms are nevoie de "Form detection" activat manual din dashboard-ul Netlify, altfel formularul de contact răspunde 404.</li>
+				<li>Verifică din când în când dacă site-ul e public pe Netlify (setarea "Netlify Access" poate restricționa accesul la 401 dacă a fost activată din greșeală).</li>
+			</ul>
+		</div>
+	</div>
+
+	<style is:global>
+		.ghid { margin-top: 2rem; max-width: 880px; }
+		.ghid h2 { font-size: 1.15rem; margin-bottom: 1rem; }
+		.sectiune { background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+		.sectiune h3 { font-size: 0.95rem; color: #93c5fd; margin: 0 0 0.6rem; }
+		.sectiune ul { margin: 0; padding-left: 1.1rem; }
+		.sectiune li { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.5rem; line-height: 1.5; }
+		.sectiune code { background: #1e293b; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.8rem; color: #fbbf24; }
+		.sectiune a { color: #93c5fd; }
+	</style>
 </AdminLayout>

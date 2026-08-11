@@ -141,7 +141,7 @@
       "raspuns": "Nu — fiecare proiect pornește cu o evaluare gratuită, fără obligații."
     },
     {
-      "intrebare": "Conținutul editorial de pe Electric NEWS vine din aceeași echipă care face lucrările?",
+      "intrebare": "Conținutul editorial de pe BuildHub.ro vine din aceeași echipă care face lucrările?",
       "raspuns": "Da — articolul spune explicit că nu publică nimic ce nu ar verifica și în lucrările efective pentru clienți."
     },
     {
@@ -391,7 +391,7 @@
       "raspuns": "Prezența certificării Matter, ca să nu rămâi blocat într-un ecosistem închis."
     },
     {
-      "intrebare": "De ce contează asta pentru cititorii Electric NEWS specific?",
+      "intrebare": "De ce contează asta pentru cititorii BuildHub.ro specific?",
       "raspuns": "Pentru că invertoarele fotovoltaice intră și ele în foaia de parcurs Matter, relevant pentru case cu panouri."
     }
   ],
@@ -1297,28 +1297,6 @@
       "raspuns": "A depășit 420 ppm, față de un interval natural istoric de 180-300 ppm, cu o viteză de zeci-sute de ori mai mare decât tranzițiile naturale documentate."
     }
   ],
-  "electrician-autorizat-cu-specializare-in-sisteme-fotovoltaice-teo": [
-    {
-      "intrebare": "Câți ani de experiență în domeniul electric are Teo Marcu?",
-      "raspuns": "Peste 20 de ani de experiență diversificată în electric."
-    },
-    {
-      "intrebare": "Ce certificare deține Teo Marcu și din ce an?",
-      "raspuns": "Certificat de Calificare Profesională pentru Electrician în Construcții, obținut în 2022."
-    },
-    {
-      "intrebare": "Ce tipuri de sisteme fotovoltaice proiectează și montează?",
-      "raspuns": "Atât sisteme conectate la rețea, cât și sisteme cu stocare pe baterii."
-    },
-    {
-      "intrebare": "Din ce an activează ca electrician autorizat freelance?",
-      "raspuns": "Din 2024, după ce anterior a lucrat ca electrician sisteme fotovoltaice la Smart Fotovoltaic Solutions (2022-2024)."
-    },
-    {
-      "intrebare": "Ce alte servicii oferă, pe lângă partea strict electrică?",
-      "raspuns": "Automatizare a locuinței (iluminat inteligent, prize și senzori conectați) și rețele/supraveghere video."
-    }
-  ],
   "otilia-nutu-romania-avea-nevoie-de-stocare-de-cinci-ori-mai-mare-ca-sa-evite-cri": [
     {
       "intrebare": "Ce procent din necesarul de vârf acoperă stocarea în România, față de Bulgaria?",
@@ -1859,6 +1837,1530 @@
     {
       "intrebare": "Ce e nevoie pentru un iaz decorativ funcțional pe termen lung?",
       "raspuns": "Adâncime corect calculată, folie PVC de impermeabilizare acoperită corespunzător, plus pompă de recirculare și menținerea nivelului de oxigen din apă."
+    }
+  ],
+  "pompa-de-caldura-vs-centrala-pe-gaz-ghid-comparativ-de-eficienta": [
+    {
+      "intrebare": "Ce e mai eficient: pompa de căldură sau centrala pe gaz?",
+      "raspuns": "Depinde de izolarea casei — pompa de căldură e mai eficientă pe termen lung, dar doar într-o casă bine izolată, cu radiatoare dimensionate corect sau încălzire în pardoseală."
+    },
+    {
+      "intrebare": "Ce înseamnă COP la o pompă de căldură?",
+      "raspuns": "Coeficientul de performanță — pentru fiecare kWh electric consumat, pompa produce 3-4,5 kWh termici, tipic."
+    },
+    {
+      "intrebare": "Merită o soluție hibridă, pompă de căldură plus centrală pe gaz?",
+      "raspuns": "Da, adesea — pompa ca sursă principală, centrala pe gaz ca rezervă pentru zilele foarte reci, dacă rețeaua de gaz e deja disponibilă."
+    }
+  ],
+  "tablouri-electrice-rezidentiale-protectii-moderne-si-organizare-circuite": [
+    {
+      "intrebare": "De ce contează separarea pe grupe la tabloul electric?",
+      "raspuns": "Pentru că un defect pe o singură grupă declanșează doar diferențialul acelei grupe, nu tot tabloul — restul casei rămâne cu curent."
+    },
+    {
+      "intrebare": "Ce aparate au nevoie de circuit dedicat?",
+      "raspuns": "Cuptor electric, plită, mașină de spălat, uscător, aer condiționat — fiecare pe propriul disjunctor, dimensionat corect."
+    },
+    {
+      "intrebare": "Ce este un SPD și când e recomandat?",
+      "raspuns": "Protecție la supratensiuni — recomandat mai ales la case cu echipamente electronice sensibile sau sistem fotovoltaic conectat la tablou."
+    }
+  ],
+  "managementul-apelor-si-reciclarea-apei-pluviale-sisteme-de-stocare-si-filtrare": [
+    {
+      "intrebare": "Pentru ce se poate folosi apa pluvială colectată?",
+      "raspuns": "Irigat grădina, spălat curtea sau mașina, iar cu filtrare suplimentară, chiar și rezervorul de toaletă."
+    },
+    {
+      "intrebare": "Cum se calculează câtă apă poți colecta?",
+      "raspuns": "Suprafața acoperișului (mp) × precipitații anuale (mm) × 0,8 (coeficient de pierderi) = litri colectabili anual."
+    },
+    {
+      "intrebare": "Ce echipamente sunt necesare pentru utilizare internă a apei pluviale?",
+      "raspuns": "Pompă dedicată, sistem de comutare automată către rețeaua publică când rezervorul e gol, și filtrare avansată, eventual UV."
+    }
+  ],
+  "zigbee-vs-z-wave-vs-matter-vs-knx-ce-protocol-smart-home-alegi": [
+    {
+      "intrebare": "Care e cel mai răspândit protocol smart home?",
+      "raspuns": "Zigbee — cea mai mare varietate de produse, prețuri accesibile, dar cu istoricul de fragmentare între ecosisteme."
+    },
+    {
+      "intrebare": "Ce rezolvă Matter?",
+      "raspuns": "Compatibilitatea dintre ecosisteme diferite — nu e un protocol radio propriu, ci un limbaj comun peste Zigbee, WiFi și Thread."
+    },
+    {
+      "intrebare": "Când merită KNX în locul soluțiilor wireless?",
+      "raspuns": "La case noi sau renovări complete, unde cablarea dedicată nu mai e un obstacol — oferă fiabilitate maximă, fără interferențe radio."
+    }
+  ],
+  "iluminat-inteligent-si-scenarii-de-lumina-senzori-de-prezenta-si-dimming": [
+    {
+      "intrebare": "Ce diferență face un senzor de prezență de calitate?",
+      "raspuns": "Distinge mișcarea reală de zgomot termic, evitând aprinderile/stingerile false pe care le au senzorii ieftini."
+    },
+    {
+      "intrebare": "De ce contează dimming-ul, nu doar aprins/stins?",
+      "raspuns": "Oferă confort (lumină caldă seara) și eficiență reală — LED-urile consumă proporțional mai puțin la intensitate redusă."
+    },
+    {
+      "intrebare": "Ce e un scenariu de lumină?",
+      "raspuns": "O comandă care leagă mai multe circuite simultan (ex: „Seară”) — se folosește zilnic, spre deosebire de controlul manual cameră cu cameră."
+    }
+  ],
+  "securitate-si-control-acces-sisteme-ip-si-interfoane-inteligente": [
+    {
+      "intrebare": "Ce avantaj au camerele IP față de cele analogice?",
+      "raspuns": "Rezoluție mult mai bună (2-4K), acces remote direct din aplicație și integrare cu restul casei smart, fără echipamente de conversie."
+    },
+    {
+      "intrebare": "De ce contează detectarea inteligentă (AI) la camere?",
+      "raspuns": "Distinge o persoană de o umbră sau un animal, reducând drastic alertele false care fac utilizatorii să dezactiveze notificările."
+    },
+    {
+      "intrebare": "Ce oferă un sistem de control acces față de cheile clasice?",
+      "raspuns": "Posibilitatea de a revoca acces individual, instant, fără să schimbi yala — util la case cu mai mulți utilizatori sau chirie."
+    }
+  ],
+  "lifepo4-vs-nmc-ghid-de-alegere-a-acumulatorilor-pentru-prosumatori": [
+    {
+      "intrebare": "De ce e LiFePO4 mai sigur decât NMC?",
+      "raspuns": "Chimia e mult mai stabilă termic, cu risc extrem de redus de reacție în lanț (thermal runaway), comparativ cu NMC."
+    },
+    {
+      "intrebare": "Câte cicluri de viață are o baterie LiFePO4?",
+      "raspuns": "Tipic 6.000-10.000 de cicluri la 80% capacitate rămasă, față de 2.000-4.000 la NMC."
+    },
+    {
+      "intrebare": "Ce avantaj real mai are NMC?",
+      "raspuns": "Densitate energetică mai mare — stochează mai multă energie în același volum, relevant mai ales pentru vehicule electrice, nu baterii fixe casnice."
+    }
+  ],
+  "invertor-on-grid-vs-hibrid-vs-off-grid-cum-dimensionezi-sistemul-solar": [
+    {
+      "intrebare": "Ce se întâmplă cu un invertor on-grid la o pană de curent?",
+      "raspuns": "Sistemul se oprește automat, din motive de siguranță pentru echipa care intervine pe rețea — nu oferă backup."
+    },
+    {
+      "intrebare": "Ce diferențiază invertorul hibrid de cel on-grid?",
+      "raspuns": "Poate conecta o baterie de stocare și, configurat corect, poate alimenta consumatori critici la o pană de curent."
+    },
+    {
+      "intrebare": "Când are sens un sistem off-grid?",
+      "raspuns": "Doar acolo unde nu există racordare la rețea (cabane izolate, terenuri fără branșament) sau unde autonomia totală e obiectivul explicit."
+    }
+  ],
+  "panouri-n-type-topcon-si-hjt-eficienta-si-comportament-la-umbrire": [
+    {
+      "intrebare": "Ce eficiență au panourile TopCon?",
+      "raspuns": "Tipic 22-23%, cu degradare anuală mai redusă decât panourile P-Type clasice."
+    },
+    {
+      "intrebare": "Cu cât e mai eficient HJT față de TopCon?",
+      "raspuns": "Poate ajunge la 24-25% eficiență, cu coeficient de temperatură mai bun, dar costă 10-20% mai mult."
+    },
+    {
+      "intrebare": "Ce rezolvă optimizatoarele de putere la umbrire parțială?",
+      "raspuns": "Fără ele, o umbră pe un singur panou poate reduce producția întregului string conectat în serie."
+    }
+  ],
+  "autorizatia-de-construire-documente-avize-si-etape-administrative": [
+    {
+      "intrebare": "Ce e certificatul de urbanism?",
+      "raspuns": "Primul document, eliberat de primărie — stabilește ce se poate construi pe teren și lista de avize necesare."
+    },
+    {
+      "intrebare": "Care e termenul legal de răspuns pentru autorizația de construire?",
+      "raspuns": "30 de zile de la depunerea dosarului complet, dar în practică poate dura mai mult dacă sunt necesare completări."
+    },
+    {
+      "intrebare": "Ce riscă cine construiește fără autorizație?",
+      "raspuns": "Amenzi și, în cazuri grave, obligația de a demola construcția neautorizată."
+    }
+  ],
+  "noile-reglementari-anre-pentru-prosumatori-racordare-si-compensare": [
+    {
+      "intrebare": "De ce a crescut garanția de racordare de la 5% la 20%?",
+      "raspuns": "Ca să descurajeze solicitările speculative de racordare care blochează capacitate în rețea fără finalizarea proiectelor."
+    },
+    {
+      "intrebare": "Ce schimbă compensarea lunară față de cea cantitativă?",
+      "raspuns": "Energia produsă ziua dar consumată seara nu se mai compensează 1:1 — se plătește/încasează la prețuri diferite, ceea ce face stocarea mai avantajoasă."
+    },
+    {
+      "intrebare": "De ce ar trebui gândit sistemul solar dincolo de regulile actuale de compensare?",
+      "raspuns": "Pentru că regulile continuă să evolueze spre valorizarea autoconsumului și stocării, nu a injectării maxime în rețea."
+    }
+  ],
+  "normativul-nzeb-si-certificatul-energetic-cerinte-minime-de-izolare": [
+    {
+      "intrebare": "Ce înseamnă nZEB pentru o construcție nouă?",
+      "raspuns": "Consum energetic „aproape zero”, acoperit în cea mai mare parte din surse regenerabile amplasate pe sau lângă clădire."
+    },
+    {
+      "intrebare": "Cine emite certificatul energetic?",
+      "raspuns": "Un auditor energetic autorizat — document obligatoriu la recepția construcțiilor noi și la vânzarea/închirierea oricărei locuințe."
+    },
+    {
+      "intrebare": "Cu cât crește costul construcției din cauza cerințelor nZEB?",
+      "raspuns": "Tipic 10-20% față de o construcție clasică, dar reduce semnificativ costurile de operare pe termen lung."
+    }
+  ],
+  "arhitectura-bioclimatica-orientare-solara-si-eficienta-energetica": [
+    {
+      "intrebare": "De ce contează orientarea spre sud în arhitectura bioclimatică?",
+      "raspuns": "Captează maximul de lumină și căldură iarna, iar cu o streașină bine dimensionată, blochează soarele direct vara."
+    },
+    {
+      "intrebare": "Ce e masa termică și de ce ajută?",
+      "raspuns": "Materiale precum betonul sau piatra, care acumulează și eliberează căldură lent, amortizând variațiile de temperatură din timpul zilei."
+    },
+    {
+      "intrebare": "Cu cât poate reduce arhitectura bioclimatică necesarul energetic?",
+      "raspuns": "Cu 20-40% față de o construcție identică, dar prost orientată și fără gândire bioclimatică."
+    }
+  ],
+  "case-modulare-si-precomprimate-avantaje-executie-si-durabilitate": [
+    {
+      "intrebare": "Care e principalul avantaj al caselor modulare?",
+      "raspuns": "Controlul calității — producția în hală, la condiții controlate, elimină multe probleme generate de vreme pe șantier tradițional."
+    },
+    {
+      "intrebare": "Ce oferă structurile precomprimate în plus față de betonul turnat clasic?",
+      "raspuns": "Deschideri mai mari fără stâlpi intermediari și rezistență structurală superioară."
+    },
+    {
+      "intrebare": "Cu cât se reduce timpul de construcție cu soluții modulare/precomprimate?",
+      "raspuns": "Între 40-60% față de construcția clasică, de la teren gol la casă locuibilă."
+    }
+  ],
+  "bim-building-information-modeling-proiectare-3d-integrata": [
+    {
+      "intrebare": "Ce face BIM diferit de proiectarea 2D clasică?",
+      "raspuns": "Construiește un singur model digital integrat, unde fiecare element există o singură dată, vizibil simultan din toate disciplinele (arhitectură, structură, instalații)."
+    },
+    {
+      "intrebare": "Ce e detectarea coliziunilor în BIM?",
+      "raspuns": "Softul semnalează în faza de proiectare conflicte precum o conductă ce traversează o grindă structurală — înainte să devină problemă pe șantier."
+    },
+    {
+      "intrebare": "Merită BIM pentru o casă unifamilială?",
+      "raspuns": "Da — cuantificare precisă a materialelor, vizualizare realistă înainte de execuție și coordonare mai bună între arhitect, inginer și instalator."
+    }
+  ],
+  "panouri-clt-vs-zidarie-clasica-ce-alegi-pentru-structura-casei": [
+    {
+      "intrebare": "Cu cât mai rapidă e execuția CLT față de zidărie?",
+      "raspuns": "O casă CLT poate ajunge „la roșu” în 1-2 săptămâni, față de câteva luni pentru zidărie ridicată clasic."
+    },
+    {
+      "intrebare": "Ce avantaj termic are zidăria față de CLT?",
+      "raspuns": "Masa termică — cărămida acumulează căldura și o eliberează lent, stabilizând temperatura interioară, lucru absent la structura din lemn."
+    },
+    {
+      "intrebare": "Care structură e mai flexibilă pentru modificări ulterioare?",
+      "raspuns": "Zidăria — o structură CLT e mult mai rigidă odată finalizată."
+    }
+  ],
+  "hidroizolatia-fundatiei-solutii-impotriva-infiltratiilor": [
+    {
+      "intrebare": "Care e cel mai vulnerabil punct la hidroizolația fundației?",
+      "raspuns": "Rostul de turnare — necesită bandă hidroizolantă dedicată (waterstop), montată înainte de turnarea betonului."
+    },
+    {
+      "intrebare": "De ce e important drenajul perimetral?",
+      "raspuns": "Colectează și evacuează apa înainte să ajungă la presiune asupra hidroizolației — fără el, chiar și o hidroizolație bună poate ceda."
+    },
+    {
+      "intrebare": "Când se recomandă membrane sintetice în locul celor bituminoase?",
+      "raspuns": "Pe terenuri cu apă freatică ridicată sau presiune hidrostatică semnificativă."
+    }
+  ],
+  "spuma-poliuretanica-vs-vata-bazaltica-rezistenta-termica-si-vapori": [
+    {
+      "intrebare": "De ce e mai bună spuma poliuretanică pe grosime redusă?",
+      "raspuns": "Are conductivitate termică semnificativ mai mică (0,022-0,028 W/mK) — aceeași rezistență termică cu grosime mai mică."
+    },
+    {
+      "intrebare": "De ce e vata bazaltică preferată pentru anvelopa termică generală?",
+      "raspuns": "E permeabilă la vapori de apă (respiră) și incombustibilă (clasă A1), spre deosebire de spuma poliuretanică."
+    },
+    {
+      "intrebare": "Ce risc apare dacă spuma poliuretanică e aplicată greșit?",
+      "raspuns": "Poate bloca vaporii de apă dacă nu e proiectată corect o barieră de vapori, cu risc de condens ascuns în structură."
+    }
+  ],
+  "finisaje-microciment-si-rasina-epoxidica-pardoseli-fara-rosturi": [
+    {
+      "intrebare": "Ce avantaj are microcimentul la renovări?",
+      "raspuns": "Se aplică peste suprafața existentă, fără demolare — grosime de doar 2-3mm."
+    },
+    {
+      "intrebare": "Când se recomandă rășina epoxidică în locul microcimentului?",
+      "raspuns": "În garaje, spații industriale sau bucătării, unde rezistența la pete și substanțe chimice contează."
+    },
+    {
+      "intrebare": "De ce sunt pardoselile fără rosturi mai igienice?",
+      "raspuns": "Fără rosturi nu există loc pentru acumularea murdăriei sau a mucegaiului."
+    }
+  ],
+  "mobilier-custom-si-ergonomie-planificarea-bucatariei-si-spatiilor": [
+    {
+      "intrebare": "Ce e „triunghiul de lucru” la o bucătărie?",
+      "raspuns": "Distanța dintre frigider, plită și chiuvetă, optimizată ca să nu fie nici prea mică, nici prea mare."
+    },
+    {
+      "intrebare": "De ce ar trebui ajustată înălțimea blatului de lucru?",
+      "raspuns": "În funcție de înălțimea utilizatorului principal, nu fixată generic la 85-90cm ca la mobilierul de serie."
+    },
+    {
+      "intrebare": "Merită mobilierul custom față de cel standard?",
+      "raspuns": "Pentru utilizarea optimă a spațiului real și ergonomie adaptată — la un cost semnificativ mai mare, dar cu durabilitate superioară dacă execuția e serioasă."
+    }
+  ],
+  "design-biophilic-elemente-naturale-lemn-si-plante-in-interior": [
+    {
+      "intrebare": "Ce e design-ul biophilic?",
+      "raspuns": "O abordare care integrează elemente naturale (lemn, plante, lumină naturală, apă) pentru a reduce stresul și crește bunăstarea percepută într-un spațiu."
+    },
+    {
+      "intrebare": "Care e cel mai ieftin element biophilic de implementat?",
+      "raspuns": "Lumina naturală, maximizată prin rearanjarea mobilierului, fără costuri suplimentare."
+    },
+    {
+      "intrebare": "Costă mai mult design-ul biophilic?",
+      "raspuns": "Nu neapărat — înseamnă prioritizarea materialelor naturale în locul suprafețelor sintetice ieftine, adesea la preț comparabil."
+    }
+  ],
+  "sisteme-de-irigatie-automatizate-presiune-zonificare-si-senzori": [
+    {
+      "intrebare": "De ce e importantă zonificarea la irigație?",
+      "raspuns": "Fiecare zonă (gazon, arbuști, legume) are cerințe diferite de udare — un circuit comun ar fi un compromis prost pentru toate plantele."
+    },
+    {
+      "intrebare": "Ce fac senzorii de umiditate a solului?",
+      "raspuns": "Sar udarea programată dacă solul e deja umed, economisind apă real, nu doar teoretic."
+    },
+    {
+      "intrebare": "Ce oferă în plus un programator conectat la aplicație?",
+      "raspuns": "Ajustare de la distanță și, la modelele avansate, sincronizare cu prognoza meteo locală."
+    }
+  ],
+  "amenajarea-teraselor-decking-wpc-vs-lemn-termotratat": [
+    {
+      "intrebare": "Ce avantaj are decking-ul WPC față de lemnul termotratat?",
+      "raspuns": "Rezistă natural la umezeală, insecte și putrezire, fără vopsire sau tratare periodică."
+    },
+    {
+      "intrebare": "Ce dezavantaj are WPC-ul vara?",
+      "raspuns": "Temperatura la suprafață poate crește semnificativ sub soare direct, mai mult decât lemnul natural."
+    },
+    {
+      "intrebare": "Cât de des trebuie tratat lemnul termotratat?",
+      "raspuns": "Cu ulei sau lac de protecție, o dată la 1-2 ani, pentru a menține aspectul și protecția."
+    }
+  ],
+  "iluminat-peisagistic-la-12v-24v-siguranta-si-punere-in-valoare-led": [
+    {
+      "intrebare": "De ce e mai sigur iluminatul peisagistic la 12V/24V?",
+      "raspuns": "Riscul de electrocutare în condiții de umezeală e practic eliminat, spre deosebire de instalațiile la 230V."
+    },
+    {
+      "intrebare": "Poate fi extins sistemul fără electrician autorizat?",
+      "raspuns": "Da, la tensiune joasă modificarea sau extinderea se poate face cu unelte de bază, fără intervenția unui electrician autorizat."
+    },
+    {
+      "intrebare": "Ce face un transformator central în sistemul de iluminat peisagistic?",
+      "raspuns": "Coboară tensiunea de la 230V la 12V/24V și alimentează întregul sistem prin cabluri îngropate superficial."
+    }
+  ],
+  "cat-costa-o-instalatie-electrica-cap-coada-la-o-casa-de-100-150-mp-in-2026-materiale-manop": [
+    {
+      "intrebare": "Cât durează o instalație electrică completă la o casă de 120 mp?",
+      "raspuns": "În mod normal 5-8 zile lucrătoare, în funcție de complexitate și numărul de electricieni pe șantier."
+    },
+    {
+      "intrebare": "Ce tip de cablu se folosește la instalațiile electrice fixe?",
+      "raspuns": "NYM-J is a standard fixed-installation electric cable with copper conductors, standardul folosit în prezent pentru instalațiile fixe rezidențiale."
+    },
+    {
+      "intrebare": "Se poate face instalația electrică fără proiect?",
+      "raspuns": "La case unifamiliale se poate lucra după o schemă simplificată, dar un proiect electric întocmit de un inginer reduce riscul de erori și e recomandat pentru siguranță."
+    },
+    {
+      "intrebare": "Merită să investesc în prize și întrerupătoare premium?",
+      "raspuns": "Da, pe termen lung — diferența de preț e mică raportat la total, dar durabilitatea și siguranța contactelor electrice sunt superioare."
+    }
+  ],
+  "care-sunt-costurile-pentru-racordarea-la-reteaua-trifazata-si-extinderi-de-retea": [
+    {
+      "intrebare": "Cât timp durează racordarea la rețeaua trifazată?",
+      "raspuns": "De regulă între 3 și 6 luni, în funcție de avize și de programarea operatorului local de distribuție."
+    },
+    {
+      "intrebare": "Ce diferență de cost este între extinderea aeriană și cea subterană?",
+      "raspuns": "Extinderea subterană este semnificativ mai scumpă decât cea aeriană, din cauza săpăturilor și a protecțiilor suplimentare pentru cablu."
+    },
+    {
+      "intrebare": "Este obligatoriu curentul trifazat pentru o casă nouă?",
+      "raspuns": "Nu întotdeauna — depinde de consumul planificat; multe case cu consum moderat funcționează bine pe monofazat."
+    },
+    {
+      "intrebare": "Cine plătește tabloul de branșament și contorul?",
+      "raspuns": "De obicei proprietarul, dacă nu sunt incluse explicit în oferta operatorului de distribuție."
+    }
+  ],
+  "cat-costa-o-pompa-de-caldura-aer-apa-vs-centrala-pe-gaz-investitie-initiala-vs-amortizare": [
+    {
+      "intrebare": "În câți ani se amortizează o pompă de căldură față de o centrală pe gaz?",
+      "raspuns": "În medie 5-8 ani, în funcție de izolația casei și de prețurile locale la energie electrică și gaz."
+    },
+    {
+      "intrebare": "Funcționează pompa de căldură eficient iarna, la temperaturi foarte scăzute?",
+      "raspuns": "Da, modelele moderne funcționează eficient până la -15/-20°C, deși eficiența scade ușor la temperaturi extreme."
+    },
+    {
+      "intrebare": "Se poate combina pompa de căldură cu panouri fotovoltaice?",
+      "raspuns": "Da, este una dintre cele mai eficiente combinații — energia solară acoperă o parte din consumul electric al pompei, reducând suplimentar costurile."
+    },
+    {
+      "intrebare": "Ce sistem de încălzire e recomandat cu o pompă de căldură?",
+      "raspuns": "Încălzirea prin pardoseală, pentru că funcționează la temperaturi joase ale agentului termic, exact regimul în care pompa de căldură e cea mai eficientă."
+    }
+  ],
+  "care-sunt-costurile-reale-pentru-automatizarea-completa-a-unei-case-sisteme-cablate-vs-wir": [
+    {
+      "intrebare": "Ce e mai fiabil pe termen lung — sistemul cablat sau wireless?",
+      "raspuns": "Sistemul cablat, de tip KNX sau Loxone, are o durată de viață mai mare și nu depinde de rețeaua Wi-Fi pentru funcțiile esențiale."
+    },
+    {
+      "intrebare": "Se poate automatiza o casă deja finisată?",
+      "raspuns": "Da, prin soluții wireless (Zigbee, Z-Wave, Wi-Fi), care nu necesită cablare suplimentară în pereți."
+    },
+    {
+      "intrebare": "Când trebuie decis tipul de automatizare în procesul de construcție?",
+      "raspuns": "Ideal din faza de proiect electric, pentru ca sistemele cablate să poată fi integrate înainte de tencuire și finisaje."
+    },
+    {
+      "intrebare": "Merită automatizarea completă la o casă mică?",
+      "raspuns": "De multe ori un pachet parțial (iluminat + climă + acces) oferă cel mai bun raport cost-beneficiu, fără a justifica investiția într-un sistem complet."
+    }
+  ],
+  "cat-te-costa-un-sistem-de-supraveghere-ip-control-acces-si-alarma-smart-in-2026": [
+    {
+      "intrebare": "E nevoie de abonament lunar pentru un sistem de alarmă smart?",
+      "raspuns": "Nu obligatoriu — poți primi notificări direct pe telefon fără costuri lunare, dar monitorizarea profesională necesită abonament."
+    },
+    {
+      "intrebare": "Ce diferență e între camerele de 4MP și 8MP?",
+      "raspuns": "Rezoluția de 8MP oferă detalii mult mai clare la zoom, utile pentru identificarea plăcuțelor de înmatriculare sau a fețelor la distanță."
+    },
+    {
+      "intrebare": "Se pot integra camerele, alarma și interfonul într-o singură aplicație?",
+      "raspuns": "Da, majoritatea producătorilor moderni oferă ecosisteme compatibile, dar e recomandat să alegi de la început aceeași marcă sau un sistem certificat compatibil."
+    },
+    {
+      "intrebare": "Cât costă cablarea PoE pentru camere IP?",
+      "raspuns": "În medie 150-300 lei per cameră, în funcție de distanța de cablare și de complexitatea traseului."
+    }
+  ],
+  "costuri-de-integrare-pentru-scenarii-de-iluminat-inteligent-si-climatizare-zonata": [
+    {
+      "intrebare": "Ce este climatizarea zonată?",
+      "raspuns": "Împărțirea casei în zone termice independente, fiecare cu propriul termostat, pentru confort personalizat și economie de energie."
+    },
+    {
+      "intrebare": "Este scump un sistem de iluminat inteligent cablat față de unul wireless?",
+      "raspuns": "Da, de câteva ori mai scump per punct, dar oferă fiabilitate și control mult superioare pe termen lung."
+    },
+    {
+      "intrebare": "Ce rol are unitatea centrală de automatizare?",
+      "raspuns": "Coordonează toate subsistemele (iluminat, climă, acces) pentru a rula scenarii complexe, precum „plecare de acasă” sau „bun venit”."
+    },
+    {
+      "intrebare": "Se poate adăuga climatizarea zonată ulterior, după finalizarea casei?",
+      "raspuns": "Este posibil, dar mult mai costisitor și mai invaziv decât integrarea din faza de proiect, mai ales pentru încălzirea prin pardoseală."
+    }
+  ],
+  "cat-costa-un-sistem-fotovoltaic-hibrid-de-5kw-10kw-cu-stocare-in-baterii-lifepo4-in-2026": [
+    {
+      "intrebare": "Ce diferență e între un sistem fotovoltaic on-grid și unul hibrid?",
+      "raspuns": "Sistemul on-grid injectează excesul de energie direct în rețea, fără stocare; cel hibrid stochează energia într-o baterie pentru folosire ulterioară, inclusiv la pană de curent."
+    },
+    {
+      "intrebare": "De ce sunt preferate bateriile LiFePO4?",
+      "raspuns": "Pentru siguranță superioară și durată de viață mare — peste 6.000 de cicluri, echivalent a 15-20 de ani de utilizare."
+    },
+    {
+      "intrebare": "Cât durează amortizarea unui sistem hibrid de 5kW?",
+      "raspuns": "În medie 6-10 ani, în funcție de consumul propriu, prețul energiei și eventualele subvenții accesate."
+    },
+    {
+      "intrebare": "Poate un sistem hibrid funcționa complet independent de rețea?",
+      "raspuns": "Tehnic da, dar majoritatea instalațiilor rezidențiale rămân conectate la rețea pentru siguranță suplimentară."
+    }
+  ],
+  "care-sunt-costurile-de-pregatire-a-tabloului-si-acoperisului-pentru-instalarea-panourilor": [
+    {
+      "intrebare": "Trebuie schimbat tabloul electric pentru un sistem fotovoltaic?",
+      "raspuns": "De obicei nu integral, dar e nevoie de un tablou dedicat suplimentar cu protecțiile specifice sistemului DC/AC."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă acoperișul e vechi?",
+      "raspuns": "Se recomandă renovarea parțială înainte de montarea panourilor, pentru a evita demontarea lor peste câțiva ani."
+    },
+    {
+      "intrebare": "Ce unghi de acoperiș este optim pentru panouri solare?",
+      "raspuns": "O pantă sudică de 30-35° oferă randamentul optim în România; orientările est-vest sunt și ele viabile, dar cu producție ușor redusă."
+    },
+    {
+      "intrebare": "Cât cântărește un sistem fotovoltaic pe metru pătrat de acoperiș?",
+      "raspuns": "Aproximativ 15-20 kg/mp, incluzând panourile și structura de montaj."
+    }
+  ],
+  "cat-te-costa-un-acumulator-suplimentar-de-stocare-rezidentiala-si-care-este-durata-de-amor": [
+    {
+      "intrebare": "Merită să adaug o baterie la un sistem fotovoltaic deja instalat?",
+      "raspuns": "Da, dacă invertorul existent e compatibil — amortizarea se face de obicei în 5-9 ani, plus avantajul de siguranță la pene de curent."
+    },
+    {
+      "intrebare": "Cât durează garanția unei baterii LiFePO4 rezidențiale?",
+      "raspuns": "În general 10-15 ani, standard pentru bateriile de calitate din 2026."
+    },
+    {
+      "intrebare": "Poate o baterie de stocare alimenta casa la pană de curent?",
+      "raspuns": "Da, dacă invertorul are funcție de backup — durata depinde de capacitatea bateriei și de consumul curent."
+    },
+    {
+      "intrebare": "Sunt compatibile toate bateriile cu toate invertoarele?",
+      "raspuns": "Nu — compatibilitatea trebuie verificată înainte de achiziție, altfel poate fi necesară și schimbarea invertorului."
+    }
+  ],
+  "cat-costa-obtinerea-autorizatiei-de-construire-taxe-locale-avize-studiu-geotehnic-topo": [
+    {
+      "intrebare": "Cât costă studiul geotehnic obligatoriu?",
+      "raspuns": "Între 2.000 și 4.500 lei, în funcție de complexitatea terenului și numărul de foraje necesare."
+    },
+    {
+      "intrebare": "Cât durează obținerea Autorizației de Construire?",
+      "raspuns": "De regulă între 2 și 6 luni, în funcție de complexitatea proiectului și viteza instituțiilor implicate."
+    },
+    {
+      "intrebare": "Cum se calculează taxa locală pentru autorizație?",
+      "raspuns": "Procentual din valoarea de proiect a construcției, de obicei 0,5-1%, în funcție de reglementările locale."
+    },
+    {
+      "intrebare": "Ce avize sunt de obicei obligatorii?",
+      "raspuns": "Avizele de la furnizorii de utilități (electricitate, apă-canal, gaz) și, în funcție de zonă, avize de mediu."
+    }
+  ],
+  "care-sunt-costurile-administrative-si-taxele-comasate-prin-noul-cod-al-urbanismului-catuc": [
+    {
+      "intrebare": "Ce este CATUC?",
+      "raspuns": "Codul Amenajării Teritoriului, Urbanismului și Construcțiilor, care comasează și digitalizează procesele de avizare a construcțiilor în România."
+    },
+    {
+      "intrebare": "Reduce CATUC costurile taxelor de autorizare?",
+      "raspuns": "Nu elimină taxele, dar reduce costurile administrative indirecte prin digitalizarea și unificarea proceselor."
+    },
+    {
+      "intrebare": "Se aplică CATUC uniform în toate primăriile?",
+      "raspuns": "Implementarea variază de la o localitate la alta, mai ales în perioada de tranziție de la vechiul sistem."
+    },
+    {
+      "intrebare": "Ce ar trebui să verifice un proprietar înainte de a depune documentația?",
+      "raspuns": "Stadiul de implementare a CATUC la primăria locală și dacă se acceptă depunere digitală, fizică sau mixtă."
+    }
+  ],
+  "cat-costa-certificatul-energetic-si-auditul-nzeb-obligatoriu-la-receptia-casei": [
+    {
+      "intrebare": "Este obligatoriu certificatul energetic pentru o casă nouă?",
+      "raspuns": "Da, este obligatoriu pentru recepția finală a construcției și pentru înscrierea legală a locuinței."
+    },
+    {
+      "intrebare": "Ce diferență este între certificatul energetic și auditul nZEB?",
+      "raspuns": "Certificatul energetic atribuie o clasă de eficiență (A+ la G), iar auditul nZEB verifică dacă edificiul respectă cerințele minime pentru clădiri noi."
+    },
+    {
+      "intrebare": "Cine poate întocmi aceste documente?",
+      "raspuns": "Doar auditori energetici autorizați, înscriși în registrul specialiștilor recunoscuți de autoritățile competente."
+    },
+    {
+      "intrebare": "Ajută izolația bună la obținerea unui certificat energetic mai bun?",
+      "raspuns": "Da, izolația termică superioară, pompele de căldură și panourile fotovoltaice îmbunătățesc semnificativ clasificarea energetică."
+    }
+  ],
+  "cat-costa-proiectul-de-arhitectura-structura-si-instalatii-dtac-pth-per-metru-patrat": [
+    {
+      "intrebare": "Ce diferență e între DTAC și PTH?",
+      "raspuns": "DTAC-ul e documentația necesară pentru autorizația de construire, iar PTH-ul e proiectul tehnic detaliat, necesar efectiv pentru execuția pe șantier."
+    },
+    {
+      "intrebare": "Cât costă documentația completă pentru o casă de 150 mp?",
+      "raspuns": "Aproximativ 6.000-11.000 lei, incluzând DTAC și PTH pentru toate specialitățile (arhitectură, structură, instalații)."
+    },
+    {
+      "intrebare": "De ce crește costul proiectului pe teren dificil?",
+      "raspuns": "Terenurile cu pantă, sol slab sau risc seismic ridicat necesită calcule de structură mai complexe și soluții constructive suplimentare."
+    },
+    {
+      "intrebare": "Include prețul „la cheie” documentația tehnică?",
+      "raspuns": "De obicei da, firmele de execuție care oferă case „la cheie” includ DTAC și PTH în pachetul de bază."
+    }
+  ],
+  "care-sunt-costurile-pentru-o-casa-nzeb-comparativ-cu-o-constructie-standard-in-2026": [
+    {
+      "intrebare": "Este obligatoriu standardul nZEB pentru casele noi?",
+      "raspuns": "Da, standardul nZEB este obligatoriu pentru toate clădirile noi din Uniunea Europeană, inclusiv România."
+    },
+    {
+      "intrebare": "Cu cât e mai scumpă o casă nZEB față de una standard?",
+      "raspuns": "În medie cu 8-15% din valoarea totală a construcției, în funcție de nivelul de izolație și de sistemele alese."
+    },
+    {
+      "intrebare": "Cât se reduc facturile de energie la o casă nZEB?",
+      "raspuns": "Costurile de încălzire/răcire pot fi cu 60-80% mai mici decât la o construcție standard din generația anterioară de reglementări."
+    },
+    {
+      "intrebare": "Ce elemente definesc o casă nZEB?",
+      "raspuns": "Izolație termică superioară, tâmplărie performantă, ventilație cu recuperare de căldură și, de multe ori, surse regenerabile de energie."
+    }
+  ],
+  "cat-costa-randarile-3d-si-studiile-de-fezabilitate-pentru-o-locuinta-individuala": [
+    {
+      "intrebare": "Cât costă un set de randări 3D pentru exteriorul unei case?",
+      "raspuns": "Între 1.500 și 4.000 lei, în funcție de complexitatea volumetriei și de numărul de variante dorite."
+    },
+    {
+      "intrebare": "Ce verifică un studiu de fezabilitate?",
+      "raspuns": "Dacă proiectul dorit poate fi realizat pe terenul respectiv, respectând regulamentul local de urbanism (POT, CUT, retrageri, înălțime maximă)."
+    },
+    {
+      "intrebare": "Sunt incluse randările 3D în proiectul complet de arhitectură?",
+      "raspuns": "De multe ori da, birourile de arhitectură le includ în pachetul DTAC + PTH, dar pot fi comandate și separat."
+    },
+    {
+      "intrebare": "Merită un studiu de fezabilitate înainte de proiectul complet?",
+      "raspuns": "Da, pentru a evita cheltuieli pe un concept care nu respectă regulamentul de urbanism al terenului."
+    }
+  ],
+  "cat-costa-constructia-unei-case-la-rosu-vs-la-cheie-pe-metru-patrat-construit-in-2026": [
+    {
+      "intrebare": "Ce include o casă „la roșu”?",
+      "raspuns": "Fundație, structură, zidărie, acoperiș și tâmplărie exterioară montată, dar fără instalații interioare sau finisaje."
+    },
+    {
+      "intrebare": "Cât costă o casă „la cheie” pe metru pătrat?",
+      "raspuns": "Între 3.500 și 5.500 lei/mp în 2026, în funcție de nivelul de finisaje ales."
+    },
+    {
+      "intrebare": "Este mai ieftin să construiești „la roșu” și să finisezi ulterior?",
+      "raspuns": "Poate fi mai ieftin pe total, dar necesită coordonare proprie a mai multor echipe și mai mult timp pentru finalizare."
+    },
+    {
+      "intrebare": "De ce costă mai mult construcția „la cheie” prin firmă generală?",
+      "raspuns": "Din cauza marjei de profit a firmei contractante generale, care preia responsabilitatea coordonării complete a proiectului."
+    }
+  ],
+  "care-sunt-costurile-pentru-turnarea-fundatiei-si-hidroizolatia-la-cota-zero": [
+    {
+      "intrebare": "Ce diferență e între fundația continuă și radierul general?",
+      "raspuns": "Fundația continuă (talpă) e potrivită pentru terenuri stabile, iar radierul general se folosește pe terenuri slabe sau cu nivel freatic ridicat, fiind mai scump cu 30-50%."
+    },
+    {
+      "intrebare": "Cât costă hidroizolația la cota zero?",
+      "raspuns": "Aproximativ 30-60 lei/mp, în funcție de sistemul ales — membrane bituminoase, PVC sau hidroizolații lichide."
+    },
+    {
+      "intrebare": "De ce e importantă calitatea execuției la hidroizolație?",
+      "raspuns": "Detaliile de racordare neglijate (colțuri, treceri de instalații) pot ceda în câțiva ani și provoca igrasie, cu costuri de remediere mult mai mari."
+    },
+    {
+      "intrebare": "Când e recomandat un studiu geotehnic detaliat?",
+      "raspuns": "Pentru terenuri cu nivel freatic ridicat sau risc de infiltrații, unde tipul de fundație trebuie ales cu grijă."
+    }
+  ],
+  "cat-te-costa-izolarea-termica-a-fatadei-si-mansardei-cu-materiale-de-inalta-performanta": [
+    {
+      "intrebare": "Care e diferența dintre polistiren și vată minerală bazaltică?",
+      "raspuns": "Vata minerală bazaltică are rezistență mai bună la foc și fonoizolație superioară, dar costă cu 30-40% mai mult decât polistirenul expandat."
+    },
+    {
+      "intrebare": "De ce e importantă izolarea mansardei?",
+      "raspuns": "Prin acoperiș se pierde o parte semnificativă din căldura unei case neizolate corect, chiar dacă fațada e bine izolată."
+    },
+    {
+      "intrebare": "Ce sunt punțile termice?",
+      "raspuns": "Zone unde structura clădirii (grinzi, stâlpi, colțuri) creează discontinuități în izolație, prin care se pierde căldură disproporționat față de restul fațadei."
+    },
+    {
+      "intrebare": "Cât costă izolarea completă a unei case de 150 mp?",
+      "raspuns": "Între 25.000 și 40.000 lei pentru fațadă și mansardă, cu materiale de înaltă performanță."
+    }
+  ],
+  "cat-costa-serviciile-unui-designer-de-interior-per-mp-si-implementarea-proiectului": [
+    {
+      "intrebare": "Cât costă onorariul unui designer de interior per mp?",
+      "raspuns": "Între 60 și 150 lei/mp pentru proiectare standard, și peste 200 lei/mp pentru soluții premium custom."
+    },
+    {
+      "intrebare": "Se taxează separat supervizarea execuției?",
+      "raspuns": "Da, de obicei ca procent din valoarea lucrărilor (5-10%) sau ca tarif orar/pe vizită la șantier."
+    },
+    {
+      "intrebare": "Cât costă implementarea completă a unui proiect de design interior?",
+      "raspuns": "De la 800-1.500 lei/mp pentru nivel mediu, până la peste 3.000 lei/mp pentru soluții premium."
+    },
+    {
+      "intrebare": "Poate un designer de interior reduce costul mobilierului?",
+      "raspuns": "Da, prin colaborările cu furnizori, mulți designeri obțin prețuri mai bune decât ar obține clientul direct."
+    }
+  ],
+  "care-sunt-costurile-pentru-finisajele-premium-microciment-tencuieli-minerale-parchet": [
+    {
+      "intrebare": "Cât costă microcimentul pe metru pătrat?",
+      "raspuns": "Între 250 și 450 lei/mp, incluzând materiale și manopera specializată necesară pentru o aplicare corectă."
+    },
+    {
+      "intrebare": "De ce sunt apreciate tencuielile minerale?",
+      "raspuns": "Pentru respirabilitate și pentru aspectul natural, premium, comparativ cu tencuielile sintetice clasice."
+    },
+    {
+      "intrebare": "Cât costă parchetul din lemn masiv, montat?",
+      "raspuns": "Materialul costă 180-400 lei/mp, plus manopera de montaj (40-70 lei/mp) și finisarea (30-50 lei/mp)."
+    },
+    {
+      "intrebare": "Cu cât cresc costurile la o casă cu finisaje premium?",
+      "raspuns": "Pentru o casă de 150 mp, bugetul suplimentar față de finisaje standard este de aproximativ 40.000-70.000 lei."
+    }
+  ],
+  "cat-costa-mobilarea-custom-a-unei-bucatarii-si-amenajarea-iluminatului-ambiental": [
+    {
+      "intrebare": "Cât costă o bucătărie custom pe metru liniar?",
+      "raspuns": "Între 3.500 și 6.000 lei/ml pentru o configurație medie, și peste 8.000-12.000 lei/ml pentru materiale premium."
+    },
+    {
+      "intrebare": "Câte straturi de iluminat sunt recomandate în bucătărie?",
+      "raspuns": "Trei straturi — iluminat general de plafon, iluminat de lucru pe blat și iluminat decorativ, pentru funcționalitate și atmosferă."
+    },
+    {
+      "intrebare": "Merită benzile LED de calitate superioară?",
+      "raspuns": "Da, reduc nevoia de înlocuire în primii ani, spre deosebire de variantele ieftine care se decolorează sau pălesc în 2-3 ani."
+    },
+    {
+      "intrebare": "Ce influențează cel mai mult prețul unei bucătării custom?",
+      "raspuns": "Materialele corpurilor și ale blatului, tipul de feronerie și gama electrocasnicelor încorporabile alese."
+    }
+  ],
+  "cat-costa-amenajarea-curtii-pe-mp-pavaj-pregatire-teren-alei-si-borduri": [
+    {
+      "intrebare": "De ce e importantă pregătirea terenului înainte de pavaj?",
+      "raspuns": "Un pavaj montat pe teren nepregătit corect se deformează și tasează inegal în câțiva ani, necesitând refacere costisitoare."
+    },
+    {
+      "intrebare": "Cât costă pavelele de beton față de piatra naturală?",
+      "raspuns": "Pavelele de beton costă 60-120 lei/mp, iar piatra naturală (granit, gresie) 150-280 lei/mp, montate."
+    },
+    {
+      "intrebare": "Cât costă amenajarea unei curți medii de 100-150 mp?",
+      "raspuns": "Între 15.000 și 30.000 lei, incluzând pregătirea terenului, pavajul și aleile/bordurile."
+    },
+    {
+      "intrebare": "Ce rol au bordurile în amenajarea curții?",
+      "raspuns": "Delimitează zonele de pavaj și susțin structura pe margini, prevenind deplasarea pavelelor în timp."
+    }
+  ],
+  "care-sunt-costurile-pentru-un-sistem-automat-de-irigatii-materiale-montaj-per-mp": [
+    {
+      "intrebare": "Cât costă un sistem de irigații prin aspersoare pentru gazon?",
+      "raspuns": "În medie 25-45 lei/mp, incluzând conductele îngropate, aspersoarele, electrovanele și programatorul."
+    },
+    {
+      "intrebare": "De ce e mai scumpă irigația prin picurare?",
+      "raspuns": "Necesită un număr mai mare de puncte de picurare pentru acoperirea corectă a plantelor și arbuștilor individuali."
+    },
+    {
+      "intrebare": "Cât costă un sistem complet pentru o grădină de 300-500 mp?",
+      "raspuns": "Între 10.000 și 20.000 lei pentru un sistem mixt (aspersoare + picurare), materiale și montaj incluse."
+    },
+    {
+      "intrebare": "Ce avantaj au senzorii de umiditate a solului?",
+      "raspuns": "Udarea se face doar când e cu adevărat necesar, economisind apă și prevenind udarea excesivă a plantelor."
+    }
+  ],
+  "cat-te-costa-rulourile-de-gazon-vs-insamantarea-si-pregatirea-solului": [
+    {
+      "intrebare": "Cât durează până crește gazonul din semințe?",
+      "raspuns": "În mod normal 6-10 săptămâni, cu îngrijire atentă (udare frecventă, protecție față de trafic pietonal) în această perioadă."
+    },
+    {
+      "intrebare": "Cu cât mai scumpe sunt rulourile de gazon față de însămânțare?",
+      "raspuns": "Aproximativ 3.000-5.000 lei mai mult pentru o curte de 300 mp, dar cu rezultat instant."
+    },
+    {
+      "intrebare": "Când poate fi călcat gazonul din rulouri?",
+      "raspuns": "De obicei după 2-3 săptămâni de la montaj, mult mai repede decât gazonul din semințe."
+    },
+    {
+      "intrebare": "Este obligatorie pregătirea solului în ambele variante?",
+      "raspuns": "Da, afânarea, nivelarea și îmbogățirea solului sunt esențiale atât pentru însămânțare, cât și pentru montarea rulourilor de gazon."
+    }
+  ],
+  "reabilitarea-termica-si-modernizarea-instalatiilor-in-cladiri": [
+    {
+      "intrebare": "De ce trebuie modernizate instalațiile odată cu izolarea termică?",
+      "raspuns": "O fațadă bine izolată fără instalații actualizate nu aduce beneficiile complete — instalațiile vechi rămân ineficiente sau chiar nesigure indiferent de calitatea izolației."
+    },
+    {
+      "intrebare": "În ce ordine se fac lucrările la o reabilitare completă?",
+      "raspuns": "Instalațiile electrice și termice se proiectează și, ideal, se montează înainte de aplicarea finală a izolației, pentru a evita străpungerea ulterioară a stratului izolator."
+    },
+    {
+      "intrebare": "Merită pregătirea infrastructurii pentru fotovoltaice la o reabilitare?",
+      "raspuns": "Da, adăugarea tuburilor și spațiului de tablou pentru un viitor sistem fotovoltaic costă mult mai puțin acum decât o intervenție ulterioară."
+    },
+    {
+      "intrebare": "Ce normativ reglementează tablourile electrice moderne?",
+      "raspuns": "Normativul I7, care stabilește cerințele pentru proiectarea și execuția instalațiilor electrice în clădiri."
+    }
+  ],
+  "standarde-de-tamplarie-si-vitraje-izolante-pptt-2026": [
+    {
+      "intrebare": "Ce este coeficientul Uw și de ce contează?",
+      "raspuns": "Măsoară cât de bine izolează termic o fereastră completă (ramă + geam) — cu cât e mai mic, cu atât izolează mai bine. Pentru case nZEB se recomandă sub 1,0 W/m²K."
+    },
+    {
+      "intrebare": "Ce diferență fac straturile low-E pe geam?",
+      "raspuns": "Reflectă radiația infraroșie, reducând pierderile de căldură iarna și supraîncălzirea vara, fără a afecta semnificativ luminozitatea naturală."
+    },
+    {
+      "intrebare": "Este triplu vitrajul întotdeauna mai bun decât dublul?",
+      "raspuns": "Oferă izolare superioară, dar și un cost și o greutate mai mari — pentru multe case, dublul vitraj performant e suficient dacă restul anvelopei e bine izolat."
+    },
+    {
+      "intrebare": "Ce gaz se folosește între straturile de geam?",
+      "raspuns": "De obicei argon, iar pentru performanțe superioare kripton, ambele reducând transferul de căldură prin convecție între straturile de sticlă."
+    }
+  ],
+  "auditul-energetic-si-rolul-instalatiilor-in-tranzitia-sustenabila-oaer": [
+    {
+      "intrebare": "Ce evaluează un audit energetic?",
+      "raspuns": "Consumul actual sau proiectat al clădirii, punctele slabe (izolație, tâmplărie, instalații) și propune soluții prioritizate după raportul cost-beneficiu."
+    },
+    {
+      "intrebare": "De ce contează coordonarea între specialități la un proiect?",
+      "raspuns": "Proiectele realizate separat, fără coordonare, pot genera conflicte între soluții — de exemplu o instalație electrică proiectată fără a ține cont de traseele de ventilație."
+    },
+    {
+      "intrebare": "Poate o casă bine izolată să performeze totuși slab energetic?",
+      "raspuns": "Da, dacă instalația de încălzire nu e dimensionată corect sau lipsesc sistemele de monitorizare a consumului."
+    },
+    {
+      "intrebare": "Ce ar trebui să ceară un proprietar de la echipa de proiectare?",
+      "raspuns": "Un proiect integrat, cu toate specialitățile coordonate pe aceeași documentație, nu documentații separate realizate independent."
+    }
+  ],
+  "stocarea-inteligenta-si-managementul-retelelor-prosumatori-2026": [
+    {
+      "intrebare": "Ce este un EMS (Energy Management System)?",
+      "raspuns": "Un sistem care decide în timp real cum se folosește energia produsă — direct, stocată în baterie sau injectată în rețea — în funcție de preț și de nevoile casei."
+    },
+    {
+      "intrebare": "De ce ajută bateriile individuale stabilitatea rețelei naționale?",
+      "raspuns": "Agregarea a sute de mii de baterii creează o capacitate de stocare distribuită care ajută la vârfurile de consum sau la producția redusă din surse regenerabile mari."
+    },
+    {
+      "intrebare": "Merită un EMS avansat față de o configurare simplă de încărcare/descărcare?",
+      "raspuns": "Da, mai ales pe măsură ce apar tarife variabile pe oră — un EMS avansat optimizează automat costurile, spre deosebire de o strategie fixă."
+    },
+    {
+      "intrebare": "Ce ar trebui verificat la alegerea unui invertor hibrid?",
+      "raspuns": "Compatibilitatea cu funcții avansate de management energetic, nu doar capacitatea de stocare simplă a bateriei."
+    }
+  ],
+  "monitorizarea-digitala-si-gestiunea-consumului-diurn": [
+    {
+      "intrebare": "Ce înseamnă gestiunea consumului diurn?",
+      "raspuns": "Mutarea deliberată a consumurilor mari (spălătorie, boiler, EV) în intervalele cu producție solară proprie ridicată sau cu tarife mai mici, în loc să ruleze la întâmplare."
+    },
+    {
+      "intrebare": "Cum ajută monitorizarea digitală la reducerea facturii?",
+      "raspuns": "Arată exact cât consumă fiecare zonă a casei și la ce oră, permițând ajustarea obiceiurilor pentru a maximiza autoconsumul din producția proprie."
+    },
+    {
+      "intrebare": "De ce contează autoconsumul mai mult decât compensarea la rețea?",
+      "raspuns": "Energia folosită direct în casă reduce factura mai mult decât energia injectată și recompensată ulterior la un tarif de vânzare, de obicei mai mic decât cel de cumpărare."
+    },
+    {
+      "intrebare": "Ce fac notificările automate de consum?",
+      "raspuns": "Alertează proprietarul când consumul depășește un prag sau când există exces de producție solară, pentru decizii rapide de utilizare a energiei."
+    }
+  ],
+  "reabilitarea-cladirilor-si-valorificarea-spatiului-comunitare": [
+    {
+      "intrebare": "Ce se păstrează de obicei într-un proiect de reabilitare bine gândit?",
+      "raspuns": "Structura, elementele arhitecturale de identitate și relația cu contextul urban, în timp ce instalațiile și izolația se modernizează integral."
+    },
+    {
+      "intrebare": "Ce înseamnă valorificarea spațiului comunitar într-o clădire?",
+      "raspuns": "Transformarea unor zone precum curți interioare sau holuri generoase în spații funcționale reale, nu doar renovarea estetică a acestora."
+    },
+    {
+      "intrebare": "Cum se aplică principiul la o casă individuală?",
+      "raspuns": "Prin păstrarea elementelor cu personalitate ale casei, în timp ce instalațiile, izolația și tâmplăria se modernizează complet pentru confort și eficiență."
+    },
+    {
+      "intrebare": "De ce este echilibrul mai avantajos decât demolarea completă?",
+      "raspuns": "Oferă cel mai bun raport valoare-cost pe termen lung, păstrând identitatea construcției și reducând semnificativ costurile de operare ulterioare."
+    }
+  ],
+  "palete-cromatice-si-abordari-moderne-de-interior": [
+    {
+      "intrebare": "Ce culori sunt recomandate pentru interior în 2026?",
+      "raspuns": "Nuanțe de bej cald, teracotă, verde măsliniu și maro pământiu — culori naturale, calde, care înlocuiesc paletele reci minimaliste din deceniul anterior."
+    },
+    {
+      "intrebare": "Cum se combină culorile neutre cu accentele mai intense?",
+      "raspuns": "Pereții rămân de obicei în nuanțe calde neutre, iar accentele de culoare mai intensă se aplică pe elemente ușor de schimbat, precum canapele sau textile."
+    },
+    {
+      "intrebare": "Ce materiale completează o paletă cromatică caldă?",
+      "raspuns": "Lemnul natural, piatra, ceramica mată și textilele naturale (in, bumbac, lână), care dau senzația de spațiu autentic."
+    },
+    {
+      "intrebare": "Când trebuie aleasă paleta cromatică într-un proiect de renovare?",
+      "raspuns": "Înainte de comandarea mobilierului și a finisajelor fixe, pentru a asigura coerența vizuală a întregului spațiu."
+    }
+  ],
+  "integrarea-naturii-si-conexiunea-exterior-interior": [
+    {
+      "intrebare": "Ce înseamnă „pardoseli continue” între interior și terasă?",
+      "raspuns": "Folosirea aceluiași tip de placaj sau a unui placaj vizual similar în interior și pe terasă, pentru a crea senzația de spațiu unic, fără graniță vizuală."
+    },
+    {
+      "intrebare": "De ce contează pragurile joase la ușile glisante?",
+      "raspuns": "Trebuie planificate din faza de proiect — sunt mult mai greu de implementat ulterior, după turnarea șapei și montarea pardoselilor finale."
+    },
+    {
+      "intrebare": "Cum poate curtea funcționa ca o „a doua cameră de zi”?",
+      "raspuns": "Printr-o zonă de relaxare umbrită, mobilier de exterior confortabil și eventual un foișor sau pergolă, care cresc suprafața utilizabilă efectiv a locuinței."
+    },
+    {
+      "intrebare": "Ce rol au plantele de interior în conexiunea cu grădina?",
+      "raspuns": "Zonele dedicate cu plante mai mari sau mici „pereți verzi” aduc un element viu în interior care completează vizual grădina exterioară."
+    }
+  ],
+  "5-probleme-reale-la-aerul-conditionat-si-solutiile-tehnice-pentru-2026": [
+    {
+      "intrebare": "Ce se întâmplă dacă aparatul de aer condiționat e subdimensionat?",
+      "raspuns": "Rulează constant la capacitate maximă fără să răcească eficient încăperea, consumând mult mai multă energie decât unul corect dimensionat."
+    },
+    {
+      "intrebare": "De ce contează poziția unității exterioare?",
+      "raspuns": "Expunerea directă la soare, lipsa spațiului de ventilație sau montarea prea aproape de sol reduc eficiența și accelerează uzura echipamentului."
+    },
+    {
+      "intrebare": "Este necesar un circuit electric dedicat pentru aerul condiționat?",
+      "raspuns": "Da, recomandat — conectarea la circuite existente, supraîncărcate, crește riscul de defecte electrice și reduce siguranța instalației."
+    },
+    {
+      "intrebare": "Ce risc apare dacă evacuarea condensului nu are pantă corectă?",
+      "raspuns": "Apa se poate acumula și provoca infiltrații sau igrasie în zona de montaj, chiar dacă aparatul funcționează tehnic corect."
+    }
+  ],
+  "cum-montezi-corect-panourile-fotovoltaice-ghid-tehnic-fara-artificii": [
+    {
+      "intrebare": "De ce e important să verifici structura acoperișului înainte de montaj?",
+      "raspuns": "Panourile cu structura de montaj adaugă 15-20 kg/mp — acoperișurile mai vechi de 15-20 de ani trebuie verificate să suporte această greutate suplimentară."
+    },
+    {
+      "intrebare": "Ce cauzează cel mai des infiltrațiile la montajul panourilor pe țiglă?",
+      "raspuns": "Cârligele sau clemele de fixare montate greșit, prea rar distanțate sau pe zone slabe ale învelitorii."
+    },
+    {
+      "intrebare": "De ce contează polaritatea corectă la cablarea DC?",
+      "raspuns": "O greșeală de polaritate la conectarea panourilor poate deteriora invertorul chiar la prima punere în funcțiune."
+    },
+    {
+      "intrebare": "Ce verificare se face înainte de conectarea la invertor?",
+      "raspuns": "Un test de izolație a cablajului, pentru a confirma că nu există scurgeri electrice înainte de a pune sistemul sub tensiune."
+    }
+  ],
+  "acoperis-terasa-corect-checklist-tehnic-si-capcane-de-evitat": [
+    {
+      "intrebare": "Care e panta minimă necesară la un acoperiș tip terasă?",
+      "raspuns": "Minimum 1,5-2%, chiar dacă vizual pare „plat” — fără această pantă, apa stagnează și degradează hidroizolația mult mai rapid."
+    },
+    {
+      "intrebare": "De ce sunt riscante zonele de racord la o terasă?",
+      "raspuns": "Colțurile, jgheaburile și trecerile de instalații concentrează cel mai mare risc de infiltrație și necesită suprapuneri generoase ale hidroizolației."
+    },
+    {
+      "intrebare": "Câte guri de scurgere sunt recomandate pentru o terasă mare?",
+      "raspuns": "Minimum două, redundante, pentru a preveni blocarea completă a evacuării în caz de înfundare cu frunze sau gheață."
+    },
+    {
+      "intrebare": "Ce ordine trebuie respectată la stratificarea unei terase?",
+      "raspuns": "Structura de rezistență, barieră de vapori, termoizolație rezistentă la compresiune, apoi hidroizolație în minimum două straturi la racorduri."
+    }
+  ],
+  "pompa-de-caldura-aer-apa-economie-reala-nu-doar-promisiuni": [
+    {
+      "intrebare": "De ce nu se confirmă întotdeauna eficiența COP din broșuri?",
+      "raspuns": "COP-ul e măsurat la condiții ideale de laborator; eficiența reală scade la temperaturi exterioare scăzute frecvente, sub -5°C."
+    },
+    {
+      "intrebare": "Funcționează bine o pompă de căldură cu radiatoare vechi?",
+      "raspuns": "Nu la fel de eficient — radiatoarele vechi necesită temperaturi înalte de tur, regim în care pompa de căldură pierde din eficiență față de sistemele de temperatură joasă."
+    },
+    {
+      "intrebare": "Care e cel mai important factor pentru economie reală?",
+      "raspuns": "Izolația casei — o pompă de căldură într-o casă slab izolată costă mai mult în operare decât promisiunile, indiferent de eficiența echipamentului."
+    },
+    {
+      "intrebare": "Cum ar trebui dimensionată o pompă de căldură?",
+      "raspuns": "Pe baza temperaturilor minime reale din zonă, nu pe medii optimiste, pentru a evita subdimensionarea în cele mai reci zile de iarnă."
+    }
+  ],
+  "formarea-meseriasilor-in-constructii-lectii-practice-din-germania": [
+    {
+      "intrebare": "Ce este sistemul dual german de formare profesională?",
+      "raspuns": "Combină pregătirea teoretică în școală cu ucenicia practică plătită direct la un angajator, de-a lungul a 3-4 ani."
+    },
+    {
+      "intrebare": "De ce contează certificarea pe specialități înguste?",
+      "raspuns": "Fiecare meserie (electrician, instalator, zidar) are o programă specifică și examene practice standardizate, spre deosebire de formarea generală fără cadru unitar."
+    },
+    {
+      "intrebare": "Cum creează certificarea un stimulent economic pentru calitate?",
+      "raspuns": "Clienții și angajatorii pot verifica certificarea, iar reputația unui meseriaș certificat are valoare de piață directă."
+    },
+    {
+      "intrebare": "Ce elemente ar fi aplicabile pentru România?",
+      "raspuns": "Programe de ucenicie plătită, certificare standardizată pe meserii specifice și o legătură clară între calitatea muncii și reputația meseriașului."
+    }
+  ],
+  "montajul-luminatoarelor-pe-acoperis-terasa-detalii-tehnice-si-capcane-de-evitat": [
+    {
+      "intrebare": "De ce necesită decuparea planșeului pentru un luminator un calcul de structură?",
+      "raspuns": "Marginile deschiderii trebuie întărite corespunzător, calculat de un inginer de structură, pentru a compensa reducerea rezistenței planșeului."
+    },
+    {
+      "intrebare": "Ce este curb-ul unui luminator?",
+      "raspuns": "Un guler de etanșare înălțat între rama luminatorului și hidroizolația terasei, cu minimum 15-20 cm, care previne infiltrațiile."
+    },
+    {
+      "intrebare": "Cum se previne condensul pe rama interioară a luminatorului?",
+      "raspuns": "Prin alegerea unor modele cu punte termică între cadrul exterior și cel interior, nu doar tratarea ulterioară cu ventilație suplimentară."
+    },
+    {
+      "intrebare": "Ce protecție suplimentară e recomandată pentru terasele circulabile?",
+      "raspuns": "O balustradă sau protecție în jurul luminatorului, pentru siguranță și pentru a preveni deteriorarea accidentală a geamului."
+    }
+  ],
+  "bariera-de-vapori-vs-folie-anticondens-cum-alegi-corect": [
+    {
+      "intrebare": "Unde se montează bariera de vapori?",
+      "raspuns": "Pe partea caldă a izolației, dinspre interior, pentru a împiedica vaporii din locuință să pătrundă în structura izolației."
+    },
+    {
+      "intrebare": "Unde se montează folia anticondens?",
+      "raspuns": "Pe partea rece a structurii, dinspre exterior, sub învelitoare, permițând vaporilor rămași în izolație să iasă spre exterior."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă cele două materiale sunt inversate?",
+      "raspuns": "Umezeala rămâne „sigilată” în structură, ducând la degradarea izolației, mucegai și, în timp, putrezirea elementelor de lemn din șarpantă."
+    },
+    {
+      "intrebare": "Ce este valoarea Sd la o barieră de vapori?",
+      "raspuns": "Un indicator al rezistenței la difuzia vaporilor de apă — cu cât e mai mare, cu atât materialul blochează mai eficient trecerea vaporilor."
+    }
+  ],
+  "cum-alegi-si-folosesti-corect-materialele-pentru-case-eficiente-energetic": [
+    {
+      "intrebare": "Când se alege vata minerală bazaltică în locul polistirenului?",
+      "raspuns": "Pentru rezistență superioară la foc și fonoizolație — recomandată la pereți despărțitori sau mansardă, unde aceste aspecte contează mai mult."
+    },
+    {
+      "intrebare": "De ce contează compatibilitatea materialelor, nu doar performanța individuală?",
+      "raspuns": "Un tencuit incompatibil cu sistemul de izolație poate ceda în câțiva ani, chiar dacă fiecare material e de calitate bună separat."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă tâmplăria nu e montată cu bandă de etanșare compatibilă?",
+      "raspuns": "Apar punți termice la interfața dintre fereastră și perete, care anulează parțial beneficiul unei tâmplării performante."
+    },
+    {
+      "intrebare": "Ce ar trebui verificat înainte de a cumpăra materiale de izolație?",
+      "raspuns": "Certificările (marcaj CE) și fișele tehnice cu valori reale de conductivitate termică, pentru a evita produse cu performanță inferioară celei declarate."
+    }
+  ],
+  "cum-alegi-corect-un-aparat-de-aer-conditionat": [
+    {
+      "intrebare": "Ce factori influențează calculul puterii necesare, pe lângă suprafață?",
+      "raspuns": "Orientarea camerei, numărul de persoane care ocupă frecvent spațiul și sursele suplimentare de căldură, precum electronicele."
+    },
+    {
+      "intrebare": "Merită diferența de preț între clasa A++ și A+++?",
+      "raspuns": "De obicei da — se recuperează în câțiva ani prin consum redus, mai ales pentru aparate care funcționează multe ore pe zi vara."
+    },
+    {
+      "intrebare": "Ce nivel de zgomot e recomandat pentru dormitoare?",
+      "raspuns": "Sub 20-22 dB pentru unitatea interioară, pentru a nu afecta calitatea somnului."
+    },
+    {
+      "intrebare": "Ce funcții suplimentare merită luate în calcul?",
+      "raspuns": "Dezumidificarea, filtrarea avansată a aerului și modul silențios de noapte, mai ales pentru dormitoare sau persoane cu alergii."
+    }
+  ],
+  "cum-alegi-corect-termoizolatia-casei-criterii-tehnice-exemple-practice-si-erori-de-evitat": [
+    {
+      "intrebare": "Ce este coeficientul de conductivitate termică (lambda)?",
+      "raspuns": "Un indicator exprimat în W/mK — cu cât e mai mic, cu atât materialul izolează mai bine la aceeași grosime."
+    },
+    {
+      "intrebare": "Ce grosime de izolație e recomandată pentru fațadă?",
+      "raspuns": "De obicei 15-20 cm pentru case noi, în funcție de zona climatică și de cerințele normativelor actuale."
+    },
+    {
+      "intrebare": "Care sunt zonele cu risc ridicat de punte termică?",
+      "raspuns": "Colțurile, glafurile de ferestre și îmbinările structurale, unde continuitatea izolației trebuie tratată cu materiale complementare."
+    },
+    {
+      "intrebare": "De ce se folosește polistiren extrudat la soclu, nu expandat?",
+      "raspuns": "Are rezistență superioară la umiditate, esențială în zona de trecere de la sol la pereți, expusă frecvent la umezeală."
+    }
+  ],
+  "gherle-de-santier-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie": [
+    {
+      "intrebare": "De ce e riscantă înlocuirea materialelor din proiect fără acordul inginerului?",
+      "raspuns": "Poate compromite siguranța structurii sau a instalației, chiar dacă vizual materialul înlocuitor pare identic cu cel specificat."
+    },
+    {
+      "intrebare": "Ce presupune execuția „aproximativă” a unei hidroizolații?",
+      "raspuns": "Aplicarea straturilor fără respectarea timpilor de uscare recomandați, ceea ce compromite etanșeitatea finală a sistemului."
+    },
+    {
+      "intrebare": "De ce sunt termenele nerealiste o cauză frecventă de improvizații?",
+      "raspuns": "Forțează echipele să sară etape tehnologice esențiale (uscare, întărire, testare) pentru a respecta un calendar impus artificial."
+    },
+    {
+      "intrebare": "Ce rol are un diriginte de șantier independent?",
+      "raspuns": "Verifică respectarea proiectului și a normativelor tehnice, cu un cost mic comparativ cu riscul reparațiilor structurale ulterioare."
+    }
+  ],
+  "montajul-ferestrelor-eficiente-energetic-checklist-si-pasi-esentiali": [
+    {
+      "intrebare": "Unde trebuie poziționată fereastra în grosimea peretelui?",
+      "raspuns": "În planul izolației termice, nu la marginea exterioară sau interioară a peretelui, pentru a reduce puntea termică la interfața cu zidăria."
+    },
+    {
+      "intrebare": "Este suficientă spuma poliuretanică pentru etanșarea rostului?",
+      "raspuns": "Nu — trebuie completată cu benzi de etanșare compatibile (interioară pentru vapori, exterioară pentru apă), nu folosită singură."
+    },
+    {
+      "intrebare": "De ce contează reglarea feroneriei după montaj?",
+      "raspuns": "Verificarea presiunii de închidere garantează etanșeitatea optimă și previne uzura prematură a garniturilor ferestrei."
+    },
+    {
+      "intrebare": "Ce se întâmplă la o fixare mecanică insuficientă a ramei?",
+      "raspuns": "Poate cauza deformări ale ramei în timp, care afectează etanșeitatea și funcționarea corectă a ferestrei."
+    }
+  ],
+  "montajul-unei-pompe-de-caldura-la-o-casa-veche": [
+    {
+      "intrebare": "De ce nu funcționează bine o pompă de căldură cu radiatoare vechi neschimbate?",
+      "raspuns": "Radiatoarele vechi sunt dimensionate pentru temperaturi înalte de tur, iar pompa de căldură funcționează eficient la temperaturi mai joase — fără ajustări, încălzirea poate fi insuficientă."
+    },
+    {
+      "intrebare": "Ce soluții există pentru case vechi cu radiatoare nepotrivite?",
+      "raspuns": "Înlocuirea cu radiatoare supradimensionate, o soluție hibridă cu ventiloconvectoare, sau introducerea încălzirii prin pardoseală parțial."
+    },
+    {
+      "intrebare": "De ce e importantă izolația înainte de a instala o pompă de căldură?",
+      "raspuns": "La o casă slab izolată, pierderile de căldură pot depăși capacitatea sistemului, reducând semnificativ eficiența investiției."
+    },
+    {
+      "intrebare": "Ce trebuie planificat înainte de a comanda echipamentul?",
+      "raspuns": "Spațiul pentru unitatea exterioară și eventualul rezervor tampon, ținând cont de acces, zgomot și distanța până la punctul de conectare."
+    }
+  ],
+  "microinvertoarele-pentru-panouri-fotovoltaice-revolutie-tehnica-si-siguranta-pe-acoperis": [
+    {
+      "intrebare": "Care e diferența dintre microinvertor și invertor string?",
+      "raspuns": "Microinvertorul convertește curentul la nivelul fiecărui panou individual, în timp ce invertorul string centralizează conversia pentru tot șirul de panouri."
+    },
+    {
+      "intrebare": "De ce sunt microinvertoarele mai sigure în caz de incendiu?",
+      "raspuns": "Tensiunea pe acoperiș rămâne la nivelul curentului alternativ, mult mai sigur decât curentul continuu de sute de volți dintr-un sistem string."
+    },
+    {
+      "intrebare": "Ce se întâmplă dacă un panou e umbrit, la un sistem cu microinvertoare?",
+      "raspuns": "Doar producția acelui panou scade, fără să afecteze restul panourilor, spre deosebire de sistemele string conectate în serie."
+    },
+    {
+      "intrebare": "Care e principalul dezavantaj al microinvertoarelor?",
+      "raspuns": "Costul mai mare per watt instalat față de un invertor string echivalent, plus mentenanță care necesită acces la fiecare unitate de pe acoperiș."
+    }
+  ],
+  "signify-si-tendintele-pietei-de-iluminat-profesional-ce-inseamna-pentru-clientii-rezidenti": [
+    {
+      "intrebare": "Ce este Signify?",
+      "raspuns": "Fosta divizie Philips Lighting, unul dintre cei mai mari producători mondiali de sisteme de iluminat, inclusiv soluții inteligente conectate."
+    },
+    {
+      "intrebare": "De ce contează piața de iluminat profesional pentru clienții rezidențiali?",
+      "raspuns": "Tehnologiile dezvoltate pentru clădiri comerciale ajung ulterior, la costuri mai accesibile, și în segmentul rezidențial, prin economie de scară."
+    },
+    {
+      "intrebare": "Ce standarde ar trebui verificate la alegerea unui sistem de iluminat inteligent?",
+      "raspuns": "Compatibilitatea cu standarde deschise precum DALI, Zigbee sau Matter, pentru a evita blocarea într-un singur ecosistem de producător."
+    },
+    {
+      "intrebare": "Poate reorientarea producătorilor către alte piețe afecta prețurile locale?",
+      "raspuns": "Da, disponibilitatea și prețurile anumitor game de produse pot fi influențate pe termen scurt, motiv pentru care planificarea din timp a achizițiilor mari e recomandată."
+    }
+  ],
+  "extinderea-rezolv-energy-la-4-5-gw-ce-arata-despre-viitorul-energiei-regenerabile-in-roman": [
+    {
+      "intrebare": "Ce este REZOLV Energy?",
+      "raspuns": "Un dezvoltator major de proiecte regenerabile din regiune, care a anunțat obiectivul de a ajunge la 4-5 GW capacitate instalată până în 2030."
+    },
+    {
+      "intrebare": "Ce legătură are extinderea unor investitori mari cu prosumatorii individuali?",
+      "raspuns": "O rețea cu mai multă capacitate regenerabilă necesită investiții tot mai mari în stocare și echilibrare, zonă în care prosumatorii cu baterii proprii pot juca un rol activ."
+    },
+    {
+      "intrebare": "De ce ar putea scădea costurile echipamentelor rezidențiale pe termen lung?",
+      "raspuns": "Cererea crescută generată de proiectele mari stimulează producătorii să investească în capacitate suplimentară, ceea ce istoric a dus la scăderea costurilor pentru toate segmentele, inclusiv rezidențial."
+    },
+    {
+      "intrebare": "Ce arată aceste investiții despre viitorul sectorului regenerabil din România?",
+      "raspuns": "Arată o fază de creștere susținută, nu de stagnare — un context favorabil pentru cei care iau acum decizia de a instala panouri fotovoltaice."
+    }
+  ],
+  "productia-electrica-din-surse-regenerabile-a-crescut-de-4-ori-ce-inseamna-pentru-prosumato": [
+    {
+      "intrebare": "Cu cât a crescut producția regenerabilă a Electrica în primul semestru din 2026?",
+      "raspuns": "De peste patru ori, ajungând la 21.012 MWh, conform datelor raportate."
+    },
+    {
+      "intrebare": "De ce contează pentru un prosumator că un furnizor mare investește în producție regenerabilă proprie?",
+      "raspuns": "Furnizorii cu portofoliu propriu tot mai mare au stimulent economic să dezvolte oferte competitive de compensare pentru clienții prosumatori."
+    },
+    {
+      "intrebare": "Ce rol joacă bateriile prosumatorilor în acest context?",
+      "raspuns": "Flexibilitatea de a stoca și livra energie în funcție de nevoile rețelei devine tot mai valoroasă pentru stabilitatea sistemului național, pe măsură ce producția regenerabilă variabilă crește."
+    },
+    {
+      "intrebare": "Schimbă aceste cifre imediat factura unui prosumator?",
+      "raspuns": "Nu direct, dar arată un context sectorial favorabil, cu investiții susținute care sprijină pe termen mediu infrastructura pentru producția distribuită."
+    }
+  ],
+  "tehnologii-porr-in-2026-optimizarea-retetelor-de-beton-prin-ai-si-automatizarea-de-santier": [
+    {
+      "intrebare": "Ce înseamnă optimizarea rețetelor de beton prin AI?",
+      "raspuns": "Analiza automată a compoziției materialelor în funcție de condițiile specifice ale șantierului, pentru un amestec optim care reduce risipa și îmbunătățește consistența calității."
+    },
+    {
+      "intrebare": "Înseamnă automatizarea de șantier roboți care înlocuiesc muncitorii?",
+      "raspuns": "Nu neapărat — de multe ori înseamnă sisteme de monitorizare și control care reduc variabilitatea umană la pașii critici de execuție."
+    },
+    {
+      "intrebare": "Sunt relevante aceste tehnologii pentru o casă individuală?",
+      "raspuns": "Sunt încă mai degrabă apanajul șantierelor mari, dar companiile care le adoptă oferă, în general, un nivel mai ridicat de predictibilitate — un criteriu util la alegerea unui contractor."
+    },
+    {
+      "intrebare": "Ce senzori pot verifica automat calitatea betonului turnat?",
+      "raspuns": "Senzori care verifică timpul de întărire și parametrii proiectați, semnalând automat abaterile înainte de a permite continuarea lucrărilor."
+    }
+  ],
+  "luminatoare-cu-trapa-de-desfumare-ce-este-un-sistem-de-tip-safe-dome": [
+    {
+      "intrebare": "Cum funcționează un luminator cu trapă de desfumare?",
+      "raspuns": "Rămâne închis etanș în condiții normale, aducând lumină naturală, iar în caz de incendiu se deschide automat pentru a evacua fumul și gazele fierbinți."
+    },
+    {
+      "intrebare": "Ce diferență tehnică are față de un luminator obișnuit?",
+      "raspuns": "Mecanismul de deschidere automată certificat pentru incendiu, cu funcționare garantată chiar la alimentare electrică întreruptă, prin baterie de rezervă sau sisteme pneumatice."
+    },
+    {
+      "intrebare": "Când e relevant un astfel de sistem pentru o casă individuală?",
+      "raspuns": "Mai ales la mansarde mari, spații deschise pe mai multe niveluri sau garaje/depozite integrate, unde reglementările de siguranță pot impune soluții de desfumare."
+    },
+    {
+      "intrebare": "Ce trebuie verificat la alegerea unui sistem de desfumare?",
+      "raspuns": "Certificarea conform standardelor aplicabile, garanția mecanismului de deschidere automată și compatibilitatea cu sistemul de detecție a incendiului."
+    }
+  ],
+  "sisteme-de-sprinklere-pentru-incendiu-cum-functioneaza-protectia-activa-a-unei-cladiri": [
+    {
+      "intrebare": "Cum se declanșează un sprinkler individual?",
+      "raspuns": "Are un element termosensibil care se sparge la o temperatură prestabilită, activând doar sprinklerele din zona afectată direct de căldură, nu întregul sistem."
+    },
+    {
+      "intrebare": "De ce sunt sprinklerele mai eficiente decât detectoarele de fum?",
+      "raspuns": "Detectoarele doar semnalează incendiul, în timp ce sprinklerele intervin direct, stingând sau controlând focul înainte să se extindă necontrolat."
+    },
+    {
+      "intrebare": "Când sunt relevante sprinklerele pentru clădiri rezidențiale?",
+      "raspuns": "La locuințe colective, case cu suprafețe mari sau cu risc crescut — garaje, ateliere integrate, depozite de materiale inflamabile."
+    },
+    {
+      "intrebare": "De ce contează mentenanța periodică a sistemului?",
+      "raspuns": "Un sistem nefuncțional din lipsă de verificare oferă o falsă senzație de siguranță — presiunea scăzută sau capetele blocate anulează protecția reală."
+    }
+  ],
+  "bim-ca-platforma-de-integrare-a-cerintelor-medicale-si-de-securitate-intr-un-proiect": [
+    {
+      "intrebare": "Ce înseamnă BIM ca platformă de integrare, dincolo de modelarea 3D?",
+      "raspuns": "Coordonarea în același model digital a cerințelor tehnice din specialități diferite — instalații, structură, securitate — pentru detectarea timpurie a conflictelor."
+    },
+    {
+      "intrebare": "Ce avantaj practic are detectarea digitală a conflictelor între specialități?",
+      "raspuns": "Conflictele sunt identificate înainte de execuția pe șantier, evitând costuri mari de remediere care ar apărea dacă erau descoperite ulterior."
+    },
+    {
+      "intrebare": "Se aplică principiul BIM și la case individuale complexe?",
+      "raspuns": "Da, la scară mai mică — un model coordonat pentru climatizare, automatizare și securitate reduce riscul de conflicte descoperite la execuție."
+    },
+    {
+      "intrebare": "Cum ajută BIM la mentenanța ulterioară a unei clădiri?",
+      "raspuns": "Oferă un model digital complet cu poziția exactă a fiecărui element de instalație, util pentru intervenții viitoare fără spargeri exploratorii."
+    }
+  ],
+  "umiditate-ridicata-in-apartament-vara-cauze-riscuri-si-solutii": [
+    {
+      "intrebare": "De ce apare umiditate ridicată vara, chiar cu tâmplărie performantă?",
+      "raspuns": "Tâmplăria etanșă reduce și schimbul natural de aer, nu doar pierderile de căldură, motiv pentru care e nevoie de ventilație activă suplimentară."
+    },
+    {
+      "intrebare": "Ce activități zilnice contribuie cel mai mult la umiditate?",
+      "raspuns": "Gătitul, dușurile și uscarea rufelor în interior, mai ales fără evacuare eficientă prin hote și ventilație de baie funcționale."
+    },
+    {
+      "intrebare": "Care sunt riscurile pe termen mediu ale umidității ridicate?",
+      "raspuns": "Apariția mucegaiului în colțuri și zone fără ventilație, degradarea finisajelor și, pe termen lung, impact asupra calității aerului interior."
+    },
+    {
+      "intrebare": "Ce soluție structurală reduce riscul de umiditate?",
+      "raspuns": "Ventilația mecanică controlată, care compensează etanșeitatea ridicată a tâmplăriei moderne cu un schimb de aer constant, controlat."
+    }
+  ],
+  "cartea-tehnica-a-constructiei-rolul-dirigintelui-de-santier-in-completarea-documentatiei": [
+    {
+      "intrebare": "Ce este cartea tehnică a construcției?",
+      "raspuns": "Documentul oficial care însoțește o clădire pe toată durata ei de viață, cu toate informațiile tehnice despre proiectare, execuție și materiale."
+    },
+    {
+      "intrebare": "Ce rol are dirigintele de șantier în completarea ei?",
+      "raspuns": "Verifică conformitatea execuției cu proiectul și colectează sistematic documentația relevantă pe parcursul lucrărilor, nu doar la final."
+    },
+    {
+      "intrebare": "Ce documente esențiale intră în cartea tehnică?",
+      "raspuns": "Certificatele de calitate ale materialelor, procesele-verbale de recepție a fazelor determinante și avizele obținute pe parcursul lucrării."
+    },
+    {
+      "intrebare": "Ce probleme poate crea o carte tehnică incompletă?",
+      "raspuns": "Dificultăți la vânzarea proprietății, la obținerea unor avize pentru extinderi, sau lipsa unei dovezi solide în dispute legate de calitatea execuției."
+    }
+  ],
+  "canepa-structurala-hempcrete-ca-material-alternativ-de-constructie-ce-este-si-cand-are-sen": [
+    {
+      "intrebare": "Este hempcrete-ul un material structural, care poate înlocui betonul?",
+      "raspuns": "Nu — se folosește ca umplutură izolatoare într-o structură de rezistență din lemn sau alt material, nu ca element portant."
+    },
+    {
+      "intrebare": "Ce avantaj are hempcrete-ul pentru climatul interior?",
+      "raspuns": "Capacitatea de reglare higrotermică — absoarbe și eliberează umiditate, contribuind la un climat interior mai stabil pe tot parcursul anului."
+    },
+    {
+      "intrebare": "De ce nu este hempcrete-ul o soluție de masă în România?",
+      "raspuns": "Disponibilitatea furnizorilor și a meșterilor specializați este redusă, iar costul pe metru cub poate depăși izolațiile convenționale."
+    },
+    {
+      "intrebare": "Pentru ce tip de proiect are sens acest material?",
+      "raspuns": "Pentru proiecte conștient orientate spre sustenabilitate, cu buget flexibil și acces la o echipă de execuție specializată în tehnica specifică."
+    }
+  ],
+  "ce-putem-invata-din-arhitectura-patrimoniului-pentru-casele-noi-proportii-materiale-durabi": [
+    {
+      "intrebare": "Ce înseamnă „proporții clasice” în arhitectură?",
+      "raspuns": "Rapoarte testate între înălțimea și lățimea încăperilor sau dimensiunea ferestrelor relativ la fațadă, care fac o clădire să funcționeze vizual echilibrat."
+    },
+    {
+      "intrebare": "De ce foloseau clădirile vechi materiale locale?",
+      "raspuns": "Pentru comportamentul lor dovedit în timp la condițiile climatice specifice zonei, nu doar din motive estetice — principiu redescoperit prin arhitectura bioclimatică."
+    },
+    {
+      "intrebare": "Ce detalii de execuție ajută cel mai mult la durabilitate pe termen lung?",
+      "raspuns": "Streșini generoase care protejează fațada de ploaie, socluri înalte care izolează zidăria de umezeala solului și ventilație naturală bine gândită."
+    },
+    {
+      "intrebare": "Înseamnă aceste lecții că o casă nouă trebuie să arate ca una veche?",
+      "raspuns": "Nu — înseamnă preluarea principiilor funcționale (proporții, materiale potrivite climatului, detalii care previn degradarea), nu replicarea stilistică."
+    }
+  ],
+  "ce-inseamna-un-ansamblu-rezidential-gandit-ca-ecosistem-principii-aplicabile-si-la-scara-m": [
+    {
+      "intrebare": "Ce înseamnă un ansamblu rezidențial gândit ca ecosistem?",
+      "raspuns": "O dezvoltare unde spațiile publice, semi-publice și private sunt gândite să se completeze coerent, nu doar să coexiste ca sumă de locuințe separate."
+    },
+    {
+      "intrebare": "Cum se aplică acest principiu la o singură proprietate?",
+      "raspuns": "Prin zonarea deliberată a curții și tranziții graduale între spații publice, semi-private și private, în loc de plasarea clădirii pe un teren gol fără relație coerentă."
+    },
+    {
+      "intrebare": "Ce înseamnă atenția la microclimat în proiectare?",
+      "raspuns": "Orientarea clădirii și a spațiilor exterioare pentru soare iarna și umbră vara, plus plantarea strategică de vegetație pentru termoreglare naturală."
+    },
+    {
+      "intrebare": "Necesită aceste principii un buget mare?",
+      "raspuns": "Nu — necesită o gândire integrată din faza de concept, nu un buget special, spre deosebire de dezvoltările mari care aplică principiul la scară extinsă."
+    }
+  ],
+  "ceramica-artizanala-in-amenajarea-interioara-cum-alegi-obiecte-decorative-durabile": [
+    {
+      "intrebare": "Ce diferență face temperatura de ardere a ceramicii?",
+      "raspuns": "Ceramica arsă la temperatură înaltă (gresie, porțelan) e mult mai rezistentă și absoarbe mai puțină apă decât cea arsă la temperatură joasă, mai fragilă."
+    },
+    {
+      "intrebare": "La ce te uiți la finisajul glazurii unui obiect ceramic?",
+      "raspuns": "Absența microfisurilor neintenționate sau a zonelor poroase, mai ales la piesele funcționale, unde igiena și durabilitatea contează la fel de mult ca aspectul."
+    },
+    {
+      "intrebare": "E normal ca piesele ceramice artizanale să difere ușor între ele?",
+      "raspuns": "Da, variațiile naturale fac parte din farmecul lucrului manual — dar diferențe prea mari pot indica un control de calitate inconsistent al atelierului."
+    },
+    {
+      "intrebare": "Cum se integrează cel mai bine ceramica artizanală într-o amenajare?",
+      "raspuns": "Prin gruparea tematică a câtorva piese cu paletă cromatică sau textură similară, în loc de răspândirea lor fără o logică de compoziție."
+    }
+  ],
+  "ce-verifici-inainte-de-a-cumpara-o-casa-veche-de-renovat": [
+    {
+      "intrebare": "Ce semne de la structura de rezistență trebuie verificate la o casă veche?",
+      "raspuns": "Fisuri în ziduri, denivelări ale pardoselii sau înclinări vizibile ale structurii, care pot indica probleme de fundație sau rezistență."
+    },
+    {
+      "intrebare": "Cum recunoști probleme de umiditate la vizionarea unei case?",
+      "raspuns": "Pete de umezeală pe pereți, miros specific de mucegai sau tencuială care se desprinde ușor la atingere."
+    },
+    {
+      "intrebare": "De ce contează starea instalațiilor existente pentru bugetul de renovare?",
+      "raspuns": "Înlocuirea completă a instalațiilor electrice și sanitare vechi e de multe ori mai costisitoare decât lucrările vizibile de finisaje."
+    },
+    {
+      "intrebare": "Ce verificări legale sunt esențiale înainte de achiziție?",
+      "raspuns": "Extras de carte funciară actualizat, verificarea sarcinilor sau litigiilor și confirmarea că suprafața reală corespunde cu documentația oficială."
+    }
+  ],
+  "amenajarea-unui-apartament-mic-cum-faci-spatiul-sa-para-mai-mare-prin-detalii": [
+    {
+      "intrebare": "De ce contează continuitatea cromatică într-un apartament mic?",
+      "raspuns": "Elimină liniile de contrast care „taie” vizual spațiul, creând senzația unui volum unic, mai generos, decât combinațiile de culori contrastante."
+    },
+    {
+      "intrebare": "Ce fel de mobilier multifuncțional funcționează cel mai bine?",
+      "raspuns": "Piesele cu design curat, nu cele voluminoase și greoaie — acestea din urmă economisesc teoretic spațiu, dar îl încarcă vizual în practică."
+    },
+    {
+      "intrebare": "Cum se folosesc corect oglinzile într-un spațiu mic?",
+      "raspuns": "Poziționate perpendicular pe o fereastră, pentru a reflecta lumina naturală în profunzimea camerei — poziția contează mai mult decât mărimea oglinzii."
+    },
+    {
+      "intrebare": "De ce e mai eficient iluminatul pe mai multe niveluri decât o sursă centrală?",
+      "raspuns": "Creează profunzime vizuală și elimină umbrele dure care, într-un spațiu mic, accentuează senzația de aglomerare."
+    }
+  ],
+  "7-miliarde-de-euro-zero-megawati-ce-a-cumparat-romania-cu-plafonarea-preturilor-la-energie": [
+    {
+      "intrebare": "Cât a costat schema de plafonare-compensare a prețurilor la energie?",
+      "raspuns": "Aproximativ 7 miliarde de euro, aplicată în România între 2021 și 2025."
+    },
+    {
+      "intrebare": "A dus această sumă la creșterea capacității de producție de energie?",
+      "raspuns": "Nu — banii au acoperit diferența dintre prețul de piață și cel plafonat facturat, fără să genereze niciun megawatt suplimentar de capacitate."
+    },
+    {
+      "intrebare": "Ce alternativă ar fi avut efect structural pe termen lung?",
+      "raspuns": "Investiții directe în capacități de stocare la scară mare sau extinderea rețelei de distribuție, care ar fi redus dependența de importuri."
+    },
+    {
+      "intrebare": "Ce legătură are această analiză cu decizia de a deveni prosumator?",
+      "raspuns": "Întărește argumentul că investiția individuală în producție și stocare proprie oferă control real asupra costurilor, spre deosebire de politicile de plafonare fără efect structural."
+    }
+  ],
+  "de-ce-nu-se-pot-reporni-simplu-termocentralele-pe-carbune": [
+    {
+      "intrebare": "De ce nu poate fi repornită rapid o termocentrală pe cărbune oprită?",
+      "raspuns": "Suferă degradări tehnice reale în timp, iar cazanele și turbinele necesită verificări extinse și eventual înlocuiri de componente, proces care poate dura ani."
+    },
+    {
+      "intrebare": "Ce rol joacă normele de emisii în această discuție?",
+      "raspuns": "O centrală repornită trebuie să respecte standardele actuale de emisii, mai stricte decât cele valabile la momentul opririi, necesitând investiții suplimentare."
+    },
+    {
+      "intrebare": "De ce contează forța de muncă calificată?",
+      "raspuns": "Personalul specializat în operarea termocentralelor pe cărbune s-a redus odată cu închiderea capacităților, iar reconstituirea expertizei necesită timp."
+    },
+    {
+      "intrebare": "Care este alternativa mai realistă pe termen mediu?",
+      "raspuns": "Investițiile în surse regenerabile, stocare și eficiență energetică, chiar dacă necesită și ele timp pentru implementare."
+    }
+  ],
+  "oprirea-controlata-a-unui-reactor-nuclear-ce-arata-cazul-cernavoda-despre-seceta-pe-dunare": [
+    {
+      "intrebare": "De ce afectează nivelul scăzut al Dunării o centrală nucleară?",
+      "raspuns": "Centralele nucleare necesită volume mari de apă pentru răcire, iar scăderea nivelului sub un prag critic limitează capacitatea de răcire disponibilă."
+    },
+    {
+      "intrebare": "Ce diferență e între o oprire controlată și una de urgență?",
+      "raspuns": "Oprirea controlată e un proces planificat, monitorizat de operator, decis înainte ca situația să devină una de risc real — nu o defecțiune tehnică."
+    },
+    {
+      "intrebare": "Ce efecte are oprirea temporară a unei unități mari asupra sistemului național?",
+      "raspuns": "Necesitatea de a compensa capacitatea pierdută din alte surse, punând presiune suplimentară pe sistem, mai ales în perioade de vârf de consum."
+    },
+    {
+      "intrebare": "Ce arată acest caz despre diversificarea surselor de energie?",
+      "raspuns": "Sistemele distribuite (solar, eolian, stocare) nu depind de apa de răcire și pot oferi reziliență complementară capacităților centralizate expuse la evenimente climatice."
+    }
+  ],
+  "afeer-cere-recalibrarea-evaluarii-furnizorilor-de-energie-de-catre-anre": [
+    {
+      "intrebare": "Ce este „semaforul” de evaluare a furnizorilor de energie?",
+      "raspuns": "Un sistem ANRE de evaluare a performanței furnizorilor, criticat de AFEER pentru că se bazează în mare parte pe volumul de reclamații, nu pe indicatori reali de calitate."
+    },
+    {
+      "intrebare": "De ce poate fi înșelător volumul brut de reclamații ca indicator?",
+      "raspuns": "Reflectă mai degrabă dimensiunea bazei de clienți sau complexitatea proceselor administrative, nu neapărat calitatea reală a serviciului oferit."
+    },
+    {
+      "intrebare": "Ce obligație de notificare consideră furnizorii dificil de implementat?",
+      "raspuns": "Notificarea consumatorilor la atingerea a 80% din consumul lunar estimat, dificilă fără date de consum în timp real, dependente de contorizare inteligentă generalizată."
+    },
+    {
+      "intrebare": "De ce contează această discuție pentru un prosumator?",
+      "raspuns": "Capacitatea furnizorilor de a oferi notificări corecte în timp util e relevantă pentru optimizarea consumului și a strategiei de compensare a energiei produse."
+    }
+  ],
+  "energia-intre-vreme-si-vremuri-cum-expun-valurile-de-caldura-vulnerabilitatile-retelei": [
+    {
+      "intrebare": "De ce cresc valurile de căldură cererea de energie?",
+      "raspuns": "Utilizarea masivă a aparatelor de aer condiționat creează un consum concentrat în orele cele mai calde, generând vârfuri greu de gestionat."
+    },
+    {
+      "intrebare": "Cum afectează căldura extremă capacitatea de producție?",
+      "raspuns": "Centralele care depind de apă de răcire pot fi afectate de niveluri scăzute ale râurilor, iar eficiența panourilor fotovoltaice scade ușor la temperaturi foarte ridicate."
+    },
+    {
+      "intrebare": "Ce rol pot juca prosumatorii cu baterii în aceste episoade?",
+      "raspuns": "Pot oferi capacitate suplimentară exact în momentele de vârf de consum, contribuind la stabilitatea rețelei, nu doar producând energie în condiții convenabile."
+    },
+    {
+      "intrebare": "Ce argument suplimentar oferă aceste episoade pentru investiția în stocare?",
+      "raspuns": "Dincolo de economia zilnică de factură, o baterie bine dimensionată contribuie real la stabilitatea rețelei în momentele de presiune maximă."
     }
   ]
 }

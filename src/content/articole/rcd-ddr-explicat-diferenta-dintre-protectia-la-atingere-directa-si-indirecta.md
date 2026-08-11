@@ -2,8 +2,8 @@
 title: "RCD/DDR explicat: diferența dintre protecția la atingere directă și indirectă"
 categorie: electric-instalatii
 data: 2026-07-25
-sursaNume: "—"
-sursaUrl: "Conținut propriu — fără sursă externă unică"
+sursaNume: "Electricianul.ro"
+sursaUrl: "https://www.electricianul.ro"
 imagine: "/images/articole/rcd-ddr-explicat-diferenta-dintre-protectia-la-atingere-directa-si-indirecta.webp"
 ---
 
@@ -19,4 +19,4 @@ Normativul I7, referința tehnică pentru instalațiile electrice din România, 
 
 Pentru un cititor care verifică propria casă, testul e simplu: majoritatea RCD-urilor au un buton de test (marcat de regulă „T" sau „Test") direct pe carcasă — apăsat, ar trebui să întrerupă instant circuitul protejat. Dacă tabloul tău nu are niciun dispozitiv cu un asemenea buton, probabil nu ai deloc protecție diferențială — un motiv suficient ca să chemi un electrician autorizat pentru o verificare completă.
 
-Conținut original Electric NEWS.
+Conținut original BuildHub.ro.

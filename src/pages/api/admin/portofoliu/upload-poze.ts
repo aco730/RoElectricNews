@@ -14,7 +14,9 @@ const TIPURI_PERMISE = new Set(['image/jpeg', 'image/png', 'image/webp']);
 const MAX_BYTES = 15 * 1024 * 1024;
 
 function sanitizeazăNumeFolder(nume: string): string {
-	return nume.replace(/[\\/:*?"<>|]/g, '').trim().slice(0, 80);
+	const curat = nume.replace(/[\\/:*?"<>|]/g, '').trim().slice(0, 80);
+	if (curat === '.' || curat === '..' || curat === '') return '';
+	return curat;
 }
 
 export const POST: APIRoute = async ({ request }) => {

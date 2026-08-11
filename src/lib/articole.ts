@@ -13,6 +13,7 @@ export interface ArticolMeta {
 	sursaUrl?: string;
 	imagine?: string;
 	etichete?: string[];
+	fixat?: boolean;
 }
 
 export interface Articol extends ArticolMeta {
@@ -20,6 +21,11 @@ export interface Articol extends ArticolMeta {
 }
 
 const DIACRITICS_RE = new RegExp('[̀-ͯ]', 'g');
+const SLUG_RE = /^[a-z0-9-]{1,90}$/;
+
+function slugValid(slug: string): boolean {
+	return SLUG_RE.test(slug);
+}
 
 function slugify(text: string): string {
 	return text
@@ -71,6 +77,7 @@ function buildFileContent(meta: ArticolMeta, continut: string): string {
 	if (meta.sursaUrl) lines.push(`sursaUrl: ${toFrontmatterValue(meta.sursaUrl)}`);
 	if (meta.imagine) lines.push(`imagine: ${toFrontmatterValue(meta.imagine)}`);
 	if (meta.etichete && meta.etichete.length > 0) lines.push(`etichete: [${meta.etichete.join(', ')}]`);
+	if (meta.fixat) lines.push(`fixat: true`);
 	return `---\n${lines.join('\n')}\n---\n\n${continut.trim()}\n`;
 }
 
@@ -101,12 +108,14 @@ export async function listArticole(): Promise<ArticolMeta[]> {
 			sursaUrl: meta.sursaUrl,
 			imagine: meta.imagine,
 			etichete: parseEticheteValue(meta.etichete),
+			fixat: meta.fixat === 'true',
 		});
 	}
 	return results.sort((a, b) => (a.data < b.data ? 1 : -1));
 }
 
 export async function getArticol(slug: string): Promise<Articol | null> {
+	if (!slugValid(slug)) return null;
 	const filePath = path.join(ARTICOLE_DIR, `${slug}.md`);
 	try {
 		const raw = await readFile(filePath, 'utf-8');
@@ -121,6 +130,7 @@ export async function getArticol(slug: string): Promise<Articol | null> {
 			sursaUrl: meta.sursaUrl,
 			imagine: meta.imagine,
 			etichete: parseEticheteValue(meta.etichete),
+			fixat: meta.fixat === 'true',
 			continut,
 		};
 	} catch {
@@ -137,9 +147,11 @@ export async function saveArticol(input: {
 	sursaUrl?: string;
 	imagine?: string;
 	etichete?: string[];
+	fixat?: boolean;
 	continut: string;
 }): Promise<string> {
 	const slug = input.slug || slugify(input.title);
+	if (!slugValid(slug)) throw new Error('Slug invalid');
 	const filePath = path.join(ARTICOLE_DIR, `${slug}.md`);
 
 	const existent = await getArticol(slug);
@@ -156,6 +168,7 @@ export async function saveArticol(input: {
 			sursaUrl: input.sursaUrl,
 			imagine: input.imagine,
 			etichete: input.etichete,
+			fixat: input.fixat,
 		},
 		input.continut
 	);
@@ -164,6 +177,7 @@ export async function saveArticol(input: {
 }
 
 export async function deleteArticol(slug: string): Promise<void> {
+	if (!slugValid(slug)) throw new Error('Slug invalid');
 	const filePath = path.join(ARTICOLE_DIR, `${slug}.md`);
 	await unlink(filePath);
 }

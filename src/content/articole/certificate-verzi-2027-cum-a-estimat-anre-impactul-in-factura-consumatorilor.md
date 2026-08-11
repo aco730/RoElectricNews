@@ -13,7 +13,7 @@ Metodologia de calcul se bazează pe algoritmul stabilit prin Ordinul ANRE nr. 1
 
 Decizia de a păstra valoarea de 14,5 euro/MWh, în locul cifrei mai mici rezultate din calculul alternativ, s-a bazat pe compararea excedentului estimat pentru 2027 (97%) cu media aritmetică a excedentelor din anii anteriori (123%): ANRE a considerat că, fiind sub această medie istorică, valoarea inițial propusă rămâne justificată. Prețul mediu al unui certificat verde tranzacționat între ianuarie și mai 2026 a fost de 29,4 euro.
 
-Ce înseamnă concret pentru un consumator casnic obișnuit: la un consum anual estimat de aproximativ 2.500 kWh, taxa aferentă certificatelor verzi reprezintă circa 36-37 euro pe an (calcul simplu: 2.500 kWh × 14,5 euro/MWh ÷ 1000). Suma se regăsește distinct în structura facturii de energie electrică, alături de alte componente reglementate — printre care tariful de transport BINOM, deja explicat separat pe Electric NEWS.
+Ce înseamnă concret pentru un consumator casnic obișnuit: la un consum anual estimat de aproximativ 2.500 kWh, taxa aferentă certificatelor verzi reprezintă circa 36-37 euro pe an (calcul simplu: 2.500 kWh × 14,5 euro/MWh ÷ 1000). Suma se regăsește distinct în structura facturii de energie electrică, alături de alte componente reglementate — printre care tariful de transport BINOM, deja explicat separat pe BuildHub.ro.
 
 Decizia ANRE face trimitere directă la Legea nr. 220/2008 privind promovarea producerii energiei din surse regenerabile și necesită aprobarea Guvernului în termen de 60 de zile de la comunicat, pentru a deveni definitivă pentru anul 2027.
 

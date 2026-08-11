@@ -12,6 +12,7 @@ const articole = defineCollection({
     sursaUrl: z.string().optional(),
     imagine: z.string().optional(),
     etichete: z.array(z.string()).optional(),
+    fixat: z.boolean().optional(),
   }),
 });
 

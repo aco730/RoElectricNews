@@ -1,0 +1,118 @@
+---
+export const prerender = false;
+import AdminLayout from '../../../layouts/AdminLayout.astro';
+import { listArticole } from '../../../lib/articole';
+import { sugereazaPentruToate } from '../../../lib/categorie-sugestii';
+import { categories } from '../../../data/categories';
+
+const articole = await listArticole();
+const rezultate = sugereazaPentruToate(articole, 0.15);
+
+function numeCategorie(slug: string) {
+	return categories.find((c) => c.slug === slug)?.name ?? slug ?? '(fără categorie)';
+}
+---
+<AdminLayout title="Sugestii de categorie">
+	<div class="cap">
+		<h1>Sugestii de categorie pentru articole</h1>
+		<p class="hint">
+			Pe baza cuvintelor din titlu (comparate cu numele/descrierea fiecărei categorii și cu titlurile
+			articolelor deja încadrate acolo), sistemul sugerează unde s-ar potrivi mai bine fiecare articol.
+			Sunt afișate doar articolele unde categoria curentă nu este cea mai bună potrivire. Nu se schimbă nimic automat.
+		</p>
+	</div>
+
+	{rezultate.length === 0 && <p class="gol">Toate articolele par bine încadrate în momentul de față.</p>}
+
+	{rezultate.length > 0 && (
+		<table class="tabel-sugestii">
+			<thead>
+				<tr>
+					<th>Articol</th>
+					<th>Categorie curentă</th>
+					<th>Sugestii (scor)</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{rezultate.map((r) => (
+					<tr data-slug={r.articolSlug}>
+						<td>
+							<a href={`/admin/articole/editor?slug=${r.articolSlug}`} target="_blank">{r.titlu}</a>
+						</td>
+						<td class="cat-curenta">{numeCategorie(r.categorieCurenta)}</td>
+						<td class="sugestii-lista">
+							{r.sugestii.map((s, i) => (
+								<div class={`sugestie ${i === 0 ? 'top' : ''}`}>
+									<span class="nume-cat">{s.name}</span>
+									<span class="scor">{(s.scor * 100).toFixed(0)}%</span>
+									{s.cuvinteCheie.length > 0 && (
+										<span class="cuvinte">{s.cuvinteCheie.slice(0, 5).join(', ')}</span>
+									)}
+									{i === 0 && (
+										<button type="button" class="btn-aplica" data-slug={r.articolSlug} data-categorie={s.slug}>
+											Aplică sugestia
+										</button>
+									)}
+								</div>
+							))}
+						</td>
+						<td class="status-cell"></td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+	)}
+
+	<style is:global>
+		.cap { max-width: 820px; margin-bottom: 1.25rem; }
+		.hint { color: #94a3b8; font-size: 0.85rem; margin-top: 0.25rem; line-height: 1.5; }
+		.gol { color: #94a3b8; font-size: 0.9rem; }
+		table.tabel-sugestii { width: 100%; border-collapse: collapse; max-width: 1100px; }
+		.tabel-sugestii th, .tabel-sugestii td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #1f2937; font-size: 0.85rem; vertical-align: top; }
+		.tabel-sugestii th { color: #94a3b8; font-weight: 600; }
+		.tabel-sugestii a { color: #93c5fd; text-decoration: none; }
+		.tabel-sugestii a:hover { text-decoration: underline; }
+		.cat-curenta { color: #cbd5e1; white-space: nowrap; }
+		.sugestii-lista { display: flex; flex-direction: column; gap: 0.4rem; min-width: 320px; }
+		.sugestie { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.3rem 0.5rem; border-radius: 6px; }
+		.sugestie.top { background: #0f2419; border: 1px solid #14532d; }
+		.nume-cat { font-weight: 600; color: #e2e8f0; }
+		.scor { font-variant-numeric: tabular-nums; color: #86efac; font-size: 0.8rem; }
+		.sugestie:not(.top) .scor { color: #94a3b8; }
+		.cuvinte { color: #64748b; font-size: 0.72rem; }
+		.btn-aplica {
+			background: #14532d; color: #bbf7d0; border: 1px solid #166534; border-radius: 6px;
+			padding: 0.25rem 0.6rem; font-size: 0.75rem; cursor: pointer; margin-left: auto;
+		}
+		.btn-aplica:hover { background: #166534; }
+		.btn-aplica:disabled { opacity: 0.5; cursor: not-allowed; }
+		.status-cell { font-size: 0.75rem; color: #86efac; white-space: nowrap; }
+	</style>
+
+	<script>
+		document.querySelectorAll<HTMLButtonElement>('.btn-aplica').forEach((btn) => {
+			btn.addEventListener('click', async () => {
+				const slug = btn.dataset.slug!;
+				const categorie = btn.dataset.categorie!;
+				btn.disabled = true;
+				btn.textContent = 'Se aplică...';
+				const res = await fetch(`/api/admin/articole/${slug}`, {
+					method: 'PATCH',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ categorie }),
+				});
+				const rand = btn.closest('tr');
+				if (res.ok) {
+					const status = rand?.querySelector('.status-cell');
+					if (status) status.textContent = 'Aplicat ✓';
+					rand?.querySelectorAll('.btn-aplica').forEach((b) => (b as HTMLButtonElement).disabled = true);
+				} else {
+					btn.disabled = false;
+					btn.textContent = 'Aplică sugestia';
+					alert('Nu am putut aplica sugestia.');
+				}
+			});
+		});
+	</script>
+</AdminLayout>

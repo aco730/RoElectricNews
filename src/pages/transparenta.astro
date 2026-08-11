@@ -1,0 +1,93 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const toateArticolele = await getCollection("articole");
+
+function domeniu(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+const surseMap = new Map<string, { nume: string; url: string; count: number }>();
+for (const art of toateArticolele) {
+  const url = art.data.sursaUrl;
+  if (!url || !/^https?:\/\//.test(url)) continue;
+  const host = domeniu(url);
+  const existent = surseMap.get(host);
+  if (existent) {
+    existent.count++;
+  } else {
+    surseMap.set(host, { nume: art.data.sursaNume || host, url: `${new URL(url).protocol}//${new URL(url).hostname}`, count: 1 });
+  }
+}
+const surse = [...surseMap.values()].sort((a, b) => b.count - a.count);
+const conținutPropriuCount = toateArticolele.filter((a) => !a.data.sursaUrl || !/^https?:\/\//.test(a.data.sursaUrl)).length;
+---
+<Layout
+  title="Transparență editorială — BuildHub.ro"
+  description="Cum este creat conținutul de pe BuildHub.ro: rolul AI-ului, verificarea umană și lista site-urilor sursă folosite."
+  singleCol
+>
+  <div class="legal-page">
+    <h1>Transparență editorială</h1>
+    <p class="ultima-actualizare">Actualizat automat — reflectă toate cele {toateArticolele.length} articole publicate în prezent.</p>
+
+    <section>
+      <h2>Cum este creat conținutul</h2>
+      <p>
+        O parte din articolele de pe BuildHub.ro sunt redactate cu asistența unui model de inteligență artificială (AI),
+        pornind de la surse publice de știri și ghiduri tehnice din domeniul construcțiilor, instalațiilor electrice și
+        energiei regenerabile. Fiecare articol asistat de AI este revizuit de un editor uman înainte de publicare.
+      </p>
+      <p>
+        Scopul acestor articole este informativ — sintetizăm și explicăm subiecte din surse publice, fără a le copia
+        integral, și indicăm sursa originală la finalul fiecărui articol acolo unde există una externă.
+      </p>
+    </section>
+
+    <section>
+      <h2>Site-uri sursă folosite ({surse.length})</h2>
+      <p class="hint">
+        Lista se actualizează automat de fiecare dată când este publicat un articol nou cu o sursă externă.
+      </p>
+      {surse.length > 0 ? (
+        <ul class="lista-surse">
+          {surse.map((s) => (
+            <li>
+              <a href={s.url} target="_blank" rel="noopener nofollow">{s.nume}</a>
+              <span class="count">{s.count} {s.count === 1 ? "articol" : "articole"}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Momentan nu există surse externe înregistrate.</p>
+      )}
+      {conținutPropriuCount > 0 && (
+        <p class="hint">Plus {conținutPropriuCount} articole de conținut propriu, fără sursă externă unică.</p>
+      )}
+    </section>
+
+    <p class="link-conex">Vezi și <a href="/confidentialitate">Politica de confidențialitate (GDPR)</a>.</p>
+  </div>
+
+  <style is:global>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 1rem 0 3rem; }
+    .legal-page h1 { margin-bottom: 0.25rem; }
+    .legal-page .ultima-actualizare { color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; }
+    .legal-page section { margin-bottom: 1.75rem; }
+    .legal-page h2 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+    .legal-page p { color: var(--text); font-size: 0.95rem; line-height: 1.65; }
+    .legal-page .hint { color: var(--muted); font-size: 0.85rem; }
+    .lista-surse { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem 1rem; margin-top: 0.75rem; }
+    .lista-surse li { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; font-size: 0.9rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    .lista-surse a { color: var(--link, #2563eb); text-decoration: none; }
+    .lista-surse a:hover { text-decoration: underline; }
+    .lista-surse .count { color: var(--muted); font-size: 0.78rem; }
+    .link-conex { border-top: 1px solid var(--border); padding-top: 1.5rem; font-size: 0.9rem; }
+  </style>
+</Layout>

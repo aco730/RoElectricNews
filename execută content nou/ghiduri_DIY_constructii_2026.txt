@@ -1,0 +1,99 @@
+================================================================================
+PORTAL STIRI CONSTRUCTII - GHIDURI PRACTICE & DIY (IULIE - AUGUST 2026)
+================================================================================
+
+1. REȚELE & CONFORT (Instalații Electrice, Sanitare & Termice)
+--------------------------------------------------------------------------------
+* Cum să montezi un tablou electric rezidențial pas cu pas (Normativ I7 actualizat):
+  https://devizeroo.ro/ghid-normativ
+
+* Ghid practic de verificare și pregătire pentru branșamentul trifazat în 2026:
+  https://electro-calin.ro/ghid-pentru-curentul-trifazic-cat-costa-sa-tragi-curent-trifazic-in-2026
+
+* Cum să optimizezi pantele de scurgere și traseele sanitare la o casă nouă:
+  https://www.arenainstalatiilor.ro
+
+
+2. SMART LIVING (Automatizări & IoT DIY)
+--------------------------------------------------------------------------------
+* Cum să configurezi un sistem Smart Home fără fire (Zigbee/Matter) într-un apartament sau casă:
+  https://www.smarthomesystems.ro
+
+* Ghid DIY pentru automatizarea iluminatului și senzorilor de prezență rezidențiali:
+  https://www.loxone.com/ro
+
+* Cum să integrezi camere IP și control acces la poartă pe telefonul mobil:
+  https://www.spy-shop.ro/blog
+
+
+3. ECO-ENERGIE & STOCARE (Ghiduri Tehnice & Prosumatori)
+--------------------------------------------------------------------------------
+* Cum îți pregătești acoperișul și casa pentru montajul panourilor fotovoltaice și al bateriei:
+  https://kilowat.ro/blog/fotovoltaice/pregatire-instalare-sistem-fotovoltaic/
+
+* Ghid pas cu pas pentru dosarul de prosumator și completarea etapelor prin AFM / Casa Verde 2026:
+  https://siana-energie.ro/casa-verde
+
+* Cum să dimensionezi un banc de baterii LiFePO4 pentru stocare rezidențială:
+  https://asociatiaprosumatorilor.ro/in-vara-lui-2026-romania-este-salvata-de-cei-360-000-de-prosumatori-si-de-energia-regenerabila-tin-sistemul-electric-in-viata/
+
+
+4. REGLEMENTĂRI & LEGISLAȚIE (Ghiduri Administrative)
+--------------------------------------------------------------------------------
+* Cum obții Certificatul de Urbanism pas cu pas în 2026 (Acte, depunere, digitalizare):
+  https://didstudio.ro/cum-obtii-certificat-de-urbanism/
+
+* Ghid complet de obținere a Autorizației de Construire conform noilor proceduri:
+  https://proiect-case.ro/autorizatie-construire-ghid
+
+* Cum funcționează noul Cod al Urbanismului (CATUC) și ce trebuie să știe beneficiarul:
+  https://cursdeguvernare.ro/avizarea-constructiilor-digitalizata-dupa-adoptarea-codului-urbanismului.html
+
+
+5. ARHITECTURĂ & CONCEPT (Proiectare & Planificare)
+--------------------------------------------------------------------------------
+* Cum să faci releveul terenului și zonarea înainte de a discuta cu arhitectul:
+  https://proiect-case.ro/autorizatie-construire-ghid
+
+* Ghid de aplicare a principiilor bioclimatice (Orientare solară DIY):
+  https://www.revistaconstructiilor.eu/index.php/2026/07/08/oar-este-disponibil-raportul-sioar-2025-o-analiza-a-pietei-de-arhitectura-si-constructii-din-romania-realizata-anual-de-ordinul-arhitectilor/
+
+* Cum alegi compartimentarea corectă la o casă nZEB în funcție de stilul de viață:
+  https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/
+
+
+6. ȘANTIER & STRUCTURĂ (Execuție & Supraveghere)
+--------------------------------------------------------------------------------
+* Cum verifici calitatea turnării betonului și hidroizolația fundației (Ghid pentru beneficiari):
+  https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc
+
+* Cum pregătești terenul și traseele de utilități îngropate înainte de betonare:
+  https://ghidamenajari.ro/amenajare-gradina/amenajare-curte/
+
+* Ghid de izolare termică fără punți termice la mansardă și acoperiș:
+  https://arenaconstruct.ro/
+
+
+7. DESIGN INTERIOR (Finisaje & Proiecte DIY)
+--------------------------------------------------------------------------------
+* Cum să pregătești pereții și să aplici finisaje minerale sau efecte decorative:
+  https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/
+
+* Ghid DIY de optimizare a iluminatului ambiental și scafelor cu LED:
+  https://www.hornbach.ro/proiecte/tendinte-design-interior-2026/
+
+* Cum să schițezi și să comanzi un mobilier custom adaptat spațiilor mici:
+  https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/
+
+
+8. OUTDOOR & PEISAGISTICĂ (Curte, Grădină & Irigații DIY)
+--------------------------------------------------------------------------------
+* Ghid complet de montaj DIY pentru alei și pavaje pe strat de balast compactat:
+  https://ghidamenajari.ro/amenajare-gradina/amenajare-curte/
+
+* Cum să instalezi un sistem de irigații automatizat pas cu pas:
+  https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/
+
+* Cum îți proiectezi zonarea curții și gazonul (Rulou vs. Sămânță):
+  https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/
+================================================================================

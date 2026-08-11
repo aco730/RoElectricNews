@@ -2,8 +2,10 @@
 title: "Ce este protocolul KNX și de ce e standardul smart home"
 categorie: smart-home
 data: 2026-08-10
+dataAdaugare: "2026-08-10"
 sursaNume: "Smart Home Systems"
 sursaUrl: "https://smarthomesystems.ro/noutati/page/6/"
+imagine: "/images/articole/ce-este-protocolul-knx-si-de-ce-e-standardul-smart-home.jpg"
 ---
 
 KNX este un standard internațional de automatizare a clădirilor, dezvoltat încă din anii '90, și rămâne astăzi unul dintre cele mai folosite protocoale pentru case și clădiri complet automatizate. Spre deosebire de soluțiile wireless mai noi (Zigbee, Matter), KNX se bazează de regulă pe cablare dedicată, montată din faza de construcție sau renovare majoră — motiv pentru care se recomandă în special pentru case noi sau proiecte unde arhitectura permite integrarea din start.
