@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Agenda Construcțiilor"
 sursaUrl: "https://agendaconstructiilor.ro/stiri/energie-si-tranzitie-energetica/rezolv-energy-vizeaza-extinderea-portofoliului-la-4-5-gw-pana-in-2030"
-imagine: "/images/articole/extinderea-rezolv-energy-la-4-5-gw-ce-arata-despre-viitorul-energiei-regenerabile-in-roman.jpg"
+imagine: "/images/articole/extinderea-rezolv-energy-la-4-5-gw-ce-arata-despre-viitorul-energiei-regenerabile-in-roman.webp"
 ---
 
 REZOLV Energy, unul dintre dezvoltatorii majori de proiecte regenerabile din regiune, a anunțat obiectivul de a-și extinde portofoliul la 4-5 GW capacitate instalată până în 2030 — o cifră care arată amploarea investițiilor private în energia regenerabilă la scară mare din România și regiune.

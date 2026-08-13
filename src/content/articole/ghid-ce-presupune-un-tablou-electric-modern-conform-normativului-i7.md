@@ -2,6 +2,7 @@
 title: "Ghid: ce presupune un tablou electric modern conform normativului I7"
 categorie: electric-instalatii
 data: 2026-07-13
+dataAdaugare: "2026-08-10"
 sursaNume: "Electroplan"
 sursaUrl: "https://www.electroplan.ro"
 imagine: "/images/articole/ghid-ce-presupune-un-tablou-electric-modern-conform-normativului-i7.webp"

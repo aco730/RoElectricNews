@@ -2,9 +2,10 @@
 title: "Prețuri orientative pentru prosumatori: cât plătești și cât încasezi pe kWh în vara 2025"
 categorie: reglementari-preturi
 data: 2025-10-06
+dataAdaugare: "2026-08-10"
 sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
 sursaUrl: "https://asociatiaprosumatorilor.ro/preturi-orientative-pentru-prosumatori-energie-activa-lei-kwh-cu-tg-inclus-iulie-si-august-2025/"
-imagine: "/images/articole/preturi-orientative-pentru-prosumatori-cat-platesti-si-cat-incasezi-pe-kwh-in-va.webp"
+imagine: "/images/articole/preturi-orientative-pentru-prosumatori-cat-platesti-si-cat-incasezi-pe-kwh-in-va.jpg"
 ---
 
 Asociația Prosumatorilor și Comunităților de Energie a publicat o matrice cu prețurile orientative practicate de principalii furnizori pentru energia activă a prosumatorilor, pentru lunile iulie și august 2025 — date colectate direct de la membrii comunității, utile pentru cineva care vrea să compare rapid ofertele înainte de a semna sau schimba contractul.

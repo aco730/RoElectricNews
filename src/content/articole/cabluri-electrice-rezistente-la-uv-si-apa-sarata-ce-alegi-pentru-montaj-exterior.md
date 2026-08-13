@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-10"
 sursaNume: "Proiecte Diverse DIY"
 sursaUrl: "https://www.youtube.com/watch?v=VMWX5wN4yNU"
-imagine: "/images/articole/cabluri-electrice-rezistente-la-uv-si-apa-sarata-ce-alegi-pentru-montaj-exterior.webp"
+imagine: "/images/articole/cabluri-electrice-rezistente-la-uv-si-apa-sarata-ce-alegi-pentru-montaj-exterior.jpg"
 ---
 
 Pentru orice traseu de cablu montat afară — spre un panou fotovoltaic pe acoperiș, spre o anexă, sau îngropat direct în pământ — rezistența la UV și la umiditate contează la fel de mult ca secțiunea cablului. Un video recent de pe canalul Proiecte Diverse DIY trece în revistă câteva variante concrete, cu diferențele lor practice.

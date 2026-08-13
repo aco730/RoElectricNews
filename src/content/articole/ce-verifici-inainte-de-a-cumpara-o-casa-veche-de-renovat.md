@@ -5,9 +5,8 @@ data: 2026-07-08
 dataAdaugare: "2026-08-11"
 sursaNume: "Designist"
 sursaUrl: "https://designist.ro/richis-119-de-la-licitatie-din-faliment-la-cea-mai-iubita-casa-din-sat-episodul-2/"
-imagine: "/images/articole/ce-verifici-inainte-de-a-cumpara-o-casa-veche-de-renovat.jpg"
+imagine: "/images/articole/ce-verifici-inainte-de-a-cumpara-o-casa-veche-de-renovat.webp"
 ---
-
 
 Cumpărarea unei case vechi cu intenția de a o renova complet poate fi o investiție excelentă sau o capcană costisitoare — diferența stă în verificările tehnice făcute înainte de achiziție, nu în entuziasmul inițial pentru potențialul vizual al proprietății.
 
@@ -18,4 +17,3 @@ A doua verificare ține de umiditate și igrasie — pereții cu pete de umezeal
 A treia verificare, adesea ignorată la vizionarea inițială, ține de instalațiile existente — vârsta și starea instalației electrice (tablou vechi, cablaj fără împământare) și a celei sanitare (țevi vechi, coroziune) influențează direct bugetul real de renovare, pentru că înlocuirea completă a instalațiilor este, de multe ori, mai costisitoare decât lucrările vizibile de finisaje.
 
 Un ultim aspect practic este verificarea actelor și a situației legale a proprietății — extras de carte funciară actualizat, verificarea eventualelor sarcini sau litigii, și confirmarea că suprafața și structura reală corespund cu documentația oficială, pentru a evita surprize legale care pot bloca sau întârzia semnificativ procesul de renovare.
-

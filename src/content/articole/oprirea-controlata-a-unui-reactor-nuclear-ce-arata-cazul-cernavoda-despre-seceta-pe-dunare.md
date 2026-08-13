@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "InvesTenergy"
 sursaUrl: "https://www.investenergy.ro/snn-unitatea-2-de-la-cernavoda-poate-fi-oprita-controlat-in-dimineata-zilei-de-13-august-pe-fondul-scaderii-istorice-a-nivelului-dunarii/"
-imagine: "/images/articole/oprirea-controlata-a-unui-reactor-nuclear-ce-arata-cazul-cernavoda-despre-seceta-pe-dunare.jpg"
+imagine: "/images/articole/oprirea-controlata-a-unui-reactor-nuclear-ce-arata-cazul-cernavoda-despre-seceta-pe-dunare.webp"
 ---
 
 Anunțul privind posibila oprire controlată a Unității 2 de la centrala nucleară Cernavodă, pe fondul scăderii istorice a nivelului Dunării, arată o vulnerabilitate mai puțin discutată a sistemului energetic — dependența unor capacități mari de producție de resurse naturale afectate direct de schimbările climatice.

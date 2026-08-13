@@ -2,6 +2,7 @@
 title: "Cine e EnergyOrb, platforma europeană de monitorizare solar și stocare"
 categorie: fotovoltaic
 data: 2026-07-08
+dataAdaugare: "2026-08-10"
 sursaNume: "EnergyOrb"
 sursaUrl: "https://www.energyorb.com/index.html"
 imagine: "/images/articole/cine-e-energyorb-platforma-europeana-de-monitorizare-solar-si-stocare.webp"

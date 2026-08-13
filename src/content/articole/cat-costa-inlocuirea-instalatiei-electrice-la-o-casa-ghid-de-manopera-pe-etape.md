@@ -6,7 +6,6 @@ dataAdaugare: "2026-08-10"
 sursaNume: "Electro-Calin"
 sursaUrl: "https://electro-calin.ro"
 imagine: "/images/articole/cat-costa-inlocuirea-instalatiei-electrice-la-o-casa-ghid-de-manopera-pe-etape.webp"
-fixat: true
 ---
 
 Înlocuirea completă a instalației electrice la o casă locuită e unul dintre cele mai invazive și mai des amânate proiecte de renovare — implică spargere de pereți, praf, zile fără curent pe zone ale casei și, de regulă, un electrician autorizat prezent câteva săptămâni. Înțelegerea etapelor ajută la estimarea realistă a timpului și bugetului, chiar dacă prețurile exacte variază de la o zonă la alta și de la un electrician la altul.

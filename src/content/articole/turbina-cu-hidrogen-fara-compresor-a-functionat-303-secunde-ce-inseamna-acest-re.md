@@ -2,9 +2,10 @@
 title: "Turbina cu hidrogen fără compresor a funcționat 303 secunde: ce înseamnă acest record pentru energia curată"
 categorie: reglementari-preturi
 data: 2026-08-05
+dataAdaugare: "2026-08-10"
 sursaNume: "Mediafax"
 sursaUrl: "https://www.mediafax.ro/life-inedit/o-noua-turbina-cu-hidrogen-produce-electricitate-din-explozii-controlate-si-stabileste-un-record-23784808"
-imagine: "/images/articole/turbina-cu-hidrogen-fara-compresor-a-functionat-303-secunde-ce-inseamna-acest-re.webp"
+imagine: "/images/articole/turbina-cu-hidrogen-fara-compresor-a-functionat-303-secunde-ce-inseamna-acest-re.jpg"
 ---
 
 Cercetătorii de la Karlsruhe Institute of Technology (KIT) din Germania au reușit să facă o turbină cu hidrogen fără compresor mecanic să funcționeze timp de 303 secunde — peste cinci minute — depășind cu 53 de secunde recordul anterior de 250 de secunde, deținut de NASA. Realizarea marchează cea mai lungă perioadă de funcționare continuă demonstrată vreodată pentru acest tip de tehnologie.

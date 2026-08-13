@@ -2,9 +2,10 @@
 title: "ANRE reglementează comunitățile de energie și notificarea la 80% din consumul lunar estimat: ce înseamnă pentru tine"
 categorie: reglementari-preturi
 data: 2026-06-30
+dataAdaugare: "2026-08-10"
 sursaNume: "ANRE — Comunicate de presă"
 sursaUrl: "https://anre.ro/comunicat-de-presa-anre-reglementeaza-comunitatile-de-energie-si-notificarea-pe-care-furnizorii-trebuie-sa-o-trimita-consumatorilor-cand-ating-80-din-consumul-lunar-estimat-al-energiei-electrice/"
-imagine: "/images/articole/anre-reglementeaza-comunitatile-de-energie-si-notificarea-la-80-din-consumul-lun.webp"
+imagine: "/images/articole/anre-reglementeaza-comunitatile-de-energie-si-notificarea-la-80-din-consumul-lun.jpg"
 ---
 
 ANRE a publicat pe 30 iunie 2026 un ordin care modifică Regulamentul de Furnizare a Energiei Electrice și introduce, în sfârșit, cadrul complet de funcționare pentru comunitățile de energie: cine e „furnizorul principal” (cel care face echilibrarea), ce e „energia partajată” și cum se împarte surplusul livrat în rețea între membri. Comunitățile pot alege între două algoritmi de alocare — proporțional cu consumul efectiv din fiecare interval de facturare, sau pe procente fixe stabilite prin regulamentul intern, cu schimbări aplicabile doar din prima zi a lunii următoare, notificate în maximum 2 zile lucrătoare.

@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Kilowat"
 sursaUrl: "https://kilowat.ro/blog/fotovoltaice/pregatire-instalare-sistem-fotovoltaic/"
-imagine: "/images/articole/care-sunt-costurile-de-pregatire-a-tabloului-si-acoperisului-pentru-instalarea-panourilor.jpg"
+imagine: "/images/articole/care-sunt-costurile-de-pregatire-a-tabloului-si-acoperisului-pentru-instalarea-panourilor.webp"
 ---
 
 Înainte de montarea propriu-zisă a panourilor fotovoltaice, sunt necesare câteva lucrări pregătitoare la nivelul tabloului electric și al acoperișului, adesea subestimate în bugetul inițial al proiectului.

@@ -2,9 +2,10 @@
 title: "Certificate verzi 2027: cum a estimat ANRE impactul în factura consumatorilor"
 categorie: reglementari-preturi
 data: 2026-07-06
+dataAdaugare: "2026-08-10"
 sursaNume: "ANRE — Comunicate de presă"
 sursaUrl: "https://anre.ro/comunicat-referitor-la-nivelul-impactului-mediu-estimat-al-certificatelor-verzi-in-factura-consumatorului-final-de-energie-electrica-pentru-anul-2027/"
-imagine: "/images/articole/certificate-verzi-2027-cum-a-estimat-anre-impactul-in-factura-consumatorilor.webp"
+imagine: "/images/articole/certificate-verzi-2027-cum-a-estimat-anre-impactul-in-factura-consumatorilor.jpg"
 ---
 
 ANRE a stabilit, printr-un comunicat emis pe 6 iulie 2026 de Serviciul relații interinstituționale, nivelul impactului mediu estimat al certificatelor verzi în factura consumatorului final de energie electrică pentru anul 2027: 14,5 euro pe MWh — aceeași valoare propusă inițial, menținută după consultarea publică, deși un algoritm alternativ de calcul indica o cifră mai mică, de 13,03 euro/MWh, respinsă în final de autoritate.

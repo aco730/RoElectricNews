@@ -5,10 +5,9 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Euronews România (YouTube)"
 sursaUrl: "https://www.youtube.com/watch?v=0mfbXe1R5R8"
-imagine: "/images/articole/criza-apa-dunare-reglementari.jpg"
+imagine: "/images/articole/criza-apei-pe-dunare-si-presiunea-pe-infrastructura-energetica-ce-planuri-de-reglementare.png"
 etichete: [reglementari, apa, energie, fotovoltaice]
 ---
-
 
 Nivelul istoric de scăzut al Dunării a pus sub presiune funcționarea centralei nucleare de la Cernavodă, care depinde de debitul de apă adus prin brațul Bala. Lucrările de urgență din ultimele zile — coborârea unor barje și dislocarea unei stânci pe traseul fluviului — au crescut temporar nivelul apei cu circa 8 cm, dar au generat și aluviuni care au format noi obstacole, redirecționând o parte din debit departe de canalul necesar centralei. Autoritățile au trecut la lucrări de dragare pe cei 60 de km afectați, finanțate printr-o alocare de urgență de 5 milioane de lei, însă prognoza privind numărul de zile de funcționare rămâne incertă și s-a înrăutățit față de estimările inițiale.
 
@@ -23,4 +22,3 @@ Similar, strategia națională pentru biodiversitate — un jalon PNRR de aproap
 Pe zona energiei regenerabile, Ministerul Mediului a anunțat o schimbare de politică pentru programul de sprijin destinat gospodăriilor: componenta dedicată exclusiv panourilor fotovoltaice va fi înlocuită cu una axată pe baterii de stocare, pentru a reduce dependența de importurile de energie în orele de vârf ale serii. Se estimează o capacitate suplimentară de minimum 200 MWh stocați, iar criteriile de acordare a fondurilor urmează să fie schimbate, cu accent pe cofinanțare și competitivitate, nu pe rapiditatea depunerii cererii.
 
 De asemenea, a fost pusă în transparență o nouă metodologie de reorganizare a structurilor de administrare a pădurilor, în contextul unui număr în creștere de cazuri de tăieri ilegale identificate de gărzile forestiere, inclusiv un caz recent de aproximativ 5.000 de arbori tăiați ilegal într-o singură zonă.
-

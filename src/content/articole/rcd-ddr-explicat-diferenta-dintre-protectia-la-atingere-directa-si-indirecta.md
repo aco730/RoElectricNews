@@ -2,6 +2,7 @@
 title: "RCD/DDR explicat: diferența dintre protecția la atingere directă și indirectă"
 categorie: electric-instalatii
 data: 2026-07-25
+dataAdaugare: "2026-08-10"
 sursaNume: "Electricianul.ro"
 sursaUrl: "https://www.electricianul.ro"
 imagine: "/images/articole/rcd-ddr-explicat-diferenta-dintre-protectia-la-atingere-directa-si-indirecta.webp"

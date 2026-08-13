@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Fotovoltaic.ro"
 sursaUrl: "https://www.fotovoltaic.ro"
-imagine: "/images/articole/invertor-on-grid-vs-hibrid-vs-off-grid-cum-dimensionezi-sistemul-solar.jpg"
+imagine: "/images/articole/invertor-on-grid-vs-hibrid-vs-off-grid-cum-dimensionezi-sistemul-solar.webp"
 ---
 
 Tipul de invertor ales decide, mai mult decât orice altă componentă, ce poate și ce nu poate face un sistem fotovoltaic — iar confuzia dintre cele trei categorii e una dintre cele mai frecvente surse de dezamăgire la clienții care aleg singuri echipamentul fără consultanță.
