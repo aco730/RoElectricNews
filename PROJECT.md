@@ -1,15 +1,56 @@
-# sep
+# sep (RoElectricNews / Solar Electric Panel)
 
 ## Description
-Romanian news/content site about electric systems, photovoltaics, smart home and energy storage, published under the **Solar Electric Panel (SEP)** business brand. Built with Astro. Merges what used to be three separate folders (a "Firmă montaj fotovoltaic" business site, an "electric NEWS" content project, and a photo portfolio) into one site.
+Two-faced Astro site: a Romanian news/content blog about electric systems, photovoltaics, smart home and energy
+storage, branded **RoElectricNews** (renamed 2026-09-20 from "Electric NEWS"/"BuildHub.ro"), plus an electrician
+business mini-site under `/electrician` for **Solar Electric Panel (SEP)** (Teo Marcu, serves **București + Ilfov**,
+explicitly not Făgăraș). Built with Astro. Merges what used to be three separate folders (a "Firmă montaj
+fotovoltaic" business site, an "electric NEWS" content project, and a photo portfolio) into one site.
 
-Key design decision: **zero hardcoded content** — `continut-site.xlsx` (Categories/Articles/Q&A sheets) is the single source of truth, synced into the site via `npm run sync` (`scripts/sync_content.py`). ~75 articles across 7 color-coded categories, 605+ portfolio photos across 32 project sites (`npm run add-photos` auto-detects new folders in `poze-noi/`).
+Live: **https://roelectricnews.netlify.app**. GitHub: **github.com/aco730/RoElectricNews**, branches `master`
+(production) and `test-whatsapp-primary` (an active A/B test variant, see below).
 
-Has a full internal `/admin` section (login-protected, `src/lib/adminAuth.ts`) for editing articles, categories, Q&A, portfolio photos, header/footer, legal pages, and running maintenance scripts — this is where content changes are made locally before committing and deploying.
+Key design decision: **zero hardcoded content** — `continut-site.xlsx` (Categories/Articles/Q&A sheets) is the
+single source of truth, synced into the site via `npm run sync` (`scripts/sync_content.py`). 169 blog articles
+across 11 categories, 588+ portfolio photos across 32 project sites (`npm run add-photos` auto-detects new
+folders in `poze-noi/`). The `/electrician` mini-site's own pages (hero, cards, pricing, FAQ, CTAs) are driven by
+`src/data/portofoliu-electrician-content.json`, edited through a visual drag-and-drop section editor
+(`SiteEditor`, only reachable via `/admin`, which is 404'd on Netlify production — edits happen locally then get
+committed).
 
-Also includes a client-facing 4-step quote wizard (`/oferta`, Buget/Standard/Premium tiers, pricing pulled from Excel) and an internal admin quote calculator (`/admin-oferta.html`).
+Has a full internal `/admin` section (login-protected, `src/lib/adminAuth.ts`) for editing articles, categories,
+Q&A, portfolio photos, header/footer, legal pages, the electrician mini-site's sections, and running maintenance
+scripts (site audit, duplicate-article detector, category suggestions) — this is where content changes are made
+locally before committing and deploying. **The whole `/admin` and `/api/admin/*` prefix returns a hard 404 in
+Netlify production** (enforced in `src/middleware.ts` via `if (peNetlify && pathname.startsWith('/admin')) return
+new Response('Not found', { status: 404 })`) — it only works when running the Node adapter locally.
 
-**Status:** actively developed (10-24 Aug session history), has uncommitted local changes as of the last scan — check `git status` before assuming what's live matches `main`.
+Also includes a client-facing 4-step quote wizard (`/electrician/calculatoare/oferta`, Buget/Standard/Premium
+tiers, pricing pulled from `src/data/materiale-preturi.json`) and a "quick estimate" wizard
+(`/electrician/calculatoare/rapid`) that sends a WhatsApp message with a draft quote.
+
+A real solar-production calculator (`/electrician/calculatoare/fotovoltaic`) can look up actual satellite-derived
+yield data for a specific address via the EU's free PVGIS API (geocoded through Nominatim/OpenStreetMap
+server-side, address never stored) — see `src/pages/api/electrician/pvgis.ts`.
+
+Click-through tracking on the homepage hero's two CTA buttons (WhatsApp vs phone call) is recorded via Netlify
+Blobs and readable at `/api/click-stats.json?key=<ADMIN_PASSWORD>` (see `src/lib/clickTracking.ts`) — built to
+measure the `master` vs `test-whatsapp-primary` split test running via Netlify's native Split Testing feature.
+
+**Status:** actively developed. Real git history starts 2026-08-10; a burst of work happened 2026-08-10 through
+2026-08-13 (initial site, security fixes, favicon, article fixes), then a large two-session push on 2026-09-20
+(full rebrand, lead-gen UI/UX overhaul, split test + tracking infrastructure, Algolia Crawler setup, a mobile
+counter bug fix). See `TODO.md` for the complete chronological changelog and `STATUS.md` for exactly what's
+live/broken/pending right now — both are kept current, check them before assuming what's live matches `master`.
+
+## Workflow — two-folder sync (important, read before editing)
+
+All real editing happens **first** in this clean working copy, `D:\730dash\sep-website` (used to run the local
+dev server and `astro build` for verification — it has no legacy/pre-merger folders, `node_modules`, `dist`,
+`.astro`, `.netlify`, or old archive content). Every changed file then gets `cp`'d into the matching path under
+the git-tracked original, `D:\730dash\projects\business\sep` (which DOES still contain legacy pre-merger folders
+that must never be touched or accidentally deleted — e.g. old "Firmă montaj fotovoltaic..." and "electric NEWS"
+directories). Commits and pushes only ever happen from the tracked original, never from this working copy.
 
 <!-- AUTO-GENERATED:BEGIN — do not edit below, regenerated by scripts/generate-project-docs.mjs -->
 
