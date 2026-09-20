@@ -1,5 +1,22 @@
 import type { SectionData } from "@/lib/types";
 
+function trackCtaClick(button: "whatsapp" | "phone") {
+  try {
+    fetch("/api/track-click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ button }),
+      keepalive: true,
+    });
+  } catch {
+    // Nu blocam niciodata navigarea reala a vizitatorului pentru un tracking esuat.
+  }
+}
+
+function ctaButtonKind(text?: string): "whatsapp" | "phone" {
+  return text?.toLowerCase().includes("whatsapp") ? "whatsapp" : "phone";
+}
+
 export function Hero1({ data }: { data: SectionData }) {
   return (
     <section className="relative overflow-hidden pt-16 pb-6 px-6 text-center" style={{ background: "var(--bg)", isolation: "isolate" }}>
@@ -28,6 +45,9 @@ export function Hero1({ data }: { data: SectionData }) {
             {data.ctaText && (
               <a
                 href={data.ctaLink}
+                onClick={() => trackCtaClick(ctaButtonKind(data.ctaText))}
+                target={data.ctaLink?.startsWith("http") ? "_blank" : undefined}
+                rel={data.ctaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-block rounded-full px-6 py-3 font-bold no-underline"
                 style={{ background: "var(--accent)", color: "#1a1712" }}
               >
@@ -37,6 +57,7 @@ export function Hero1({ data }: { data: SectionData }) {
             {data.secondaryCtaText && (
               <a
                 href={data.secondaryCtaLink}
+                onClick={() => trackCtaClick(ctaButtonKind(data.secondaryCtaText))}
                 target={data.secondaryCtaLink?.startsWith("http") ? "_blank" : undefined}
                 rel={data.secondaryCtaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-block rounded-full px-6 py-3 font-bold no-underline text-white"
@@ -76,6 +97,7 @@ export function Hero2({ data }: { data: SectionData }) {
             {data.ctaText && (
               <a
                 href={data.ctaLink}
+                onClick={() => trackCtaClick(ctaButtonKind(data.ctaText))}
                 target={data.ctaLink?.startsWith("http") ? "_blank" : undefined}
                 rel={data.ctaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-block border-2 border-ink text-ink font-semibold px-6 py-3 rounded-lg no-underline"
@@ -86,6 +108,7 @@ export function Hero2({ data }: { data: SectionData }) {
             {data.secondaryCtaText && (
               <a
                 href={data.secondaryCtaLink}
+                onClick={() => trackCtaClick(ctaButtonKind(data.secondaryCtaText))}
                 target={data.secondaryCtaLink?.startsWith("http") ? "_blank" : undefined}
                 rel={data.secondaryCtaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-block rounded-lg px-6 py-3 font-semibold no-underline text-white"
@@ -120,6 +143,9 @@ export function Hero3({ data }: { data: SectionData }) {
           {data.ctaText && (
             <a
               href={data.ctaLink}
+              onClick={() => trackCtaClick(ctaButtonKind(data.ctaText))}
+              target={data.ctaLink?.startsWith("http") ? "_blank" : undefined}
+              rel={data.ctaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
               className="inline-block bg-ink text-white font-semibold px-6 py-3 rounded-full animate-pulse"
             >
               {data.ctaText}
@@ -128,6 +154,7 @@ export function Hero3({ data }: { data: SectionData }) {
           {data.secondaryCtaText && (
             <a
               href={data.secondaryCtaLink}
+              onClick={() => trackCtaClick(ctaButtonKind(data.secondaryCtaText))}
               target={data.secondaryCtaLink?.startsWith("http") ? "_blank" : undefined}
               rel={data.secondaryCtaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
               className="inline-block font-semibold px-6 py-3 rounded-full text-white"
