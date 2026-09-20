@@ -74,7 +74,12 @@ export function Hero2({ data }: { data: SectionData }) {
         {(data.ctaText || data.secondaryCtaText) && (
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {data.ctaText && (
-              <a href={data.ctaLink} className="inline-block border-2 border-ink text-ink font-semibold px-6 py-3 rounded-lg no-underline">
+              <a
+                href={data.ctaLink}
+                target={data.ctaLink?.startsWith("http") ? "_blank" : undefined}
+                rel={data.ctaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="inline-block border-2 border-ink text-ink font-semibold px-6 py-3 rounded-lg no-underline"
+              >
                 {data.ctaText}
               </a>
             )}
