@@ -20,4 +20,4 @@ Normativul I7, referința tehnică pentru instalațiile electrice din România, 
 
 Pentru un cititor care verifică propria casă, testul e simplu: majoritatea RCD-urilor au un buton de test (marcat de regulă „T" sau „Test") direct pe carcasă — apăsat, ar trebui să întrerupă instant circuitul protejat. Dacă tabloul tău nu are niciun dispozitiv cu un asemenea buton, probabil nu ai deloc protecție diferențială — un motiv suficient ca să chemi un electrician autorizat pentru o verificare completă.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

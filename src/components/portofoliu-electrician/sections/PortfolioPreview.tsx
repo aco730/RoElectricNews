@@ -38,8 +38,10 @@ function PortfolioGrid({ projects }: { projects: GalleryProject[] }) {
 }
 
 export function PortfolioPreview1({ data }: { data: SectionData }) {
-  const projects = projectsForCategories().slice(0, data.portfolioLimit ?? 8);
-  const totalPhotos = projectsForCategories().reduce((sum, p) => sum + p.count, 0);
+  const allProjects = projectsForCategories();
+  const projects = allProjects.slice(0, data.portfolioLimit ?? 8);
+  const totalPhotos = allProjects.reduce((sum, p) => sum + p.count, 0);
+  const totalProiecte = allProjects.length;
 
   return (
     <section className="max-w-[1100px] mx-auto px-6 py-12 text-center">
@@ -53,6 +55,20 @@ export function PortfolioPreview1({ data }: { data: SectionData }) {
           {data.text}
         </p>
       )}
+      <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 mb-10">
+        <div>
+          <div className="text-[clamp(32px,5vw,44px)] font-extrabold leading-none" style={{ color: "var(--accent)" }}>
+            <span data-count-to={totalPhotos}>0</span>+
+          </div>
+          <div className="text-xs uppercase tracking-wide mt-1" style={{ color: "var(--text-dim)" }}>poze reale</div>
+        </div>
+        <div>
+          <div className="text-[clamp(32px,5vw,44px)] font-extrabold leading-none" style={{ color: "var(--accent)" }}>
+            <span data-count-to={totalProiecte}>0</span>
+          </div>
+          <div className="text-xs uppercase tracking-wide mt-1" style={{ color: "var(--text-dim)" }}>șantiere documentate</div>
+        </div>
+      </div>
       <PortfolioGrid projects={projects} />
       <a
         href="/electrician/portofoliu"

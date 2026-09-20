@@ -17,4 +17,4 @@ KNX e altă categorie de soluție: un standard profesional, cablat, folosit de z
 
 Recomandarea practică depinde de context: pentru o casă existentă, unde vrei să adaugi automatizări treptat fără să spargi pereți, Zigbee sau Matter rămân alegerea logică — iar dacă cumperi dispozitive noi acum, prioritizează cele cu certificare Matter, pentru compatibilitate pe termen lung. Pentru o casă nouă sau o renovare majoră, unde poți planifica cablarea din timp, KNX rămâne standardul cu cea mai mare fiabilitate pe termen lung, mai ales dacă automatizarea se combină cu un sistem fotovoltaic și de stocare care trebuie monitorizat și controlat central.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

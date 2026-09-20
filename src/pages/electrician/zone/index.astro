@@ -1,0 +1,57 @@
+---
+export const prerender = true;
+import Layout from "../../../layouts/Layout.astro";
+import { zone } from "../../../data/zone";
+import ElectricianMiniNav from "../../../components/ElectricianMiniNav.astro";
+import ElectricianBreadcrumb from "../../../components/ElectricianBreadcrumb.astro";
+
+const sectoare = zone.filter((z) => z.tip === "sector");
+const ilfov = zone.filter((z) => z.tip === "ilfov");
+
+const breadcrumbs = [
+	{ nume: "Acasă", url: "/electrician" },
+	{ nume: "Zone deservite", url: "/electrician/zone" },
+];
+---
+<Layout
+  title="Zone deservite — Solar Electric Panel"
+  description="Servicii electrice și fotovoltaice în București (toate sectoarele) și localitățile din Ilfov."
+  breadcrumbs={breadcrumbs}
+  singleCol
+  hideHeader
+>
+  <ElectricianMiniNav />
+  <ElectricianBreadcrumb items={[
+    { id: "bc-home", label: "Acasă", href: "/electrician" },
+    { id: "bc-zone", label: "Zone deservite", href: "/electrician/zone" },
+  ]} />
+
+  <div class="pagina-zone">
+    <h1>Zone deservite</h1>
+    <p class="intro-zone">Lucrez în tot Bucureștiul și localitățile apropiate din Ilfov. Alege zona ta pentru detalii de contact.</p>
+
+    <h2>București — toate sectoarele</h2>
+    <div class="grid-zone">
+      {sectoare.map((z) => <a class="link-zona" href={`/electrician/zone/${z.slug}`}>{z.nume}</a>)}
+    </div>
+
+    <h2>Ilfov</h2>
+    <div class="grid-zone">
+      {ilfov.map((z) => <a class="link-zona" href={`/electrician/zone/${z.slug}`}>{z.nume}</a>)}
+    </div>
+  </div>
+
+  <style is:global>
+    .pagina-zone { max-width: 760px; margin: 0 auto; padding: 1rem 0 3rem; }
+    .pagina-zone h1 { margin-bottom: 0.5rem; }
+    .intro-zone { color: var(--muted); margin-bottom: 2rem; }
+    .pagina-zone h2 { font-size: 1.05rem; margin: 1.5rem 0 0.75rem; }
+    .grid-zone { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    @media (max-width: 600px) { .grid-zone { grid-template-columns: 1fr 1fr; } }
+    .link-zona {
+      display: block; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px;
+      text-decoration: none; color: var(--navy); font-weight: 600; font-size: 0.92rem; text-align: center;
+    }
+    .link-zona:hover { border-color: var(--teal); color: var(--teal); }
+  </style>
+</Layout>

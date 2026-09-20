@@ -11,7 +11,7 @@ Factura de energie electrică a unui prosumator arată vizibil diferit față de
 
 Primul reper e mecanismul de compensare. Legea prosumatorilor prevede compensarea cantității de energie electrică produsă și livrată în rețea cu cea consumată din rețea, într-un interval de facturare — practic, kilowatt-orii trimiși în rețea „scad" din cei consumați, nu se plătesc separat ca vânzare de energie. Factura trebuie să arate distinct cele două cantități: energia consumată din rețea și energia livrată în rețea, plus rezultatul compensării — diferența rămasă de plătit sau, în lunile cu producție mare, eventualul surplus reportat.
 
-Al doilea reper e structura tarifului. Pe lângă prețul energiei active efectiv consumate, factura conține componente reglementate separate: tariful de distribuție (plătit către operatorul de rețea local), tariful de transport — cunoscut ca tariful BINOM, deja explicat pe larg pe BuildHub.ro — și contribuția pentru certificate verzi, o taxă mică dar constantă, recalculată anual de ANRE. Aceste componente se aplică de regulă la energia consumată din rețea, nu la cea produsă și compensată, dar modul exact de calcul poate varia ușor între furnizori — motiv pentru care merită citită explicit secțiunea de detaliere a facturii, nu doar totalul final.
+Al doilea reper e structura tarifului. Pe lângă prețul energiei active efectiv consumate, factura conține componente reglementate separate: tariful de distribuție (plătit către operatorul de rețea local), tariful de transport — cunoscut ca tariful BINOM, deja explicat pe larg pe RoElectricNews — și contribuția pentru certificate verzi, o taxă mică dar constantă, recalculată anual de ANRE. Aceste componente se aplică de regulă la energia consumată din rețea, nu la cea produsă și compensată, dar modul exact de calcul poate varia ușor între furnizori — motiv pentru care merită citită explicit secțiunea de detaliere a facturii, nu doar totalul final.
 
 Al treilea reper e TVA-ul. Energia electrică facturată către consumatorul final, inclusiv componenta rămasă de plată după compensare, se taxează cu cota standard de TVA. Simpla compensare a energiei produse cu cea consumată nu schimbă regimul de TVA aplicat facturii finale — o confuzie frecventă în rândul prosumatorilor noi, care presupun greșit că energia „compensată" nu mai are TVA deloc.
 
@@ -19,4 +19,4 @@ Un ultim reper util e perioada de facturare și modul de citire a contorului int
 
 Pentru orice neclaritate reală legată de o factură specifică, cel mai sigur pas rămâne contactarea directă a furnizorului, cu cerere explicită de detaliere a modului de calcul al compensării — fiecare furnizor are obligația să pună la dispoziție această informație la cerere.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

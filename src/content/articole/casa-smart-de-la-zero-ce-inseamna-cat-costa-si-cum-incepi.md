@@ -29,4 +29,4 @@ Configurarea inițială cere puțină răbdare — cont, aplicație, conectarea 
 
 Da, cu condiția realistă: o casă smart bine folosită (nu doar instalată) poate reduce vizibil consumul, mai ales prin termostate și programări automate de climatizare/iluminat corelate cu prezența reală în casă — beneficiul nu vine automat din simpla instalare, ci din folosirea logicii de automatizare, nu doar a comenzii de la distanță.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

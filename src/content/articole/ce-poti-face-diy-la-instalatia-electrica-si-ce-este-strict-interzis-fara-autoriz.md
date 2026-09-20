@@ -31,4 +31,4 @@ Motivul pentru care legea (și bunul-simț) trasează exact această linie e sim
 
 Regula practică de reținut: dacă intervenția implică deschiderea tabloului electric, cablaj nou îngropat în perete sau orice conexiune la sistemul de împământare, e strict pentru un electrician autorizat — restul, la nivel de piese vizibile deja instalate corect, e teren rezonabil pentru DIY, cu precauția de bază de a opri mereu alimentarea înainte de orice intervenție.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

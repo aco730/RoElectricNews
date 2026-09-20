@@ -1,0 +1,109 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Căutare — RoElectricNews" description="Caută articole și servicii pe RoElectricNews despre electric, fotovoltaic, smart home și baterii." singleCol>
+  <div class="pagina-cauta">
+    <h1 id="titlu-cauta">Căutare</h1>
+    <p id="rezumat-cauta" class="rezumat"></p>
+
+    <div id="grup-electrician" class="grup-rezultate" hidden>
+      <h2 class="titlu-grup">De la noi — servicii, prețuri, întrebări</h2>
+      <ul id="rezultate-electrician" class="rezultate"></ul>
+    </div>
+
+    <div id="grup-articole" class="grup-rezultate" hidden>
+      <h2 class="titlu-grup">Articole</h2>
+      <ul id="rezultate-articole" class="rezultate"></ul>
+    </div>
+
+    <p id="fara-rezultate" class="fara-rezultate" hidden>
+      Niciun rezultat găsit. Încearcă alți termeni sau vezi <a href="/">toate articolele</a>.
+    </p>
+  </div>
+
+  <script>
+    type SearchItem = { kind: string; slug: string; title: string; meta: string; searchText: string };
+
+    const KIND_LABEL: Record<string, string> = {
+      pret: "Preț",
+      intrebare: "Întrebare frecventă",
+      pagina: "Pagină",
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("q") || "").trim();
+
+    const titlu = document.getElementById("titlu-cauta")!;
+    const rezumat = document.getElementById("rezumat-cauta")!;
+    const grupElectrician = document.getElementById("grup-electrician")!;
+    const listaElectrician = document.getElementById("rezultate-electrician")!;
+    const grupArticole = document.getElementById("grup-articole")!;
+    const listaArticole = document.getElementById("rezultate-articole")!;
+    const faraRezultate = document.getElementById("fara-rezultate")!;
+
+    function randLi(item: SearchItem, etichetaGol = ""): HTMLLIElement {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.slug;
+      a.textContent = item.title;
+      const meta = document.createElement("span");
+      meta.className = "meta-rezultat";
+      const eticheta = KIND_LABEL[item.kind];
+      meta.textContent = eticheta ? `${eticheta} · ${item.meta}` : item.meta || etichetaGol;
+      li.append(a, meta);
+      return li;
+    }
+
+    async function cauta() {
+      if (!query) {
+        titlu.textContent = "Căutare";
+        rezumat.textContent = "Scrie un termen în caseta de căutare din header.";
+        return;
+      }
+      titlu.textContent = `Rezultate pentru „${query}”`;
+
+      const res = await fetch("/api/search-index.json");
+      const index: SearchItem[] = await res.json();
+      const q = query.toLowerCase();
+      const rezultate = index.filter((item) => item.searchText.includes(q));
+
+      const dinElectrician = rezultate.filter((r) => r.kind !== "articol").slice(0, 12);
+      const dinArticole = rezultate.filter((r) => r.kind === "articol").slice(0, 20);
+
+      rezumat.textContent = rezultate.length > 0 ? `${rezultate.length} rezultat(e) găsite.` : "";
+
+      if (dinElectrician.length === 0 && dinArticole.length === 0) {
+        faraRezultate.hidden = false;
+        return;
+      }
+
+      if (dinElectrician.length > 0) {
+        grupElectrician.hidden = false;
+        for (const item of dinElectrician) listaElectrician.append(randLi(item));
+      }
+      if (dinArticole.length > 0) {
+        grupArticole.hidden = false;
+        for (const item of dinArticole) listaArticole.append(randLi(item, "Articol"));
+      }
+    }
+
+    cauta();
+  </script>
+
+  <style is:global>
+    .pagina-cauta { max-width: 720px; margin: 0 auto; padding: 1rem 0 3rem; }
+    .pagina-cauta .rezumat { color: var(--muted); margin-bottom: 1.5rem; }
+    .pagina-cauta .titlu-grup { font-size: 1.05rem; margin: 1.5rem 0 0.75rem; }
+    .pagina-cauta .grup-rezultate:first-of-type .titlu-grup { margin-top: 0; }
+    .pagina-cauta .rezultate { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+    .pagina-cauta .rezultate li {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px;
+    }
+    .pagina-cauta .rezultate a { color: var(--navy); font-weight: 600; text-decoration: none; }
+    .pagina-cauta .rezultate a:hover { color: var(--teal); }
+    .pagina-cauta .meta-rezultat { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+    .pagina-cauta .fara-rezultate { color: var(--muted); }
+  </style>
+</Layout>

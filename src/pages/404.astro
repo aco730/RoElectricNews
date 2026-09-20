@@ -1,0 +1,68 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+---
+<Layout
+  title="Pagina nu a fost găsită — RoElectricNews"
+  description="Pagina căutată nu există. Vezi articolele, serviciile sau contactează-ne direct."
+  singleCol
+>
+  <div class="pagina-404">
+    <p class="cod">404</p>
+    <h1>Pagina nu există sau a fost mutată</h1>
+    <p class="subtitlu">Link-ul accesat nu mai duce nicăieri — dar iată ce cauți probabil:</p>
+
+    <div class="linkuri-utile">
+      <a href="/" class="card-link">
+        <span class="emoji">📰</span>
+        <span class="text-link">
+          <strong>Toate articolele</strong>
+          <span>Blog RoElectricNews — electric, fotovoltaic, smart home</span>
+        </span>
+      </a>
+      <a href="/electrician/servicii" class="card-link">
+        <span class="emoji">⚡</span>
+        <span class="text-link">
+          <strong>Servicii electrician</strong>
+          <span>Electrice și fotovoltaice — cere o ofertă</span>
+        </span>
+      </a>
+      <a href="/electrician/portofoliu" class="card-link">
+        <span class="emoji">📸</span>
+        <span class="text-link">
+          <strong>Portofoliu</strong>
+          <span>Poze reale de la șantiere, nu randări</span>
+        </span>
+      </a>
+      <a href="/contact" class="card-link">
+        <span class="emoji">📞</span>
+        <span class="text-link">
+          <strong>Contact</strong>
+          <span>Sună, scrie sau trimite un mesaj</span>
+        </span>
+      </a>
+    </div>
+
+    <a class="cta-btn cta-btn-primary" href="tel:+40750405908">📞 Sună acum: 0750 405 908</a>
+  </div>
+
+  <style is:global>
+    .pagina-404 { max-width: 640px; margin: 0 auto; padding: 3rem 0 4rem; text-align: center; }
+    .pagina-404 .cod { font-size: 4.5rem; font-weight: 800; line-height: 1; margin: 0; color: var(--teal); }
+    .pagina-404 h1 { margin: 0.5rem 0 0.75rem; font-size: 1.6rem; }
+    .pagina-404 .subtitlu { color: var(--muted); margin-bottom: 2rem; }
+    .linkuri-utile { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 2.5rem; text-align: left; }
+    @media (max-width: 560px) { .linkuri-utile { grid-template-columns: 1fr; } }
+    .card-link {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 16px; border: 1px solid var(--border); border-radius: 10px;
+      background: var(--card); text-decoration: none; color: inherit;
+      transition: border-color 0.15s ease;
+    }
+    .card-link:hover { border-color: var(--teal); }
+    .card-link .emoji { font-size: 1.4rem; line-height: 1.4; }
+    .card-link .text-link { display: flex; flex-direction: column; gap: 3px; }
+    .card-link strong { font-size: 0.95rem; color: var(--navy); }
+    .card-link span span { font-size: 0.82rem; color: var(--muted); }
+  </style>
+</Layout>

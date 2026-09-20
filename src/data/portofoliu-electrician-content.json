@@ -4,7 +4,7 @@
     {
       "id": "page-home",
       "slug": "",
-      "title": "Acasă",
+      "title": "Electrician Calificat București & Ilfov | Solar Electric Panel",
       "sections": [
         {
           "id": "sec-header-home",
@@ -24,6 +24,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -48,7 +53,7 @@
           "type": "hero",
           "template": 2,
           "data": {
-            "badge": "⚡ Intervenții Rapide & Lucrări Certificate ANRE în București și Ilfov",
+            "badge": "⚡ Intervenții Rapide & Electrician Calificat în București și Ilfov",
             "title": "Electricianul tău: de la o priză defectă, la sisteme fotovoltaice complet funcționale.",
             "subtitle": "Primești prețul corect pe loc, garanție scrisă pe lucrare și intervenție rapidă.",
             "ctaText": "📞 Sună Acum",
@@ -140,11 +145,6 @@
                 "answer": "În funcție de trafic, ajungem în Sectorul 1-6 sau județul Ilfov în aproximativ 30-60 de minute de la apel."
               },
               {
-                "id": "fh3",
-                "question": "Emiți factură și garanție?",
-                "answer": "Da, absolut. Fiind autorizat ANRE și SSM, toate lucrările vin cu garanție scrisă și documente fiscale."
-              },
-              {
                 "id": "fh4",
                 "question": "Trebuie să cumpăr eu materialele?",
                 "answer": "Nu este nevoie. Venim echipați cu tot ce trebuie (cabluri, siguranțe Hager/Schneider, tuburi, aparataj). Folosim doar materiale certificate pentru siguranța ta."
@@ -152,7 +152,7 @@
               {
                 "id": "f25",
                 "question": "Ești autorizat electrician?",
-                "answer": "Sunt electrician calificat, cu Certificat de Calificare Profesională Electrician în Construcții, în curs de autorizare ANRE. Lucrez conform normelor în vigoare și am și certificat de Inspector SSM."
+                "answer": "Sunt electrician calificat, cu Certificat de Calificare Profesională Electrician în Construcții. Lucrez conform normelor în vigoare și am și certificat de Inspector SSM."
               },
               {
                 "id": "f26",
@@ -193,6 +193,17 @@
           }
         },
         {
+          "id": "sec-cta-final-home",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Convins de poze, nu de vorbe?",
+            "text": "588 poze reale din 32 șantiere (2022–2026), electrician calificat, garanție scrisă pe fiecare lucrare. Sună acum sau cere o ofertă personalizată.",
+            "buttonText": "Cere ofertă",
+            "buttonLink": "/electrician/calculatoare/oferta"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -203,12 +214,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Electrician calificat în București și Ilfov — intervenții electrice, tablouri, sisteme fotovoltaice. Ofertă fermă după evaluare, nu la ghici."
     },
     {
       "id": "page-servicii",
       "slug": "servicii",
-      "title": "Servicii",
+      "title": "Servicii Electrice și Fotovoltaice București & Ilfov | SEP",
       "sections": [
         {
           "id": "sec-header-servicii",
@@ -228,6 +240,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -351,10 +368,21 @@
               },
               {
                 "id": "wh4",
-                "title": "Personal atestat ANRE",
+                "title": "Electrician calificat",
                 "text": "Protocoale SSM respectate strict."
               }
             ]
+          }
+        },
+        {
+          "id": "sec-cta-servicii",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Nu știi exact de ce ai nevoie?",
+            "text": "Sună sau scrie-mi direct și stabilim împreună, fără presupuneri pe telefon.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
           }
         },
         {
@@ -368,12 +396,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Instalații electrice, tablouri, montaj panouri fotovoltaice și baterii de stocare în București și Ilfov. Consultanță, montaj, garanție scrisă."
     },
     {
       "id": "page-servicii-electrice",
       "slug": "servicii/electrice",
-      "title": "Servicii electrice",
+      "title": "Electrician București & Ilfov — Tablouri, Urgențe | SEP",
       "sections": [
         {
           "id": "sec-header-servicii-electrice",
@@ -393,6 +422,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -471,6 +505,17 @@
           }
         },
         {
+          "id": "sec-cta-servicii-electrice",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Ai o problemă electrică sau un proiect nou?",
+            "text": "Vin, evaluez la fața locului și îți spun clar ce trebuie făcut și cât costă.",
+            "buttonText": "Cere ofertă",
+            "buttonLink": "/electrician/calculatoare/oferta"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -481,12 +526,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Servicii electrice complete în București și Ilfov: tablouri noi, diagnoză, branșamente, urgențe cu deplasare rapidă."
     },
     {
       "id": "page-servicii-fotovoltaice",
       "slug": "servicii/fotovoltaice",
-      "title": "Servicii fotovoltaice",
+      "title": "Montaj Panouri Fotovoltaice București & Ilfov | SEP",
       "sections": [
         {
           "id": "sec-header-servicii-fotovoltaice",
@@ -506,6 +552,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -584,6 +635,17 @@
           }
         },
         {
+          "id": "sec-cta-servicii-fotovoltaice",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei un sistem fotovoltaic dimensionat corect?",
+            "text": "Consultanță și montaj, cu ofertă personalizată pe consumul și acoperișul tău.",
+            "buttonText": "Vezi prețuri fotovoltaic",
+            "buttonLink": "/electrician/preturi/fotovoltaic"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -594,12 +656,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Montaj sisteme fotovoltaice rezidențiale și comerciale în București și Ilfov, cu sau fără baterie. Ofertă după evaluare la fața locului."
     },
     {
       "id": "page-preturi",
       "slug": "preturi",
-      "title": "Prețuri",
+      "title": "Prețuri Electrician și Fotovoltaic București | SEP",
       "sections": [
         {
           "id": "sec-header-preturi",
@@ -619,6 +682,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -714,12 +782,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Prețuri orientative pentru instalații electrice și sisteme fotovoltaice în București — pachete Buget, Standard, Premium."
     },
     {
       "id": "page-preturi-fotovoltaic",
       "slug": "preturi/fotovoltaic",
-      "title": "Prețuri fotovoltaic",
+      "title": "Preț Sistem Fotovoltaic București — 5/10/20 kWp | SEP",
       "sections": [
         {
           "id": "sec-header-preturi-fotovoltaic",
@@ -739,6 +808,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -1607,6 +1681,17 @@
           }
         },
         {
+          "id": "sec-cta-preturi-fotovoltaic",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei un preț exact, nu doar orientativ?",
+            "text": "Vin, măsor acoperișul și consumul tău real, apoi primești o ofertă fermă.",
+            "buttonText": "Cere ofertă",
+            "buttonLink": "/electrician/calculatoare/oferta"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -1617,12 +1702,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Prețuri reale pentru sisteme fotovoltaice montate în București și Ilfov, cu sau fără baterie de stocare."
     },
     {
       "id": "page-preturi-electric",
       "slug": "preturi/electric",
-      "title": "Prețuri electric",
+      "title": "Preț Instalație Electrică București | SEP",
       "sections": [
         {
           "id": "sec-header-preturi-electric",
@@ -1642,6 +1728,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -1993,6 +2084,17 @@
           }
         },
         {
+          "id": "sec-cta-preturi-electric",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei un preț exact, nu doar orientativ?",
+            "text": "Vin, evaluez lucrarea la fața locului și îți spun clar cât costă.",
+            "buttonText": "Cere ofertă",
+            "buttonLink": "/electrician/calculatoare/oferta"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -2003,12 +2105,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Prețuri orientative pentru tablouri electrice, instalații complete și urgențe în București."
     },
     {
       "id": "page-calculatoare",
       "slug": "calculatoare",
-      "title": "Calculatoare",
+      "title": "Calculator Preț Electrician & Fotovoltaic București | SEP",
       "sections": [
         {
           "id": "sec-header-calculatoare",
@@ -2028,6 +2131,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2136,12 +2244,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Estimează rapid costul unei instalații electrice sau al unui sistem fotovoltaic pentru casa ta din București."
     },
     {
       "id": "page-calc-rapid",
       "slug": "calculatoare/rapid",
-      "title": "Estimare rapidă",
+      "title": "Estimare Rapidă Preț — 3 Pași | Solar Electric Panel",
       "sections": [
         {
           "id": "sec-header-calc-rapid",
@@ -2161,6 +2270,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2223,12 +2337,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Estimare rapidă de preț pentru instalații electrice sau fotovoltaice, în 3 pași, fără formular."
     },
     {
       "id": "page-calc-fotovoltaic",
       "slug": "calculatoare/fotovoltaic",
-      "title": "Calculator sistem fotovoltaic",
+      "title": "Calculator Sistem Fotovoltaic cu Date Reale (PVGIS) | SEP",
       "sections": [
         {
           "id": "sec-header-calc-fotovoltaic",
@@ -2248,6 +2363,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2300,6 +2420,17 @@
           }
         },
         {
+          "id": "sec-cta-calc-fotovoltaic",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei să confirmi acest calcul cu o ofertă reală?",
+            "text": "Trimite-mi rezultatul pe WhatsApp sau sună — confirmăm împreună configurația exactă.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -2310,12 +2441,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Calculează dimensiunea sistemului fotovoltaic potrivit, cu producție reală pentru adresa ta (date PVGIS, Comisia Europeană)."
     },
     {
       "id": "page-calc-baterie",
       "slug": "calculatoare/baterie",
-      "title": "Calculator baterie",
+      "title": "Calculator Baterie de Stocare | Solar Electric Panel",
       "sections": [
         {
           "id": "sec-header-calc-baterie",
@@ -2335,6 +2467,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2387,6 +2524,17 @@
           }
         },
         {
+          "id": "sec-cta-calc-baterie",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei să confirmi acest calcul cu o ofertă reală?",
+            "text": "Trimite-mi rezultatul pe WhatsApp sau sună — confirmăm împreună configurația exactă.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -2397,12 +2545,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Calculează capacitatea de baterie de stocare recomandată pentru consumul tău."
     },
     {
       "id": "page-calc-electric",
       "slug": "calculatoare/electric",
-      "title": "Calculator instalație electrică",
+      "title": "Calculator Instalație Electrică | Solar Electric Panel",
       "sections": [
         {
           "id": "sec-header-calc-electric",
@@ -2422,6 +2571,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2474,6 +2628,17 @@
           }
         },
         {
+          "id": "sec-cta-calc-electric",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Vrei să confirmi acest calcul cu o ofertă reală?",
+            "text": "Trimite-mi rezultatul pe WhatsApp sau sună — confirmăm împreună configurația exactă.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
+          }
+        },
+        {
           "id": "sec-footer",
           "type": "footer",
           "template": 2,
@@ -2484,12 +2649,13 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Estimează costul unei instalații electrice noi sau al unei renovări, pe puncte electrice."
     },
     {
       "id": "page-calc-oferta",
       "slug": "calculatoare/oferta",
-      "title": "Ofertă completă",
+      "title": "Cere Ofertă Completă — Electrician București | SEP",
       "sections": [
         {
           "id": "sec-header-calc-oferta",
@@ -2509,6 +2675,11 @@
                 "id": "nl-portofoliu",
                 "label": "Portofoliu",
                 "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-zone",
+                "label": "Zone",
+                "href": "/electrician/zone"
               },
               {
                 "id": "nl-preturi",
@@ -2563,7 +2734,8 @@
             "location": "București - Ilfov"
           }
         }
-      ]
+      ],
+      "description": "Răspunde la câteva întrebări simple și primești 3 variante de ofertă, de la Buget la Premium."
     }
   ]
 }

@@ -37,4 +37,4 @@ Orientativ între 2 și 3 luni, în condiții normale — timp care include proi
 
 Producătorii oferă în general garanții de 25-30 de ani de funcționare, cu o scădere treptată și lentă a eficienței în acest interval, nu o cădere bruscă — un panou la 20 de ani produce încă o mare parte din capacitatea inițială, nu se „oprește" la finalul garanției.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

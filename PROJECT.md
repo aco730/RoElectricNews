@@ -21,10 +21,10 @@ Also includes a client-facing 4-step quote wizard (`/oferta`, Buget/Standard/Pre
 - **Contents:** 18 files, 10 subfolders (top level)
 - **Last modified:** 2026-09-20
 - **Git:** yes
-  - Remote: https://github.com/aco730/BuildHub.ro.git
+  - Remote: https://github.com/aco730/RoElectricNews.git
   - Branch: master
-  - Last commit: `501d604a` (2026-08-13) — Update imagini articole si continut asociat
-  - Uncommitted changes: 137 file(s) — **not committed**
+  - Last commit: `647248e0` (2026-09-20) — Rebranding: Electric NEWS -> RoElectricNews
+  - Uncommitted changes: 29 file(s) — **not committed**
 - **Hosting:** Netlify (netlify.toml)
 - **Live URL:** https://buildhubro.netlify.app/
 - **Local start:**
@@ -39,6 +39,6 @@ Also includes a client-facing 4-step quote wizard (`/oferta`, Buget/Standard/Pre
   - `npm run build` — `astro build`
   - `npm run preview` — `astro preview`
 
-_Last scanned: 2026-09-20T11:14:58.754Z_
+_Last scanned: 2026-09-20T13:29:58.816Z_
 
 <!-- AUTO-GENERATED:END -->

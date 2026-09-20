@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+import Layout from "../../../layouts/Layout.astro";
+import { zone } from "../../../data/zone";
+import { getContact } from "../../../lib/contact";
+import ElectricianMiniNav from "../../../components/ElectricianMiniNav.astro";
+import ElectricianBreadcrumb from "../../../components/ElectricianBreadcrumb.astro";
+
+export function getStaticPaths() {
+	return zone.map((z) => ({ params: { slug: z.slug }, props: { z } }));
+}
+
+const { z } = Astro.props;
+const contact = await getContact();
+
+const introVariante = z.tip === "sector"
+	? [
+			`Lucrez frecvent în ${z.nume} — de la urgențe la tablouri electrice și instalații complete, cu deplasare rapidă în zonă.`,
+			`${z.nume} e una din zonele unde intervin des — apartamente, case și spații comerciale, cu diagnoză la fața locului înainte de orice preț.`,
+			`Pentru clienți din ${z.nume}, ofer aceleași servicii ca peste tot în București: intervenții electrice, tablouri noi, sisteme fotovoltaice — cu ofertă fermă după evaluare, nu la ghici.`,
+		]
+	: [
+			`Deservesc și ${z.nume}, în afara Bucureștiului — deplasare programată, cu diagnoză la fața locului înainte de orice preț.`,
+			`Pentru ${z.nume} ofer aceleași servicii ca în București: electrice, tablouri, fotovoltaic — programăm o vizită tehnică și stabilim exact ce e de făcut.`,
+		];
+const intro = introVariante[z.slug.length % introVariante.length];
+
+const titlu = `Electrician ${z.nume} — Solar Electric Panel`;
+const descriere = `Servicii electrice și fotovoltaice în ${z.nume}: intervenții, tablouri electrice, instalații complete. Ofertă cu preț fix după evaluare la fața locului.`;
+
+const breadcrumbs = [
+	{ nume: "Acasă", url: "/electrician" },
+	{ nume: "Zone deservite", url: "/electrician/zone" },
+	{ nume: z.nume, url: `/electrician/zone/${z.slug}` },
+];
+---
+<Layout title={titlu} description={descriere} breadcrumbs={breadcrumbs} singleCol hideHeader>
+  <ElectricianMiniNav />
+  <ElectricianBreadcrumb items={[
+    { id: "bc-home", label: "Acasă", href: "/electrician" },
+    { id: "bc-zone", label: "Zone deservite", href: "/electrician/zone" },
+    { id: "bc-zona", label: z.nume, href: `/electrician/zone/${z.slug}` },
+  ]} />
+
+  <div class="pagina-zona">
+    <h1>Electrician în {z.nume}</h1>
+    <p class="intro-zona">{intro}</p>
+
+    <div class="carduri-zona">
+      <a class="card-zona" href="/electrician/servicii/electrice">
+        <span class="emoji">⚡</span>
+        <strong>Servicii electrice</strong>
+        <span>Tablouri, diagnoză, branșamente, urgențe.</span>
+      </a>
+      <a class="card-zona" href="/electrician/servicii/fotovoltaice">
+        <span class="emoji">🌞</span>
+        <strong>Servicii fotovoltaice</strong>
+        <span>Montaj rezidențial și comercial, cu sau fără baterie.</span>
+      </a>
+      <a class="card-zona" href="/electrician/portofoliu">
+        <span class="emoji">📸</span>
+        <strong>Portofoliu București</strong>
+        <span>Poze reale de la șantiere din zona Capitalei.</span>
+      </a>
+    </div>
+
+    <div class="cta-zona">
+      <h2>Ai nevoie de electrician în {z.nume}?</h2>
+      <p>Sună sau scrie-mi direct — stabilim împreună, fără presupuneri pe telefon.</p>
+      <div class="butoane-cta-zona">
+        <a class="cta-btn cta-btn-primary" href={`tel:${contact.telefon.replace(/\s+/g, '')}`}>📞 Sună: {contact.telefon}</a>
+        <a class="cta-btn cta-btn-whatsapp" href={`https://wa.me/${contact.telefon.replace(/\s+/g, '').replace(/^0/, '40')}`} target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <style is:global>
+    .pagina-zona { max-width: 760px; margin: 0 auto; padding: 1rem 0 3rem; }
+    .pagina-zona h1 { margin-bottom: 0.5rem; }
+    .intro-zona { color: var(--text); font-size: 1.02rem; line-height: 1.6; max-width: 640px; margin-bottom: 2rem; }
+
+    .carduri-zona { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 2.5rem; }
+    @media (max-width: 700px) { .carduri-zona { grid-template-columns: 1fr; } }
+    .card-zona {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 18px; border: 1px solid var(--border); border-radius: 10px;
+      background: var(--card); text-decoration: none; color: inherit;
+    }
+    .card-zona:hover { border-color: var(--teal); }
+    .card-zona .emoji { font-size: 1.4rem; }
+    .card-zona strong { color: var(--navy); font-size: 0.98rem; }
+    .card-zona span:last-child { font-size: 0.85rem; color: var(--muted); }
+
+    .cta-zona {
+      background: #FDF6E3; border-radius: 12px; padding: 28px; text-align: center;
+    }
+    .cta-zona h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    .cta-zona p { color: var(--muted); margin: 0 0 18px; }
+    .butoane-cta-zona { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn-whatsapp { background: #25D366; color: #fff; border-color: #25D366; }
+  </style>
+</Layout>

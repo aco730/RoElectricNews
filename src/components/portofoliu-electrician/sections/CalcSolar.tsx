@@ -18,12 +18,73 @@ function useSolarCalc() {
   return { mode, setMode, consumption, setConsumption, a, setA, result };
 }
 
+function AdresaLookup({ a, setA }: { a: typeof SOLAR_DEFAULTS; setA: (a: typeof SOLAR_DEFAULTS) => void }) {
+  const [adresa, setAdresa] = useState("");
+  const [stare, setStare] = useState<"idle" | "loading" | "ok" | "eroare">("idle");
+  const [mesaj, setMesaj] = useState("");
+
+  async function cauta() {
+    if (adresa.trim().length < 5) {
+      setStare("eroare");
+      setMesaj("Scrie o adresă mai completă (stradă, oraș).");
+      return;
+    }
+    setStare("loading");
+    setMesaj("");
+    try {
+      const res = await fetch(`/api/electrician/pvgis?adresa=${encodeURIComponent(adresa)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Eroare");
+      setA({ ...a, yieldPerKWp: data.yieldPerKWp });
+      setStare("ok");
+      setMesaj(`Producție reală pentru adresa ta: ${data.yieldPerKWp} kWh/kWp/an (date PVGIS, Comisia Europeană).`);
+    } catch (e: any) {
+      setStare("eroare");
+      setMesaj(e.message || "Nu am putut calcula pentru această adresă. Ajustează manual mai jos.");
+    }
+  }
+
+  return (
+    <div className="mb-4">
+      <CalcField label="Adresa ta (opțional, pentru producție reală)" help="Verificăm producția solară reală pentru acoperișul tău, cu date publice ale Comisiei Europene (PVGIS) — nu stocăm adresa.">
+        <div className="flex gap-2">
+          <input
+            type="text"
+            value={adresa}
+            onChange={(e) => setAdresa(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && cauta()}
+            placeholder="ex. Str. Exemplu 10, Sector 3, București"
+            className="flex-1 rounded-lg border px-3 py-2 text-sm"
+            style={{ borderColor: "var(--border)", background: "var(--bg-elev)", color: "var(--text)" }}
+          />
+          <button
+            type="button"
+            onClick={cauta}
+            disabled={stare === "loading"}
+            className="rounded-lg px-4 py-2 text-sm font-bold whitespace-nowrap"
+            style={{ background: "var(--accent)", color: "#1a1712", opacity: stare === "loading" ? 0.6 : 1 }}
+          >
+            {stare === "loading" ? "Caut..." : "Verifică"}
+          </button>
+        </div>
+      </CalcField>
+      {mesaj && (
+        <p className="text-xs mt-1.5" style={{ color: stare === "eroare" ? "#B22222" : "#1A7A45" }}>
+          {stare === "ok" ? "✅ " : stare === "eroare" ? "⚠️ " : ""}
+          {mesaj}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function Assumptions({ a, setA }: { a: typeof SOLAR_DEFAULTS; setA: (a: typeof SOLAR_DEFAULTS) => void }) {
   return (
     <>
+      <AdresaLookup a={a} setA={setA} />
       <CalcSlider
         label="Producție estimată"
-        help="Câți kWh produce, în medie pe an, fiecare kWp instalat — depinde de zona geografică, orientarea și înclinarea acoperișului. 1200 e un reper obișnuit pentru România."
+        help="Câți kWh produce, în medie pe an, fiecare kWp instalat — depinde de zona geografică, orientarea și înclinarea acoperișului. 1200 e un reper obișnuit pentru România (sau folosește căutarea de adresă de mai sus pentru o valoare reală)."
         value={a.yieldPerKWp}
         min={900}
         max={1500}

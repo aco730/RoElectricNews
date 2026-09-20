@@ -1,6 +1,7 @@
 ---
 import { categoriiVizibile } from "../data/categories";
 import siteConfig from "../data/site-config.json";
+import { getContact } from "../lib/contact";
 
 interface Props {
   showCategoryNav?: boolean;
@@ -8,6 +9,7 @@ interface Props {
 
 const { showCategoryNav = true } = Astro.props;
 const { header } = siteConfig;
+const contact = await getContact();
 ---
 {header.vizibil && (
   <>
@@ -38,12 +40,15 @@ const { header } = siteConfig;
       </a>
 
       {header.cautareVizibila && (
-        <div class="search-box">
-          <input type="text" id="site-search" placeholder="Caută articole..." autocomplete="off" />
-        </div>
+        <form class="search-box" action="/cauta" method="get">
+          <input type="text" id="site-search" name="q" placeholder="Caută articole..." autocomplete="off" />
+        </form>
       )}
 
       <div class="header-ctas">
+        <a class="telefon-header" href={`tel:${contact.telefon.replace(/\s+/g, '')}`}>
+          <span aria-hidden="true">📞</span> {contact.telefon}
+        </a>
         {header.paginaDirecta && (
           <a class="cta-link" href={header.paginaDirecta.href}>{header.paginaDirecta.text}</a>
         )}
@@ -76,6 +81,20 @@ const { header } = siteConfig;
 )}
 
 <style>
+  .telefon-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #1A7A45;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 6px 10px;
+  }
+  .telefon-header:hover { text-decoration: underline; }
+  @media (max-width: 760px) { .telefon-header { display: none; } }
+
   .cta-link {
     display: inline-flex;
     align-items: center;

@@ -45,7 +45,7 @@ const displaySite = {
 };
 ---
 
-<Layout title={`${page.title} — Solar Electric Panel`} description={site.siteName} hideHeader singleCol>
+<Layout title={page.title} description={page.description || site.siteName} hideHeader singleCol>
   <SiteEditor client:load initialSite={displaySite} slug={slug} isAdmin={isAdmin} />
   {slug === "calculatoare/oferta" && <OfertaWizard />}
 </Layout>

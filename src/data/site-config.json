@@ -29,6 +29,10 @@
         "href": "/electrician"
       },
       {
+        "text": "Zone deservite",
+        "href": "/electrician/zone"
+      },
+      {
         "text": "Contact",
         "href": "/contact"
       },

@@ -17,6 +17,6 @@ Din perspectiva unui prosumator care se înscrie, platforma promite trei lucruri
 
 Echipa de conducere include Cătălin Stancel (CEO), Sergiu Mureșan (CTO), Andrei Antohie (manager vânzări) și Iulian Constandache (specialist în tranzacționarea energiei) — o structură relativ mică, tipică unui startup energetic la început de scalare, nu unei companii mari deja consolidate.
 
-Pentru cititorii BuildHub.ro care iau deja în calcul o baterie de stocare, YellowGrid ilustrează un model diferit de valorificare a surplusului: nu doar stocare pentru consum propriu, ci participare activă la o rețea virtuală care vinde energia agregată la preț de piață — un model deja descris tehnic, din perspectiva unui utilizator concret, într-un articol separat pe BuildHub.ro despre funcționarea unei baterii casnice de 86 kWh conectate la platformă. Compania însăși descrie etapa actuală drept „doar începutul", cu expansiune națională continuă.
+Pentru cititorii RoElectricNews care iau deja în calcul o baterie de stocare, YellowGrid ilustrează un model diferit de valorificare a surplusului: nu doar stocare pentru consum propriu, ci participare activă la o rețea virtuală care vinde energia agregată la preț de piață — un model deja descris tehnic, din perspectiva unui utilizator concret, într-un articol separat pe RoElectricNews despre funcționarea unei baterii casnice de 86 kWh conectate la platformă. Compania însăși descrie etapa actuală drept „doar începutul", cu expansiune națională continuă.
 
 Sursă: yellowgrid.ro (pagina „Despre noi").

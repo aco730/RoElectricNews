@@ -185,6 +185,29 @@ main.article-qa > aside:not(.qa-side) { grid-column: 3; }
   .lightbox-nav { width: 38px; height: 38px; font-size: 20px; }
 }
 
+.whatsapp-plutitor {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  animation: whatsapp-puls 2.4s ease-in-out infinite;
+}
+.whatsapp-plutitor:hover { transform: scale(1.06); }
+@keyframes whatsapp-puls {
+  0%, 100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .whatsapp-plutitor { animation: none; } }
+@media (max-width: 600px) { .whatsapp-plutitor { right: 14px; bottom: 14px; width: 52px; height: 52px; } }
+
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {

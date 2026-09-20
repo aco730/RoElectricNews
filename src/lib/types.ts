@@ -111,6 +111,7 @@ export interface Page {
   id: string;
   slug: string; // "" = home
   title: string;
+  description?: string; // meta description unică per pagină (SEO)
   sections: Section[];
 }
 

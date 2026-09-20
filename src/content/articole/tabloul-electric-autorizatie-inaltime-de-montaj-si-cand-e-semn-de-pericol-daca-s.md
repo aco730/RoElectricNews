@@ -23,4 +23,4 @@ Aici e cea mai frecventă confuzie: mulți proprietari tratează o siguranță c
 
 Diferența dintre „bătaie de cap normală" și „semn de pericol real" ține de tipar: dacă siguranța sare mereu la același aparat specific, aparatul respectiv are probabil un defect și trebuie verificat sau înlocuit — nu e o urgență a instalației. Dacă însă siguranța sare aparent aleatoriu, la aparate diferite, fără un tipar clar, sau dacă simți miros de ars, vezi prize decolorate sau calde la atingere, situația trece din „inconvenient" în „urgență electrică" — se oprește folosirea circuitului respectiv și se cheamă imediat un electrician autorizat pentru verificare, nu se mai amână „până la weekend".
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

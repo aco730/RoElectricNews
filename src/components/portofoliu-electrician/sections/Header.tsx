@@ -52,10 +52,12 @@ export function Header1({ data, editMode }: { data: SectionData; editMode?: bool
           {data.phone && (
             <a
               href={`tel:${data.phone.replace(/\s/g, "")}`}
-              className="rounded-full px-[18px] py-2.5 text-[13px] font-bold no-underline inline-flex items-center whitespace-nowrap"
+              className="rounded-full px-[18px] py-2.5 text-[13px] font-bold no-underline inline-flex items-center gap-1.5 whitespace-nowrap"
               style={{ background: "var(--accent)", color: "#1a1712" }}
             >
-              Sună acum
+              <span aria-hidden="true">📞</span>
+              <span className="hidden sm:inline">{data.phone}</span>
+              <span className="sm:hidden">Sună</span>
             </a>
           )}
         </div>

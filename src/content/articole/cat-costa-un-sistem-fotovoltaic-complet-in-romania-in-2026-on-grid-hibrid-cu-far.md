@@ -26,4 +26,4 @@ Prețul unui sistem fotovoltaic rămâne, pentru majoritatea celor interesați, 
 
 Pentru o estimare exactă, adaptată consumului și acoperișului propriu, un calcul realist necesită oricum o vizită tehnică — cifrele de mai sus rămân repere orientative de piață, nu o ofertă fermă.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

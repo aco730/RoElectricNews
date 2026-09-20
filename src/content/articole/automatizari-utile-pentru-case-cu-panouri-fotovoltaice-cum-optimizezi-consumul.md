@@ -22,4 +22,4 @@ Un ultim nivel, mai avansat, e integrarea cu platforme de tip rețea virtuală (
 
 Pentru majoritatea caselor, punctul de plecare realist nu e o automatizare complexă de la zi unu, ci identificarea celor doi-trei consumatori mari și amânabili din casă (boiler, mașină de spălat, încărcare auto electrică) și programarea lor condiționată de producția solară — restul automatizărilor se pot adăuga treptat, pe măsură ce sistemul demonstrează beneficiul concret în factură.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

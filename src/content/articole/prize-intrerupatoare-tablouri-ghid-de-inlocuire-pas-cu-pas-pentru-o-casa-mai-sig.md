@@ -10,7 +10,7 @@ imagine: "/images/articole/prize-intrerupatoare-tablouri-ghid-de-inlocuire-pas-c
 
 Nu orice casă are nevoie de recablare completă ca să devină semnificativ mai sigură din punct de vedere electric — pentru multe locuințe mai vechi, o înlocuire țintită a prizelor, întrerupătoarelor și tabloului electric aduce deja un salt mare de siguranță, cu un buget și un disconfort mult mai mici decât o renovare integrală.
 
-Primul pas, și cel mai important, e tabloul electric. Un tablou vechi, cu siguranțe fuzibile sau disjunctoare fără protecție diferențială (RCD/DDR) pe circuitele relevante, rămâne cel mai mare risc dintr-o instalație altfel funcțională. Chiar dacă restul cablajului nu se schimbă imediat, înlocuirea tabloului cu unul modern, cu diferențiale montate corect pe fiecare circuit expus la risc de electrocutare (baie, bucătărie, prize exterioare), reduce dramatic riscul de accident — diferența dintre protecția la atingere directă și cea la atingere indirectă, explicată deja pe larg pe BuildHub.ro, e exact ce oferă un diferențial modern și lipsește la tablourile vechi.
+Primul pas, și cel mai important, e tabloul electric. Un tablou vechi, cu siguranțe fuzibile sau disjunctoare fără protecție diferențială (RCD/DDR) pe circuitele relevante, rămâne cel mai mare risc dintr-o instalație altfel funcțională. Chiar dacă restul cablajului nu se schimbă imediat, înlocuirea tabloului cu unul modern, cu diferențiale montate corect pe fiecare circuit expus la risc de electrocutare (baie, bucătărie, prize exterioare), reduce dramatic riscul de accident — diferența dintre protecția la atingere directă și cea la atingere indirectă, explicată deja pe larg pe RoElectricNews, e exact ce oferă un diferențial modern și lipsește la tablourile vechi.
 
 Al doilea pas e prizele, mai ales în zonele cu umiditate sau risc de stropire — baie, bucătărie, balcon, exterior. Prizele vechi, fără contact de protecție (împământare) sau montate fără capac de siguranță, trebuie înlocuite prioritar cu modele cu contact de împământare funcțional și, în zonele umede, cu grad de protecție IP corespunzător (rezistente la stropire). Verificarea simplă, fără scule speciale, e dacă priza are cele trei găuri standard cu contact metalic vizibil de împământare — o priză fără acest contact, într-o casă construită sau renovată recent, e un semn clar de instalație neconformă.
 
@@ -20,4 +20,4 @@ Ordinea de prioritate recomandată, dacă bugetul nu permite totul deodată, e: 
 
 Indiferent de amploarea lucrării, verificarea finală cu un electrician autorizat — măsurarea rezistenței de izolație și testarea funcțională a fiecărui diferențial montat — rămâne pasul care confirmă dacă înlocuirea a rezolvat efectiv problema de siguranță, nu doar aspectul vizual al instalației.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

@@ -20,4 +20,4 @@ A patra etapă e montarea finală a prizelor, întrerupătoarelor și corpurilor
 
 Costul total depinde decisiv de trei factori: suprafața casei (mai multe circuite, mai mult cablu), gradul de spargere necesar (o casă cu pereți din gips-carton e mult mai ieftin de recablat decât una cu pereți din beton sau cărămidă groasă) și calitatea materialelor alese pentru tablou și componente. Manopera reprezintă, de regulă, o parte semnificativă din bugetul total — motiv pentru care mai mulți electricieni recomandă obținerea a cel puțin două-trei oferte scrise, cu detaliere pe etape, înainte de a începe lucrarea, exact pentru a putea compara manoperă vs. materiale în fiecare ofertă.
 
-Conținut original BuildHub.ro.
+Conținut original RoElectricNews (roelectricnews.netlify.app).

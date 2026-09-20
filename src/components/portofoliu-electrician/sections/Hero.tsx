@@ -61,13 +61,37 @@ export function Hero2({ data }: { data: SectionData }) {
   return (
     <section className="py-24 px-6 grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
       <div>
+        {data.badge && (
+          <span
+            className="inline-block mb-4 rounded-full px-4 py-1.5 text-[12.5px] font-semibold"
+            style={{ background: "var(--bg-elev)", border: "1px solid var(--border)", color: "var(--text-dim)" }}
+          >
+            {data.badge}
+          </span>
+        )}
         <h1 className="text-4xl md:text-5xl font-bold text-ink">{data.title}</h1>
         <p className="mt-5 text-lg text-slate-600">{data.subtitle}</p>
-        {data.ctaText && (
-          <a href={data.ctaLink} className="inline-block mt-6 border-2 border-ink text-ink font-semibold px-6 py-3 rounded-lg">
-            {data.ctaText}
-          </a>
+        {(data.ctaText || data.secondaryCtaText) && (
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            {data.ctaText && (
+              <a href={data.ctaLink} className="inline-block border-2 border-ink text-ink font-semibold px-6 py-3 rounded-lg no-underline">
+                {data.ctaText}
+              </a>
+            )}
+            {data.secondaryCtaText && (
+              <a
+                href={data.secondaryCtaLink}
+                target={data.secondaryCtaLink?.startsWith("http") ? "_blank" : undefined}
+                rel={data.secondaryCtaLink?.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="inline-block rounded-lg px-6 py-3 font-semibold no-underline text-white"
+                style={{ background: "#25D366" }}
+              >
+                {data.secondaryCtaText}
+              </a>
+            )}
+          </div>
         )}
+        {data.microCopy && <p className="mt-3 text-xs text-slate-500">{data.microCopy}</p>}
       </div>
       <div className="aspect-video bg-slate-200 rounded-2xl overflow-hidden">
         {data.image && <img src={data.image} alt="" className="w-full h-full object-cover" />}
