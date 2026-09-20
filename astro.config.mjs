@@ -17,7 +17,7 @@ const peNetlify = Boolean(process.env.NETLIFY);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://buildhubro.netlify.app',
+  site: 'https://roelectricnews.netlify.app',
   output: 'server',
   adapter: peNetlify ? netlify() : node({ mode: 'standalone' }),
 

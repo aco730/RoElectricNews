@@ -5,6 +5,6 @@
   "adresaSediu": "Bulevardul Timișoara 73, 061323 București",
   "emailContact": "solarelectricpanel@gmail.com",
   "telefonContact": "0750 405 908",
-  "foloseșteAnalytics": true,
-  "foloseșteCookieuriMarketing": true
+  "foloseșteAnalytics": false,
+  "foloseșteCookieuriMarketing": false
 }

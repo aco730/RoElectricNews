@@ -5,8 +5,8 @@
     "topbarText": "Solar Electric Panel — montaj sisteme fotovoltaice & electrice",
     "topbarLinkuri": [],
     "logoImagine": null,
-    "logoTextPrincipal": "Electric",
-    "logoTextAccent": "NEWS",
+    "logoTextPrincipal": "RoElectric",
+    "logoTextAccent": "News",
     "cautareVizibila": true,
     "ctaButoane": [
       {
@@ -20,8 +20,8 @@
   },
   "footer": {
     "vizibil": true,
-    "brandText": "Electric",
-    "brandTextAccent": "NEWS",
+    "brandText": "RoElectric",
+    "brandTextAccent": "News",
     "descriere": "Site de știri despre electric, fotovoltaic, smart home și stocare de energie, susținut de Solar Electric Panel (SEP)",
     "linkuri": [
       {
@@ -45,6 +45,6 @@
         "href": "/termeni-si-conditii"
       }
     ],
-    "copyright": "Electric NEWS & Solar Electric Panel."
+    "copyright": "RoElectricNews & Solar Electric Panel."
   }
 }
