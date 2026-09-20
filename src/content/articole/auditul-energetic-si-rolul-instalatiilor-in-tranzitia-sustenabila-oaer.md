@@ -5,7 +5,7 @@ data: 2026-07-08
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/07/08/interviul-editiei-iulie-2026-romania-nu-duce-lipsa-de-inteligenta-profesionala-ci-de-coordonare-consecventa-si-capacitate-de-implementare-despre-oaer-si-rolul-institutiilor-profesionale-in-tranzitia-c/"
-imagine: "/images/articole/auditul-energetic-si-rolul-instalatiilor-in-tranzitia-sustenabila-oaer.jpg"
+imagine: "/images/articole/auditul-energetic-si-rolul-instalatiilor-in-tranzitia-sustenabila-oaer.webp"
 ---
 
 Tranziția către clădiri sustenabile în România nu ține doar de reglementări noi, ci mai ales de coordonarea profesioniștilor implicați — arhitecți, ingineri de instalații, auditori energetici — un aspect subliniat recent de reprezentanții organizațiilor profesionale din domeniu.

@@ -5,7 +5,7 @@ data: 2026-07-08
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/07/08/rugby-construct-reabilitarea-liceului-teoretic-videle-ca-exercitiu-de-consolidare-a-identitatii-locale/"
-imagine: "/images/articole/reabilitarea-termica-si-modernizarea-instalatiilor-in-cladiri.jpg"
+imagine: "/images/articole/reabilitarea-termica-si-modernizarea-instalatiilor-in-cladiri.webp"
 ---
 
 

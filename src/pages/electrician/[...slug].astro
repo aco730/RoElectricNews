@@ -1,0 +1,51 @@
+---
+// The electrician mini-site keeps its own internal nav (the CMS's "header"
+// section) on top of sep's real Header/Footer — only the CMS's own footer
+// section is stripped, since the real site Footer.astro already closes
+// every page.
+import "../../styles/portofoliu-electrician.css";
+import Layout from "../../layouts/Layout.astro";
+import { readSite } from "../../lib/portofoliuElectricianContent";
+import { COOKIE_NAME, isValidSessionCookie } from "../../lib/adminAuth";
+import { SiteEditor } from "../../components/portofoliu-electrician/SiteEditor";
+import OfertaWizard from "../../components/OfertaWizard.astro";
+
+export const prerender = false;
+
+// "electrician"/"fotovoltaic" were merged into "servicii" — old links redirect there.
+const LEGACY_REDIRECTS: Record<string, string> = {
+  electrician: "servicii",
+  fotovoltaic: "servicii",
+};
+
+const slug = (Astro.params.slug ?? "");
+if (LEGACY_REDIRECTS[slug] !== undefined) {
+  return Astro.redirect(`/electrician/${LEGACY_REDIRECTS[slug]}`, 301);
+}
+
+// "portofoliu" moved to be a real page under this same route (see step 3) —
+// nothing to redirect here anymore once that page exists in content.json.
+
+const site = await readSite();
+const exists = site.pages.some((p) => p.slug === slug);
+if (!exists) {
+  return Astro.redirect("/404");
+}
+
+const page = site.pages.find((p) => p.slug === slug)!;
+const isAdmin = isValidSessionCookie(Astro.cookies.get(COOKIE_NAME)?.value);
+
+// The CMS's own footer section would duplicate sep's real Footer.astro —
+// strip only that, keep the CMS's header for the mini-site's internal nav.
+const displaySite = {
+  ...site,
+  pages: site.pages.map((p) =>
+    p.slug === slug ? { ...p, sections: p.sections.filter((s) => s.type !== "footer") } : p
+  ),
+};
+---
+
+<Layout title={`${page.title} — Solar Electric Panel`} description={site.siteName} hideHeader singleCol>
+  <SiteEditor client:load initialSite={displaySite} slug={slug} isAdmin={isAdmin} />
+  {slug === "calculatoare/oferta" && <OfertaWizard />}
+</Layout>

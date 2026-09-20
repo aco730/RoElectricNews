@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "SmartHomeSystems"
 sursaUrl: "https://www.smarthomesystems.ro"
-imagine: "/images/articole/care-sunt-costurile-reale-pentru-automatizarea-completa-a-unei-case-sisteme-cablate-vs-wir.jpg"
+imagine: "/images/articole/care-sunt-costurile-reale-pentru-automatizarea-completa-a-unei-case-sisteme-cablate-vs-wir.webp"
 ---
 
 Automatizarea completă a unei case moderne — iluminat, climatizare, jaluzele, acces, alarme — poate costa de la câteva mii de lei pentru soluții wireless de bază, până la zeci de mii de lei pentru sisteme cablate integrate profesional, precum KNX sau Loxone.

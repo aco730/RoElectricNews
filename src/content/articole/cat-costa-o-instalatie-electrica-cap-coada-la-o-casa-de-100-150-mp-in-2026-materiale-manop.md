@@ -5,7 +5,7 @@ data: 2026-05-04
 dataAdaugare: "2026-08-11"
 sursaNume: "Electro-Calin"
 sursaUrl: "https://electro-calin.ro/ghid-pentru-curentul-trifazic-cat-costa-sa-tragi-curent-trifazic-in-2026"
-imagine: "/images/articole/cat-costa-o-instalatie-electrica-cap-coada-la-o-casa-de-100-150-mp-in-2026-materiale-manop.jpg"
+imagine: "/images/articole/cat-costa-o-instalatie-electrica-cap-coada-la-o-casa-de-100-150-mp-in-2026-materiale-manop.webp"
 ---
 
 

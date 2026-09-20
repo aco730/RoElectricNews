@@ -46,6 +46,9 @@ async function verificaBuild(): Promise<RezultatCategorie> {
 			cwd: ROOT,
 			timeout: 5 * 60 * 1000,
 			maxBuffer: 20 * 1024 * 1024,
+			// Pe Windows, execFile pe un .cmd aruncă „spawn EINVAL” fără shell: true
+			// (Node trebuie să treacă prin cmd.exe ca să execute fișiere .cmd).
+			shell: process.platform === 'win32',
 		});
 		const output = stdout + stderr;
 		const areAvertismente = /warn/i.test(output);

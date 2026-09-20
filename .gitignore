@@ -31,3 +31,6 @@ public/images/articole-originale-backup/
 
 # poze noi nu inca procesate (locale, tranzitorii)
 poze-noi/_procesate/
+
+# oferte vechi de clienti (documente business, nu cod de site)
+_arhiva-business/

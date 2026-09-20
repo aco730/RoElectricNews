@@ -5,7 +5,7 @@ data: 2026-08-03
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/08/03/5-probleme-reale-la-aerul-conditionat-si-solutiile-tehnice-pentru-2026/"
-imagine: "/images/articole/5-probleme-reale-la-aerul-conditionat-si-solutiile-tehnice-pentru-2026.jpg"
+imagine: "/images/articole/5-probleme-reale-la-aerul-conditionat-si-solutiile-tehnice-pentru-2026.webp"
 ---
 
 Aparatele de aer condiționat sunt printre echipamentele cel mai des instalate greșit sau întreținute superficial — nu pentru că tehnologia ar fi complicată, ci pentru că detaliile de execuție și de întreținere sunt frecvent ignorate.

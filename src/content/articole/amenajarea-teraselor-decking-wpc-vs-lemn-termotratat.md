@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Pavele.ro"
 sursaUrl: "https://www.pavele.ro"
-imagine: "/images/articole/amenajarea-teraselor-decking-wpc-vs-lemn-termotratat.jpg"
+imagine: "/images/articole/amenajarea-teraselor-decking-wpc-vs-lemn-termotratat.webp"
 ---
 
 Pentru pardoseala unei terase exterioare, alegerea reală de pe piață s-a restrâns la două soluții principale — decking WPC (compozit lemn-plastic) și lemn termotratat — fiecare cu un profil diferit de întreținere, aspect și durabilitate.

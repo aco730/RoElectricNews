@@ -5,7 +5,7 @@ data: 2026-07-31
 dataAdaugare: "2026-08-10"
 sursaNume: "Electroplan"
 sursaUrl: "https://www.electroplan.ro"
-imagine: "/images/articole/prize-intrerupatoare-tablouri-ghid-de-inlocuire-pas-cu-pas-pentru-o-casa-mai-sig.jpg"
+imagine: "/images/articole/prize-intrerupatoare-tablouri-ghid-de-inlocuire-pas-cu-pas-pentru-o-casa-mai-sig.webp"
 ---
 
 Nu orice casă are nevoie de recablare completă ca să devină semnificativ mai sigură din punct de vedere electric — pentru multe locuințe mai vechi, o înlocuire țintită a prizelor, întrerupătoarelor și tabloului electric aduce deja un salt mare de siguranță, cu un buget și un disconfort mult mai mici decât o renovare integrală.

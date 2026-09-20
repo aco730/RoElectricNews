@@ -5,7 +5,7 @@ data: 2026-08-03
 dataAdaugare: "2026-08-10"
 sursaNume: "SmartHomeSystems"
 sursaUrl: "https://smarthomesystems.ro"
-imagine: "/images/articole/automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul.jpg"
+imagine: "/images/articole/automatizari-utile-pentru-case-cu-panouri-fotovoltaice-cum-optimizezi-consumul.webp"
 ---
 
 Un sistem fotovoltaic fără nicio automatizare produce energie oricum, dar lasă pe masă un beneficiu simplu: consumul casei rareori coincide perfect cu orele de producție maximă a panourilor, de obicei mijlocul zilei. Câteva automatizări relativ simple pot muta o parte semnificativă din consum exact spre orele cu producție solară mare, reducând cantitatea de energie cumpărată din rețea sau, dacă există baterie, presiunea asupra ei.

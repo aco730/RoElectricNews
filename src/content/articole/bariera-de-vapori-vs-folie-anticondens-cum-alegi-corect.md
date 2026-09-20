@@ -5,7 +5,7 @@ data: 2026-04-14
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/04/14/bariera-de-vapori-vs-folie-anticondens-cum-alegi-corect-in-2026/"
-imagine: "/images/articole/bariera-de-vapori-vs-folie-anticondens-cum-alegi-corect.jpg"
+imagine: "/images/articole/bariera-de-vapori-vs-folie-anticondens-cum-alegi-corect.webp"
 ---
 
 Confuzia dintre barieră de vapori și folie anticondens este una dintre cele mai frecvente greșeli de execuție la izolarea acoperișurilor și pereților, cu consecințe serioase pentru durabilitatea structurii dacă materialul e ales sau poziționat greșit.

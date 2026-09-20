@@ -5,7 +5,7 @@ data: 2026-02-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/02/05/gherle-de-santier-in-2025-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie/"
-imagine: "/images/articole/gherle-de-santier-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie.jpg"
+imagine: "/images/articole/gherle-de-santier-cum-sa-nu-ti-construiesti-viitorul-pe-improvizatie.webp"
 ---
 
 

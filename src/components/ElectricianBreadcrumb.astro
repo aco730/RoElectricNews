@@ -1,0 +1,12 @@
+---
+// Same breadcrumb component the CMS pages render as a "breadcrumb" section —
+// reused standalone for the plain Astro portfolio pages.
+import { Breadcrumb1 } from "./portofoliu-electrician/sections/Breadcrumb";
+import type { NavLink } from "../lib/types";
+
+interface Props {
+  items: NavLink[];
+}
+const { items } = Astro.props;
+---
+<Breadcrumb1 client:load data={{ breadcrumbItems: items }} />

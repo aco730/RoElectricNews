@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Arena Instalațiilor"
 sursaUrl: "https://www.arenainstalatiilor.ro"
-imagine: "/images/articole/pompa-de-caldura-vs-centrala-pe-gaz-ghid-comparativ-de-eficienta.jpg"
+imagine: "/images/articole/pompa-de-caldura-vs-centrala-pe-gaz-ghid-comparativ-de-eficienta.webp"
 ---
 
 Alegerea între o pompă de căldură și o centrală pe gaz pentru încălzirea unei locuințe depinde de trei factori esențiali: costul inițial, eficiența pe termen lung și izolarea termică a clădirii — niciun răspuns nu e universal valabil.

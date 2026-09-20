@@ -5,7 +5,7 @@ data: 2026-07-08
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/07/08/oar-este-disponibil-raportul-sioar-2025-o-analiza-a-pietei-de-arhitectura-si-constructii-din-romania-realizata-anual-de-ordinul-arhitectilor/"
-imagine: "/images/articole/care-sunt-costurile-pentru-o-casa-nzeb-comparativ-cu-o-constructie-standard-in-2026.jpg"
+imagine: "/images/articole/care-sunt-costurile-pentru-o-casa-nzeb-comparativ-cu-o-constructie-standard-in-2026.webp"
 ---
 
 Standardul nZEB (clădire cu consum de energie aproape egal cu zero) este obligatoriu pentru toate clădirile noi din Uniunea Europeană, inclusiv România, iar diferența de cost față de o construcție standard rămâne una dintre cele mai frecvente întrebări ale celor care planifică o casă nouă.

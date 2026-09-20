@@ -5,7 +5,7 @@ data: 2026-02-20
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/02/20/cum-alegi-corect-un-aparat-de-aer-conditionat/"
-imagine: "/images/articole/cum-alegi-corect-un-aparat-de-aer-conditionat.jpg"
+imagine: "/images/articole/cum-alegi-corect-un-aparat-de-aer-conditionat.webp"
 ---
 
 Alegerea unui aparat de aer condiționat potrivit depinde de mai mulți factori tehnici decât simpla putere afișată pe cutie — o alegere corectă ține cont de suprafață, izolație, orientare și de utilizarea reală a spațiului.

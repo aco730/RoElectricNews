@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Spațiul Construit"
 sursaUrl: "https://spatiulconstruit.ro/articol/cartea-tehnica-a-constructiei-rolul-dirigintelui-de-santier-in-completarea-documentatiei/28830"
-imagine: "/images/articole/cartea-tehnica-a-constructiei-rolul-dirigintelui-de-santier-in-completarea-documentatiei.jpg"
+imagine: "/images/articole/cartea-tehnica-a-constructiei-rolul-dirigintelui-de-santier-in-completarea-documentatiei.webp"
 ---
 
 Cartea tehnică a construcției este documentul oficial care însoțește o clădire pe toată durata ei de viață — conține toate informațiile tehnice relevante despre proiectare, execuție și materialele folosite, iar completarea corectă a acesteia depinde în mare parte de rolul activ al dirigintelui de șantier.

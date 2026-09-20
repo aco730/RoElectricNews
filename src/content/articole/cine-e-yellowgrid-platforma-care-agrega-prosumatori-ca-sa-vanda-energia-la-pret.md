@@ -5,7 +5,7 @@ data: 2026-07-07
 dataAdaugare: "2026-08-10"
 sursaNume: "YellowGrid"
 sursaUrl: "https://www.yellowgrid.ro/despre-noi"
-imagine: "/images/articole/cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret.png"
+imagine: "/images/articole/cine-e-yellowgrid-platforma-care-agrega-prosumatori-ca-sa-vanda-energia-la-pret.webp"
 fixat: true
 ---
 

@@ -5,7 +5,7 @@ data: 2026-01-22
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/01/22/montajul-corect-al-ferestrelor-eficiente-energetic-in-2025-checklist-si-pasi-esentiali/"
-imagine: "/images/articole/montajul-ferestrelor-eficiente-energetic-checklist-si-pasi-esentiali.jpg"
+imagine: "/images/articole/montajul-ferestrelor-eficiente-energetic-checklist-si-pasi-esentiali.webp"
 ---
 
 

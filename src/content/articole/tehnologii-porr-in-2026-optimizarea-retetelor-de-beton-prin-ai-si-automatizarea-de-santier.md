@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Agenda Construcțiilor"
 sursaUrl: "https://agendaconstructiilor.ro/stiri/digitalizarea-in-constructii-industrie/tehnologii-porr-in-2026-optimizarea-retetelor-prin-ai-si-automatizarea-de-santier"
-imagine: "/images/articole/tehnologii-porr-in-2026-optimizarea-retetelor-de-beton-prin-ai-si-automatizarea-de-santier.jpg"
+imagine: "/images/articole/tehnologii-porr-in-2026-optimizarea-retetelor-de-beton-prin-ai-si-automatizarea-de-santier.webp"
 ---
 
 Digitalizarea șantierelor de construcții a depășit stadiul de proiect pilot — companii mari din industrie folosesc deja inteligența artificială pentru optimizarea rețetelor de beton și automatizarea unor procese repetitive de execuție, cu rezultate măsurabile în costuri și calitate.

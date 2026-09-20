@@ -378,7 +378,7 @@
   ],
   "youtube": [
     {
-      "intrebare": "Ce fel de conținut găsesc în categoria YouTube pe BuildHub.ro?",
+      "intrebare": "Ce fel de conținut găsesc în categoria YouTube pe Electric NEWS?",
       "raspuns": "Rezumate editoriale scurte (2-3 minute de citit) ale unor videoclipuri relevante despre electric, fotovoltaic, smart home și baterii, de la canale românești de specialitate.",
       "articole": [
         "instalatie-electrica-pentru-casa-noua-ce-nu-trebuie-ratat-inainte-de-turnarea-be",
@@ -411,7 +411,7 @@
     },
     {
       "intrebare": "De ce nu sunt toate videoclipurile de pe canalele respective transformate în articole?",
-      "raspuns": "Se aleg doar cele cu relevanță clară pentru cititorii BuildHub.ro (fotovoltaic, electric, smart home, baterii) — nu orice video de pe canal, ci cele cu conținut tehnic util.",
+      "raspuns": "Se aleg doar cele cu relevanță clară pentru cititorii Electric NEWS (fotovoltaic, electric, smart home, baterii) — nu orice video de pe canal, ci cele cu conținut tehnic util.",
       "articole": []
     },
     {
@@ -437,14 +437,14 @@
   ],
   "colaboratori": [
     {
-      "intrebare": "Ce înseamnă categoria „Colaboratori” pe BuildHub.ro?",
+      "intrebare": "Ce înseamnă categoria „Colaboratori” pe Electric NEWS?",
       "raspuns": "E secțiunea care explică cine operează site-ul — Solar Electric Panel (SEP) — și cum poți colabora sau cere o ofertă direct de la echipa din spatele publicației.",
       "articole": [
         "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
       ]
     },
     {
-      "intrebare": "BuildHub.ro e un site media independent sau al unei firme?",
+      "intrebare": "Electric NEWS e un site media independent sau al unei firme?",
       "raspuns": "E operat de Solar Electric Panel (SEP), o firmă din domeniul fotovoltaic și instalații electrice — asta e declarat explicit în footer și în pagina Colaboratori, nu ascuns.",
       "articole": [
         "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
@@ -471,18 +471,18 @@
     },
     {
       "intrebare": "De ce nu sunt separate complet articolele „de presă” de partea comercială SEP?",
-      "raspuns": "Modelul e transparent asumat: BuildHub.ro produce conținut real și verificat, dar scopul de bază e generarea de contact cu cititorii interesați de servicii SEP — asta e declarat explicit, nu ascuns sub formă de site „neutru”.",
+      "raspuns": "Modelul e transparent asumat: Electric NEWS produce conținut real și verificat, dar scopul de bază e generarea de contact cu cititorii interesați de servicii SEP — asta e declarat explicit, nu ascuns sub formă de site „neutru”.",
       "articole": [
         "solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta"
       ]
     },
     {
-      "intrebare": "Firmele pot apărea ca sponsori pe BuildHub.ro?",
+      "intrebare": "Firmele pot apărea ca sponsori pe Electric NEWS?",
       "raspuns": "Da, conținutul sponsorizat e o opțiune posibilă, dar marcat obligatoriu vizibil cu eticheta „Conținut sponsorizat” — nu se amestecă nemarcat cu conținutul editorial obișnuit.",
       "articole": []
     },
     {
-      "intrebare": "Cum contactez direct echipa BuildHub.ro / SEP, nu doar pentru ofertă?",
+      "intrebare": "Cum contactez direct echipa Electric NEWS / SEP, nu doar pentru ofertă?",
       "raspuns": "Prin pagina de Contact, cu formular dedicat pentru orice solicitare care nu e strict o cerere de ofertă comercială.",
       "articole": []
     },

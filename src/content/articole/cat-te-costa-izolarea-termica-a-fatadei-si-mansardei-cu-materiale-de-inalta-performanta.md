@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Arena Construct"
 sursaUrl: "https://arenaconstruct.ro/"
-imagine: "/images/articole/cat-te-costa-izolarea-termica-a-fatadei-si-mansardei-cu-materiale-de-inalta-performanta.jpg"
+imagine: "/images/articole/cat-te-costa-izolarea-termica-a-fatadei-si-mansardei-cu-materiale-de-inalta-performanta.webp"
 ---
 
 Izolarea termică performantă a fațadei și mansardei este esențială atât pentru respectarea standardului nZEB, cât și pentru reducerea reală a costurilor de încălzire pe termen lung.

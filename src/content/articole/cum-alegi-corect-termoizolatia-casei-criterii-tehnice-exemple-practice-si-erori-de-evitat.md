@@ -5,7 +5,7 @@ data: 2026-02-06
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/02/06/cum-alegi-corect-termoizolatia-casei-in-2025-criterii-tehnice-exemple-practice-si-erori-de-evitat/"
-imagine: "/images/articole/cum-alegi-corect-termoizolatia-casei-criterii-tehnice-exemple-practice-si-erori-de-evitat.jpg"
+imagine: "/images/articole/cum-alegi-corect-termoizolatia-casei-criterii-tehnice-exemple-practice-si-erori-de-evitat.webp"
 ---
 
 Alegerea termoizolației potrivite pentru o casă depinde de un set de criterii tehnice clare, nu doar de prețul pe metru pătrat — grosimea, conductivitatea termică și zona de aplicare trebuie evaluate împreună pentru un rezultat real eficient.

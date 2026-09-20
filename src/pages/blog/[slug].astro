@@ -5,9 +5,9 @@ import { getCollection, render } from "astro:content";
 import { categories } from "../../data/categories";
 import qaArticoleData from "../../data/qa-articole.json";
 import Etichete from "../../components/Etichete.astro";
-import { getCtaConfig } from "../../lib/ctaConfig";
+import { getCtaConfig, getCtaForCategory } from "../../lib/ctaConfig";
 
-const cta = (await getCtaConfig()).blog;
+const ctaConfig = await getCtaConfig();
 
 export async function getStaticPaths() {
   const articole = await getCollection("articole");
@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 const { art } = Astro.props;
 const { Content } = await render(art);
 const cat = categories.find((c) => c.slug === art.data.categorie);
+const cta = getCtaForCategory(ctaConfig, art.data.categorie);
 const qaArticol: { intrebare: string; raspuns: string }[] =
   (qaArticoleData as Record<string, { intrebare: string; raspuns: string }[]>)[art.id] ?? [];
 
@@ -41,7 +42,7 @@ const breadcrumbs = [
 ];
 ---
 <Layout
-  title={`${art.data.title} — BuildHub.ro`}
+  title={`${art.data.title} — Electric NEWS`}
   description={descriereScurta}
   articleQa
   ogImage={art.data.imagine}

@@ -5,7 +5,7 @@ data: 2025-12-23
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2025/12/23/microinvertoarele-pentru-panouri-fotovoltaice-revolutie-tehnica-si-siguranta-pe-acoperis-in-2025/"
-imagine: "/images/articole/microinvertoarele-pentru-panouri-fotovoltaice-revolutie-tehnica-si-siguranta-pe-acoperis.jpg"
+imagine: "/images/articole/microinvertoarele-pentru-panouri-fotovoltaice-revolutie-tehnica-si-siguranta-pe-acoperis.webp"
 ---
 
 Microinvertoarele reprezintă o alternativă tot mai populară la invertorul central (string) tradițional pentru sistemele fotovoltaice rezidențiale, cu avantaje clare de siguranță și performanță, dar și un cost inițial mai ridicat.

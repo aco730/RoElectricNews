@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "BizzClub"
 sursaUrl: "https://www.bizzclub.ro"
-imagine: "/images/articole/mobilier-custom-si-ergonomie-planificarea-bucatariei-si-spatiilor.jpg"
+imagine: "/images/articole/mobilier-custom-si-ergonomie-planificarea-bucatariei-si-spatiilor.webp"
 ---
 
 Mobilierul la comandă (custom) rezolvă o problemă pe care mobilierul standard, din serie, o ignoră structural: spațiile reale ale unei locuințe rareori se potrivesc perfect cu dimensiunile fixe ale corpurilor modulare disponibile în magazine — rezultatul, la mobilier standard, e frecvent spațiu pierdut sau soluții de compromis.

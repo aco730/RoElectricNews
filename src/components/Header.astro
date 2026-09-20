@@ -2,6 +2,11 @@
 import { categoriiVizibile } from "../data/categories";
 import siteConfig from "../data/site-config.json";
 
+interface Props {
+  showCategoryNav?: boolean;
+}
+
+const { showCategoryNav = true } = Astro.props;
 const { header } = siteConfig;
 ---
 {header.vizibil && (
@@ -39,16 +44,100 @@ const { header } = siteConfig;
       )}
 
       <div class="header-ctas">
+        {header.paginaDirecta && (
+          <a class="cta-link" href={header.paginaDirecta.href}>{header.paginaDirecta.text}</a>
+        )}
+        {header.meniuServicii && (
+          <div class="nav-dropdown">
+            <button type="button" class="cta-link nav-link-caret">
+              {header.meniuServicii.text} <span class="caret">▾</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              {header.meniuServicii.itemi.map((it) => (
+                <a href={it.href}>{it.text}</a>
+              ))}
+            </div>
+          </div>
+        )}
         {header.ctaButoane.map((b) => (
           <a class={`cta-btn ${b.primar ? 'cta-btn-primary' : ''}`} href={b.href}>{b.text}</a>
         ))}
       </div>
     </header>
 
-    <nav class="cats">
-      {categoriiVizibile.map((cat) => (
-        <a href={`/categorie/${cat.slug}`} class="nav-link" style={`--accent:${cat.color}`}>{cat.name}</a>
-      ))}
-    </nav>
+    {showCategoryNav && (
+      <nav class="cats">
+        {categoriiVizibile.map((cat) => (
+          <a href={`/categorie/${cat.slug}`} class="nav-link" style={`--accent:${cat.color}`}>{cat.name}</a>
+        ))}
+      </nav>
+    )}
   </>
 )}
+
+<style>
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 9px 14px;
+    border-radius: 6px;
+  }
+  .cta-link:hover {
+    background: rgba(15, 46, 43, 0.06);
+  }
+  .nav-dropdown {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .nav-link-caret {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+  .caret {
+    font-size: 10px;
+    opacity: 0.8;
+    transition: transform 0.15s ease;
+  }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    padding: 6px;
+    z-index: 30;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .nav-dropdown-menu a:hover {
+    background: var(--bg);
+    color: var(--teal);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown:hover .caret,
+  .nav-dropdown:focus-within .caret {
+    transform: rotate(180deg);
+  }
+</style>

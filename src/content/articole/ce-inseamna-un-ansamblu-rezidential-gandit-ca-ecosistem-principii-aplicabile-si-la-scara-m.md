@@ -5,7 +5,7 @@ data: 2026-07-20
 dataAdaugare: "2026-08-11"
 sursaNume: "Igloo"
 sursaUrl: "https://igloo.ro/ecosistemul-rezidential-colina-park-o-arhitectura-a-coeziunii/"
-imagine: "/images/articole/ce-inseamna-un-ansamblu-rezidential-gandit-ca-ecosistem-principii-aplicabile-si-la-scara-m.jpg"
+imagine: "/images/articole/ce-inseamna-un-ansamblu-rezidential-gandit-ca-ecosistem-principii-aplicabile-si-la-scara-m.webp"
 ---
 
 

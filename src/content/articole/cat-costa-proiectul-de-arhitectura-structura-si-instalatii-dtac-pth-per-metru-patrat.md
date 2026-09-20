@@ -5,7 +5,7 @@ data: 2026-01-15
 dataAdaugare: "2026-08-11"
 sursaNume: "Proiect-Case.ro"
 sursaUrl: "https://proiect-case.ro/autorizatie-construire-ghid"
-imagine: "/images/articole/cat-costa-proiectul-de-arhitectura-structura-si-instalatii-dtac-pth-per-metru-patrat.jpg"
+imagine: "/images/articole/cat-costa-proiectul-de-arhitectura-structura-si-instalatii-dtac-pth-per-metru-patrat.webp"
 ---
 
 

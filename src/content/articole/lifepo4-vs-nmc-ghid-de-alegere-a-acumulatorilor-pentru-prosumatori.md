@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Asociația Prosumatorilor"
 sursaUrl: "https://asociatiaprosumatorilor.ro"
-imagine: "/images/articole/lifepo4-vs-nmc-ghid-de-alegere-a-acumulatorilor-pentru-prosumatori.jpg"
+imagine: "/images/articole/lifepo4-vs-nmc-ghid-de-alegere-a-acumulatorilor-pentru-prosumatori.webp"
 ---
 
 Pentru bateriile de stocare rezidențială, alegerea reală de pe piață e aproape întotdeauna între LiFePO4 (litiu-fier-fosfat) și NMC (nichel-mangan-cobalt) — și, spre deosebire de acum câțiva ani, diferența de preț s-a redus semnificativ, ceea ce face LiFePO4 alegerea implicită pentru majoritatea instalațiilor casnice.

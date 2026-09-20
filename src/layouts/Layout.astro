@@ -30,10 +30,12 @@ interface Props {
   breadcrumbs?: Breadcrumb[];
   faqItems?: QaItem[];
   articleMeta?: ArticleMeta;
+  hideCategoryNav?: boolean;
+  hideHeader?: boolean;
 }
 
 const {
-  title = "BuildHub.ro — Electric, Smart Home, Fotovoltaic, Baterii & Stocare",
+  title = "Electric NEWS — Electric, Smart Home, Fotovoltaic, Baterii & Stocare",
   description = "Știri și ghiduri despre electric, fotovoltaic, smart home și stocare de energie, susținute de Solar Electric Panel (SEP).",
   singleCol = false,
   articleQa = false,
@@ -41,6 +43,8 @@ const {
   breadcrumbs,
   faqItems,
   articleMeta,
+  hideCategoryNav = false,
+  hideHeader = false,
 } = Astro.props;
 
 const mainClass = articleQa ? "article-qa" : singleCol ? "single-col" : "";
@@ -130,7 +134,7 @@ const articleSchema = articleMeta ? {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageAbsolut} />
     <meta property="og:locale" content="ro_RO" />
-    <meta property="og:site_name" content="BuildHub.ro — Solar Electric Panel" />
+    <meta property="og:site_name" content="Electric NEWS — Solar Electric Panel" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -143,7 +147,7 @@ const articleSchema = articleMeta ? {
     {articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema).replace(/</g, '\\u003c')} />}
   </head>
   <body>
-    <Header />
+    {!hideHeader && <Header showCategoryNav={!hideCategoryNav} />}
     <main class={mainClass}>
       <slot />
     </main>

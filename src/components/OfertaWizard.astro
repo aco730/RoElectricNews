@@ -1,0 +1,944 @@
+---
+// Extracted from the former standalone /oferta page — same wizard, same
+// script/logic, now mounted as the closing section of the /electrician hub
+// page instead of living at its own URL.
+---
+<section id="oferta">
+  <div class="oferta-hero">
+    <h1 class="oferta-hero-title">Obține <span>oferta</span> ta</h1>
+    <p class="oferta-hero-sub">Răspunde la câteva întrebări simple — vezi imediat 3 variante de sistem, de la Buget la Premium</p>
+    <p class="oferta-hero-sub"><a href="/electrician/preturi">Vezi lista completă de prețuri orientative →</a></p>
+  </div>
+
+  <div class="wizard-card" id="wizardCard">
+    <div class="wizard-step-label" id="wizardStepLabel">Pasul 1 din 7</div>
+    <div class="wizard-progress" id="wizardProgress">
+      <span class="wp-step active" data-step="1">1</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="2">2</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="3">3</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="4">4</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="5">5</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="6">6</span>
+      <span class="wp-line"></span>
+      <span class="wp-step" data-step="7">7</span>
+    </div>
+    <div class="wizard-recap" id="wizardRecap"></div>
+
+    <!-- Step 1: tip cladire -->
+    <div class="wizard-step active" data-step="1">
+      <h2>Pentru ce ai nevoie de sistem?</h2>
+      <div class="wizard-options">
+        <button type="button" class="wizard-option" data-field="tipCladire" data-value="casa">🏠<span>Casă</span></button>
+        <button type="button" class="wizard-option" data-field="tipCladire" data-value="firma">🏢<span>Firmă / spațiu comercial</span></button>
+      </div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue" data-step="1" disabled>Continuă</button>
+    </div>
+
+    <!-- Step 2: consum -->
+    <div class="wizard-step" data-step="2">
+      <h2>Cât consumi de obicei?</h2>
+      <p class="wizard-hint">Alege ce știi mai bine, apoi completează suma.</p>
+      <div class="wizard-options wizard-options-inline" id="consumTipOptions">
+        <button type="button" class="wizard-option-toggle" data-field="stieCe" data-value="factura">Știu factura lunară (lei)</button>
+        <button type="button" class="wizard-option-toggle" data-field="stieCe" data-value="consum">Știu consumul anual (kWh)</button>
+      </div>
+      <div class="wizard-input-row" id="inputFactura" hidden>
+        <label for="facturaLunara">Factura medie lunară la curent (lei)</label>
+        <input type="number" id="facturaLunara" min="0" placeholder="ex: 450" />
+      </div>
+      <div class="wizard-input-row" id="inputConsum" hidden>
+        <label for="consumAnual">Consum anual (kWh)</label>
+        <input type="number" id="consumAnual" min="0" placeholder="ex: 4800" />
+      </div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue" data-step="2" disabled>Continuă</button>
+    </div>
+
+    <!-- Step 3: baterie -->
+    <div class="wizard-step" data-step="3">
+      <h2>Vrei și baterie de stocare?</h2>
+      <p class="wizard-hint">Bateria îți permite să folosești energia produsă ziua și seara/noaptea, nu doar în timp real.</p>
+      <div class="wizard-options">
+        <button type="button" class="wizard-option" data-field="baterie" data-value="da">🔋<span>Da, vreau baterie</span></button>
+        <button type="button" class="wizard-option" data-field="baterie" data-value="nu">☀️<span>Nu, doar panouri</span></button>
+        <button type="button" class="wizard-option" data-field="baterie" data-value="nustiu">🤔<span>Nu știu — recomandați voi</span></button>
+      </div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue" data-step="3" disabled>Continuă</button>
+    </div>
+
+    <!-- Step 4: orientare acoperis (multi-select) -->
+    <div class="wizard-step" data-step="4">
+      <h2>Cum e orientat acoperișul?</h2>
+      <p class="wizard-hint">Poți bifa mai multe orientări, dacă acoperișul are mai multe ape. Aproximativ e suficient — verificăm exact la vizita tehnică.</p>
+      <div class="wizard-options" id="orientareOptions">
+        <button type="button" class="wizard-option wizard-option-multi" data-field="orientare" data-value="Sud">☀️<span>Sud</span></button>
+        <button type="button" class="wizard-option wizard-option-multi" data-field="orientare" data-value="Est">🌅<span>Est</span></button>
+        <button type="button" class="wizard-option wizard-option-multi" data-field="orientare" data-value="Vest">🌇<span>Vest</span></button>
+        <button type="button" class="wizard-option wizard-option-multi" data-field="orientare" data-value="nustiu">🤷<span>Nu știu</span></button>
+      </div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue" data-step="4" disabled>Vezi variantele</button>
+    </div>
+
+    <!-- Step 5: alege varianta -->
+    <div class="wizard-step" data-step="5">
+      <h2>Variantele tale</h2>
+      <p class="wizard-hint">Prețuri estimative, incluzând materiale și manoperă montaj — confirmate exact după vizita tehnică gratuită.</p>
+      <div class="variant-grid" id="variantGrid"></div>
+    </div>
+
+    <!-- Step 6: oferta detaliata, randata nativ in pagina -->
+    <div class="wizard-step" data-step="6">
+      <div class="offer-toolbar no-print">
+        <div class="quick-actions">
+          <button type="button" class="quickbtn" onclick="window.print()">🖨️ Printează / Salvează PDF</button>
+          <a class="quickbtn" href="tel:0750405908">📞 Sună acum</a>
+          <a class="quickbtn" href="mailto:solarelectricpanel@gmail.com">✉️ Email</a>
+        </div>
+      </div>
+      <div id="offerPrintArea"></div>
+      <button type="button" class="cta-btn cta-btn-primary wizard-continue-manual no-print" id="offerContinueBtn">Continuă spre formular →</button>
+    </div>
+
+    <!-- Step 7: formular de contact + finalizare -->
+    <div class="wizard-step" data-step="7">
+      <div id="offerFormWrap">
+        <h2>Aproape gata — unde trimitem oferta?</h2>
+        <p class="wizard-hint" id="chosenVariantSummary"></p>
+        <form
+          name="cerere-oferta"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="companie-web"
+          id="offerForm"
+        >
+          <input type="hidden" name="form-name" value="cerere-oferta" />
+          <input type="hidden" name="varianta" id="fVarianta" />
+          <input type="hidden" name="detalii-sistem" id="fDetalii" />
+          <p class="honeypot"><label>Nu completa acest câmp: <input name="companie-web" /></label></p>
+
+          <div class="form-field">
+            <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume" required />
+          </div>
+          <div class="form-field">
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-field">
+            <label for="localitate">Localitate</label>
+            <input type="text" id="localitate" name="localitate" placeholder="ex: Făgăraș" />
+          </div>
+          <div class="form-field">
+            <label for="mesaj">Mesaj (opțional)</label>
+            <textarea id="mesaj" name="mesaj" rows="3"></textarea>
+          </div>
+          <div data-netlify-recaptcha="true"></div>
+          <button type="submit" class="form-submit">Trimite cererea de ofertă</button>
+        </form>
+      </div>
+      <div id="offerThankYou" hidden>
+        <h2>Mulțumim!</h2>
+        <p>Am primit cererea ta pentru varianta selectată. Te contactăm în cel mai scurt timp pentru a stabili vizita tehnică.</p>
+      </div>
+    </div>
+
+    <div class="wizard-nav">
+      <a href="/" class="btn-back" id="wizardBackUnified">← Renunță, du-mă înapoi pe site</a>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="wizard-card" id="wizardLoading" hidden>
+    <p style="text-align:center;color:var(--muted);">Calculăm cele 3 variante...</p>
+  </div>
+</section>
+
+<style is:global>
+  /* Hero cu gradient + titlu bicolor, doar pentru modulul de oferta */
+  .oferta-hero { background: linear-gradient(135deg, var(--navy), #1E4A40 55%, var(--teal)); border-radius: 20px; padding: 40px 28px 56px; text-align: center; margin-bottom: -34px; position: relative; }
+  .oferta-hero-title { color: #fff; font-size: 30px; font-weight: 800; margin: 0 0 10px; }
+  .oferta-hero-title span { color: var(--mint); }
+  .oferta-hero-sub { color: #D8ECDD; font-size: 14px; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+  .oferta-hero-sub a { color: #fff; text-decoration: underline; font-weight: 600; }
+  .oferta-hero-sub a:hover { color: var(--mint); }
+
+  .wizard-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 640px; margin: 0 auto 24px; position: relative; z-index: 1; box-shadow: 0 18px 40px -12px rgba(18,33,58,0.35); }
+
+  /* Butoane complet rotunjite (pilula), doar in modulul de oferta */
+  .wizard-card .cta-btn, .wizard-continue, .quickbtn, #variantGrid .cta-btn { border-radius: 999px; }
+  #offerFormWrap .form-submit { border-radius: 999px; }
+  .wizard-step-label { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+  .wizard-progress { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 28px; flex-wrap: wrap; row-gap: 8px; }
+  .wp-step { width: 26px; height: 26px; border-radius: 50%; background: var(--border); color: var(--muted); font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .wp-step.active { background: var(--teal); color: #fff; }
+  .wp-step.done { background: var(--navy); color: #fff; }
+  .wp-line { width: 16px; height: 2px; background: var(--border); flex: none; }
+  .wizard-recap { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: -14px 0 22px; min-height: 24px; }
+  .recap-chip { background: #E3F5E8; color: var(--navy); border: 1px solid var(--teal); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; animation: chip-in 0.25s ease; }
+  @keyframes chip-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .wizard-step { display: none; }
+  .wizard-step.active { display: block; }
+  .wizard-step h2 { text-align: center; font-size: 20px; margin: 0 0 8px; }
+  .wizard-hint { text-align: center; color: var(--muted); font-size: 13.5px; margin: 0 0 20px; }
+  .wizard-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .wizard-options-inline { grid-template-columns: 1fr 1fr; }
+  .wizard-option { background: var(--bg); border: 2px solid var(--border); border-radius: 10px; padding: 20px 12px; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 28px; }
+  .wizard-option span { font-size: 13.5px; font-weight: 600; }
+  .wizard-option:hover { border-color: var(--teal); }
+  .wizard-option.selected { border-color: var(--teal); background: #E3F5E8; }
+  .wizard-option-sm { flex-direction: row; font-size: 13.5px; padding: 14px; }
+  .wizard-option-toggle { background: var(--bg); border: 2px solid var(--border); border-radius: 10px; padding: 14px; font-size: 13.5px; font-weight: 600; color: var(--text); cursor: pointer; }
+  .wizard-option-toggle:hover { border-color: var(--teal); }
+  .wizard-option-toggle.selected { border-color: var(--teal); background: #E3F5E8; color: var(--navy); }
+  .wizard-input-row { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+  .wizard-input-row[hidden] { display: none; }
+  .wizard-input-row label { font-size: 13px; font-weight: 600; color: var(--navy); }
+  .wizard-input-row input { padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+  .wizard-error { color: #B22222; font-size: 13px; text-align: center; margin: 10px 0 0; }
+  .wizard-nav { display: flex; justify-content: center; align-items: center; margin-top: 20px; }
+  .btn-back { background: none; border: none; color: var(--muted); font-size: 13.5px; cursor: pointer; text-decoration: none; padding: 0; }
+  .btn-back:hover { color: var(--teal); }
+  .wizard-continue { width: 100%; margin-top: 20px; }
+  .wizard-continue:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; opacity: 1; }
+  .wizard-continue:disabled:hover { background: var(--border); }
+  .wizard-option-multi.selected::after { content: "✓"; position: absolute; top: 6px; right: 8px; font-size: 12px; color: var(--teal); font-weight: 800; }
+  .wizard-option-multi { position: relative; }
+
+  .variant-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; max-width: 960px; margin: 0 auto; }
+  .variant-card { background: var(--card); border: 2px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .variant-head { padding: 16px 18px; color: #fff; font-weight: 800; font-size: 16px; text-align: center; }
+  .variant-card.buget .variant-head { background: #2E7D32; }
+  .variant-card.standard .variant-head { background: var(--navy); }
+  .variant-card.premium .variant-head { background: #B8860B; }
+  .variant-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .variant-line { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--muted); }
+  .variant-line b { color: var(--text); }
+  .variant-line-detail { margin-bottom: -6px; }
+  .variant-sub { font-size: 11.5px; color: var(--muted); font-style: italic; margin-bottom: 4px; }
+  .variant-price { font-size: 26px; font-weight: 800; color: var(--navy); text-align: center; margin: 8px 0; }
+  .variant-pick { margin-top: auto; }
+
+  .quick-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 22px; }
+  .quickbtn { background: var(--bg); border: 1px solid var(--border); color: var(--navy); font-size: 12.5px; font-weight: 600; padding: 8px 12px; border-radius: 20px; text-decoration: none; cursor: pointer; }
+  .quickbtn:hover { border-color: var(--teal); color: var(--teal); }
+  .form-field { margin-bottom: 16px; }
+  .form-field label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .form-field input, .form-field textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; font-family: inherit; }
+  .form-submit { background: var(--teal); color: #fff; border: none; padding: 12px 22px; border-radius: 6px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; }
+  .form-submit:hover { opacity: 0.92; }
+  .honeypot { position: absolute; left: -9999px; }
+
+  /* Pasul 6 e mai lat, ca sa incapa grila de componente si tabelul */
+  #wizardCard:has(.wizard-step[data-step="6"].active) { max-width: 900px; }
+  .offer-toolbar { margin-bottom: 18px; }
+  .wizard-continue-manual { width: 100%; margin-top: 22px; }
+
+  /* ==== Oferta detaliata (pasul 6), randata nativ cu tema site-ului ==== */
+  #offerPrintArea { color: var(--text); font-size: 13.5px; }
+  .offer-hdr { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .offer-hdr img { height: 44px; }
+  .offer-hdr .offer-contact { text-align: right; font-size: 12px; color: var(--muted); line-height: 1.6; }
+  .offer-hdr .offer-contact b { color: var(--navy); font-size: 14px; }
+  .offer-banner { background: var(--navy); color: #fff; padding: 10px 18px; border-radius: 8px; font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .offer-banner b { color: #fff; }
+  .offer-hero { padding: 20px 0; }
+  .offer-badge { display: inline-block; color: #fff; font-weight: 800; font-size: 19px; padding: 9px 20px; border-radius: 30px; margin-bottom: 14px; }
+  .offer-hero p { line-height: 1.7; max-width: 720px; }
+  .offer-stats { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+  .offer-stat { flex: 1; min-width: 150px; background: var(--card); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: 8px; padding: 12px 14px; }
+  .offer-stat .v { font-size: 18px; font-weight: 800; color: var(--navy); }
+  .offer-stat .l { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .offer-section { padding: 22px 0; border-top: 1px solid var(--border); }
+  .offer-section h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--navy); margin: 0 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--teal); }
+  .cgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 700px) { .cgrid { grid-template-columns: 1fr 1fr; } }
+  .pcard { background: var(--card); border-radius: 12px; box-shadow: 0 2px 10px rgba(16,24,40,0.08); border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; }
+  .pcard-top { padding: 14px 14px 0; }
+  .pcard-imgwrap { background: var(--bg); border-radius: 8px; height: 92px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .pcard-imgwrap img { max-width: 82%; max-height: 82%; object-fit: contain; }
+  .pcard-imgwrap svg { width: 44px; height: 44px; }
+  .pcard-imgwrap .ph { font-size: 24px; font-weight: 800; }
+  .pcard-body { padding: 10px 14px 2px; text-align: center; flex: 1; }
+  .pcard-title { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .pcard-desc { font-size: 10.5px; color: var(--muted); line-height: 1.4; min-height: 26px; }
+  .pcard-price { font-size: 14px; font-weight: 800; color: var(--text); margin-top: 6px; }
+  .pcard-tag { margin: 10px 14px 14px; padding: 7px; border-radius: 8px; text-align: center; color: #fff; font-size: 11px; font-weight: 700; }
+  .offer-table-wrap { overflow-x: auto; }
+  table.offer-items { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.offer-items th { background: var(--navy); color: #fff; text-align: left; padding: 9px 10px; font-size: 11px; text-transform: uppercase; white-space: nowrap; }
+  table.offer-items td { padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.offer-items td.num { text-align: right; white-space: nowrap; }
+  table.offer-items .small { font-size: 11px; color: var(--muted); }
+  table.offer-items td.doccol { width: 90px; text-align: center; }
+  .doclinks { display: flex; flex-direction: column; gap: 4px; align-items: stretch; }
+  .doclink { display: inline-block; text-align: center; font-size: 9.5px; font-weight: 700; text-decoration: none; padding: 3px 6px; border-radius: 9px; border: 1px solid; white-space: nowrap; }
+  .doclink.dl-link { color: #12805c; border-color: #12805c; background: #eafaf3; }
+  .doclink.dl-fisa { color: #1554b3; border-color: #1554b3; background: #eaf2fd; }
+  .offer-totalrow { display: flex; justify-content: space-between; align-items: center; color: #fff; padding: 13px 18px; border-radius: 8px; margin-top: 14px; font-size: 17px; font-weight: 800; }
+  .offer-chartwrap { position: relative; height: 260px; }
+  .offer-bgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 600px) { .offer-bgrid { grid-template-columns: 1fr; } }
+  .offer-bitem { display: flex; gap: 10px; align-items: flex-start; }
+  .offer-bicon { min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+  .offer-btitle { font-size: 12.5px; font-weight: 700; color: var(--navy); }
+  .offer-bdesc { font-size: 11.5px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
+  .offer-footer { background: var(--navy); color: #cbd5e1; padding: 20px; border-radius: 10px; margin-top: 6px; }
+  .offer-footer h4 { color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 6px; }
+  .offer-footer .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 16px; }
+  @media (max-width: 600px) { .offer-footer .fgrid { grid-template-columns: 1fr; } }
+  .offer-footer p { font-size: 12px; line-height: 1.6; margin: 0; }
+  .offer-note { font-size: 10.5px; color: var(--muted); margin-top: 10px; }
+
+  @media print {
+    body * { visibility: hidden; }
+    #offerPrintArea, #offerPrintArea * { visibility: visible; }
+    #offerPrintArea { position: absolute; left: 0; top: 0; width: 100%; }
+    .no-print { display: none !important; }
+  }
+</style>
+
+<script>
+  interface Product {
+    categorie: string; tip: string; tier: string; produs: string; spec: string; pret: number;
+    um: string; furnizor: string; wp: number; kwh: number; kwInv: number; kwDesc: number;
+    link: string; img: string; fisaTehnica: string;
+  }
+
+  const CATEGORY_ORDER = ["Panou","Invertor","Baterie","Modul control baterie","Structura montaj","Cablu DC + conectori","Tablou DC","Tablou AC","Cablu AC + consumabile","Transport"];
+  const TIERS = ["Buget","Standard","Premium"] as const;
+  const BASE_YIELD = 1180;
+  const MONTH_FRACTIONS = [0.035,0.055,0.085,0.105,0.120,0.125,0.130,0.115,0.090,0.068,0.042,0.030];
+  const TILT_BREAKPOINTS: [number, number][] = [[0,0.91],[10,0.95],[20,0.98],[30,0.995],[35,1.0],[40,0.995],[45,0.98],[50,0.96],[60,0.91],[90,0.72]];
+  const AZIMUTH_FACTORS: Record<string, number> = { "Sud":1.00, "Sud-Est":0.96, "Sud-Vest":0.96, "Est":0.83, "Vest":0.85 };
+  const LEI_PER_KWH = 1.0; // estimare simpla, cf. articolelor: 0.85-1.00 lei/kWh
+  const TARIF_PANOU = 600, TARIF_PIF = 500, BAT_AUTONOMY_PCT = 75, DC_AC_RATIO = 1.15, TILT_DEFAULT = 30;
+
+  let DATA: Product[] = [];
+
+  function tiltFactor(angle: number) {
+    angle = Math.max(0, Math.min(90, angle || 0));
+    for (let i = 0; i < TILT_BREAKPOINTS.length - 1; i++) {
+      const [a1, f1] = TILT_BREAKPOINTS[i];
+      const [a2, f2] = TILT_BREAKPOINTS[i + 1];
+      if (angle >= a1 && angle <= a2) return f1 + ((angle - a1) / (a2 - a1)) * (f2 - f1);
+    }
+    return 1.0;
+  }
+  function annualYieldPerKWp(azimuth: string, tilt: number) {
+    const tf = tiltFactor(tilt);
+    const af = AZIMUTH_FACTORS[azimuth] ?? 1.0;
+    return MONTH_FRACTIONS.reduce((sum, f) => sum + BASE_YIELD * f * tf * af, 0);
+  }
+  function monthlyProduction(kWpTotal: number, orientari: string[]) {
+    const perOrientation = orientari.map((o) => {
+      const tf = tiltFactor(TILT_DEFAULT);
+      const af = AZIMUTH_FACTORS[o] ?? 1.0;
+      return MONTH_FRACTIONS.map((f) => (kWpTotal / orientari.length) * BASE_YIELD * f * tf * af);
+    });
+    return MONTH_FRACTIONS.map((_, i) => perOrientation.reduce((sum, arr) => sum + arr[i], 0));
+  }
+
+  function productsFor(cat: string) {
+    return DATA.filter((d) => d.categorie === cat).sort((a, b) => a.pret - b.pret);
+  }
+
+  function detectBatteryModuleBrand(item: Product | null) {
+    if (!item || !item.produs) return null;
+    const p = item.produs;
+    if (/Huawei/i.test(p)) return (item.kwh && item.kwh <= 7) ? "Huawei-5kW" : "Huawei-10kW";
+    if (/Dyness\s*Tower/i.test(p)) return "Dyness Tower";
+    if (/Pylontech|Force\s*H2/i.test(p)) return "Pylontech Force H2";
+    return null;
+  }
+
+  function pickForTier(categorie: string, tier: string, params: any): { item: Product | null } {
+    let cands = productsFor(categorie);
+    if (cands.length === 0) return { item: null };
+    let pool = cands.filter((c) => c.tier === tier);
+    if (pool.length === 0) pool = cands;
+
+    if (categorie === "Modul control baterie") {
+      const batItem = params.selections?.Baterie ?? null;
+      const brand = detectBatteryModuleBrand(batItem);
+      let matches = brand ? pool.filter((c) => c.tip === brand) : [];
+      if (matches.length === 0 && brand) matches = cands.filter((c) => c.tip === brand);
+      if (matches.length === 0) matches = pool;
+      matches = [...matches].sort((a, b) => a.pret - b.pret);
+      return { item: matches[0] ?? null };
+    }
+    if (categorie === "Invertor" && params.targetInverterKW > 0) {
+      const sorted = [...pool].sort((a, b) => Math.abs(a.kwInv - params.targetInverterKW) - Math.abs(b.kwInv - params.targetInverterKW));
+      return { item: sorted[0] ?? null };
+    }
+    const sorted = [...pool].sort((a, b) => a.pret - b.pret);
+    return { item: sorted[0] ?? null };
+  }
+
+  function defaultQty(categorie: string, item: Product | null, params: any) {
+    if (categorie === "Panou" || categorie === "Structura montaj" || categorie === "Cablu DC + conectori") return params.nrPanouri;
+    if (categorie === "Modul control baterie") return detectBatteryModuleBrand(params.selections?.Baterie) ? 1 : 0;
+    if (categorie === "Baterie") {
+      if (!params.areBaterie || !item) return params.areBaterie ? 1 : 0;
+      const qtyByCapacity = item.kwh ? Math.max(1, Math.ceil(params.bateriaDorita / item.kwh)) : 1;
+      return qtyByCapacity;
+    }
+    return 1;
+  }
+
+  function computeTier(tier: string, params: any) {
+    const selections: Record<string, Product | null> = {};
+    const qtys: Record<string, number> = {};
+    let materialeTotal = 0;
+    let puterekWp = 0;
+
+    CATEGORY_ORDER.forEach((cat) => {
+      const pick = pickForTier(cat, tier, { ...params, selections });
+      selections[cat] = pick.item;
+      const qty = defaultQty(cat, pick.item, { ...params, selections });
+      qtys[cat] = qty;
+      if (pick.item) materialeTotal += pick.item.pret * qty;
+      if (cat === "Panou" && pick.item) puterekWp = (pick.item.wp * params.nrPanouri) / 1000;
+    });
+
+    const manoperaTotal = TARIF_PANOU * params.nrPanouri + TARIF_PIF;
+    const totalGeneral = materialeTotal + manoperaTotal;
+    const bateriaItem = selections["Baterie"];
+    const invertorItem = selections["Invertor"];
+    const bateriaKwh = params.areBaterie && bateriaItem ? (bateriaItem.kwh * qtys["Baterie"]) : 0;
+
+    const lineItems = CATEGORY_ORDER
+      .map((cat) => ({ cat, item: selections[cat], qty: qtys[cat] }))
+      .filter((li) => li.item && li.qty > 0) as { cat: string; item: Product; qty: number }[];
+
+    return {
+      tier, puterekWp, totalGeneral, bateriaKwh, nrPanouri: params.nrPanouri,
+      materialeTotal, manoperaTotal,
+      panouProdus: selections["Panou"]?.produs ?? "—",
+      invertorProdus: invertorItem?.produs ?? "—",
+      invertorKw: invertorItem?.kwInv ?? 0,
+      bateriaProdus: bateriaKwh > 0 ? (bateriaItem?.produs ?? "—") : null,
+      selections, qtys, lineItems,
+    };
+  }
+
+  // ==== Wizard: un singur pattern peste tot — alegi, butonul de Continuă se activeaza, apesi explicit ====
+  const state: Record<string, string> = {};
+  let selectedOrientari: string[] = [];
+  let currentStep = 1;
+  const TOTAL_STEPS = 7;
+
+  function isStepValid(n: number): boolean {
+    if (n === 1) return !!state.tipCladire;
+    if (n === 2) {
+      if (state.stieCe === "factura") return Number((document.getElementById("facturaLunara") as HTMLInputElement)?.value) > 0;
+      if (state.stieCe === "consum") return Number((document.getElementById("consumAnual") as HTMLInputElement)?.value) > 0;
+      return false;
+    }
+    if (n === 3) return !!state.baterie;
+    if (n === 4) return selectedOrientari.length > 0;
+    return false;
+  }
+
+  function updateContinueButton(n: number) {
+    const btn = document.querySelector<HTMLButtonElement>(`.wizard-continue[data-step="${n}"]`);
+    if (btn) btn.disabled = !isStepValid(n);
+  }
+
+  function renderRecapChips(uptoStep: number) {
+    const chips: string[] = [];
+    if (uptoStep > 1 && state.tipCladire) {
+      chips.push(state.tipCladire === "casa" ? "🏠 Casă" : "🏢 Firmă");
+    }
+    if (uptoStep > 2) {
+      if (state.stieCe === "factura") {
+        const v = (document.getElementById("facturaLunara") as HTMLInputElement)?.value;
+        if (v) chips.push(`💡 Factură ~${v} lei/lună`);
+      } else if (state.stieCe === "consum") {
+        const v = (document.getElementById("consumAnual") as HTMLInputElement)?.value;
+        if (v) chips.push(`⚡ ~${v} kWh/an`);
+      }
+    }
+    if (uptoStep > 3 && state.baterie) {
+      chips.push(state.baterie === "da" ? "🔋 Cu baterie" : state.baterie === "nu" ? "☀️ Fără baterie" : "🤔 Baterie: recomandați voi");
+    }
+    if (uptoStep > 4 && selectedOrientari.length > 0) {
+      const label = selectedOrientari.includes("nustiu") ? "nu știu" : selectedOrientari.join(" + ");
+      chips.push(`🧭 ${label}`);
+    }
+    const recap = document.getElementById("wizardRecap")!;
+    recap.innerHTML = chips.map((c) => `<span class="recap-chip">${c}</span>`).join("");
+  }
+
+  function goToStep(n: number) {
+    currentStep = n;
+    document.querySelectorAll<HTMLElement>(".wizard-step").forEach((el) => {
+      el.classList.toggle("active", Number(el.dataset.step) === n);
+    });
+    document.querySelectorAll<HTMLElement>(".wp-step").forEach((el) => {
+      const s = Number(el.dataset.step);
+      el.classList.toggle("active", s === n);
+      el.classList.toggle("done", s < n);
+    });
+    document.getElementById("wizardStepLabel")!.textContent = `Pasul ${n} din ${TOTAL_STEPS}`;
+
+    const backLink = document.getElementById("wizardBackUnified") as HTMLAnchorElement;
+    if (n === 1) {
+      backLink.textContent = "← Renunță, du-mă înapoi pe site";
+      backLink.href = "/";
+    } else {
+      backLink.textContent = "← Întrebarea anterioară";
+      backLink.href = "#";
+    }
+    updateContinueButton(n);
+    renderRecapChips(n);
+  }
+
+  document.getElementById("wizardBackUnified")?.addEventListener("click", (e) => {
+    if (currentStep > 1) {
+      e.preventDefault();
+      goToStep(currentStep - 1);
+    }
+    // pe pasul 1, e un link normal catre "/" — navigheaza firesc
+  });
+
+  // ---- Selectie simpla (single-select): tip cladire, baterie ----
+  document.querySelectorAll<HTMLButtonElement>(".wizard-option:not(.wizard-option-multi)").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const field = btn.dataset.field!;
+      const value = btn.dataset.value!;
+      state[field] = value;
+
+      const step = btn.closest(".wizard-step") as HTMLElement;
+      step.querySelectorAll(".wizard-option").forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      updateContinueButton(currentStep);
+    });
+  });
+
+  // ---- Step consum: alege tip (lunar/anual) ----
+  document.querySelectorAll<HTMLButtonElement>(".wizard-option-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = btn.dataset.value!;
+      state.stieCe = value;
+      document.querySelectorAll(".wizard-option-toggle").forEach((b) => b.classList.remove("selected"));
+      btn.classList.add("selected");
+      document.getElementById("inputFactura")!.hidden = value !== "factura";
+      document.getElementById("inputConsum")!.hidden = value !== "consum";
+      updateContinueButton(2);
+    });
+  });
+  document.getElementById("facturaLunara")?.addEventListener("input", () => updateContinueButton(2));
+  document.getElementById("consumAnual")?.addEventListener("input", () => updateContinueButton(2));
+
+  // ---- Step orientare: selectie multipla (checkbox-style) ----
+  document.querySelectorAll<HTMLButtonElement>(".wizard-option-multi").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = btn.dataset.value!;
+      if (value === "nustiu") {
+        selectedOrientari = ["nustiu"];
+        document.querySelectorAll(".wizard-option-multi").forEach((b) => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        updateContinueButton(4);
+        return;
+      }
+      const nustiuBtn = document.querySelector('.wizard-option-multi[data-value="nustiu"]');
+      nustiuBtn?.classList.remove("selected");
+      selectedOrientari = selectedOrientari.filter((o) => o !== "nustiu");
+
+      if (selectedOrientari.includes(value)) {
+        selectedOrientari = selectedOrientari.filter((o) => o !== value);
+        btn.classList.remove("selected");
+      } else {
+        selectedOrientari.push(value);
+        btn.classList.add("selected");
+      }
+      updateContinueButton(4);
+    });
+  });
+
+  // ---- Butonul unic de Continuă, pe fiecare pas ----
+  document.querySelectorAll<HTMLButtonElement>(".wizard-continue").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const step = Number(btn.dataset.step);
+      if (!isStepValid(step)) return;
+
+      if (step === 4) {
+        state.orientare = selectedOrientari.includes("nustiu") ? "Sud" : selectedOrientari.join(",");
+        runWizardCalculation();
+        return;
+      }
+      goToStep(step + 1);
+    });
+  });
+
+  document.getElementById("offerContinueBtn")?.addEventListener("click", () => goToStep(7));
+
+  async function runWizardCalculation() {
+    document.getElementById("wizardCard")!.hidden = true;
+    const loading = document.getElementById("wizardLoading")!;
+    loading.hidden = false;
+
+    if (DATA.length === 0) {
+      try {
+        const res = await fetch("/data/materiale-oferta.xlsx");
+        const buf = await res.arrayBuffer();
+        // @ts-ignore - XLSX global din CDN
+        const wb = XLSX.read(buf, { type: "array" });
+        const sheetName = wb.SheetNames.find((n: string) => n.trim().toLowerCase() === "materiale generator") || wb.SheetNames.find((n: string) => n.toLowerCase().includes("materiale"));
+        const ws = wb.Sheets[sheetName];
+        // @ts-ignore
+        const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: "" });
+        const headerIdx = rows.findIndex((r: any[]) => (r[0] + "").trim() === "Categorie");
+        const headers = rows[headerIdx].map((h: any) => (h + "").trim());
+        const col = (name: string) => headers.indexOf(name);
+        const idx = {
+          cat: col("Categorie"), tip: col("Tip"), tier: col("Tier"), produs: col("Produs"),
+          spec: col("Specificatie"), pret: col("PretUnitar"), um: col("UM"), furnizor: col("Furnizor"),
+          wp: col("PutereWp_Panou"), kwh: col("CapacitateKWh_Baterie"),
+          kwInv: col("PutereKW_Invertor"), kwDesc: col("PutereDescarcareKW_Baterie"),
+          link: col("Link"), img: col("ImagineURL"), fisaTehnica: col("FisaTehnicaURL"),
+        };
+        DATA = [];
+        for (let i = headerIdx + 1; i < rows.length; i++) {
+          const r = rows[i];
+          if (!r || !r[idx.cat] || (r[idx.cat] + "").trim() === "") continue;
+          DATA.push({
+            categorie: (r[idx.cat] + "").trim(), tip: (r[idx.tip] + "").trim(), tier: (r[idx.tier] + "").trim(),
+            produs: (r[idx.produs] + "").trim(), spec: (r[idx.spec] + "").trim(), pret: parseFloat(r[idx.pret]) || 0,
+            um: (r[idx.um] + "").trim(), furnizor: (r[idx.furnizor] + "").trim(),
+            wp: parseFloat(r[idx.wp]) || 0, kwh: parseFloat(r[idx.kwh]) || 0,
+            kwInv: parseFloat(r[idx.kwInv]) || 0, kwDesc: parseFloat(r[idx.kwDesc]) || 0,
+            link: idx.link >= 0 ? (r[idx.link] + "").trim() : "",
+            img: idx.img >= 0 ? (r[idx.img] + "").trim() : "",
+            fisaTehnica: idx.fisaTehnica >= 0 ? (r[idx.fisaTehnica] + "").trim() : "",
+          });
+        }
+      } catch (err) {
+        loading.innerHTML = '<p style="text-align:center;color:#B22222;">Nu am putut încărca lista de prețuri. Reîncarcă pagina sau sună-ne direct.</p>';
+        return;
+      }
+    }
+
+    const refPanel = productsFor("Panou")[0];
+    if (!refPanel) {
+      loading.innerHTML = '<p style="text-align:center;color:#B22222;">Nu există panouri în lista de prețuri momentan.</p>';
+      return;
+    }
+
+    let consumAnual = 0;
+    if (state.stieCe === "factura") {
+      const factura = Number((document.getElementById("facturaLunara") as HTMLInputElement).value) || 0;
+      consumAnual = (factura / LEI_PER_KWH) * 12;
+    } else {
+      consumAnual = Number((document.getElementById("consumAnual") as HTMLInputElement).value) || 0;
+    }
+
+    const orientari = (state.orientare || "Sud").split(",").filter(Boolean);
+    const yieldPerKWp = orientari.reduce((sum, o) => sum + annualYieldPerKWp(o, TILT_DEFAULT), 0) / orientari.length;
+    const targetKWp = yieldPerKWp > 0 ? consumAnual / yieldPerKWp : 0;
+    const nrPanouri = refPanel.wp > 0 ? Math.max(1, Math.ceil((targetKWp * 1000) / refPanel.wp)) : 0;
+    const actualKWp = (nrPanouri * refPanel.wp) / 1000;
+    const targetInverterKW = actualKWp / DC_AC_RATIO;
+    const areBaterie = state.baterie !== "nu";
+    const bateriaDorita = (consumAnual / 365) * (BAT_AUTONOMY_PCT / 100);
+
+    const params = { nrPanouri, targetInverterKW, areBaterie, bateriaDorita };
+    const results = TIERS.map((tier) => computeTier(tier, params));
+    lastOrientari = orientari;
+
+    loading.hidden = true;
+    document.getElementById("wizardCard")!.hidden = false;
+    renderResults(results);
+    goToStep(5);
+  }
+
+  function fmtPrice(n: number) {
+    return Math.round(n).toLocaleString("ro-RO") + " lei";
+  }
+
+  let lastOrientari: string[] = ["Sud"];
+
+  interface TierResult {
+    tier: string; puterekWp: number; totalGeneral: number; bateriaKwh: number; nrPanouri: number;
+    materialeTotal: number; manoperaTotal: number; panouProdus: string; invertorProdus: string;
+    invertorKw: number; bateriaProdus: string | null;
+    selections: Record<string, Product | null>; qtys: Record<string, number>;
+    lineItems: { cat: string; item: Product; qty: number }[];
+  }
+
+  function renderResults(results: TierResult[]) {
+    const grid = document.getElementById("variantGrid")!;
+    grid.innerHTML = "";
+    results.forEach((r) => {
+      const card = document.createElement("div");
+      card.className = "variant-card " + r.tier.toLowerCase();
+      card.innerHTML = `
+        <div class="variant-head">${r.tier.toUpperCase()}</div>
+        <div class="variant-body">
+          <div class="variant-line variant-line-detail"><span>Panouri</span><b>${r.nrPanouri} buc (${r.puterekWp.toFixed(2)} kWp)</b></div>
+          <div class="variant-sub">${r.panouProdus}</div>
+          <div class="variant-line variant-line-detail"><span>Invertor</span><b>${r.invertorKw ? r.invertorKw.toFixed(1) + " kW" : ""}</b></div>
+          <div class="variant-sub">${r.invertorProdus}</div>
+          <div class="variant-line variant-line-detail"><span>Baterie</span><b>${r.bateriaKwh > 0 ? "≈" + r.bateriaKwh.toFixed(1) + " kWh" : "Fără"}</b></div>
+          ${r.bateriaProdus ? `<div class="variant-sub">${r.bateriaProdus}</div>` : ""}
+          <div class="variant-line"><span>Materiale</span><b>${fmtPrice(r.materialeTotal)}</b></div>
+          <div class="variant-line"><span>Manoperă montaj</span><b>${fmtPrice(r.manoperaTotal)}</b></div>
+          <div class="variant-price">${fmtPrice(r.totalGeneral)}</div>
+          <button type="button" class="cta-btn cta-btn-primary variant-pick" data-tier="${r.tier}">Aleg această variantă</button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    grid.querySelectorAll<HTMLButtonElement>(".variant-pick").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const tier = btn.dataset.tier!;
+        const chosen = results.find((r) => r.tier === tier)!;
+
+        (document.getElementById("fVarianta") as HTMLInputElement).value = tier;
+        (document.getElementById("fDetalii") as HTMLInputElement).value =
+          `${chosen.nrPanouri} panouri, ${chosen.puterekWp.toFixed(2)} kWp` +
+          (chosen.bateriaKwh > 0 ? `, baterie ≈${chosen.bateriaKwh.toFixed(1)} kWh` : ", fără baterie") +
+          `, preț estimat ${fmtPrice(chosen.totalGeneral)}`;
+        document.getElementById("chosenVariantSummary")!.textContent =
+          `Ai ales varianta ${tier} — ${chosen.nrPanouri} panouri, ${chosen.puterekWp.toFixed(2)} kWp, preț estimat ${fmtPrice(chosen.totalGeneral)}.`;
+
+        await renderOfferStep(chosen);
+        goToStep(6);
+      });
+    });
+  }
+
+  // ==== Document de oferta detaliat (identic ca structura cu Exemplu-Oferta-Standard.html) ====
+  const COMPANY = {
+    name: "Solar Electric Panel",
+    short: "SEP",
+    email: "solarelectricpanel@gmail.com",
+    phone: "0750 405 908",
+    address: "Str. 1 Decembrie 1918 nr. 41, Făgăraș, jud. Brașov",
+    logo: "/images/brand/logo-sep.png",
+  };
+
+  const TIER_META: Record<string, { color: string; label: string }> = {
+    Buget: { color: "#2E7D32", label: "BUGET" },
+    Standard: { color: "#1F5FA8", label: "STANDARD" },
+    Premium: { color: "#B8860B", label: "PREMIUM" },
+  };
+
+  const CATEGORY_LABELS: Record<string, string> = {
+    "Panou": "Panouri fotovoltaice", "Invertor": "Invertor", "Baterie": "Baterie de stocare",
+    "Modul control baterie": "Modul de control baterie (BDU)", "Structura montaj": "Structură montaj",
+    "Cablu DC + conectori": "Cablu DC + conectori", "Tablou DC": "Tablou electric DC",
+    "Tablou AC": "Tablou electric AC", "Cablu AC + consumabile": "Cablu AC + consumabile",
+    "Transport": "Transport materiale",
+  };
+
+  const CARD_ICONS: Record<string, string> = {
+    tablou: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="32" height="40" rx="3"/><rect x="14" y="12" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="26" y="12" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="21" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><rect x="26" y="21" width="8" height="5" rx="1" fill="currentColor" stroke="none"/><line x1="14" y1="33" x2="34" y2="33"/><line x1="14" y1="37" x2="34" y2="37"/></svg>',
+    structura: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26 L24 9 L42 26"/><rect x="13" y="23" width="22" height="15" rx="1.5"/><line x1="13" y1="28.5" x2="35" y2="28.5"/><line x1="13" y1="34" x2="35" y2="34"/><line x1="19.5" y1="23" x2="19.5" y2="38"/><line x1="24" y1="23" x2="24" y2="38"/><line x1="28.5" y1="23" x2="28.5" y2="38"/></svg>',
+    manopera: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M30.5 7.5a8 8 0 0 0-10 10.3L8.5 29.8v9.7h9.7l12-12a8 8 0 0 0 10.3-10l-6 6-4.2-4.2 6-6z"/></svg>',
+  };
+
+  function escapeHtml(s: unknown) {
+    return (s == null ? "" : String(s)).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+  }
+  function offerNumber(tier: string) {
+    const d = new Date();
+    const ymd = d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0");
+    const code: Record<string, string> = { Buget: "BUG", Standard: "STD", Premium: "PRM" };
+    return "SEP-" + ymd + "-" + (code[tier] || "OFR");
+  }
+  function dateRO() {
+    return new Date().toLocaleDateString("ro-RO", { day: "2-digit", month: "long", year: "numeric" });
+  }
+  function fmtEUR(ron: number, cursEur: number) {
+    if (!ron || !cursEur) return "";
+    const eur = ron / cursEur;
+    return "≈ " + eur.toLocaleString("ro-RO", { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " €";
+  }
+  function componentBoxHTML(label: string, mediaHTML: string, isPhoto: boolean, desc: string, priceRON: number, tierColor: string, cursEur: number) {
+    const letter = escapeHtml(label.charAt(0));
+    let mediaBlock: string;
+    if (isPhoto && mediaHTML) {
+      mediaBlock = `<img src="${escapeHtml(mediaHTML)}" alt="${escapeHtml(label)}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">`
+        + `<div class="ph" style="display:none;color:${tierColor};">${letter}</div>`;
+    } else if (isPhoto && !mediaHTML) {
+      mediaBlock = `<div class="ph" style="color:${tierColor};">${letter}</div>`;
+    } else {
+      mediaBlock = `<span style="color:${tierColor};">${mediaHTML}</span>`;
+    }
+    const priceLabel = priceRON ? fmtPrice(priceRON) : "";
+    const tagText = priceRON ? fmtEUR(priceRON, cursEur) : "Inclus în ofertă";
+    return `<div class="pcard">`
+      + `<div class="pcard-top"><div class="pcard-imgwrap">${mediaBlock}</div></div>`
+      + `<div class="pcard-body">`
+        + `<div class="pcard-title">${escapeHtml(label)}</div>`
+        + `<div class="pcard-desc">${escapeHtml(desc || "")}</div>`
+        + (priceLabel ? `<div class="pcard-price">${priceLabel}</div>` : "")
+      + `</div>`
+      + `<div class="pcard-tag" style="background:${tierColor};">${escapeHtml(tagText)}</div>`
+      + `</div>`;
+  }
+  function buildLineRowsHTML(lineItems: { cat: string; item: Product; qty: number }[]) {
+    return lineItems.map((li) => {
+      const catLabel = CATEGORY_LABELS[li.cat] || li.cat;
+      let docLinks = "—";
+      if (li.item.link || li.item.fisaTehnica) {
+        docLinks = `<div class="doclinks">`
+          + (li.item.link ? `<a class="doclink dl-link" href="${escapeHtml(li.item.link)}" target="_blank" rel="noopener noreferrer">link</a>` : "")
+          + (li.item.fisaTehnica ? `<a class="doclink dl-fisa" href="${escapeHtml(li.item.fisaTehnica)}" target="_blank" rel="noopener noreferrer">fișă tehnică</a>` : "")
+          + `</div>`;
+      }
+      const lineTotal = li.item.pret * li.qty;
+      return `<tr>`
+        + `<td><b>${escapeHtml(catLabel)}</b><br><span class="small">${escapeHtml(li.item.produs)}${li.item.spec ? " — " + escapeHtml(li.item.spec) : ""}</span></td>`
+        + `<td class="doccol">${docLinks}</td>`
+        + `<td class="num">${li.qty} ${escapeHtml(li.item.um || "buc")}</td>`
+        + `<td class="num">${fmtPrice(li.item.pret)}</td>`
+        + `<td class="num"><b>${fmtPrice(lineTotal)}</b></td>`
+        + `</tr>`;
+    }).join("");
+  }
+
+  // ---- Chart.js incarcat o singura data, la nevoie (cand se intra prima data in pasul 6) ----
+  let chartJsPromise: Promise<void> | null = null;
+  function loadChartJs(): Promise<void> {
+    if ((window as any).Chart) return Promise.resolve();
+    if (chartJsPromise) return chartJsPromise;
+    chartJsPromise = new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js";
+      s.integrity = "sha384-DhxhYObIMeMNGyAG7iK11OHzBIKyEIeRL0ad1iFPAOwZB8iirUlTT0O/WJJUk8+o";
+      s.crossOrigin = "anonymous";
+      s.referrerPolicy = "no-referrer";
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error("chart.js failed to load"));
+      document.head.appendChild(s);
+    });
+    return chartJsPromise;
+  }
+  let prodChart: any = null;
+
+  async function renderOfferStep(res: TierResult) {
+    const meta = TIER_META[res.tier];
+    const sel = res.selections;
+    const panouSel = sel["Panou"], invSel = sel["Invertor"], batSel = sel["Baterie"], structSel = sel["Structura montaj"];
+    const tabDC = sel["Tablou DC"], tabAC = sel["Tablou AC"];
+    const areBaterie = res.bateriaKwh > 0;
+    const monthly = monthlyProduction(res.puterekWp, lastOrientari);
+    const annualProd = monthly.reduce((a, b) => a + b, 0);
+    const cursEur = 5.2513;
+
+    const tabloDCTotal = tabDC ? tabDC.pret * (res.qtys["Tablou DC"] || 0) : 0;
+    const tabloACTotal = tabAC ? tabAC.pret * (res.qtys["Tablou AC"] || 0) : 0;
+    const tabloTotal = tabloDCTotal + tabloACTotal;
+    const tabloSub = [tabDC?.produs, tabAC?.produs].filter(Boolean).join(" + ");
+    const structTotal = structSel ? structSel.pret * (res.qtys["Structura montaj"] || 0) : 0;
+
+    const componentsHTML = [
+      componentBoxHTML("Panouri", panouSel?.img || "", true, panouSel ? `${res.qtys["Panou"]} × ${panouSel.produs}` : "", panouSel ? panouSel.pret * res.qtys["Panou"] : 0, meta.color, cursEur),
+      componentBoxHTML("Invertor", invSel?.img || "", true, invSel?.produs || "", invSel?.pret || 0, meta.color, cursEur),
+      componentBoxHTML("Baterie", areBaterie ? (batSel?.img || "") : "", true, areBaterie && batSel ? `${res.qtys["Baterie"]} × ${batSel.produs}` : "Fără stocare", areBaterie && batSel ? batSel.pret * res.qtys["Baterie"] : 0, meta.color, cursEur),
+      componentBoxHTML("Tablou electric", CARD_ICONS.tablou, false, tabloSub || "Tablou DC + AC echipat", tabloTotal, meta.color, cursEur),
+      componentBoxHTML("Structură montaj", CARD_ICONS.structura, false, structSel?.produs || "", structTotal, meta.color, cursEur),
+      componentBoxHTML("Manoperă", CARD_ICONS.manopera, false, "Montaj, cablare, punere în funcțiune", res.manoperaTotal, meta.color, cursEur),
+    ].join("");
+
+    const lineRows = buildLineRowsHTML(res.lineItems);
+    const manLabel = `Manoperă — montaj, cablare, punere în funcțiune (${res.nrPanouri} panouri × ${fmtPrice(TARIF_PANOU)} + PIF ${fmtPrice(TARIF_PIF)})`;
+    const offerNr = offerNumber(res.tier);
+    const today = dateRO();
+
+    const benefits: [string, string][] = [
+      ["Economii la factura de energie", "Reduci semnificativ costul lunar cu energia electrică prin autoconsum din producția proprie."],
+      ["Independență energetică", "Depinzi mai puțin de furnizor și de creșterile viitoare de preț la energie."],
+      [areBaterie ? "Protecție la pene de curent" : "Producție continuă în timpul zilei", areBaterie ? "Bateria asigură alimentare de rezervă pentru consumatorii esențiali." : "Sistemul produce energie utilizabilă direct în casă pe tot parcursul zilei."],
+      ["Creșterea valorii imobilului", "Un sistem fotovoltaic funcțional este un avantaj real la o eventuală vânzare/închiriere."],
+      ["Impact ecologic redus", "Energie curată, produsă local, fără emisii în timpul funcționării."],
+      ["Garanție extinsă produse", "Panouri, invertor și baterie cu garanții de la producători recunoscuți internațional."],
+    ];
+    const benefitsHTML = benefits.map(([title, desc]) =>
+      `<div class="offer-bitem"><div class="offer-bicon" style="background:${meta.color}22;color:${meta.color};">&#10003;</div>`
+      + `<div><div class="offer-btitle">${escapeHtml(title)}</div><div class="offer-bdesc">${escapeHtml(desc)}</div></div></div>`
+    ).join("");
+
+    const html = `<div class="offer-hdr"><img src="${COMPANY.logo}" alt="${COMPANY.short}">`
+      + `<div class="offer-contact"><b>${COMPANY.name}</b><br>${escapeHtml(COMPANY.phone)} · ${escapeHtml(COMPANY.email)}<br>${escapeHtml(COMPANY.address)}</div></div>`
+      + `<div class="offer-banner"><span>OFERTĂ SISTEM FOTOVOLTAIC${areBaterie ? " + STOCARE" : ""} — VARIANTA ${meta.label}</span><span>Nr. <b>${offerNr}</b> · ${today}</span></div>`
+      + `<div class="offer-hero">`
+      + `<div class="offer-badge" style="background:${meta.color};">${res.puterekWp.toFixed(2)} kWp${areBaterie ? " + " + res.bateriaKwh.toFixed(1) + " kWh" : ""}</div>`
+      + `<p>Ofertă personalizată pentru un sistem fotovoltaic${areBaterie ? " cu stocare" : " on-grid"}, varianta <b>${meta.label}</b>, dimensionat de echipa ${COMPANY.short} pe baza consumului și acoperișului declarate. Sistemul propus produce estimativ <b>${Math.round(annualProd).toLocaleString("ro-RO")} kWh/an</b>, reducând substanțial factura de energie electrică.</p>`
+      + `<div class="offer-stats">`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${res.puterekWp.toFixed(2)} kWp</div><div class="l">Putere instalată</div></div>`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${areBaterie ? res.bateriaKwh.toFixed(1) + " kWh" : "—"}</div><div class="l">Capacitate stocare</div></div>`
+      + `<div class="offer-stat" style="border-top-color:${meta.color};"><div class="v">${Math.round(annualProd).toLocaleString("ro-RO")} kWh</div><div class="l">Producție anuală estimată</div></div>`
+      + `</div></div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Componente sistem</h3><div class="cgrid">${componentsHTML}</div></div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Ce conține oferta</h3>`
+      + `<div class="offer-table-wrap"><table class="offer-items"><tr><th>Denumire</th><th>Documente</th><th>Cantitate</th><th>Preț unitar</th><th>Total</th></tr>`
+      + lineRows
+      + `<tr><td colspan="4">${manLabel}</td><td class="num"><b>${fmtPrice(res.manoperaTotal)}</b></td></tr>`
+      + `</table></div>`
+      + `<div class="offer-totalrow" style="background:${meta.color};"><span>TOTAL GENERAL</span><span>${fmtPrice(res.totalGeneral)}</span></div>`
+      + `</div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Estimare producție solară anuală</h3>`
+      + `<div class="offer-chartwrap"><canvas id="prodChartOffer"></canvas></div>`
+      + `<div class="offer-note">Producție estimată pe baza valorilor climatice medii pentru zona Făgăraș/Brașov și a orientării acoperișului declarate — estimare orientativă, nu export exact PVGIS.</div>`
+      + `</div>`
+      + `<div class="offer-section"><h3 style="border-bottom-color:${meta.color};">Beneficiile tale</h3><div class="offer-bgrid">${benefitsHTML}</div></div>`
+      + `<div class="offer-footer">`
+      + `<div class="fgrid">`
+      + `<div><h4>Garanții oferite</h4><p>Panouri: 25 ani produs / 30 ani performanță · Invertor: 5-10 ani (extensibil) · Baterie: 10 ani · Manoperă ${COMPANY.short}: 2 ani</p></div>`
+      + `<div><h4>Opțiuni finanțare</h4><p>Plată integrală, în tranșe (avans + rest la punerea în funcțiune), sau prin finanțare bancară/rate — detalii la cerere.</p></div>`
+      + `</div>`
+      + `<p>Pentru confirmarea ofertei sau întrebări: <b>${escapeHtml(COMPANY.phone)}</b> · <b>${escapeHtml(COMPANY.email)}</b><br>${escapeHtml(COMPANY.address)}</p>`
+      + `</div>`
+      + `<div class="offer-note" style="text-align:center;">Ofertă orientativă, valabilă 30 de zile de la data emiterii. Prețurile finale se confirmă la vizita tehnică.</div>`;
+
+    const target = document.getElementById("offerPrintArea")!;
+    target.innerHTML = html;
+    document.title = `Ofertă ${meta.label} — ${COMPANY.short} — ${offerNr}`;
+
+    try {
+      await loadChartJs();
+      const Chart = (window as any).Chart;
+      if (prodChart) prodChart.destroy();
+      prodChart = new Chart(document.getElementById("prodChartOffer").getContext("2d"), {
+        type: "bar",
+        data: {
+          labels: ["Ian","Feb","Mar","Apr","Mai","Iun","Iul","Aug","Sep","Oct","Nov","Dec"],
+          datasets: [{ label: "Producție (kWh)", data: monthly.map((v) => Math.round(v)), backgroundColor: meta.color }],
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { title: { display: true, text: "kWh/lună" } } } },
+      });
+    } catch {
+      // graficul e un plus vizual — daca CDN-ul pica, restul ofertei ramane utilizabila
+    }
+  }
+
+  // ---- Submit formular (Netlify Forms via fetch, ramane pe pagina) ----
+  document.getElementById("offerForm")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+    const body = new URLSearchParams(data as any).toString();
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
+      .then(() => {
+        document.getElementById("offerFormWrap")!.hidden = true;
+        document.getElementById("offerThankYou")!.hidden = false;
+      })
+      .catch(() => {
+        alert("A apărut o eroare la trimitere — sună-ne direct sau încearcă din nou.");
+      });
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha384-vtjasyidUo0kW94K5MXDXntzOJpQgBKXmE7e2Ga4LG0skTTLeBi97eFAXsqewJjw" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

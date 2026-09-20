@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Electroplan"
 sursaUrl: "https://www.electroplan.ro"
-imagine: "/images/articole/tablouri-electrice-rezidentiale-protectii-moderne-si-organizare-circuite.jpg"
+imagine: "/images/articole/tablouri-electrice-rezidentiale-protectii-moderne-si-organizare-circuite.webp"
 ---
 
 Un tablou electric modern nu mai e doar o cutie cu sigurațe — e sistemul central de siguranță al casei, organizat astfel încât o defecțiune pe un circuit să nu afecteze restul locuinței.

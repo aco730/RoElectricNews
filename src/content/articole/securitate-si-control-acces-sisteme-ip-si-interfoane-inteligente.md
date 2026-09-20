@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Spy-Shop"
 sursaUrl: "https://www.spy-shop.ro/blog"
-imagine: "/images/articole/securitate-si-control-acces-sisteme-ip-si-interfoane-inteligente.jpg"
+imagine: "/images/articole/securitate-si-control-acces-sisteme-ip-si-interfoane-inteligente.webp"
 ---
 
 Trecerea de la camerele analogice clasice la sistemele IP a schimbat fundamental ce înseamnă „securitate rezidențială” — nu doar rezoluție mai bună, ci acces remote real, integrare cu restul casei smart, și analiză inteligentă a imaginii, nu doar înregistrare pasivă.

@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Ordinul Arhitecților din România"
 sursaUrl: "https://www.oar.ro"
-imagine: "/images/articole/arhitectura-bioclimatica-orientare-solara-si-eficienta-energetica.jpg"
+imagine: "/images/articole/arhitectura-bioclimatica-orientare-solara-si-eficienta-energetica.webp"
 ---
 
 Arhitectura bioclimatică pornește de la o idee simplă, dar frecvent ignorată la construcțiile obișnuite: forma, orientarea și materialele unei clădiri pot reduce semnificativ consumul de energie, înainte chiar de a instala orice echipament tehnic — izolație, panouri, pompă de căldură.

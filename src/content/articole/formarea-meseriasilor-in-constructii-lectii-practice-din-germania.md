@@ -5,7 +5,7 @@ data: 2026-05-22
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/05/22/cum-arata-formarea-meseriasilor-in-constructii-lectii-practice-din-germania-pentru-2025/"
-imagine: "/images/articole/formarea-meseriasilor-in-constructii-lectii-practice-din-germania.jpg"
+imagine: "/images/articole/formarea-meseriasilor-in-constructii-lectii-practice-din-germania.webp"
 ---
 
 

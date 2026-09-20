@@ -5,7 +5,7 @@ data: 2026-07-27
 dataAdaugare: "2026-08-11"
 sursaNume: "Igloo"
 sursaUrl: "https://igloo.ro/casa-din-canepa-un-eseu-despre-artefact-si-natura/"
-imagine: "/images/articole/canepa-structurala-hempcrete-ca-material-alternativ-de-constructie-ce-este-si-cand-are-sen.jpg"
+imagine: "/images/articole/canepa-structurala-hempcrete-ca-material-alternativ-de-constructie-ce-este-si-cand-are-sen.webp"
 ---
 
 

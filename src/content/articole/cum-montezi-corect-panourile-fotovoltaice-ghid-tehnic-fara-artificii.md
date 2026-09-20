@@ -5,7 +5,7 @@ data: 2026-07-03
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/07/03/cum-montezi-corect-panourile-fotovoltaice-in-2025-un-ghid-tehnic-fara-artificii/"
-imagine: "/images/articole/cum-montezi-corect-panourile-fotovoltaice-ghid-tehnic-fara-artificii.jpg"
+imagine: "/images/articole/cum-montezi-corect-panourile-fotovoltaice-ghid-tehnic-fara-artificii.webp"
 ---
 
 

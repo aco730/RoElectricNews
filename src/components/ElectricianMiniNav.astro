@@ -1,0 +1,13 @@
+---
+// The electrician mini-site's pill nav (same component the CMS pages render
+// via SiteEditor/SectionRenderer) — reused standalone here so the plain
+// Astro portfolio pages (not CMS-driven) still show the same nav bar and
+// stay visually inside the mini-site.
+import "../styles/portofoliu-electrician.css";
+import { readSite } from "../lib/portofoliuElectricianContent";
+import { Header1 } from "./portofoliu-electrician/sections/Header";
+
+const site = await readSite();
+const headerSection = site.pages.find((p) => p.slug === "servicii")?.sections.find((s) => s.type === "header");
+---
+{headerSection && <Header1 client:load data={headerSection.data} />}

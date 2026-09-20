@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Mapei"
 sursaUrl: "https://www.mapei.com/ro"
-imagine: "/images/articole/hidroizolatia-fundatiei-solutii-impotriva-infiltratiilor.jpg"
+imagine: "/images/articole/hidroizolatia-fundatiei-solutii-impotriva-infiltratiilor.webp"
 ---
 
 Hidroizolația fundației e una dintre etapele de construcție cel mai des subestimate — invizibilă odată acoperită cu pământ, dar responsabilă pentru cele mai costisitoare reparații ulterioare dacă e făcută superficial: infiltrații, igrasie, degradarea structurii pe termen lung.

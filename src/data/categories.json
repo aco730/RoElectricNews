@@ -1,72 +1,68 @@
 [
   {
     "slug": "electric-instalatii",
-    "name": "Ingineria Casei",
-    "color": "#12213a",
-    "description": "Articole și ghiduri despre instalații electrice, sanitare și managementul apei.",
-    "ascunsa": false
+    "name": "Electric & instalații",
+    "color": "#12213A",
+    "description": "Articole și ghiduri despre electric & instalații."
   },
   {
     "slug": "smart-home",
-    "name": "Smart Living",
-    "color": "#6a3d9a",
-    "description": "Articole și ghiduri despre automatizări, IoT și climatizare inteligentă.",
-    "ascunsa": false
+    "name": "Smart Home & Automatizări",
+    "color": "#6A3D9A",
+    "description": "Articole și ghiduri despre smart home & automatizări."
   },
   {
     "slug": "fotovoltaic",
-    "name": "Eco-Energie & Stocare",
-    "color": "#e97b0f",
-    "description": "Articole și ghiduri despre solar, baterii, prosumatori și pompe de căldură.",
-    "ascunsa": false
+    "name": "Fotovoltaic",
+    "color": "#E97B0F",
+    "description": "Articole și ghiduri despre fotovoltaic."
+  },
+  {
+    "slug": "baterii-stocare",
+    "name": "Baterii & Stocare",
+    "color": "#0EA5A0",
+    "description": "Articole și ghiduri despre baterii & stocare."
   },
   {
     "slug": "reglementari-preturi",
-    "name": "Piața Energiei si legislatie",
-    "color": "#b22222",
-    "description": "Articole și ghiduri despre reglementări & Legi",
-    "ascunsa": false
-  },
-  {
-    "slug": "arhitectura",
-    "name": "Arhitectură & Concept",
-    "color": "#1d4ed8",
-    "description": "Articole și ghiduri despre nZEB, proiecte de case și arhitectură verde.",
-    "ascunsa": false
-  },
-  {
-    "slug": "santier-structura",
-    "name": "Șantier & Structură",
-    "color": "#78716c",
-    "description": "Articole și ghiduri despre materiale, izolații și fundații.",
-    "ascunsa": false
-  },
-  {
-    "slug": "design-interior",
-    "name": "Design Interior",
-    "color": "#be185d",
-    "description": "Articole și ghiduri despre finisaje premium, mobilier și trenduri.",
-    "ascunsa": false
-  },
-  {
-    "slug": "outdoor-peisagistica",
-    "name": "Outdoor & Peisagistică",
-    "color": "#15803d",
-    "description": "Articole și ghiduri despre irigații smart, zone de relaxare și pavaje.",
-    "ascunsa": false
+    "name": "Reglementări & Legislatie",
+    "color": "#B22222",
+    "description": "Articole și ghiduri despre reglementări & Legi"
   },
   {
     "slug": "youtube",
     "name": "YouTube",
-    "color": "#ff0000",
-    "description": "Articole și ghiduri despre youtube.",
-    "ascunsa": true
+    "color": "#FF0000",
+    "description": "Articole și ghiduri despre youtube."
   },
   {
     "slug": "colaboratori",
     "name": "Colaboratori",
-    "color": "#0730ab",
-    "description": "Articole și ghiduri despre colaboratori.",
-    "ascunsa": false
+    "color": "#A0722F",
+    "description": "Articole și ghiduri despre colaboratori."
+  },
+  {
+    "slug": "santier-structura",
+    "name": "Șantier & Structură",
+    "color": "#8D6E63",
+    "description": "Articole și ghiduri despre șantier, structură și materiale de construcție."
+  },
+  {
+    "slug": "arhitectura",
+    "name": "Arhitectură",
+    "color": "#5C6BC0",
+    "description": "Articole și ghiduri despre arhitectură și proiectare."
+  },
+  {
+    "slug": "design-interior",
+    "name": "Design Interior",
+    "color": "#EC407A",
+    "description": "Articole și ghiduri despre design interior și amenajări."
+  },
+  {
+    "slug": "outdoor-peisagistica",
+    "name": "Outdoor & Peisagistică",
+    "color": "#66BB6A",
+    "description": "Articole și ghiduri despre amenajări exterioare și peisagistică."
   }
 ]

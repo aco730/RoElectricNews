@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Euronews România (YouTube)"
 sursaUrl: "https://www.youtube.com/watch?v=0mfbXe1R5R8"
-imagine: "/images/articole/criza-apei-pe-dunare-si-presiunea-pe-infrastructura-energetica-ce-planuri-de-reglementare.png"
+imagine: "/images/articole/criza-apei-pe-dunare-si-presiunea-pe-infrastructura-energetica-ce-planuri-de-reglementare.webp"
 etichete: [reglementari, apa, energie, fotovoltaice]
 ---
 

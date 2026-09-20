@@ -1,0 +1,2569 @@
+{
+  "siteName": "Teo Marcu — Electrician & Fotovoltaic",
+  "pages": [
+    {
+      "id": "page-home",
+      "slug": "",
+      "title": "Acasă",
+      "sections": [
+        {
+          "id": "sec-header-home",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-hero",
+          "type": "hero",
+          "template": 2,
+          "data": {
+            "badge": "⚡ Intervenții Rapide & Lucrări Certificate ANRE în București și Ilfov",
+            "title": "Electricianul tău: de la o priză defectă, la sisteme fotovoltaice complet funcționale.",
+            "subtitle": "Primești prețul corect pe loc, garanție scrisă pe lucrare și intervenție rapidă.",
+            "ctaText": "📞 Sună Acum",
+            "ctaLink": "tel:+40750405908",
+            "secondaryCtaText": "💬 Trimite Poză pe WhatsApp pentru Estimare Rapidă",
+            "secondaryCtaLink": "https://wa.me/40750405908",
+            "microCopy": "⏱️ Răspundem în medie în 10 minute pe WhatsApp.",
+            "image": "/uploads/thumbs/133cdcc32e3a0420_l.webp"
+          }
+        },
+        {
+          "id": "hub-home",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Ce te interesează?",
+            "cards": [
+              {
+                "id": "t-servicii",
+                "icon": "⚡",
+                "title": "Servicii",
+                "text": "Electrice și fotovoltaice — ce pot rezolva și monta pentru tine.",
+                "link": "/electrician/servicii",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-portofoliu",
+                "icon": "📸",
+                "title": "Portofoliu",
+                "text": "588 poze din 32 șantiere reale, 2022–2026.",
+                "link": "/electrician/portofoliu",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-preturi",
+                "icon": "💰",
+                "title": "Prețuri",
+                "text": "Pachete orientative pentru fotovoltaic și electric.",
+                "link": "/electrician/preturi",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-calc",
+                "icon": "🧮",
+                "title": "Calculatoare",
+                "text": "Estimări rapide + wizard complet de ofertă.",
+                "link": "/electrician/calculatoare",
+                "ctaText": "Vezi →"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-cta",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Nu știi dacă e treabă de electrician sau de fotovoltaic?",
+            "text": "Multe lucrări sunt de fapt amândouă la un loc. Sună sau scrie-mi direct și stabilim împreună, fără presupuneri pe telefon.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
+          }
+        },
+        {
+          "id": "portofoliu",
+          "type": "portfolioPreview",
+          "template": 1,
+          "data": {
+            "heading": "Lucrări reale, poze de la fiecare șantier",
+            "text": "Fotovoltaic și electric — nu randări, nu poze de stock. 32 șantiere documentate, 2022–2026.",
+            "portfolioLimit": 8
+          }
+        },
+        {
+          "id": "sec-faq-home",
+          "type": "faq",
+          "template": 1,
+          "data": {
+            "heading": "Întrebări frecvente",
+            "faqItems": [
+              {
+                "id": "fh1",
+                "question": "Taxezi deplasarea dacă nu facem lucrarea?",
+                "answer": "Pentru diagnoză și identificarea defecțiunilor avem o taxă fixă de 100 lei (deplasare inclusă în București). Dacă alegi să faci lucrarea cu noi, această taxă se scade din prețul final!"
+              },
+              {
+                "id": "fh2",
+                "question": "Cât durează să ajungi la o urgență?",
+                "answer": "În funcție de trafic, ajungem în Sectorul 1-6 sau județul Ilfov în aproximativ 30-60 de minute de la apel."
+              },
+              {
+                "id": "fh3",
+                "question": "Emiți factură și garanție?",
+                "answer": "Da, absolut. Fiind autorizat ANRE și SSM, toate lucrările vin cu garanție scrisă și documente fiscale."
+              },
+              {
+                "id": "fh4",
+                "question": "Trebuie să cumpăr eu materialele?",
+                "answer": "Nu este nevoie. Venim echipați cu tot ce trebuie (cabluri, siguranțe Hager/Schneider, tuburi, aparataj). Folosim doar materiale certificate pentru siguranța ta."
+              },
+              {
+                "id": "f25",
+                "question": "Ești autorizat electrician?",
+                "answer": "Sunt electrician calificat, cu Certificat de Calificare Profesională Electrician în Construcții, în curs de autorizare ANRE. Lucrez conform normelor în vigoare și am și certificat de Inspector SSM."
+              },
+              {
+                "id": "f26",
+                "question": "Cum stabilești prețul unei lucrări?",
+                "answer": "Vin la tine, văd efectiv ce e de făcut, apoi stabilim prețul împreună. Nu dau sume la telefon — riști să fie complet greșite față de ce găsesc pe loc."
+              },
+              {
+                "id": "f27",
+                "question": "Cât durează o lucrare?",
+                "answer": "Depinde de complexitate — de la o oră pentru o reparație, până la câteva zile pentru un tablou nou complet. Îți spun un termen clar la evaluare, nu o estimare din burtă."
+              },
+              {
+                "id": "f28",
+                "question": "Faci și lucrări mici, nu doar tablouri mari?",
+                "answer": "Da. Am în portofoliu atât reparații simple, cât și tablouri industriale — nu refuz o lucrare pentru că e „prea mică”."
+              },
+              {
+                "id": "f59",
+                "question": "Ce dimensiune de sistem am nevoie?",
+                "answer": "Depinde de consumul tău real, nu de mărimea acoperișului. Calculez la evaluare, pe baza facturilor tale de curent — nu-ți vând un sistem mai mare decât ai nevoie."
+              },
+              {
+                "id": "f60",
+                "question": "Faceți și sisteme cu baterii?",
+                "answer": "Da, sisteme hibride cu stocare — ai exemple reale în portofoliu, inclusiv instalații mai mari cu mai multe baterii."
+              },
+              {
+                "id": "f61",
+                "question": "Cât durează un montaj?",
+                "answer": "Pentru o casă, de obicei 1-3 zile. Pentru instalații comerciale mari, depinde de amploare — îți dau un termen clar la evaluare."
+              },
+              {
+                "id": "f62",
+                "question": "Lucrați și pe hale sau clădiri comerciale?",
+                "answer": "Da — ai în portofoliu instalații comerciale cu invertoare de 20 kW și monitorizare live a producției, nu doar case."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-servicii",
+      "slug": "servicii",
+      "title": "Servicii",
+      "sections": [
+        {
+          "id": "sec-header-servicii",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-servicii",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              }
+            ]
+          }
+        },
+        {
+          "id": "hub-servicii",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Ce fel de lucrare ai?",
+            "cards": [
+              {
+                "id": "t-electrice",
+                "icon": "⚡",
+                "title": "Servicii electrice",
+                "text": "Tablouri, diagnoză & reparații, branșamente, protocoale SSM.",
+                "link": "/electrician/servicii/electrice",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-fotovoltaice",
+                "icon": "☀️",
+                "title": "Servicii fotovoltaice",
+                "text": "Montaj rezidențial, comercial, sisteme cu stocare, instalații la sol.",
+                "link": "/electrician/servicii/fotovoltaice",
+                "ctaText": "Vezi →"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-steps-servicii",
+          "type": "cardGrid",
+          "template": 3,
+          "data": {
+            "heading": "Cum lucrăm",
+            "cards": [
+              {
+                "id": "st1",
+                "title": "1. Consultanță",
+                "text": "Consultanță și măsurători la fața locului."
+              },
+              {
+                "id": "st2",
+                "title": "2. Ofertă",
+                "text": "Ofertă cu dimensionare corectă (nu supra-vindem kWp)."
+              },
+              {
+                "id": "st3",
+                "title": "3. Montaj",
+                "text": "Montaj, cu protocoale SSM stricte (înălțime, sub tensiune)."
+              },
+              {
+                "id": "st4",
+                "title": "4. Recepție",
+                "text": "Recepție cu măsurători + dosar tehnic predat clientului."
+              },
+              {
+                "id": "st5",
+                "title": "5. Mentenanță",
+                "text": "Mentenanță și monitorizare ulterioară."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-why-servicii",
+          "type": "cardGrid",
+          "template": 3,
+          "data": {
+            "heading": "De ce Solar Electric Panel",
+            "cards": [
+              {
+                "id": "wh1",
+                "title": "Dosar tehnic complet",
+                "text": "La fiecare lucrare, nu doar montaj și plecare."
+              },
+              {
+                "id": "wh2",
+                "title": "Fundal tehnic dublu",
+                "text": "Electrică și IT — deci oferim și monitorizare/automatizare, nu doar panouri."
+              },
+              {
+                "id": "wh3",
+                "title": "Documentare foto",
+                "text": "A fiecărui șantier, verificabilă în portofoliul nostru."
+              },
+              {
+                "id": "wh4",
+                "title": "Personal atestat ANRE",
+                "text": "Protocoale SSM respectate strict."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-servicii-electrice",
+      "slug": "servicii/electrice",
+      "title": "Servicii electrice",
+      "sections": [
+        {
+          "id": "sec-header-servicii-electrice",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-servicii-electrice",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "bc-se",
+                "label": "Servicii electrice",
+                "href": "/electrician/servicii/electrice"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-cards-electrice",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Servicii electrice",
+            "cards": [
+              {
+                "id": "c10",
+                "title": "Tablouri electrice noi",
+                "text": "Montez tablouri complete, mono și trifazate — de la un apartament, până la o casă în construcție cu tot cablajul de la zero.",
+                "image": "/uploads/thumbs/e482b066fc93567a_l.webp"
+              },
+              {
+                "id": "c11",
+                "title": "Diagnoză & reparații",
+                "text": "Nu-ți dau un preț la ghici pe telefon. Vin, testez efectiv unde e problema, apoi îți spun clar ce trebuie reparat și cât costă.",
+                "image": "/uploads/thumbs/f85ee03aa808ac18_l.webp"
+              },
+              {
+                "id": "c12",
+                "title": "Branșamente & FDCP",
+                "text": "Branșamente de joasă tensiune și firide de distribuție/contorizare (FDCP), montate conform normelor — nu improvizații care pică la prima verificare.",
+                "image": "/uploads/thumbs/936279aa03be334e_l.webp"
+              },
+              {
+                "id": "c13",
+                "title": "Protocoale SSM",
+                "text": "Am certificat de Inspector SSM. Lucrez în siguranță la înălțime și sub tensiune — nu la noroc, nu „merge și așa”.",
+                "image": "/uploads/thumbs/288d979301c0abdc_l.webp"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-servicii-fotovoltaice",
+      "slug": "servicii/fotovoltaice",
+      "title": "Servicii fotovoltaice",
+      "sections": [
+        {
+          "id": "sec-header-servicii-fotovoltaice",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-servicii-fotovoltaice",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "bc-sf",
+                "label": "Servicii fotovoltaice",
+                "href": "/electrician/servicii/fotovoltaice"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-cards-fotovoltaice",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Servicii fotovoltaice",
+            "cards": [
+              {
+                "id": "c43",
+                "title": "Montaj rezidențial",
+                "text": "Panouri pe acoperiș de casă, dimensionate pe consumul tău real, cu conectare corectă la rețea.",
+                "image": "/uploads/thumbs/a3f59d03e9149e51_l.webp"
+              },
+              {
+                "id": "c44",
+                "title": "Montaj comercial",
+                "text": "Instalații pe hale și clădiri comerciale, cu invertoare de putere mare și monitorizare live a producției.",
+                "image": "/uploads/thumbs/cc06e8fe6472b64a_l.webp"
+              },
+              {
+                "id": "c45",
+                "title": "Sisteme cu stocare",
+                "text": "Instalații hibride cu baterii, pentru independență energetică parțială — inclusiv sisteme mari, cu mai multe baterii.",
+                "image": "/uploads/thumbs/900bbd2bac2fbb8d_l.webp"
+              },
+              {
+                "id": "c46",
+                "title": "Instalații la sol",
+                "text": "Carporturi și structuri metalice pe teren, pentru curți sau parcele mari, unde acoperișul nu se pretează.",
+                "image": "/uploads/thumbs/0b33156507e6e30e_l.webp"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-preturi",
+      "slug": "preturi",
+      "title": "Prețuri",
+      "sections": [
+        {
+          "id": "sec-header-preturi",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-preturi",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-hero-preturi",
+          "type": "hero",
+          "template": 1,
+          "data": {
+            "title": "Prețuri orientative",
+            "subtitle": "Cifrele de mai jos sunt orientative, calculate din lista noastră reală de materiale și din prețurile de piață pentru manoperă electrică. Prețul final depinde de proiectul concret — sună pentru o ofertă personalizată."
+          }
+        },
+        {
+          "id": "hub-preturi",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Ce te interesează?",
+            "cards": [
+              {
+                "id": "t-pret-foto",
+                "icon": "☀️",
+                "title": "Prețuri fotovoltaic",
+                "text": "Sisteme 5/10/20 kWp, cu sau fără baterie de stocare.",
+                "link": "/electrician/preturi/fotovoltaic",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-pret-el",
+                "icon": "⚡",
+                "title": "Prețuri electric",
+                "text": "Urgențe, tablouri noi, instalații complete apartament/casă.",
+                "link": "/electrician/preturi/electric",
+                "ctaText": "Vezi →"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-cta-preturi",
+          "type": "cta",
+          "template": 2,
+          "data": {
+            "heading": "Nu te regăsești exact în niciun pachet de mai sus?",
+            "text": "Fiecare proiect e diferit — sună pentru o ofertă personalizată, dimensionată pe consumul și acoperișul tău.",
+            "buttonText": "Sună: 0750 405 908",
+            "buttonLink": "tel:+40750405908"
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-preturi-fotovoltaic",
+      "slug": "preturi/fotovoltaic",
+      "title": "Prețuri fotovoltaic",
+      "sections": [
+        {
+          "id": "sec-header-preturi-fotovoltaic",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-preturi-fotovoltaic",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "bc-pf",
+                "label": "Fotovoltaic",
+                "href": "/electrician/preturi/fotovoltaic"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-5",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "☀️ Sistem fotovoltaic 5 kWp — fără baterie",
+            "priceItems": [
+              {
+                "id": "solar-5-0",
+                "name": "Buget",
+                "price": "15.300 lei",
+                "bullets": [
+                  "12 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (5.4 kWp instalați)",
+                  "Invertor Deye SUN-5K-SG05LP1, 5 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-5-1",
+                "name": "Standard",
+                "price": "16.400 lei",
+                "bullets": [
+                  "10 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (5.0 kWp instalați)",
+                  "Invertor Solis S6-EH1P5K-L-PLUS, 5 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-5-2",
+                "name": "Premium",
+                "price": "22.200 lei",
+                "bullets": [
+                  "10 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (5.2 kWp instalați)",
+                  "Invertor Solis S6-EH3P5K2-H, 5 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-10",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "☀️ Sistem fotovoltaic 10 kWp — fără baterie",
+            "priceItems": [
+              {
+                "id": "solar-10-0",
+                "name": "Buget",
+                "price": "22.800 lei",
+                "bullets": [
+                  "23 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (10.3 kWp instalați)",
+                  "Invertor Huawei SUN2000-10KTL-M1, 10 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-10-1",
+                "name": "Standard",
+                "price": "27.700 lei",
+                "bullets": [
+                  "20 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (10.1 kWp instalați)",
+                  "Invertor Deye SUN-10K-SG02LP1, 10 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-10-2",
+                "name": "Premium",
+                "price": "33.000 lei",
+                "bullets": [
+                  "20 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (10.3 kWp instalați)",
+                  "Invertor Deye SUN-10K-SG01HP3, 10 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-20",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "☀️ Sistem fotovoltaic 20 kWp — fără baterie",
+            "priceItems": [
+              {
+                "id": "solar-20-0",
+                "name": "Buget",
+                "price": "42.400 lei",
+                "bullets": [
+                  "45 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (20.3 kWp instalați)",
+                  "Invertor Huawei SUN2000-20KTL-M5, 20 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-20-1",
+                "name": "Standard",
+                "price": "47.200 lei",
+                "bullets": [
+                  "40 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (20.2 kWp instalați)",
+                  "Invertor Deye SUN-20K-SG05LP3, 20 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-20-2",
+                "name": "Premium",
+                "price": "55.100 lei",
+                "bullets": [
+                  "39 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (20.1 kWp instalați)",
+                  "Invertor Solis S6-EH3P20K-H, 20 kW",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-bat-5",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "🔋 Sistem fotovoltaic 5 kWp — cu baterie de stocare",
+            "priceItems": [
+              {
+                "id": "solar-bat-5-0",
+                "name": "Buget",
+                "price": "19.900 lei",
+                "bullets": [
+                  "12 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (5.4 kWp instalați)",
+                  "Invertor Deye SUN-5K-SG05LP1, 5 kW",
+                  "Baterie Dyness DL5.0C — 5,1 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-5-1",
+                "name": "Standard",
+                "price": "23.200 lei",
+                "bullets": [
+                  "10 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (5.0 kWp instalați)",
+                  "Invertor Solis S6-EH1P5K-L-PLUS, 5 kW",
+                  "Baterie Dyness Tower — 5 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-5-2",
+                "name": "Premium",
+                "price": "32.100 lei",
+                "bullets": [
+                  "10 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (5.2 kWp instalați)",
+                  "Invertor Solis S6-EH3P5K2-H, 5 kW",
+                  "Baterie GoodWe Lynx D HV — 5 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-bat-10",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "🔋 Sistem fotovoltaic 10 kWp — cu baterie de stocare",
+            "priceItems": [
+              {
+                "id": "solar-bat-10-0",
+                "name": "Buget",
+                "price": "32.000 lei",
+                "bullets": [
+                  "23 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (10.3 kWp instalați)",
+                  "Invertor Huawei SUN2000-10KTL-M1, 10 kW",
+                  "Baterie Dyness — 10 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-10-1",
+                "name": "Standard",
+                "price": "41.400 lei",
+                "bullets": [
+                  "20 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (10.1 kWp instalați)",
+                  "Invertor Deye SUN-10K-SG02LP1, 10 kW",
+                  "Baterie Dyness Tower TS10 — 10,6 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-10-2",
+                "name": "Premium",
+                "price": "52.900 lei",
+                "bullets": [
+                  "20 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (10.3 kWp instalați)",
+                  "Invertor Deye SUN-10K-SG01HP3, 10 kW",
+                  "Baterie GoodWe / Huawei — 10 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-solar-bat-20",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "🔋 Sistem fotovoltaic 20 kWp — cu baterie de stocare",
+            "priceItems": [
+              {
+                "id": "solar-bat-20-0",
+                "name": "Buget",
+                "price": "60.800 lei",
+                "bullets": [
+                  "45 panouri fotovoltaice Longi LR4-72HPH-450M — 450W (20.3 kWp instalați)",
+                  "Invertor Huawei SUN2000-20KTL-M5, 20 kW",
+                  "Baterie Dyness — 20 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-20-1",
+                "name": "Standard",
+                "price": "74.600 lei",
+                "bullets": [
+                  "40 panouri fotovoltaice Canadian Solar CS6.2-54TM — 505W (20.2 kWp instalați)",
+                  "Invertor Deye SUN-20K-SG05LP3, 20 kW",
+                  "Baterie Dyness Tower — 20 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "solar-bat-20-2",
+                "name": "Premium",
+                "price": "94.700 lei",
+                "bullets": [
+                  "39 panouri fotovoltaice Jinko Tiger Neo bifacial — 515W (20.1 kWp instalați)",
+                  "Invertor Solis S6-EH3P20K-H, 20 kW",
+                  "Baterie GoodWe / Huawei — 20 kWh",
+                  "Structură de montaj (acoperiș înclinat sau plat, în funcție de proiect)",
+                  "Cablare DC completă + conectori MC4",
+                  "Tablou DC și Tablou AC, echipate",
+                  "Transport materiale la șantier",
+                  "Manoperă montaj, punere în funcțiune și configurare",
+                  "Verificare finală + instructaj de utilizare"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-price-ef-3",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "Cam atât costă, ca punct de plecare",
+            "text": "Fiecare instalație e dimensionată pe-acoperișul și consumul tău. Cifrele de mai jos sunt orientative, prețul final îl stabilim după ce vin să văd locul.",
+            "priceItems": [
+              {
+                "id": "p48",
+                "name": "☀️ Pachet Fotovoltaic Casa Ta (6 kWp Hibrid)",
+                "price": "19.857 lei",
+                "unit": "sistem complet cu montaj",
+                "description": "Ideal pentru case cu consum lunar de 300 - 500 kWh.",
+                "bullets": [
+                  "Invertor Hibrid Trifazat (Huawei / Deye) + Panouri N-Type înaltă eficiență",
+                  "Pregătit direct pentru Baterie de Stocare",
+                  "Dosar complet de Prosumator inclus"
+                ],
+                "ctaText": "📊 Solicită Calcul de Amortizare",
+                "ctaLink": "https://wa.me/40750405908"
+              },
+              {
+                "id": "p49",
+                "name": "🔋 Pachet Fotovoltaic + Stocare Baterie (10 kWp)",
+                "price": "30.073 lei",
+                "unit": "invertor 10kW + panouri",
+                "description": "Lumină și căldură garantate chiar și în timpul penelor de curent. Aproape 0 lei la factură pe timpul verii + independență noaptea.",
+                "bullets": [
+                  "Opțiune Baterie Dyness 5-10 kWh: +4.248 lei"
+                ],
+                "ctaText": "💬 Discută cu Teo pe WhatsApp",
+                "ctaLink": "https://wa.me/40750405908"
+              },
+              {
+                "id": "p50",
+                "name": "Hale & firme",
+                "price": "ofertă personalizată",
+                "description": "Dimensionare pe consum real, orientare Electric Up — discutăm amploarea lucrării."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-price-ef-4",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "Sisteme fotovoltaice trifazate, la cheie — Huawei sau Deye",
+            "text": "Calculat cu prețuri reale de componente (depozitsolar.ro, septembrie 2026) și structură de montaj (reper Dedeman) + manoperă (reper ecosolaris.ro, 750 lei/kWp). Prețurile de componente scad la cantitate mai mare — cifrele de mai jos sunt pentru un singur set, la preț individual.",
+            "priceItems": [
+              {
+                "id": "3_YXbd",
+                "name": "Sistem 6 kWp trifazat, hibrid",
+                "price": "19.857 lei",
+                "unit": "≈ 3.309 lei/kWp",
+                "description": "14× panou Canadian Solar 450W, invertor hibrid trifazat Huawei SUN2000-6KTL-M1. Compatibil cu adăugare baterie ulterior.",
+                "breakdown": [
+                  {
+                    "id": "GQPQFX",
+                    "label": "14 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "5.760 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html"
+                  },
+                  {
+                    "id": "Qc87aW",
+                    "label": "Invertor hibrid trifazat Huawei 6kW",
+                    "amount": "5.717 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/invertoare/invertor-hibrid-trifazat-huawei-sun2000-6ktl-m1-6kw.html"
+                  },
+                  {
+                    "id": "4AV7zW",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "3.011 lei",
+                    "highlight": false,
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6"
+                  },
+                  {
+                    "id": "qSngfP",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "869 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "4Zb839",
+                    "label": "Manoperă instalare (6 kWp × 750 lei/kWp)",
+                    "amount": "4.500 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (kit 6kW). Manoperă: reper de piață ecosolaris.ro.",
+                "image": "/uploads/products/trim-inv-6kw.png"
+              },
+              {
+                "id": "vXSa4j",
+                "name": "Sistem 10 kWp trifazat, hibrid",
+                "price": "30.073 lei",
+                "unit": "≈ 3.007 lei/kWp",
+                "description": "23× panou Canadian Solar 450W, invertor hibrid trifazat Huawei SUN2000-10KTL-M1. Recomandat pentru case mari sau consum ridicat.",
+                "breakdown": [
+                  {
+                    "id": "DfEDKv",
+                    "label": "23 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "9.462 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html"
+                  },
+                  {
+                    "id": "tsQtdF",
+                    "label": "Invertor hibrid trifazat Huawei 10kW",
+                    "amount": "6.814 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/invertoare/invertor-hibrid-trifazat-huawei-sun2000-10ktl-m1-hc.html"
+                  },
+                  {
+                    "id": "CPoc0Z",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "5.019 lei",
+                    "highlight": false,
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6"
+                  },
+                  {
+                    "id": "w49k1r",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "1.278 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "xPbMwh",
+                    "label": "Manoperă instalare (10 kWp × 750 lei/kWp)",
+                    "amount": "7.500 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (scalat per kWp). Manoperă: reper de piață ecosolaris.ro.",
+                "image": "/uploads/products/trim-inv-10kw.png"
+              },
+              {
+                "id": "qlCd-t",
+                "name": "Sistem 20 kWp trifazat, comercial",
+                "price": "58.255 lei",
+                "unit": "≈ 2.913 lei/kWp",
+                "description": "45× panou Canadian Solar 450W, invertor on-grid trifazat Huawei SUN2000-20KTL-M5. Pentru hale/firme — varianta hibridă cu stocare costă suplimentar față de acest on-grid.",
+                "breakdown": [
+                  {
+                    "id": "GWE1zL",
+                    "label": "45 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "18.513 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html"
+                  },
+                  {
+                    "id": "jI_K0h",
+                    "label": "Invertor on-grid trifazat Huawei 20kW",
+                    "amount": "12.256 lei",
+                    "highlight": false,
+                    "url": "https://depozitsolar.ro/invertoare/invertor-on-grid-trifazat-huawei-sun2000-20ktl-m5.html"
+                  },
+                  {
+                    "id": "RApiHd",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "10.037 lei",
+                    "highlight": false,
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6"
+                  },
+                  {
+                    "id": "my71BP",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "2.448 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "GAffTr",
+                    "label": "Manoperă instalare (20 kWp × 750 lei/kWp)",
+                    "amount": "15.000 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (scalat per kWp). Manoperă: reper de piață ecosolaris.ro.",
+                "image": "/uploads/products/trim-inv-20kw.png"
+              },
+              {
+                "id": "kGys-Z",
+                "name": "Sistem 6 kWp trifazat, Deye",
+                "price": "22.230 lei",
+                "unit": "≈ 3.705 lei/kWp",
+                "description": "14× panou Canadian Solar 450W, Invertor hibrid trifazat Deye 6kW LV. Variantă alternativă la Huawei — invertoare Deye, de obicei mai accesibile ca preț.",
+                "image": "/uploads/products/trim-inv-deye-6kw.png",
+                "breakdown": [
+                  {
+                    "id": "LgE55t",
+                    "label": "14 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "5.760 lei",
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "uY6Hdy",
+                    "label": "Invertor hibrid trifazat Deye 6kW LV",
+                    "amount": "7.956 lei",
+                    "url": "https://depozitsolar.ro/invertoare/invertor-hibrid-trifazat-deye-sun-5k-sg05lp3-eu-sm2-2.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "3cYH8B",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "3.011 lei",
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6",
+                    "highlight": false
+                  },
+                  {
+                    "id": "X4JxP2",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "1.004 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "SFGVEb",
+                    "label": "Manoperă instalare (6 kWp × 750 lei/kWp)",
+                    "amount": "4.500 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (scalat per kWp). Manoperă: reper de piață ecosolaris.ro."
+              },
+              {
+                "id": "JyV3Yk",
+                "name": "Sistem 10 kWp trifazat, Deye",
+                "price": "31.557 lei",
+                "unit": "≈ 3.156 lei/kWp",
+                "description": "23× panou Canadian Solar 450W, Invertor hibrid trifazat Deye 10kW LV. Variantă alternativă la Huawei — invertoare Deye, de obicei mai accesibile ca preț.",
+                "image": "/uploads/products/trim-inv-deye-10kw.png",
+                "breakdown": [
+                  {
+                    "id": "zR97JK",
+                    "label": "23 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "9.462 lei",
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "0Z1Hit",
+                    "label": "Invertor hibrid trifazat Deye 10kW LV",
+                    "amount": "8.215 lei",
+                    "url": "https://depozitsolar.ro/invertoare/invertor-hibrid-trifazat-deye-sun-10k-sg05lp3-eu-sm2.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "VbFsdE",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "5.019 lei",
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6",
+                    "highlight": false
+                  },
+                  {
+                    "id": "ApgfhI",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "1.362 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "5QCT3p",
+                    "label": "Manoperă instalare (10 kWp × 750 lei/kWp)",
+                    "amount": "7.500 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (scalat per kWp). Manoperă: reper de piață ecosolaris.ro."
+              },
+              {
+                "id": "v1YrWR",
+                "name": "Sistem 20 kWp trifazat, Deye",
+                "price": "55.015 lei",
+                "unit": "≈ 2.751 lei/kWp",
+                "description": "45× panou Canadian Solar 450W, Invertor hibrid trifazat Deye 20kW HV. Variantă alternativă la Huawei — invertoare Deye, de obicei mai accesibile ca preț.",
+                "image": "/uploads/products/trim-inv-deye-20kw.png",
+                "breakdown": [
+                  {
+                    "id": "h8qgzI",
+                    "label": "45 panouri Canadian Solar 450W (411,40 lei/buc)",
+                    "amount": "18.513 lei",
+                    "url": "https://depozitsolar.ro/panouri-fotovoltaice/canadian-solar-hiku6-450w-rama-neagra.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "ksB_68",
+                    "label": "Invertor hibrid trifazat Deye 20kW HV",
+                    "amount": "9.200 lei",
+                    "url": "https://depozitsolar.ro/invertoare/invertor-hibrid-trifazat-deye-sun-20k-sg01hp3-eu-am2.html",
+                    "highlight": false
+                  },
+                  {
+                    "id": "_-FSj_",
+                    "label": "Structură montaj acoperiș",
+                    "amount": "10.037 lei",
+                    "url": "https://www.dedeman.ro/ro/kit-prindere-sistem-fotovoltaic-6-kwh-pentru-acoperis-tip-tigla-ceramica/p/1068404-1068405-1068413-1068414-1068416-1068417-1068973-6",
+                    "highlight": false
+                  },
+                  {
+                    "id": "twqhen",
+                    "label": "Cabluri DC/AC, protecții, conectori MC4 (estimare ~6%)",
+                    "amount": "2.265 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "drw150",
+                    "label": "Manoperă instalare (20 kWp × 750 lei/kWp)",
+                    "amount": "15.000 lei",
+                    "highlight": true
+                  }
+                ],
+                "sourceNote": "Panouri și invertor: preț real depozitsolar.ro. Structură montaj: reper Dedeman (scalat per kWp). Manoperă: reper de piață ecosolaris.ro."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-price-ef-5",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "Stocare pe baterii — Dyness (3 game) și Huawei",
+            "text": "Trei game reale de la Dyness (PowerBox, Stack, Tower) plus Huawei LUNA2000, fiecare la 3 capacități (5 / 10 / 15 kWh) — de pe depozitsolar.ro. Fiecare card arată exact ce produs real a stat la baza calculului de preț.",
+            "priceItems": [
+              {
+                "id": "-UaVuw",
+                "name": "Baterie 5 kWh — Dyness",
+                "price": "≈ 4.248 lei",
+                "unit": "850 lei/kWh",
+                "description": "Variantă economică LiFePO4. Calculat din prețul real al Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro.",
+                "sourceNote": "Sursă preț: Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro — rată aplicată la 5 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-powerbox-g2.html",
+                "image": "/uploads/products/trim-bat-dyness.png"
+              },
+              {
+                "id": "_RQdpm",
+                "name": "Baterie 5 kWh — Huawei LUNA2000",
+                "price": "≈ 11.854 lei",
+                "unit": "2371 lei/kWh",
+                "description": "Variantă premium, integrare nativă cu invertoarele Huawei. Calculat din prețul real al Huawei LUNA2000-10-S0 — preț exact, real, de pe depozitsolar.ro.",
+                "sourceNote": "Sursă preț: Huawei LUNA2000-10-S0 — preț exact, real, de pe depozitsolar.ro — rată aplicată la 5 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-huawei-10kwh-luna2000-10-s0.html",
+                "image": "/uploads/products/trim-bat-huawei.png"
+              },
+              {
+                "id": "YWH7cp",
+                "name": "Baterie 10 kWh — Dyness",
+                "price": "≈ 8.496 lei",
+                "unit": "850 lei/kWh",
+                "description": "Variantă economică LiFePO4. Calculat din prețul real al Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro.",
+                "sourceNote": "Sursă preț: Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro — rată aplicată la 10 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-powerbox-g2.html",
+                "image": "/uploads/products/trim-bat-dyness.png"
+              },
+              {
+                "id": "pxqgxz",
+                "name": "Baterie 10 kWh — Huawei LUNA2000",
+                "price": "23.709 lei",
+                "unit": "preț real, 2371 lei/kWh",
+                "description": "Variantă premium, integrare nativă cu invertoarele Huawei. Preț exact pentru acest model.",
+                "sourceNote": "Sursă preț: Huawei LUNA2000-10-S0 — preț exact, real, de pe depozitsolar.ro",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-huawei-10kwh-luna2000-10-s0.html",
+                "image": "/uploads/products/trim-bat-huawei.png"
+              },
+              {
+                "id": "ugNRXV",
+                "name": "Baterie 15 kWh — Dyness",
+                "price": "≈ 12.743 lei",
+                "unit": "850 lei/kWh",
+                "description": "Variantă economică LiFePO4. Calculat din prețul real al Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro.",
+                "sourceNote": "Sursă preț: Dyness Powerbox G2 (10,24 kWh, 8.699 lei) de pe depozitsolar.ro — rată aplicată la 15 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-powerbox-g2.html",
+                "image": "/uploads/products/trim-bat-dyness.png"
+              },
+              {
+                "id": "PEFRwZ",
+                "name": "Baterie 15 kWh — Huawei LUNA2000",
+                "price": "≈ 35.563 lei",
+                "unit": "2371 lei/kWh",
+                "description": "Variantă premium, integrare nativă cu invertoarele Huawei. Calculat din prețul real al Huawei LUNA2000-10-S0 — preț exact, real, de pe depozitsolar.ro.",
+                "sourceNote": "Sursă preț: Huawei LUNA2000-10-S0 — preț exact, real, de pe depozitsolar.ro — rată aplicată la 15 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-huawei-10kwh-luna2000-10-s0.html",
+                "image": "/uploads/products/trim-bat-huawei.png"
+              },
+              {
+                "id": "KrTS_U",
+                "name": "Baterie 5 kWh — Dyness Stack",
+                "price": "≈ 5.612 lei",
+                "unit": "1.122 lei/kWh",
+                "description": "Linie C&I (comercial/industrial), module stivuite, capacitate mare per unitate. Calculat din prețul real al Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-stack.png",
+                "sourceNote": "Sursă preț: Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro — rată aplicată la 5 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-15-36-stack100-3s.html"
+              },
+              {
+                "id": "fDaUEu",
+                "name": "Baterie 5 kWh — Dyness Tower",
+                "price": "≈ 6.169 lei",
+                "unit": "1.234 lei/kWh",
+                "description": "Linie rezidențială tip turn vertical, modulară. Calculat din prețul real al Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-tower.png",
+                "sourceNote": "Sursă preț: Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro — rată aplicată la 5 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-10kwh-tower-t10.html"
+              },
+              {
+                "id": "2c4D_7",
+                "name": "Baterie 10 kWh — Dyness Stack",
+                "price": "≈ 11.224 lei",
+                "unit": "1.122 lei/kWh",
+                "description": "Linie C&I (comercial/industrial), module stivuite, capacitate mare per unitate. Calculat din prețul real al Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-stack.png",
+                "sourceNote": "Sursă preț: Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro — rată aplicată la 10 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-15-36-stack100-3s.html"
+              },
+              {
+                "id": "QQahUZ",
+                "name": "Baterie 10 kWh — Dyness Tower",
+                "price": "≈ 12.338 lei",
+                "unit": "1.234 lei/kWh",
+                "description": "Linie rezidențială tip turn vertical, modulară. Calculat din prețul real al Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-tower.png",
+                "sourceNote": "Sursă preț: Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro — rată aplicată la 10 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-10kwh-tower-t10.html"
+              },
+              {
+                "id": "vyTZfW",
+                "name": "Baterie 15 kWh — Dyness Stack",
+                "price": "≈ 16.837 lei",
+                "unit": "1.122 lei/kWh",
+                "description": "Linie C&I (comercial/industrial), module stivuite, capacitate mare per unitate. Calculat din prețul real al Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-stack.png",
+                "sourceNote": "Sursă preț: Dyness STACK100-3s (15,36 kWh, 17.241 lei) de pe depozitsolar.ro — rată aplicată la 15 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-15-36-stack100-3s.html"
+              },
+              {
+                "id": "1jFoJS",
+                "name": "Baterie 15 kWh — Dyness Tower",
+                "price": "≈ 18.508 lei",
+                "unit": "1.234 lei/kWh",
+                "description": "Linie rezidențială tip turn vertical, modulară. Calculat din prețul real al Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro.",
+                "image": "/uploads/products/trim-bat-tower.png",
+                "sourceNote": "Sursă preț: Dyness Tower T10 (10,65 kWh, 13.140 lei) de pe depozitsolar.ro — rată aplicată la 15 kWh.",
+                "sourceUrl": "https://depozitsolar.ro/acumulatori/baterie-dyness-10kwh-tower-t10.html"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-preturi-electric",
+      "slug": "preturi/electric",
+      "title": "Prețuri electric",
+      "sections": [
+        {
+          "id": "sec-header-preturi-electric",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-preturi-electric",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "bc-pe",
+                "label": "Electric",
+                "href": "/electrician/preturi/electric"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-price-ef-1",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "Cam atât costă, ca să nu ghicești",
+            "text": "Cifrele de mai jos sunt un punct de plecare, nu un preț bătut în cuie. Stabilim prețul final împreună, după ce văd exact ce e de făcut.",
+            "priceItems": [
+              {
+                "id": "p1",
+                "name": "🚨 Urgențe Electrice & Diagnoză",
+                "price": "de la 100 lei",
+                "unit": "/oră, deplasare inclusă în București",
+                "description": "S-a luat curentul doar la tine? Miroase a ars? Sare siguranța?",
+                "bullets": [
+                  "Localizare rapidă a scurtcircuitului",
+                  "Schimbat siguranțe arse / prize supraîncălzite",
+                  "Remedieri de urgență blocuri vechi și noi"
+                ],
+                "ctaText": "📞 Cere Intervenție Urgentă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "p2",
+                "name": "🛡️ Înlocuire Tablou Electric (Bloc / Casă)",
+                "price": "de la 450 lei",
+                "unit": "manoperă + tablou nou complet",
+                "description": "Scapă de siguranțele vechi cu patron de ceramică sau panouri improvizate.",
+                "bullets": [
+                  "Siguranțe moderne automate cu protecție diferențială (RCCB) împotriva electrocutării",
+                  "Mărci folosite: Hager / Schneider",
+                  "Etichetare clară pe fiecare circuit — știi exact ce oprești"
+                ],
+                "ctaText": "💬 Programează Înlocuirea",
+                "ctaLink": "https://wa.me/40750405908"
+              },
+              {
+                "id": "p3",
+                "name": "🏠 Instalație Electrică de la Zero (Apartamente / Case)",
+                "price": "de la 8.523 lei",
+                "unit": "estimativ, apartament 2 camere",
+                "description": "Regândește prizele pentru viața modernă: bucătărie, aer condiționat, electrocasnice mari.",
+                "bullets": [
+                  "Apartament 2 camere (~50 m²): estimativ 8.523 lei (piese + manoperă + canelare/săpătură)",
+                  "Apartament 3 camere (~75-85 m²): estimativ 12.580 lei"
+                ],
+                "ctaText": "🧮 Deschide Calculatorul de Deviz",
+                "ctaLink": "/electrician/calculatoare/electric"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-electrice-ap",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "⚡ Instalație electrică — Apartament 3 camere (~70 mp)",
+            "priceItems": [
+              {
+                "id": "elect-ap-0",
+                "name": "Buget",
+                "price": "4.200 lei",
+                "bullets": [
+                  "Tablou electric nou, disjunctoare + 1 diferențial general",
+                  "Cablare completă NYM-J pe toate circuitele",
+                  "Prize și întrerupătoare gamă economică (~18-20 puncte)",
+                  "Verificare rezistență de izolație"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "elect-ap-1",
+                "name": "Standard",
+                "price": "6.200 lei",
+                "bullets": [
+                  "Tablou electric conform normativ I7, diferențiale RCD pe fiecare grupă",
+                  "Cablare completă NYM-J",
+                  "Prize și întrerupătoare gamă medie (~22-25 puncte)",
+                  "Corpuri de iluminat LED incluse în camerele principale",
+                  "Verificare + proces verbal de recepție"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "elect-ap-2",
+                "name": "Premium",
+                "price": "9.500 lei",
+                "bullets": [
+                  "Tablou I7 complet, RCD pe fiecare grupă + protecție SPD la supratensiuni",
+                  "Cablare completă, secțiuni generoase pe circuitele de forță",
+                  "Prize și întrerupătoare design premium",
+                  "Iluminat LED inteligent, control din aplicație",
+                  "Doze pregătite pentru automatizări smart home",
+                  "Verificare + proces verbal + garanție extinsă"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-pricing-electrice-casa",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "⚡ Instalație electrică — Casă cu 2 etaje (~160 mp)",
+            "priceItems": [
+              {
+                "id": "elect-casa-0",
+                "name": "Buget",
+                "price": "9.800 lei",
+                "bullets": [
+                  "Tablou electric principal + tablou secundar etaj 2",
+                  "Cablare completă NYM-J, toate circuitele",
+                  "Prize și întrerupătoare gamă economică (~40-45 puncte)",
+                  "Verificare rezistență de izolație pe ambele niveluri"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "elect-casa-1",
+                "name": "Standard",
+                "price": "15.500 lei",
+                "bullets": [
+                  "Tablou principal I7 + tablou secundar, RCD pe fiecare grupă",
+                  "Cablare completă NYM-J, secțiuni conform normativ",
+                  "Prize și întrerupătoare gamă medie (~50-55 puncte)",
+                  "Iluminat LED în toate camerele principale",
+                  "Verificare + proces verbal de recepție pe ambele niveluri"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              },
+              {
+                "id": "elect-casa-2",
+                "name": "Premium",
+                "price": "24.000 lei",
+                "bullets": [
+                  "Tablou principal I7 complet + tablou secundar, SPD la supratensiuni",
+                  "Cablare completă, pregătită pentru stație de încărcare EV și fotovoltaic",
+                  "Prize și întrerupătoare design premium",
+                  "Iluminat LED inteligent, control centralizat",
+                  "Pregătire completă smart home (doze, cablare structurată)",
+                  "Verificare + proces verbal + garanție extinsă"
+                ],
+                "ctaText": "Sună pentru ofertă",
+                "ctaLink": "tel:+40750405908"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-price-ef-2",
+          "type": "pricing",
+          "template": 1,
+          "data": {
+            "heading": "Instalație electrică completă, pe apartament — cost real, defalcat",
+            "text": "Calculat cu prețuri reale de componente (electricon.ro, septembrie 2026) și repere de piață pentru manoperă (devizeroo.ro, prolist.ro). Scenariu: apartament cu finisaje deja făcute (spart și pozat sub tencuială existentă) — pentru casă nouă, nefinisată, costul de spart+pozat e mult mai mic (doar tras cablu prin tub, ~15-25 lei/ml).",
+            "priceItems": [
+              {
+                "id": "RfrJ82",
+                "name": "Apartament 2 camere (~50 m²) — bucătărie, baie, hol",
+                "price": "8.523 lei",
+                "unit": "estimativ, renovare",
+                "description": "5 puncte iluminat, 12 prize, 1 circuit dedicat aer condiționat, 1 circuit dedicat plită electrică, tablou 8 module echipat complet (RCCB + 5 MCB-uri). ~70 ml traseu total.",
+                "breakdown": [
+                  {
+                    "id": "_1mGQF",
+                    "label": "Spart și pozat cabluri (70 ml × 85 lei/ml)",
+                    "amount": "5.950 lei",
+                    "highlight": true
+                  },
+                  {
+                    "id": "5DSLef",
+                    "label": "Cabluri (MYF 1.5/2.5/6mm² — electricon.ro)",
+                    "amount": "478 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/conductori-electrici/conductor-myf-h07v-k-2-5-mmp-negru.html"
+                  },
+                  {
+                    "id": "BZSg95",
+                    "label": "Tub riflat protecție (70 ml × 1,79 lei)",
+                    "amount": "125 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/tub-flexibil/ecicta1650hf.html"
+                  },
+                  {
+                    "id": "gah7V7",
+                    "label": "Aparataj — 5 întrerupătoare + 12 prize",
+                    "amount": "614 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/47063525.html"
+                  },
+                  {
+                    "id": "6QVfZX",
+                    "label": "Sigurațe automate (iluminat/prize/AC/plită)",
+                    "amount": "175 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/sigurante-automate/hager-disjunctor-1p-n-16a-6ka-c-1m.html"
+                  },
+                  {
+                    "id": "Dy1UkQ",
+                    "label": "Protecție diferențială RCCB 40A/30mA",
+                    "amount": "153 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/rccb/002061112.html"
+                  },
+                  {
+                    "id": "Jmt1YU",
+                    "label": "Tablou electric gol, 8 module",
+                    "amount": "237 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/tablouri-electrice/"
+                  },
+                  {
+                    "id": "Qh-m0Q",
+                    "label": "Montaj aparataj (17 puncte × 30 lei)",
+                    "amount": "510 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "NZYLx-",
+                    "label": "Montaj și conexiuni tablou echipat",
+                    "amount": "280 lei",
+                    "highlight": false
+                  }
+                ],
+                "sourceNote": "Materiale (cabluri, aparataj, siguranțe, tablou): prețuri reale electricon.ro. Manoperă (spart/pozat, montaj): reper de piață devizeroo.ro / prolist.ro, nu preț fix — variază cu accesul la pereți și distanța până la tablou."
+              },
+              {
+                "id": "2kVfwU",
+                "name": "Apartament 3 camere (~75-85 m²) — bucătărie, baie, hol, 2× AC",
+                "price": "12.580 lei",
+                "unit": "estimativ, renovare",
+                "description": "8 puncte iluminat, 18 prize, 2 circuite dedicate aer condiționat, 1 circuit dedicat plită electrică, tablou 12 module echipat complet. ~106 ml traseu total.",
+                "breakdown": [
+                  {
+                    "id": "68NBD7",
+                    "label": "Spart și pozat cabluri (106 ml × 85 lei/ml)",
+                    "amount": "9.010 lei",
+                    "highlight": true
+                  },
+                  {
+                    "id": "J1auDg",
+                    "label": "Cabluri (MYF 1.5/2.5/6mm² — electricon.ro)",
+                    "amount": "688 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/conductori-electrici/conductor-myf-h07v-k-2-5-mmp-negru.html"
+                  },
+                  {
+                    "id": "x6QDjs",
+                    "label": "Tub riflat protecție (106 ml × 1,79 lei)",
+                    "amount": "190 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/tub-flexibil/ecicta1650hf.html"
+                  },
+                  {
+                    "id": "kh8WH2",
+                    "label": "Aparataj — 8 întrerupătoare + 18 prize",
+                    "amount": "938 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/47063525.html"
+                  },
+                  {
+                    "id": "VexoS3",
+                    "label": "Sigurațe automate (iluminat/prize/2×AC/plită)",
+                    "amount": "245 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/sigurante-automate/hager-disjunctor-1p-n-16a-6ka-c-1m.html"
+                  },
+                  {
+                    "id": "gMgfQq",
+                    "label": "Protecție diferențială RCCB 40A/30mA",
+                    "amount": "153 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/rccb/002061112.html"
+                  },
+                  {
+                    "id": "1j6wFp",
+                    "label": "Tablou electric gol, 12 module",
+                    "amount": "296 lei",
+                    "highlight": false,
+                    "url": "https://www.electricon.ro/tablouri-electrice/"
+                  },
+                  {
+                    "id": "OrPP7x",
+                    "label": "Montaj aparataj (26 puncte × 30 lei)",
+                    "amount": "780 lei",
+                    "highlight": false
+                  },
+                  {
+                    "id": "nob9RK",
+                    "label": "Montaj și conexiuni tablou echipat",
+                    "amount": "280 lei",
+                    "highlight": false
+                  }
+                ],
+                "sourceNote": "Materiale (cabluri, aparataj, siguranțe, tablou): prețuri reale electricon.ro. Manoperă (spart/pozat, montaj): reper de piață devizeroo.ro / prolist.ro, nu preț fix — variază cu accesul la pereți și distanța până la tablou."
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calculatoare",
+      "slug": "calculatoare",
+      "title": "Calculatoare",
+      "sections": [
+        {
+          "id": "sec-header-calculatoare",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calculatoare",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-hero-calc",
+          "type": "hero",
+          "template": 3,
+          "data": {
+            "title": "Calculatoare, pentru un punct de plecare rapid",
+            "subtitle": "Estimări orientative, în câteva secunde — prețul final îl stabilim împreună, după ce văd exact ce e de făcut."
+          }
+        },
+        {
+          "id": "hub-calc",
+          "type": "cardGrid",
+          "template": 1,
+          "data": {
+            "heading": "Ce vrei să calculezi?",
+            "cards": [
+              {
+                "id": "t-calc-rapid",
+                "icon": "⚡",
+                "title": "Estimare rapidă",
+                "text": "3 pași, fără formular.",
+                "link": "/electrician/calculatoare/rapid",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-calc-foto",
+                "icon": "☀️",
+                "title": "Sistem fotovoltaic",
+                "text": "kWp, panouri, suprafață acoperiș.",
+                "link": "/electrician/calculatoare/fotovoltaic",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-calc-bat",
+                "icon": "🔋",
+                "title": "Baterie de stocare",
+                "text": "Capacitate recomandată pe consumul tău.",
+                "link": "/electrician/calculatoare/baterie",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-calc-el",
+                "icon": "🔌",
+                "title": "Instalație electrică",
+                "text": "Cost estimativ pe puncte electrice.",
+                "link": "/electrician/calculatoare/electric",
+                "ctaText": "Vezi →"
+              },
+              {
+                "id": "t-calc-oferta",
+                "icon": "📋",
+                "title": "Ofertă completă",
+                "text": "Wizard în 7 pași — 3 variante de preț, trimise direct.",
+                "link": "/electrician/calculatoare/oferta",
+                "ctaText": "Vezi →"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calc-rapid",
+      "slug": "calculatoare/rapid",
+      "title": "Estimare rapidă",
+      "sections": [
+        {
+          "id": "sec-header-calc-rapid",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calc-rapid",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "bc-calc-rapid",
+                "label": "Estimare rapidă",
+                "href": "/electrician/calculatoare/rapid"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-calc-quick",
+          "type": "calcQuick",
+          "template": 1,
+          "data": {
+            "heading": "Estimare rapidă în 3 pași"
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calc-fotovoltaic",
+      "slug": "calculatoare/fotovoltaic",
+      "title": "Calculator sistem fotovoltaic",
+      "sections": [
+        {
+          "id": "sec-header-calc-fotovoltaic",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calc-fotovoltaic",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "bc-calc-fotovoltaic",
+                "label": "Sistem fotovoltaic",
+                "href": "/electrician/calculatoare/fotovoltaic"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-calc-6",
+          "type": "calcSolar",
+          "template": 1,
+          "data": {
+            "heading": "Calculator sistem fotovoltaic"
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calc-baterie",
+      "slug": "calculatoare/baterie",
+      "title": "Calculator baterie",
+      "sections": [
+        {
+          "id": "sec-header-calc-baterie",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calc-baterie",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "bc-calc-baterie",
+                "label": "Baterie de stocare",
+                "href": "/electrician/calculatoare/baterie"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-calc-7",
+          "type": "calcBattery",
+          "template": 2,
+          "data": {
+            "heading": "Calculator baterie fotovoltaică"
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calc-electric",
+      "slug": "calculatoare/electric",
+      "title": "Calculator instalație electrică",
+      "sections": [
+        {
+          "id": "sec-header-calc-electric",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calc-electric",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "bc-calc-electric",
+                "label": "Instalație electrică",
+                "href": "/electrician/calculatoare/electric"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-calc-8",
+          "type": "calcElectric",
+          "template": 1,
+          "data": {
+            "heading": "Calculator cost instalație electrică"
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-calc-oferta",
+      "slug": "calculatoare/oferta",
+      "title": "Ofertă completă",
+      "sections": [
+        {
+          "id": "sec-header-calc-oferta",
+          "type": "header",
+          "template": 1,
+          "data": {
+            "brand": "Teo Marcu",
+            "logo": "/uploads/logo.png",
+            "phone": "0750 405 908",
+            "navLinks": [
+              {
+                "id": "nl-servicii",
+                "label": "Servicii",
+                "href": "/electrician/servicii"
+              },
+              {
+                "id": "nl-portofoliu",
+                "label": "Portofoliu",
+                "href": "/electrician/portofoliu"
+              },
+              {
+                "id": "nl-preturi",
+                "label": "Prețuri",
+                "href": "/electrician/preturi"
+              },
+              {
+                "id": "nl-calculatoare",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "nl-blog",
+                "label": "← Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-breadcrumb-calc-oferta",
+          "type": "breadcrumb",
+          "template": 1,
+          "data": {
+            "breadcrumbItems": [
+              {
+                "id": "bc-acasa",
+                "label": "Acasă",
+                "href": "/electrician"
+              },
+              {
+                "id": "bc-calc",
+                "label": "Calculatoare",
+                "href": "/electrician/calculatoare"
+              },
+              {
+                "id": "bc-calc-oferta",
+                "label": "Ofertă completă",
+                "href": "/electrician/calculatoare/oferta"
+              }
+            ]
+          }
+        },
+        {
+          "id": "sec-footer",
+          "type": "footer",
+          "template": 2,
+          "data": {
+            "phone": "0750 405 908",
+            "whatsapp": "+40750405908",
+            "email": "solarelectricpanel@gmail.com",
+            "location": "București - Ilfov"
+          }
+        }
+      ]
+    }
+  ]
+}

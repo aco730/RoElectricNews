@@ -5,7 +5,7 @@ data: 2026-02-14
 dataAdaugare: "2026-08-10"
 sursaNume: "Depozit Solar"
 sursaUrl: "https://depozitsolar.ro/"
-imagine: "/images/articole/cine-e-depozit-solar-retailer-roman-de-panouri-invertoare-si-baterii.jpg"
+imagine: "/images/articole/cine-e-depozit-solar-retailer-roman-de-panouri-invertoare-si-baterii.webp"
 ---
 
 Depozit Solar este un magazin online românesc specializat în echipamente pentru energie solară, cu sediu/depozit în Făgăraș, județul Brașov. Platforma vinde sisteme fotovoltaice complete, soluții de stocare a energiei și invertoare, orientate atât spre instalații rezidențiale, cât și comerciale.

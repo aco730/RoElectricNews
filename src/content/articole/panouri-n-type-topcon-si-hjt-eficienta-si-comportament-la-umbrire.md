@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "EnergyNomad"
 sursaUrl: "https://www.energynomad.ro"
-imagine: "/images/articole/panouri-n-type-topcon-si-hjt-eficienta-si-comportament-la-umbrire.jpg"
+imagine: "/images/articole/panouri-n-type-topcon-si-hjt-eficienta-si-comportament-la-umbrire.webp"
 ---
 
 Generația de panouri N-Type (TopCon și HJT) a devenit standardul dominant pe piață în 2026, înlocuind treptat tehnologia P-Type mai veche — diferența nu e doar marketing, ci performanță măsurabilă, mai ales în condiții reale, nu de laborator.

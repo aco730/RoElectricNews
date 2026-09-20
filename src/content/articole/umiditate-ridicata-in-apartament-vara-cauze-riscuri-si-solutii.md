@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "Spațiul Construit"
 sursaUrl: "https://spatiulconstruit.ro/articol/umiditate-ridicata-in-apartament-vara-cauze-riscuri-si-solutii/28831"
-imagine: "/images/articole/umiditate-ridicata-in-apartament-vara-cauze-riscuri-si-solutii.jpg"
+imagine: "/images/articole/umiditate-ridicata-in-apartament-vara-cauze-riscuri-si-solutii.webp"
 ---
 
 

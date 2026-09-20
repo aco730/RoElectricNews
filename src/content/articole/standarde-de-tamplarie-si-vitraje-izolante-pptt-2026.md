@@ -5,7 +5,7 @@ data: 2026-07-08
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/07/08/pptt-reprezentare-promovare-si-proiecte-in-prima-parte-a-anului-2026-pentru-industria-ferestrelor-fatadelor-si-vitrajelor-izolante/"
-imagine: "/images/articole/standarde-de-tamplarie-si-vitraje-izolante-pptt-2026.jpg"
+imagine: "/images/articole/standarde-de-tamplarie-si-vitraje-izolante-pptt-2026.webp"
 ---
 
 

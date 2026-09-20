@@ -5,7 +5,7 @@ data: 2026-07-31
 dataAdaugare: "2026-08-11"
 sursaNume: "Curs de Guvernare"
 sursaUrl: "https://cursdeguvernare.ro/avizarea-constructiilor-digitalizata-dupa-adoptarea-codului-urbanismului.html"
-imagine: "/images/articole/care-sunt-costurile-administrative-si-taxele-comasate-prin-noul-cod-al-urbanismului-catuc.jpg"
+imagine: "/images/articole/care-sunt-costurile-administrative-si-taxele-comasate-prin-noul-cod-al-urbanismului-catuc.webp"
 ---
 
 Noul Cod al Amenajării Teritoriului, Urbanismului și Construcțiilor (CATUC) a adus schimbări semnificative în modul în care se calculează și se plătesc taxele administrative pentru autorizarea construcțiilor, cu accent pe digitalizarea proceselor de avizare.

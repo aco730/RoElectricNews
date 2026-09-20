@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "InvesTenergy"
 sursaUrl: "https://www.investenergy.ro/energia-intre-vreme-si-vremuri/"
-imagine: "/images/articole/energia-intre-vreme-si-vremuri-cum-expun-valurile-de-caldura-vulnerabilitatile-retelei.jpg"
+imagine: "/images/articole/energia-intre-vreme-si-vremuri-cum-expun-valurile-de-caldura-vulnerabilitatile-retelei.webp"
 ---
 
 

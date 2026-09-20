@@ -1,0 +1,85 @@
+/* source(none) disables Tailwind v4's default whole-repo auto content-scan
+   (sep's root has several multi-GB photo/video folders it would otherwise
+   crawl on every rebuild) — @source below scopes it to just this route's
+   own component tree. */
+@import "tailwindcss" source(none);
+@source "../components/portofoliu-electrician";
+@source "../pages/electrician";
+
+/* Ported from the CMS project's tailwind.config.js (Tailwind v3 JS config) —
+   Tailwind v4 is CSS-first, so custom color tokens must be redeclared here
+   via @theme instead. Without this, bg-ink/text-ink/bg-accent/text-accent
+   etc. silently resolve to nothing (invisible text/buttons), since Tailwind
+   v4 doesn't recognize unknown color names. */
+/* Palette source of truth: sep's own src/styles/global.css (--navy/--teal/
+   --orange/--bg/--card/--text/--muted/--border) — this is Varianta A: sep's
+   editorial palette applied everywhere, while the pill header's structural
+   CSS (Header1 in sections/Header.tsx) stays completely untouched, since it
+   only ever consumes these custom properties. */
+@theme {
+  --color-accent: #4c8b2c;
+  --color-ink: #0f2e2b;
+}
+
+/* Scoped to /portofoliu-electrician only — never imported from the shared Layout.astro,
+   so Tailwind's reset/preflight never touches the rest of the sep site. */
+
+:root {
+  --bg: #f4f7f0;
+  --bg-elev: #ffffff;
+  --bg-elev-2: #eef3ea;
+  --text: #122420;
+  --text-dim: #5e6e64;
+  --accent: #4c8b2c;
+  --accent-2: #0f2e2b;
+  --border: #dce6da;
+  --shadow: 0 8px 30px rgba(15, 46, 43, 0.12);
+  color-scheme: light;
+}
+
+/* No `body{}` rule here anymore — sep's own global.css (loaded by Layout.astro)
+   already sets body background/color/font for the whole domain now that this
+   route shares sep's real Header/Footer instead of its own fixed pill header. */
+
+@keyframes floatBlob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -24px) scale(1.06);
+  }
+  66% {
+    transform: translate(-22px, 18px) scale(0.94);
+  }
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+}
+.blob-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, var(--accent), transparent 70%);
+  top: -120px;
+  left: -80px;
+  animation: floatBlob 16s ease-in-out infinite;
+}
+.blob-2 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, var(--accent-2), transparent 70%);
+  bottom: -140px;
+  right: -60px;
+  animation: floatBlob 20s ease-in-out infinite reverse;
+}
+.blob-3 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, var(--accent), transparent 70%);
+  top: 30%;
+  left: 55%;
+  animation: floatBlob 22s ease-in-out infinite;
+  animation-delay: -6s;
+}

@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Irigatii.ro"
 sursaUrl: "https://www.irigatii.ro"
-imagine: "/images/articole/sisteme-de-irigatie-automatizate-presiune-zonificare-si-senzori.jpg"
+imagine: "/images/articole/sisteme-de-irigatie-automatizate-presiune-zonificare-si-senzori.webp"
 ---
 
 Un sistem de irigație automatizat bine proiectat nu udă uniform toată grădina la aceeași oră — ci ține cont de tipul de plantă, expunerea la soare și tipul de sol din fiecare zonă, printr-o combinație de presiune corectă, zonificare și senzori.

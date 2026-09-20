@@ -5,7 +5,7 @@ data: 2026-08-06
 dataAdaugare: "2026-08-11"
 sursaNume: "Verificatori.ro"
 sursaUrl: "https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc"
-imagine: "/images/articole/cat-costa-certificatul-energetic-si-auditul-nzeb-obligatoriu-la-receptia-casei.jpg"
+imagine: "/images/articole/cat-costa-certificatul-energetic-si-auditul-nzeb-obligatoriu-la-receptia-casei.webp"
 ---
 
 Certificatul de performanță energetică și auditul nZEB (clădire cu consum de energie aproape egal cu zero) sunt obligatorii pentru recepția finală a oricărei case noi construite după reglementările actuale din România.

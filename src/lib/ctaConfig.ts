@@ -14,6 +14,7 @@ export interface CtaConfig {
 	blog: CtaBloc;
 	portofoliu: CtaBloc;
 	servicii: CtaBloc;
+	categoryOverrides?: Record<string, CtaBloc>;
 }
 
 export async function getCtaConfig(): Promise<CtaConfig> {
@@ -23,4 +24,9 @@ export async function getCtaConfig(): Promise<CtaConfig> {
 
 export async function saveCtaConfig(config: CtaConfig): Promise<void> {
 	await writeFile(CTA_PATH, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+}
+
+/** CTA for an article: its category's override when one exists, else the generic blog CTA. */
+export function getCtaForCategory(config: CtaConfig, categorySlug: string): CtaBloc {
+	return config.categoryOverrides?.[categorySlug] ?? config.blog;
 }

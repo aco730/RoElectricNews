@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "SpatiulConstruit"
 sursaUrl: "https://www.spatiulconstruit.ro"
-imagine: "/images/articole/case-modulare-si-precomprimate-avantaje-executie-si-durabilitate.jpg"
+imagine: "/images/articole/case-modulare-si-precomprimate-avantaje-executie-si-durabilitate.webp"
 ---
 
 Construcțiile modulare (module fabricate în hală, asamblate pe teren) și cele precomprimate (elemente structurale din beton armat, turnate și tensionate în fabrică) câștigă tot mai mult teren în fața construcției clasice „pe șantier”, mai ales pentru viteza de execuție.

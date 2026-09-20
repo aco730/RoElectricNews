@@ -5,7 +5,7 @@ data: 2026-06-25
 dataAdaugare: "2026-08-11"
 sursaNume: "Ghid Amenajări"
 sursaUrl: "https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/"
-imagine: "/images/articole/cat-te-costa-rulourile-de-gazon-vs-insamantarea-si-pregatirea-solului.jpg"
+imagine: "/images/articole/cat-te-costa-rulourile-de-gazon-vs-insamantarea-si-pregatirea-solului.webp"
 ---
 
 

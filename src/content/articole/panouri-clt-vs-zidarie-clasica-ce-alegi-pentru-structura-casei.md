@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista din Lemn"
 sursaUrl: "https://www.revistadinlemn.ro"
-imagine: "/images/articole/panouri-clt-vs-zidarie-clasica-ce-alegi-pentru-structura-casei.jpg"
+imagine: "/images/articole/panouri-clt-vs-zidarie-clasica-ce-alegi-pentru-structura-casei.webp"
 ---
 
 Structura CLT (Cross-Laminated Timber, lemn masiv stratificat încrucișat) și zidăria clasică (cărămidă, BCA) rămân cele două opțiuni principale pentru structura unei case rezidențiale în România — alegerea influențează decisiv timpul de execuție, comportamentul termic și, adesea surprinzător pentru mulți, și amprenta de carbon a construcției.

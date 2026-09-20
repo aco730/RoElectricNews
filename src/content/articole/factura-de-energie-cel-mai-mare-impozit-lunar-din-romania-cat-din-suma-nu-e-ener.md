@@ -5,7 +5,7 @@ data: 2026-02-05
 dataAdaugare: "2026-08-10"
 sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
 sursaUrl: "https://asociatiaprosumatorilor.ro/factura-ta-de-energie-este-cel-mai-mare-impozit-lunar-din-romania/"
-imagine: "/images/articole/factura-de-energie-cel-mai-mare-impozit-lunar-din-romania-cat-din-suma-nu-e-ener.jpg"
+imagine: "/images/articole/factura-de-energie-cel-mai-mare-impozit-lunar-din-romania-cat-din-suma-nu-e-ener.webp"
 ---
 
 Un articol de opinie al Asociației Prosumatorilor și Comunităților de Energie susține un argument tăios: factura de energie funcționează, în practică, ca o taxă forțată, pentru că energia e o necesitate vitală, nu un bun de lux — consumatorul nu are alternativă reală, iar statul „profită" de această dependență printr-o taxare indirectă agresivă, ascunsă în structura facturii.

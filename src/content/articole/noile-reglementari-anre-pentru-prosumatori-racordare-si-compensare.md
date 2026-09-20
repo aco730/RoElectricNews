@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "ANRE"
 sursaUrl: "https://www.anre.ro"
-imagine: "/images/articole/noile-reglementari-anre-pentru-prosumatori-racordare-si-compensare.jpg"
+imagine: "/images/articole/noile-reglementari-anre-pentru-prosumatori-racordare-si-compensare.webp"
 ---
 
 Cadrul de reglementare pentru prosumatori a trecut prin schimbări succesive în ultimii ani, iar 2026 confirmă tendința: racordarea devine mai riguroasă, iar compensarea energiei tot mai strâns legată de existența unei capacități de stocare.

@@ -5,7 +5,7 @@ data: 2026-01-15
 dataAdaugare: "2026-08-11"
 sursaNume: "Proiect-Case.ro"
 sursaUrl: "https://proiect-case.ro/autorizatie-construire-ghid"
-imagine: "/images/articole/cat-costa-obtinerea-autorizatiei-de-construire-taxe-locale-avize-studiu-geotehnic-topo.jpg"
+imagine: "/images/articole/cat-costa-obtinerea-autorizatiei-de-construire-taxe-locale-avize-studiu-geotehnic-topo.webp"
 ---
 
 

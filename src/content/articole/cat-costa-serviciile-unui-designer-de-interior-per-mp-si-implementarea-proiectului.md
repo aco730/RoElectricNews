@@ -5,7 +5,7 @@ data: 2026-06-23
 dataAdaugare: "2026-08-11"
 sursaNume: "Formah"
 sursaUrl: "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/"
-imagine: "/images/articole/cat-costa-serviciile-unui-designer-de-interior-per-mp-si-implementarea-proiectului.jpg"
+imagine: "/images/articole/cat-costa-serviciile-unui-designer-de-interior-per-mp-si-implementarea-proiectului.webp"
 ---
 
 

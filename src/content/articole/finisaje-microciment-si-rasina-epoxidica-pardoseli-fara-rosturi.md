@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Designist"
 sursaUrl: "https://www.designist.ro"
-imagine: "/images/articole/finisaje-microciment-si-rasina-epoxidica-pardoseli-fara-rosturi.jpg"
+imagine: "/images/articole/finisaje-microciment-si-rasina-epoxidica-pardoseli-fara-rosturi.webp"
 ---
 
 Pardoselile continue — fără rosturi vizibile de gresie sau parchet — au devenit una dintre cele mai căutate soluții de finisaj în locuințele moderne, iar microcimentul și rășina epoxidică sunt cele două tehnologii care fac asta posibil, cu diferențe importante de aspect și utilizare.

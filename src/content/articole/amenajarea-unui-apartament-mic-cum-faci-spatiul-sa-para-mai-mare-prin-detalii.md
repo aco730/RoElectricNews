@@ -5,7 +5,7 @@ data: 2026-06-18
 dataAdaugare: "2026-08-11"
 sursaNume: "Designist"
 sursaUrl: "https://designist.ro/the-devil-is-in-the-details-ne-spune-un-apartament-mic-in-care-te-simti-ca-n-vacanta/"
-imagine: "/images/articole/amenajarea-unui-apartament-mic-cum-faci-spatiul-sa-para-mai-mare-prin-detalii.jpg"
+imagine: "/images/articole/amenajarea-unui-apartament-mic-cum-faci-spatiul-sa-para-mai-mare-prin-detalii.webp"
 ---
 
 

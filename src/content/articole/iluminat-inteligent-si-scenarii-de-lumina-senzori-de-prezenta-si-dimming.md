@@ -5,7 +5,7 @@ data: 2021-04-07
 dataAdaugare: "2026-08-11"
 sursaNume: "Loxone"
 sursaUrl: "https://www.loxone.com/ro"
-imagine: "/images/articole/iluminat-inteligent-si-scenarii-de-lumina-senzori-de-prezenta-si-dimming.jpg"
+imagine: "/images/articole/iluminat-inteligent-si-scenarii-de-lumina-senzori-de-prezenta-si-dimming.webp"
 ---
 
 

@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Hornbach"
 sursaUrl: "https://www.hornbach.ro/proiecte/tendinte-design-interior-2026/"
-imagine: "/images/articole/palete-cromatice-si-abordari-moderne-de-interior.jpg"
+imagine: "/images/articole/palete-cromatice-si-abordari-moderne-de-interior.webp"
 ---
 
 Alegerea paletei cromatice este una dintre deciziile cu cel mai mare impact vizual dintr-un proiect de amenajare interioară, iar tendințele din 2026 arată o mutare clară către nuanțe calde, naturale, în locul paletelor reci și minimaliste care au dominat deceniul anterior.

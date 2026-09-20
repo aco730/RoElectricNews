@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/08/05/rapidrop-global-ltd-producator-si-furnizor-britanic-de-sisteme-de-sprinklere-pentru-incendiu-protectie-impotriva-focului-solutia-completa/"
-imagine: "/images/articole/sisteme-de-sprinklere-pentru-incendiu-cum-functioneaza-protectia-activa-a-unei-cladiri.jpg"
+imagine: "/images/articole/sisteme-de-sprinklere-pentru-incendiu-cum-functioneaza-protectia-activa-a-unei-cladiri.webp"
 ---
 
 Sistemele de sprinklere reprezintă una dintre cele mai eficiente forme de protecție activă la incendiu — spre deosebire de detectoarele de fum, care doar semnalează prezența unui incendiu, sprinklerele intervin direct, stingând sau controlând focul înainte ca acesta să se extindă necontrolat.

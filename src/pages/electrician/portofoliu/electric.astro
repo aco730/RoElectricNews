@@ -1,0 +1,30 @@
+---
+// Explicit static route — takes routing priority over the [id].astro dynamic
+// route, so "electric" is never mistaken for a project id.
+export const prerender = false;
+import Layout from "../../../layouts/Layout.astro";
+import { getCtaConfig } from "../../../lib/ctaConfig";
+import ElectricianMiniNav from "../../../components/ElectricianMiniNav.astro";
+import ElectricianBreadcrumb from "../../../components/ElectricianBreadcrumb.astro";
+import { PortfolioFull } from "../../../components/portofoliu-electrician/sections/PortfolioPreview";
+
+const cta = (await getCtaConfig()).portofoliu;
+---
+<Layout title="Portofoliu electric — Solar Electric Panel" description="Șantiere electrice reale realizate de Solar Electric Panel." singleCol hideHeader>
+  <ElectricianMiniNav />
+  <ElectricianBreadcrumb items={[
+    { id: "bc-home", label: "Acasă", href: "/electrician" },
+    { id: "bc-portofoliu", label: "Portofoliu", href: "/electrician/portofoliu" },
+    { id: "bc-cat", label: "Electric", href: "/electrician/portofoliu/electric" },
+  ]} />
+
+  <PortfolioFull client:load heading="Șantiere electrice" text="Tablouri, instalații și reparații — poze reale de la fiecare lucrare." category="electrice" />
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>{cta.titlu}</strong>
+      <span>{cta.text}</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href={cta.linkButon}>{cta.textButon}</a>
+  </div>
+</Layout>

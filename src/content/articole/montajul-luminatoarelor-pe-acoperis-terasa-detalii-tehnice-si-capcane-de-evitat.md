@@ -5,7 +5,7 @@ data: 2026-04-14
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/04/14/montajul-corect-al-luminatoarelor-pe-acoperis-terasa-detalii-tehnice-si-capcane-de-evitat-in-2026/"
-imagine: "/images/articole/montajul-luminatoarelor-pe-acoperis-terasa-detalii-tehnice-si-capcane-de-evitat.jpg"
+imagine: "/images/articole/montajul-luminatoarelor-pe-acoperis-terasa-detalii-tehnice-si-capcane-de-evitat.webp"
 ---
 
 

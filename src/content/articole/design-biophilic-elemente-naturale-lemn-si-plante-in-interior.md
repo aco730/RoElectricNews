@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "LoveDeco"
 sursaUrl: "https://www.lovedeco.ro"
-imagine: "/images/articole/design-biophilic-elemente-naturale-lemn-si-plante-in-interior.jpg"
+imagine: "/images/articole/design-biophilic-elemente-naturale-lemn-si-plante-in-interior.webp"
 ---
 
 Design-ul biophilic pornește de la o observație simplă, confirmată de studii repetate: contactul vizual și fizic cu elemente naturale — lemn, plante, lumină naturală, apă — reduce stresul și crește bunăstarea percepută într-un spațiu, chiar și în interioare complet artificiale, în mediul urban.

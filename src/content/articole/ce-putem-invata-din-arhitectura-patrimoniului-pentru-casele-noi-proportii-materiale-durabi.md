@@ -5,7 +5,7 @@ data: 2026-07-22
 dataAdaugare: "2026-08-11"
 sursaNume: "Igloo"
 sursaUrl: "https://igloo.ro/traiectoria-unei-cladiri-de-referinta-palatul-stirbei/"
-imagine: "/images/articole/ce-putem-invata-din-arhitectura-patrimoniului-pentru-casele-noi-proportii-materiale-durabi.jpg"
+imagine: "/images/articole/ce-putem-invata-din-arhitectura-patrimoniului-pentru-casele-noi-proportii-materiale-durabi.webp"
 ---
 
 

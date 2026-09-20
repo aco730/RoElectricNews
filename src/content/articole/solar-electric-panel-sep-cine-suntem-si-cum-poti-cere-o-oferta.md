@@ -5,7 +5,7 @@ data: 2026-07-01
 dataAdaugare: "2026-08-10"
 sursaNume: "—"
 sursaUrl: "Conținut propriu — fără sursă externă unică"
-imagine: "/images/articole/solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta.png"
+imagine: "/images/articole/solar-electric-panel-sep-cine-suntem-si-cum-poti-cere-o-oferta.webp"
 fixat: true
 ---
 

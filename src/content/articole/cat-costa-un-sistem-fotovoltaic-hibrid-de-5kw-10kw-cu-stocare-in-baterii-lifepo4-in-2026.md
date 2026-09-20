@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Kilowat"
 sursaUrl: "https://kilowat.ro/blog/fotovoltaice/pregatire-instalare-sistem-fotovoltaic/"
-imagine: "/images/articole/cat-costa-un-sistem-fotovoltaic-hibrid-de-5kw-10kw-cu-stocare-in-baterii-lifepo4-in-2026.png"
+imagine: "/images/articole/cat-costa-un-sistem-fotovoltaic-hibrid-de-5kw-10kw-cu-stocare-in-baterii-lifepo4-in-2026.webp"
 ---
 
 Sistemele fotovoltaice hibride — care combină producția de energie solară cu stocarea în baterii — au devenit alegerea standard în 2026 pentru cei care vor independență energetică reală, nu doar reducerea facturii la rețea.

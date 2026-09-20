@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Adevărul"
 sursaUrl: "https://adevarul.ro/economie/noi-reguli-pentru-prosumatori-care-sunt-cele-mai-2547596.html"
-imagine: "/images/articole/monitorizarea-digitala-si-gestiunea-consumului-diurn.jpg"
+imagine: "/images/articole/monitorizarea-digitala-si-gestiunea-consumului-diurn.webp"
 ---
 
 Noile reguli aplicabile prosumatorilor pun accent tot mai mare pe monitorizarea digitală a consumului, mai ales pe segmentarea acestuia pe intervale orare — o schimbare care face din gestiunea consumului diurn un instrument practic de reducere a facturii, nu doar o funcție „nice-to-have” a caselor smart.

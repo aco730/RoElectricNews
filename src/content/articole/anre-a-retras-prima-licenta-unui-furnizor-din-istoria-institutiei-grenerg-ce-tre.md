@@ -5,7 +5,7 @@ data: 2026-06-04
 dataAdaugare: "2026-08-10"
 sursaNume: "ANRE — Comunicate de presă"
 sursaUrl: "https://anre.ro/comunicat-de-presa-anre-retrage-licenta-unui-furnizor-de-energie-pentru-prima-data-in-istoria-institutiei-grenerg-a-migrat-clienti-cu-forta-si-a-ignorat-amenzi-de-peste-un-milion-de-lei/"
-imagine: "/images/articole/anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre.jpg"
+imagine: "/images/articole/anre-a-retras-prima-licenta-unui-furnizor-din-istoria-institutiei-grenerg-ce-tre.webp"
 ---
 
 Autoritatea Națională de Reglementare în domeniul Energiei (ANRE) a retras, printr-o decizie din 3 iunie 2026, licența de furnizare a energiei electrice a companiei GRENERG SRL — prima retragere de acest fel din istoria instituției. Măsura intră în vigoare pe 19 iunie 2026 și afectează 22.564 locuri de consum, dintre care 22.102 sunt clienți casnici.

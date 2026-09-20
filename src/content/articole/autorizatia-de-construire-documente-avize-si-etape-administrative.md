@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Constructii.ro"
 sursaUrl: "https://www.constructii.ro"
-imagine: "/images/articole/autorizatia-de-construire-documente-avize-si-etape-administrative.jpg"
+imagine: "/images/articole/autorizatia-de-construire-documente-avize-si-etape-administrative.webp"
 ---
 
 Obținerea autorizației de construire rămâne, pentru majoritatea proprietarilor, cea mai puțin cunoscută etapă a unui proiect — și cea care poate întârzia un șantier cu luni întregi dacă e tratată superficial sau începută prea târziu.

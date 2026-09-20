@@ -5,7 +5,7 @@ data: 2026-08-10
 dataAdaugare: "2026-08-11"
 sursaNume: "InvesTenergy"
 sursaUrl: "https://www.investenergy.ro/afeer-cere-anre-recalibrarea-semaforului-pentru-furnizori-performanta-reala-nu-volumul-de-reclamatii-notificarea-consumului-la-80-dificil-de-aplicat-fara-date-in-timp-real/"
-imagine: "/images/articole/afeer-cere-recalibrarea-evaluarii-furnizorilor-de-energie-de-catre-anre.jpg"
+imagine: "/images/articole/afeer-cere-recalibrarea-evaluarii-furnizorilor-de-energie-de-catre-anre.webp"
 ---
 
 Asociația furnizorilor de energie (AFEER) a solicitat ANRE recalibrarea sistemului de evaluare a performanței furnizorilor — actualul „semafor” bazat în mare parte pe volumul de reclamații primite, nu neapărat pe indicatori reali de calitate a serviciilor oferite clienților.

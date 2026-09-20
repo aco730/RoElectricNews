@@ -5,7 +5,7 @@ data: 2026-08-06
 dataAdaugare: "2026-08-10"
 sursaNume: "Capital.ro"
 sursaUrl: "https://www.capital.ro/avioanele-electrice-ar-putea-intra-in-serviciu-in-europa-pana-la-inceputul-anilor-2030.html"
-imagine: "/images/articole/avioanele-electrice-ar-putea-zbura-in-europa-pana-in-2030-de-ce-conteaza-pentru.jpg"
+imagine: "/images/articole/avioanele-electrice-ar-putea-zbura-in-europa-pana-in-2030-de-ce-conteaza-pentru.webp"
 ---
 
 Zborurile cu avioane electrice pe distanțe scurte ar putea deveni realitate în Europa la începutul anilor 2030, pe măsură ce mai multe startup-uri europene dezvoltă în prezent astfel de aeronave. Primele modele vizate au o autonomie estimată de până la 500 de kilometri — suficient pentru o serie de rute regionale populare, printre care Londra–Dublin, Atena–Santorini, Barcelona–Ibiza, Nisa–Corsica sau Roma–Sardinia.

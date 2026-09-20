@@ -5,7 +5,7 @@ data: 2026-07-03
 dataAdaugare: "2026-08-10"
 sursaNume: "Asociația Prosumatorilor și Comunităților de Energie"
 sursaUrl: "https://asociatiaprosumatorilor.ro/bateriile-cu-litiu-explicate-simplu-capcana-pentru-electroni/"
-imagine: "/images/articole/bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori.jpg"
+imagine: "/images/articole/bateriile-cu-litiu-explicate-simplu-ghid-pentru-prosumatori.webp"
 ---
 
 Cea mai simplă imagine mentală pentru cum funcționează o baterie cu litiu e o „capcană pentru electroni”. Când încarci bateria — de la priză sau de la panourile fotovoltaice — energia externă împinge electronii într-un electrod de grafit, unde ei n-ar sta în mod natural. Odată ajunși acolo, rămân practic prizonieri: electrolitul din interiorul bateriei acționează ca un izolator electric perfect, care le blochează drumul direct înapoi prin interiorul bateriei.

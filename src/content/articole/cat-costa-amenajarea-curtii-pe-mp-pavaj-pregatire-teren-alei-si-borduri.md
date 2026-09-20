@@ -5,7 +5,7 @@ data: 2026-06-25
 dataAdaugare: "2026-08-11"
 sursaNume: "Ghid Amenajări"
 sursaUrl: "https://ghidamenajari.ro/amenajare-gradina/amenajare-curte/"
-imagine: "/images/articole/cat-costa-amenajarea-curtii-pe-mp-pavaj-pregatire-teren-alei-si-borduri.jpg"
+imagine: "/images/articole/cat-costa-amenajarea-curtii-pe-mp-pavaj-pregatire-teren-alei-si-borduri.webp"
 ---
 
 

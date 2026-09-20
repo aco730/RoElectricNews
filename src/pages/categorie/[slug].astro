@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { categoriiVizibile } from "../../data/categories";
 import qaCategoriiData from "../../data/qa-categorii.json";
+import { getCtaConfig, getCtaForCategory } from "../../lib/ctaConfig";
 
 export async function getStaticPaths() {
   return categoriiVizibile.map((cat) => ({
@@ -13,6 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { cat } = Astro.props;
+const cta = getCtaForCategory(await getCtaConfig(), cat.slug);
 const toateArticolele = await getCollection("articole");
 const articole = toateArticolele
   .filter((a) => a.data.categorie === cat.slug)
@@ -32,7 +34,7 @@ const breadcrumbs = [
 const faqPentruSchema = qaCategorie.map((qa) => ({ intrebare: qa.intrebare, raspuns: qa.raspuns }));
 ---
 <Layout
-  title={`${cat.name} — BuildHub.ro`}
+  title={`${cat.name} — Electric NEWS`}
   description={cat.description || `Articole și ghiduri despre ${cat.name.toLowerCase()}, susținute de Solar Electric Panel.`}
   singleCol
   breadcrumbs={breadcrumbs}
@@ -67,6 +69,14 @@ const faqPentruSchema = qaCategorie.map((qa) => ({ intrebare: qa.intrebare, rasp
   {articole.length === 0 && (
     <p class="excerpt">Niciun articol publicat încă în această categorie.</p>
   )}
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>{cta.titlu}</strong>
+      <span>{cta.text}</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href={cta.linkButon}>{cta.textButon}</a>
+  </div>
 
   {qaCategorie.length > 0 && (
     <section class="qa-section">

@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Hornbach"
 sursaUrl: "https://www.hornbach.ro/proiecte/tendinte-design-interior-2026/"
-imagine: "/images/articole/cat-costa-mobilarea-custom-a-unei-bucatarii-si-amenajarea-iluminatului-ambiental.jpg"
+imagine: "/images/articole/cat-costa-mobilarea-custom-a-unei-bucatarii-si-amenajarea-iluminatului-ambiental.webp"
 ---
 
 Bucătăria rămâne, an de an, camera cu cel mai mare buget de mobilare dintr-o locuință, iar în 2026 tendința spre mobilier custom și iluminat ambiental stratificat continuă să crească.

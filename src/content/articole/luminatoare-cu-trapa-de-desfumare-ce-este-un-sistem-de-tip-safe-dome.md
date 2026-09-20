@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/08/05/welkins-safety-above-all-luminatorul-starlight-evo-si-trapa-de-desfumare-safe-dome/"
-imagine: "/images/articole/luminatoare-cu-trapa-de-desfumare-ce-este-un-sistem-de-tip-safe-dome.jpg"
+imagine: "/images/articole/luminatoare-cu-trapa-de-desfumare-ce-este-un-sistem-de-tip-safe-dome.webp"
 ---
 
 Luminatoarele cu funcție dublă — aducerea luminii naturale în interior și evacuarea fumului în caz de incendiu — reprezintă o categorie de echipamente tot mai relevantă atât pentru clădiri comerciale, cât și pentru proiecte rezidențiale mai complexe, cu cerințe stricte de siguranță la incendiu.

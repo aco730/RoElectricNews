@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Inspectoratul de Stat în Construcții"
 sursaUrl: "https://www.isc.gov.ro"
-imagine: "/images/articole/normativul-nzeb-si-certificatul-energetic-cerinte-minime-de-izolare.jpg"
+imagine: "/images/articole/normativul-nzeb-si-certificatul-energetic-cerinte-minime-de-izolare.webp"
 ---
 
 Standardul nZEB (Nearly Zero Energy Building) nu mai e un obiectiv opțional pentru construcțiile noi din România — e cerință normativă, iar certificatul energetic care confirmă conformitatea devine act obligatoriu la recepția oricărei clădiri noi.

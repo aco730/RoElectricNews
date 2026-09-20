@@ -5,7 +5,7 @@ data: 2026-06-23
 dataAdaugare: "2026-08-11"
 sursaNume: "Formah"
 sursaUrl: "https://formah.ro/tendinte-in-arhitectura-si-design-interior-in-2026-solutii-moderne-pentru-locuinte-premium/"
-imagine: "/images/articole/care-sunt-costurile-pentru-finisajele-premium-microciment-tencuieli-minerale-parchet.jpg"
+imagine: "/images/articole/care-sunt-costurile-pentru-finisajele-premium-microciment-tencuieli-minerale-parchet.webp"
 ---
 
 

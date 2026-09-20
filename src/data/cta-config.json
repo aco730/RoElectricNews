@@ -3,18 +3,44 @@
     "titlu": "Ai nevoie de montaj fotovoltaic sau instalatie electrica",
     "text": "Solar Electric Panel oferă consultanță și montaj.",
     "textButon": "Cere ofertă",
-    "linkButon": "/oferta"
+    "linkButon": "/electrician/calculatoare/oferta"
   },
   "portofoliu": {
     "titlu": "Ai un proiect similar în minte?",
     "text": "Solar Electric Panel oferă consultanță și montaj — cere o ofertă personalizată.",
     "textButon": "Cere ofertă",
-    "linkButon": "/oferta"
+    "linkButon": "/electrician/calculatoare/oferta"
   },
   "servicii": {
     "titlu": "Vrei o ofertă personalizată?",
     "text": "Completează câteva detalii despre acoperiș/consum și primești o estimare de sistem și preț.",
     "textButon": "Cere ofertă",
-    "linkButon": "/oferta"
+    "linkButon": "/electrician/calculatoare/oferta"
+  },
+  "categoryOverrides": {
+    "fotovoltaic": {
+      "titlu": "Te gândești la panouri fotovoltaice?",
+      "text": "Solar Electric Panel dimensionează și montează sisteme fotovoltaice rezidențiale și comerciale — vezi prețurile orientative sau sună direct.",
+      "textButon": "Vezi prețuri fotovoltaic",
+      "linkButon": "/electrician/preturi/fotovoltaic"
+    },
+    "baterii-stocare": {
+      "titlu": "Vrei să adaugi stocare pe baterii?",
+      "text": "Montăm sisteme fotovoltaice cu baterie de stocare, dimensionate pe consumul tău real — nu la ghici.",
+      "textButon": "Vezi pachete cu baterie",
+      "linkButon": "/electrician/preturi/fotovoltaic"
+    },
+    "electric-instalatii": {
+      "titlu": "Ai nevoie de un electrician autorizat?",
+      "text": "Tablouri electrice noi, diagnoză reală la fața locului, reparații și branșamente — protocoale SSM respectate strict.",
+      "textButon": "Vezi servicii electrice",
+      "linkButon": "/electrician/servicii/electrice"
+    },
+    "smart-home": {
+      "titlu": "Vrei automatizări pentru casa ta?",
+      "text": "Monitorizare producție, automatizări și pregătire smart home la instalația electrică sau fotovoltaică.",
+      "textButon": "Sună pentru detalii",
+      "linkButon": "tel:+40750405908"
+    }
   }
 }

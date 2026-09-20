@@ -5,7 +5,7 @@ data: 2026-05-22
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/05/22/pompa-de-caldura-aer-apa-in-2025-economie-reala-nu-doar-promisiuni/"
-imagine: "/images/articole/pompa-de-caldura-aer-apa-economie-reala-nu-doar-promisiuni.jpg"
+imagine: "/images/articole/pompa-de-caldura-aer-apa-economie-reala-nu-doar-promisiuni.webp"
 ---
 
 Economia reală adusă de o pompă de căldură aer-apă depinde de mult mai mulți factori decât arată materialele de marketing ale producătorilor — condițiile concrete de instalare și utilizare fac diferența dintre o investiție rentabilă și una dezamăgitoare.

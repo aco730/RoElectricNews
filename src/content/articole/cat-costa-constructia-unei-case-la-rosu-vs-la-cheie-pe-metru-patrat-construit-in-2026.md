@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Arena Construct"
 sursaUrl: "https://arenaconstruct.ro/"
-imagine: "/images/articole/cat-costa-constructia-unei-case-la-rosu-vs-la-cheie-pe-metru-patrat-construit-in-2026.jpg"
+imagine: "/images/articole/cat-costa-constructia-unei-case-la-rosu-vs-la-cheie-pe-metru-patrat-construit-in-2026.webp"
 ---
 
 Diferența dintre o casă „la roșu” și una „la cheie” este una dintre cele mai importante decizii financiare din procesul de construcție, cu impact direct asupra bugetului total și a modului de organizare a lucrărilor.

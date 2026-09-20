@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "interviu, canal YouTube"
 sursaUrl: "https://www.youtube.com/watch?v=5LO18oCD3YY"
-imagine: "/images/articole/criza-energetica-stocare-reglementari.jpg"
+imagine: "/images/articole/criza-energetica-stocare-reglementari.webp"
 etichete: [reglementari, energie, stocare, fotovoltaice]
 ---
 

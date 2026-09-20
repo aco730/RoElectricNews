@@ -5,7 +5,7 @@ data: 2026-03-06
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/03/06/cum-alegi-si-folosesti-corect-materialele-pentru-case-eficiente-energetic-in-2025/"
-imagine: "/images/articole/cum-alegi-si-folosesti-corect-materialele-pentru-case-eficiente-energetic.jpg"
+imagine: "/images/articole/cum-alegi-si-folosesti-corect-materialele-pentru-case-eficiente-energetic.webp"
 ---
 
 Eficiența energetică a unei case nu depinde doar de grosimea izolației alese, ci de compatibilitatea și corectitudinea de aplicare a întregului sistem de materiale — izolație, bariere de vapori, tâmplărie și finisaje trebuie să funcționeze împreună, nu izolat unele de altele.

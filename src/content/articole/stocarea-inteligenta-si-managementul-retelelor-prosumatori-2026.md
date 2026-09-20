@@ -5,7 +5,7 @@ data: 2016-02-07
 dataAdaugare: "2026-08-11"
 sursaNume: "Asociația Prosumatorilor"
 sursaUrl: "https://asociatiaprosumatorilor.ro/in-vara-lui-2026-romania-este-salvata-de-cei-360-000-de-prosumatori-si-de-energia-regenerabila-tin-sistemul-electric-in-viata/"
-imagine: "/images/articole/stocarea-inteligenta-si-managementul-retelelor-prosumatori-2026.png"
+imagine: "/images/articole/stocarea-inteligenta-si-managementul-retelelor-prosumatori-2026.webp"
 ---
 
 Managementul inteligent al stocării de energie devine tot mai relevant pentru sistemul electric național, pe măsură ce numărul de prosumatori crește, iar sistemele individuale de baterii încep să funcționeze ca o rețea distribuită de stocare.

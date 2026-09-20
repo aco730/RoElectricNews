@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "CADworks"
 sursaUrl: "https://www.cadworks.ro"
-imagine: "/images/articole/bim-building-information-modeling-proiectare-3d-integrata.jpg"
+imagine: "/images/articole/bim-building-information-modeling-proiectare-3d-integrata.webp"
 ---
 
 BIM nu e doar „proiectare în 3D” — e o schimbare de metodă: în loc de planuri separate pentru arhitectură, structură și instalații, care se suprapun și adesea intră în conflict abia pe șantier, BIM construiește un singur model digital, integrat, unde fiecare element (perete, țeavă, cablu, grindă) există o singură dată și e vizibil simultan din toate disciplinele.

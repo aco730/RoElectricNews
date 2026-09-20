@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "InvesTenergy"
 sursaUrl: "https://www.investenergy.ro/electrica-productia-de-energie-din-surse-regenerabile-a-crescut-de-peste-patru-ori-in-primul-semestru-la-21-012-mwh/"
-imagine: "/images/articole/productia-electrica-din-surse-regenerabile-a-crescut-de-4-ori-ce-inseamna-pentru-prosumato.jpg"
+imagine: "/images/articole/productia-electrica-din-surse-regenerabile-a-crescut-de-4-ori-ce-inseamna-pentru-prosumato.webp"
 ---
 
 Electrica a raportat că producția proprie de energie din surse regenerabile a crescut de peste patru ori în primul semestru din 2026, ajungând la 21.012 MWh — o creștere semnificativă care reflectă tendința mai largă de investiții accelerate în capacități regenerabile la nivelul marilor furnizori de energie din România.

@@ -5,7 +5,7 @@ data: 2026-07-31
 dataAdaugare: "2026-08-11"
 sursaNume: "Designist"
 sursaUrl: "https://designist.ro/cand-ceramica-e-folosita-cu-aceeasi-placere-cu-care-este-privita-descopera-vasele-clay-love/"
-imagine: "/images/articole/ceramica-artizanala-in-amenajarea-interioara-cum-alegi-obiecte-decorative-durabile.jpg"
+imagine: "/images/articole/ceramica-artizanala-in-amenajarea-interioara-cum-alegi-obiecte-decorative-durabile.webp"
 ---
 
 

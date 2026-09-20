@@ -5,7 +5,7 @@ data: 2026-08-09
 dataAdaugare: "2026-08-11"
 sursaNume: "Asociația Prosumatorilor"
 sursaUrl: "https://asociatiaprosumatorilor.ro/7-miliarde-de-euro-zero-megawati/"
-imagine: "/images/articole/7-miliarde-de-euro-zero-megawati-ce-a-cumparat-romania-cu-plafonarea-preturilor-la-energie.jpg"
+imagine: "/images/articole/7-miliarde-de-euro-zero-megawati-ce-a-cumparat-romania-cu-plafonarea-preturilor-la-energie.webp"
 ---
 
 

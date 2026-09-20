@@ -5,7 +5,7 @@ data: 2026-08-05
 dataAdaugare: "2026-08-11"
 sursaNume: "Revista Construcțiilor"
 sursaUrl: "https://www.revistaconstructiilor.eu/index.php/2026/08/05/popp-asociatii-architecture-dincolo-de-modelare-bim-ca-platforma-de-integrare-a-cerintelor-medicale-si-de-securitate/"
-imagine: "/images/articole/bim-ca-platforma-de-integrare-a-cerintelor-medicale-si-de-securitate-intr-un-proiect.jpg"
+imagine: "/images/articole/bim-ca-platforma-de-integrare-a-cerintelor-medicale-si-de-securitate-intr-un-proiect.webp"
 ---
 
 BIM (Building Information Modeling) a evoluat, în proiectele complexe, dincolo de simpla modelare 3D — devenind o platformă centrală de integrare a cerințelor tehnice provenite din specialități foarte diferite, de la instalații medicale specializate la sisteme de securitate, coordonate într-un singur model digital.

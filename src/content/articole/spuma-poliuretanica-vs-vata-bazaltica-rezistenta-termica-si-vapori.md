@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "SpatiulConstruit"
 sursaUrl: "https://www.spatiulconstruit.ro"
-imagine: "/images/articole/spuma-poliuretanica-vs-vata-bazaltica-rezistenta-termica-si-vapori.jpg"
+imagine: "/images/articole/spuma-poliuretanica-vs-vata-bazaltica-rezistenta-termica-si-vapori.webp"
 ---
 
 Alegerea între spumă poliuretanică (PUR/PIR) și vată bazaltică pentru izolarea termică a unei clădiri implică un compromis clar între performanță termică pe grosime redusă și comportamentul la vapori de apă și foc — decizia corectă depinde de aplicație, nu de care material e „mai bun” în general.

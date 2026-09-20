@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Agenda Construcțiilor"
 sursaUrl: "https://agendaconstructiilor.ro/stiri/instalatii-electrice-automatizari/signify-proiectele-profesionale-din-sua-compenseaza-partial-reculul-pietei"
-imagine: "/images/articole/signify-si-tendintele-pietei-de-iluminat-profesional-ce-inseamna-pentru-clientii-rezidenti.jpg"
+imagine: "/images/articole/signify-si-tendintele-pietei-de-iluminat-profesional-ce-inseamna-pentru-clientii-rezidenti.webp"
 ---
 
 Signify (fostă Philips Lighting), unul dintre cei mai mari producători mondiali de sisteme de iluminat, a raportat recent că proiectele profesionale din piața americană compensează parțial reculul cererii din segmentul european — un semnal util despre direcția în care se mișcă tehnologia de iluminat și, indirect, ce va ajunge și pe piața rezidențială din România.

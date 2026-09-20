@@ -5,7 +5,7 @@ data: 2026-05-04
 dataAdaugare: "2026-08-11"
 sursaNume: "Electro-Calin"
 sursaUrl: "https://electro-calin.ro/ghid-pentru-curentul-trifazic-cat-costa-sa-tragi-curent-trifazic-in-2026"
-imagine: "/images/articole/care-sunt-costurile-pentru-racordarea-la-reteaua-trifazata-si-extinderi-de-retea.png"
+imagine: "/images/articole/care-sunt-costurile-pentru-racordarea-la-reteaua-trifazata-si-extinderi-de-retea.webp"
 ---
 
 Trecerea la curent trifazat este necesară pentru case cu consum ridicat — pompe de căldură, aer condiționat multi-split, mașini de sudură sau ateliere. Racordarea presupune atât taxe către operatorul de distribuție, cât și costuri de execuție pe proprietate.

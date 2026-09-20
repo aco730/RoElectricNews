@@ -5,7 +5,7 @@ data: 2026-08-06
 dataAdaugare: "2026-08-11"
 sursaNume: "Verificatori.ro"
 sursaUrl: "https://verificatori.ro/actualizari/codul-amenajarii-teritoriului-urbanismului-si-constructiilor-catuc"
-imagine: "/images/articole/care-sunt-costurile-pentru-turnarea-fundatiei-si-hidroizolatia-la-cota-zero.jpg"
+imagine: "/images/articole/care-sunt-costurile-pentru-turnarea-fundatiei-si-hidroizolatia-la-cota-zero.webp"
 ---
 
 

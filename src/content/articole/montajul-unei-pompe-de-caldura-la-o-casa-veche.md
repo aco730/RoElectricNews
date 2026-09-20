@@ -5,7 +5,7 @@ data: 2026-01-22
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/01/22/montajul-unei-pompe-de-caldura-la-o-casa-veche-ce-inseamna-corect-in-2025/"
-imagine: "/images/articole/montajul-unei-pompe-de-caldura-la-o-casa-veche.jpg"
+imagine: "/images/articole/montajul-unei-pompe-de-caldura-la-o-casa-veche.webp"
 ---
 
 Montarea unei pompe de căldură la o casă veche, cu sistem de încălzire existent, ridică provocări diferite față de o instalație nouă, iar rezultatul depinde în mare parte de cât de bine sunt evaluate limitările structurii existente.

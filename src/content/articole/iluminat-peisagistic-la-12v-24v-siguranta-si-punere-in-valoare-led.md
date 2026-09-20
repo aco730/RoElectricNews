@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "Gradina.ro"
 sursaUrl: "https://www.gradina.ro"
-imagine: "/images/articole/iluminat-peisagistic-la-12v-24v-siguranta-si-punere-in-valoare-led.jpg"
+imagine: "/images/articole/iluminat-peisagistic-la-12v-24v-siguranta-si-punere-in-valoare-led.webp"
 ---
 
 Iluminatul peisagistic exterior, montat la tensiune joasă (12V sau 24V) în loc de 230V direct, a devenit standardul recomandat pentru grădini și curți — nu doar din motive de siguranță, ci și pentru flexibilitatea de montaj și costurile reduse de operare cu tehnologia LED.

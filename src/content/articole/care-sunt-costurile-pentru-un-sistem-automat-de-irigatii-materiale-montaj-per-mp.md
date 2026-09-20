@@ -5,7 +5,7 @@ data: 2026-06-25
 dataAdaugare: "2026-08-11"
 sursaNume: "Ghid Amenajări"
 sursaUrl: "https://ghidamenajari.ro/amenajare-gradina/amenajare-gradina/"
-imagine: "/images/articole/care-sunt-costurile-pentru-un-sistem-automat-de-irigatii-materiale-montaj-per-mp.jpg"
+imagine: "/images/articole/care-sunt-costurile-pentru-un-sistem-automat-de-irigatii-materiale-montaj-per-mp.webp"
 ---
 
 

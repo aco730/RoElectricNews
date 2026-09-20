@@ -5,7 +5,7 @@ data: 2026-08-11
 dataAdaugare: "2026-08-11"
 sursaNume: "InstalNews"
 sursaUrl: "https://www.instalnews.ro"
-imagine: "/images/articole/managementul-apelor-si-reciclarea-apei-pluviale-sisteme-de-stocare-si-filtrare.jpg"
+imagine: "/images/articole/managementul-apelor-si-reciclarea-apei-pluviale-sisteme-de-stocare-si-filtrare.webp"
 ---
 
 Colectarea și refolosirea apei pluviale trece tot mai mult din zona „opțional ecologic” în zona „decizie economică” — mai ales pentru gospodării cu grădină, curte sau consum mare la irigat.

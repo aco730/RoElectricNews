@@ -5,7 +5,7 @@ data: 2026-07-03
 dataAdaugare: "2026-08-11"
 sursaNume: "Soflete.ro"
 sursaUrl: "https://soflete.ro/2026/07/03/acoperis-terasa-corect-in-2025-checklist-tehnic-si-capcane-de-evitat/"
-imagine: "/images/articole/acoperis-terasa-corect-checklist-tehnic-si-capcane-de-evitat.jpg"
+imagine: "/images/articole/acoperis-terasa-corect-checklist-tehnic-si-capcane-de-evitat.webp"
 ---
 
 Acoperișul tip terasă (plat sau cu pantă foarte mică) are cerințe tehnice diferite față de un acoperiș clasic în două ape, iar greșelile de execuție la acest tip de structură duc rapid la infiltrații costisitoare de reparat.

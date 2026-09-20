@@ -1,0 +1,63 @@
+---
+export const prerender = false;
+import Layout from "../../../layouts/Layout.astro";
+import { getCtaConfig } from "../../../lib/ctaConfig";
+import { projectsForCategories } from "../../../lib/photos";
+import ElectricianMiniNav from "../../../components/ElectricianMiniNav.astro";
+import ElectricianBreadcrumb from "../../../components/ElectricianBreadcrumb.astro";
+
+const cta = (await getCtaConfig()).portofoliu;
+
+const categories = [
+  { key: "fotovoltaice", label: "Fotovoltaic", icon: "☀️", href: "/electrician/portofoliu/fotovoltaic" },
+  { key: "electrice", label: "Electric", icon: "⚡", href: "/electrician/portofoliu/electric" },
+];
+const tiles = categories.map((c) => {
+  const projects = projectsForCategories([c.key]);
+  const photoCount = projects.reduce((sum, p) => sum + p.count, 0);
+  return { ...c, cover: projects[0]?.coverThumb, projectCount: projects.length, photoCount };
+});
+---
+<Layout title="Portofoliu — Solar Electric Panel" description="Lucrări reale de montaj fotovoltaic și electric realizate de Solar Electric Panel — poze din șantiere." singleCol hideHeader>
+  <ElectricianMiniNav />
+  <ElectricianBreadcrumb items={[
+    { id: "bc-home", label: "Acasă", href: "/electrician" },
+    { id: "bc-portofoliu", label: "Portofoliu", href: "/electrician/portofoliu" },
+  ]} />
+
+  <section class="max-w-[1100px] mx-auto px-6 py-12 text-center">
+    <h2 class="text-[clamp(22px,3.2vw,28px)] font-extrabold tracking-tight mb-2" style="color:var(--text)">
+      Lucrări reale, poze de la fiecare șantier
+    </h2>
+    <p class="mb-7 max-w-xl mx-auto text-sm" style="color:var(--text-dim)">
+      Fotovoltaic și electric — nu randări, nu poze de stock. Alege o categorie.
+    </p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {tiles.map((t) => (
+        <a
+          href={t.href}
+          class="group block rounded-2xl overflow-hidden border no-underline text-left"
+          style="border-color:var(--border); background:var(--bg-elev)"
+        >
+          <div class="h-[180px] overflow-hidden">
+            {t.cover && (
+              <img src={t.cover} alt={t.label} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]" />
+            )}
+          </div>
+          <div class="px-5 py-4">
+            <h3 class="text-lg font-bold mb-1" style="color:var(--text)">{t.icon} {t.label}</h3>
+            <p class="text-sm" style="color:var(--text-dim)">{t.projectCount} șantiere · {t.photoCount} poze</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <div class="lead-cta">
+    <div class="lead-cta-text">
+      <strong>{cta.titlu}</strong>
+      <span>{cta.text}</span>
+    </div>
+    <a class="cta-btn cta-btn-primary" href={cta.linkButon}>{cta.textButon}</a>
+  </div>
+</Layout>

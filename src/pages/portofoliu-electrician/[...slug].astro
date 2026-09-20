@@ -1,0 +1,9 @@
+---
+// Legacy path kept as a redirect after the CMS route moved to /electrician/*
+// (the "portofoliu-electrician" prefix was misleading once servicii/preturi/
+// calculatoare were added — it's not just a portfolio anymore).
+export const prerender = false;
+
+const slug = Astro.params.slug ?? "";
+return Astro.redirect(`/electrician/${slug}`, 301);
+---

@@ -5,7 +5,7 @@ data: 2026-07-27
 dataAdaugare: "2026-08-10"
 sursaNume: "MACO Solar"
 sursaUrl: "https://macosolar.ro/blog/costuri-si-rentabilitate/baterii-pentru-panouri-fotovoltaice-pret-avantaje-si-merita-investitia-in-2026"
-imagine: "/images/articole/lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori.jpg"
+imagine: "/images/articole/lifepo4-vs-alte-tehnologii-de-baterii-ghid-pentru-cumparatori.webp"
 ---
 
 Pentru cineva care caută o baterie de stocare pentru sistemul fotovoltaic al casei, alegerea tehnologiei chimice contează la fel de mult ca alegerea brandului — și influențează direct atât siguranța, cât și costul pe termen lung al investiției. Trei tehnologii apar cel mai frecvent în oferte: LiFePO4, Li-Ion „clasic" și plumb-acid.
