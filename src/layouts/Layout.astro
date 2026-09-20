@@ -120,6 +120,7 @@ const articleSchema = articleMeta ? {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="algolia-site-verification" content="3E4FE363E7E8F7F6" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
@@ -173,6 +174,7 @@ const articleSchema = articleMeta ? {
         els.forEach(function (el) {
           var target = parseInt(el.getAttribute("data-count-to") || "0", 10) || 0;
           if (reduceMotion) { el.textContent = String(target); return; }
+          var done = false;
           var duration = 900, start: number | null = null;
           function step(ts: number) {
             if (start === null) start = ts;
@@ -180,16 +182,28 @@ const articleSchema = articleMeta ? {
             var eased = 1 - Math.pow(1 - progress, 3);
             el.textContent = String(Math.round(eased * target));
             if (progress < 1) requestAnimationFrame(step);
+            else done = true;
           }
-          var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                requestAnimationFrame(step);
-                observer.unobserve(el);
-              }
-            });
-          }, { threshold: 0.4 });
-          observer.observe(el);
+          // Plasă de siguranță: pe unele browsere mobile (in-app browser WhatsApp/Instagram,
+          // sau webview-uri vechi) IntersectionObserver poate lipsi, arunca eroare, sau pur
+          // și simplu să nu declanșeze — fără asta contorul rămâne blocat la 0 permanent.
+          setTimeout(function () {
+            if (!done) { done = true; el.textContent = String(target); }
+          }, 2500);
+          try {
+            var observer = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting && !done) {
+                  requestAnimationFrame(step);
+                  observer.unobserve(el);
+                }
+              });
+            }, { threshold: 0.4 });
+            observer.observe(el);
+          } catch (e) {
+            done = true;
+            el.textContent = String(target);
+          }
         });
 
         var reveals = document.querySelectorAll(".reveal");
