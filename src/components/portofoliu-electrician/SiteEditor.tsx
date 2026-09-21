@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nanoid } from "nanoid";
 import { DndContext, closestCenter, PointerSensor, useSensor, useSensors, type DragEndEvent } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy, arrayMove } from "@dnd-kit/sortable";
@@ -53,6 +53,20 @@ export function SiteEditor({ initialSite, slug, isAdmin = false }: { initialSite
   const [saving, setSaving] = useState<"idle" | "saving" | "saved">("idle");
   const [addingPage, setAddingPage] = useState(false);
   const [newPageName, setNewPageName] = useState("");
+  const [barHeight, setBarHeight] = useState(56);
+  const barRef = useRef<HTMLDivElement>(null);
+
+  // The admin bar wraps onto 2 lines when there are many pages/buttons, so its
+  // real height can exceed the hardcoded 56px (top-14) everything else assumed —
+  // that made the bar (z-70) cover the section toolbar (sticky, z-60) underneath.
+  useEffect(() => {
+    if (!isAdmin || !editMode || !barRef.current) return;
+    const el = barRef.current;
+    const ro = new ResizeObserver(() => setBarHeight(el.offsetHeight));
+    ro.observe(el);
+    setBarHeight(el.offsetHeight);
+    return () => ro.disconnect();
+  }, [isAdmin, editMode]);
 
   const pageIndex = site.pages.findIndex((p) => p.slug === slug);
   const page = site.pages[pageIndex] ?? site.pages[0];
@@ -147,7 +161,7 @@ export function SiteEditor({ initialSite, slug, isAdmin = false }: { initialSite
   return (
     <div>
       {isAdmin && editMode && (
-        <div className="fixed top-0 inset-x-0 z-[70] bg-ink text-white px-4 py-2 flex flex-wrap items-center gap-3 text-sm">
+        <div ref={barRef} className="fixed top-0 inset-x-0 z-[70] bg-ink text-white px-4 py-2 flex flex-wrap items-center gap-3 text-sm">
           <span className="font-bold">Editor site</span>
           <div className="flex gap-2 flex-wrap">
             {site.pages.map((p) => (
@@ -200,7 +214,7 @@ export function SiteEditor({ initialSite, slug, isAdmin = false }: { initialSite
         </div>
       )}
 
-      <div className={isAdmin && editMode ? "pt-14" : ""}>
+      <div style={isAdmin && editMode ? { paddingTop: barHeight } : undefined}>
         <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
           <SortableContext items={page.sections.map((s) => s.id)} strategy={verticalListSortingStrategy}>
             {page.sections.map((s) => (
@@ -208,6 +222,7 @@ export function SiteEditor({ initialSite, slug, isAdmin = false }: { initialSite
                 key={s.id}
                 section={s}
                 editMode={isAdmin && editMode}
+                toolbarOffset={barHeight}
                 onEdit={() => setEditingSectionId(s.id)}
                 onDelete={() => deleteSection(s.id)}
                 onDuplicate={() => duplicateSection(s.id)}
@@ -218,7 +233,12 @@ export function SiteEditor({ initialSite, slug, isAdmin = false }: { initialSite
       </div>
 
       {editingSection && (
-        <SectionEditPanel section={editingSection} onChange={updateSection} onClose={() => setEditingSectionId(null)} />
+        <SectionEditPanel
+          section={editingSection}
+          panelTop={barHeight}
+          onChange={updateSection}
+          onClose={() => setEditingSectionId(null)}
+        />
       )}
     </div>
   );

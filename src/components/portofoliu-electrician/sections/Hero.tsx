@@ -17,6 +17,10 @@ function ctaButtonKind(text?: string): "whatsapp" | "phone" {
   return text?.toLowerCase().includes("whatsapp") ? "whatsapp" : "phone";
 }
 
+function badgeRadiusClass(shape?: "pill" | "square" | "none") {
+  return shape === "square" ? "rounded-md" : "rounded-full";
+}
+
 export function Hero1({ data }: { data: SectionData }) {
   return (
     <section className="relative overflow-hidden pt-16 pb-6 px-6 text-center" style={{ background: "var(--bg)", isolation: "isolate" }}>
@@ -26,9 +30,9 @@ export function Hero1({ data }: { data: SectionData }) {
         <span className="blob blob-3" />
       </div>
       <div className="relative z-10 mx-auto max-w-[900px]">
-        {data.badge && (
+        {data.badge && data.badgeShape !== "none" && (
           <span
-            className="inline-block mb-4 rounded-full px-4 py-1.5 text-[12.5px] font-semibold"
+            className={`inline-block mb-4 ${badgeRadiusClass(data.badgeShape)} px-4 py-1.5 text-[12.5px] font-semibold`}
             style={{ background: "var(--bg-elev)", border: "1px solid var(--border)", color: "var(--text-dim)" }}
           >
             {data.badge}
@@ -82,9 +86,9 @@ export function Hero2({ data }: { data: SectionData }) {
   return (
     <section className="py-24 px-6 grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
       <div>
-        {data.badge && (
+        {data.badge && data.badgeShape !== "none" && (
           <span
-            className="inline-block mb-4 rounded-full px-4 py-1.5 text-[12.5px] font-semibold"
+            className={`inline-block mb-4 ${badgeRadiusClass(data.badgeShape)} px-4 py-1.5 text-[12.5px] font-semibold`}
             style={{ background: "var(--bg-elev)", border: "1px solid var(--border)", color: "var(--text-dim)" }}
           >
             {data.badge}
@@ -131,8 +135,8 @@ export function Hero2({ data }: { data: SectionData }) {
 export function Hero3({ data }: { data: SectionData }) {
   return (
     <section className="py-20 px-6 text-center bg-amber-50">
-      {data.badge && (
-        <span className="inline-block bg-accent/20 text-accent font-semibold px-4 py-1 rounded-full text-sm mb-4">
+      {data.badge && data.badgeShape !== "none" && (
+        <span className={`inline-block bg-accent/20 text-accent font-semibold px-4 py-1 text-sm mb-4 ${badgeRadiusClass(data.badgeShape)}`}>
           {data.badge}
         </span>
       )}
