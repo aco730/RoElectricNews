@@ -70,6 +70,7 @@ export interface SectionData {
   phone?: string;
   // hero
   badge?: string;
+  badgeShape?: "pill" | "square" | "none";
   title?: string;
   subtitle?: string;
   image?: string;

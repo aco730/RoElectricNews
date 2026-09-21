@@ -8,12 +8,14 @@ import { SectionRenderer, SECTION_LABELS } from "./SectionRenderer";
 export function SortableSection({
   section,
   editMode,
+  toolbarOffset = 56,
   onEdit,
   onDelete,
   onDuplicate,
 }: {
   section: Section;
   editMode: boolean;
+  toolbarOffset?: number;
   onEdit: () => void;
   onDelete: () => void;
   onDuplicate: () => void;
@@ -33,7 +35,7 @@ export function SortableSection({
 
   return (
     <div ref={setNodeRef} style={style} className="relative border-2 border-dashed border-transparent hover:border-accent">
-      <div className="sticky top-14 z-[60] flex gap-1 px-3 py-1.5 bg-transparent pointer-events-none">
+      <div className="sticky z-[60] flex gap-1 px-3 py-1.5 bg-transparent pointer-events-none" style={{ top: toolbarOffset }}>
         <div className="flex gap-1 bg-ink/95 backdrop-blur rounded-md p-1 shadow-lg pointer-events-auto">
           <button
             {...attributes}
